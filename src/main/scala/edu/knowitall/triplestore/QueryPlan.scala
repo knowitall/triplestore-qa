@@ -1,76 +1,88 @@
 package edu.knowitall.triplestore
 
-
-object QueryPlan {
-  
-  case class Schema(names: List[String]) {
-    def indexOf(name: String) = names.indexOf(name)
+case class Tuple(attrs: List[String], values: List[Any]) {
+  if (attrs.size != values.size) {
+    throw new IllegalArgumentException("illegal size: " + attrs + ", " + values)
   }
-  
-  case class Tuple(schema: Schema, values: List[Any]) {
-    if (schema.names.size != values.size) {
-      throw new IllegalArgumentException("invalid tuple size: " + (schema, values))
+  val map = { attrs zip values }.toMap[String, Any]
+  def get(attr: String): Option[Any] = {
+    map.get(attr)
+  }
+  def getOrElse(attr: String, value: Any): Any = {
+    map.getOrElse(attr, value)
+  }
+  def concatenate(other: Tuple): Tuple = {
+    if (attrs.intersect(other.attrs).size == 0) {
+      Tuple(attrs ++ other.attrs, values ++ other.values)
+    } else {
+      throw new IllegalArgumentException("tuple attrs not disjoint: " + List(attrs, other.attrs))
     }
-    def getValue(col: String): Any = values(schema.indexOf(col))
   }
-  
-  case class Relation(name: String, schema: Schema, tuples: Iterable[Tuple])
-  
-  def addPrefix(prefix: String, schema: Schema): Schema = {
-    Schema(schema.names.map{n => prefix + "." + n})
+  def +(other: Tuple): Tuple = concatenate(other)
+  def rename(newAttrs: List[String]): Tuple = Tuple(newAttrs, values)
+  def renamePrefix(p: String): Tuple = rename(attrs map { a => p + "." + a })
+  override def toString(): String = {
+    val pairs = attrs zip values
+    val strs = pairs map { case (a, b) => a + ": " + b}
+    "(" + strs.mkString(", ") + ")"
   }
-  
-  def rename(schema: Schema, tuples: Iterable[Tuple]): Iterable[Tuple] = {
-    tuples map { t => Tuple(schema, t.values)}
-  }
-  
-  def product(r1: Relation, r2: Relation): Iterable[Tuple] = {
-    val s1 = addPrefix(r1.name, r1.schema)
-    val s2 = addPrefix(r2.name, r2.schema)
-    val s = Schema(s1.names ++ s2.names)
-    for (t1 <- r1.tuples; t2 <- r2.tuples) yield Tuple(s, t1.values ++ t2.values)
-  }
-
-  def select(tuples: Iterable[Tuple], c: Tuple => Boolean): Iterable[Tuple] = {
-    tuples.filter(c)
-  }
-  
-  def join(r1: Relation, r2: Relation, c: (Tuple, Tuple) => Boolean): Iterable[Tuple] = {
-    val s1 = addPrefix(r1.name, r1.schema)
-    val ts1 = rename(s1, r1.tuples)
-    val s2 = addPrefix(r2.name, r2.schema)
-    val ts2 = rename(s2, r2.tuples)
-    val s = Schema(s1.names ++ s2.names)
-    for (t1 <- ts1; t2 <- ts2; if c(t1, t2)) yield Tuple(s, t1.values ++ t2.values)
-  }
- 
 }
 
-object Examples {
-  import QueryPlan._
-  val s1 = Schema(List("name", "age"))
-  val s2 = Schema(List("name", "pet"))
-  
-  val rel1 = Relation("people_ages", s1, List(
-      Tuple(s1, List("joe", 25)),
-      Tuple(s1, List("bob", 5)),
-      Tuple(s1, List("chris", 29)),
-      Tuple(s1, List("sally", 15))
-  ))
-  
-  val rel2 = Relation("people_pets", s2, List(
-      Tuple(s1, List("joe", "snake")),
-      Tuple(s1, List("bob", "dog")),
-      Tuple(s1, List("bob", "another dog")),
-      Tuple(s1, List("sally", "lobster"))
-  ))
-  
-  def valEq(col1: String, col2: String): (Tuple, Tuple) => Boolean = {
-    (t1: Tuple, t2: Tuple) => {
-      val v1 = t1.getValue(col1)
-      val v2 = t2.getValue(col2)
-      v1 == v2
+object Conditions {
+
+case class Contains[T](attr: String, value: T) {
+  def apply(t: Tuple): Boolean = {
+    t.getOrElse(attr, List[T]()) match {
+      case x: List[T] => x.contains(value)
+      case _ => false
     }
+  }
+}
+
+case class Intersects[T](attr1: String, attr2: String) {
+  def apply(t1: Tuple, t2: Tuple): Boolean = {
+    val res1 = t1.getOrElse(attr1, List[T]())
+    val res2 = t2.getOrElse(attr2, List[T]())
+    (res1, res2) match {
+      case (x1: List[T], x2: List[T]) => x1.intersect(x2).size > 0
+      case _ => false
+    }
+  }
+}
+
+case class IntersectsSyns[T](attr1: String, attr2: String, syns: List[List[T]]) {
+  def apply(t1: Tuple, t2: Tuple): Boolean = {
+    val res1 = t1.getOrElse(attr1, List[T]())
+    val res2 = t2.getOrElse(attr2, List[T]())
+    (res1, res2) match {
+      case (x1: List[T], x2: List[T]) => {
+        syns.exists(syn => { !x1.intersect(syn).isEmpty && !x2.intersect(syn).isEmpty })
+      }
+      case _ => false
+    }
+  }
+}
+
+}
+
+object Operators {
+  
+  
+  case class Select(cond: Tuple => Boolean) {
+    def apply(tuples: Iterable[Tuple]): Iterable[Tuple] = tuples.filter(cond)
+  }
+  
+  case class Join(cond: (Tuple, Tuple) => Boolean) {
+    def apply(tuples1: Iterable[Tuple], tuples2: Iterable[Tuple]): Iterable[Tuple] = {
+      for (t1 <- tuples1; t2 <- tuples2; if cond(t1, t2)) yield t1 + t2
+    }
+  }
+  
+  case class Project(attrs: List[String]) {
+    def proj(t: Tuple): Tuple = {
+      Tuple(attrs, attrs.map(a => t.getOrElse(a, "")))
+    }
+    def apply(tuples: Iterable[Tuple]): Iterable[Tuple] = tuples.map(proj)
   }
   
 }
