@@ -21,6 +21,8 @@ libraryDependencies += "commons-logging" % "commons-logging-api" % "1.0.4"
 
 libraryDependencies += "com.github.scopt" %% "scopt" % "3.0.0"
 
+libraryDependencies += "com.rockymadden.stringmetric" % "stringmetric-core" % "0.25.3"
+
 libraryDependencies ++= Seq(
   "com.chuusai" %% "shapeless" % "1.2.4"
 )

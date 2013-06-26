@@ -9,7 +9,7 @@ import java.util.ArrayList
 
 
 
-case class TriplestoreClient(url: String, hits: Int = 1000) {
+case class TriplestoreClient(url: String, hits: Int = 10000) {
   
   val server = new HttpSolrServer(url)
   
@@ -53,13 +53,10 @@ case class TriplestoreClient(url: String, hits: Int = 1000) {
 object Test extends Application {
   val c = TriplestoreClient("http://rv-n12:8983/solr/triplestore")
   val Search = c.Search
-  val rel1 = Search("isPrez", rel = "Type", arg2 = "US President", namespace = "freebase")
-  val rel2 = Search("buried", rel = "Place of burial", arg2 = "Arlington", namespace = "freebase")
+  val rel1 = Search("isPrez", rel = "grown in", arg2 = "africa")
+  val rel2 = Search("buried", rel = "Type", arg2 = "fruit", namespace="freebase")
   val cond = Conditions.Intersects[String]("isPrez.arg1", "buried.arg1")
-  
-  for (x <- rel1; y <- rel2; if cond(x, y)) {
-    println(x)
-    println(y)
-    println
-  }
+  val rel3 = Operators.Join(cond)(rel1, rel2)
+  val rel4 = Operators.Project(List("isPrez.arg1"))(rel3)
+  rel4 map { x => println(x.getOrElse("isPrez.arg1", List[String]())) }
 }

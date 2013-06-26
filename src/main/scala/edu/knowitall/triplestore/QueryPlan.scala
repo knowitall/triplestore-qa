@@ -1,5 +1,7 @@
 package edu.knowitall.triplestore
 
+import com.rockymadden.stringmetric.similarity._
+
 case class Tuple(attrs: List[String], values: List[Any]) {
   if (attrs.size != values.size) {
     throw new IllegalArgumentException("illegal size: " + attrs + ", " + values)
@@ -29,8 +31,12 @@ case class Tuple(attrs: List[String], values: List[Any]) {
 }
 
 object Conditions {
+  
+  type JoinCond = (Tuple, Tuple) => Boolean
+  
+  type SelectCond = Tuple => Boolean
 
-case class Contains[T](attr: String, value: T) {
+case class Contains[T](attr: String, value: T) extends SelectCond {
   def apply(t: Tuple): Boolean = {
     t.getOrElse(attr, List[T]()) match {
       case x: List[T] => x.contains(value)
@@ -39,7 +45,7 @@ case class Contains[T](attr: String, value: T) {
   }
 }
 
-case class Intersects[T](attr1: String, attr2: String) {
+case class Intersects[T](attr1: String, attr2: String) extends JoinCond {
   def apply(t1: Tuple, t2: Tuple): Boolean = {
     val res1 = t1.getOrElse(attr1, List[T]())
     val res2 = t2.getOrElse(attr2, List[T]())
@@ -62,6 +68,14 @@ case class IntersectsSyns[T](attr1: String, attr2: String, syns: List[List[T]]) 
     }
   }
 }
+
+def sim(x: Any, y: Any): Double = {
+  (x, y) match {
+    case (x: String, y: String) => JaroWinklerMetric.compare(x, y).getOrElse(0.0)
+    case _ => 0.0
+  }
+}
+
 
 }
 
