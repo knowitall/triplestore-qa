@@ -2,101 +2,133 @@ package edu.knowitall.triplestore
 
 import com.rockymadden.stringmetric.similarity._
 
-case class Tuple(attrs: List[String], values: List[Any]) {
-  if (attrs.size != values.size) {
-    throw new IllegalArgumentException("illegal size: " + attrs + ", " + values)
-  }
-  val map = { attrs zip values }.toMap[String, Any]
-  def get(attr: String): Option[Any] = {
-    map.get(attr)
-  }
-  def getOrElse(attr: String, value: Any): Any = {
-    map.getOrElse(attr, value)
-  }
-  def concatenate(other: Tuple): Tuple = {
-    if (attrs.intersect(other.attrs).size == 0) {
-      Tuple(attrs ++ other.attrs, values ++ other.values)
+
+case class Tuple(fields: Map[String, List[String]]) {
+    
+  def join(other: Tuple): Tuple = {
+    val t = Tuple(this.fields ++ other.fields)
+    if (t.fields.size == this.fields.size + other.fields.size) {
+      return t
     } else {
-      throw new IllegalArgumentException("tuple attrs not disjoint: " + List(attrs, other.attrs))
+      throw new IllegalArgumentException("field names not disjoint: " + this + ", " + other)
     }
   }
-  def +(other: Tuple): Tuple = concatenate(other)
-  def rename(newAttrs: List[String]): Tuple = Tuple(newAttrs, values)
-  def renamePrefix(p: String): Tuple = rename(attrs map { a => p + "." + a })
-  override def toString(): String = {
-    val pairs = attrs zip values
-    val strs = pairs map { case (a, b) => a + ": " + b}
-    "(" + strs.mkString(", ") + ")"
+  
+  def rename(f: String => String): Tuple = {
+    Tuple(fields.map{ case (k, v) => (f(k), v) })
+  }
+  
+  def renamePrefix(p: String): Tuple = rename(k => p + "." + k)
+  
+  override def toString: String = {
+    val pairs = fields map { case (k, v) => k + ": " + v }
+    return "(" + pairs.mkString(", ") + ")"
   }
 }
 
 object Conditions {
   
-  type JoinCond = (Tuple, Tuple) => Boolean
+
+  type Attr = String
+  type Value = List[String]
+  type BinaryStringPred = (String, String) => Boolean
+  type ValuePred = Value => Boolean
+  type BinaryValuePred = (Value, Value) => Boolean
+  type TuplePred = Tuple => Boolean
+
+  def allPairs(v1: Value, v2: Value) = for (x <- v1; y <- v2) yield (x, y)
   
-  type SelectCond = Tuple => Boolean
+  def somePairPred(f: BinaryStringPred): BinaryValuePred =
+    (v1: Value, v2: Value) => allPairs(v1, v2).exists(f.tupled)
+  
+  def allPairPred(f: BinaryStringPred): BinaryValuePred = 
+    (v1: Value, v2: Value) => allPairs(v1, v2).forall(f.tupled)
+    
+  def valPair(a1: Attr, a2: Attr, t: Tuple) = for (v1 <- t.fields.get(a1); v2 <- t.fields.get(a2)) yield (v1, v2)
+  
+  def binaryAttrPred(a1: Attr, a2: Attr, f: BinaryValuePred): TuplePred = (t: Tuple) => {
+    valPair(a1, a2, t).exists(f.tupled)
+  }
+  
+  def unaryAttrPred(a: Attr, x: String, f: BinaryValuePred): TuplePred = (t: Tuple) => {
+    { for (v <- t.fields.get(a)) yield (v, List(x)) }.exists(f.tupled)
+  }
+  
+  def binaryPredFromString(a1: Attr, a2: Attr, f: BinaryStringPred) = binaryAttrPred(a1, a2, somePairPred(f))
+  
+  def unaryPredFromString(a: Attr, v: String, f: BinaryStringPred) = unaryAttrPred(a, v, somePairPred(f)) 
 
-case class Contains[T](attr: String, value: T) extends SelectCond {
-  def apply(t: Tuple): Boolean = {
-    t.getOrElse(attr, List[T]()) match {
-      case x: List[T] => x.contains(value)
-      case _ => false
+  type Synonyms = List[List[String]]
+  def inSameSet(syns: Synonyms) = (x: String, y: String) => 
+    x == y || syns.exists(s => s.contains(x) && s.contains(y))
+  
+  def StringEquality(caseSensitive: Boolean = true) = {
+    (x: String, y: String) => {
+      if (caseSensitive) x == y else x.toLowerCase() == y.toLowerCase() 
     }
-  }
-}
+  }    
+    
+  
+  def strEq = StringEquality(false)
+  def valEq = (x: Value, y: Value) => x == y
+  def strSim(thresh: Double) = 
+    (x: String, y: String) => { JaroWinklerMetric.compare(x, y).exists(_ > thresh) }
 
-case class Intersects[T](attr1: String, attr2: String) extends JoinCond {
-  def apply(t1: Tuple, t2: Tuple): Boolean = {
-    val res1 = t1.getOrElse(attr1, List[T]())
-    val res2 = t2.getOrElse(attr2, List[T]())
-    (res1, res2) match {
-      case (x1: List[T], x2: List[T]) => x1.intersect(x2).size > 0
-      case _ => false
-    }
-  }
-}
+    
+  def AttrsEqual(a1: Attr, a2: Attr): TuplePred = binaryPredFromString(a1, a2, strEq)
+  def AttrEquals(a: Attr, v: String): TuplePred = unaryPredFromString(a, v, strEq)
+  
+  def AttrsSim(a1: Attr, a2: Attr, t: Double): TuplePred = binaryPredFromString(a1, a2, strSim(t))
+  def AttrSim(a: Attr, v: String, t: Double): TuplePred = unaryPredFromString(a, v, strSim(t))
+  
+  def AttrsSyn(a1: Attr, a2: Attr, s: Synonyms): TuplePred = binaryPredFromString(a1, a2, inSameSet(s))
 
-case class IntersectsSyns[T](attr1: String, attr2: String, syns: List[List[T]]) {
-  def apply(t1: Tuple, t2: Tuple): Boolean = {
-    val res1 = t1.getOrElse(attr1, List[T]())
-    val res2 = t2.getOrElse(attr2, List[T]())
-    (res1, res2) match {
-      case (x1: List[T], x2: List[T]) => {
-        syns.exists(syn => { !x1.intersect(syn).isEmpty && !x2.intersect(syn).isEmpty })
-      }
-      case _ => false
-    }
+  def On(attrs: Attr*) = (t: Tuple) => {
+    val items = for (a <- attrs; v <- t.fields.get(a)) yield (a, v)
+    Tuple(items.toMap)
   }
-}
-
-def sim(x: Any, y: Any): Double = {
-  (x, y) match {
-    case (x: String, y: String) => JaroWinklerMetric.compare(x, y).getOrElse(0.0)
-    case _ => 0.0
-  }
-}
-
 
 }
 
 object Operators {
+  type TuplePred = Tuple => Boolean
+  type TupleMap = Tuple => Tuple
+  type Tuples = Iterable[Tuple]
   
+  def Select(p: TuplePred) = (ts: Tuples) => ts.filter(p)
   
-  case class Select(cond: Tuple => Boolean) {
-    def apply(tuples: Iterable[Tuple]): Iterable[Tuple] = tuples.filter(cond)
+  def Project(m: TupleMap) = (ts: Tuples) => ts.map(m)
+  
+  def NestedLoopJoin(p: TuplePred) = (ts1: Tuples, ts2: Tuples) => {
+    for (t1 <- ts1; t2 <- ts2; j = t1.join(t2); if p(j)) yield j
   }
   
-  case class Join(cond: (Tuple, Tuple) => Boolean) {
-    def apply(tuples1: Iterable[Tuple], tuples2: Iterable[Tuple]): Iterable[Tuple] = {
-      for (t1 <- tuples1; t2 <- tuples2; if cond(t1, t2)) yield t1 + t2
-    }
+}
+
+object Search {
+  
+  object Field extends Enumeration {
+    type Field = Value
+    val arg1, rel, arg2, namespace = Value
+  }
+  import Field._
+  
+  trait Query {
+    def toQueryString: String
   }
   
-  case class Project(attrs: List[String]) {
-    def proj(t: Tuple): Tuple = {
-      Tuple(attrs, attrs.map(a => t.getOrElse(a, "")))
-    }
-    def apply(tuples: Iterable[Tuple]): Iterable[Tuple] = tuples.map(proj)
+  case class FieldEquals(f: Field, v: String) extends Query {
+    def toQueryString = f.toString() + ":\"" + v + "\""
   }
+  
+  case class Conjunction(conjuncts: Query*) extends Query {
+    def toQueryString = conjuncts.map("(" + _.toQueryString + ")").mkString(" AND ") 
+  }
+
+  case class Disjunction(disjuncts: Query*) extends Query {
+    def toQueryString = disjuncts.map("(" + _.toQueryString + ")").mkString(" OR ") 
+  }
+  
+  def FieldIn(f: Field, vs: Seq[String]) = Disjunction(vs.map(v => FieldEquals(f, v)):_*)
   
 }

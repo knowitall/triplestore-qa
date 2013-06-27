@@ -6,50 +6,60 @@ import org.apache.solr.client.solrj.SolrQuery
 import scala.collection.JavaConversions._
 import org.apache.solr.common.SolrDocument
 import java.util.ArrayList
+import Search.Query
 
 
-
-case class TriplestoreClient(url: String, hits: Int = 10000) {
+case class TriplestoreClient(url: String, hits: Int = 10) {
   
   val server = new HttpSolrServer(url)
   
   def escape(s: String): String = ClientUtils.escapeQueryChars(s)
   
-  def buildQuery(params: List[(String, String)]): SolrQuery = {
-    val escaped = params filter { case (a, b) => a != "" && b != "" } map { case (a, b) => escape(a) + ":\"" + escape(b) +"\"" }
-    new SolrQuery(escaped.mkString(" AND "))
+  def buildQuery(q: Query): SolrQuery = {
+    val sq = new SolrQuery(q.toQueryString)
+    sq.setRows(hits).setFields("arg1", "rel", "arg2", "id", "namespace")
   }
   
-  def docToTuple(doc: SolrDocument): Tuple = {
-    val names = doc.getFieldNames().toList
-    val values = names.map { n => doc.getFieldValue(n) }
-    val values2 = values.map{ 
-      case x: ArrayList[_] => x.asScala.toList
-      case x => x
+  def fieldNames(doc: SolrDocument): List[String] = {
+    doc.getFieldNames().toList.map { x => x.toString() }
+  }
+  
+  type Value = List[String]
+  type Attr = String
+  
+  def toTupleValue(v: Any): Option[Value] = {
+    v match {
+      case v: ArrayList[_] => Some(v.asScala.toList.map(x => x.toString()))
+      case v: Any => Some(List(v.toString()))
+      case _ => None
     }
-    Tuple(names, values2)
   }
   
-  def search(args: List[(String, String)]): List[Tuple] ={
-    val query = buildQuery(args)
+  def docToFields(doc: SolrDocument): List[(Attr, Value)] = {
+    for (name <- doc.getFieldNames().toList;
+        value = doc.getFieldValue(name);
+        tvalue <- toTupleValue(value)) 
+      yield (name, tvalue)
+  }
+  
+  def docToTuple(doc: SolrDocument): Tuple = Tuple(docToFields(doc).toMap)
+
+  
+  def search(q: Query): List[Tuple] ={
+    val query = buildQuery(q)
     query.setRows(hits)
     val resp = server.query(query)
     resp.getResults().toList.map(docToTuple)
   }
   
-  def namedSearch(name: String, args: List[(String, String)]): List[Tuple] = {
-    search(args) map { t => t.renamePrefix(name)}
-  }
-  
-  case class Search(name: String, arg1: String = "", rel: String = "", arg2: String = "", namespace: String = "") extends Iterable[Tuple] {
-    val args = List(("arg1", arg1), ("arg2", arg2), ("rel", rel), ("namespace", namespace))
-    val hits = namedSearch(name, args)
-    override def iterator: Iterator[Tuple] = hits.iterator
+  def namedSearch(name: String, q: Query): List[Tuple] = {
+    search(q) map { t => t.renamePrefix(name)}
   }
   
 
 }
 
+/*
 object Test extends Application {
   val c = TriplestoreClient("http://rv-n12:8983/solr/triplestore")
   val Search = c.Search
@@ -59,4 +69,4 @@ object Test extends Application {
   val rel3 = Operators.Join(cond)(rel1, rel2)
   val rel4 = Operators.Project(List("isPrez.arg1"))(rel3)
   rel4 map { x => println(x.getOrElse("isPrez.arg1", List[String]())) }
-}
+}*/
