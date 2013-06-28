@@ -32,6 +32,25 @@ case class Tuple(attrs: Map[String, List[String]]) {
   }
 }
 
+object StrSim {
+  val stops = Set("a", "an", "and", "are", "as", "at", "be", "but", "by",
+      "for", "if", "in", "into", "is", "it",
+      "no", "not", "of", "on", "or", "such",
+      "that", "the", "their", "then", "there", "these",
+      "they", "this", "to", "was", "will", "with", "i", "me", "your",
+      "our", "ours", "him", "he", "his", "her", "its", "you", "that",
+      "every", "all", "each", "those", "other", "both", "neither", "some",
+      "'s")
+  
+  def norm(x: String) = {
+    x.toLowerCase().split("\\s+").filter(!stops.contains(_)).mkString("")
+  }
+  def sim(x: String, y: String): Double = {
+    JaroWinklerMetric.compare(norm(x), norm(y)).getOrElse(0.0)
+  }
+      
+}
+
 object Conditions {
   
 
@@ -77,7 +96,7 @@ object Conditions {
   
   def strEq = StringEquality(false)
   def valEq = (x: Value, y: Value) => x == y
-  def strSim(thresh: Double) = (x: String, y: String) => { JaroWinklerMetric.compare(x, y).exists(_ > thresh) }
+  def strSim(thresh: Double) = (x: String, y: String) => StrSim.sim(x, y) > thresh
 
   trait BinaryPred {
     def attr1: Attr
@@ -136,6 +155,7 @@ object Search {
   object Field extends Enumeration {
     type Field = Value
     val arg1, rel, arg2, namespace = Value
+    val arg1_exact, rel_exact, arg2_exact = Value
   }
   import Field._
   
@@ -144,8 +164,13 @@ object Search {
   }
   
   def escape = ClientUtils.escapeQueryChars _
-  case class FieldEquals(f: Field, v: String) extends Query {
+  
+  case class FieldKeywords(f: Field, v: String) extends Query {
     def toQueryString = { for (w <- v.split("\\s+"); x = f.toString() + ":" + escape(w)) yield x }.mkString(" AND ") 
+  }
+  
+  case class FieldPhrase(f: Field, v: String) extends Query {
+    def toQueryString = f.toString() + ":\"" + escape(v) + "\"" 
   }
   
   case class Conjunction(conjuncts: Query*) extends Query {
@@ -156,11 +181,8 @@ object Search {
     def toQueryString = disjuncts.map("(" + _.toQueryString + ")").mkString(" OR ") 
   }
   
-  def AndEquals(q: Query, f: Field, v: String) = Conjunction(q, FieldEquals(f, v))
-  
-  def FieldIn(f: Field, vs: Seq[String]) = Disjunction(vs.map(v => FieldEquals(f, v)):_*)
+  def AndPhrase(q: Query, f: Field, v: String) = Conjunction(q, FieldPhrase(f, v))
 
-  
   type Tuples = Iterable[Tuple]
   type Attr = String
   type Search = Query => Tuples
@@ -170,7 +192,7 @@ object Search {
   val Arg1Pat = "(.*)\\.arg1$".r
   val Arg2Pat = "(.*)\\.arg2$".r
   val RelPat = "(.*)\\.rel$".r
-  def SearchJoin(cond: BinaryPred) = {
+  def PartialSearchJoin(cond: BinaryPred) = {
     val leftAttr = cond.attr1
     val rightAttr = cond.attr2
     val (name, field) = rightAttr match {
@@ -183,7 +205,8 @@ object Search {
       for (
           t1 <- ts;							// for each tuple
           v <- t1.values(leftAttr);			// get the value of its join attr
-          q = AndEquals(ps.query, field, v);// construct a complete query 
+          if (!v.trim().isEmpty());
+          q = AndPhrase(ps.query, field, v);// construct a complete query 
           t2 <- ps.search(q);				// get the matching tuples
           t3 = t1.join(t2);					// join the tuples
           if cond(t3))						// test if the joined tuple satisfies the pred
@@ -195,15 +218,20 @@ object Search {
 
 object Tabulator {
   
+  def trim(s: String, l: Int) = {
+    val n = s.size
+    s.substring(0, Math.min(l, n))
+  }
+  
   def valToString(v: Any) = v match {
-    case v: String => v
-    case v: List[_] => "{" + v.mkString(", ") + "}"
-    case x: Any => x.toString
+    case x @ (_ :: _ :: _) => "{" + trim(x.mkString(", "), 40) + "}"
+    case x @ (y :: _) => y
+    case x => x.toString
   }
   def tupleToList(t: Tuple) = {
     for( 
     		a <- t.attrs.keys.toList.sorted;
-    		v <- t.values(a);
+    		v = t.values(a);
     		s = valToString(v)) yield s}.toList
     		
   def tuplesToTable(ts: Iterable[Tuple]) = {
@@ -212,8 +240,7 @@ object Tabulator {
       case x :: xs => x.attrs.keys.toList.sorted
       case _ => List()
     }
-    
-    format(head :: ts.toList.map(tupleToList))
+    format(head :: lst.map(tupleToList))
   }
   
   def format(table: Seq[Seq[Any]]) = table match {
