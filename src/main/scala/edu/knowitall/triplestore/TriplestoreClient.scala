@@ -56,17 +56,29 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
     search(q) map { t => t.renamePrefix(name)}
   }
   
-
 }
 
-/*
-object Test extends Application {
-  val c = TriplestoreClient("http://rv-n12:8983/solr/triplestore")
-  val Search = c.Search
-  val rel1 = Search("isPrez", rel = "grown in", arg2 = "africa")
-  val rel2 = Search("buried", rel = "Type", arg2 = "fruit", namespace="freebase")
-  val cond = Conditions.Intersects[String]("isPrez.arg1", "buried.arg1")
-  val rel3 = Operators.Join(cond)(rel1, rel2)
-  val rel4 = Operators.Project(List("isPrez.arg1"))(rel3)
-  rel4 map { x => println(x.getOrElse("isPrez.arg1", List[String]())) }
-}*/
+case class TriplestorePlan(client: TriplestoreClient) {
+  import Operators._
+  import Conditions._ 
+  import Search._
+  import Field._
+  
+  type Tuples = Iterable[Tuple]
+  type TuplePred = Tuple => Boolean
+ 
+  def ExecQuery(n: String, q: Query, hits: Int = 10) = client.namedSearch(n, q)
+  def SearchFor(s: String, q: Query*) = ExecQuery(s, Conjunction(q:_*))
+  def PartialSearchFor(n: String, q: Query*): PartialSearcher = {
+    PartialSearcher(Conjunction(q:_*), ExecQuery(n, _)) 
+  }
+  def ProjectOn(s: String, ts: Tuples) = Project(On(s))(ts)
+  def Join(cond: TuplePred, ts1: Tuples, ts2: Tuples) = NestedLoopJoin(cond)(ts1, ts2)
+  
+
+ 
+  val Arg1 = (v: String) => FieldEquals(arg1, v)
+  val Arg2 = (v: String) => FieldEquals(arg2, v)
+  val Rel = (v: String) => FieldEquals(rel, v)
+
+}
