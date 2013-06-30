@@ -17,20 +17,22 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
   
   def buildQuery(q: Query): SolrQuery = {
     val sq = new SolrQuery(q.toQueryString)
-    sq.setRows(hits).setFields("arg1", "rel", "arg2", "id", "namespace")
+    sq.setRows(hits)//.setFields("arg1", "rel", "arg2", "id", "namespace")
   }
   
   def fieldNames(doc: SolrDocument): List[String] = {
     doc.getFieldNames().toList.map { x => x.toString() }
   }
   
-  type Value = List[String]
+  type Value = Any
   type Attr = String
   
   def toTupleValue(v: Any): Option[Value] = {
     v match {
-      case v: ArrayList[_] => Some(v.asScala.toList.map(x => x.toString()))
-      case v: Any => Some(List(v.toString()))
+      case v: String => Some(v)
+      case v: Float => Some(v)
+      case v: Double => Some(v)
+      case v: Integer => Some(v)
       case _ => None
     }
   }

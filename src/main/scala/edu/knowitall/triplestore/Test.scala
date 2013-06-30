@@ -21,4 +21,6 @@ object Test extends Application {
   println
   println("contains")
   ptb(tbl2)
+  
+  println(tbl2.toList(0).get("r.arg1"))
 }

@@ -4,7 +4,7 @@ import com.rockymadden.stringmetric.similarity._
 import org.apache.solr.client.solrj.util.ClientUtils
 
 
-case class Tuple(attrs: Map[String, List[String]]) {
+case class Tuple(attrs: Map[String, Any]) {
     
   def join(other: Tuple): Tuple = {
     val t = Tuple(this.attrs ++ other.attrs)
@@ -15,9 +15,11 @@ case class Tuple(attrs: Map[String, List[String]]) {
     }
   }
   
-  def values(a: String): List[String] = attrs.get(a) match {
-    case Some(a: List[String]) => a
-    case _ => List.empty[String]
+  def get(a: String) = attrs.get(a)
+  
+  def getString(a: String) = attrs.get(a) match {
+    case Some(x: String) => Some(x)
+    case _ => None
   }
   
   def rename(f: String => String): Tuple = {
@@ -55,19 +57,12 @@ object Conditions {
   
 
   type Attr = String
-  type Value = List[String]
-  type BinaryStringPred = (String, String) => Boolean
+  type Value = Any
   type ValuePred = Value => Boolean
+  type BinaryStringPred = (String, String) => Boolean
   type BinaryValuePred = (Value, Value) => Boolean
   type TuplePred = Tuple => Boolean
-
-  def allPairs(v1: Value, v2: Value) = for (x <- v1; y <- v2) yield (x, y)
   
-  def somePairPred(f: BinaryStringPred): BinaryValuePred =
-    (v1: Value, v2: Value) => allPairs(v1, v2).exists(f.tupled)
-  
-  def allPairPred(f: BinaryStringPred): BinaryValuePred = 
-    (v1: Value, v2: Value) => allPairs(v1, v2).forall(f.tupled)
     
   def valPair(a1: Attr, a2: Attr, t: Tuple) = for (v1 <- t.attrs.get(a1); v2 <- t.attrs.get(a2)) yield (v1, v2)
   
@@ -79,9 +74,20 @@ object Conditions {
     { for (v <- t.attrs.get(a)) yield (v, List(x)) }.exists(f.tupled)
   }
   
-  def binaryPredFromString(a1: Attr, a2: Attr, f: BinaryStringPred) = binaryAttrPred(a1, a2, somePairPred(f))
+  def stringToAnyPred(f: BinaryStringPred): BinaryValuePred = (v1: Value, v2: Value) => {
+    (v1, v2) match {
+      case (v1: String, v2: String) => f(v1, v2)
+      case _ => false
+    }
+  }
   
-  def unaryPredFromString(a: Attr, v: String, f: BinaryStringPred) = unaryAttrPred(a, v, somePairPred(f)) 
+  def binaryPredFromString(a1: Attr, a2: Attr, f: BinaryStringPred) = {
+    binaryAttrPred(a1, a2, stringToAnyPred(f))
+  }
+  
+  def unaryPredFromString(a: Attr, v: String, f: BinaryStringPred) = {
+    unaryAttrPred(a, v, stringToAnyPred(f))
+  }
 
   type Synonyms = List[List[String]]
   def inSameSet(syns: Synonyms) = (x: String, y: String) => 
@@ -204,10 +210,9 @@ object Search {
     (ts: Tuples, ps: PartialSearcher) => {
       for (
           t1 <- ts;							// for each tuple
-          v <- t1.values(leftAttr);			// get the value of its join attr
-          if (!v.trim().isEmpty());
+          v <- t1.getString(leftAttr).toSeq;		// get the value of its join attr
           q = AndPhrase(ps.query, field, v);// construct a complete query 
-          t2 <- ps.search(q);				// get the matching tuples
+          t2 <- ps.search(q);
           t3 = t1.join(t2);					// join the tuples
           if cond(t3))						// test if the joined tuple satisfies the pred
         yield t3
@@ -225,22 +230,19 @@ object Tabulator {
   
   def valToString(v: Any) = v match {
     case x @ (_ :: _ :: _) => "{" + trim(x.mkString(", "), 40) + "}"
-    case x @ (y :: _) => y
+    case x @ (y :: _) => y.toString
     case x => x.toString
   }
-  def tupleToList(t: Tuple) = {
+  def tupleToList(t: Tuple, attrs: List[String]) = {
     for( 
-    		a <- t.attrs.keys.toList.sorted;
-    		v = t.values(a);
+    		a <- attrs;
+    		v = t.attrs.getOrElse(a, "");
     		s = valToString(v)) yield s}.toList
     		
   def tuplesToTable(ts: Iterable[Tuple]) = {
     val lst = ts.toList
-    val head = lst match {
-      case x :: xs => x.attrs.keys.toList.sorted
-      case _ => List()
-    }
-    format(head :: lst.map(tupleToList))
+    val head = { for (t <- lst; a <- t.attrs.keys) yield a }.toSet.toList
+    format(head :: lst.map(t => tupleToList(t, head)))
   }
   
   def format(table: Seq[Seq[Any]]) = table match {
