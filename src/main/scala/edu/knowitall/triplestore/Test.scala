@@ -3,7 +3,7 @@ import Tabulator.{tuplesToTable => toTable}
 
 object Test extends Application {
   
-  val client = TriplestoreClient("http://rv-n12:8983/solr/triplestore", 1000)
+  val client = TriplestoreClient("http://rv-n12:8983/solr/triplestore", 100)
   val planning = TriplestorePlan(client)
   import planning._
   import Conditions._
@@ -12,15 +12,14 @@ object Test extends Application {
   
   val ptb = (t: Tuples) => println(toTable(t))
   
-  val tbl1 = SearchFor("r", RelEq("is the mayor of"), Arg2Cont("new york"))
+ 
+  var tbl =
+    Project(OnTripleCols,
+    		Join(AttrsSim("contains.arg1", "antioxidant.arg1", 0.9), 
+    				SearchFor("contains", RelEq("contains"), Arg2Eq("antioxidants")),
+    				SearchFor("kills", RelCont("kills"))))
+      
+      	
+  ptb(tbl)
 
-  val tbl2 = SearchFor("r", RelEq("is The Mayor of"), Arg2Cont("new york"))
-  
-  println("equals")
-  ptb(tbl1)
-  println
-  println("contains")
-  ptb(tbl2)
-  
-  println(tbl2.toList(0).get("r.arg1"))
 }
