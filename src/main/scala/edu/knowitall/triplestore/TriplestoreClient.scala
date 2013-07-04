@@ -50,7 +50,7 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
   def search(q: Query): List[Tuple] ={
     val query = buildQuery(q)
     query.setRows(hits)
-    System.err.println(query)
+    //System.err.println(query)
     val resp = server.query(query)
     resp.getResults().toList.map(docToTuple)
   }

@@ -1,7 +1,7 @@
 package edu.knowitall.triplestore
 import Tabulator.{tuplesToTable => toTable}
 
-object Test extends Application {
+object Test /*extends Application*/ {
   
   val client = TriplestoreClient("http://rv-n12:8983/solr/triplestore", 100)
   val planning = TriplestorePlan(client)
