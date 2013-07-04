@@ -27,6 +27,7 @@ libraryDependencies += "org.apache.lucene" % "lucene-core" % "4.3.1"
 
 libraryDependencies += "org.apache.lucene" % "lucene-analyzers-common" % "4.3.1"
 
+libraryDependencies += "jline" % "jline" % "2.11"
             
 
 libraryDependencies ++= Seq(

@@ -50,6 +50,7 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
   def search(q: Query): List[Tuple] ={
     val query = buildQuery(q)
     query.setRows(hits)
+    //System.err.println(query)
     val resp = server.query(query)
     resp.getResults().toList.map(docToTuple)
   }
@@ -78,6 +79,10 @@ case class TriplestorePlan(client: TriplestoreClient) {
   def ProjectOn(s: String, ts: Tuples) = Operators.Project(On(s))(ts)
   def Project(m: TupleMap, ts: Tuples) = Operators.Project(m)(ts)
   def Join(cond: TuplePred, ts1: Tuples, ts2: Tuples) = Operators.NestedLoopJoin(cond)(ts1, ts2)
+  
+  val tripColPat = ".*\\.(arg1|arg2|rel|namespace)$"
+  def OnTripleCols(t: Tuple): Tuple = Tuple(t.attrs.filterKeys(a => a.matches(tripColPat)))
+  
   
   def SearchJoin(a1: String, a2: String, ts: Tuples, q: PartialSearcher): Tuples = {
     val cond = AttrsSim(a1, a2, 0.95)
