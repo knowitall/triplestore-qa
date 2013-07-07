@@ -219,6 +219,16 @@ object Search {
     }
   }
   
+  
+  val Arg1Eq = (v: String) => FieldPhrase(arg1_exact, v)
+  val Arg2Eq = (v: String) => FieldPhrase(arg2_exact, v)
+  val RelEq = (v: String) => FieldPhrase(rel_exact, v)
+ 
+  val Arg1Cont = (v: String) => FieldKeywords(arg1, v)
+  val Arg2Cont = (v: String) => FieldKeywords(arg2, v)
+  val RelCont = (v: String) => FieldKeywords(rel, v)
+
+  
 }
 
 object Tabulator {

@@ -7,6 +7,7 @@ case class SimpleRepl(url: String = "http://rv-n12:8983/solr/triplestore", hits:
   val client = TriplestoreClient(url, hits)
   val planning = TriplestorePlan(client)
   import planning._
+  import Search.{Arg1Cont, RelCont, Arg2Cont}
   import Conditions._
   val pat = "(.+),(.+),(.+)".r
   
