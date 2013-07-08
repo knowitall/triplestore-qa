@@ -31,4 +31,6 @@ libraryDependencies += "jline" % "jline" % "2.11"
 
 libraryDependencies += "edu.washington.cs.knowitall.common-scala" % "common-scala_2.10" % "1.1.1"
 
+libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0.M6-SNAP26"
+
 assemblySettings
