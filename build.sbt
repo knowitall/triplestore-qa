@@ -9,7 +9,7 @@ resolvers ++= Seq(
     "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/"
 )
 
-name := "triplestore-query"
+name := "triplestore-qa"
 
 version := "0.1"
 
