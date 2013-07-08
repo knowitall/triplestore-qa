@@ -19,7 +19,7 @@ class LexicalTest extends FlatSpec {
   // The question template "who does $e $r", which has inverse semantics as
   // the template q1
   val qt2 = QuestionItem(IndexedSeq(QWord("who"), QWord("do"), ArgVar, RelVar), 
-      Arg2First)
+      Arg1First)
   
   // Make a lexicon from the items
   val lexicon = MapLexicon(List(joe, r1, r2, qt1, qt2))
