@@ -53,7 +53,9 @@ case class SimpleQuery(relation: String, entity: String, queryField: Arg) {
 }
 
 /* Lexical Items associate question tokens with some semantic interpretation. */
-trait LexItem
+trait LexItem {
+  val words: IndexedSeq[QToken]
+}
 
 /* An entity lexical item associates question words (not including question 
  * variables $r or $e) with a string entity.
@@ -131,24 +133,26 @@ case class Derivation(
  */
 trait Lexicon {
   
-  def get(words: IndexedSeq[QToken]): IndexedSeq[LexItem]
-  def getRel(words: IndexedSeq[QToken]): IndexedSeq[RelItem]
-  def getEnt(words: IndexedSeq[QToken]): IndexedSeq[EntItem]
-  def getQuestion(words: IndexedSeq[QToken]): IndexedSeq[QuestionItem]
+  def get(words: IndexedSeq[QToken]): Iterable[LexItem]
+  def getRel(words: IndexedSeq[QToken]): Iterable[RelItem]
+  def getEnt(words: IndexedSeq[QToken]): Iterable[EntItem]
+  def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem]
   
   def has(words: IndexedSeq[QToken]): Boolean
   
 }
 
 /* An implementation of a Lexicon represented as a Scala Map object. */
-case class MapLexicon(items: Map[IndexedSeq[QToken], IndexedSeq[LexItem]]) 
+case class MapLexicon(items: Iterable[LexItem]) 
   extends Lexicon {
   
   type QTokens = IndexedSeq[QToken]
   type LexItems = IndexedSeq[LexItem]
   
-  def get(words: QTokens) = items.getOrElse(words, IndexedSeq())
-  def has(words: QTokens) = items.contains(words)
+  val map = items.groupBy(i => i.words)
+  
+  def get(words: QTokens) = map.getOrElse(words, IndexedSeq())
+  def has(words: QTokens) = map.contains(words)
   def getRel(words: QTokens) = get(words) flatMap {
     case x : RelItem => x :: Nil 
     case _ => Nil
@@ -231,18 +235,5 @@ case class BottomUpParser(lexicon: Lexicon) extends Parser {
       yield Derivation(words, qitem, r, e)
   }
   
-}
-
-object Test extends Application {
-  
-  val q: IndexedSeq[QWord] = IndexedSeq("who", "like", "joe")
-  val subj = QuestionItem(IndexedSeq(QWord("who"), RelVar, ArgVar), Arg2First)
-  val joe = EntItem(IndexedSeq("joe"), "j123")
-  val r1 = RelItem(IndexedSeq("like"), "like_rel", Arg2First)
-  val r2 = RelItem(IndexedSeq("like"), "liked-by_rel", Arg1First)
-  val map = Map(subj.words -> IndexedSeq(subj), r1.words -> IndexedSeq(r1, r2), joe.words -> IndexedSeq(joe))
-  val lex = MapLexicon(map)
-  val parser = BottomUpParser(lex)
-  println(parser.parse(q))
 }
 
