@@ -28,10 +28,7 @@ libraryDependencies += "org.apache.lucene" % "lucene-core" % "4.3.1"
 libraryDependencies += "org.apache.lucene" % "lucene-analyzers-common" % "4.3.1"
 
 libraryDependencies += "jline" % "jline" % "2.11"
-            
 
-libraryDependencies ++= Seq(
-  "com.chuusai" %% "shapeless" % "1.2.4"
-)
+libraryDependencies += "edu.washington.cs.knowitall.common-scala" % "common-scala_2.10" % "1.1.1"
 
 assemblySettings
