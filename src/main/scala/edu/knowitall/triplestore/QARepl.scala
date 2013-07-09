@@ -6,12 +6,15 @@ import jline.console.ConsoleReader
 import edu.knowitall.qa._
 import scopt.OptionParser
 
-class QARepl(val parser: Parser, val maxDerivations: Int = 1, url: String = "http://rv-n12:8983/solr/triplestore", hits: Int = 100) 
-extends SimpleRepl(url, hits) {
+class QARepl(val parser: Parser, val maxDerivations: Int = 5, url: String = "http://rv-n12:8983/solr/triplestore", hits: Int = 100) {
+  
+  val client = TriplestoreClient(url, hits)
+  val planning = TriplestorePlan(client)
   
   import planning._
   import Search.{Arg1Cont, RelCont, Arg2Cont}
   import Conditions._
+  import Search.Conjunction
   
   private val splitRegex = "\\s+".r
   
@@ -24,17 +27,17 @@ extends SimpleRepl(url, hits) {
       case Arg1 => Arg2Cont
       case Arg2 => Arg1Cont
     }
-    toq(squery.relation, RelCont) ++ toq(squery.entity, EntityCont) toList
+    Conjunction(RelCont(squery.relation), EntityCont(squery.entity))
   }
   
-  def search(derivation: Derivation) = Project(On("r.arg1", "r.rel", "r.arg2", "r.namespace"), SearchFor("r", queryFor(derivation): _*))
+  def search(derivation: Derivation) = {
+    val projection = On("r.arg1", "r.rel", "r.arg2", "r.namespace")
+    Project(projection, ExecQuery("r", queryFor(derivation)))
+  }
   
-  override def eval(input: String) = input match {
-    case pat(arg1, rel, arg2) => toTable(search(arg1, rel, arg2))
-    case _ => derivations(input).zipWithIndex.flatMap { case (deriv, index) => 
+  def eval(input: String) = derivations(input).zipWithIndex.flatMap { case (deriv, index) => 
       Seq(s"Derivation #$index", deriv.toString, "Results:", toTable(search(deriv)))
     } mkString("\n")
-  }  
 }
 
 object QARepl extends App {
