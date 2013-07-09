@@ -34,6 +34,11 @@ object ArgOrder {
     case (Arg2First, Arg1First) => Arg2
     case (Arg2First, Arg2First) => Arg1
   }
+  def fromInt(i: Int) = i match {
+    case 0 => Arg1First
+    case 1 => Arg2First
+    case _ => throw new IllegalArgumentException("Invalid argument ordering encoding.")
+  }
 }
 
 /* Constant symbols used to represent Arg1 and Arg2 slots. */
