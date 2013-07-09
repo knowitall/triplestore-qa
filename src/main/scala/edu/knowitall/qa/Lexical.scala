@@ -1,7 +1,7 @@
 package edu.knowitall.qa
 
 import edu.knowitall.collection.immutable.Interval
-import PartialFunction._
+//import PartialFunction._
 
 /* Question Tokens are either strings, or two special tokens used to represent
  * variables (RelVar or $r, and ArgVar or $e).
