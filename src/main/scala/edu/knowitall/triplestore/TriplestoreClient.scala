@@ -20,6 +20,11 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
     sq.setRows(hits)//.setFields("arg1", "rel", "arg2", "id", "namespace")
   }
   
+  def buildCountQuery(q: Query): SolrQuery = {
+    val sq = new SolrQuery(q.toQueryString)
+    sq.setRows(0)
+  }
+  
   def fieldNames(doc: SolrDocument): List[String] = {
     doc.getFieldNames().toList.map { x => x.toString() }
   }
@@ -46,6 +51,11 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
   
   def docToTuple(doc: SolrDocument): Tuple = Tuple(docToFields(doc).toMap)
 
+  def count(q: Query): Long = {
+    val query = buildCountQuery(q)
+    val resp = server.query(query)
+    resp.getResults().getNumFound()
+  }
   
   def search(q: Query): List[Tuple] ={
     val query = buildQuery(q)
