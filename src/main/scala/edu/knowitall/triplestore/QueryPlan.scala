@@ -172,7 +172,7 @@ object Search {
   def escape = ClientUtils.escapeQueryChars _
   
   case class FieldKeywords(f: Field, v: String) extends Query {
-    def toQueryString = { for (w <- v.split("\\s+"); x = f.toString() + ":" + escape(w)) yield x }.mkString(" AND ") 
+    def toQueryString = { for (w <- v.trim().split("\\s+"); x = f.toString() + ":" + escape(w)) yield x }.mkString(" AND ") 
   }
   
   case class FieldPhrase(f: Field, v: String) extends Query {
@@ -209,14 +209,14 @@ object Search {
     }
     (ts: Tuples, ps: PartialSearcher) => {
       for (
-          t1 <- ts;							// for each tuple
+          t1 <- ts.par;							// for each tuple
           v <- t1.getString(leftAttr).toSeq;		// get the value of its join attr
           q = AndPhrase(ps.query, field, v);// construct a complete query 
-          t2 <- ps.search(q);
+          t2 <- ps.search(q).par;
           t3 = t1.join(t2);					// join the tuples
           if cond(t3))						// test if the joined tuple satisfies the pred
         yield t3
-    }
+    }.toList
   }
   
   
