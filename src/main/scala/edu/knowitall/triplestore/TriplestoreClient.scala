@@ -17,6 +17,7 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
   
   def buildQuery(q: Query): SolrQuery = {
     val sq = new SolrQuery(q.toQueryString)
+    System.err.println(s"Issuing Solr Query: ${sq.getQuery}")
     sq.setRows(hits)//.setFields("arg1", "rel", "arg2", "id", "namespace")
   }
   
@@ -71,7 +72,7 @@ case class TriplestorePlan(client: TriplestoreClient) {
   type TuplePred = Tuple => Boolean
   type TupleMap = Tuple => Tuple
  
-  def ExecQuery(n: String, q: Query, hits: Int = 10) = client.namedSearch(n, q)
+  def ExecQuery(n: String, q: Query) = client.namedSearch(n, q)
   def SearchFor(s: String, q: Query*) = ExecQuery(s, Conjunction(q:_*))
   def PartialSearchFor(n: String, q: Query*): PartialSearcher = {
     PartialSearcher(Conjunction(q:_*), ExecQuery(n, _)) 

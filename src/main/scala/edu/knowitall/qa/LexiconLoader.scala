@@ -2,43 +2,63 @@ package edu.knowitall.qa
 
 import scala.io.Source
 import java.io.File
-import edu.knowitall.common.Resource.using
 import scala.collection.JavaConversions._
+import edu.knowitall.common.Resource.using
+import java.util.concurrent.atomic.AtomicInteger 
 
-abstract class LexLoader {
+class LexiconLoader(val dbVocabFile: File, val lexVocabFile: File, val lexEntryFile: File) {
   
-  def load: Lexicon
-}
-
-class ParalexLoader(val dbVocabFile: File, val lexVocabFile: File, val lexEntryFile: File) extends LexLoader {
+  private val entryRegex = "(\\d+)\\s+(.+)".r
   
-  class VocabEntry(val id: Int, val tokens: IndexedSeq[QWord]) extends Tuple2[Int, IndexedSeq[QWord]](id, tokens) {
-    require(tokens.nonEmpty, s"Empty vocab entry #$id.")
-  }
-  
-  private val spaceRegex = "\\s+".r
-  
-  private def readVocabLine(str: String): VocabEntry = spaceRegex.split(str).toList match {
-    case id :: tokens => new VocabEntry(id.toInt, tokens map QWord.qWordWrap toIndexedSeq)
+  private def loadEntry(str: String): (Int, String) = str match {
+    case entryRegex(id, tokens) => (id.toInt, tokens)
     case _ => throw new RuntimeException(s"Malformed vocab record: $str")
   }
   
-  private def loadVocab(file: File): Map[Int, IndexedSeq[QWord]] = using(Source.fromFile(file)) { source =>
-    source.getLines map readVocabLine toMap
+  val dbVocab = using(Source.fromFile(dbVocabFile)) { source => 
+  	System.err.println(s"Loading DB vocab...")
+    source.getLines map loadEntry toMap
   }
   
-  lazy val dbVocab = loadVocab(dbVocabFile)
+  private val splitRegex = "\\s+".r
   
-  lazy val lexVocab = loadVocab(lexVocabFile)
+  val lexVocab = using(Source.fromFile(lexVocabFile)) { source => 
+      System.err.println(s"Loading Lexicon vocab...")
+      source.getLines map loadEntry map { case (id, string) => 
+        (id, splitRegex.split(string) map QWord.qWordWrap) 
+    } toMap
+  } 
 
-  private def readLexEntry(str: String): LexItem = spaceRegex.split(str).map(_.toInt) match {
-    case Array(lexId, 0, dbId) => EntItem(lexVocab(lexId), dbVocab(dbId).mkString(" "))
-    case Array(lexId, 3, order, dbId) => QuestionItem(lexVocab(lexId), ArgOrder.fromInt(order))
+  private def withVars(words: IndexedSeq[QWord]) = words map(_.word) map QToken.qTokenWrap 
+  
+  private def readLexEntry(str: String): Option[LexItem] = splitRegex.split(str).map(_.toInt) match {
+
+    case Array(lexId, 0, dbId) => Some(EntItem(lexVocab(lexId), dbVocab(dbId)))
+
+    case Array(lexId, 3, order, dbId) => withVars(lexVocab(lexId)) match {
+      case tokens if tokens.forall(_.isInstanceOf[QWord]) => 
+        Some(RelItem(lexVocab(lexId), dbVocab(dbId), ArgOrder.fromInt(order)))
+      case tokens => 
+        None // Some(QuestionItem(tokens, ArgOrder.fromInt(order)))
+    }
+
+    case Array(lexId, 1, order) => Some(QuestionItem(withVars(lexVocab(lexId)), ArgOrder.fromInt(order)))
+    
+    case _ => throw new RuntimeException(s"Unrecognized lexicon encoding: $str")
+  }
+
+  private class LexIterator(lexSource: Source) extends Iterator[LexItem] {
+    System.err.println("Loading Lexicon...")
+    val lexItemIterator = lexSource.getLines flatMap readLexEntry
+    def hasNext = if (!lexItemIterator.hasNext) { lexSource.close(); false } else true
+
+    def next = if (hasNext) lexItemIterator.next()
+      else throw new NoSuchElementException("Empty LexItem iterator")
   }
   
-  lazy val load: Lexicon = {
-    
-    val foo = io.Source.fromFile(dbVocabFile).getLines map readVocabLine
-    throw new RuntimeException(s"Not Implemented")
+  private class LexIterable(lexEntryFile: File) extends Iterable[LexItem] {
+    def iterator = new LexIterator(Source.fromFile(lexEntryFile))
   }
+  
+  def load: Lexicon = new MapLexicon(new LexIterable(lexEntryFile))
 }
