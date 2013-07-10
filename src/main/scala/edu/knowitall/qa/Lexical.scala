@@ -7,6 +7,13 @@ import edu.knowitall.collection.immutable.Interval
  * variables (RelVar or $r, and ArgVar or $e).
  */
 trait QToken
+object QToken {
+  def qTokenWrap(s: String): QToken = s match {
+    case "$r" => RelVar
+    case "$y" => ArgVar
+    case _ => QWord.qWordWrap(s)
+  }
+}
 case class QWord(word: String) extends QToken {
   override def toString = word
 }
@@ -17,7 +24,7 @@ case object RelVar extends QToken {
   override def toString = "$r"
 }
 case object ArgVar extends QToken {
-  override def toString = "$e"
+  override def toString = "$y"
 }
 
 /* Argument orderings are used to represent whether an argument binds to the
@@ -33,6 +40,11 @@ object ArgOrder {
     case (Arg1First, Arg2First) => Arg2
     case (Arg2First, Arg1First) => Arg2
     case (Arg2First, Arg2First) => Arg1
+  }
+  def fromInt(i: Int): ArgOrder = i match {
+    case 0 => Arg2First
+    case 1 => Arg1First
+    case _ => throw new IllegalArgumentException("Invalid argument ordering encoding.")
   }
 }
 
@@ -121,11 +133,10 @@ case class Derivation(
   val rOrder = relItem.argOrder
   val queryField = ArgOrder.compose(qOrder, rOrder)
   
-  val query = SimpleQuery(relItem.relation, entItem.entity, queryField)
+  val query = SimpleQuery(relItem.words.mkString(" "), entItem.words.mkString(" "), queryField)
   
   override def toString = List(qws, query, "----", questionItem, relItem, 
       entItem).mkString("\n")
-  
 }
 
 /* A lexicon provides access to a set of lexical items. The lexical items are
@@ -139,7 +150,6 @@ trait Lexicon {
   def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem]
   
   def has(words: IndexedSeq[QToken]): Boolean
-  
 }
 
 /* An implementation of a Lexicon represented as a Scala Map object. */
@@ -193,20 +203,21 @@ abstract class Parser {
  * if the resulting question pattern exists in the lexicon.
  */
 case class BottomUpParser(lexicon: Lexicon) extends Parser {
-  
+
   /* Generates a question pattern. For example, suppose we have the input 
    * question "who likes joe" and the lexicon indicated that 
    * "likes" goes to some relation lexitem, and "joe" goes to some entity
    * lexitem. Then this function will return the question pattern "who $r $e".
    */
-  def questionPatFrom(words: IndexedSeq[QWord], rel: Span[LexItem], 
-      ent: Span[LexItem]): IndexedSeq[QToken] = {
+  def questionPatFrom(words: IndexedSeq[QWord], rel: Span[LexItem],
+    ent: Span[LexItem]): IndexedSeq[QToken] = {
     val rInt = rel.interval
     val eInt = ent.interval
-    for (i <- 0 to words.size - 1) yield i match {
-      case i if rInt.min == i => RelVar
-      case i if eInt.min == i => ArgVar
-      case i if !rInt.contains(i) && !eInt.contains(i) => words(i)
+    (0 until words.size).flatMap { i =>
+        if (rInt.min == i) Some(RelVar)
+        else if (eInt.min == i) Some(ArgVar)
+        else if (!rInt.contains(i) && !eInt.contains(i)) Some(words(i))
+        else None
     }
   }
   
@@ -234,6 +245,4 @@ case class BottomUpParser(lexicon: Lexicon) extends Parser {
         qitem <- lexicon.getQuestion(qpat))
       yield Derivation(words, qitem, r, e)
   }
-  
 }
-

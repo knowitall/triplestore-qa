@@ -25,6 +25,7 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
    */
   def buildQuery(q: Query): SolrQuery = {
     val sq = new SolrQuery(q.toQueryString)
+    System.err.println(s"Issuing Solr Query: ${sq.getQuery}")
     sq.setRows(hits)
   }
   
