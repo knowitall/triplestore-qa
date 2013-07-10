@@ -80,6 +80,7 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
    * Returns the number of documents in Solr that match the given query.
    */
   def count(q: Query): Long = {
+    System.err.println("Counting..." + q)
     val query = buildCountQuery(q)
     val resp = server.query(query)
     resp.getResults().getNumFound()
@@ -91,7 +92,7 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
   def search(q: Query): List[Tuple] ={
     val query = buildQuery(q)
     query.setRows(hits)
-    System.err.println(query)
+    System.err.println(q)
     val resp = server.query(query)
     resp.getResults().toList.map(docToTuple)
   }
