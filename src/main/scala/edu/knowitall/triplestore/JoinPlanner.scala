@@ -146,6 +146,8 @@ case class Joiner(client: TriplestoreClient) {
     Select(spred)(joined)
   }
   
+  def log(s: String*) = System.err.println(s.mkString(" "))
+  
   def joinQueries(queries: Iterable[AbstractQuery]): Tuples = {
     val nodes = queries.map(QueryNode(_)).toList
     join(nodes)
@@ -167,7 +169,6 @@ case class Joiner(client: TriplestoreClient) {
   }
   
   def groupThenMergeNodes(nodes: List[TableNode], v: Variable): List[TableNode] = {
-    println("MERGING LOWEST = " + v)
     val (toMerge, toKeep) = nodes.partition(_.hasVariable(v))
     mergeNodes(toMerge, v) +: toKeep
   }
