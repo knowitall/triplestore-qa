@@ -1,20 +1,30 @@
 package edu.knowitall.triplestore
 import Search.PartialSearchJoin
 import PartialFunction._
-import Search.{Arg1Cont, RelCont, Arg2Cont}
 import Search.Field._
 import Search.Query
 import Conditions.TuplePred
 import Operators.{Select, Product}
 import edu.knowitall.triplestore.Search.Conjunction
-import edu.knowitall.triplestore.Search.FieldKeywords
+import edu.knowitall.triplestore.Search.{FieldKeywords, FieldPhrase}
 import edu.knowitall.triplestore.Conditions.AttrsSim
 import Operators.NestedLoopJoin
 
 trait QVal
 
-case class Literal(value: String) extends QVal {
+trait Literal {
+  val value: String
+  def toConjunct(field: Field): Query
+}
+
+case class UnquotedLiteral(value: String) extends QVal with Literal {
   override def toString = value
+  override def toConjunct(field: Field) = FieldKeywords(field, value)
+}
+
+case class QuotedLiteral(value: String) extends QVal with Literal {
+  override def toString = s""""$value""""
+  override def toConjunct(field: Field) = FieldPhrase(field, value)
 }
 
 case class Variable(name: String) extends QVal {
@@ -23,9 +33,10 @@ case class Variable(name: String) extends QVal {
 
 case class AbstractQuery(name: String, values: Map[Field, QVal]) {  
   
-  def literalFields: Iterable[(Field, String)] = { 
+  def literalFields: Iterable[(Field, Literal)] = { 
     for ((f, v) <- values) yield v match {
-      case Literal(s) => Some((f, s))
+      case l: UnquotedLiteral => Some((f, l))
+      case l: QuotedLiteral => Some((f, l))
       case _ => None
     }
   }.flatten
@@ -40,7 +51,8 @@ case class AbstractQuery(name: String, values: Map[Field, QVal]) {
   def varsToFields: Map[Variable, Field] = variableFields.map(_.swap).toMap
   
   def partialQuery: Query = {
-    val conjuncts = for ((f, v) <- literalFields) yield FieldKeywords(f, v)
+    val lfs = literalFields.toList
+    val conjuncts = for ((f, v) <- lfs) yield v.toConjunct(f)
     Conjunction(conjuncts.toList:_*)
   }
   
@@ -68,17 +80,22 @@ case object AbstractQuery {
     case qpat(x, r, y) => Some(fromTriple(name, x, r, y))
     case _ => None
   }
+  
+  val quoted = """^"(.*)"$""".r
   def getQVal(s: String): QVal = s match {
     case vpat(v) => Variable(v)
     case "?" => Variable("?")
-    case _ => Literal(s)
+    case quoted(v) => QuotedLiteral(v) 
+    case _ => UnquotedLiteral(s)
   }
+  
   val fields = List(arg1, rel, arg2)
   def fromTriple(name: String, x: String, r: String, y: String): AbstractQuery = {
     val lst = List(x.trim(), r.trim(), y.trim())
     val items = for ((f, a) <- fields.zip(lst); v = getQVal(a)) yield (f, v)
     AbstractQuery(name, items.toMap)
   }
+  
   val splitPat = """(?<=\))\s*?(?=\()"""
   def fromStringMult(s: String): Iterable[AbstractQuery] = {
     val parts = s.split(splitPat).toList
