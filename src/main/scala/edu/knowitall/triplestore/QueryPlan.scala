@@ -255,10 +255,9 @@ object Tabulator {
     		v = t.attrs.getOrElse(a, "");
     		s = valToString(v)) yield s}.toList
     		
-  def tuplesToTable(ts: Iterable[Tuple]) = {
+  def tuplesToTable(cols: List[String], ts: Iterable[Tuple]) = {
     val lst = ts.toList
-    val head = { for (t <- lst; a <- t.attrs.keys) yield a }.toSet.toList
-    format(head :: lst.map(t => tupleToList(t, head)))
+    format(cols :: lst.map(t => tupleToList(t, cols)))
   }
   
   def format(table: Seq[Seq[Any]]) = table match {
