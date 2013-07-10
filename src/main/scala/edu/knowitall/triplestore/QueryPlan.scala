@@ -164,6 +164,7 @@ object Search {
     type Field = Value
     val arg1, rel, arg2, namespace = Value
     val arg1_exact, rel_exact, arg2_exact = Value
+    val exactMap = Map(arg1 -> arg1_exact, rel -> rel_exact, arg2 -> arg2_exact)
   }
   import Field._
   
@@ -178,7 +179,8 @@ object Search {
   }
   
   case class FieldPhrase(f: Field, v: String) extends Query {
-    def toQueryString = f.toString() + ":\"" + escape(v) + "\"" 
+    val realField = exactMap.getOrElse(f, f)
+    def toQueryString = realField.toString() + ":\"" + escape(v) + "\"" 
   }
   
   case class Conjunction(conjuncts: Query*) extends Query {
