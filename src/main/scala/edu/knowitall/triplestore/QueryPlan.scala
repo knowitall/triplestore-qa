@@ -259,6 +259,16 @@ object Tabulator {
     val lst = ts.toList
     format(cols :: lst.map(t => tupleToList(t, cols)))
   }
+    		
+  def tuplesToTable(ts: Iterable[Tuple]): String = {
+    val lst = ts.toList
+    if (lst.size > 0) {
+      val cols = lst(0).attrs.keys.toList
+      tuplesToTable(cols, ts)
+    } else {
+      ""
+    }
+  }
   
   def format(table: Seq[Seq[Any]]) = table match {
     case Seq() => ""
