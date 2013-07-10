@@ -152,6 +152,8 @@ object Operators {
     for (t1 <- ts1; t2 <- ts2; j = t1.join(t2); if p(j)) yield j
   }
   
+  def Product(ts1: Tuples, ts2: Tuples): Tuples = for (t1 <- ts1; t2 <- ts2) yield t1.join(t2)
+  
 }
 
 object Search {
@@ -189,6 +191,10 @@ object Search {
   
   def AndPhrase(q: Query, f: Field, v: String) = Conjunction(q, FieldPhrase(f, v))
 
+  val tripColPat = ".*\\.(arg1|arg2|rel|namespace)$"
+  def OnTripleCols(t: Tuple): Tuple = Tuple(t.attrs.filterKeys(a => a.matches(tripColPat)))
+  def ProjectTriples(ts: Tuples) = Operators.Project(OnTripleCols)(ts)
+  
   type Tuples = Iterable[Tuple]
   type Attr = String
   type Search = Query => Tuples
