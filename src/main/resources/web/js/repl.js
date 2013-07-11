@@ -1,12 +1,12 @@
 var url = "/query";
 var query = function() {
-//    $('#results').html('<img src="spinner.gif"/>');
+    $('#results').html('<img src="spinner.gif"/>');
     var q = $('#inputbox').val();
-    $.getJSON(url, {'q': q}, function(data) {
-        console.log("HI!")
+    $.get(url, {'q': q}, function(data) {
         console.log(data)
         $('#results').html(data)
-    });
+    })
+    .fail(function() { $('#results').html('Error.') });
 };
 var initialize = function() {
     $('#inputbox').keypress(function(e) {
