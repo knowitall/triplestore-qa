@@ -19,16 +19,26 @@ import org.apache.commons.io.IOUtils
 object WebRepl extends App {
 
   val logger = LoggerFactory.getLogger(this.getClass) 
- 
+   
+  /**
+   * This object defines the web server behavior.
+   */
   object Plan extends unfiltered.filter.Plan {
     
     val repl = SimpleRepl()
     
     def intent = Intent {
       
+      /**
+       * Map the URL /query to the runQuery function.
+       */
       case req @ GET(Path(Seg("query" :: Nil))) => 
         runQuery(req.parameterValues("q").mkString(" "))
 
+      /**
+       * Map all other URL paths to get the static content stored as a 
+       * resource on the classpath.
+       */
       case req @ GET(Path(path)) => getStatic(path)
         
     }
@@ -51,6 +61,19 @@ object WebRepl extends App {
       }
   }
   
-  Http(8080).filter(Plan).run()
-
+  /**
+   * Command line parameter parsing stuff.
+   */
+  case class Config(port: Int = 8080)
+      
+  val argParser = new scopt.OptionParser[Config]("scopt") {
+    help("help") text("Starts a REPL web interface for querying the triplestore.")
+    opt[Int]('p', "port") action { (x, c) => c.copy(port = x)} text("webserver port")
+  }
+  
+  argParser.parse(args, Config()) map { config =>
+    val port = config.port
+    Http(port).filter(Plan).run()
+    logger.info(s"Starting webserver at http://localhost:$port")
+  }
 }
