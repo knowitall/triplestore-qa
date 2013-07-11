@@ -43,4 +43,6 @@ libraryDependencies ++= Seq(
     "org.slf4j" % "slf4j-api" % "1.7.1"
 )
 
+libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+
 assemblySettings
