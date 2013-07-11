@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Web REPL</title>
+<script src="js/jquery-latest.min.js"></script>
+<script src="js/repl.js"></script>
+<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script>
+$(document).ready(function() {
+    console.log("hello");
+    initialize();
+});
+</script>
+</head>
+<style>
+    #inputbox {
+        width: 100%;
+        font-size: large;
+    }
+    #content {
+        width: 100%;
+        font-family: courier;
+    }
+</style>
+<body>
+
+    <div id="content">
+        <input id="inputbox"/>
+        <div id="results"></div>
+    </div>
+
+</body>
+</html>
