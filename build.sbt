@@ -33,4 +33,14 @@ libraryDependencies += "edu.washington.cs.knowitall.common-scala" % "common-scal
 
 libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0.M6-SNAP26"
 
+libraryDependencies ++= Seq(
+    "net.databinder" %% "unfiltered-filter" % "0.6.8",
+    "net.databinder" %% "unfiltered-jetty" % "0.6.8",
+    "com.jsuereth" %% "scala-arm" % "1.3",
+    "com.github.scopt" %% "scopt" % "2.1.0",
+    "ch.qos.logback" % "logback-classic" % "1.0.11",
+    "ch.qos.logback" % "logback-core" % "1.0.11",
+    "org.slf4j" % "slf4j-api" % "1.7.1"
+)
+
 assemblySettings
