@@ -46,3 +46,10 @@ libraryDependencies ++= Seq(
 libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
 assemblySettings
+
+mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
+  {
+    case "about.html" => MergeStrategy.rename
+    case x => old(x)
+  }
+}
