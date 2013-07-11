@@ -5,10 +5,18 @@
 <title>Web REPL</title>
 <script src="js/jquery-latest.min.js"></script>
 <script src="js/repl.js"></script>
-<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <script>
 $(document).ready(function() {
     initialize();
+    var exs = [
+        {q: 'bush, type, us president', note: 'Keyword search over fields'}, 
+        {q: '?, type, us president', note: 'Leave out a field using a question mark'}, 
+        {q: '?, "type", "us president"', note: 'Quote strings for exact matches'}, 
+        {q: "(salad, with, $x) ($x, source of, protein) ($x, compatible with, vegetarians)", note: "Dollar signs prefixes introduce join variables"},
+        {q: "($x, discovered, radium) ($x, born in, $y) ($y, type, city)", note: "Multiple joins are allowed"},
+        {q: '(haggis, $r, scotland) ($x, $r, france) ($x, "type", food)', note: "Joins over relations are allowed, too"},
+    ];
+    for (var i = 0; i < exs.length; i++) { addExample(exs[i]); }
 });
 </script>
 </head>
@@ -18,7 +26,7 @@ $(document).ready(function() {
         font-size: large;
         font-family: courier;
     }
-    #content {
+    #results {
         width: 100%;
         font-family: courier;
     }
@@ -26,6 +34,8 @@ $(document).ready(function() {
 <body>
 
     <div id="content">
+        <h1>Triplestore Search</h1>
+        <table id="examples"></table><br/>
         <input id="inputbox"/>
         <pre id="results"></pre>
     </div>

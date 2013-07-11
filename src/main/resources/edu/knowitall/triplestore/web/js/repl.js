@@ -1,4 +1,5 @@
 var url = "/query";
+
 var query = function() {
     $('#results').html('<img src="spinner.gif"/>');
     var q = $('#inputbox').val();
@@ -8,6 +9,7 @@ var query = function() {
     })
     .fail(function() { $('#results').html('Error.') });
 };
+
 var initialize = function() {
     $('#inputbox').keypress(function(e) {
         code = (e.keyCode ? e.keyCode : e.which);
@@ -18,3 +20,13 @@ var initialize = function() {
     });
     $('#inputbox').focus();
 }
+
+var addExample = function(ex) {
+    var $link = $('<a href="#">'+ex.q+'</a>');
+    $link.click(function(e) {
+        e.preventDefault();
+        $('#inputbox').val(ex.q);
+        query();
+    });
+    var $item = $('<tr/>').appendTo($('#examples')).append("<td>" + ex.note + "</td>").append("<td>").append($link).append("</td>");
+};
