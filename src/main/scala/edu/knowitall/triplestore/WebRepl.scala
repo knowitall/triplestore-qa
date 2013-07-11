@@ -50,8 +50,8 @@ object WebRepl extends App {
     
     def getStatic(path: String) = {
       val mimeType = Mime.unapply(path).getOrElse("text/plain")
-      val realPath = "web/" + { if (path.trim() == "/") "index.html" else path } 
-      val stream = getClass.getClassLoader().getResourceAsStream(realPath)
+      val realPath = "/edu/knowitall/triplestore/web" + { if (path.trim() == "/") "/index.html" else path }
+      val stream = getClass.getResourceAsStream(realPath)
         if (stream != null) {
           System.out.println(mimeType)
           ContentEncoding(mimeType) ~> ResponseBytes(IOUtils.toByteArray(stream)) ~> Ok
