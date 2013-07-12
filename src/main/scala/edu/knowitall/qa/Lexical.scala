@@ -188,12 +188,13 @@ abstract class Parser {
     for (i <- Range(0, size); j <- Range(i, size)) yield (i, j+1)  
 
   
-  def enumerateItemSpans(words: IndexedSeq[QWord]): Iterable[Span[LexItem]] = 
-    for ((i, j) <- intervals(words.size); // for each span index
+  def enumerateItemSpans(words: IndexedSeq[QWord]): Iterable[Span[LexItem]] = {
+    for ((i, j) <- intervals(words.size).par; // for each span index
          ws = words.slice(i, j);		  // get the subseq of words
          iv = Interval.open(i, j);		  // make an interval
          item <- lexicon.get(ws))		  // for each lexical item matching words
       yield Span(iv, item) 			 	  // yield a new Span
+    }.toList
     
   def parse(words: IndexedSeq[QWord]): Iterable[Derivation]
 
