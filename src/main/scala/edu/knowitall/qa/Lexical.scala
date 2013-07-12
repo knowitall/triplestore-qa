@@ -145,8 +145,8 @@ case class Derivation(
 trait Lexicon {
   
   def get(words: IndexedSeq[QToken]): Iterable[LexItem]
-  def getRel(words: IndexedSeq[QToken]): Iterable[RelItem]
-  def getEnt(words: IndexedSeq[QToken]): Iterable[EntItem]
+  def getRel(words: IndexedSeq[QWord]): Iterable[RelItem]
+  def getEnt(words: IndexedSeq[QWord]): Iterable[EntItem]
   def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem]
   
   def has(words: IndexedSeq[QToken]): Boolean
@@ -157,17 +157,18 @@ case class MapLexicon(items: Iterable[LexItem])
   extends Lexicon {
   
   type QTokens = IndexedSeq[QToken]
+  type QWords = IndexedSeq[QWord]
   type LexItems = IndexedSeq[LexItem]
   
   val map = items.groupBy(i => i.words)
   
   def get(words: QTokens) = map.getOrElse(words, IndexedSeq())
   def has(words: QTokens) = map.contains(words)
-  def getRel(words: QTokens) = get(words) flatMap {
+  def getRel(words: QWords) = get(words) flatMap {
     case x : RelItem => x :: Nil 
     case _ => Nil
   }
-  def getEnt(words: QTokens) = get(words) flatMap {
+  def getEnt(words: QWords) = get(words) flatMap {
     case x : EntItem => x :: Nil
     case _ => Nil
   }
@@ -193,7 +194,7 @@ abstract class Parser {
          iv = Interval.open(i, j);		  // make an interval
          item <- lexicon.get(ws))		  // for each lexical item matching words
       yield Span(iv, item) 			 	  // yield a new Span
-
+    
   def parse(words: IndexedSeq[QWord]): Iterable[Derivation]
 
 }
