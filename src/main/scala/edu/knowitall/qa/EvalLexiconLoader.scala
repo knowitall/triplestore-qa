@@ -6,7 +6,7 @@ import scala.collection.JavaConversions._
 import edu.knowitall.common.Resource.using
 import java.util.concurrent.atomic.AtomicInteger 
 
-class EvalLexiconLoader(val dbVocabFile: File, val lexVocabFile: File, val lexEntryFile: File) {
+class EvalLexiconLoader(val dbVocabFile: File, val lexVocabFile: File, val lexEntryFile: File) extends Iterable[LexItem] {
   
   private val entryRegex = "(\\d+)\\s+(.+)".r
   
@@ -47,7 +47,7 @@ class EvalLexiconLoader(val dbVocabFile: File, val lexVocabFile: File, val lexEn
     case _ => throw new RuntimeException(s"Unrecognized lexicon encoding: $str")
   }
 
-  private class LexIterator(lexSource: Source) extends Iterator[LexItem] {
+  class LexIterator(lexSource: Source) extends Iterator[LexItem] {
     System.err.println("Loading Lexicon...")
     val lexItemIterator = lexSource.getLines flatMap readLexEntry
     def hasNext = if (!lexItemIterator.hasNext) { lexSource.close(); false } else true
@@ -56,9 +56,5 @@ class EvalLexiconLoader(val dbVocabFile: File, val lexVocabFile: File, val lexEn
       else throw new NoSuchElementException("Empty LexItem iterator")
   }
   
-  private class LexIterable(lexEntryFile: File) extends Iterable[LexItem] {
-    def iterator = new LexIterator(Source.fromFile(lexEntryFile))
-  }
-  
-  def load: Lexicon = new MapLexicon(new LexIterable(lexEntryFile))
+  override def iterator = new LexIterator(Source.fromFile(lexEntryFile))
 }

@@ -58,7 +58,7 @@ object QARepl extends App {
     val lexVocab = new File(config.dataPath, "lexicons/paralex/vocab.txt")
     val lexItems = new File(config.dataPath, "lexicons/paralex/lexicon.txt")
     
-    val lexicon = new EvalLexiconLoader(dbVocab, lexVocab, lexItems).load
+    val lexicon = new MapLexicon(new EvalLexiconLoader(dbVocab, lexVocab, lexItems))
     
     val parser = new BottomUpParser(lexicon)
 
