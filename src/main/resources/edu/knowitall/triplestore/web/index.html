@@ -12,9 +12,12 @@ $(document).ready(function() {
         {q: 'bush, type, us president', note: 'Keyword search over fields'}, 
         {q: '?, type, us president', note: 'Leave out a field using a question mark'}, 
         {q: '?, "type", "us president"', note: 'Quote strings for exact matches'}, 
-        {q: "(salad, with, $x) ($x, source of, protein) ($x, compatible with, vegetarians)", note: "Dollar signs prefixes introduce join variables"},
+        {q: "(salad, with, $x) ($x, source of, protein)", note: "Dollar signs prefixes introduce join variables"},
+        {q: "(salad, with, $x) ($x, source of, protein) ($x, compatible with, vegetarians)", note: ""},
+        {q: "(salad, with, $x) ($x, source of, protein) ($x, compatible with, vegans)", note: ""},
         {q: "($x, discovered, radium) ($x, born in, $y) ($y, type, city)", note: "Multiple joins are allowed"},
-        {q: '(haggis, $r, scotland) ($x, $r, france) ($x, "type", food)', note: "Joins over relations are allowed, too"},
+        {q: '(haggis, $r, scotland) ($x, $r, italy) ($x, "type", food)', note: "Joins over relations are allowed, too"},
+        {q: '(haggis, $r, scotland) ($x, $r, france) ($x, "type", food)', note: ""},
     ];
     for (var i = 0; i < exs.length; i++) { addExample(exs[i]); }
 });
@@ -22,7 +25,7 @@ $(document).ready(function() {
 </head>
 <style>
     #inputbox {
-        width: 100%;
+        width: 90%;
         font-size: large;
         font-family: courier;
     }
@@ -36,7 +39,7 @@ $(document).ready(function() {
     <div id="content">
         <h1>Triplestore Search</h1>
         <table id="examples"></table><br/>
-        <input id="inputbox"/>
+        <div style="font-size: large; width: 100%">Input: <input id="inputbox"/></div>
         <pre id="results"></pre>
     </div>
 
