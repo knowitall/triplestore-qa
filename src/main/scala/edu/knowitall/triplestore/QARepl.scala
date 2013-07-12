@@ -43,7 +43,7 @@ class QARepl(val parser: Parser, val maxDerivations: Int = 5, url: String = "htt
 object QARepl extends App {
   
   import java.io.File
-  import edu.knowitall.qa.LexiconLoader
+  import edu.knowitall.qa.EvalLexiconLoader
   
   case class Config(dataPath: File = new File("."))
   
@@ -58,7 +58,7 @@ object QARepl extends App {
     val lexVocab = new File(config.dataPath, "lexicons/paralex/vocab.txt")
     val lexItems = new File(config.dataPath, "lexicons/paralex/lexicon.txt")
     
-    val lexicon = new LexiconLoader(dbVocab, lexVocab, lexItems).load
+    val lexicon = new EvalLexiconLoader(dbVocab, lexVocab, lexItems).load
     
     val parser = new BottomUpParser(lexicon)
 

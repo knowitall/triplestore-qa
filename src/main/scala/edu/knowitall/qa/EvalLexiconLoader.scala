@@ -6,7 +6,7 @@ import scala.collection.JavaConversions._
 import edu.knowitall.common.Resource.using
 import java.util.concurrent.atomic.AtomicInteger 
 
-class LexiconLoader(val dbVocabFile: File, val lexVocabFile: File, val lexEntryFile: File) {
+class EvalLexiconLoader(val dbVocabFile: File, val lexVocabFile: File, val lexEntryFile: File) {
   
   private val entryRegex = "(\\d+)\\s+(.+)".r
   
