@@ -41,6 +41,10 @@ object ArgOrder {
     case (Arg2First, Arg1First) => Arg2
     case (Arg2First, Arg2First) => Arg1
   }
+  def toInt(o: ArgOrder) = o match {
+    case Arg1First => 1
+    case Arg2First => 0
+  }
   def fromInt(i: Int): ArgOrder = i match {
     case 0 => Arg2First
     case 1 => Arg1First
@@ -65,7 +69,7 @@ case class SimpleQuery(relation: String, entity: String, queryField: Arg) {
 }
 
 /* Lexical Items associate question tokens with some semantic interpretation. */
-trait LexItem {
+sealed trait LexItem {
   val words: IndexedSeq[QToken]
 }
 
