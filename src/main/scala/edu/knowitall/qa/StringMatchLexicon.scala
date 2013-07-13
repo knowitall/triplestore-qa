@@ -68,6 +68,8 @@ case class StringMatchLexicon(client: TriplestoreClient, minCount: Integer = 100
     List(QuestionItem(words, Arg1First))
   }
   
+  def getQuestionRel(words: IndexedSeq[QToken]): Iterable[QuestionRelItem] = Nil
+  
   def has(words: IndexedSeq[QToken]): Boolean = {
     if (allQWords(words)) {
       val qwords = toQWords(words)

@@ -166,8 +166,19 @@ case class TwoArgDerivation(
   
   val query = SimpleQuery(relItem.relation, entItem.entity, queryField)
   
-  override def toString = List(qws, query, "----", questionItem, relItem, 
+  override def toString = List(qws, query, questionItem, relItem, 
       entItem).mkString("\n")
+}
+
+/* A one-argument derivation is uses a QuestionRelItem and an EntItem. */
+case class OneArgDerivation(question: IndexedSeq[QWord], qrItem: QuestionRelItem, 
+    entSpan: Span[EntItem]) extends Derivation {
+  val entItem = entSpan.item
+  val lexItems = IndexedSeq(qrItem, entItem)
+  val qws = question.mkString(" ")
+  val queryField = ArgOrder.queryArg(qrItem.argOrder)
+  val query = SimpleQuery(qrItem.relation, entItem.entity, queryField)
+  override def toString = List(qws, query, qrItem, entItem).mkString("\n")
 }
 
 /* A lexicon provides access to a set of lexical items. The lexical items are
@@ -179,6 +190,7 @@ trait Lexicon {
   def getRel(words: IndexedSeq[QWord]): Iterable[RelItem]
   def getEnt(words: IndexedSeq[QWord]): Iterable[EntItem]
   def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem]
+  def getQuestionRel(words: IndexedSeq[QToken]): Iterable[QuestionRelItem]
   def has(words: IndexedSeq[QToken]): Boolean
   def allQWords(words: IndexedSeq[QToken]): Boolean = 
     words.forall(_.isInstanceOf[QWord]) 
@@ -199,15 +211,19 @@ case class MapLexicon(items: Iterable[LexItem])
   def get(words: QTokens) = map.getOrElse(words, IndexedSeq())
   def has(words: QTokens) = map.contains(words)
   def getRel(words: QWords) = get(words) flatMap {
-    case x : RelItem => x :: Nil 
+    case x: RelItem => x :: Nil 
     case _ => Nil
   }
   def getEnt(words: QWords) = get(words) flatMap {
-    case x : EntItem => x :: Nil
+    case x: EntItem => x :: Nil
     case _ => Nil
   }
   def getQuestion(words: QTokens) = get(words) flatMap {
-    case x : QuestionItem => x :: Nil
+    case x: QuestionItem => x :: Nil
+    case _ => Nil
+  }
+  def getQuestionRel(words: QTokens) = get(words) flatMap {
+    case x: QuestionRelItem => x :: Nil
     case _ => Nil
   }
   
@@ -245,7 +261,7 @@ case class BottomUpParser(lexicon: Lexicon) extends Parser {
    * "likes" goes to some relation lexitem, and "joe" goes to some entity
    * lexitem. Then this function will return the question pattern "who $r $e".
    */
-  def questionPatFrom(words: IndexedSeq[QWord], rel: Span[LexItem],
+  def twoArgQuestionPatFrom(words: IndexedSeq[QWord], rel: Span[LexItem],
     ent: Span[LexItem]): IndexedSeq[QToken] = {
     val rInt = rel.interval
     val eInt = ent.interval
@@ -254,6 +270,19 @@ case class BottomUpParser(lexicon: Lexicon) extends Parser {
         else if (eInt.min == i) Some(ArgVar)
         else if (!rInt.contains(i) && !eInt.contains(i)) Some(words(i))
         else None
+    }
+  }
+  
+  /* Generates a question pattern like the above, but only for a one-arg
+   * quesion pattern.
+   */
+  def oneArgQuestionPatFrom(words: IndexedSeq[QWord], ent: Span[LexItem]): 
+    IndexedSeq[QToken] = {
+    val eInt = ent.interval
+    (0 until words.size).flatMap { i =>
+      if (eInt.min == i) Some(ArgVar)
+      else if (!eInt.contains(i)) Some(words(i))
+      else None
     }
   }
   
@@ -275,10 +304,22 @@ case class BottomUpParser(lexicon: Lexicon) extends Parser {
     for (r <- rSpans; e <- eSpans; if !r.overlaps(e)) yield (r, e)
   }
   
-  def parse(words: IndexedSeq[QWord]) = {
+  def entSpans(words: IndexedSeq[QWord]) = 
+    enumerateItemSpans(words).flatMap(eSpan)
+  
+  def parseTwoArg(words: IndexedSeq[QWord]) = {
     for ((r, e) <- relEntSpans(words);
-        qpat = questionPatFrom(words, r, e);
+        qpat = twoArgQuestionPatFrom(words, r, e);
         qitem <- lexicon.getQuestion(qpat))
       yield TwoArgDerivation(words, qitem, r, e)
   }
+  
+  def parseOneArg(words: IndexedSeq[QWord]) = {
+    for (e <- entSpans(words); 
+    	qpat = oneArgQuestionPatFrom(words, e);
+    	rqitem <- lexicon.getQuestionRel(qpat))
+      yield OneArgDerivation(words, rqitem, e)
+  }
+  
+  def parse(words: IndexedSeq[QWord]) = parseTwoArg(words) ++ parseOneArg(words)
 }
