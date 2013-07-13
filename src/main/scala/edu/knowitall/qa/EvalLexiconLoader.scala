@@ -49,22 +49,24 @@ class EvalLexiconLoader(
         (lexId.toInt, weight.toDouble) 
     } toMap
   }
+  
+  private def getWeight(lexId: Int) = lexWeights.getOrElse(lexId, 0.0)
 
   private def withVars(words: IndexedSeq[QWord]) = words map(_.word) map QToken.qTokenWrap 
   
   private def loadEntItem(lexId: Int, dbId: Int) = {
     new EntItem(lexVocab(lexId), dbVocab(dbId)) 
-    with Weight { val weight = lexWeights(lexId) }
+    with Weight { val weight = getWeight(lexId) }
   }
   
   private def loadRelItem(lexId: Int, dbId: Int, order: Int) = {
     new RelItem(lexVocab(lexId), dbVocab(dbId), ArgOrder.fromInt(order)) 
-    with Weight { val weight = lexWeights(lexId) }
+    with Weight { val weight = getWeight(lexId) }
   }
   
   private def loadQuestionItem(lexId: Int, order: Int) = {
     new QuestionItem(withVars(lexVocab(lexId)), ArgOrder.fromInt(order)) 
-    with Weight { val weight = lexWeights(lexId) }
+    with Weight { val weight = getWeight(lexId) }
   }
   
   private def readLexEntry(str: String): Option[LexItem with Weight] = splitRegex.split(str).map(_.toInt) match {
