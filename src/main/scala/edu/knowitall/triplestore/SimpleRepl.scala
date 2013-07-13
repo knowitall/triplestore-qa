@@ -2,7 +2,7 @@ package edu.knowitall.triplestore
 import Tabulator.tuplesToTable
 import Search.ProjectTriples
 
-case class SimpleRepl(url: String = "http://rv-n12:8983/solr/triplestore", 
+case class SimpleRepl(url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", 
     hits: Int = 100) {
   
   val client = TriplestoreClient(url, hits)

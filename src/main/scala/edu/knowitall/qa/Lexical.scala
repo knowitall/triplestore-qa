@@ -135,7 +135,7 @@ case class Derivation(
   val rOrder = relItem.argOrder
   val queryField = ArgOrder.compose(qOrder, rOrder)
   
-  val query = SimpleQuery(relItem.words.mkString(" "), entItem.words.mkString(" "), queryField)
+  val query = SimpleQuery(relItem.relation, entItem.entity, queryField)
   
   override def toString = List(qws, query, "----", questionItem, relItem, 
       entItem).mkString("\n")

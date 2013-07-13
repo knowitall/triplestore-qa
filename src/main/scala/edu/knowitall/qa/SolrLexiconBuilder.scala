@@ -15,7 +15,7 @@ class SolrLexiconBuilder(server: SolrServer, lexItems: Iterable[LexItem with Wei
   def go: Unit = {
     
     lexItems.iterator.map(itemToDoc).zipWithIndex.foreach { case (doc, num) =>
-      if (num % 1000 == 0) System.out.println(s"$num docs indexed.")
+      if (num % 10000 == 0) System.out.println(s"$num docs indexed.")
       server.add(doc)
     }
     
@@ -75,10 +75,11 @@ object LexItemConverter {
     doc
   }
   
-  private val commonFields = Set("id", "tokens", "tokens_exact", "weight")
-  private val entItemFields = commonFields ++ Set("entity")
-  private val relItemFields = commonFields ++ Set("relation", "argOrder")
-  private val questionItemFields = commonFields ++ Set("argOrder")
+  val commonFields = Set("id", "tokens", "tokens_exact", "weight", "_version_")
+  val entItemFields = commonFields ++ Set("entity")
+  val relItemFields = commonFields ++ Set("relation", "argOrder")
+  val questionItemFields = commonFields ++ Set("argOrder")
+  val allFields = commonFields ++ entItemFields ++ relItemFields ++ questionItemFields
   
   private def getFieldNames(doc: SolrDocument): Set[String] = doc.getFieldNames.toSet
   private def getFieldMap(doc: SolrDocument): Map[String, Any] = {
@@ -112,7 +113,7 @@ object LexItemConverter {
     with Weight { val weight = getWeight(fieldMap) }
   }
   
-  def docToItem(doc: SolrDocument): LexItem = {
+  def docToItem(doc: SolrDocument): LexItem with Weight = {
     val fieldNames = getFieldNames(doc)
     val fieldMap = getFieldMap(doc)
     if (fieldNames == entItemFields) docToEntItem(fieldMap)

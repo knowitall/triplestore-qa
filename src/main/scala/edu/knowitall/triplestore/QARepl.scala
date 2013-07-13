@@ -6,7 +6,7 @@ import jline.console.ConsoleReader
 import edu.knowitall.qa._
 import scopt.OptionParser
 
-class QARepl(val parser: Parser, val maxDerivations: Int = 5, url: String = "http://rv-n12:8983/solr/triplestore", hits: Int = 100) {
+class QARepl(val parser: Parser, val maxDerivations: Int = 5, url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", hits: Int = 100) {
   
   val client = TriplestoreClient(url, hits)
   val planning = TriplestorePlan(client)
@@ -19,7 +19,7 @@ class QARepl(val parser: Parser, val maxDerivations: Int = 5, url: String = "htt
   private val splitRegex = "\\s+".r
   
   def derivations(question: String) = 
-    parser.parse(splitRegex.split(question) map QWord.qWordWrap).toSeq.distinct.take(maxDerivations)
+    parser.parse(splitRegex.split(question) map QWord.qWordWrap).toSeq.distinct
   
   def queryFor(derivation: Derivation) = {
     val squery = derivation.query
@@ -27,17 +27,17 @@ class QARepl(val parser: Parser, val maxDerivations: Int = 5, url: String = "htt
       case Arg1 => Arg2Cont
       case Arg2 => Arg1Cont
     }
-    Conjunction(RelCont(squery.relation), EntityCont(squery.entity))
+    def cleanName(str: String) = str.replaceAll("-", " ").dropRight(2)
+    
+    Conjunction(RelCont(cleanName(squery.relation)), EntityCont(cleanName(squery.entity)))
   }
   
-  def search(derivation: Derivation) = {
+  def search(query: Query) = {
     val projection = On("r.arg1", "r.rel", "r.arg2", "r.namespace")
-    Project(projection, ExecQuery("r", queryFor(derivation)))
+    Project(projection, ExecQuery("r", query))
   }
   
-  def eval(input: String) = derivations(input).zipWithIndex.flatMap { case (deriv, index) => 
-      Seq(s"Derivation #$index", deriv.toString, "Results:", toTable(search(deriv)))
-    } mkString("\n")
+  def eval(input: String) = toTable(derivations(input).map(queryFor).distinct.map(search).flatten.distinct)
 }
 
 object QARepl extends App {
@@ -45,16 +45,16 @@ object QARepl extends App {
   import java.io.File
   import edu.knowitall.qa.EvalLexiconLoader
   
-  case class Config(dataPath: File = new File("."))
+  case class Config(solrUrl: String = ".")
   
   val parser = new OptionParser[Config]("QARepl") {
-    arg[File]("path") action { (x, c) =>
-    c.copy(dataPath = x) } text("Path to Paralex Evaluation Data")
+    arg[String]("solrUrl") action { (x, c) =>
+    c.copy(solrUrl = x) } text("URL of Solr Lexicon")
   }
   
   parser.parse(args, Config()) map { config =>
     
-    val lexicon = new MapLexicon(new EvalLexiconLoader(config.dataPath))
+    val lexicon = new SolrLexicon(config.solrUrl)
     
     val parser = new BottomUpParser(lexicon)
 
