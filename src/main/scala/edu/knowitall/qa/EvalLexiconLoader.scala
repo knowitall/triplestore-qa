@@ -10,30 +10,45 @@ trait Weight {
   def weight: Double
 }
 
-class EvalLexiconLoader(val dbVocabFile: File, val lexVocabFile: File, val lexEntryFile: File) extends Iterable[LexItem with Weight] {
+class EvalLexiconLoader(
+    val dbVocabFile: File, 
+    val lexVocabFile: File,
+    val lexWeightFile: File,
+    val lexEntryFile: File) extends Iterable[LexItem with Weight] {
+  
+  def this(rootPath: File) = this(
+    dbVocabFile = new File(rootPath, "database/vocab.txt"),
+    lexVocabFile = new File(rootPath, "lexicons/paralex/vocab.txt"),
+    lexWeightFile = new File(rootPath, "weights/paralex.txt"),
+    lexEntryFile = new File(rootPath, "lexicons/paralex/lexicon.txt"))
   
   private val entryRegex = "(\\d+)\\s+(.+)".r
+  
+  private val splitRegex = "\\s+".r
   
   private def loadEntry(str: String): (Int, String) = str match {
     case entryRegex(id, tokens) => (id.toInt, tokens)
     case _ => throw new RuntimeException(s"Malformed vocab record: $str")
   }
   
-  val dbVocab = using(Source.fromFile(dbVocabFile)) { source => 
+  private val dbVocab = using(Source.fromFile(dbVocabFile)) { source => 
   	System.err.println(s"Loading DB vocab...")
     source.getLines map loadEntry toMap
   }
   
-  private val splitRegex = "\\s+".r
-  
-  val lexVocab = using(Source.fromFile(lexVocabFile)) { source => 
+  private val lexVocab = using(Source.fromFile(lexVocabFile)) { source => 
       System.err.println(s"Loading Lexicon vocab...")
       source.getLines map loadEntry map { case (id, string) => 
         (id, splitRegex.split(string) map QWord.qWordWrap) 
     } toMap
   }
   
-  val lexWeights = Map(0 -> 0.0)
+  private val lexWeights = using(Source.fromFile(lexWeightFile)) { source => 
+      System.err.println(s"Loading Lexicon weights...")
+      source.getLines map splitRegex.split map { case Array(weight, lexId, _*) => 
+        (lexId.toInt, weight.toDouble) 
+    } toMap
+  }
 
   private def withVars(words: IndexedSeq[QWord]) = words map(_.word) map QToken.qTokenWrap 
   
@@ -67,15 +82,12 @@ class EvalLexiconLoader(val dbVocabFile: File, val lexVocabFile: File, val lexEn
     
     case _ => throw new RuntimeException(s"Unrecognized lexicon encoding: $str")
   }
-
-  class LexIterator(lexSource: Source) extends Iterator[LexItem with Weight] {
-    System.err.println("Loading Lexicon...")
-    val lexItemIterator = lexSource.getLines flatMap readLexEntry
-    def hasNext = if (!lexItemIterator.hasNext) { lexSource.close(); false } else true
-
-    def next = if (hasNext) lexItemIterator.next()
-      else throw new NoSuchElementException("Empty LexItem iterator")
-  }
   
-  override def iterator = new LexIterator(Source.fromFile(lexEntryFile))
+  override def iterator = new Iterator[LexItem with Weight]() {
+    System.err.println("Loading Lexicon...")
+    private val lexSource = io.Source.fromFile(lexEntryFile)
+    private val lexItemIterator = lexSource.getLines flatMap readLexEntry
+    def hasNext = if (!lexItemIterator.hasNext) { lexSource.close(); false } else true
+    def next = { hasNext; lexItemIterator.next() }
+  }
 }

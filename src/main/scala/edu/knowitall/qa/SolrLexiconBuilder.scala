@@ -39,11 +39,8 @@ object SolrLexiconBuilder extends App {
   }
 
   parser.parse(args, Config()) foreach { config =>
-    val dbVocab = new File(config.dataPath, "database/vocab.txt")
-    val lexVocab = new File(config.dataPath, "lexicons/paralex/vocab.txt")
-    val lexItems = new File(config.dataPath, "lexicons/paralex/lexicon.txt")
     
-    val items = new EvalLexiconLoader(dbVocab, lexVocab, lexItems)
+    val items = new EvalLexiconLoader(config.dataPath)
     
     using(new SolrLexiconBuilder(config.url, items)) { builder => builder.go }
   }
@@ -58,7 +55,7 @@ object LexItemConverter {
   
   def itemToDoc(item: LexItem with Weight): SolrInputDocument = {
     val doc = new SolrInputDocument
-    doc.addField("id", idCounter.getAndIncrement())
+    doc.addField("id", idCounter.getAndIncrement().toString)
     doc.addField("weight", item.weight)
     val tokenString = item.words.mkString(" ")
     doc.addField("tokens", tokenString)
