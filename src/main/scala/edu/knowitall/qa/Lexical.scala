@@ -135,15 +135,21 @@ case class Span[+T](interval: Interval, item: T) {
   def overlaps(that: Span[_]) = this.interval.intersect(that.interval).size > 0
 }
 
-/* A derivation represents a combination of lexical items into a query. A 
- * derivation composes a question item, an entity item, and a relation item
- * to generate the query.
+/* A derivation represents a combination of lexical items into a query. */
+trait Derivation {
+  def question: IndexedSeq[QWord]
+  def lexItems: IndexedSeq[LexItem]
+  def query: SimpleQuery
+}
+
+/* A two-argument derivation is a derivation that uses a QuestionItem, a
+ * RelItem, and an EntItem to derive a query from a question.
  */
-case class Derivation(
+case class TwoArgDerivation(
     question: IndexedSeq[QWord], 
     questionItem: QuestionItem, 
     relSpan: Span[RelItem], 
-    entSpan: Span[EntItem]) { 
+    entSpan: Span[EntItem]) extends Derivation { 
 	  
   val relItem = relSpan.item
   val entItem = entSpan.item
@@ -269,6 +275,6 @@ case class BottomUpParser(lexicon: Lexicon) extends Parser {
     for ((r, e) <- relEntSpans(words);
         qpat = questionPatFrom(words, r, e);
         qitem <- lexicon.getQuestion(qpat))
-      yield Derivation(words, qitem, r, e)
+      yield TwoArgDerivation(words, qitem, r, e)
   }
 }

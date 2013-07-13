@@ -31,14 +31,14 @@ class LexicalTest extends FlatSpec {
   
   "BottomUpParser" should "parse a few simple questions" in {
     
-    val d1 = Derivation(q1, qt2, Span(iv(3, 4), r1), Span(iv(2, 3), joe))
-    val d2 = Derivation(q1, qt2, Span(iv(3, 4), r2), Span(iv(2, 3), joe))
+    val d1 = TwoArgDerivation(q1, qt2, Span(iv(3, 4), r1), Span(iv(2, 3), joe))
+    val d2 = TwoArgDerivation(q1, qt2, Span(iv(3, 4), r2), Span(iv(2, 3), joe))
     
     val derivs1 = parser.parse(q1).toSet
     assert(derivs1 === Set(d1, d2))
 
-    val d3 = Derivation(q2, qt1, Span(iv(1, 2), r1), Span(iv(2, 3), joe))
-    val d4 = Derivation(q2, qt1, Span(iv(1, 2), r2), Span(iv(2, 3), joe))
+    val d3 = TwoArgDerivation(q2, qt1, Span(iv(1, 2), r1), Span(iv(2, 3), joe))
+    val d4 = TwoArgDerivation(q2, qt1, Span(iv(1, 2), r2), Span(iv(2, 3), joe))
     
     val derivs2 = parser.parse(q2).toSet
     assert(derivs2 === Set(d3, d4))
