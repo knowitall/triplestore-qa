@@ -34,12 +34,12 @@ case class StringMatchLexicon(client: TriplestoreClient, minCount: Integer = 100
     client.count(q) > minCount
   }
   
-  type QWords = IndexedSeq[QWord]
-  type QTokens = IndexedSeq[QToken]
-  def get(words: IndexedSeq[QToken]): Iterable[LexItem] = {
-    words match {
-      case ws: QWords => getRel(ws) ++ getEnt(ws)
-      case _ => getQuestion(words)
+  def get(words: IndexedSeq[QToken]): Iterable[LexItem] = { 
+    if (allQWords(words)) {
+      val qwords = toQWords(words)
+      getRel(qwords) ++ getEnt(qwords)
+    } else {
+      getQuestion(words)
     }
   }
   
@@ -69,9 +69,11 @@ case class StringMatchLexicon(client: TriplestoreClient, minCount: Integer = 100
   }
   
   def has(words: IndexedSeq[QToken]): Boolean = {
-    words match {
-      case ws: QWords => hasRel(ws) || hasEnt(ws)
-      case _ => true
+    if (allQWords(words)) {
+      val qwords = toQWords(words)
+      hasRel(qwords) || hasEnt(qwords)
+    } else {
+      true
     }
   }
 

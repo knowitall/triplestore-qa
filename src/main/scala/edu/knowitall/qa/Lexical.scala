@@ -148,8 +148,11 @@ trait Lexicon {
   def getRel(words: IndexedSeq[QWord]): Iterable[RelItem]
   def getEnt(words: IndexedSeq[QWord]): Iterable[EntItem]
   def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem]
-  
   def has(words: IndexedSeq[QToken]): Boolean
+  def allQWords(words: IndexedSeq[QToken]): Boolean = 
+    words.forall(_.isInstanceOf[QWord]) 
+  def toQWords(words: IndexedSeq[QToken]): IndexedSeq[QWord] = 
+    words.collect { case w: QWord => w }
 }
 
 /* An implementation of a Lexicon represented as a Scala Map object. */
