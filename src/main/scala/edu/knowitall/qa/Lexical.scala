@@ -108,6 +108,26 @@ case class QuestionItem(words: IndexedSeq[QToken], argOrder: ArgOrder)
   }}
 }
 
+/* A lexical item that associates question words that have exactly one 
+ * argument variable with a relation and argument ordering. For example, this
+ * could represent "how many people live in $y" = population(x, y). 
+ */
+case class QuestionRelItem(words: IndexedSeq[QToken], relation: String, 
+    argOrder: ArgOrder) extends LexItem {
+  
+  if (words.count(_ == RelVar) != 0) throw new 
+    IllegalArgumentException("QuestionRelItem cannot contain RelVar: " + words)
+  if (words.count(_ == ArgVar) != 1) throw new
+    IllegalArgumentException("QuestionRelItem must contain one ArgVar: " + words)
+  
+  val ws = words.mkString(" ")
+  override def toString = s"$ws = " + { argOrder match {
+    case Arg2First => s"λyλx $relation(x, y)"
+    case Arg1First => s"λyλx $relation(y, x)"
+  }}
+  
+}
+
 /* A span of type T associates some span of tokens with an object of type T
  * (a lexical item).
  */
