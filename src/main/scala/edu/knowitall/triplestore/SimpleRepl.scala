@@ -22,7 +22,7 @@ case class SimpleRepl(url: String = "http://rv-n12:8983/solr/triplestore",
 
 }
 
-object SimpleRepl extends Application {
+object SimpleRepl extends App {
   
   override def main(args: Array[String]) = {
     import jline.console.ConsoleReader
@@ -37,7 +37,7 @@ object SimpleRepl extends Application {
 
 }
 
-object CommandLine extends Application {
+object CommandLine extends App {
   override def main(args: Array[String]) = {
     val repl = SimpleRepl()
     val input = args.mkString(" ")
