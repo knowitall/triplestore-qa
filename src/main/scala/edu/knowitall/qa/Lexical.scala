@@ -73,6 +73,8 @@ sealed trait LexItem {
   val words: IndexedSeq[QToken]
 }
 
+case class Weighted[T](weight: Double, item: T)
+
 /* An entity lexical item associates question words (not including question 
  * variables $r or $e) with a string entity.
  */

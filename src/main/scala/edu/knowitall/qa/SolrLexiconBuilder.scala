@@ -6,15 +6,15 @@ import org.apache.solr.common.{SolrDocument, SolrInputDocument}
 import java.util.concurrent.atomic.AtomicInteger
 import scala.collection.JavaConverters._
 
-class SolrLexiconBuilder(server: SolrServer, lexItems: Iterable[LexItem]) {
+class SolrLexiconBuilder(server: SolrServer, lexItems: Iterable[Weighted[LexItem]]) {
 
   import LexItemConverter._
 
-  def this(url: String, lexItems: Iterable[LexItem]) = this(new ConcurrentUpdateSolrServer(url, 1000, 4), lexItems)
+  def this(url: String, lexItems: Iterable[Weighted[LexItem]]) = this(new ConcurrentUpdateSolrServer(url, 1000, 4), lexItems)
   
   def go: Unit = {
     
-    lexItems.map(itemToDoc).zipWithIndex.foreach { case (doc, num) =>
+    lexItems.iterator.map(wi => itemToDoc(wi.item)).zipWithIndex.foreach { case (doc, num) =>
       if (num % 1000 == 0) System.out.println(s"$num docs indexed.")
       server.add(doc)
     }
