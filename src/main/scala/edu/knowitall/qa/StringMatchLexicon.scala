@@ -46,8 +46,8 @@ case class StringMatchLexicon(client: TriplestoreClient, minCount: Integer = 100
   def getRel(words: IndexedSeq[QWord]): Iterable[RelItem] = {
     if (hasRel(words)) {
       val s = wordsToStr(words)
-      val item1 = RelItem(words, s, Arg1First)
-      val item2 = RelItem(words, s, Arg2First)
+      val item1 = new RelItem(words, s, Arg1First)
+      val item2 = new RelItem(words, s, Arg2First)
       List(item1, item2)
     } else {
       Nil
@@ -57,7 +57,7 @@ case class StringMatchLexicon(client: TriplestoreClient, minCount: Integer = 100
   def getEnt(words: IndexedSeq[QWord]): Iterable[EntItem] = {
     if (hasEnt(words)) {
       val s = wordsToStr(words)
-      val item = EntItem(words, s)
+      val item = new EntItem(words, s)
       List(item)
     } else {
       Nil
@@ -65,7 +65,7 @@ case class StringMatchLexicon(client: TriplestoreClient, minCount: Integer = 100
   }
   
   def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem] = {
-    List(QuestionItem(words, Arg1First))
+    List(new QuestionItem(words, Arg1First))
   }
   
   def has(words: IndexedSeq[QToken]): Boolean = {

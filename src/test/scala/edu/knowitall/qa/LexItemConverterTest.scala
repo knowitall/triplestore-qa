@@ -12,11 +12,11 @@ class LexItemConverterTest extends FlatSpec {
   
   "LexItemConverter" should "convert to a solr doc and back correctly" in {
    
-    val item1 = EntItem(words("paris"), "paris.e")
-    val item2 = RelItem(words("the capital"), "capital.r", ArgOrder.fromInt(0))
-    val item3 = QuestionItem(tokens("What is $r of $y ?"), ArgOrder.fromInt(1))
+    val item1 = new EntItem(words("paris"), "paris.e") with Weight { val weight = 0.0 } 
+    val item2 = new RelItem(words("the capital"), "capital.r", ArgOrder.fromInt(0)) with Weight { val weight = 1.0 }
+    val item3 = new QuestionItem(tokens("What is $r of $y ?"), ArgOrder.fromInt(1)) with Weight { val weight = 2.0 }
     
-    def identity(item: LexItem) = {
+    def identity(item: LexItem with Weight) = {
       val inputDoc = LexItemConverter.itemToDoc(item)
       val doc = ClientUtils.toSolrDocument(inputDoc)
       LexItemConverter.docToItem(doc)

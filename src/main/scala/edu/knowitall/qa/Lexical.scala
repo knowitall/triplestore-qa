@@ -73,12 +73,10 @@ sealed trait LexItem {
   val words: IndexedSeq[QToken]
 }
 
-case class Weighted[T](weight: Double, item: T)
-
 /* An entity lexical item associates question words (not including question 
  * variables $r or $e) with a string entity.
  */
-case class EntItem(words: IndexedSeq[QWord], entity: String) extends LexItem {
+case class EntItem(val words: IndexedSeq[QWord], val entity: String) extends LexItem {
   val ws = words.mkString(" ")
   override def toString = s"$ws = $entity"
 }
@@ -86,8 +84,7 @@ case class EntItem(words: IndexedSeq[QWord], entity: String) extends LexItem {
 /* A relation lexical item associates question words (not including question 
  * variables $r or $e) with a string relation and an argument ordering.
  */
-case class RelItem(words: IndexedSeq[QWord], relation: String, 
-    argOrder: ArgOrder) extends LexItem {
+case class RelItem(val words: IndexedSeq[QWord], val relation: String, val argOrder: ArgOrder) extends LexItem {
   val ws = words.mkString(" ")
   override def toString = s"$ws = " + { argOrder match {
     case Arg2First => s"λyλx. (x, $relation, y)"
@@ -98,14 +95,13 @@ case class RelItem(words: IndexedSeq[QWord], relation: String,
 /* A question lexical item associates question words that have exactly one
  * relation variable $r and one entity variable $e with an argument ordering.
  */    
-case class QuestionItem(words: IndexedSeq[QToken], argOrder: ArgOrder) 
-	extends LexItem {
+case class QuestionItem(val words: IndexedSeq[QToken], val argOrder: ArgOrder) extends LexItem {
    
   if (words.count(_ == RelVar) != 1) throw new 
   	IllegalArgumentException("QuestionItem must contain one RelVar: " + words)
   if (words.count(_ == ArgVar) != 1) throw new 
   	IllegalArgumentException("QuestionItem must contain one ArgVar: " + words)
-  
+
   val ws = words.mkString(" ")
   override def toString = s"$ws = " + { argOrder match {
     case Arg2First => "λrλyλx r(y)(x)"

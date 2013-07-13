@@ -3,18 +3,18 @@ package edu.knowitall.qa
 import org.apache.solr.client.solrj.SolrServer
 import org.apache.solr.client.solrj.impl.ConcurrentUpdateSolrServer
 import org.apache.solr.common.{SolrDocument, SolrInputDocument}
-import java.util.concurrent.atomic.AtomicInteger
-import scala.collection.JavaConverters._
+import java.util.concurrent.atomic.AtomicLong
+import scala.collection.JavaConversions._
 
-class SolrLexiconBuilder(server: SolrServer, lexItems: Iterable[Weighted[LexItem]]) {
+class SolrLexiconBuilder(server: SolrServer, lexItems: Iterable[LexItem with Weight]) {
 
   import LexItemConverter._
 
-  def this(url: String, lexItems: Iterable[Weighted[LexItem]]) = this(new ConcurrentUpdateSolrServer(url, 1000, 4), lexItems)
+  def this(url: String, lexItems: Iterable[LexItem with Weight]) = this(new ConcurrentUpdateSolrServer(url, 1000, 4), lexItems)
   
   def go: Unit = {
     
-    lexItems.iterator.map(wi => itemToDoc(wi.item)).zipWithIndex.foreach { case (doc, num) =>
+    lexItems.iterator.map(itemToDoc).zipWithIndex.foreach { case (doc, num) =>
       if (num % 1000 == 0) System.out.println(s"$num docs indexed.")
       server.add(doc)
     }
@@ -52,17 +52,18 @@ object SolrLexiconBuilder extends App {
 
 object LexItemConverter {
   
-  val idCounter = new AtomicInteger(0)
+  val idCounter = new AtomicLong(0)
   
-  private def encode(o: ArgOrder) = ArgOrder.toInt(o).toString
+  private def encode(o: ArgOrder) = ArgOrder.toInt(o)
   
-  def itemToDoc(item: LexItem): SolrInputDocument = {
+  def itemToDoc(item: LexItem with Weight): SolrInputDocument = {
     val doc = new SolrInputDocument
-    doc.addField("id", idCounter.getAndIncrement().toString)
+    doc.addField("id", idCounter.getAndIncrement())
+    doc.addField("weight", item.weight)
     val tokenString = item.words.mkString(" ")
     doc.addField("tokens", tokenString)
     doc.addField("tokens_exact", tokenString)
-    item match {
+    item.asInstanceOf[LexItem] match {
       case EntItem(tokens, entity) => {
         doc.addField("entity", entity)
       }
@@ -77,42 +78,49 @@ object LexItemConverter {
     doc
   }
   
-  private val commonFields = Set("id", "tokens", "tokens_exact")
+  private val commonFields = Set("id", "tokens", "tokens_exact", "weight")
   private val entItemFields = commonFields ++ Set("entity")
   private val relItemFields = commonFields ++ Set("relation", "argOrder")
   private val questionItemFields = commonFields ++ Set("argOrder")
   
-  private def getFieldNames(doc: SolrDocument): Set[String] = doc.getFieldNames.asScala.toSet
-  private def getFields(doc: SolrDocument): Map[String, String] = {
-    getFieldNames(doc).map(name => (name, doc.getFieldValue(name).asInstanceOf[String] )).toMap
+  private def getFieldNames(doc: SolrDocument): Set[String] = doc.getFieldNames.toSet
+  private def getFieldMap(doc: SolrDocument): Map[String, Any] = {
+    doc.getFieldNames.map { fieldName =>
+      (fieldName, doc.getFieldValue(fieldName))
+    } toMap
+  }
+  private def words(fieldMap: Map[String, Any]): IndexedSeq[QWord] = {
+    fieldMap("tokens").asInstanceOf[String].split(" ") map QWord.qWordWrap
+  }
+  private def argOrder(fieldMap: Map[String, Any]): ArgOrder = {
+    require(fieldMap.contains("argOrder"), "Undefined argOrder field.")
+    val value = fieldMap.getOrElse("argOrder", throw new RuntimeException())
+    ArgOrder.fromInt(fieldMap("argOrder").asInstanceOf[Int])
+  }
+  private def getWeight(fieldMap: Map[String, Any]): Double = fieldMap("weight").asInstanceOf[Double]
+    
+  private def docToEntItem(fieldMap: Map[String, Any]): EntItem with Weight = {
+    new EntItem(words(fieldMap), fieldMap("entity").asInstanceOf[String]) 
+    with Weight { val weight = getWeight(fieldMap) }
   }
   
-  private def docToEntItem(doc: SolrDocument): EntItem = {
-    require(getFieldNames(doc) == entItemFields, "Incorrect fields for EntItem: " + getFieldNames(doc))
-    val fields = getFields(doc)
-    val tokens = fields("tokens_exact").asInstanceOf[String].split(" ").map(QWord.qWordWrap)
-    EntItem(tokens, fields("entity"))
+  private def docToRelItem(fieldMap: Map[String, Any]): RelItem with Weight = {
+    new RelItem(words(fieldMap), fieldMap("relation").asInstanceOf[String], argOrder(fieldMap))
+    with Weight { val weight = getWeight(fieldMap) }
   }
   
-  private def docToRelItem(doc: SolrDocument): RelItem = {
-    require(getFieldNames(doc) == relItemFields, "Incorrect fields for RelItem: " + getFieldNames(doc))
-    val fields = getFields(doc)
-    val tokens = fields("tokens_exact").asInstanceOf[String].split(" ").map(QWord.qWordWrap)
-    RelItem(tokens, fields("relation"), ArgOrder.fromInt(fields("argOrder").toInt))
-  }
-  
-  private def docToQuestionItem(doc: SolrDocument): QuestionItem = {
-    require(getFieldNames(doc) == questionItemFields, "Incorrect fields for QuestionItem: " + getFieldNames(doc))
-    val fields = getFields(doc)
-    val tokens = fields("tokens_exact").asInstanceOf[String].split(" ").map(QToken.qTokenWrap)
-    QuestionItem(tokens, ArgOrder.fromInt(fields("argOrder").toInt))
+  private def docToQuestionItem(fieldMap: Map[String, Any]): QuestionItem with Weight = {
+    val tokens = fieldMap("tokens_exact").asInstanceOf[String].split(" ").map(QToken.qTokenWrap)
+    new QuestionItem(tokens, argOrder(fieldMap))
+    with Weight { val weight = getWeight(fieldMap) }
   }
   
   def docToItem(doc: SolrDocument): LexItem = {
     val fieldNames = getFieldNames(doc)
-    if (fieldNames == entItemFields) docToEntItem(doc)
-    else if (fieldNames == relItemFields) docToRelItem(doc)
-    else if (fieldNames == questionItemFields) docToQuestionItem(doc)
-    else throw new RuntimeException("Unknown field names: " + fieldNames)
+    val fieldMap = getFieldMap(doc)
+    if (fieldNames == entItemFields) docToEntItem(fieldMap)
+    else if (fieldNames == relItemFields) docToRelItem(fieldMap)
+    else if (fieldNames == questionItemFields) docToQuestionItem(fieldMap)
+    else throw new RuntimeException("Unrecognized LexItem field set: " + fieldNames)
   }
 }
