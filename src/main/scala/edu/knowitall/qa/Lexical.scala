@@ -1,6 +1,7 @@
 package edu.knowitall.qa
 
 import edu.knowitall.collection.immutable.Interval
+import scala.language.implicitConversions
 //import PartialFunction._
 
 /* Question Tokens are either strings, or two special tokens used to represent
