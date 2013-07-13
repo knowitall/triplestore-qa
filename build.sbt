@@ -15,6 +15,10 @@ version := "0.1"
 
 scalaVersion := "2.10.2"
 
+fork in run := true
+
+javaOptions in run += "-Xmx8G"
+
 libraryDependencies += "org.apache.solr" % "solr-solrj" % "4.3.0"
 
 libraryDependencies += "commons-logging" % "commons-logging-api" % "1.0.4"
