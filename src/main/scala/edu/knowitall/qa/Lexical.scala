@@ -42,6 +42,10 @@ object ArgOrder {
     case (Arg2First, Arg1First) => Arg2
     case (Arg2First, Arg2First) => Arg1
   }
+  def queryArg(o: ArgOrder) = o match {
+    case Arg1First => Arg2
+    case Arg2First => Arg1
+  }
   def fromInt(i: Int): ArgOrder = i match {
     case 0 => Arg2First
     case 1 => Arg1First
