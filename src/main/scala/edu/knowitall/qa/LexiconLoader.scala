@@ -1,5 +1,6 @@
 package edu.knowitall.qa
 
+import scala.language.postfixOps
 import scala.io.Source
 import java.io.File
 import scala.collection.JavaConversions._
