@@ -21,6 +21,10 @@ import unfiltered.request.Mime
 import java.io.File
 import unfiltered.response.ContentEncoding
 import org.apache.commons.io.IOUtils
+import edu.knowitall.tool.postag.ClearPostagger
+import edu.knowitall.tool.stem.MorphaStemmer
+import edu.knowitall.tool.stem.Lemmatized
+import edu.knowitall.tool.postag.PostaggedToken
 
 class QARepl(val parser: WeightedParser, val maxDerivations: Int = 10, url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", hits: Int = 100) {
 
@@ -67,14 +71,23 @@ class QARepl(val parser: WeightedParser, val maxDerivations: Int = 10, url: Stri
     
     Project(projection, results map {_.join(qweight)})
   }
-
-  def eval(input: String) = {
-    val derivs = derivations(input).take(maxDerivations)
+  
+  
+  
+  val postagger = new ClearPostagger
+  
+  val stemmer = new MorphaStemmer
+  
+  def eval(input: String): String = eval(postagger.postag(input).map(stemmer.lemmatizePostaggedToken))
+  
+  def eval(input: Seq[Lemmatized[PostaggedToken]]): String = {
+    val inputStr = input.map(_.lemma).mkString(" ")
+    val derivs = derivations(inputStr).take(maxDerivations)
     val queries = derivs.map(d => (d, queryFor(d)))
     val results = queries.map { case (deriv, query) => (deriv, query, query.map(search).getOrElse(Nil)) }
     val allTuples = results.flatMap(_._3)
 
-    val table = toTable(allTuples)
+    val table = if (allTuples.nonEmpty) toTable(allTuples) else "NO RESULTS\n"
     val derivStrings = results.zipWithIndex.flatMap {
       case ((deriv, queryOpt, results), index) =>
         Seq(
