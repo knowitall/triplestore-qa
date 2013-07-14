@@ -1,1 +1,7 @@
 *.swp
+.cache
+.classpath
+.project
+.settings
+project
+target
