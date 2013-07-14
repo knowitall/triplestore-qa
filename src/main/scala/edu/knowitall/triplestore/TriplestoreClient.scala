@@ -8,13 +8,36 @@ import org.apache.solr.common.SolrDocument
 import java.util.ArrayList
 import Search.TSQuery
 
+/**
+ * The interface to a Triplestore.
+ */
+trait TriplestoreClient {
+  
+  /**
+   * Counts the number of triples that match the given query.
+   */
+  def count(q: TSQuery): Long
+  
+  /**
+   * Searches and returns the results as Tuple objects.
+   */
+  def search(q: TSQuery): List[Tuple]
+    
+  /**
+   * Searches and returns Tuple objects, but adds the prefix
+   * "$name." to all of the attributes.
+   */
+  def namedSearch(name: String, q: TSQuery): List[Tuple] = {
+    search(q) map { t => t.renamePrefix(name)}
+  }
+}
 
 /**
  * This class is used to query a Solr server and return Tuple objects. The
  * URL should point to the Solr instance. "hits" is the default number of hits
  * that is returned by the search.
  */
-case class TriplestoreClient(url: String, hits: Int = 10) {
+case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
   
   val server = new HttpSolrServer(url)
   
@@ -96,14 +119,6 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
     System.err.println(q)
     val resp = server.query(query)
     resp.getResults().toList.map(docToTuple)
-  }
-  
-  /**
-   * Searches Solr and returns Tuple objects, but adds the prefix
-   * "$name." to all of the attributes.
-   */
-  def namedSearch(name: String, q: TSQuery): List[Tuple] = {
-    search(q) map { t => t.renamePrefix(name)}
   }
   
 }

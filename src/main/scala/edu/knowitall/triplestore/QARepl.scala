@@ -8,7 +8,7 @@ import scopt.OptionParser
 
 class QARepl(val parser: Parser, val maxDerivations: Int = 5, url: String = "http://rv-n12:8983/solr/triplestore", hits: Int = 100) {
   
-  val client = TriplestoreClient(url, hits)
+  val client = SolrClient(url, hits)
   val planning = TriplestorePlan(client)
   
   import planning._

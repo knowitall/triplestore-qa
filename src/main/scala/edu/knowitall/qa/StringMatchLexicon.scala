@@ -5,6 +5,7 @@ import edu.knowitall.triplestore.Search.FieldKeywords
 import edu.knowitall.triplestore.Search.Field._
 import edu.knowitall.triplestore.Search.Disjunction
 import edu.knowitall.triplestore.StrSim
+import edu.knowitall.triplestore.SolrClient
 
 case class StringMatchLexicon(client: TriplestoreClient, minCount: Integer = 100) extends Lexicon {
   
@@ -82,7 +83,7 @@ case class StringMatchLexicon(client: TriplestoreClient, minCount: Integer = 100
 }
 
 object StringMatchLexicon extends App {
-  val client = TriplestoreClient("http://rv-n12:8983/solr/triplestore", 100)
+  val client = SolrClient("http://rv-n12:8983/solr/triplestore", 100)
   val lexicon = StringMatchLexicon(client)
   val parser = BottomUpParser(lexicon)
   def words(s: String): IndexedSeq[QWord] = s.split(" ").toIndexedSeq.map(QWord(_))

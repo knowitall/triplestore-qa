@@ -5,7 +5,7 @@ import Search.ProjectTriples
 case class SimpleRepl(url: String = "http://rv-n12:8983/solr/triplestore", 
     hits: Int = 100) {
   
-  val client = TriplestoreClient(url, hits)
+  val client = SolrClient(url, hits)
   val joiner = Joiner(client)
   
   def toTable(ts: List[Tuple], n: Integer): String = {
