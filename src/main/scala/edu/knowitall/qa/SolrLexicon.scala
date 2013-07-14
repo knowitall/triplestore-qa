@@ -3,6 +3,7 @@ package edu.knowitall.qa
 import org.apache.solr.client.solrj.SolrServer
 import org.apache.solr.client.solrj.SolrQuery
 import org.apache.solr.client.solrj.impl.HttpSolrServer
+import org.apache.solr.client.solrj.util.ClientUtils
 
 import scala.collection.JavaConverters._
 
@@ -10,8 +11,12 @@ class SolrLexicon(val server: SolrServer) extends WeightedLexicon {
 
   def this(url: String = "http://rv-n13.cs.washington.edu:8888/solr") = this(new HttpSolrServer(url))
   
-  private def queryString(words: IndexedSeq[QToken]) = 
-    "+tokens_exact:\"%s\"".format(words.map(_.toString).mkString(" "))
+  private def escape(s: String): String = ClientUtils.escapeQueryChars(s)
+  
+  private def queryString(words: IndexedSeq[QToken]) = {
+    val wordStrings = words.map(_.toString) 
+    "+tokens_exact:\"%s\"".format(wordStrings.map(escape).mkString(" "))
+  }
 
   private def buildQuery(words: IndexedSeq[QToken]): SolrQuery = {
     new SolrQuery(queryString(words))
