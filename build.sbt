@@ -6,7 +6,8 @@ resolvers += "KnowItAll" at "http://knowitall.cs.washington.edu/maven2"
 
 resolvers ++= Seq(
     "Sonatype OSS Releases" at "http://oss.sonatype.org/content/repositories/releases/",
-    "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/"
+    "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
+    "Restlet bullshit" at "http://maven.restlet.org/"
 )
 
 name := "triplestore-qa"
@@ -16,6 +17,10 @@ version := "0.1"
 scalaVersion := "2.10.2"
 
 libraryDependencies += "org.apache.solr" % "solr-solrj" % "4.3.0"
+
+libraryDependencies += "org.apache.solr" % "solr" % "4.3.1"
+
+libraryDependencies += "org.apache.solr" % "solr-core" % "4.3.1"
 
 libraryDependencies += "commons-logging" % "commons-logging-api" % "1.0.4"
 
@@ -60,3 +65,13 @@ ivyXML :=
 </dependency>
 
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
+
+
+libraryDependencies ++= Seq(
+  "org.specs2" %% "specs2" % "2.1" % "test"
+)
+
+scalacOptions in Test ++= Seq("-Yrangepos")
+
+resolvers ++= Seq("snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
+                    "releases"  at "http://oss.sonatype.org/content/repositories/releases")
