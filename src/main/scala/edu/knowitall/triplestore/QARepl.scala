@@ -66,26 +66,16 @@ object QARepl extends App {
   
   import java.io.File
   import edu.knowitall.qa.EvalLexiconLoader
-  
-  case class Config(solrUrl: String = ".")
-  
-  val parser = new OptionParser[Config]("QARepl") {
-    arg[String]("solrUrl") action { (x, c) =>
-    c.copy(solrUrl = x) } text("URL of Solr Lexicon")
-  }
-  
-  parser.parse(args, Config()) map { config =>
-    
-    val lexicon = new SolrLexicon(config.solrUrl)
-    
-    val parser = new WeightedBottomUpParser(lexicon)
 
-    val repl = new QARepl(parser)
+  val lexicon = new SolrLexicon()
 
-    val reader = new ConsoleReader()
-    while (true) {
-      val line = reader.readLine("> ")
-      println(repl.eval(line))
-    }
+  val parser = new WeightedBottomUpParser(lexicon)
+
+  val repl = new QARepl(parser)
+
+  val reader = new ConsoleReader()
+  while (true) {
+    val line = reader.readLine("> ")
+    println(repl.eval(line))
   }
 }

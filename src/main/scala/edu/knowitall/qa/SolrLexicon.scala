@@ -8,7 +8,7 @@ import scala.collection.JavaConverters._
 
 class SolrLexicon(val server: SolrServer) extends WeightedLexicon {
 
-  def this(url: String) = this(new HttpSolrServer(url))
+  def this(url: String = "http://rv-n13.cs.washington.edu:8888/solr") = this(new HttpSolrServer(url))
   
   private def queryString(words: IndexedSeq[QToken]) = 
     "+tokens_exact:\"%s\"".format(words.map(_.toString).mkString(" "))
