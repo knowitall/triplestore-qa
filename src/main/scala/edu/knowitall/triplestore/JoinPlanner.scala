@@ -2,7 +2,7 @@ package edu.knowitall.triplestore
 import Search.PartialSearchJoin
 import PartialFunction._
 import Search.Field._
-import Search.Query
+import Search.TSQuery
 import Conditions.TuplePred
 import Operators.{Select, Product}
 import edu.knowitall.triplestore.Search.Conjunction
@@ -36,7 +36,7 @@ trait QVal
  */
 trait Literal {
   val value: String
-  def toConjunct(field: Field): Query
+  def toConjunct(field: Field): TSQuery
 }
 
 /**
@@ -89,7 +89,7 @@ case class AbstractQuery(name: String, values: Map[Field, QVal]) {
   
   def varsToFields: Map[Variable, Field] = variableFields.map(_.swap).toMap
   
-  def partialQuery: Query = {
+  def partialQuery: TSQuery = {
     val lfs = literalFields.toList
     val conjuncts = for ((f, v) <- lfs) yield v.toConjunct(f)
     Conjunction(conjuncts.toList:_*)

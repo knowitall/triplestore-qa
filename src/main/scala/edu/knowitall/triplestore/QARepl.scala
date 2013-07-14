@@ -1,6 +1,6 @@
 package edu.knowitall.triplestore
 
-import Search.Query
+import Search.TSQuery
 import Tabulator.{tuplesToTable => toTable}
 import jline.console.ConsoleReader
 import edu.knowitall.qa._

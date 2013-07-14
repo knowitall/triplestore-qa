@@ -168,30 +168,30 @@ object Search {
   }
   import Field._
   
-  trait Query {
+  trait TSQuery {
     def toQueryString: String
   }
   
   def escape = ClientUtils.escapeQueryChars _
   
-  case class FieldKeywords(f: Field, v: String) extends Query {
+  case class FieldKeywords(f: Field, v: String) extends TSQuery {
     def toQueryString = { for (w <- v.trim().split("\\s+"); x = f.toString() + ":" + escape(w)) yield x }.mkString(" AND ") 
   }
   
-  case class FieldPhrase(f: Field, v: String) extends Query {
+  case class FieldPhrase(f: Field, v: String) extends TSQuery {
     val realField = exactMap.getOrElse(f, f)
     def toQueryString = realField.toString() + ":\"" + escape(v) + "\"" 
   }
   
-  case class Conjunction(conjuncts: Query*) extends Query {
+  case class Conjunction(conjuncts: TSQuery*) extends TSQuery {
     def toQueryString = conjuncts.map("(" + _.toQueryString + ")").mkString(" AND ") 
   }
 
-  case class Disjunction(disjuncts: Query*) extends Query {
+  case class Disjunction(disjuncts: TSQuery*) extends TSQuery {
     def toQueryString = disjuncts.map("(" + _.toQueryString + ")").mkString(" OR ") 
   }
   
-  def AndPhrase(q: Query, f: Field, v: String) = Conjunction(q, FieldPhrase(f, v))
+  def AndPhrase(q: TSQuery, f: Field, v: String) = Conjunction(q, FieldPhrase(f, v))
 
   val tripColPat = ".*\\.(arg1|arg2|rel|namespace)$"
   def OnTripleCols(t: Tuple): Tuple = Tuple(t.attrs.filterKeys(a => a.matches(tripColPat)))
@@ -199,9 +199,9 @@ object Search {
   
   type Tuples = Iterable[Tuple]
   type Attr = String
-  type Search = Query => Tuples
+  type Search = TSQuery => Tuples
   
-  case class PartialSearcher(query: Query, search: Search)
+  case class PartialSearcher(query: TSQuery, search: Search)
 
   val Arg1Pat = "(.*)\\.arg1$".r
   val Arg2Pat = "(.*)\\.arg2$".r
