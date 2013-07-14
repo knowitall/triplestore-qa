@@ -8,7 +8,7 @@ import scopt.OptionParser
 import org.slf4j.LoggerFactory
 import unfiltered.filter.Intent
 import unfiltered.response.ResponseString
-import unfiltered.response.ResponseBytes
+import unfiltered.response.ResponseStreamer
 import unfiltered.response.ContentType
 import unfiltered.response.Ok
 import unfiltered.jetty.Http
@@ -19,6 +19,8 @@ import unfiltered.request.Seg
 import unfiltered.response.NotFound
 import unfiltered.request.Mime
 import java.io.File
+import java.io.OutputStream
+import java.io.PrintStream
 import unfiltered.response.ContentEncoding
 import org.apache.commons.io.IOUtils
 import edu.knowitall.tool.postag.ClearPostagger
@@ -130,8 +132,17 @@ object QuestionDemo extends App {
     }
 
     def runQuery(query: String) = {
-      val result = repl.eval(query)
-      ResponseString(result) ~> Ok
+
+      new ResponseStreamer() {
+        def stream(stream: OutputStream) = {
+          val printStream = new PrintStream(stream)
+          try {
+            printStream.println(repl.eval(query))
+          } catch {
+            case e: Exception => e.printStackTrace(printStream)
+          }
+        }
+      } ~> Ok
     }
 
     def getStatic = {
