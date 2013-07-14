@@ -9,6 +9,7 @@ import edu.knowitall.triplestore.Search.Conjunction
 import edu.knowitall.triplestore.Search.{FieldKeywords, FieldPhrase}
 import edu.knowitall.triplestore.Conditions.AttrsSim
 import Operators.NestedLoopJoin
+import org.slf4j.LoggerFactory
 
 /**
  * This file contains code for executing a query. A query is  
@@ -175,6 +176,8 @@ case object AbstractQuery {
  */
 case class Joiner(client: TriplestoreClient) {
   
+  val logger = LoggerFactory.getLogger(this.getClass) 
+  
   /* Import some query plan objects from the client. */
   val planning = TriplestorePlan(client)
   import planning._
@@ -282,7 +285,9 @@ case class Joiner(client: TriplestoreClient) {
          minCost = costs.min) yield (v, minCost) }.toMap
     if (varCosts.size > 0) {
       val vars = varCosts.keys
-      Some(vars.minBy(varCosts(_)))
+      val lowest = vars.minBy(varCosts(_))
+      logger.debug(s"Lowest variable chosen: $lowest")
+      Some(lowest)
     } else {
       None
     }
@@ -290,7 +295,8 @@ case class Joiner(client: TriplestoreClient) {
   
   /* Merges the given nodes together, and removes the variable. */
   def mergeNodes(nodes: List[TableNode], v: Variable): TuplesNode = {
-    val node = eliminateVar(nodes, v)
+    val sorted = nodes.sortBy(cost)
+    val node = eliminateVar(sorted, v)
     TuplesNode(node.tuples, node.joinAttrs-v)
   }
 
@@ -327,6 +333,7 @@ case class Joiner(client: TriplestoreClient) {
   
   /* Executes the given QueryNode to create a TuplesNode. */
   def queryToTuples(q: QueryNode): TuplesNode = {
+    logger.debug(s"Making TuplesNode from $q")
     val tuples = SearchFor(q.absQuery.name, q.absQuery.partialQuery)
     TuplesNode(tuples, q.joinAttrs)
   }
