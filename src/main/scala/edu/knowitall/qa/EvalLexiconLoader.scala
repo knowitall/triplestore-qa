@@ -22,6 +22,8 @@ class EvalLexiconLoader(
     lexWeightFile = new File(rootPath, "weights/paralex.txt"),
     lexEntryFile = new File(rootPath, "lexicons/paralex/lexicon.txt"))
   
+  def this(path: String) = this(new File(path))
+    
   private val entryRegex = "(\\d+)\\s+(.+)".r
   
   private val splitRegex = "\\s+".r
