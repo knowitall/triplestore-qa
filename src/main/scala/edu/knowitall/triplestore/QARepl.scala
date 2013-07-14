@@ -6,7 +6,7 @@ import jline.console.ConsoleReader
 import edu.knowitall.qa._
 import scopt.OptionParser
 
-class QARepl(val parser: Parser, val maxDerivations: Int = 5, url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", hits: Int = 100) {
+class QARepl(val parser: WeightedParser, val maxDerivations: Int = 5, url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", hits: Int = 100) {
   
   val client = TriplestoreClient(url, hits)
   val planning = TriplestorePlan(client)
@@ -19,7 +19,7 @@ class QARepl(val parser: Parser, val maxDerivations: Int = 5, url: String = "htt
   private val splitRegex = "\\s+".r
   
   def derivations(question: String) = 
-    parser.parse(splitRegex.split(question) map QWord.qWordWrap).toSeq.distinct
+    parser.parse(splitRegex.split(question) map QWord.qWordWrap).toSeq
   
   def queryFor(derivation: Derivation) = {
     val squery = derivation.query
@@ -37,7 +37,7 @@ class QARepl(val parser: Parser, val maxDerivations: Int = 5, url: String = "htt
     Project(projection, ExecQuery("r", query))
   }
   
-  def eval(input: String) = toTable(derivations(input).map(queryFor).distinct.map(search).flatten.distinct)
+  def eval(input: String) = toTable(derivations(input).map(queryFor).distinct.map(search).flatten)
 }
 
 object QARepl extends App {
@@ -56,7 +56,7 @@ object QARepl extends App {
     
     val lexicon = new SolrLexicon(config.solrUrl)
     
-    val parser = new BottomUpParser(lexicon)
+    val parser = new WeightedBottomUpParser(lexicon)
 
     val repl = new QARepl(parser)
 

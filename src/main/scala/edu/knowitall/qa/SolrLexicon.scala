@@ -6,7 +6,7 @@ import org.apache.solr.client.solrj.impl.HttpSolrServer
 
 import scala.collection.JavaConverters._
 
-class SolrLexicon(val server: SolrServer) extends Lexicon {
+class SolrLexicon(val server: SolrServer) extends WeightedLexicon {
 
   def this(url: String) = this(new HttpSolrServer(url))
   
@@ -31,14 +31,14 @@ class SolrLexicon(val server: SolrServer) extends Lexicon {
     execQuery(buildQuery(words))
   }
   
-  def getRel(words: IndexedSeq[QWord]): Iterable[RelItem] = 
-    get(words) filter (_.isInstanceOf[RelItem]) map (_.asInstanceOf[RelItem])
+  def getRel(words: IndexedSeq[QWord]): Iterable[RelItem with Weight] = 
+    get(words) filter (_.isInstanceOf[RelItem]) map (_.asInstanceOf[RelItem with Weight])
     
-  def getEnt(words: IndexedSeq[QWord]) = 
-    get(words) filter (_.isInstanceOf[EntItem]) map (_.asInstanceOf[EntItem])
+  def getEnt(words: IndexedSeq[QWord]): Iterable[EntItem with Weight] = 
+    get(words) filter (_.isInstanceOf[EntItem]) map (_.asInstanceOf[EntItem with Weight])
     
-  def getQuestion(words: IndexedSeq[QToken]) = 
-    get(words) filter (_.isInstanceOf[QuestionItem]) map (_.asInstanceOf[QuestionItem])
+  def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem with Weight] = 
+    get(words) filter (_.isInstanceOf[QuestionItem]) map (_.asInstanceOf[QuestionItem with Weight])
   
   def has(words: IndexedSeq[QToken]): Boolean = {
     server.query(buildCountQuery(words)).getResults().getNumFound() > 0

@@ -154,6 +154,16 @@ trait Lexicon {
   def has(words: IndexedSeq[QToken]): Boolean
 }
 
+trait WeightedLexicon extends Lexicon {
+  
+  def get(words: IndexedSeq[QToken]): Iterable[LexItem with Weight]
+  def getRel(words: IndexedSeq[QWord]): Iterable[RelItem with Weight]
+  def getEnt(words: IndexedSeq[QWord]): Iterable[EntItem with Weight]
+  def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem with Weight]
+  
+  def has(words: IndexedSeq[QToken]): Boolean
+}
+
 /* An implementation of a Lexicon represented as a Scala Map object. */
 case class MapLexicon(items: Iterable[LexItem]) 
   extends Lexicon {
@@ -182,14 +192,29 @@ case class MapLexicon(items: Iterable[LexItem])
 }
 
 /* A parser maps a question to a set of derivations using a lexicon. */ 
-abstract class Parser {
-  
-  val lexicon: Lexicon
+abstract class Parser(val lexicon: Lexicon) {
   
   def intervals(size: Int) =
-    for (i <- Range(0, size); j <- Range(i, size)) yield (i, j+1)  
+    for (i <- Range(0, size); j <- Range(i, size)) yield (i, j + 1)
 
-  
+  def rSpan(s: Any): Option[Span[RelItem]] = s match {
+    case Span(iv, i: RelItem) => Some(Span(iv, i))
+    case _ => None
+  }
+
+  def eSpan(s: Any): Option[Span[EntItem]] = s match {
+    case Span(iv, i: EntItem) => Some(Span(iv, i))
+    case _ => None
+  }
+    
+  /* Gets all non-overlapping relation and entity spans in the question.*/
+  def relEntSpans(words: IndexedSeq[QWord]) = {
+    val spans = enumerateItemSpans(words)
+    val eSpans = spans.flatMap(eSpan)
+    val rSpans = spans.flatMap(rSpan)
+    for (r <- rSpans; e <- eSpans; if !r.overlaps(e)) yield (r, e)
+  }
+    
   def enumerateItemSpans(words: IndexedSeq[QWord]): Iterable[Span[LexItem]] = {
     for ((i, j) <- intervals(words.size).par; // for each span index
          ws = words.slice(i, j);		  // get the subseq of words
@@ -197,16 +222,6 @@ abstract class Parser {
          item <- lexicon.get(ws))		  // for each lexical item matching words
       yield Span(iv, item) 			 	  // yield a new Span
     }.toList
-    
-  def parse(words: IndexedSeq[QWord]): Iterable[Derivation]
-
-}
-
-/* An implementation of a Parser. It operates by finding all non-overlapping
- * spans of entity and relation items in the question. Then, it checks to see
- * if the resulting question pattern exists in the lexicon.
- */
-case class BottomUpParser(lexicon: Lexicon) extends Parser {
 
   /* Generates a question pattern. For example, suppose we have the input 
    * question "who likes joe" and the lexicon indicated that 
@@ -218,35 +233,79 @@ case class BottomUpParser(lexicon: Lexicon) extends Parser {
     val rInt = rel.interval
     val eInt = ent.interval
     (0 until words.size).flatMap { i =>
-        if (rInt.min == i) Some(RelVar)
-        else if (eInt.min == i) Some(ArgVar)
-        else if (!rInt.contains(i) && !eInt.contains(i)) Some(words(i))
-        else None
+      if (rInt.min == i) Some(RelVar)
+      else if (eInt.min == i) Some(ArgVar)
+      else if (!rInt.contains(i) && !eInt.contains(i)) Some(words(i))
+      else None
     }
   }
+    
+  def parse(words: IndexedSeq[QWord]): Iterable[Derivation]
+
+}
+
+abstract class WeightedParser(override val lexicon: WeightedLexicon) extends Parser(lexicon) {
   
-  def rSpan(s: Any): Option[Span[RelItem]] = s match {
-    case Span(iv, i: RelItem) => Some(Span(iv, i))
+  type RelSpan = Span[RelItem with Weight]
+  type EntSpan = Span[EntItem with Weight]
+  
+  override def rSpan(s: Any): Option[Span[RelItem with Weight]] = s match {
+    case Span(iv, i: RelItem with Weight) => Some(Span(iv, i))
     case _ => None
   }
-  
-  def eSpan(s: Any): Option[Span[EntItem]] = s match {
-    case Span(iv, i: EntItem) => Some(Span(iv, i))
+
+  override def eSpan(s: Any): Option[Span[EntItem with Weight]] = s match {
+    case Span(iv, i: EntItem with Weight) => Some(Span(iv, i))
     case _ => None
   }
-  
+    
   /* Gets all non-overlapping relation and entity spans in the question.*/
-  def relEntSpans(words: IndexedSeq[QWord]) = {
+  override def relEntSpans(words: IndexedSeq[QWord]): Iterable[(RelSpan, EntSpan)] = {
     val spans = enumerateItemSpans(words)
-    val eSpans = spans.flatMap(eSpan)
-    val rSpans = spans.flatMap(rSpan)
+    val eSpans: Iterable[EntSpan] = spans.flatMap(eSpan)
+    val rSpans: Iterable[RelSpan] = spans.flatMap(rSpan)
     for (r <- rSpans; e <- eSpans; if !r.overlaps(e)) yield (r, e)
   }
+  
+  override def enumerateItemSpans(words: IndexedSeq[QWord]): Seq[Span[LexItem with Weight]] = {
+    val itemSpans = intervals(words.size).par.flatMap {
+      case (start, end) =>
+        val wordSlice = words.slice(start, end)
+        val sliceInterval = Interval.open(start, end)
+        val lexItems = lexicon.get(wordSlice)
+        lexItems.map { item => Span(sliceInterval, item) }
+    }
+    (Seq() ++ itemSpans).sortBy(-_.item.weight)
+  }
+
+  override def parse(words: IndexedSeq[QWord]): Seq[Derivation with Weight]
+  
+}
+
+/* An implementation of a Parser. It operates by finding all non-overlapping
+ * spans of entity and relation items in the question. Then, it checks to see
+ * if the resulting question pattern exists in the lexicon.
+ */
+case class BottomUpParser(override val lexicon: Lexicon) extends Parser(lexicon) {
   
   def parse(words: IndexedSeq[QWord]) = {
     for ((r, e) <- relEntSpans(words);
         qpat = questionPatFrom(words, r, e);
         qitem <- lexicon.getQuestion(qpat))
       yield Derivation(words, qitem, r, e)
+  }
+}
+
+class WeightedBottomUpParser(lexicon: WeightedLexicon) extends WeightedParser(lexicon) {
+  
+  def parse(words: IndexedSeq[QWord]) = {
+    val derivations = for (
+      (r, e) <- relEntSpans(words).par;
+      qpat = questionPatFrom(words, r, e);
+      qitem <- lexicon.getQuestion(qpat);
+      dweight = qitem.weight + r.item.weight + e.item.weight
+    ) yield new Derivation(words, qitem, r, e) with Weight{ val weight = dweight }
+    
+    (Seq() ++ derivations).sortBy(-_.weight)
   }
 }
