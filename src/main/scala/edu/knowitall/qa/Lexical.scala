@@ -120,15 +120,15 @@ case class Span[+T](interval: Interval, item: T) {
  * derivation composes a question item, an entity item, and a relation item
  * to generate the query.
  */
-case class Derivation(
-    question: IndexedSeq[QWord], 
-    questionItem: QuestionItem, 
-    relSpan: Span[RelItem], 
-    entSpan: Span[EntItem]) { 
+class Derivation(
+    val question: IndexedSeq[QWord], 
+    val questionItem: QuestionItem, 
+    val relSpan: Span[RelItem], 
+    val entSpan: Span[EntItem]) { 
 	  
-  val relItem = relSpan.item
-  val entItem = entSpan.item
-  val lexItems = IndexedSeq(questionItem, relItem, entItem)
+  def relItem = relSpan.item
+  def entItem = entSpan.item
+  def lexItems = IndexedSeq(questionItem, relItem, entItem)
   
   val qws = question.mkString(" ")
   val qOrder = questionItem.argOrder
@@ -140,6 +140,26 @@ case class Derivation(
   override def toString = List(qws, query, "----", questionItem, relItem, 
       entItem).mkString("\n")
 }
+
+class WeightedDerivation(
+    question: IndexedSeq[QWord],
+    questionItem: QuestionItem with Weight,
+    relSpan: Span[RelItem with Weight],
+    entSpan: Span[EntItem with Weight],
+    val weight: Double)
+  extends Derivation(question, questionItem, relSpan, entSpan) with Weight {
+  
+  override def relItem = relSpan.item
+  override def entItem = entSpan.item
+  override def lexItems = IndexedSeq(questionItem, relItem, entItem)
+  
+  private def weightString = "wt=%.02f rel=%.02f ent=%.02f qst=%.02f"
+    .format(weight, relSpan.item.weight, entSpan.item.weight, questionItem.weight)
+  
+  override def toString = List(qws, weightString, query, "----", questionItem, relItem, 
+      entItem).mkString("\n") 
+}
+
 
 /* A lexicon provides access to a set of lexical items. The lexical items are
  * indexed by the question tokens.
@@ -245,11 +265,15 @@ abstract class Parser(val lexicon: Lexicon) {
 }
 
 abstract class WeightedParser(override val lexicon: WeightedLexicon) extends Parser(lexicon) {
-  
+   
   type RelSpan = Span[RelItem with Weight]
   type EntSpan = Span[EntItem with Weight]
+  type LexSpan = Span[LexItem with Weight]
   
-  override def rSpan(s: Any): Option[Span[RelItem with Weight]] = s match {
+  /**
+   * 
+   */
+  override def rSpan(s: Any): Option[RelSpan] = s match {
     case Span(iv, i: RelItem with Weight) => Some(Span(iv, i))
     case _ => None
   }
@@ -259,7 +283,6 @@ abstract class WeightedParser(override val lexicon: WeightedLexicon) extends Par
     case _ => None
   }
     
-  /* Gets all non-overlapping relation and entity spans in the question.*/
   override def relEntSpans(words: IndexedSeq[QWord]): Iterable[(RelSpan, EntSpan)] = {
     val spans = enumerateItemSpans(words)
     val eSpans: Iterable[EntSpan] = spans.flatMap(eSpan)
@@ -267,7 +290,7 @@ abstract class WeightedParser(override val lexicon: WeightedLexicon) extends Par
     for (r <- rSpans; e <- eSpans; if !r.overlaps(e)) yield (r, e)
   }
   
-  override def enumerateItemSpans(words: IndexedSeq[QWord]): Seq[Span[LexItem with Weight]] = {
+  override def enumerateItemSpans(words: IndexedSeq[QWord]): Seq[LexSpan] = {
     val itemSpans = intervals(words.size).par.flatMap {
       case (start, end) =>
         val wordSlice = words.slice(start, end)
@@ -278,7 +301,7 @@ abstract class WeightedParser(override val lexicon: WeightedLexicon) extends Par
     (Seq() ++ itemSpans).sortBy(-_.item.weight)
   }
 
-  override def parse(words: IndexedSeq[QWord]): Seq[Derivation with Weight]
+  override def parse(words: IndexedSeq[QWord]): Seq[WeightedDerivation]
   
 }
 
@@ -292,7 +315,7 @@ case class BottomUpParser(override val lexicon: Lexicon) extends Parser(lexicon)
     for ((r, e) <- relEntSpans(words);
         qpat = questionPatFrom(words, r, e);
         qitem <- lexicon.getQuestion(qpat))
-      yield Derivation(words, qitem, r, e)
+      yield new Derivation(words, qitem, r, e)
   }
 }
 
@@ -304,7 +327,7 @@ class WeightedBottomUpParser(lexicon: WeightedLexicon) extends WeightedParser(le
       qpat = questionPatFrom(words, r, e);
       qitem <- lexicon.getQuestion(qpat);
       dweight = qitem.weight + r.item.weight + e.item.weight
-    ) yield new Derivation(words, qitem, r, e) with Weight{ val weight = dweight }
+    ) yield new WeightedDerivation(words, qitem, r, e, dweight)
     
     (Seq() ++ derivations).sortBy(-_.weight)
   }
