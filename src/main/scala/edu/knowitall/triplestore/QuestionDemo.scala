@@ -37,25 +37,35 @@ class QARepl(val parser: WeightedParser, val maxDerivations: Int = 10, url: Stri
   def derivations(question: String) =
     parser.parse(splitRegex.split(question) map QWord.qWordWrap).toSeq.distinct
 
-  def queryFor(derivation: Derivation): Option[Query] = {
+  def queryFor(derivation: WeightedDerivation): Option[Query with Weight] = {
     val squery = derivation.query
-    val EntityCont = squery.queryField match {
-      case Arg1 => Arg2Cont
-      case Arg2 => Arg1Cont
-    }
+
     def cleanName(str: String) = str.replaceAll("-", " ").dropRight(2)
 
     val cleanRel = cleanName(squery.relation)
     val cleanEnt = cleanName(squery.entity)
+    val qweight = derivation.weight
 
     if (cleanRel.nonEmpty && cleanEnt.nonEmpty)
-      Some(Conjunction(RelCont(cleanName(squery.relation)), EntityCont(cleanName(squery.entity))))
+      Some(queryFor(squery.queryField, cleanRel, cleanEnt, qweight))
     else None
   }
+  
+  def queryFor(queryField: Arg, rel: String, ent: String, qweight: Double) = {
+    val EntityCont = queryField match {
+      case Arg1 => Arg2Cont
+      case Arg2 => Arg1Cont
+    }
+    new Conjunction(RelCont(rel), EntityCont(ent)) with Weight { val weight = qweight }
+  }
 
-  def search(query: Query) = {
-    val projection = On("r.arg1", "r.rel", "r.arg2", "r.namespace")
-    Project(projection, ExecQuery("r", query))
+  def search(query: Query with Weight) = {
+    val projection = On("r.arg1", "r.rel", "r.arg2", "r.namespace", "r.wt")
+    val qweightStr = "%.02f".format(query.weight)
+    val qweight = Tuple(Map("r.wt" -> qweightStr))
+    val results = ExecQuery("r", query)
+    
+    Project(projection, results map {_.join(qweight)})
   }
 
   def eval(input: String) = {
@@ -68,7 +78,7 @@ class QARepl(val parser: WeightedParser, val maxDerivations: Int = 10, url: Stri
     val derivStrings = results.zipWithIndex.flatMap {
       case ((deriv, queryOpt, results), index) =>
         Seq(
-          s"Derivation $index: wt=%.03f".format(deriv.weight),
+          s"Derivation $index",
           deriv.toString,
           "Query: " + queryOpt.map(_.toString).getOrElse("(query error)"),
           "Results: " + results.size.toString,
@@ -78,9 +88,9 @@ class QARepl(val parser: WeightedParser, val maxDerivations: Int = 10, url: Stri
   }
 }
 
-object WebQuestionRepl extends App {
+object QuestionDemo extends App {
 
-  val logger = LoggerFactory.getLogger(this.getClass)
+  val logger = LoggerFactory.getLogger(QuestionDemo.this.getClass)
 
   /**
    * This object defines the web server behavior.
@@ -113,6 +123,7 @@ object WebQuestionRepl extends App {
 
     def getStatic = {
       ResponseString("""<html>
+              <meta charset="utf-8"/>
               <h1>Question Derivation Search</h1>
               <body>
               <form method="POST">
@@ -128,7 +139,7 @@ object WebQuestionRepl extends App {
   case class Config(port: Int = 8080)
 
   val argParser = new scopt.OptionParser[Config]("scopt") {
-    help("help") text ("Starts a REPL web interface for entering natural language questions against the triplestore.")
+    help("help") text ("Starts a simple web interface for entering natural language questions against the triplestore.")
     opt[Int]('p', "port") action { (x, c) => c.copy(port = x) } text ("webserver port")
   }
 
