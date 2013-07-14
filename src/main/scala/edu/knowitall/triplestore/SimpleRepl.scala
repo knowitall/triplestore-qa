@@ -3,7 +3,7 @@ import Tabulator.tuplesToTable
 import Search.ProjectTriples
 
 case class SimpleRepl(url: String = "http://rv-n12:8983/solr/triplestore", 
-    hits: Int = 100) {
+    hits: Int = 500) {
   
   val client = SolrClient(url, hits)
   val joiner = Joiner(client)
