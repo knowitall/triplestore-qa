@@ -113,6 +113,9 @@ case class AbstractQuery(name: String, values: Map[Field, QVal]) {
   override def toString = s"($xs, $rs, $ys)"
 }
 case object AbstractQuery {
+  
+  val logger = LoggerFactory.getLogger(this.getClass) 
+  
   val qpat = """\(?(.+),(.+),(.+?)\)?""".r
   val vpat = """\$(.*)""".r
   def fromString(name: String, s: String): Option[AbstractQuery] = s match {
@@ -137,8 +140,10 @@ case object AbstractQuery {
   
   val splitPat = """(?<=\))\s*?(?=\()"""
   def fromStringMult(s: String): Iterable[AbstractQuery] = {
-    val parts = s.split(splitPat).toList
-    for ((s, i) <- parts.zipWithIndex; q <- fromString(s"r$i", s)) yield q
+    val parts = s.split(splitPat).toList.map(_.trim).filterNot(_ == "")
+    val queries = { for ((s, i) <- parts.zipWithIndex; 
+                       q <- fromString(s"r$i", s)) yield q }.toList
+    queries
   }
 } 
 
