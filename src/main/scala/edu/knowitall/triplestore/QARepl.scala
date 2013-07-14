@@ -6,7 +6,7 @@ import jline.console.ConsoleReader
 import edu.knowitall.qa._
 import scopt.OptionParser
 
-class QARepl(val parser: WeightedParser, val maxDerivations: Int = 5, url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", hits: Int = 100) {
+class QARepl(val parser: WeightedParser, val maxDerivations: Int = 10, url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", hits: Int = 100) {
   
   val client = TriplestoreClient(url, hits)
   val planning = TriplestorePlan(client)
@@ -19,9 +19,9 @@ class QARepl(val parser: WeightedParser, val maxDerivations: Int = 5, url: Strin
   private val splitRegex = "\\s+".r
   
   def derivations(question: String) = 
-    parser.parse(splitRegex.split(question) map QWord.qWordWrap).toSeq
+    parser.parse(splitRegex.split(question) map QWord.qWordWrap).toSeq.distinct
   
-  def queryFor(derivation: Derivation) = {
+  def queryFor(derivation: Derivation): Option[Query] = {
     val squery = derivation.query
     val EntityCont = squery.queryField match {
       case Arg1 => Arg2Cont
@@ -29,7 +29,12 @@ class QARepl(val parser: WeightedParser, val maxDerivations: Int = 5, url: Strin
     }
     def cleanName(str: String) = str.replaceAll("-", " ").dropRight(2)
     
-    Conjunction(RelCont(cleanName(squery.relation)), EntityCont(cleanName(squery.entity)))
+    val cleanRel = cleanName(squery.relation)
+    val cleanEnt = cleanName(squery.entity)
+    
+    if (cleanRel.nonEmpty && cleanEnt.nonEmpty)
+      Some(Conjunction(RelCont(cleanName(squery.relation)), EntityCont(cleanName(squery.entity))))
+    else None
   }
   
   def search(query: Query) = {
@@ -37,7 +42,24 @@ class QARepl(val parser: WeightedParser, val maxDerivations: Int = 5, url: Strin
     Project(projection, ExecQuery("r", query))
   }
   
-  def eval(input: String) = toTable(derivations(input).map(queryFor).distinct.map(search).flatten)
+  def eval(input: String) = {
+    val derivs = derivations(input).take(maxDerivations)
+    val queries = derivs.map(d => (d, queryFor(d)))
+    val results = queries.map { case (deriv, query) => (deriv, query, query.map(search).getOrElse(Nil)) }
+    val allTuples = results.flatMap(_._3)
+    
+    val table = toTable(allTuples)
+    val derivStrings = results.zipWithIndex.flatMap { case ((deriv, queryOpt, results), index) =>
+      Seq(
+          s"Derivation $index: wt=%.03f".format(deriv.weight),
+          deriv.toString, 
+          "Query: " + queryOpt.map(_.toString).getOrElse("(query error)"),
+          "Results: " + results.size.toString,
+          "", ""
+        )
+    }
+    (Seq(table, "", s"TOP $maxDerivations DERIVATIONS:") ++ derivStrings).mkString("\n")
+  }
 }
 
 object QARepl extends App {

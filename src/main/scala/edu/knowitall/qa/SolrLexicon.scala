@@ -10,12 +10,12 @@ class SolrLexicon(val server: SolrServer) extends WeightedLexicon {
 
   def this(url: String) = this(new HttpSolrServer(url))
   
-  private def queryString(words: IndexedSeq[QToken]) = s"tokens:${words.map(_.toString).mkString(" ")}"
+  private def queryString(words: IndexedSeq[QToken]) = 
+    "+tokens_exact:\"%s\"".format(words.map(_.toString).mkString(" "))
 
   private def buildQuery(words: IndexedSeq[QToken]): SolrQuery = {
     new SolrQuery(queryString(words))
-      .setSort("weight", SolrQuery.ORDER.desc)
-      .setFields(LexItemConverter.allFields.toSeq: _*)
+      .addSort("weight", SolrQuery.ORDER.desc)
   }
   
   private def buildCountQuery(words: IndexedSeq[QToken]): SolrQuery = {
@@ -28,6 +28,7 @@ class SolrLexicon(val server: SolrServer) extends WeightedLexicon {
   }
   
   def get(words: IndexedSeq[QToken]): Iterable[LexItem with Weight] = {
+    
     execQuery(buildQuery(words))
   }
   
