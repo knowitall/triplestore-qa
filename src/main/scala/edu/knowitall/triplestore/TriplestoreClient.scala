@@ -40,33 +40,52 @@ trait TriplestoreClient {
 case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
   
   val server = new HttpSolrServer(url)
+
+
+  /**
+   * Returns the number of documents in Solr that match the given query.
+   */
+  def count(q: TSQuery): Long = {
+    System.err.println("Counting..." + q)
+    val query = SolrClient.buildCountQuery(q)
+    val resp = server.query(query)
+    resp.getResults().getNumFound()
+  }
   
+  /**
+   * Searches Solr and returns Tuple objects.
+   */
+  def search(q: TSQuery): List[Tuple] ={
+    val query = SolrClient.buildQuery(q)
+    query.setRows(hits)
+    System.err.println(q)
+    val resp = server.query(query)
+    resp.getResults().toList.map(SolrClient.docToTuple)
+  }
+  
+}
+case object SolrClient {
+    
   def escape(s: String): String = ClientUtils.escapeQueryChars(s)
   
   /**
    * Takes a Search.Query object and maps it to a SolrQuery object.
    */
-  def buildQuery(q: TSQuery): SolrQuery = {
-    val sq = new SolrQuery(q.toQueryString)
-    System.err.println(s"Issuing Solr Query: ${sq.getQuery}")
-    sq.setRows(hits)
-  }
+  def buildQuery(q: TSQuery): SolrQuery =
+    new SolrQuery(q.toQueryString)
   
   /**
    * Builds a SolrQuery object used to count the number of hits returned
    * by the given Search.Query object. Returns 0 rows.
    */
-  def buildCountQuery(q: TSQuery): SolrQuery = {
-    val sq = new SolrQuery(q.toQueryString)
-    sq.setRows(0)
-  }
+  def buildCountQuery(q: TSQuery): SolrQuery = 
+    new SolrQuery(q.toQueryString).setRows(0)
   
   /**
    * The string field names of the given solr document.
    */
-  def fieldNames(doc: SolrDocument): List[String] = {
+  def fieldNames(doc: SolrDocument): List[String] =
     doc.getFieldNames().toList.map { x => x.toString() }
-  }
   
   // Mnemonics used to remember what the attributes/values of a Tuple are.
   type Value = Any
@@ -99,28 +118,6 @@ case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
    * Converts a Solr document to a Tuple object.
    */
   def docToTuple(doc: SolrDocument): Tuple = Tuple(docToFields(doc).toMap)
-
-  /**
-   * Returns the number of documents in Solr that match the given query.
-   */
-  def count(q: TSQuery): Long = {
-    System.err.println("Counting..." + q)
-    val query = buildCountQuery(q)
-    val resp = server.query(query)
-    resp.getResults().getNumFound()
-  }
-  
-  /**
-   * Searches Solr and returns Tuple objects.
-   */
-  def search(q: TSQuery): List[Tuple] ={
-    val query = buildQuery(q)
-    query.setRows(hits)
-    System.err.println(q)
-    val resp = server.query(query)
-    resp.getResults().toList.map(docToTuple)
-  }
-  
 }
 
 /**
