@@ -56,7 +56,23 @@ object SolrLexiconTest extends App {
    val solrLexicon = new SolrLexicon()
    val referenceLexItems = new EvalLexiconLoader(args(0))
    
-   referenceLexItems foreach { item =>
-     require(solrLexicon.get(item.words).map(_.asInstanceOf[LexItem]).toSet.contains(item), s"Solr doesn't seem to have an entry for: $item")
+   var numWrong = 0
+   var numRight = 0
+   
+   def total = numWrong + numRight
+   def pct = numWrong.toDouble / total.toDouble
+   def bleat = println("Total: %d, right: %d, wrong: %d, %%Wrong: %.02f"
+       .format(total, numRight, numWrong, pct))
+
+   referenceLexItems.zipWithIndex foreach { case (item, index) =>
+     if (!solrLexicon.get(item.words).map(_.asInstanceOf[LexItem]).toSet.contains(item)) {
+       numWrong += 1
+       println(s"Solr doesn't seem to have an entry (#$index) for: $item")
+     } else {
+       numRight += 1
+     }
+     if (index % 10000 == 0) bleat
    }
+
+   bleat
 }
