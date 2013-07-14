@@ -111,10 +111,6 @@ case class AbstractQuery(name: String, values: Map[Field, QVal]) {
   val ys = values.getOrElse(arg2, "")
   override def toString = s"($xs, $rs, $ys)"
 }
-
-/**
- * Some static methods for AbstractQuery objects.
- */
 case object AbstractQuery {
   val qpat = """\(?(.+),(.+),(.+?)\)?""".r
   val vpat = """\$(.*)""".r
