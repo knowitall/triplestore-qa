@@ -3,29 +3,37 @@ package edu.knowitall.triplestore
 import com.rockymadden.stringmetric.similarity._
 import org.apache.solr.client.solrj.util.ClientUtils
 
-
+/**
+ * Used to represent a Tuple (i.e. a row in a relational database). A tuple 
+ * has a set of String attributes. Each attribute has a value of type Any.
+ */
 case class Tuple(attrs: Map[String, Any]) {
     
+  /* Concatenates two tuples together. Their attributes must be disjoint. */
   def join(other: Tuple): Tuple = {
     val t = Tuple(this.attrs ++ other.attrs)
     if (t.attrs.size == this.attrs.size + other.attrs.size) {
       return t
     } else {
-      throw new IllegalArgumentException("attr names not disjoint: " + this + ", " + other)
+      throw new 
+        IllegalArgumentException(s"attr names not disjoint: $this, $other")
     }
   }
-  
+ 
   def get(a: String) = attrs.get(a)
-  
+
+  /* Gets the string value of attribute a. Returns None if not possible */
   def getString(a: String) = attrs.get(a) match {
     case Some(x: String) => Some(x)
     case _ => None
   }
   
+  /* Renames the attributes using the given function */
   def rename(f: String => String): Tuple = {
     Tuple(attrs.map{ case (k, v) => (f(k), v) })
   }
   
+  /* Adds "$p." before each attribute. */
   def renamePrefix(p: String): Tuple = rename(k => p + "." + k)
   
   override def toString: String = {
@@ -34,102 +42,109 @@ case class Tuple(attrs: Map[String, Any]) {
   }
 }
 
-object StrSim {
-  val stops = Set("a", "an", "and", "are", "as", "at", "be", "but", "by",
-      "for", "if", "in", "into", "is", "it",
-      "no", "not", "of", "on", "or", "such",
-      "that", "the", "their", "then", "there", "these",
-      "they", "this", "to", "was", "will", "with", "i", "me", "your",
-      "our", "ours", "him", "he", "his", "her", "its", "you", "that",
-      "every", "all", "each", "those", "other", "both", "neither", "some",
-      "'s")
-  
-  def norm(x: String) = {
-    x.toLowerCase().split("\\s+").filter(!stops.contains(_)).mkString("")
-  }
-  def sim(x: String, y: String): Double = {
-    JaroWinklerMetric.compare(norm(x), norm(y)).getOrElse(0.0)
-  }
-      
-}
-
+/**
+ * Contains objects for select and join conditions.
+ */
 object Conditions {
-  
 
+  // Mnemonics
   type Attr = String
   type Value = Any
   type ValuePred = Value => Boolean
   type BinaryStringPred = (String, String) => Boolean
   type BinaryValuePred = (Value, Value) => Boolean
   type TuplePred = Tuple => Boolean
-  
     
-  def valPair(a1: Attr, a2: Attr, t: Tuple) = for (v1 <- t.attrs.get(a1); v2 <- t.attrs.get(a2)) yield (v1, v2)
+  def valPair(a1: Attr, a2: Attr, t: Tuple) = 
+    for (v1 <- t.attrs.get(a1); v2 <- t.attrs.get(a2)) yield (v1, v2)
   
-  def binaryAttrPred(a1: Attr, a2: Attr, f: BinaryValuePred): TuplePred = (t: Tuple) => {
-    valPair(a1, a2, t).exists(f.tupled)
-  }
+  /* Converts the given predicate over value pairs to a tuple predicate. This
+   * can be used to convert a predicate like "string1 and string2 are equal"
+   * to a tuple predicate like "tuple.a1 and tuple.a2 are equal"
+   */
+  def binaryAttrPred(a1: Attr, a2: Attr, f: BinaryValuePred): TuplePred = 
+    (t: Tuple) => valPair(a1, a2, t).exists(f.tupled)
   
-  def unaryAttrPred(a: Attr, x: String, f: BinaryValuePred): TuplePred = (t: Tuple) => {
-    { for (v <- t.attrs.get(a)) yield (v, List(x)) }.exists(f.tupled)
-  }
   
-  def stringToAnyPred(f: BinaryStringPred): BinaryValuePred = (v1: Value, v2: Value) => {
-    (v1, v2) match {
+  /* Converts the given predicate over value pairs to a tuple predicate. This
+   * can be used to convert a predicate like "string1 and string2 are equal"
+   * to a tuple predicate like "tuple.a = x".
+   */
+  def unaryAttrPred(a: Attr, x: String, f: BinaryValuePred): TuplePred = 
+    (t: Tuple) => { 
+      for (v <- t.attrs.get(a)) yield (v, List(x)) 
+    }.exists(f.tupled)
+  
+  /* Converts a predicate over (String, String) to a predicate over (Any, Any)
+   * by making non-String input always return false.
+   */
+  def stringToAnyPred(f: BinaryStringPred): BinaryValuePred = 
+    (v1: Value, v2: Value) => (v1, v2) match {
       case (v1: String, v2: String) => f(v1, v2)
       case _ => false
     }
-  }
   
-  def binaryPredFromString(a1: Attr, a2: Attr, f: BinaryStringPred) = {
+  /* A shortcut for combining stringToAnyPred and binaryAttrPred. */
+  def binaryPredFromString(a1: Attr, a2: Attr, f: BinaryStringPred) = 
     binaryAttrPred(a1, a2, stringToAnyPred(f))
-  }
   
-  def unaryPredFromString(a: Attr, v: String, f: BinaryStringPred) = {
+  /* A shortcut for combining stringToAnyPred and unaryAttrPred. */
+  def unaryPredFromString(a: Attr, v: String, f: BinaryStringPred) = 
     unaryAttrPred(a, v, stringToAnyPred(f))
-  }
-
-  type Synonyms = List[List[String]]
-  def inSameSet(syns: Synonyms) = (x: String, y: String) => 
-    x == y || syns.exists(s => s.contains(x) && s.contains(y))
   
-  def StringEquality(caseSensitive: Boolean = true) = {
-    (x: String, y: String) => {
-      if (caseSensitive) x == y else x.toLowerCase() == y.toLowerCase() 
-    }
-  }    
-    
+  /* Wrapper for string equality, with optional case sensitivity. */
+  def StringEquality(caseSensitive: Boolean = true) = (x: String, y: String) => 
+    if (caseSensitive) x == y else x.toLowerCase() == y.toLowerCase() 
   
-  def strEq = StringEquality(false)
-  def valEq = (x: Value, y: Value) => x == y
-  def strSim(thresh: Double) = (x: String, y: String) => StrSim.sim(x, y) > thresh
-
+  /* Thresholded string-similarity predicate, returns true if the given strings
+   * have similarity above a given threshold.
+   */
+  def strSim(thresh: Double) = (x: String, y: String) => 
+    StrSim.sim(x, y) > thresh   
+  val strEq = StringEquality(false)
+  val valEq = (x: Value, y: Value) => x == y
+  
+  /* A BinaryPred is a TuplePred that has access to two attribute names. */
   trait BinaryPred {
     def attr1: Attr
     def attr2: Attr
     def apply(t: Tuple): Boolean
   }
   
-  case class AttrsEqual(attr1: Attr, attr2: Attr) extends TuplePred with BinaryPred {
+  /* AttrsEqual is a TuplePred that returns true if t.attr1 equals t.attr2. */
+  case class AttrsEqual(attr1: Attr, attr2: Attr) extends TuplePred 
+    with BinaryPred {
     val pred = binaryPredFromString(attr1, attr2, strEq)
     def apply(t: Tuple) = pred(t)
   }
   
+  /* AttrEquals is a TuplePred that returns true if t.attr equals value. */
   case class AttrEquals(attr: Attr, value: String) extends TuplePred {
     val pred = unaryPredFromString(attr, value, strEq)
     def apply(t: Tuple) = pred(t)
   }
   
-  case class AttrsSim(attr1: Attr, attr2: Attr, thresh: Double) extends TuplePred with BinaryPred {
+  /* AttrsSim is a TuplePred that returns true if t.attr1 and t.attr2 have 
+   * similarity greater than thresh.
+   */
+  case class AttrsSim(attr1: Attr, attr2: Attr, thresh: Double) 
+  extends TuplePred with BinaryPred {
     val pred = binaryPredFromString(attr1, attr2, strSim(thresh))
     def apply(t: Tuple) = pred(t)
   }
   
-  case class AttrSim(attr: Attr, value: String, thresh: Double) extends TuplePred {
+  /* AttrSim is a TuplePred that returns true if t.attr and value have 
+   * similarity greater than thresh.
+   */
+  case class AttrSim(attr: Attr, value: String, thresh: Double) 
+  extends TuplePred {
     val pred = unaryPredFromString(attr, value, strSim(thresh))
     def apply(t: Tuple) = pred(t)
   }
     
+  /* On returns a function Tuple => Tuple that projects a tuple t onto the
+   * given attributes.
+   */
   def On(attrs: Attr*) = (t: Tuple) => {
     val items = for (a <- attrs; v <- t.attrs.get(a)) yield (a, v)
     Tuple(items.toMap)
@@ -137,108 +152,204 @@ object Conditions {
 
 }
 
+/**
+ * The Operators object defines relational algebra operators, which are used
+ * to join, select, and project Tuple objects. 
+ */
 object Operators {
+  
+  // Mnemonics
   type TuplePred = Tuple => Boolean
   type TupleMap = Tuple => Tuple
   type Tuples = Iterable[Tuple]
   
+  /* Select returns only those tuples that satisfy the predicate p. */
   def Select(p: TuplePred) = (ts: Tuples) => ts.filter(p)
   
+  /* Project transforms each tuple using the given map m. */
   def Project(m: TupleMap) = (ts: Tuples) => ts.map(m)
   
+  /* Union groups multiple iterables of tuples into a single iterable. */
   def Union(tss: Tuples*) = tss.flatten
   
+  /* Join takes the cartesian product of two tuples and returns only those
+   * tuples that satisfy the predicate p. NestedLoopJoin implements this
+   * as a nested loop over each iterable of tuples.
+   */
   def NestedLoopJoin(p: TuplePred) = (ts1: Tuples, ts2: Tuples) => {
-    for (t1 <- ts1; t2 <- ts2; j = t1.join(t2); if p(j)) yield j
-  }
+    for (t1 <- ts1.par; t2 <- ts2.par; j = t1.join(t2); if p(j)) yield j
+  }.toList
   
-  def Product(ts1: Tuples, ts2: Tuples): Tuples = for (t1 <- ts1; t2 <- ts2) yield t1.join(t2)
+  /* Joins together all pairs of tuples. */
+  def Product(ts1: Tuples, ts2: Tuples): Tuples = 
+    for (t1 <- ts1; t2 <- ts2) yield t1.join(t2)
   
 }
 
+/**
+ * Objects used to construct queries against a triplestore.
+ */
 object Search {
+  
+  // Mnemonics
+  type Tuples = Iterable[Tuple]
+  type Attr = String
+  type Search = TSQuery => Tuples
   
   import Conditions._
   
+  /* These are the possible fields in a triplestore. */
   object Field extends Enumeration {
     type Field = Value
     val arg1, rel, arg2, namespace = Value
     val arg1_exact, rel_exact, arg2_exact = Value
+    // Maps some fields to their exact-match versions
     val exactMap = Map(arg1 -> arg1_exact, rel -> rel_exact, arg2 -> arg2_exact)
   }
   import Field._
   
+  /* Used to represent a triplestore query. The only requirement is that it 
+   * should have some method that converts it to a Lucene query string.
+   */ 
   trait TSQuery {
     def toQueryString: String
   }
   
+  /* Used to escape characters that have special meanings in Lucene. */
   def escape = ClientUtils.escapeQueryChars _
   
+  /* A query that searches the given field for the given keywords. Splits the
+   * string v into words, and then converts them into a Lucene query
+   * equal to the conjunctions of all the words. For example, if f = arg1
+   * and v = "barack obama", the resulting Lucene query string will be
+   * "arg1:barack AND arg1:obama".
+   */
   case class FieldKeywords(f: Field, v: String) extends TSQuery {
-    def toQueryString = { for (w <- v.trim().split("\\s+"); x = f.toString() + ":" + escape(w)) yield x }.mkString(" AND ") 
+    def toQueryString = { 
+      for (w <- v.trim().split("\\s+");
+           x = f.toString() + ":" + escape(w)) 
+      yield x }.mkString(" AND ") 
   }
   
+  /* A query that searches the given field for the given phrase. Uses the
+   * exact-match version of the given field. For example, if f = arg1
+   * and v = "barack obama", then the resulting Lucene query string will be
+   * arg1_exact:"barack obama".
+   */
   case class FieldPhrase(f: Field, v: String) extends TSQuery {
     val realField = exactMap.getOrElse(f, f)
     def toQueryString = realField.toString() + ":\"" + escape(v) + "\"" 
   }
   
-  case class Conjunction(conjuncts: TSQuery*) extends TSQuery {
-    def toQueryString = conjuncts.map("(" + _.toQueryString + ")").mkString(" AND ") 
-  }
-
-  case class Disjunction(disjuncts: TSQuery*) extends TSQuery {
-    def toQueryString = disjuncts.map("(" + _.toQueryString + ")").mkString(" OR ") 
-  }
-  
-  def AndPhrase(q: TSQuery, f: Field, v: String) = Conjunction(q, FieldPhrase(f, v))
-
-  val tripColPat = ".*\\.(arg1|arg2|rel|namespace)$"
-  def OnTripleCols(t: Tuple): Tuple = Tuple(t.attrs.filterKeys(a => a.matches(tripColPat)))
-  def ProjectTriples(ts: Tuples) = Operators.Project(OnTripleCols)(ts)
-  
-  type Tuples = Iterable[Tuple]
-  type Attr = String
-  type Search = TSQuery => Tuples
-  
-  case class PartialSearcher(query: TSQuery, search: Search)
-
-  val Arg1Pat = "(.*)\\.arg1$".r
-  val Arg2Pat = "(.*)\\.arg2$".r
-  val RelPat = "(.*)\\.rel$".r
-  def PartialSearchJoin(cond: BinaryPred) = {
-    val leftAttr = cond.attr1
-    val rightAttr = cond.attr2
-    val (name, field) = rightAttr match {
-      case Arg1Pat(n) => (n, arg1)
-      case Arg2Pat(n) => (n, arg2)
-      case RelPat(n) => (n, rel)
-      case _ => throw new IllegalArgumentException("field must be arg1, rel, or arg2: " + rightAttr)
-    }
-    (ts: Tuples, ps: PartialSearcher) => {
-      for (
-          t1 <- ts.par;							// for each tuple
-          v <- t1.getString(leftAttr).toSeq;		// get the value of its join attr
-          q = AndPhrase(ps.query, field, v);// construct a complete query 
-          t2 <- ps.search(q).par;
-          t3 = t1.join(t2);					// join the tuples
-          if cond(t3))						// test if the joined tuple satisfies the pred
-        yield t3
-    }.toList
-  }
-  
-  
+  /* Some shortcut functions for each of the fields. */
   val Arg1Eq = (v: String) => FieldPhrase(arg1_exact, v)
   val Arg2Eq = (v: String) => FieldPhrase(arg2_exact, v)
   val RelEq = (v: String) => FieldPhrase(rel_exact, v)
- 
   val Arg1Cont = (v: String) => FieldKeywords(arg1, v)
   val Arg2Cont = (v: String) => FieldKeywords(arg2, v)
   val RelCont = (v: String) => FieldKeywords(rel, v)
-
   
+  /* Returns the conjunction of the given queries. */
+  case class Conjunction(conjuncts: TSQuery*) extends TSQuery {
+    def toQueryString =
+      conjuncts.map("(" + _.toQueryString + ")").mkString(" AND ") 
+  }
+
+  /* Returns the disjunction of the given queries. */
+  case class Disjunction(disjuncts: TSQuery*) extends TSQuery {
+    def toQueryString =
+      disjuncts.map("(" + _.toQueryString + ")").mkString(" OR ") 
+  }
+  
+  /* A shortcut method that adds FieldPhrase(f, v) as a conjunct to q. */
+  def AndPhrase(q: TSQuery, f: Field, v: String) =
+    Conjunction(q, FieldPhrase(f, v))
+
+  /* A pattern to match the required triplestore attribute names in a tuple. */
+  val tripColPat = ".*\\.(arg1|arg2|rel|namespace)$"
+    
+  /* A projection operator that maps a tuple to just the required triplestore
+   * fields (arg1, rel, arg2, namespace).
+   */
+  def OnTripleCols(t: Tuple): Tuple = 
+    Tuple(t.attrs.filterKeys(a => a.matches(tripColPat)))
+  def ProjectTriples(ts: Tuples) = Operators.Project(OnTripleCols)(ts)
+
+  /* The code below is used for executing partial searches. A partial search
+   * is a way to lazily represent a query's tuples without actually executing
+   * the query against the triplestore. Parital searches are useful for 
+   * joining a small table T1 with a large table T2. Instead of loading both
+   * tables into memory (which may be prohibitively slow), a partial-search
+   * joiner loads T1 into memory, then executes a query for each tuple t in T1.
+   * Each query is specifically searching for tuples that may be joined with t.
+   * This allows the system to make many small, restricted queries, instead of
+   * one large, unrestricted one.
+   */
+  
+  /* This class is just a name for a (query, search) pair, where search
+   * is some function that maps queries onto tuples.
+   */
+  case class PartialSearcher(query: TSQuery, search: Search)
+  
+  /* These patterns are used to infer the Field object to join from the string
+   * attribute name in a tuple.
+   */ 
+  val Arg1Pat = "(.*)\\.arg1$".r
+  val Arg2Pat = "(.*)\\.arg2$".r
+  val RelPat = "(.*)\\.rel$".r
+  
+  /* This defines a partial search join algorithm. The join condition cond is
+   * used both as a predicate (i.e. evaluating whether a joined tuple should
+   * be kept or discarded) but also for creating the tuple-specific queries
+   * on the fly.
+   * 
+   * PartialSearchJoin is actually a function that takes a join condition
+   * as input, and returns a function (Tuples, PartialSearcher) => Tuples.
+   * This resulting function takes the smaller table as input, and joins it
+   * using the given PartialSearcher object, which encodes the query for 
+   * the larger table. 
+   */
+  def PartialSearchJoin(cond: BinaryPred) = {
+    // The join attribute of the smaller table.
+    val lAttr = cond.attr1
+    
+    // The join attribute of the larger table.
+    val rAttr = cond.attr2
+    
+    // Code for inferring which field to search for when creating a query. It
+    // is possible that rAttr might not be mappable to a field, in which case
+    // it is not actually possible to execute the partial search join algo.
+    val (name, field) = rAttr match {
+      case Arg1Pat(n) => (n, arg1)
+      case Arg2Pat(n) => (n, arg2)
+      case RelPat(n) => (n, rel)
+      case _ => throw new 
+        IllegalArgumentException(s"field must be arg1, rel, or arg2: $rAttr")
+    }
+    
+    (ts: Tuples, ps: PartialSearcher) => {
+      for (
+          // For each tuple in the smaller table...
+          t1 <- ts.par;
+          // Get the value v of the smaller table's join attribute
+          v <- t1.getString(lAttr).toSeq;
+          // Construct the t1-specific query
+          q = AndPhrase(ps.query, field, v);
+          // Execute the query using the partial searcher
+          t2 <- ps.search(q).par;
+          // Join the two tuples together
+          t3 = t1.join(t2);
+          // If the join condition is satisfied, then return the joined tuple
+          if cond(t3)) yield t3
+    }.toList
+  }
 }
 
+/**
+ * This object is used to create SQL-style table printouts from tuples. The
+ * code is ripped from this stackoverflow post: 
+ * http://stackoverflow.com/questions/7539831/scala-draw-table-to-console
+ */
 object Tabulator {
   
   def trim(s: String, l: Int) = {
@@ -275,7 +386,8 @@ object Tabulator {
   def format(table: Seq[Seq[Any]]) = table match {
     case Seq() => ""
     case _ =>
-      val sizes = for (row <- table) yield (for (cell <- row) yield if (cell == null) 0 else cell.toString.length)
+      val sizes = for (row <- table) yield (for (cell <- row) 
+        yield if (cell == null) 0 else cell.toString.length)
       val colSizes = for (col <- sizes.transpose) yield col.max
       val rows = for (row <- table) yield formatRow(row, colSizes)
       formatRows(rowSeparator(colSizes), rows)
@@ -290,9 +402,33 @@ object Tabulator {
     List()).mkString("\n")
 
   def formatRow(row: Seq[Any], colSizes: Seq[Int]) = {
-    val cells = (for ((item, size) <- row.zip(colSizes)) yield if (size == 0) "" else ("%" + size + "s").format(item))
+    val cells = (for ((item, size) <- row.zip(colSizes)) 
+      yield if (size == 0) "" else ("%" + size + "s").format(item))
     cells.mkString("|", "|", "|")
   }
 
-  def rowSeparator(colSizes: Seq[Int]) = colSizes map { "-" * _ } mkString ("+", "+", "+")
+  def rowSeparator(colSizes: Seq[Int]) = 
+    colSizes map { "-" * _ } mkString ("+", "+", "+")
+}
+
+/**
+ * A custom string-similarity object. Measures the similarity between
+ * two strings. Lowercases them and removes some stop words first.
+ */
+object StrSim {
+  val stops = Set("a", "an", "and", "are", "as", "at", "be", "but", "by",
+      "for", "if", "in", "into", "is", "it",
+      "no", "not", "of", "on", "or", "such",
+      "that", "the", "their", "then", "there", "these",
+      "they", "this", "to", "was", "will", "with", "i", "me", "your",
+      "our", "ours", "him", "he", "his", "her", "its", "you", "that",
+      "every", "all", "each", "those", "other", "both", "neither", "some",
+      "'s")
+  
+  def norm(x: String) =
+    x.toLowerCase().split("\\s+").filter(!stops.contains(_)).mkString("")
+
+  def sim(x: String, y: String): Double = 
+    JaroWinklerMetric.compare(norm(x), norm(y)).getOrElse(0.0)
+      
 }
