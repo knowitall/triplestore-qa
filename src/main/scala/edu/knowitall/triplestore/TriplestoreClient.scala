@@ -7,6 +7,7 @@ import scala.collection.JavaConversions._
 import org.apache.solr.common.SolrDocument
 import java.util.ArrayList
 import Search.TSQuery
+import org.slf4j.LoggerFactory
 
 /**
  * The interface to a Triplestore.
@@ -38,29 +39,34 @@ trait TriplestoreClient {
  * that is returned by the search.
  */
 case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
+
+  val logger = LoggerFactory.getLogger(this.getClass) 
   
   val server = new HttpSolrServer(url)
-
 
   /**
    * Returns the number of documents in Solr that match the given query.
    */
   def count(q: TSQuery): Long = {
-    System.err.println("Counting..." + q)
     val query = SolrClient.buildCountQuery(q)
     val resp = server.query(query)
-    resp.getResults().getNumFound()
+    val c = resp.getResults().getNumFound()
+    logger.info(s"Found $c hits for query: $q")
+    return c
   }
   
   /**
    * Searches Solr and returns Tuple objects.
    */
   def search(q: TSQuery): List[Tuple] ={
+    logger.info(s"Searching for query: $q")
     val query = SolrClient.buildQuery(q)
     query.setRows(hits)
-    System.err.println(q)
     val resp = server.query(query)
-    resp.getResults().toList.map(SolrClient.docToTuple)
+    val results = resp.getResults().toList.map(SolrClient.docToTuple)
+    val n = results.size
+    logger.info(s"Loaded $n tuples into memory for query: $q")
+    return results
   }
   
 }
