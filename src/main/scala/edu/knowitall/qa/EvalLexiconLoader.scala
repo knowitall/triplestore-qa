@@ -31,19 +31,19 @@ class EvalLexiconLoader(
     case _ => throw new RuntimeException(s"Malformed vocab record: $str")
   }
   
-  private val dbVocab = using(Source.fromFile(dbVocabFile)) { source => 
+  private val dbVocab = using(Source.fromFile(dbVocabFile, "UTF8")) { source => 
   	System.err.println(s"Loading DB vocab...")
     source.getLines map loadEntry toMap
   }
   
-  private val lexVocab = using(Source.fromFile(lexVocabFile)) { source => 
+  private val lexVocab = using(Source.fromFile(lexVocabFile, "UTF8")) { source => 
       System.err.println(s"Loading Lexicon vocab...")
       source.getLines map loadEntry map { case (id, string) => 
         (id, splitRegex.split(string) map QWord.qWordWrap) 
     } toMap
   }
   
-  private val lexWeights = using(Source.fromFile(lexWeightFile)) { source => 
+  private val lexWeights = using(Source.fromFile(lexWeightFile, "UTF8")) { source => 
       System.err.println(s"Loading Lexicon weights...")
       source.getLines map splitRegex.split map { case Array(weight, lexId, _*) => 
         (lexId.toInt, weight.toDouble) 
@@ -89,7 +89,8 @@ class EvalLexiconLoader(
     System.err.println("Loading Lexicon...")
     private val lexSource = io.Source.fromFile(lexEntryFile)
     private val lexItemIterator = lexSource.getLines flatMap readLexEntry
-    def hasNext = if (!lexItemIterator.hasNext) { lexSource.close(); false } else true
-    def next = { hasNext; lexItemIterator.next() }
+    
+    override def hasNext = if (!lexItemIterator.hasNext) { lexSource.close(); false } else true
+    override def next = { hasNext; lexItemIterator.next() }
   }
 }
