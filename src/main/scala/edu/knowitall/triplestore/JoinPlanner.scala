@@ -12,152 +12,15 @@ import Operators.NestedLoopJoin
 import org.slf4j.LoggerFactory
 
 /**
- * This file contains code for executing a query. A query is  
- * represented as a set of objects defining searches over a triplestore, and
- * the join constraints between them.
- * 
- * Each individual search to the triplestore is represented as an AbstractQuery 
- * object, which can be thought of a triple (arg1, rel, arg2). Each element
- * of the triple is a QVal, which can either be a literal or variable. Literals
- * are the constants in the search, e.g. rel = "is the mayor of". Variables
- * encode the join constraints between the searches. An example AbstractQuery
- * object could be ($x, discovered, radium), which searches for all triples
- * that have "discovered" in the relation and "radium" in the arg2. Combined
- * with the triple ($x, born in, $y) will join the first set of triples on
- * the arg1 field.
- */
-
-/**
- * The values in an AbstractQuery object.
- */
-trait QVal
-
-/**
- * Base class for literals.
- */
-trait Literal {
-  val value: String
-  def toConjunct(field: Field): TSQuery
-}
-
-/**
- * Literals can be unquoted, which has the semantics of doing a keyword 
- * search over a field.
- */
-case class UnquotedLiteral(value: String) extends QVal with Literal {
-  override def toString = value
-  override def toConjunct(field: Field) = FieldKeywords(field, value)
-}
-
-/**
- * Literals can also be quoted, which has the semantics of doing an
- * exact-match search over a field.
- */
-case class QuotedLiteral(value: String) extends QVal with Literal {
-  override def toString = s""""$value""""
-  override def toConjunct(field: Field) = FieldPhrase(field, value)
-}
-
-/**
- * QVals can also be variables, which have a string name.
- */
-case class Variable(name: String) extends QVal {
-  override def toString = "$" + name
-}
-
-/**
- * AbstractQuery objects have a name (you can think of this as a unique
- * identifier for the relational table returned) and map containing the
- * field values. The field values map a field (arg1, rel, or arg2) to a 
- * value (literal or variable).
- */
-case class AbstractQuery(name: String, values: Map[Field, QVal]) {  
-  
-  def literalFields: Iterable[(Field, Literal)] = { 
-    for ((f, v) <- values) yield v match {
-      case l: UnquotedLiteral => Some((f, l))
-      case l: QuotedLiteral => Some((f, l))
-      case _ => None
-    }
-  }.flatten
-  
-  def variableFields: Iterable[(Field, Variable)] = {
-    for ((f, v) <- values) yield v match {
-      case Variable(s) => Some((f, Variable(s)))
-      case _ => None
-    }
-  }.flatten
-  
-  def varsToFields: Map[Variable, Field] = variableFields.map(_.swap).toMap
-  
-  def partialQuery: TSQuery = {
-    val lfs = literalFields.toList
-    val conjuncts = for ((f, v) <- lfs) yield v.toConjunct(f)
-    Conjunction(conjuncts.toList:_*)
-  }
-  
-  def joinKeys: Map[Variable, String] = {
-    val vfs: Map[Variable, Field] = varsToFields
-    val pairs = for (v <- vfs.keys; f <- vfs.get(v); a = name + "." + f)
-      yield (v, a)
-    pairs.toMap
-  }
-  
-  def vars: Iterable[Variable] = {
-    varsToFields.keys.toSet
-  }
-  
-  val xs = values.getOrElse(arg1, "")
-  val rs = values.getOrElse(rel, "")
-  val ys = values.getOrElse(arg2, "")
-  override def toString = s"($xs, $rs, $ys)"
-}
-case object AbstractQuery {
-  
-  val logger = LoggerFactory.getLogger(this.getClass) 
-  
-  val qpat = """\(?(.+),(.+),(.+?)\)?""".r
-  val vpat = """\$(.*)""".r
-  def fromString(name: String, s: String): Option[AbstractQuery] = s match {
-    case qpat(x, r, y) => Some(fromTriple(name, x, r, y))
-    case _ => None
-  }
-  
-  val quoted = """^"(.*)"$""".r
-  def getQVal(s: String): QVal = s match {
-    case vpat(v) => Variable(v)
-    case "?" => Variable("?")
-    case quoted(v) => QuotedLiteral(v) 
-    case _ => UnquotedLiteral(s)
-  }
-  
-  val fields = List(arg1, rel, arg2)
-  def fromTriple(name: String, x: String, r: String, y: String): AbstractQuery = {
-    val lst = List(x.trim(), r.trim(), y.trim())
-    val items = for ((f, a) <- fields.zip(lst); v = getQVal(a)) yield (f, v)
-    AbstractQuery(name, items.toMap)
-  }
-  
-  val splitPat = """(?<=\))\s*?(?=\()"""
-  def fromStringMult(s: String): Iterable[AbstractQuery] = {
-    val parts = s.split(splitPat).toList.map(_.trim).filterNot(_ == "")
-    val queries = { for ((s, i) <- parts.zipWithIndex; 
-                       q <- fromString(s"r$i", s)) yield q }.toList
-    queries
-  }
-} 
-
-
-/**
  * A Joiner object interfaces with a triplestore and executes a query 
  * against it. It uses a simple query plan optimizer to take a set of 
- * AbstractQuery objects and join them appropriately. It heuristically
+ * TConjunct objects and join them appropriately. It heuristically
  * avoids joining large tables together by (1) limiting the number of rows
  * returned by the triplestore, and (2) converting join(small table, large 
  * table) calls into a set of join(small table, small table) calls.
  * 
- * The algorithm first picks a variable that appears in the AbstractQuery
- * objects. It then eliminates that variable by executing the AbstractQueries
+ * The algorithm first picks a variable that appears in the TConjunct
+ * objects. It then eliminates that variable by executing the TConjunct
  * and enforcing the join constraints between them. 
  * 
  * For example, suppose the set of queries is aq1 = ($x, type, us president),
@@ -173,7 +36,7 @@ case object AbstractQuery {
  * returned by the triplestore.
  * 
  * Internally, the Joiner uses two structures. The first is a QueryNode, which
- * represents an unexecuted AbstractQuery. The second is a TuplesNode, which
+ * represents an unexecuted TConjunct. The second is a TuplesNode, which
  * represents an intermediate table (a set of AbstractQueries that have been
  * executed and joined across a single variable). The QueryNode class and
  * TuplesNode class are subclasses of TableNode.
@@ -188,8 +51,8 @@ case class Joiner(client: TriplestoreClient) {
   import planning._
   
   /* Runs the join algorithm on the given set of AbstractQuery objects.*/
-  def joinQueries(queries: Iterable[AbstractQuery]): Tuples = {
-    val nodes = queries.map(QueryNode(_)).toList
+  def joinQueries(conjs: Iterable[TConjunct]): Tuples = {
+    val nodes = conjs.map(QueryNode(_)).toList
     join(nodes)
   }
  
@@ -223,7 +86,7 @@ case class Joiner(client: TriplestoreClient) {
   /* The cost of a Table node is... */
   def cost(n: TableNode) = n match {
     // ...the number of rows that satisfy it, if it's a QueryNode
-    case q: QueryNode => client.count(q.absQuery.partialQuery)
+    case q: QueryNode => client.count(q.conj.partialQuery)
     // ...or the number of rows, if it's a TuplesNode
     case t: TuplesNode => t.tuples.size
   }
@@ -232,7 +95,7 @@ case class Joiner(client: TriplestoreClient) {
    * the necessary data is in memory. All that needs to be done is to 
    * create the correct join predicate, and then execute the NestedLoopJoin.
    */
-  def joinTT(tn1: TuplesNode, tn2: TuplesNode, v: Variable): Tuples = {
+  def joinTT(tn1: TuplesNode, tn2: TuplesNode, v: TVariable): Tuples = {
     val attrPairs = for(a1 <- tn1.getJoinAttrs(v); a2 <- tn2.getJoinAttrs(v))
       yield (a1, a2)
     val pred = Joiner.pairsToCond(attrPairs)
@@ -242,7 +105,7 @@ case class Joiner(client: TriplestoreClient) {
   /* Joining a QueryNode with a TuplesNode involves doing a partial search
    * join, which executes a query for each row in the TuplesNode.
    */
-  def joinQT(qn: QueryNode, tn: TuplesNode, v: Variable): Tuples = {
+  def joinQT(qn: QueryNode, tn: TuplesNode, v: TVariable): Tuples = {
     
     // Get the names of the attributes to join on.
     val attrPairs = for (
@@ -264,7 +127,7 @@ case class Joiner(client: TriplestoreClient) {
       case _ => Joiner.truep
     }
     val left = tn.tuples
-    val right = PartialSearchFor(qn.absQuery.name, qn.absQuery.partialQuery)
+    val right = PartialSearchFor(qn.conj.name, qn.conj.partialQuery)
     val joined = PartialSearchJoin(bpred)(left, right)
     Select(spred)(joined)
   }
@@ -272,7 +135,7 @@ case class Joiner(client: TriplestoreClient) {
   /* Finds the nodes that have the given variable. Merges them together, leaving
    * the other nodes unmerged.
    */
-  def groupThenMergeNodes(nodes: List[TableNode], v: Variable): List[TableNode] = {
+  def groupThenMergeNodes(nodes: List[TableNode], v: TVariable): List[TableNode] = {
     val (toMerge, toKeep) = nodes.partition(_.hasVariable(v))
     mergeNodes(toMerge, v) +: toKeep
   }
@@ -281,7 +144,7 @@ case class Joiner(client: TriplestoreClient) {
    * merging, a variable must occur in at least two nodes. Variables are then
    * assigned a cost equal to the lowest-costing node that they occur in. 
    */
-  def lowestVariable(nodes: List[TableNode]): Option[Variable] = {
+  def lowestVariable(nodes: List[TableNode]): Option[TVariable] = {
     val lst = for (n <- nodes; v <- n.joinAttrs.keySet) yield (v, n)
     val varNodes = lst.groupBy(e => e._1).mapValues(e => e.map(x => x._2).toSet)
     val varCosts = { for ((v, nodes) <- varNodes;
@@ -299,7 +162,7 @@ case class Joiner(client: TriplestoreClient) {
   } 
   
   /* Merges the given nodes together, and removes the variable. */
-  def mergeNodes(nodes: List[TableNode], v: Variable): TuplesNode = {
+  def mergeNodes(nodes: List[TableNode], v: TVariable): TuplesNode = {
     val sorted = nodes.sortBy(cost)
     val node = eliminateVar(sorted, v)
     TuplesNode(node.tuples, node.joinAttrs-v)
@@ -307,7 +170,7 @@ case class Joiner(client: TriplestoreClient) {
 
   /* Recursively eliminates the variable from the given list of nodes. 
    */
-  def eliminateVar(nodes: List[TableNode], v: Variable): TuplesNode = {
+  def eliminateVar(nodes: List[TableNode], v: TVariable): TuplesNode = {
     nodes match {
       case node :: Nil => toTuplesNode(node)
       case node1 :: node2 :: rest => eliminateVar(doJoin(node1, node2, v) :: rest, v)
@@ -316,7 +179,7 @@ case class Joiner(client: TriplestoreClient) {
   }
   
   /* Joins together two nodes on the given variable. */
-  def doJoin(n1: TableNode, n2: TableNode, v: Variable): TuplesNode = {
+  def doJoin(n1: TableNode, n2: TableNode, v: TVariable): TuplesNode = {
     val t = toTuplesNode(n1)
     val tuples = n2 match {
       case q: QueryNode => joinQT(q, t, v)
@@ -339,7 +202,7 @@ case class Joiner(client: TriplestoreClient) {
   /* Executes the given QueryNode to create a TuplesNode. */
   def queryToTuples(q: QueryNode): TuplesNode = {
     logger.debug(s"Making TuplesNode from $q")
-    val tuples = SearchFor(q.absQuery.name, q.absQuery.partialQuery)
+    val tuples = SearchFor(q.conj.name, q.conj.partialQuery)
     TuplesNode(tuples, q.joinAttrs)
   }
 
@@ -349,7 +212,7 @@ case class Joiner(client: TriplestoreClient) {
 case object Joiner {
   
   // Mnemonic
-  type JA = Map[Variable, List[String]]
+  type JA = Map[TVariable, List[String]]
   
   // The join condition defaults to thresholded string similarity.
   val eqCond = (a1: String, a2: String) => AttrsSim(a1, a2, 0.9)
@@ -386,8 +249,8 @@ case object Joiner {
 
 /* TuplesNodes can be either TableNodes or QueryNodes. */
 case class TuplesNode(tuples: List[Tuple], 
-    joinAttrs: Map[Variable, List[String]]) extends TableNode {
-  def getJoinAttrs(v: Variable): List[String] = joinAttrs.get(v) match {
+    joinAttrs: Map[TVariable, List[String]]) extends TableNode {
+  def getJoinAttrs(v: TVariable): List[String] = joinAttrs.get(v) match {
     case Some(v) => v
     case _ => List[String]()
   }
@@ -395,18 +258,18 @@ case class TuplesNode(tuples: List[Tuple],
 
 /* TableNodes store data from partially-executed queries. */
 trait TableNode {
-  val joinAttrs: Map[Variable, List[String]]
-  def getJoinAttrs(v: Variable): List[String]
-  def hasVariable(v: Variable) = joinAttrs.contains(v)
+  val joinAttrs: Map[TVariable, List[String]]
+  def getJoinAttrs(v: TVariable): List[String]
+  def hasVariable(v: TVariable) = joinAttrs.contains(v)
 }
 
 /* QueryNodes represent unexecuted queries. */
-case class QueryNode(absQuery: AbstractQuery) extends TableNode {
-  val jks = absQuery.joinKeys
+case class QueryNode(conj: TConjunct) extends TableNode {
+  val jks = conj.joinKeys
   val joinAttrs = { 
     for (v <- jks.keys; attr <- jks.get(v)) yield (v, List(attr)) 
   }.toMap
-  def getJoinAttrs(v: Variable): List[String] = joinAttrs.get(v) match {
+  def getJoinAttrs(v: TVariable): List[String] = joinAttrs.get(v) match {
     case Some(v) => v
     case _ => List[String]()
   }

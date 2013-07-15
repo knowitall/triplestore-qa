@@ -5,7 +5,7 @@ import Tabulator.{tuplesToTable => toTable}
 
 class SimpleReplTest extends FlatSpec {
   
-  val sq = AbstractQuery.fromString("r", "$x, is, fruit")
+  val sq = TConjunct.fromString("r", "$x, is, fruit")
   "AbstractQuery" should "parse correctly" in {
     val s = sq match {
       case Some(q) => q.toString
@@ -22,17 +22,17 @@ class SimpleReplTest extends FlatSpec {
   }
   
   val input = """($x, eats, $y) ($y, is, fruit)"""
-  val sqs = AbstractQuery.fromStringMult(input).toList.sortBy(_.toString)
+  val sqs = TConjunct.fromStringMult(input).toList.sortBy(_.toString)
   it should "handle multiple query input" in {
     assert(2 === sqs.size)
     assert("($x, eats, $y)" === sqs(0).toString)
     assert("($y, is, fruit)" === sqs(1).toString)
   }
   
-  val varx = Variable("x")
-  val vary = Variable("y")
+  val varx = TVariable("x")
+  val vary = TVariable("y")
   
-  val sq2 = AbstractQuery.fromString("r", "$x, is made from, $y")
+  val sq2 = TConjunct.fromString("r", "$x, is made from, $y")
   "QueryNode" should "identify join attrs" in {
     val node = QueryNode(sq2.get)
     val attrs = node.joinAttrs
@@ -41,7 +41,7 @@ class SimpleReplTest extends FlatSpec {
   }
   
   
-  val sq3 = AbstractQuery.fromString("s", "$y, high in, antioxidants")
+  val sq3 = TConjunct.fromString("s", "$y, high in, antioxidants")
   it should "merge join attrs" in {
     val node2 = QueryNode(sq2.get)
     val node3 = QueryNode(sq3.get)

@@ -15,7 +15,7 @@ case class SimpleRepl(url: String = "http://rv-n12:8983/solr/triplestore",
   }
   
   def eval(input: String): String = {
-    val qs = AbstractQuery.fromStringMult(input)
+    val qs = TConjunct.fromStringMult(input)
     val tuples = ProjectTriples(joiner.joinQueries(qs))
     return toTable(tuples.toList, qs.size)
   } 
