@@ -44,7 +44,9 @@ object WebRepl extends App {
     }
     
     def runQuery(query: String) = {
+      logger.info(s"Got query '$query'")
       val result = repl.eval(query)
+      logger.info(s"Finished computing results for '$query'")
       ResponseString(result) ~> Ok      
     }
     
