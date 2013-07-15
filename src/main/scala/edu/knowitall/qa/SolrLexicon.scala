@@ -46,6 +46,10 @@ class SolrLexicon(val server: SolrServer) extends WeightedLexicon {
   def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem with Weight] = 
     get(words) filter (_.isInstanceOf[QuestionItem]) map (_.asInstanceOf[QuestionItem with Weight])
   
+  def getQuestionRel(words: IndexedSeq[QToken]): Iterable[QuestionRelItem with Weight] = {
+    throw new RuntimeException("Method not implemented.")
+  }
+    
   def has(words: IndexedSeq[QToken]): Boolean = {
     server.query(buildCountQuery(words)).getResults().getNumFound() > 0
   }

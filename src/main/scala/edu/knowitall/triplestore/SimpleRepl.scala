@@ -3,9 +3,9 @@ import Tabulator.tuplesToTable
 import Search.ProjectTriples
 
 case class SimpleRepl(url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", 
-    hits: Int = 100) {
+    hits: Int = 500) {
   
-  val client = TriplestoreClient(url, hits)
+  val client = SolrClient(url, hits)
   val joiner = Joiner(client)
   
   def toTable(ts: List[Tuple], n: Integer): String = {
@@ -22,7 +22,7 @@ case class SimpleRepl(url: String = "http://rv-n12.cs.washington.edu:8983/solr/t
 
 }
 
-object SimpleRepl extends Application {
+object SimpleRepl extends App {
   
   override def main(args: Array[String]) = {
     import jline.console.ConsoleReader
@@ -37,7 +37,7 @@ object SimpleRepl extends Application {
 
 }
 
-object CommandLine extends Application {
+object CommandLine extends App {
   override def main(args: Array[String]) = {
     val repl = SimpleRepl()
     val input = args.mkString(" ")

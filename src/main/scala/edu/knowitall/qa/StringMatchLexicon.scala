@@ -5,6 +5,7 @@ import edu.knowitall.triplestore.Search.FieldKeywords
 import edu.knowitall.triplestore.Search.Field._
 import edu.knowitall.triplestore.Search.Disjunction
 import edu.knowitall.triplestore.StrSim
+import edu.knowitall.triplestore.SolrClient
 
 case class StringMatchLexicon(client: TriplestoreClient, minCount: Integer = 100) extends Lexicon {
   
@@ -34,12 +35,12 @@ case class StringMatchLexicon(client: TriplestoreClient, minCount: Integer = 100
     client.count(q) > minCount
   }
   
-  type QWords = IndexedSeq[QWord]
-  type QTokens = IndexedSeq[QToken]
-  def get(words: IndexedSeq[QToken]): Iterable[LexItem] = {
-    words match {
-      case ws: QWords => getRel(ws) ++ getEnt(ws)
-      case _ => getQuestion(words)
+  def get(words: IndexedSeq[QToken]): Iterable[LexItem] = { 
+    if (allQWords(words)) {
+      val qwords = toQWords(words)
+      getRel(qwords) ++ getEnt(qwords)
+    } else {
+      getQuestion(words)
     }
   }
   
@@ -68,17 +69,21 @@ case class StringMatchLexicon(client: TriplestoreClient, minCount: Integer = 100
     List(new QuestionItem(words, Arg1First))
   }
   
+  def getQuestionRel(words: IndexedSeq[QToken]): Iterable[QuestionRelItem] = Nil
+  
   def has(words: IndexedSeq[QToken]): Boolean = {
-    words match {
-      case ws: QWords => hasRel(ws) || hasEnt(ws)
-      case _ => true
+    if (allQWords(words)) {
+      val qwords = toQWords(words)
+      hasRel(qwords) || hasEnt(qwords)
+    } else {
+      true
     }
   }
 
 }
 
 object StringMatchLexicon extends App {
-  val client = TriplestoreClient("http://rv-n12:8983/solr/triplestore", 100)
+  val client = SolrClient("http://rv-n12:8983/solr/triplestore", 100)
   val lexicon = StringMatchLexicon(client)
   val parser = BottomUpParser(lexicon)
   def words(s: String): IndexedSeq[QWord] = s.split(" ").toIndexedSeq.map(QWord(_))

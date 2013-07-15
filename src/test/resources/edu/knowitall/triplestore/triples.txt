@@ -1,0 +1,8 @@
+marie curie	discovered	radium
+pierre curie	discovered	radium
+marie curie	was born in	warsaw
+marie curie	was born in	poland
+pierre curie	was born in	paris
+warsaw	type	city
+poland	type	country
+paris	type	city

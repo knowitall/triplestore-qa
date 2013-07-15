@@ -21,8 +21,14 @@ class LexicalTest extends FlatSpec {
   val qt2 = QuestionItem(IndexedSeq(QWord("who"), QWord("do"), ArgVar, RelVar), 
       Arg1First)
   
+  // One-argument question templates
+  val rqt1 = QuestionRelItem(IndexedSeq(QWord("who"), QWord("like"), ArgVar), 
+      "like_rel", Arg2First)
+  val rqt2 = QuestionRelItem(IndexedSeq(QWord("who"), QWord("like"), ArgVar), 
+      "liked-by_rel", Arg1First)
+  
   // Make a lexicon from the items
-  val lexicon = MapLexicon(List(joe, r1, r2, qt1, qt2))
+  val lexicon = MapLexicon(List(joe, r1, r2, qt1, qt2, rqt1, rqt2))
   val parser = BottomUpParser(lexicon)
   
   // A few questions
@@ -31,18 +37,22 @@ class LexicalTest extends FlatSpec {
   
   "BottomUpParser" should "parse a few simple questions" in {
     
-    val d1 = new Derivation(q1, qt2, Span(iv(3, 4), r1), Span(iv(2, 3), joe))
-    val d2 = new Derivation(q1, qt2, Span(iv(3, 4), r2), Span(iv(2, 3), joe))
+    val d1 = new TwoArgDerivation(q1, qt2, Span(iv(3, 4), r1), Span(iv(2, 3), joe))
+    val d2 = new TwoArgDerivation(q1, qt2, Span(iv(3, 4), r2), Span(iv(2, 3), joe))
     
     val derivs1 = parser.parse(q1).toSet
     assert(derivs1 === Set(d1, d2))
 
-    val d3 = new Derivation(q2, qt1, Span(iv(1, 2), r1), Span(iv(2, 3), joe))
-    val d4 = new Derivation(q2, qt1, Span(iv(1, 2), r2), Span(iv(2, 3), joe))
+    val d3 = new TwoArgDerivation(q2, qt1, Span(iv(1, 2), r1), Span(iv(2, 3), joe))
+    val d4 = new TwoArgDerivation(q2, qt1, Span(iv(1, 2), r2), Span(iv(2, 3), joe))
+    val d5 = new OneArgDerivation(q2, rqt1, Span(iv(2, 3), joe))
+    val d6 = new OneArgDerivation(q2, rqt2, Span(iv(2, 3), joe))
     
     val derivs2 = parser.parse(q2).toSet
-    assert(derivs2 === Set(d3, d4))
+    
+    assert(derivs2 === Set(d3, d4, d5, d6))
     
   }
+
 
 }

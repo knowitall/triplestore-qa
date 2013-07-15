@@ -19,6 +19,7 @@ class LexItemConverterTest extends FlatSpec {
     def identity(item: LexItem with Weight) = {
       val inputDoc = LexItemConverter.itemToDoc(item)
       val doc = ClientUtils.toSolrDocument(inputDoc)
+      doc.addField("_version_", 0)
       LexItemConverter.docToItem(doc)
     }
     

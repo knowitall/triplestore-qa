@@ -1,6 +1,7 @@
 package edu.knowitall.qa
 
 import edu.knowitall.collection.immutable.Interval
+import scala.language.implicitConversions
 //import PartialFunction._
 
 /* Question Tokens are either strings, or two special tokens used to represent
@@ -44,6 +45,10 @@ object ArgOrder {
   def toInt(o: ArgOrder) = o match {
     case Arg1First => 1
     case Arg2First => 0
+  }
+  def queryArg(o: ArgOrder) = o match {
+    case Arg1First => Arg2
+    case Arg2First => Arg1
   }
   def fromInt(i: Int): ArgOrder = i match {
     case 0 => Arg2First
@@ -109,6 +114,26 @@ case class QuestionItem(val words: IndexedSeq[QToken], val argOrder: ArgOrder) e
   }}
 }
 
+/* A lexical item that associates question words that have exactly one 
+ * argument variable with a relation and argument ordering. For example, this
+ * could represent "how many people live in $y" = population(x, y). 
+ */
+case class QuestionRelItem(words: IndexedSeq[QToken], relation: String, 
+    argOrder: ArgOrder) extends LexItem {
+  
+  if (words.count(_ == RelVar) != 0) throw new 
+    IllegalArgumentException("QuestionRelItem cannot contain RelVar: " + words)
+  if (words.count(_ == ArgVar) != 1) throw new
+    IllegalArgumentException("QuestionRelItem must contain one ArgVar: " + words)
+  
+  val ws = words.mkString(" ")
+  override def toString = s"$ws = " + { argOrder match {
+    case Arg2First => s"λyλx $relation(x, y)"
+    case Arg1First => s"λyλx $relation(y, x)"
+  }}
+  
+}
+
 /* A span of type T associates some span of tokens with an object of type T
  * (a lexical item).
  */
@@ -116,15 +141,21 @@ case class Span[+T](interval: Interval, item: T) {
   def overlaps(that: Span[_]) = this.interval.intersect(that.interval).size > 0
 }
 
-/* A derivation represents a combination of lexical items into a query. A 
- * derivation composes a question item, an entity item, and a relation item
- * to generate the query.
+/* A derivation represents a combination of lexical items into a query. */
+trait Derivation {
+  def question: IndexedSeq[QWord]
+  def lexItems: IndexedSeq[LexItem]
+  def query: SimpleQuery
+}
+
+/* A two-argument derivation is a derivation that uses a QuestionItem, a
+ * RelItem, and an EntItem to derive a query from a question.
  */
-class Derivation(
+class TwoArgDerivation(
     val question: IndexedSeq[QWord], 
     val questionItem: QuestionItem, 
     val relSpan: Span[RelItem], 
-    val entSpan: Span[EntItem]) { 
+    val entSpan: Span[EntItem]) extends Derivation { 
 	  
   def relItem = relSpan.item
   def entItem = entSpan.item
@@ -137,7 +168,7 @@ class Derivation(
   
   val query = SimpleQuery(relItem.relation, entItem.entity, queryField)
   
-  override def toString = List(qws, query, "----", questionItem, relItem, 
+  override def toString = List(qws, query, questionItem, relItem, 
       entItem).mkString("\n")
 }
 
@@ -147,7 +178,7 @@ class WeightedDerivation(
     relSpan: Span[RelItem with Weight],
     entSpan: Span[EntItem with Weight],
     val weight: Double)
-  extends Derivation(question, questionItem, relSpan, entSpan) with Weight {
+  extends TwoArgDerivation(question, questionItem, relSpan, entSpan) with Weight {
   
   override def relItem = relSpan.item
   override def entItem = entSpan.item
@@ -160,6 +191,16 @@ class WeightedDerivation(
       entItem).mkString("\n") 
 }
 
+/* A one-argument derivation is uses a QuestionRelItem and an EntItem. */
+case class OneArgDerivation(question: IndexedSeq[QWord], qrItem: QuestionRelItem, 
+    entSpan: Span[EntItem]) extends Derivation {
+  val entItem = entSpan.item
+  val lexItems = IndexedSeq(qrItem, entItem)
+  val qws = question.mkString(" ")
+  val queryField = ArgOrder.queryArg(qrItem.argOrder)
+  val query = SimpleQuery(qrItem.relation, entItem.entity, queryField)
+  override def toString = List(qws, query, qrItem, entItem).mkString("\n")
+}
 
 /* A lexicon provides access to a set of lexical items. The lexical items are
  * indexed by the question tokens.
@@ -170,8 +211,13 @@ trait Lexicon {
   def getRel(words: IndexedSeq[QWord]): Iterable[RelItem]
   def getEnt(words: IndexedSeq[QWord]): Iterable[EntItem]
   def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem]
-  
+  def getQuestionRel(words: IndexedSeq[QToken]): Iterable[QuestionRelItem]
   def has(words: IndexedSeq[QToken]): Boolean
+  
+  def allQWords(words: IndexedSeq[QToken]): Boolean = 
+    words.forall(_.isInstanceOf[QWord]) 
+  def toQWords(words: IndexedSeq[QToken]): IndexedSeq[QWord] = 
+    words.collect { case w: QWord => w }
 }
 
 trait WeightedLexicon extends Lexicon {
@@ -180,6 +226,7 @@ trait WeightedLexicon extends Lexicon {
   def getRel(words: IndexedSeq[QWord]): Iterable[RelItem with Weight]
   def getEnt(words: IndexedSeq[QWord]): Iterable[EntItem with Weight]
   def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem with Weight]
+  def getQuestionRel(words: IndexedSeq[QToken]): Iterable[QuestionRelItem with Weight]
   
   def has(words: IndexedSeq[QToken]): Boolean
 }
@@ -197,15 +244,19 @@ case class MapLexicon(items: Iterable[LexItem])
   def get(words: QTokens) = map.getOrElse(words, IndexedSeq())
   def has(words: QTokens) = map.contains(words)
   def getRel(words: QWords) = get(words) flatMap {
-    case x : RelItem => x :: Nil 
+    case x: RelItem => x :: Nil 
     case _ => Nil
   }
   def getEnt(words: QWords) = get(words) flatMap {
-    case x : EntItem => x :: Nil
+    case x: EntItem => x :: Nil
     case _ => Nil
   }
   def getQuestion(words: QTokens) = get(words) flatMap {
-    case x : QuestionItem => x :: Nil
+    case x: QuestionItem => x :: Nil
+    case _ => Nil
+  }
+  def getQuestionRel(words: QTokens) = get(words) flatMap {
+    case x: QuestionRelItem => x :: Nil
     case _ => Nil
   }
   
@@ -217,6 +268,19 @@ abstract class Parser(val lexicon: Lexicon) {
   def intervals(size: Int) =
     for (i <- Range(0, size); j <- Range(i, size)) yield (i, j + 1)
 
+  /* Generates a question pattern like the above, but only for a one-arg
+   * quesion pattern.
+   */
+  def oneArgQuestionPatFrom(words: IndexedSeq[QWord], ent: Span[LexItem]): 
+    IndexedSeq[QToken] = {
+    val eInt = ent.interval
+    (0 until words.size).flatMap { i =>
+      if (eInt.min == i) Some(ArgVar)
+      else if (!eInt.contains(i)) Some(words(i))
+      else None
+    }
+  }
+  
   def rSpan(s: Any): Option[Span[RelItem]] = s match {
     case Span(iv, i: RelItem) => Some(Span(iv, i))
     case _ => None
@@ -248,7 +312,7 @@ abstract class Parser(val lexicon: Lexicon) {
    * "likes" goes to some relation lexitem, and "joe" goes to some entity
    * lexitem. Then this function will return the question pattern "who $r $e".
    */
-  def questionPatFrom(words: IndexedSeq[QWord], rel: Span[LexItem],
+  def twoArgQuestionPatFrom(words: IndexedSeq[QWord], rel: Span[LexItem],
     ent: Span[LexItem]): IndexedSeq[QToken] = {
     val rInt = rel.interval
     val eInt = ent.interval
@@ -261,7 +325,6 @@ abstract class Parser(val lexicon: Lexicon) {
   }
     
   def parse(words: IndexedSeq[QWord]): Iterable[Derivation]
-
 }
 
 abstract class WeightedParser(override val lexicon: WeightedLexicon) extends Parser(lexicon) {
@@ -270,9 +333,6 @@ abstract class WeightedParser(override val lexicon: WeightedLexicon) extends Par
   type EntSpan = Span[EntItem with Weight]
   type LexSpan = Span[LexItem with Weight]
   
-  /**
-   * 
-   */
   override def rSpan(s: Any): Option[RelSpan] = s match {
     case Span(iv, i: RelItem with Weight) => Some(Span(iv, i))
     case _ => None
@@ -301,7 +361,7 @@ abstract class WeightedParser(override val lexicon: WeightedLexicon) extends Par
     (Seq() ++ itemSpans).sortBy(-_.item.weight)
   }
 
-  override def parse(words: IndexedSeq[QWord]): Seq[WeightedDerivation]
+  override def parse(words: IndexedSeq[QWord]): Iterable[WeightedDerivation]
   
 }
 
@@ -311,24 +371,48 @@ abstract class WeightedParser(override val lexicon: WeightedLexicon) extends Par
  */
 case class BottomUpParser(override val lexicon: Lexicon) extends Parser(lexicon) {
   
-  def parse(words: IndexedSeq[QWord]) = {
+  def entSpans(words: IndexedSeq[QWord]) = 
+    enumerateItemSpans(words).flatMap(eSpan)
+  
+  def parseTwoArg(words: IndexedSeq[QWord]) = {
     for ((r, e) <- relEntSpans(words);
-        qpat = questionPatFrom(words, r, e);
+        qpat = twoArgQuestionPatFrom(words, r, e);
         qitem <- lexicon.getQuestion(qpat))
-      yield new Derivation(words, qitem, r, e)
+      yield new TwoArgDerivation(words, qitem, r, e)
   }
+  
+  def parseOneArg(words: IndexedSeq[QWord]) = {
+    for (e <- entSpans(words); 
+    	qpat = oneArgQuestionPatFrom(words, e);
+    	rqitem <- lexicon.getQuestionRel(qpat))
+      yield OneArgDerivation(words, rqitem, e)
+  }
+  
+  def parse(words: IndexedSeq[QWord]) = parseTwoArg(words) ++ parseOneArg(words)
 }
 
-class WeightedBottomUpParser(lexicon: WeightedLexicon) extends WeightedParser(lexicon) {
+case class WeightedBottomUpParser(override val lexicon: WeightedLexicon) extends WeightedParser(lexicon) {
   
-  def parse(words: IndexedSeq[QWord]) = {
-    val derivations = for (
-      (r, e) <- relEntSpans(words).par;
-      qpat = questionPatFrom(words, r, e);
-      qitem <- lexicon.getQuestion(qpat);
-      dweight = qitem.weight + r.item.weight + e.item.weight
-    ) yield new WeightedDerivation(words, qitem, r, e, dweight)
-    
-    (Seq() ++ derivations).sortBy(-_.weight)
+  def entSpans(words: IndexedSeq[QWord]) = 
+    enumerateItemSpans(words).flatMap(eSpan)
+  
+  def parseTwoArg(words: IndexedSeq[QWord]) = {
+    for ((r, e) <- relEntSpans(words);
+        qpat = twoArgQuestionPatFrom(words, r, e);
+        qitem <- lexicon.getQuestion(qpat))
+      yield new WeightedDerivation(words, qitem, r, e, qitem.weight)
   }
+  
+  /** 
+   *  TODO: Extend Weight implementation to handle both kinds of derivation...
+   */
+  def parseOneArg(words: IndexedSeq[QWord]) = Nil/*{
+    for (e <- entSpans(words); 
+    	qpat = oneArgQuestionPatFrom(words, e);
+    	rqitem <- lexicon.getQuestionRel(qpat))
+      yield OneArgDerivation(words, rqitem, e)
+  }*/
+  
+  def parse(words: IndexedSeq[QWord]) = parseTwoArg(words) ++ parseOneArg(words)
 }
+

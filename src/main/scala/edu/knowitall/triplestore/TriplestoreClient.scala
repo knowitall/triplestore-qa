@@ -6,43 +6,92 @@ import org.apache.solr.client.solrj.SolrQuery
 import scala.collection.JavaConversions._
 import org.apache.solr.common.SolrDocument
 import java.util.ArrayList
-import Search.Query
+import Search.TSQuery
+import org.slf4j.LoggerFactory
 
+/**
+ * The interface to a Triplestore.
+ */
+trait TriplestoreClient {
+  
+  /**
+   * Counts the number of triples that match the given query.
+   */
+  def count(q: TSQuery): Long
+  
+  /**
+   * Searches and returns the results as Tuple objects.
+   */
+  def search(q: TSQuery): List[Tuple]
+    
+  /**
+   * Searches and returns Tuple objects, but adds the prefix
+   * "$name." to all of the attributes.
+   */
+  def namedSearch(name: String, q: TSQuery): List[Tuple] = {
+    search(q) map { t => t.renamePrefix(name)}
+  }
+}
 
 /**
  * This class is used to query a Solr server and return Tuple objects. The
  * URL should point to the Solr instance. "hits" is the default number of hits
  * that is returned by the search.
  */
-case class TriplestoreClient(url: String, hits: Int = 10) {
+case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
+
+  val logger = LoggerFactory.getLogger(this.getClass) 
   
   val server = new HttpSolrServer(url)
+
+  /**
+   * Returns the number of documents in Solr that match the given query.
+   */
+  def count(q: TSQuery): Long = {
+    val query = SolrClient.buildCountQuery(q)
+    val resp = server.query(query)
+    val c = resp.getResults().getNumFound()
+    logger.info(s"Found $c hits for query: $q")
+    return c
+  }
   
+  /**
+   * Searches Solr and returns Tuple objects.
+   */
+  def search(q: TSQuery): List[Tuple] ={
+    logger.info(s"Searching for query: $q")
+    val query = SolrClient.buildQuery(q)
+    query.setRows(hits)
+    val resp = server.query(query)
+    val results = resp.getResults().toList.map(SolrClient.docToTuple)
+    val n = results.size
+    logger.info(s"Loaded $n tuples into memory for query: $q")
+    return results
+  }
+  
+}
+case object SolrClient {
+    
   def escape(s: String): String = ClientUtils.escapeQueryChars(s)
   
   /**
    * Takes a Search.Query object and maps it to a SolrQuery object.
    */
-  def buildQuery(q: Query): SolrQuery = {
-    val sq = new SolrQuery(q.toQueryString)
-    sq.setRows(hits)
-  }
+  def buildQuery(q: TSQuery): SolrQuery =
+    new SolrQuery(q.toQueryString)
   
   /**
    * Builds a SolrQuery object used to count the number of hits returned
    * by the given Search.Query object. Returns 0 rows.
    */
-  def buildCountQuery(q: Query): SolrQuery = {
-    val sq = new SolrQuery(q.toQueryString)
-    sq.setRows(0)
-  }
+  def buildCountQuery(q: TSQuery): SolrQuery = 
+    new SolrQuery(q.toQueryString).setRows(0)
   
   /**
    * The string field names of the given solr document.
    */
-  def fieldNames(doc: SolrDocument): List[String] = {
+  def fieldNames(doc: SolrDocument): List[String] =
     doc.getFieldNames().toList.map { x => x.toString() }
-  }
   
   // Mnemonics used to remember what the attributes/values of a Tuple are.
   type Value = Any
@@ -75,35 +124,6 @@ case class TriplestoreClient(url: String, hits: Int = 10) {
    * Converts a Solr document to a Tuple object.
    */
   def docToTuple(doc: SolrDocument): Tuple = Tuple(docToFields(doc).toMap)
-
-  /**
-   * Returns the number of documents in Solr that match the given query.
-   */
-  def count(q: Query): Long = {
-    System.err.println("Counting..." + q)
-    val query = buildCountQuery(q)
-    val resp = server.query(query)
-    resp.getResults().getNumFound()
-  }
-  
-  /**
-   * Searches Solr and returns Tuple objects.
-   */
-  def search(q: Query): List[Tuple] ={
-    val query = buildQuery(q)
-    query.setRows(hits)
-    val resp = server.query(query)
-    resp.getResults().toList.map(docToTuple)
-  }
-  
-  /**
-   * Searches Solr and returns Tuple objects, but adds the prefix
-   * "$name." to all of the attributes.
-   */
-  def namedSearch(name: String, q: Query): List[Tuple] = {
-    search(q) map { t => t.renamePrefix(name)}
-  }
-  
 }
 
 /**
@@ -125,20 +145,20 @@ case class TriplestorePlan(client: TriplestoreClient) {
   /**
    * Shortcut for executing the given query with the given name.
    */
-  def ExecQuery(n: String, q: Query) = client.namedSearch(n, q)
+  def ExecQuery(n: String, q: TSQuery) = client.namedSearch(n, q)
   
   /**
    * Searches for the conjunction of the given queries, naming them with
    * the given name.
    */
-  def SearchFor(s: String, q: Query*) = ExecQuery(s, Conjunction(q:_*))
+  def SearchFor(s: String, q: TSQuery*) = ExecQuery(s, Conjunction(q:_*))
   
   /**
    * This is a partial search object, which is used in join algorithms. It's
    * a way to represent a query that has yet to be executed against Solr that
    * will be joined with another set of tuples.
    */
-  def PartialSearchFor(n: String, q: Query*): PartialSearcher = {
+  def PartialSearchFor(n: String, q: TSQuery*): PartialSearcher = {
     PartialSearcher(Conjunction(q:_*), ExecQuery(n, _)) 
   }
   

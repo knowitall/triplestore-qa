@@ -1,6 +1,6 @@
 package edu.knowitall.triplestore
 
-import Search.Query
+import Search.TSQuery
 import Tabulator.{ tuplesToTable => toTable }
 import jline.console.ConsoleReader
 import edu.knowitall.qa._
@@ -30,7 +30,7 @@ import edu.knowitall.tool.postag.PostaggedToken
 
 class QARepl(val parser: WeightedParser, val maxDerivations: Int = 10, url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", hits: Int = 100) {
 
-  val client = TriplestoreClient(url, hits)
+  val client = SolrClient(url, hits)
   val planning = TriplestorePlan(client)
 
   import planning._
@@ -43,7 +43,7 @@ class QARepl(val parser: WeightedParser, val maxDerivations: Int = 10, url: Stri
   def derivations(question: String) =
     parser.parse(splitRegex.split(question) map QWord.qWordWrap).toSeq.distinct
 
-  def queryFor(derivation: WeightedDerivation): Option[Query with Weight] = {
+  def queryFor(derivation: WeightedDerivation): Option[TSQuery with Weight] = {
     val squery = derivation.query
 
     def cleanName(str: String) = str.replaceAll("-", " ").dropRight(2)
@@ -65,7 +65,7 @@ class QARepl(val parser: WeightedParser, val maxDerivations: Int = 10, url: Stri
     new Conjunction(RelCont(rel), EntityCont(ent)) with Weight { val weight = qweight }
   }
 
-  def search(query: Query with Weight) = {
+  def search(query: TSQuery with Weight) = {
     val projection = On("r.arg1", "r.rel", "r.arg2", "r.namespace", "r.wt")
     val qweightStr = "%.02f".format(query.weight)
     val qweight = Tuple(Map("r.wt" -> qweightStr))
