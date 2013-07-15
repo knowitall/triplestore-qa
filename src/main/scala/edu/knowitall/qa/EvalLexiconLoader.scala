@@ -35,21 +35,21 @@ class EvalLexiconLoader(
   
   private val dbVocab = using(Source.fromFile(dbVocabFile, "UTF8")) { source => 
   	System.err.println(s"Loading DB vocab...")
-    source.getLines map loadEntry toMap
+    source.getLines.map(loadEntry).toMap
   }
   
   private val lexVocab = using(Source.fromFile(lexVocabFile, "UTF8")) { source => 
       System.err.println(s"Loading Lexicon vocab...")
-      source.getLines map loadEntry map { case (id, string) => 
+      source.getLines.map(loadEntry).map({ case (id, string) => 
         (id, splitRegex.split(string) map QWord.qWordWrap) 
-    } toMap
+    }).toMap
   }
   
   private val lexWeights = using(Source.fromFile(lexWeightFile, "UTF8")) { source => 
       System.err.println(s"Loading Lexicon weights...")
-      source.getLines map splitRegex.split map { case Array(weight, lexId, _*) => 
+      source.getLines.map(splitRegex.split).map({ case Array(weight, lexId, _*) => 
         (lexId.toInt, weight.toDouble) 
-    } toMap
+    }).toMap
   }
   
   private def getWeight(lexId: Int) = lexWeights.getOrElse(lexId, 0.0)

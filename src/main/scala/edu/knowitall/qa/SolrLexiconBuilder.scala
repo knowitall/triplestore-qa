@@ -71,6 +71,7 @@ object LexItemConverter {
       case QuestionItem(token, argOrder: ArgOrder) => {
         doc.addField("argOrder", encode(argOrder))
       }
+      case QuestionRelItem(_, _, _) => throw new RuntimeException("Not implemented")
     }
     doc
   }
@@ -83,9 +84,9 @@ object LexItemConverter {
   
   private def getFieldNames(doc: SolrDocument): Set[String] = doc.getFieldNames.toSet
   private def getFieldMap(doc: SolrDocument): Map[String, Any] = {
-    doc.getFieldNames.map { fieldName =>
+    doc.getFieldNames.map({ fieldName =>
       (fieldName, doc.getFieldValue(fieldName))
-    } toMap
+    }).toMap
   }
   private def words(fieldMap: Map[String, Any]): IndexedSeq[QWord] = {
     fieldMap("tokens").asInstanceOf[String].split(" ") map QWord.qWordWrap

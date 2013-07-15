@@ -146,12 +146,14 @@ trait Derivation {
   def question: IndexedSeq[QWord]
   def lexItems: IndexedSeq[LexItem]
   def query: SimpleQuery
+  
+  def qws = question.mkString(" ")
 }
 
 /* A two-argument derivation is a derivation that uses a QuestionItem, a
  * RelItem, and an EntItem to derive a query from a question.
  */
-class TwoArgDerivation(
+case class TwoArgDerivation(
     val question: IndexedSeq[QWord], 
     val questionItem: QuestionItem, 
     val relSpan: Span[RelItem], 
@@ -161,7 +163,6 @@ class TwoArgDerivation(
   def entItem = entSpan.item
   def lexItems = IndexedSeq(questionItem, relItem, entItem)
   
-  val qws = question.mkString(" ")
   val qOrder = questionItem.argOrder
   val rOrder = relItem.argOrder
   val queryField = ArgOrder.compose(qOrder, rOrder)
@@ -172,17 +173,22 @@ class TwoArgDerivation(
       entItem).mkString("\n")
 }
 
-class WeightedDerivation(
-    question: IndexedSeq[QWord],
-    questionItem: QuestionItem with Weight,
-    relSpan: Span[RelItem with Weight],
-    entSpan: Span[EntItem with Weight],
+case class WeightedDerivation(
+    val question: IndexedSeq[QWord],
+    val questionItem: QuestionItem with Weight,
+    val relSpan: Span[RelItem with Weight],
+    val entSpan: Span[EntItem with Weight],
     val weight: Double)
-  extends TwoArgDerivation(question, questionItem, relSpan, entSpan) with Weight {
+  extends Derivation with Weight {
   
-  override def relItem = relSpan.item
-  override def entItem = entSpan.item
+  def relItem = relSpan.item
+  def entItem = entSpan.item
   override def lexItems = IndexedSeq(questionItem, relItem, entItem)
+  
+  val qOrder = questionItem.argOrder
+  val rOrder = relItem.argOrder
+  val queryField = ArgOrder.compose(qOrder, rOrder)
+  val query = SimpleQuery(relItem.relation, entItem.entity, queryField)
   
   private def weightString = "wt=%.02f rel=%.02f ent=%.02f qst=%.02f"
     .format(weight, relSpan.item.weight, entSpan.item.weight, questionItem.weight)
@@ -196,7 +202,6 @@ case class OneArgDerivation(question: IndexedSeq[QWord], qrItem: QuestionRelItem
     entSpan: Span[EntItem]) extends Derivation {
   val entItem = entSpan.item
   val lexItems = IndexedSeq(qrItem, entItem)
-  val qws = question.mkString(" ")
   val queryField = ArgOrder.queryArg(qrItem.argOrder)
   val query = SimpleQuery(qrItem.relation, entItem.entity, queryField)
   override def toString = List(qws, query, qrItem, entItem).mkString("\n")
