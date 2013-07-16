@@ -36,12 +36,27 @@ case class QuotedTLiteral(value: String) extends TVal with TLiteral {
   override def toString = s""""$value""""
   override def toConjunct(field: Field) = FieldPhrase(field, value)
 }
+case object QuotedTLiteral {
+  val quoted = """^"(.*)"$""".r
+  def fromString(s: String): Option[QuotedTLiteral] = s.trim() match {
+    case quoted(s) => Some(QuotedTLiteral(s))
+    case _ => None
+  }
+}
 
 /**
  * Triple values can also be variables, which have a string name.
  */
 case class TVariable(name: String) extends TVal {
   override def toString = "$" + name
+}
+case object TVariable {
+  val vpat = """\$(.*)""".r
+  def fromString(s: String): Option[TVariable] = s.trim() match {
+    case vpat(v) => Some(TVariable(v))
+    case "?" => Some(TVariable("?"))
+    case _ => None
+  }
 }
 
 /**
@@ -82,6 +97,8 @@ case class TConjunct(name: String, values: Map[Field, TVal]) {
     pairs.toMap
   }
   
+  def attrName(v: TVariable): Option[String] = joinKeys.get(v)
+  
   def vars: Iterable[TVariable] = varsToFields.keys.toSet
   
   val xs = values.getOrElse(arg1, "")
@@ -94,18 +111,23 @@ case object TConjunct {
   val logger = LoggerFactory.getLogger(this.getClass) 
   
   val qpat = """\(?(.+),(.+),(.+?)\)?""".r
-  val vpat = """\$(.*)""".r
+
   def fromString(name: String, s: String): Option[TConjunct] = s match {
     case qpat(x, r, y) => Some(fromTriple(name, x, r, y))
     case _ => None
   }
   
-  val quoted = """^"(.*)"$""".r
-  def getTVal(s: String): TVal = s match {
-    case vpat(v) => TVariable(v)
-    case "?" => TVariable("?")
-    case quoted(v) => QuotedTLiteral(v) 
-    case _ => UnquotedTLiteral(s)
+  
+  def getTVal(s: String): TVal = {
+    val v = TVariable.fromString(s)
+    val q = QuotedTLiteral.fromString(s)
+    v match {
+      case Some(TVariable(x)) => TVariable(x)
+      case _ => q match {
+        case Some(QuotedTLiteral(x)) => QuotedTLiteral(x)
+        case _ => UnquotedTLiteral(s) 
+      }
+    }
   }
   
   val fields = List(arg1, rel, arg2)
@@ -131,16 +153,35 @@ case object TConjunct {
  * The shared variables among the conjuncts encodes the join predicates. 
  * The qvar encodes the column to project onto. 
  */
-case class ConjunctiveQuery(qVar: TVariable, conjuncts: List[TConjunct]) {
+case class ConjunctiveQuery(qVar: TVariable, conjuncts: List[TConjunct])
+
+  // Can be an underspecified query
+  extends UQuery {
   
   val conjunctNames = conjuncts.map(_.name)
   if (conjunctNames.distinct.size != conjunctNames.size) throw new 
     IllegalArgumentException(s"Conjuncts must have distinct names: $conjuncts")
   
-  val qas = {for (c <- conjuncts; a <- c.varsToFields.get(qVar)) yield a}.toList
+  val qas = {for (c <- conjuncts; a <- c.attrName(qVar)) yield a}.toList
   val qAttr = qas match {
     case a :: Nil => a
     case _ => throw new IllegalArgumentException(s"Query variable $qVar must "
         + "appear in exactly one conjunct in $conjuncts")
   }
+}
+case object ConjunctiveQuery {
+  def fromString(s: String): Option[ConjunctiveQuery] = {
+    val parts = s.split(":", 2)
+    if (parts.size == 2) {
+      val left = parts(0)
+      val qVar = TVariable.fromString(parts(0)) match {
+        case Some(TVariable(v)) => TVariable(v)
+        case _ => throw new IllegalArgumentException(s"Expected variable: $left")
+      }
+      val conjuncts = TConjunct.fromStringMult(parts(1))
+      Some(ConjunctiveQuery(qVar, conjuncts.toList))
+    } else {
+      None
+    }
+  } 
 }
