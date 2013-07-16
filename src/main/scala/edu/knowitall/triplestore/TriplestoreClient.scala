@@ -147,7 +147,7 @@ case class TriplestorePlan(client: TriplestoreClient) {
   
   import Conditions._ 
   import Search._
-  import Field._
+  import Search.Field
   
   // Mnemonics
   type Tuples = Iterable[Tuple]

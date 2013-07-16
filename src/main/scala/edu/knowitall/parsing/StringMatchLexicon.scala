@@ -2,7 +2,8 @@ package edu.knowitall.parsing
 
 import edu.knowitall.triplestore.TriplestoreClient
 import edu.knowitall.execution.Search.FieldKeywords
-import edu.knowitall.execution.Search.Field._
+import edu.knowitall.execution.Search.Field
+import edu.knowitall.execution.Search.{arg1, rel, arg2}
 import edu.knowitall.execution.Search.Disjunction
 import edu.knowitall.execution.StrSim
 import edu.knowitall.triplestore.SolrClient

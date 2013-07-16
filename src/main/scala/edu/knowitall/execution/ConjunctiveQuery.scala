@@ -1,6 +1,6 @@
 package edu.knowitall.execution
 
-import Search.Field._
+import Search.Field
 import Search.TSQuery
 import Search.{FieldKeywords, FieldPhrase}
 import Search.Conjunction

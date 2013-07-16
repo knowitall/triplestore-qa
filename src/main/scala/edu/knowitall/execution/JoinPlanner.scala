@@ -1,7 +1,7 @@
 package edu.knowitall.execution
 import Search.PartialSearchJoin
 import PartialFunction._
-import Search.Field._
+import Search.Field
 import Conditions.TuplePred
 import Operators.{Select, Product}
 import Conditions.AttrsSim

@@ -1,5 +1,5 @@
 package edu.knowitall.execution
-import edu.knowitall.execution.Search.Field._
+import edu.knowitall.execution.Search.Field
 import edu.knowitall.triplestore.TriplestoreClient
 
 trait UQuery
