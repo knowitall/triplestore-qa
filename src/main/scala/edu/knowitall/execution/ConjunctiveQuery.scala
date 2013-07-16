@@ -189,6 +189,14 @@ case object ListConjunctiveQuery {
       }
       val conjuncts = TConjunct.fromStringMult(parts(1))
       Some(ListConjunctiveQuery(qVar, conjuncts.toList))
+    } else if (parts.size == 1) {
+      val s = parts(0)
+      val conjuncts = TConjunct.fromStringMult(s)
+      val qVar = conjuncts.flatMap(_.vars).toList match {
+        case v :: rest => v
+        case _ => throw new IllegalArgumentException(s"Expected variable: $s")
+      }
+      Some(ListConjunctiveQuery(qVar, conjuncts.toList))
     } else {
       None
     }
