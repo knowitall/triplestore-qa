@@ -174,6 +174,7 @@ case class ListConjunctiveQuery(qVar: TVariable, conjuncts: List[TConjunct])
   val qas = {for (c <- conjuncts; a <- c.attrName(qVar)) yield a}.toList
   val qAttr = qas match {
     case a :: rest :: Nil => a
+    case a :: Nil => a
     case _ => throw new IllegalArgumentException(s"Query variable $qVar must "
         + s"appear in at least one conjunct in $conjuncts")
   }
