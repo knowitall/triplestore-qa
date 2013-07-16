@@ -61,9 +61,12 @@ object LexItemConverter {
     doc.addField("id", idCounter.getAndIncrement().toString)
     doc.addField("weight", item)
     val tokenString = item.words.mkString(" ")
+    // add common fields
     doc.addField("tokens", tokenString)
     doc.addField("tokens_exact", tokenString)
-    item.asInstanceOf[LexItem] match {
+    doc.addField("weight", 0)
+    // add type-specific fields
+    item match {
       case EntItem(tokens, entity) => {
         doc.addField("entity", entity)
       }
@@ -71,10 +74,13 @@ object LexItemConverter {
         doc.addField("relation", relation)
         doc.addField("argOrder", encode(argOrder))
       }
-      case QuestionItem(token, argOrder: ArgOrder) => {
+      case QuestionItem(tokens, argOrder: ArgOrder) => {
         doc.addField("argOrder", encode(argOrder))
       }
-      case QuestionRelItem(_, _, _) => throw new RuntimeException("Not implemented")
+      case QuestionRelItem(tokens, qrel, argOrder) =>  {
+        doc.addField("qrel", qrel)
+        doc.addField("argOrder", encode(argOrder))
+      }
     }
     doc
   }
@@ -83,6 +89,7 @@ object LexItemConverter {
   val entItemFields = commonFields ++ Set("entity")
   val relItemFields = commonFields ++ Set("relation", "argOrder")
   val questionItemFields = commonFields ++ Set("argOrder")
+  val questionRelItemFields = commonFields ++ Set("qrel", "argOrder")
   val allFields = commonFields ++ entItemFields ++ relItemFields ++ questionItemFields
   
   private def getFieldNames(doc: SolrDocument): Set[String] = doc.getFieldNames.toSet
@@ -114,12 +121,18 @@ object LexItemConverter {
     new QuestionItem(tokens, argOrder(fieldMap))
   }
   
+  private def docToQuestionRelItem(fieldMap: Map[String, Any]): QuestionRelItem = {
+    val tokens = fieldMap("tokens_exact").asInstanceOf[String].split(" ").map(QToken.qTokenWrap)
+    new QuestionRelItem(tokens, fieldMap("qrel").asInstanceOf[String], argOrder(fieldMap))
+  }
+  
   def docToItem(doc: SolrDocument): LexItem = {
     val fieldNames = getFieldNames(doc)
     val fieldMap = getFieldMap(doc)
     if (fieldNames == entItemFields) docToEntItem(fieldMap)
     else if (fieldNames == relItemFields) docToRelItem(fieldMap)
     else if (fieldNames == questionItemFields) docToQuestionItem(fieldMap)
+    else if (fieldNames == questionRelItemFields) docToQuestionRelItem(fieldMap)
     else throw new RuntimeException("Unrecognized LexItem field set: " + fieldNames)
   }
 }

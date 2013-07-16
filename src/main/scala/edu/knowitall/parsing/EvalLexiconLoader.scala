@@ -48,7 +48,7 @@ class EvalLexiconLoader(
     }).toMap
   }
   
-  private def getWeight(lexId: Int) = lexWeights.getOrElse(lexId, 0.0)
+  private def getWeightBroken(lexId: Int) = lexWeights.getOrElse(lexId, 0.0)
 
   private def withVars(words: IndexedSeq[QWord]) = words map(_.word) map QToken.qTokenWrap 
   
@@ -64,15 +64,18 @@ class EvalLexiconLoader(
     new QuestionItem(withVars(lexVocab(lexId)), ArgOrder.fromInt(order))
   }
   
+  private def loadQuestionRelItem(lexId: Int, dbId: Int, order: Int) = {
+    new QuestionRelItem(withVars(lexVocab(lexId)), dbVocab(dbId), ArgOrder.fromInt(order))
+  }
+  
   private def readLexEntry(str: String): Option[LexItem] = splitRegex.split(str).map(_.toInt) match {
 
     case Array(lexId, 0, dbId) => Some(loadEntItem(lexId, dbId))
 
     case Array(lexId, 3, order, dbId) => withVars(lexVocab(lexId)) match {
-      case tokens if tokens.forall(_.isInstanceOf[QWord]) => Some(loadRelItem(lexId, dbId, order))
       
-      case tokens => 
-        None // Some(QuestionItem(tokens, ArgOrder.fromInt(order)))
+      case tokens if tokens.forall(_.isInstanceOf[QWord]) => Some(loadRelItem(lexId, dbId, order))
+      case tokens => Some(loadQuestionRelItem(lexId, dbId, order))
     }
 
     case Array(lexId, 1, order) => Some(loadQuestionItem(lexId, order))

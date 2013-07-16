@@ -46,7 +46,7 @@ class SolrLexicon(val server: SolrServer) extends Lexicon {
     get(words) filter (_.isInstanceOf[QuestionItem]) map (_.asInstanceOf[QuestionItem])
   
   def getQuestionRel(words: IndexedSeq[QToken]): Iterable[QuestionRelItem] = {
-    throw new RuntimeException("Method not implemented.")
+    get(words) filter (_.isInstanceOf[QuestionRelItem]) map (_.asInstanceOf[QuestionRelItem])
   }
     
   def has(words: IndexedSeq[QToken]): Boolean = {
