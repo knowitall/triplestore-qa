@@ -44,7 +44,9 @@ import scala.Option.option2Iterable
  */
 case class Joiner(client: TriplestoreClient) {
   
-  val logger = LoggerFactory.getLogger(this.getClass) 
+  val logger = LoggerFactory.getLogger(this.getClass)
+  
+  val maxJoinHits = 10
   
   /* Import some query plan objects from the client. */
   val planning = TriplestorePlan(client)
@@ -127,7 +129,7 @@ case class Joiner(client: TriplestoreClient) {
       case _ => Joiner.truep
     }
     val left = tn.tuples
-    val right = PartialSearchFor(qn.conj.name, qn.conj.partialQuery)
+    val right = PartialSearchFor(qn.conj.name, maxJoinHits, qn.conj.partialQuery)
     val joined = PartialSearchJoin(bpred)(left, right)
     Select(spred)(joined)
   }

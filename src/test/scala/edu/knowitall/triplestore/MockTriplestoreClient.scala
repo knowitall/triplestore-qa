@@ -11,6 +11,7 @@ import org.apache.commons.io.IOUtils
 import scala.io.Source
 import java.io._
 import org.apache.solr.common.SolrInputDocument
+import edu.knowitall.execution.Tuple
 
 /**
  * Creates a temporary triplestore solr server that can be used for testing.
@@ -102,12 +103,12 @@ case class MockTriplestoreClient() extends TriplestoreClient {
 
   val server = MockSolrServer.getServer
   
-  val hits = 100
+  val defaultMaxHits = 100
   
   def count(query: TSQuery): Long = 
     server.query(SolrClient.buildQuery(query)).getResults().getNumFound()
   
-  def search(q: TSQuery): List[Tuple] = {
+  def search(q: TSQuery, hits: Int = defaultMaxHits): List[Tuple] = {
     val query = SolrClient.buildQuery(q)
     query.setRows(hits)
     System.err.println(query)
