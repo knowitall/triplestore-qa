@@ -77,7 +77,7 @@ class QARepl(val parser: Parser, url: String = "http://rv-n12.cs.washington.edu:
   
   def eval(input: Seq[Lemmatized[PostaggedToken]]): Iterator[String] = {
     val inputStr = input.map(_.lemma).mkString(" ")
-    val derivs = derivations(inputStr).takeWhile(_.weight > 0).iterator
+    val derivs = derivations(inputStr).take(50).iterator
     val queries = derivs.map(d => (d, queryFor(d)))
     val results = queries.map { case (deriv, query) => (deriv, query, query.map(q => search(q, deriv)).getOrElse(Nil)) }
     val derivStrings = results.zipWithIndex.flatMap {
