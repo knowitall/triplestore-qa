@@ -19,7 +19,7 @@ class SolrLexicon(val server: SolrServer) extends Lexicon {
 
   private def buildQuery(words: IndexedSeq[QToken]): SolrQuery = {
     new SolrQuery(queryString(words))
-      .addSort("weight", SolrQuery.ORDER.desc)
+      .addSort("weight", SolrQuery.ORDER.desc).setRows(100)
   }
   
   private def buildCountQuery(words: IndexedSeq[QToken]): SolrQuery = {

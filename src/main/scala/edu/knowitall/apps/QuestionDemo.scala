@@ -87,6 +87,7 @@ class QARepl(val parser: Parser, val maxDerivations: Int = 10, url: String = "ht
       case ((deriv, queryOpt, results), index) =>
         Seq(
           s"Derivation $index",
+          s"Weight=${deriv.weight}",
           deriv.toString,
           "Query: " + queryOpt.map(_.toString).getOrElse("(query error)"),
           "Results: " + results.size.toString,

@@ -59,24 +59,24 @@ object LexItemConverter {
   def itemToDoc(item: LexItem): SolrInputDocument = {
     val doc = new SolrInputDocument
     doc.addField("id", idCounter.getAndIncrement().toString)
-    doc.addField("weight", 0)
+    doc.addField("weight", item.weight)
     val tokenString = item.words.mkString(" ")
     // add common fields
     doc.addField("tokens", tokenString)
     doc.addField("tokens_exact", tokenString)
     // add type-specific fields
     item match {
-      case EntItem(tokens, entity) => {
+      case EntItem(tokens, entity, weight) => {
         doc.addField("entity", entity)
       }
-      case RelItem(tokens, relation, argOrder) => {
+      case RelItem(tokens, relation, argOrder, weight) => {
         doc.addField("relation", relation)
         doc.addField("argOrder", encode(argOrder))
       }
-      case QuestionItem(tokens, argOrder: ArgOrder) => {
+      case QuestionItem(tokens, argOrder, weight) => {
         doc.addField("argOrder", encode(argOrder))
       }
-      case QuestionRelItem(tokens, qrel, argOrder) =>  {
+      case QuestionRelItem(tokens, qrel, argOrder, weight) =>  {
         doc.addField("qrel", qrel)
         doc.addField("argOrder", encode(argOrder))
       }
@@ -108,21 +108,21 @@ object LexItemConverter {
   private def getWeight(fieldMap: Map[String, Any]): Double = fieldMap("weight").asInstanceOf[Double]
     
   private def docToEntItem(fieldMap: Map[String, Any]): EntItem = {
-    new EntItem(words(fieldMap), fieldMap("entity").asInstanceOf[String])
+    new EntItem(words(fieldMap), fieldMap("entity").asInstanceOf[String], getWeight(fieldMap))
   }
   
   private def docToRelItem(fieldMap: Map[String, Any]): RelItem = {
-    new RelItem(words(fieldMap), fieldMap("relation").asInstanceOf[String], argOrder(fieldMap))
+    new RelItem(words(fieldMap), fieldMap("relation").asInstanceOf[String], argOrder(fieldMap), getWeight(fieldMap))
   }
   
   private def docToQuestionItem(fieldMap: Map[String, Any]): QuestionItem = {
     val tokens = fieldMap("tokens_exact").asInstanceOf[String].split(" ").map(QToken.qTokenWrap)
-    new QuestionItem(tokens, argOrder(fieldMap))
+    new QuestionItem(tokens, argOrder(fieldMap), getWeight(fieldMap))
   }
   
   private def docToQuestionRelItem(fieldMap: Map[String, Any]): QuestionRelItem = {
     val tokens = fieldMap("tokens_exact").asInstanceOf[String].split(" ").map(QToken.qTokenWrap)
-    new QuestionRelItem(tokens, fieldMap("qrel").asInstanceOf[String], argOrder(fieldMap))
+    new QuestionRelItem(tokens, fieldMap("qrel").asInstanceOf[String], argOrder(fieldMap), getWeight(fieldMap))
   }
   
   def docToItem(doc: SolrDocument): LexItem = {

@@ -75,12 +75,13 @@ case class SimpleQuery(relation: String, entity: String, queryField: Arg) {
 /* Lexical Items associate question tokens with some semantic interpretation. */
 trait LexItem {
   val words: IndexedSeq[QToken]
+  val weight: Double
 }
 
 /* An entity lexical item associates question words (not including question 
  * variables $r or $e) with a string entity.
  */
-case class EntItem(words: IndexedSeq[QWord], entity: String) extends LexItem {
+case class EntItem(words: IndexedSeq[QWord], entity: String, weight: Double = 0) extends LexItem {
   val ws = words.mkString(" ")
   override def toString = s"$ws = $entity"
 }
@@ -89,7 +90,7 @@ case class EntItem(words: IndexedSeq[QWord], entity: String) extends LexItem {
  * variables $r or $e) with a string relation and an argument ordering.
  */
 case class RelItem(words: IndexedSeq[QWord], relation: String, 
-    argOrder: ArgOrder) extends LexItem {
+    argOrder: ArgOrder, weight: Double = 0) extends LexItem {
   val ws = words.mkString(" ")
   override def toString = s"$ws = " + { argOrder match {
     case Arg2First => s"λyλx. (x, $relation, y)"
@@ -100,7 +101,7 @@ case class RelItem(words: IndexedSeq[QWord], relation: String,
 /* A question lexical item associates question words that have exactly one
  * relation variable $r and one entity variable $e with an argument ordering.
  */    
-case class QuestionItem(words: IndexedSeq[QToken], argOrder: ArgOrder) 
+case class QuestionItem(words: IndexedSeq[QToken], argOrder: ArgOrder, weight: Double = 0) 
 	extends LexItem {
    
   if (words.count(_ == RelVar) != 1) throw new 
@@ -120,7 +121,7 @@ case class QuestionItem(words: IndexedSeq[QToken], argOrder: ArgOrder)
  * could represent "how many people live in $y" = population(x, y). 
  */
 case class QuestionRelItem(words: IndexedSeq[QToken], relation: String, 
-    argOrder: ArgOrder) extends LexItem {
+    argOrder: ArgOrder, weight: Double = 0) extends LexItem {
   
   if (words.count(_ == RelVar) != 0) throw new 
     IllegalArgumentException("QuestionRelItem cannot contain RelVar: " + words)
@@ -147,6 +148,8 @@ trait Derivation {
   def question: IndexedSeq[QWord]
   def lexItems: IndexedSeq[LexItem]
   def query: SimpleQuery
+  
+  def weight = lexItems.map(_.weight).sum
 }
 
 /* A two-argument derivation is a derivation that uses a QuestionItem, a
@@ -247,7 +250,7 @@ abstract class Parser {
          iv = Interval.open(i, j);		  // make an interval
          item <- lexicon.get(ws))		  // for each lexical item matching words
       yield Span(iv, item) 			 	  // yield a new Span
-    }.toList
+    }.toList.sortBy(-_.item.weight)
     
   def parse(words: IndexedSeq[QWord]): Iterable[Derivation]
 
@@ -315,14 +318,14 @@ case class BottomUpParser(lexicon: Lexicon) extends Parser {
         qpat = twoArgQuestionPatFrom(words, r, e);
         qitem <- lexicon.getQuestion(qpat))
       yield TwoArgDerivation(words, qitem, r, e)
-  }
+  }.toList.sortBy(-_.weight)
   
   def parseOneArg(words: IndexedSeq[QWord]) = {
     for (e <- entSpans(words); 
     	qpat = oneArgQuestionPatFrom(words, e);
     	rqitem <- lexicon.getQuestionRel(qpat))
       yield OneArgDerivation(words, rqitem, e)
-  }
+  }.toList.sortBy(-_.weight)
   
   def parse(words: IndexedSeq[QWord]) = parseTwoArg(words) ++ parseOneArg(words)
 }

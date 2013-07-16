@@ -7,7 +7,7 @@ class LexicalTest extends FlatSpec {
   def iv(i: Integer, j: Integer) = Interval.open(i, j)
   
   // An entity item 
-  val joe = EntItem(IndexedSeq("joe"), "joe_ent")
+  val joe = EntItem(IndexedSeq("joe"), "joe_ent", 0)
   
   // Two relation items which have inverse semantics
   val r1 = RelItem(IndexedSeq("like"), "like_rel", Arg2First)

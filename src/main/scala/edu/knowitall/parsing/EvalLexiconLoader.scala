@@ -43,41 +43,49 @@ class EvalLexiconLoader(
   
   private val lexWeights = using(Source.fromFile(lexWeightFile, "UTF8")) { source => 
       System.err.println(s"Loading Lexicon weights...")
-      source.getLines.map(splitRegex.split).map({ case Array(weight, lexId, _*) => 
-        (lexId.toInt, weight.toDouble) 
+      source.getLines.map(l => splitRegex.split(l).toList).map({ case weight :: lexItemEncoding => 
+        require(lexItemEncoding.length >= 3, "Unrecognized lexitem encoding.")
+        (lexItemEncoding.map(_.toInt), weight.toDouble) 
     }).toMap
   }
   
-  private def getWeightBroken(lexId: Int) = lexWeights.getOrElse(lexId, 0.0)
+  private def getWeight(lexItemEncoding: List[Int]) = lexWeights.getOrElse(lexItemEncoding, 0.0)
 
   private def withVars(words: IndexedSeq[QWord]) = words map(_.word) map QToken.qTokenWrap 
   
   private def loadEntItem(lexId: Int, dbId: Int) = {
-    new EntItem(lexVocab(lexId), dbVocab(dbId))
+    val weightKey = lexId :: 0 :: dbId :: Nil
+    new EntItem(lexVocab(lexId), dbVocab(dbId), getWeight(weightKey))
   }
   
   private def loadRelItem(lexId: Int, dbId: Int, order: Int) = {
-    new RelItem(lexVocab(lexId), dbVocab(dbId), ArgOrder.fromInt(order))
+    val weightKey = lexId :: 3 :: order :: dbId :: Nil
+    new RelItem(lexVocab(lexId), dbVocab(dbId), ArgOrder.fromInt(order), getWeight(weightKey))
   }
   
   private def loadQuestionItem(lexId: Int, order: Int) = {
-    new QuestionItem(withVars(lexVocab(lexId)), ArgOrder.fromInt(order))
+    val weightKey = lexId :: 1 :: order :: Nil
+    new QuestionItem(withVars(lexVocab(lexId)), ArgOrder.fromInt(order), getWeight(weightKey))
   }
   
   private def loadQuestionRelItem(lexId: Int, dbId: Int, order: Int) = {
-    new QuestionRelItem(withVars(lexVocab(lexId)), dbVocab(dbId), ArgOrder.fromInt(order))
+    val weightKey = lexId :: 3 :: order :: dbId :: Nil
+    new QuestionRelItem(withVars(lexVocab(lexId)), dbVocab(dbId), ArgOrder.fromInt(order), getWeight(weightKey))
   }
   
   private def readLexEntry(str: String): Option[LexItem] = splitRegex.split(str).map(_.toInt) match {
 
+    // Entity Item encoding
     case Array(lexId, 0, dbId) => Some(loadEntItem(lexId, dbId))
 
+    // RelItem or QuestionRelItem encoding
     case Array(lexId, 3, order, dbId) => withVars(lexVocab(lexId)) match {
       
       case tokens if tokens.forall(_.isInstanceOf[QWord]) => Some(loadRelItem(lexId, dbId, order))
       case tokens => Some(loadQuestionRelItem(lexId, dbId, order))
     }
 
+    // QuestionItem encoding
     case Array(lexId, 1, order) => Some(loadQuestionItem(lexId, order))
     
     case _ => throw new RuntimeException(s"Unrecognized lexicon encoding: $str")
