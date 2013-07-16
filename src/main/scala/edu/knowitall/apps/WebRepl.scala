@@ -56,7 +56,6 @@ object WebRepl extends App {
       val realPath = "/edu/knowitall/triplestore/web" + { if (path.trim() == "/") "/index.html" else path }
       val stream = getClass.getResourceAsStream(realPath)
         if (stream != null) {
-          System.out.println(mimeType)
           ContentEncoding(mimeType) ~> ResponseBytes(IOUtils.toByteArray(stream)) ~> Ok
         } else {
           ResponseString("Not found!") ~> NotFound
