@@ -1,21 +1,20 @@
 package edu.knowitall.scoring
 
 import edu.knowitall.execution.AnswerDerivation
+import edu.knowitall.execution.AnswerGroup
 
 trait AnswerScorer {
-  def scoreAnswer(answer: String, derivs: List[AnswerDerivation]): ScoredAnswer
+  def scoreAnswer(group: AnswerGroup): ScoredAnswerGroup
 }
 
-trait ScoredAnswer {
-  def answer: String
-  def derivs: List[AnswerDerivation]
+trait ScoredAnswerGroup {
+  def group: AnswerGroup
   def score: Double
 }
 
-case class BasicScoredAnswer(answer: String, derivs: List[AnswerDerivation], 
-    score: Double) extends ScoredAnswer
+case class BasicScoredAnswer(group: AnswerGroup, score: Double) 
+  extends ScoredAnswerGroup
     
 case class UniformAnswerScorer(s: Double = 0.0) extends AnswerScorer {
-  override def scoreAnswer(answer: String, derivs: List[AnswerDerivation]) = 
-    BasicScoredAnswer(answer, derivs, s)
+  override def scoreAnswer(group: AnswerGroup) = BasicScoredAnswer(group, s)
 }
