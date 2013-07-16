@@ -1,5 +1,18 @@
 package edu.knowitall.parsing
 
-trait QuestionParser {
+import edu.knowitall.execution.UQuery
+import edu.knowitall.execution.ConjunctiveQuery
+import edu.knowitall.execution.ListConjunctiveQuery
 
+trait QuestionParser {
+  
+  def parse(q: String): Iterable[UQuery]
+
+}
+
+case class FormalQuestionParser() extends QuestionParser {
+  override def parse(q: String) = ListConjunctiveQuery.fromString(q) match {
+    case Some(cq: ConjunctiveQuery) => List(cq)
+    case _ => List()
+  }
 }
