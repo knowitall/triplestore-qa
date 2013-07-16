@@ -1,5 +1,6 @@
 package edu.knowitall.execution
 
+import scala.language.implicitConversions
 import com.rockymadden.stringmetric.similarity._
 import org.apache.solr.client.solrj.util.ClientUtils
 import scala.Array.canBuildFrom
@@ -201,14 +202,33 @@ object Search {
   import Conditions._
   
   /* These are the possible fields in a triplestore. */
-  object Field extends Enumeration {
+  /*object Field extends Enumeration {
     type Field = Value
     val arg1, rel, arg2, namespace = Value
     val arg1_exact, rel_exact, arg2_exact = Value
     // Maps some fields to their exact-match versions
     val exactMap = Map(arg1 -> arg1_exact, rel -> rel_exact, arg2 -> arg2_exact)
   }
-  import Field._
+  import Field._*/
+  trait Field {
+    val name: String
+    def toExact: Field
+  }
+  object Field {
+    implicit def field2string(f: Field) = f.name
+  }
+  val exactPat = ".*_exact$".r
+  case class TSField(name: String) extends Field {
+    override def toString = name
+    override def toExact = name match {
+      case exactPat(name) => TSField(name)
+      case _ => TSField(name + "_exact")
+    }
+  }
+  val arg1 = TSField("arg1")
+  val rel = TSField("rel")
+  val arg2 = TSField("arg2")
+  val namespace = TSField("namespace")
   
   /* Used to represent a triplestore query. The only requirement is that it 
    * should have some method that converts it to a Lucene query string.
@@ -239,14 +259,14 @@ object Search {
    * arg1_exact:"barack obama".
    */
   case class FieldPhrase(f: Field, v: String) extends TSQuery {
-    val realField = exactMap.getOrElse(f, f)
+    val realField = f.toExact
     def toQueryString = realField.toString() + ":\"" + escape(v) + "\"" 
   }
   
   /* Some shortcut functions for each of the fields. */
-  val Arg1Eq = (v: String) => FieldPhrase(arg1_exact, v)
-  val Arg2Eq = (v: String) => FieldPhrase(arg2_exact, v)
-  val RelEq = (v: String) => FieldPhrase(rel_exact, v)
+  val Arg1Eq = (v: String) => FieldPhrase(arg1.toExact, v)
+  val Arg2Eq = (v: String) => FieldPhrase(arg2.toExact, v)
+  val RelEq = (v: String) => FieldPhrase(rel.toExact, v)
   val Arg1Cont = (v: String) => FieldKeywords(arg1, v)
   val Arg2Cont = (v: String) => FieldKeywords(arg2, v)
   val RelCont = (v: String) => FieldKeywords(rel, v)
