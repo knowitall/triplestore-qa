@@ -15,6 +15,8 @@ import java.io.File
 import unfiltered.response.ContentEncoding
 import org.apache.commons.io.IOUtils
 import edu.knowitall.apps.SimpleRepl
+import edu.knowitall.apps.QASystem
+import edu.knowitall.apps.JsonSerialization
 
 
 object WebRepl extends App {
@@ -28,6 +30,8 @@ object WebRepl extends App {
     
     val repl = SimpleRepl(hits = 500)
     
+    val qa = QASystem.getInstance
+    
     def intent = Intent {
       
       /**
@@ -35,6 +39,9 @@ object WebRepl extends App {
        */
       case req @ GET(Path(Seg("query" :: Nil))) => 
         runQuery(req.parameterValues("q").mkString(" "))
+        
+      case req @ GET(Path(Seg("answer" :: Nil))) => 
+        answer(req.parameterValues("q").mkString(" "))
 
       /**
        * Map all other URL paths to get the static content stored as a 
@@ -49,6 +56,12 @@ object WebRepl extends App {
       val result = repl.eval(query)
       logger.info(s"Finished computing results for '$query'")
       ResponseString(result) ~> Ok      
+    }
+    
+    def answer(q: String) = {
+      val result = qa.answer(q)
+      val resultJson = JsonSerialization.serialize(result)
+      ContentEncoding("application/json") ~> ResponseString(resultJson) ~> Ok
     }
     
     def getStatic(path: String) = {
