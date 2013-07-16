@@ -7,6 +7,11 @@ import edu.knowitall.scoring.ScoredAnswerGroup
 import org.slf4j.LoggerFactory
 import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.AnswerGrouper
+import edu.knowitall.parsing.FormalQuestionParser
+import edu.knowitall.execution.IdentityExecutor
+import edu.knowitall.triplestore.SolrClient
+import edu.knowitall.execution.BasicAnswerGrouper
+import edu.knowitall.scoring.UniformAnswerScorer
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
@@ -32,4 +37,14 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
     
   }
   
+}
+case object QASystem {
+  def getInstance = {
+    val parser = FormalQuestionParser() 
+    val executor = IdentityExecutor(SolrClient("http://rv-n12:8983/solr/triplestore"))
+    val grouper = BasicAnswerGrouper()
+    val scorer = UniformAnswerScorer()
+    val qa = QASystem(parser, executor, grouper, scorer)
+    qa
+  }
 }
