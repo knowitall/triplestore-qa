@@ -117,7 +117,6 @@ case object TConjunct {
     case _ => None
   }
   
-  
   def getTVal(s: String): TVal = {
     val v = TVariable.fromString(s)
     val q = QuotedTLiteral.fromString(s)
@@ -151,12 +150,20 @@ case object TConjunct {
  * conjuncts. A conjunctive query represents a select-join-project type
  * operation. The list of conjuncts represents the data to be selected.
  * The shared variables among the conjuncts encodes the join predicates. 
- * The qvar encodes the column to project onto. 
+ * The qvar encodes the projection variable. qAttr is the tuple-attribute
+ * to project onto. 
  */
-case class ConjunctiveQuery(qVar: TVariable, conjuncts: List[TConjunct])
+trait ConjunctiveQuery extends UQuery {
+  val qVar: TVariable
+  val qAttr: String
+  val conjuncts: List[TConjunct]
+}
 
-  // Can be an underspecified query
-  extends UQuery {
+/**
+ * A conjunctive query backed by a list of conjuncts.
+ */
+case class ListConjunctiveQuery(qVar: TVariable, conjuncts: List[TConjunct])
+  extends ConjunctiveQuery {
   
   val conjunctNames = conjuncts.map(_.name)
   if (conjunctNames.distinct.size != conjunctNames.size) throw new 
@@ -164,12 +171,12 @@ case class ConjunctiveQuery(qVar: TVariable, conjuncts: List[TConjunct])
   
   val qas = {for (c <- conjuncts; a <- c.attrName(qVar)) yield a}.toList
   val qAttr = qas match {
-    case a :: Nil => a
+    case a :: rest :: Nil => a
     case _ => throw new IllegalArgumentException(s"Query variable $qVar must "
-        + "appear in exactly one conjunct in $conjuncts")
+        + s"appear in at least one conjunct in $conjuncts")
   }
 }
-case object ConjunctiveQuery {
+case object ListConjunctiveQuery {
   def fromString(s: String): Option[ConjunctiveQuery] = {
     val parts = s.split(":", 2)
     if (parts.size == 2) {
@@ -179,9 +186,32 @@ case object ConjunctiveQuery {
         case _ => throw new IllegalArgumentException(s"Expected variable: $left")
       }
       val conjuncts = TConjunct.fromStringMult(parts(1))
-      Some(ConjunctiveQuery(qVar, conjuncts.toList))
+      Some(ListConjunctiveQuery(qVar, conjuncts.toList))
     } else {
       None
     }
   } 
+}
+
+/**
+ * A simple query is a conjunctive query that has a single conjunct.
+ */
+case class SimpleQuery(name: String, map: Map[Field, TVal])
+  extends ConjunctiveQuery { 
+  val conjunct = TConjunct(name, map)
+  val conjuncts = List(conjunct)
+  val vars = map.values.collect{ case x: TVariable => x }.toList
+  val qVar = vars match {
+    case v :: Nil => v
+    case _ => throw new 
+      IllegalArgumentException(s"SimpleQuery must have exactly one variable, "
+          + s"got: $vars")
+  }
+  val qAttr = conjunct.joinKeys(qVar)
+}
+case object SimpleQuery {
+  def fromString(s: String) = TConjunct.fromString("r", s) match {
+    case Some(TConjunct(name, map)) => Some(SimpleQuery(name, map))
+    case _ => None
+  }
 }
