@@ -1,13 +1,12 @@
-package edu.knowitall.qa
+package edu.knowitall.parsing
 
+import org.apache.solr.client.solrj.impl.HttpSolrServer
 import org.apache.solr.client.solrj.SolrServer
 import org.apache.solr.client.solrj.SolrQuery
-import org.apache.solr.client.solrj.impl.HttpSolrServer
 import org.apache.solr.client.solrj.util.ClientUtils
-
 import scala.collection.JavaConverters._
 
-class SolrLexicon(val server: SolrServer) extends WeightedLexicon {
+class SolrLexicon(val server: SolrServer) extends Lexicon {
 
   def this(url: String = "http://rv-n13.cs.washington.edu:8888/solr") = this(new HttpSolrServer(url))
   
@@ -27,26 +26,26 @@ class SolrLexicon(val server: SolrServer) extends WeightedLexicon {
     new SolrQuery(queryString(words)).setRows(0)
   }
   
-  private def execQuery(sq: SolrQuery): Iterable[LexItem with Weight] = {
+  private def execQuery(sq: SolrQuery): Iterable[LexItem] = {
     val resp = server.query(sq)
     resp.getResults().asScala.map(LexItemConverter.docToItem)
   }
   
-  def get(words: IndexedSeq[QToken]): Iterable[LexItem with Weight] = {
+  def get(words: IndexedSeq[QToken]): Iterable[LexItem] = {
     
     execQuery(buildQuery(words))
   }
   
-  def getRel(words: IndexedSeq[QWord]): Iterable[RelItem with Weight] = 
-    get(words) filter (_.isInstanceOf[RelItem]) map (_.asInstanceOf[RelItem with Weight])
+  def getRel(words: IndexedSeq[QWord]): Iterable[RelItem] = 
+    get(words) filter (_.isInstanceOf[RelItem]) map (_.asInstanceOf[RelItem])
     
-  def getEnt(words: IndexedSeq[QWord]): Iterable[EntItem with Weight] = 
-    get(words) filter (_.isInstanceOf[EntItem]) map (_.asInstanceOf[EntItem with Weight])
+  def getEnt(words: IndexedSeq[QWord]): Iterable[EntItem] = 
+    get(words) filter (_.isInstanceOf[EntItem]) map (_.asInstanceOf[EntItem])
     
-  def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem with Weight] = 
-    get(words) filter (_.isInstanceOf[QuestionItem]) map (_.asInstanceOf[QuestionItem with Weight])
+  def getQuestion(words: IndexedSeq[QToken]): Iterable[QuestionItem] = 
+    get(words) filter (_.isInstanceOf[QuestionItem]) map (_.asInstanceOf[QuestionItem])
   
-  def getQuestionRel(words: IndexedSeq[QToken]): Iterable[QuestionRelItem with Weight] = {
+  def getQuestionRel(words: IndexedSeq[QToken]): Iterable[QuestionRelItem] = {
     throw new RuntimeException("Method not implemented.")
   }
     

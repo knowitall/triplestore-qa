@@ -1,7 +1,7 @@
 package edu.knowitall.triplestore
 import org.scalatest.FlatSpec
-import Tabulator.{tuplesToTable => toTable}
-
+import edu.knowitall.execution.Tabulator.{tuplesToTable => toTable}
+import edu.knowitall.execution._
 
 class SimpleReplTest extends FlatSpec {
   

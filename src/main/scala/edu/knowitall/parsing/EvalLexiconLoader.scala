@@ -1,4 +1,4 @@
-package edu.knowitall.qa
+package edu.knowitall.parsing
 
 import scala.io.Source
 import java.io.File
@@ -6,15 +6,11 @@ import scala.collection.JavaConversions._
 import edu.knowitall.common.Resource.using
 import java.util.concurrent.atomic.AtomicInteger 
 
-trait Weight {
-  def weight: Double
-}
-
 class EvalLexiconLoader(
     val dbVocabFile: File, 
     val lexVocabFile: File,
     val lexWeightFile: File,
-    val lexEntryFile: File) extends Iterable[LexItem with Weight] {
+    val lexEntryFile: File) extends Iterable[LexItem] {
   
   def this(rootPath: File) = this(
     dbVocabFile = new File(rootPath, "database/vocab.txt"),
@@ -57,21 +53,18 @@ class EvalLexiconLoader(
   private def withVars(words: IndexedSeq[QWord]) = words map(_.word) map QToken.qTokenWrap 
   
   private def loadEntItem(lexId: Int, dbId: Int) = {
-    new EntItem(lexVocab(lexId), dbVocab(dbId)) 
-    with Weight { val weight = getWeight(lexId) }
+    new EntItem(lexVocab(lexId), dbVocab(dbId))
   }
   
   private def loadRelItem(lexId: Int, dbId: Int, order: Int) = {
-    new RelItem(lexVocab(lexId), dbVocab(dbId), ArgOrder.fromInt(order)) 
-    with Weight { val weight = getWeight(lexId) }
+    new RelItem(lexVocab(lexId), dbVocab(dbId), ArgOrder.fromInt(order))
   }
   
   private def loadQuestionItem(lexId: Int, order: Int) = {
-    new QuestionItem(withVars(lexVocab(lexId)), ArgOrder.fromInt(order)) 
-    with Weight { val weight = getWeight(lexId) }
+    new QuestionItem(withVars(lexVocab(lexId)), ArgOrder.fromInt(order))
   }
   
-  private def readLexEntry(str: String): Option[LexItem with Weight] = splitRegex.split(str).map(_.toInt) match {
+  private def readLexEntry(str: String): Option[LexItem] = splitRegex.split(str).map(_.toInt) match {
 
     case Array(lexId, 0, dbId) => Some(loadEntItem(lexId, dbId))
 
@@ -87,7 +80,7 @@ class EvalLexiconLoader(
     case _ => throw new RuntimeException(s"Unrecognized lexicon encoding: $str")
   }
   
-  override def iterator = new Iterator[LexItem with Weight]() {
+  override def iterator = new Iterator[LexItem]() {
     System.err.println("Loading Lexicon...")
     private val lexSource = io.Source.fromFile(lexEntryFile)
     private val lexItemIterator = lexSource.getLines flatMap readLexEntry

@@ -1,16 +1,19 @@
-package edu.knowitall.qa
+package edu.knowitall.parsing
 
-import org.apache.solr.client.solrj.SolrServer
 import org.apache.solr.client.solrj.impl.ConcurrentUpdateSolrServer
+import org.apache.solr.client.solrj.SolrServer
 import org.apache.solr.common.{SolrDocument, SolrInputDocument}
 import java.util.concurrent.atomic.AtomicLong
 import scala.collection.JavaConversions._
+import edu.knowitall.common.Resource.using
+import java.io.File
+import scopt.OptionParser
 
-class SolrLexiconBuilder(server: SolrServer, lexItems: Iterable[LexItem with Weight]) {
+class SolrLexiconBuilder(server: SolrServer, lexItems: Iterable[LexItem]) {
 
   import LexItemConverter._
 
-  def this(url: String, lexItems: Iterable[LexItem with Weight]) = this(new ConcurrentUpdateSolrServer(url, 1000, 4), lexItems)
+  def this(url: String, lexItems: Iterable[LexItem]) = this(new ConcurrentUpdateSolrServer(url, 1000, 4), lexItems)
   
   def go: Unit = {
     
@@ -53,10 +56,10 @@ object LexItemConverter {
   
   private def encode(o: ArgOrder) = ArgOrder.toInt(o)
   
-  def itemToDoc(item: LexItem with Weight): SolrInputDocument = {
+  def itemToDoc(item: LexItem): SolrInputDocument = {
     val doc = new SolrInputDocument
     doc.addField("id", idCounter.getAndIncrement().toString)
-    doc.addField("weight", item.weight)
+    doc.addField("weight", item)
     val tokenString = item.words.mkString(" ")
     doc.addField("tokens", tokenString)
     doc.addField("tokens_exact", tokenString)
@@ -98,23 +101,20 @@ object LexItemConverter {
   }
   private def getWeight(fieldMap: Map[String, Any]): Double = fieldMap("weight").asInstanceOf[Double]
     
-  private def docToEntItem(fieldMap: Map[String, Any]): EntItem with Weight = {
-    new EntItem(words(fieldMap), fieldMap("entity").asInstanceOf[String]) 
-    with Weight { val weight = getWeight(fieldMap) }
+  private def docToEntItem(fieldMap: Map[String, Any]): EntItem = {
+    new EntItem(words(fieldMap), fieldMap("entity").asInstanceOf[String])
   }
   
-  private def docToRelItem(fieldMap: Map[String, Any]): RelItem with Weight = {
+  private def docToRelItem(fieldMap: Map[String, Any]): RelItem = {
     new RelItem(words(fieldMap), fieldMap("relation").asInstanceOf[String], argOrder(fieldMap))
-    with Weight { val weight = getWeight(fieldMap) }
   }
   
-  private def docToQuestionItem(fieldMap: Map[String, Any]): QuestionItem with Weight = {
+  private def docToQuestionItem(fieldMap: Map[String, Any]): QuestionItem = {
     val tokens = fieldMap("tokens_exact").asInstanceOf[String].split(" ").map(QToken.qTokenWrap)
     new QuestionItem(tokens, argOrder(fieldMap))
-    with Weight { val weight = getWeight(fieldMap) }
   }
   
-  def docToItem(doc: SolrDocument): LexItem with Weight = {
+  def docToItem(doc: SolrDocument): LexItem = {
     val fieldNames = getFieldNames(doc)
     val fieldMap = getFieldMap(doc)
     if (fieldNames == entItemFields) docToEntItem(fieldMap)

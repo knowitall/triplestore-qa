@@ -45,6 +45,10 @@ object ArgOrder {
     case Arg1First => Arg2
     case Arg2First => Arg1
   }
+  def toInt(o: ArgOrder): Int = o match {
+    case Arg1First => 1
+    case Arg2First => 0
+  } 
   def fromInt(i: Int): ArgOrder = i match {
     case 0 => Arg2First
     case 1 => Arg1First

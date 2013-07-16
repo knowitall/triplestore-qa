@@ -1,77 +1,70 @@
-package edu.knowitall.triplestore
-
-import Search.TSQuery
-import Tabulator.{ tuplesToTable => toTable }
-import jline.console.ConsoleReader
-import edu.knowitall.qa._
-import scopt.OptionParser
+package edu.knowitall.apps
+import edu.knowitall.execution.Tabulator.{ tuplesToTable => toTable }
 import org.slf4j.LoggerFactory
 import unfiltered.filter.Intent
 import unfiltered.response.ResponseString
 import unfiltered.response.ResponseStreamer
-import unfiltered.response.ContentType
 import unfiltered.response.Ok
 import unfiltered.jetty.Http
 import unfiltered.request.GET
 import unfiltered.request.POST
 import unfiltered.request.Path
 import unfiltered.request.Seg
-import unfiltered.response.NotFound
-import unfiltered.request.Mime
-import java.io.File
 import java.io.OutputStream
 import java.io.PrintStream
-import unfiltered.response.ContentEncoding
-import org.apache.commons.io.IOUtils
 import edu.knowitall.tool.postag.ClearPostagger
 import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.tool.stem.Lemmatized
 import edu.knowitall.tool.postag.PostaggedToken
+import edu.knowitall.parsing._
+import edu.knowitall.execution.Conditions.On
+import edu.knowitall.execution.Search.Arg1Cont
+import edu.knowitall.execution.Search.Arg2Cont
+import edu.knowitall.execution.Search.Conjunction
+import edu.knowitall.execution.Search._
+import edu.knowitall.execution.Tabulator.{tuplesToTable => toTable}
+import scala.Array.fallbackCanBuildFrom
+import edu.knowitall.triplestore.SolrClient
+import edu.knowitall.triplestore.TriplestorePlan
+import edu.knowitall.execution.Search.TSQuery
+import edu.knowitall.execution.Tuple
 
-class QARepl(val parser: WeightedParser, val maxDerivations: Int = 10, url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", hits: Int = 100) {
+class QARepl(val parser: Parser, val maxDerivations: Int = 10, url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", hits: Int = 100) {
 
   val client = SolrClient(url, hits)
   val planning = TriplestorePlan(client)
 
   import planning._
-  import Search.{ Arg1Cont, RelCont, Arg2Cont }
-  import Conditions._
-  import Search.Conjunction
 
   private val splitRegex = "\\s+".r
 
   def derivations(question: String) =
     parser.parse(splitRegex.split(question) map QWord.qWordWrap).toSeq.distinct
 
-  def queryFor(derivation: WeightedDerivation): Option[TSQuery with Weight] = {
+  def queryFor(derivation: Derivation): Option[TSQuery] = {
     val squery = derivation.query
 
     def cleanName(str: String) = str.replaceAll("-", " ").dropRight(2)
 
     val cleanRel = cleanName(squery.relation)
     val cleanEnt = cleanName(squery.entity)
-    val qweight = derivation.weight
 
     if (cleanRel.nonEmpty && cleanEnt.nonEmpty)
-      Some(queryFor(squery.queryField, cleanRel, cleanEnt, qweight))
+      Some(queryFor(squery.queryField, cleanRel, cleanEnt))
     else None
   }
   
-  def queryFor(queryField: Arg, rel: String, ent: String, qweight: Double) = {
+  def queryFor(queryField: Arg, rel: String, ent: String) = {
     val EntityCont = queryField match {
       case Arg1 => Arg2Cont
       case Arg2 => Arg1Cont
     }
-    new Conjunction(RelCont(rel), EntityCont(ent)) with Weight { val weight = qweight }
+    new Conjunction(RelCont(rel), EntityCont(ent))
   }
 
-  def search(query: TSQuery with Weight) = {
-    val projection = On("r.arg1", "r.rel", "r.arg2", "r.namespace", "r.wt")
-    val qweightStr = "%.02f".format(query.weight)
-    val qweight = Tuple(Map("r.wt" -> qweightStr))
-    val results = ExecQuery("r", query)
-    
-    Project(projection, results map {_.join(qweight)})
+  def search(query: TSQuery) = {
+    val projection = On("r.arg1", "r.rel", "r.arg2", "r.namespace")
+    Project(projection, ExecQuery("r", query))
   }
   
   
@@ -114,7 +107,7 @@ object QuestionDemo extends App {
 
     val lexicon = new SolrLexicon()
 
-    val parser = new WeightedBottomUpParser(lexicon)
+    val parser = new BottomUpParser(lexicon)
 
     val repl = new QARepl(parser)
 
