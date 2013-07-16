@@ -41,7 +41,7 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
 case object QASystem {
   def getInstance = {
     val parser = FormalQuestionParser() 
-    val executor = IdentityExecutor(SolrClient("http://rv-n12:8983/solr/triplestore"))
+    val executor = IdentityExecutor(SolrClient("http://rv-n12:8983/solr/triplestore", 500))
     val grouper = BasicAnswerGrouper()
     val scorer = UniformAnswerScorer()
     val qa = QASystem(parser, executor, grouper, scorer)
