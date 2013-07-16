@@ -3,6 +3,7 @@ package edu.knowitall.triplestore
 import scala.collection.JavaConverters._
 import scala.collection.JavaConversions._
 import edu.knowitall.execution.Search.TSQuery
+import edu.knowitall.execution._
 import org.apache.solr.client.solrj.embedded.EmbeddedSolrServer
 import org.apache.solr.core.CoreContainer
 import java.io.File

@@ -16,6 +16,10 @@ version := "0.1"
 
 scalaVersion := "2.10.2"
 
+fork in run := true
+
+javaOptions in run += "-Xmx8G"
+
 libraryDependencies += "org.apache.solr" % "solr-solrj" % "4.3.0"
 
 libraryDependencies += "org.apache.solr" % "solr" % "4.3.1"
@@ -39,6 +43,10 @@ libraryDependencies += "edu.washington.cs.knowitall.common-scala" % "common-scal
 libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0.M6-SNAP26"
 
 libraryDependencies += "net.liftweb" %% "lift-json" % "2.5"
+
+libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-stem-morpha" % "2.4.2" exclude("com.github.scopt","scopt")
+
+libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-clear" % "2.4.1" exclude("com.github.scopt","scopt")
 
 libraryDependencies ++= Seq(
     "net.databinder" %% "unfiltered-filter" % "0.6.8",
