@@ -8,16 +8,17 @@ trait AnswerScorer {
 }
 
 trait ScoredAnswerGroup extends AnswerGroup {
-  def group: AnswerGroup
   def score: Double
-  val answer = group.answer
-  val alternates = group.alternates
-  val derivations = group.derivations
+  def answer: String
+  def alternates: List[String]
+  def derivations: List[AnswerDerivation]
 }
 
-case class BasicScoredAnswer(group: AnswerGroup, score: Double) 
-  extends ScoredAnswerGroup
+case class BasicScoredAnswer(answer: String, alternates: List[String], 
+    derivations: List[AnswerDerivation], score: Double) 
+    extends ScoredAnswerGroup
     
 case class UniformAnswerScorer(s: Double = 0.0) extends AnswerScorer {
-  override def scoreAnswer(group: AnswerGroup) = BasicScoredAnswer(group, s)
+  override def scoreAnswer(group: AnswerGroup) = 
+    BasicScoredAnswer(group.answer, group.alternates, group.derivations, s)
 }
