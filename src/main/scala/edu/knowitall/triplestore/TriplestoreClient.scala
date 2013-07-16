@@ -6,12 +6,10 @@ import org.apache.solr.client.solrj.SolrQuery
 import scala.collection.JavaConversions._
 import org.apache.solr.common.SolrDocument
 import java.util.ArrayList
-import edu.knowitall.execution.Search.TSQuery
 import org.slf4j.LoggerFactory
-import edu.knowitall.execution.Tuple
-import edu.knowitall.execution.Search
-import edu.knowitall.execution.Operators
-import edu.knowitall.execution.Conditions
+import edu.knowitall.execution.Conditions._ 
+import edu.knowitall.execution.Search._
+import edu.knowitall.execution._
 
 /**
  * The interface to a Triplestore.
@@ -145,9 +143,7 @@ case object SolrClient {
  */
 case class TriplestorePlan(client: TriplestoreClient) {
   
-  import Conditions._ 
-  import Search._
-  import Field._
+
   
   // Mnemonics
   type Tuples = Iterable[Tuple]

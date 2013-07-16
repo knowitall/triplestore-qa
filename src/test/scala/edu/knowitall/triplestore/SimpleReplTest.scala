@@ -1,11 +1,7 @@
 package edu.knowitall.triplestore
 import org.scalatest.FlatSpec
 import edu.knowitall.execution.Tabulator.{tuplesToTable => toTable}
-import edu.knowitall.execution.QueryNode
-import edu.knowitall.execution.Joiner
-import edu.knowitall.execution.TVariable
-import edu.knowitall.execution.TConjunct
-
+import edu.knowitall.execution._
 
 class SimpleReplTest extends FlatSpec {
   
