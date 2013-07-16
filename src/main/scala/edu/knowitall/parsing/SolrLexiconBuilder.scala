@@ -59,12 +59,11 @@ object LexItemConverter {
   def itemToDoc(item: LexItem): SolrInputDocument = {
     val doc = new SolrInputDocument
     doc.addField("id", idCounter.getAndIncrement().toString)
-    doc.addField("weight", item)
+    doc.addField("weight", 0)
     val tokenString = item.words.mkString(" ")
     // add common fields
     doc.addField("tokens", tokenString)
     doc.addField("tokens_exact", tokenString)
-    doc.addField("weight", 0)
     // add type-specific fields
     item match {
       case EntItem(tokens, entity) => {
