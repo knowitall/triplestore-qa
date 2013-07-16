@@ -14,6 +14,7 @@ import unfiltered.request.Mime
 import java.io.File
 import unfiltered.response.ContentEncoding
 import org.apache.commons.io.IOUtils
+import edu.knowitall.apps.SimpleRepl
 
 
 object WebRepl extends App {

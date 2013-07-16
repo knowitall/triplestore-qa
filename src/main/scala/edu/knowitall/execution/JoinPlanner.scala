@@ -1,15 +1,15 @@
-package edu.knowitall.triplestore
+package edu.knowitall.execution
 import Search.PartialSearchJoin
 import PartialFunction._
 import Search.Field._
-import Search.TSQuery
 import Conditions.TuplePred
 import Operators.{Select, Product}
-import edu.knowitall.triplestore.Search.Conjunction
-import edu.knowitall.triplestore.Search.{FieldKeywords, FieldPhrase}
-import edu.knowitall.triplestore.Conditions.AttrsSim
+import Conditions.AttrsSim
 import Operators.NestedLoopJoin
 import org.slf4j.LoggerFactory
+import edu.knowitall.triplestore.TriplestoreClient
+import edu.knowitall.triplestore.TriplestorePlan
+import scala.Option.option2Iterable
 
 /**
  * A Joiner object interfaces with a triplestore and executes a query 

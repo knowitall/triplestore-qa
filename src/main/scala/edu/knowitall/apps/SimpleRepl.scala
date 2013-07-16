@@ -1,8 +1,14 @@
-package edu.knowitall.triplestore
-import Tabulator.tuplesToTable
-import Search.ProjectTriples
+package edu.knowitall.apps
 
-case class SimpleRepl(url: String = "http://rv-n12.cs.washington.edu:8983/solr/triplestore", 
+import jline.console.ConsoleReader
+import edu.knowitall.triplestore.SolrClient
+import edu.knowitall.execution.Joiner
+import edu.knowitall.execution.Tuple
+import edu.knowitall.execution.TConjunct
+import edu.knowitall.execution.Search.ProjectTriples
+import edu.knowitall.execution.Tabulator.tuplesToTable
+
+case class SimpleRepl(url: String = "http://rv-n12:8983/solr/triplestore", 
     hits: Int = 500) {
   
   val client = SolrClient(url, hits)
