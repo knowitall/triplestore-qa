@@ -24,17 +24,23 @@ trait TriplestoreClient {
   def count(q: TSQuery): Long
   
   /**
-   * Searches and returns the results as Tuple objects.
+   * Searches and returns at most maxHits Tuple objects.
    */
-  def search(q: TSQuery): List[Tuple]
+  def search(q: TSQuery, maxHits: Int = 100): List[Tuple]
     
   /**
    * Searches and returns Tuple objects, but adds the prefix
    * "$name." to all of the attributes.
    */
-  def namedSearch(name: String, q: TSQuery): List[Tuple] = {
-    search(q) map { t => t.renamePrefix(name)}
-  }
+  def namedSearch(name: String, q: TSQuery): List[Tuple] =
+    search(q) map { t => t.renamePrefix(name) }
+  
+  /**
+   * Searches and returns Tuple objects, but adds the prefix
+   * "$name." to all of the attributes. Returns at most maxHits tuples.
+   */
+  def namedSearch(name: String, q: TSQuery, maxHits: Int): List[Tuple] = 
+    search(q, maxHits) map { t => t.renamePrefix(name) }
 }
 
 /**
@@ -47,6 +53,8 @@ case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
   val logger = LoggerFactory.getLogger(this.getClass) 
   
   val server = new HttpSolrServer(url)
+  
+  val defaultMaxHits = hits
 
   /**
    * Returns the number of documents in Solr that match the given query.
@@ -62,7 +70,7 @@ case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
   /**
    * Searches Solr and returns Tuple objects.
    */
-  def search(q: TSQuery): List[Tuple] ={
+  def search(q: TSQuery, maxHits: Int = defaultMaxHits): List[Tuple] ={
     logger.info(s"Searching for query: $q")
     val query = SolrClient.buildQuery(q)
     query.setRows(hits)
@@ -147,9 +155,10 @@ case class TriplestorePlan(client: TriplestoreClient) {
   type TupleMap = Tuple => Tuple
  
   /**
-   * Shortcut for executing the given query with the given name.
+   * Shortcuts for executing the given query with the given name.
    */
   def ExecQuery(n: String, q: TSQuery) = client.namedSearch(n, q)
+  def ExecQuery(n: String, q: TSQuery, h: Int) = client.namedSearch(n, q, h)
   
   /**
    * Searches for the conjunction of the given queries, naming them with
@@ -164,6 +173,9 @@ case class TriplestorePlan(client: TriplestoreClient) {
    */
   def PartialSearchFor(n: String, q: TSQuery*): PartialSearcher = {
     PartialSearcher(Conjunction(q:_*), ExecQuery(n, _)) 
+  }
+  def PartialSearchFor(n: String, h: Int, q: TSQuery*): PartialSearcher = {
+    PartialSearcher(Conjunction(q:_*), ExecQuery(n, _, h))
   }
   
   /**

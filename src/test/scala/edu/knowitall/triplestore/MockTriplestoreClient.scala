@@ -102,12 +102,12 @@ case class MockTriplestoreClient() extends TriplestoreClient {
 
   val server = MockSolrServer.getServer
   
-  val hits = 100
+  val defaultMaxHits = 100
   
   def count(query: TSQuery): Long = 
     server.query(SolrClient.buildQuery(query)).getResults().getNumFound()
   
-  def search(q: TSQuery): List[Tuple] = {
+  def search(q: TSQuery, hits: Int = defaultMaxHits): List[Tuple] = {
     val query = SolrClient.buildQuery(q)
     query.setRows(hits)
     System.err.println(query)

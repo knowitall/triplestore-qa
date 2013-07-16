@@ -26,7 +26,7 @@ object WebRepl extends App {
    */
   object Plan extends unfiltered.filter.Plan {
     
-    val repl = SimpleRepl(hits = 100)
+    val repl = SimpleRepl(hits = 500)
     
     def intent = Intent {
       
