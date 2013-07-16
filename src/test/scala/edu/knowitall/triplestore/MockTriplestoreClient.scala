@@ -2,7 +2,7 @@ package edu.knowitall.triplestore
 
 import scala.collection.JavaConverters._
 import scala.collection.JavaConversions._
-import edu.knowitall.triplestore.Search.TSQuery
+import edu.knowitall.execution.Search.TSQuery
 import org.apache.solr.client.solrj.embedded.EmbeddedSolrServer
 import org.apache.solr.core.CoreContainer
 import java.io.File
@@ -10,6 +10,7 @@ import org.apache.commons.io.IOUtils
 import scala.io.Source
 import java.io._
 import org.apache.solr.common.SolrInputDocument
+import edu.knowitall.execution.Tuple
 
 /**
  * Creates a temporary triplestore solr server that can be used for testing.
