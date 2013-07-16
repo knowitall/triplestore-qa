@@ -7,9 +7,12 @@ trait AnswerScorer {
   def scoreAnswer(group: AnswerGroup): ScoredAnswerGroup
 }
 
-trait ScoredAnswerGroup {
+trait ScoredAnswerGroup extends AnswerGroup {
   def group: AnswerGroup
   def score: Double
+  val answer = group.answer
+  val alternates = group.alternates
+  val derivations = group.derivations
 }
 
 case class BasicScoredAnswer(group: AnswerGroup, score: Double) 
