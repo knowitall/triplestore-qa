@@ -38,6 +38,8 @@ libraryDependencies += "edu.washington.cs.knowitall.common-scala" % "common-scal
 
 libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0.M6-SNAP26"
 
+libraryDependencies += "net.liftweb" %% "lift-json" % "2.5"
+
 libraryDependencies ++= Seq(
     "net.databinder" %% "unfiltered-filter" % "0.6.8",
     "net.databinder" %% "unfiltered-jetty" % "0.6.8",
