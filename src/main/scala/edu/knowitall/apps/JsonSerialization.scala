@@ -9,10 +9,63 @@ import net.liftweb.json.Extraction
 import net.liftweb.json.TypeInfo
 import edu.knowitall.execution.TVal
 import net.liftweb.json.DefaultFormats
+import edu.knowitall.execution.AnswerGroup
+import edu.knowitall.execution.ExecQuery
+import edu.knowitall.execution.ExecTuple
+import edu.knowitall.execution.UQuery
+import edu.knowitall.execution.Tuple
+import edu.knowitall.scoring.ScoredAnswerGroup
+import scala.language.reflectiveCalls
+import edu.knowitall.execution.AnswerDerivation
+import org.slf4j.LoggerFactory
 
 object JsonSerialization {
+  
+  val logger = LoggerFactory.getLogger(this.getClass) 
+  
   implicit val formats = DefaultFormats + MapSerializer + TValSerializer
   def serialize(any: Any): String = pretty(render(decompose(any)))
+  def serializeAnswers(groups: List[ScoredAnswerGroup]): String = {
+    val invs = groups.map(ScoredAnswerInv.fromScoredAnswerGroup(_))
+    logger.debug(invs.toList.toString)
+    pretty(render(decompose(invs)))
+  }
+}
+
+case class ScoredAnswerInv(answer: String, alternates: List[String], 
+    score: Double, uqueries: List[UQueryInv])
+object ScoredAnswerInv {
+  def fromScoredAnswerGroup(sa: ScoredAnswerGroup): ScoredAnswerInv = {
+    val derivs = sa.derivations
+    val uqs = UQueryInv.fromDerivs(derivs)
+    val result = ScoredAnswerInv(sa.answer, sa.alternates, sa.score, uqs.toList)
+    result
+  }
+}
+
+case class UQueryInv(uquery: UQuery, equeries: List[ExecQueryInv])
+object UQueryInv {
+  def fromDerivs(ds: List[AnswerDerivation]): List[UQueryInv] = {
+    val grpd = ds.groupBy(_.etuple.equery.uquery)
+    val results = for ((uqr, derivs) <- grpd;
+                       eqs = ExecQueryInv.fromDerivs(derivs)) 
+                  yield UQueryInv(uqr, eqs.toList)
+    results.toList
+  }
+}
+
+case class ExecQueryInv(equery: ExecQuery, attr: String, 
+    tuples: List[Map[String, Any]])
+object ExecQueryInv {
+  def fromDerivs(ds: List[AnswerDerivation]): List[ExecQueryInv] = {
+    val grpd = ds.groupBy(_.etuple.equery)
+    val tuples = for ((eqr, dsg) <- grpd; ts = dsg.map(_.etuple.tuple)) 
+                 yield (eqr, ts.map(_.attrs))
+    val attrs = for ((eqr, dsg) <- grpd; d <- dsg) yield (eqr, d.attr)
+    val results = for ((eqr, ts) <- tuples; a <- attrs.get(eqr)) 
+                  yield ExecQueryInv(eqr, a, ts)
+    results.toList
+  }
 }
 
 object MapSerializer extends Serializer[Map[Any, Any]] {

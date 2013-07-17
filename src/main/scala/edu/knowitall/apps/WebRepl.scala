@@ -49,7 +49,7 @@ object WebRepl extends App {
     def runQuery(query: String) = {
       logger.info(s"Got query '$query'")
       val result = qa.answer(query)
-      val resultJson = JsonSerialization.serialize(result)
+      val resultJson = JsonSerialization.serializeAnswers(result)
       ContentEncoding("application/json") ~> ResponseString(resultJson) ~> Ok
       logger.info(s"Finished computing results for '$query'")
       ResponseString(resultJson) ~> Ok      
