@@ -1,4 +1,5 @@
 var url = "/query";
+var maxRows = 50;
 
 var query = function() {
     $('#results').html('<img src="spinner.gif"/>');
@@ -71,6 +72,7 @@ var displayTuples = function(cols, tuples, attr) {
         $h.append('<th>' + col + '</th>');
     });
     $.each(tuples, function(i, tuple) {
+        if (i >= maxRows) { return; }
         $t.append(tupleToRow(cols, tuple, attr));
     });
     dedupTable($t);
