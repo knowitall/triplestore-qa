@@ -17,6 +17,8 @@ $(document).ready(function() {
         {q: "($x, discovered, radium) ($x, born in, $y) ($y, type, city)", note: "Multiple joins are allowed"},
         {q: '(haggis, $r, scotland) ($x, $r, italy) ($x, "type", food)', note: "Joins over relations are allowed, too"},
         {q: '(haggis, $r, scotland) ($x, $r, france) ($x, "type", food)', note: ""},
+        {q: '$x : ($x, directed by, woody allen) ($x, film location, $y) ($y, "type", "city")', note: "specify the query variable using a colon"},
+        {q: '$y : ($x, directed by, woody allen) ($x, film location, $y) ($y, "type", "city")', note: ""},
     ];
     for (var i = 0; i < exs.length; i++) { addExample(exs[i]); }
 });
