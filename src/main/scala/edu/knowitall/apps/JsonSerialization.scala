@@ -27,7 +27,6 @@ object JsonSerialization {
   def serialize(any: Any): String = pretty(render(decompose(any)))
   def serializeAnswers(groups: List[ScoredAnswerGroup]): String = {
     val invs = groups.map(ScoredAnswerInv.fromScoredAnswerGroup(_))
-    logger.debug(invs.toList.toString)
     pretty(render(decompose(invs)))
   }
 }
