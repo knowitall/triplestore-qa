@@ -54,8 +54,7 @@ object UQueryInv {
   }
 }
 
-case class ExecQueryInv(equery: ExecQuery, attr: String, 
-    tuples: List[Map[String, Any]])
+case class ExecQueryInv(equery: ExecQuery, attr: String, tuples: List[Map[String, Any]])
 object ExecQueryInv {
   def fromDerivs(ds: List[AnswerDerivation]): List[ExecQueryInv] = {
     val grpd = ds.groupBy(_.etuple.equery)
