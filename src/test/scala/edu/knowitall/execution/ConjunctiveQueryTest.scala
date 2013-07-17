@@ -1,6 +1,7 @@
 package edu.knowitall.execution
 
 import org.scalatest.FlatSpec
+import edu.knowitall.execution.Search.arg1
 
 class ConjunctiveQueryTest extends FlatSpec {
   
@@ -22,6 +23,19 @@ class ConjunctiveQueryTest extends FlatSpec {
     }
     assert(TVariable("x") === result.qVar)
     assert(3 === result.conjuncts.size)
+  }
+  
+  it should "handle set literals" in {
+    val q = """(joe|joey, likes, $x)"""
+    val result = SimpleQuery.fromString(q) match {
+      case Some(sq: SimpleQuery) => sq.conjunct.values(arg1)
+      case _ => throw new IllegalArgumentException("")
+    }
+    
+    assert(result match {
+      case x: SetTLiteral => x.values.size == 2
+      case _ => false
+    })
   }
 
 }

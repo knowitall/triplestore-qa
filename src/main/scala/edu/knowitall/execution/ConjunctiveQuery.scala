@@ -16,8 +16,7 @@ trait TVal
 /**
  * Base trait for triple literal values.
  */
-trait TLiteral {
-  val value: String
+trait TLiteral extends TVal {
   def toConjunct(field: Field): TSQuery
 }
 
@@ -62,6 +61,15 @@ case object TVariable {
 }
 
 /**
+ * Triple values can also be the disjunction of a set of literals. 
+ */
+case class SetTLiteral(values: List[TLiteral]) extends TVal with TLiteral {
+  override def toString = values.mkString(" | ") 
+  override def toConjunct(field: Field) =
+    Disjunction(values.map(_.toConjunct(field)):_*)
+}
+
+/**
  * TConjunct objects have a name (you can think of this as a unique
  * identifier for the relational table returned) and map containing the
  * field values. The field values map a field (arg1, rel, or arg2) to a 
@@ -71,8 +79,7 @@ case class TConjunct(name: String, values: Map[Field, TVal]) {
   
   def literalFields: Iterable[(Field, TLiteral)] = { 
     for ((f, v) <- values) yield v match {
-      case l: UnquotedTLiteral => Some((f, l))
-      case l: QuotedTLiteral => Some((f, l))
+      case l: TLiteral => Some((f, l))
       case _ => None
     }
   }.flatten
@@ -119,15 +126,22 @@ case object TConjunct {
     case _ => None
   }
   
+  def getTLiteral(s: String): TLiteral = {
+    val pieces = s.split("\\|").toList.map(_.trim())
+    pieces match {
+      case x :: Nil => QuotedTLiteral.fromString(x) match {
+        case Some(QuotedTLiteral(y)) => QuotedTLiteral(y)
+        case _ => UnquotedTLiteral(s)
+      }
+      case _ => SetTLiteral(pieces.map(getTLiteral(_)))
+    }
+  }
+  
   def getTVal(s: String): TVal = {
     val v = TVariable.fromString(s)
-    val q = QuotedTLiteral.fromString(s)
     v match {
       case Some(TVariable(x)) => TVariable(x)
-      case _ => q match {
-        case Some(QuotedTLiteral(x)) => QuotedTLiteral(x)
-        case _ => UnquotedTLiteral(s) 
-      }
+      case _ => getTLiteral(s)
     }
   }
   
@@ -224,4 +238,8 @@ case object SimpleQuery {
     case Some(TConjunct(name, map)) => Some(SimpleQuery(name, map))
     case _ => None
   }
+}
+
+trait TConjunctRewriteRule {
+  def rewrite(c: TConjunct): List[TConjunct]
 }
