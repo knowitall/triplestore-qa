@@ -9,7 +9,6 @@
 $(document).ready(function() {
     initialize();
     var exs = [
-        {q: 'bush, type, us president', note: 'Keyword search over fields'}, 
         {q: '?, type, us president', note: 'Leave out a field using a question mark'}, 
         {q: '?, "type", "us president"', note: 'Quote strings for exact matches'}, 
         {q: "(salad, with, $x) ($x, source of, protein)", note: "Dollar signs prefixes introduce join variables"},
@@ -31,7 +30,27 @@ $(document).ready(function() {
     }
     #results {
         width: 100%;
-        font-family: courier;
+    }
+    .highlight {
+        color: red;
+    }
+    .conjunct {
+        display: inline;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .tuples {
+        border-collapse: collapse;
+    }
+    .tuples td {
+        width: 100px;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid black;
+    }
+    .conjunctiveQuery {
+        margin: 10px;
+        padding: 10px;
     }
 </style>
 <body>
@@ -40,7 +59,8 @@ $(document).ready(function() {
         <h1>Triplestore Search</h1>
         <table id="examples"></table><br/>
         <div style="font-size: large; width: 100%">Input: <input id="inputbox"/></div>
-        <pre id="results"></pre>
+        <div id="results">
+        </div>
     </div>
 
 </body>
