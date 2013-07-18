@@ -1,6 +1,7 @@
 package edu.knowitall.execution
 import edu.knowitall.execution.Search.Field
 import edu.knowitall.triplestore.TriplestoreClient
+import org.slf4j.LoggerFactory
 
 trait UQuery
 
@@ -29,6 +30,8 @@ trait QueryExecutor {
 
 case class IdentityExecutor(client: TriplestoreClient) extends QueryExecutor {
   
+  val logger = LoggerFactory.getLogger(this.getClass) 
+  
   val joiner = Joiner(client)
   
   type ADs = Iterable[AnswerDerivation]
@@ -41,7 +44,7 @@ case class IdentityExecutor(client: TriplestoreClient) extends QueryExecutor {
   
   def deriveAnswersSimple(qo: ExecConjunctiveQuery): ADs =
     for (q <- expandQuery(qo);
-         t <- joiner.joinQueries(q.conjuncts);
+         t <- joiner.joinQueries(q.query.conjuncts);
          et = ExecTuple(t, q)) 
       yield AnswerDerivation(q.projAttr, et)
 
