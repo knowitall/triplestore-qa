@@ -12,6 +12,7 @@ import edu.knowitall.execution.IdentityExecutor
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.BasicAnswerGrouper
 import edu.knowitall.scoring.NumDerivationsScorer
+import edu.knowitall.triplestore.CachedTriplestoreClient
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
@@ -40,8 +41,10 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
 }
 case object QASystem {
   def getInstance = {
-    val parser = FormalQuestionParser() 
-    val executor = IdentityExecutor(SolrClient("http://rv-n12:8983/solr/triplestore", 500))
+    val parser = FormalQuestionParser()
+    val client = SolrClient("http://rv-n12:8983/solr/triplestore", 500)
+    val cached = CachedTriplestoreClient(client, 100000)
+    val executor = IdentityExecutor(cached)
     val grouper = BasicAnswerGrouper()
     val scorer = NumDerivationsScorer()
     val qa = QASystem(parser, executor, grouper, scorer)

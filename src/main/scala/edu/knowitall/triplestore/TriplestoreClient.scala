@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory
 import edu.knowitall.execution.Conditions._ 
 import edu.knowitall.execution.Search._
 import edu.knowitall.execution._
+import com.twitter.util.LruMap
 
 /**
  * The interface to a Triplestore.
@@ -39,6 +40,25 @@ trait TriplestoreClient {
    */
   def namedSearch(name: String, q: TSQuery, maxHits: Int): List[Tuple] = 
     search(q, maxHits) map { t => t.renamePrefix(name) }
+}
+
+case class CachedTriplestoreClient(client: TriplestoreClient, size: Int = 1000) 
+  extends TriplestoreClient {
+  
+  val map = new LruMap[(TSQuery, Int), List[Tuple]](size)
+  
+  def search(q: TSQuery, hits: Int): List[Tuple] = {
+    map.get((q, hits)) match {
+      case Some(x) => x
+      case _ => {
+        val results = client.search(q, hits)
+        map.put((q, hits), results)
+        results
+      }
+    }
+  }
+  
+  def count(q: TSQuery) = client.count(q)
 }
 
 /**
