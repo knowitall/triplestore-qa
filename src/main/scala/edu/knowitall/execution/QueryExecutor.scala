@@ -8,7 +8,7 @@ trait ExecQuery {
   val uquery: UQuery
 }
 
-case class ExecConjunctiveQuery(uquery: ConjunctiveQuery) extends ExecQuery {
+case class ExecConjunctiveQuery(uquery: ConjunctiveQuery, query: ConjunctiveQuery) extends ExecQuery {
   val conjuncts = uquery.conjuncts
   val projAttr = uquery.qAttr
 }
@@ -34,15 +34,19 @@ case class IdentityExecutor(client: TriplestoreClient) extends QueryExecutor {
   type ADs = Iterable[AnswerDerivation]
   
   def deriveAnswers(q: UQuery): ADs = q match {
-    case c: ConjunctiveQuery => deriveAnswersSimple(ExecConjunctiveQuery(c))
+    case c: ConjunctiveQuery => deriveAnswersSimple(ExecConjunctiveQuery(c, c))
     case _ => throw new 
       UnsupportedOperationException(s"Unable to execute query type: $q")
   }
   
-  def deriveAnswersSimple(q: ExecConjunctiveQuery): ADs = { 
-    val tuples = joiner.joinQueries(q.conjuncts)
-    for (t <- tuples; et = ExecTuple(t, q)) 
+  def deriveAnswersSimple(qo: ExecConjunctiveQuery): ADs =
+    for (q <- expandQuery(qo);
+         t <- joiner.joinQueries(q.conjuncts);
+         et = ExecTuple(t, q)) 
       yield AnswerDerivation(q.projAttr, et)
-  }
+
+  def expandQuery(q: ExecConjunctiveQuery): List[ExecConjunctiveQuery] =
+    for (cq <- ListConjunctiveQuery.expandSetTLiterals(q.uquery)) 
+      yield ExecConjunctiveQuery(q.uquery, cq)
 
 }

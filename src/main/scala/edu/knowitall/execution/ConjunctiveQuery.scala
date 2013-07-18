@@ -240,7 +240,7 @@ case object ListConjunctiveQuery {
     xs.foldLeft(Seq(Seq.empty[A])) {
     (x, y) => for (a <- x.view; b <- y) yield a :+ b
   }
-  def expandSetTLiterals(cq: ListConjunctiveQuery): List[ListConjunctiveQuery] = {
+  def expandSetTLiterals(cq: ConjunctiveQuery): List[ConjunctiveQuery] = {
     val css = for (c <- cq.conjuncts; cs = TConjunct.expandSetTLiterals(c)) yield cs
     val product = combine[TConjunct](css).toList
     for (cs <- product) yield ListConjunctiveQuery(cq.qVar, cs.toList)
