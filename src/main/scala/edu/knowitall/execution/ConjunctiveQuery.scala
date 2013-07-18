@@ -213,7 +213,7 @@ case class ListConjunctiveQuery(qVar: TVariable, conjuncts: List[TConjunct])
   }
 }
 case object ListConjunctiveQuery {
-  def fromString(s: String): Option[ConjunctiveQuery] = {
+  def fromString(s: String): Option[ListConjunctiveQuery] = {
     val parts = s.split(":", 2)
     if (parts.size == 2) {
       val left = parts(0)
