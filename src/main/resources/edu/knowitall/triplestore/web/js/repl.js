@@ -50,7 +50,8 @@ var displayGroup = function(group) {
 
 var displayUQueryGroup = function(uqueryGroup) {
     var $group = $('<div class="uqueryGroup"/>');
-    $group.append(displayConjQuery(uqueryGroup.uquery));
+    var $h = $('<h3>Underspecified Query: </h3>').appendTo($group);
+    $h.append(displayConjQuery(uqueryGroup.uquery));
     $.each(uqueryGroup.equeries, function(i, equeryGroup) {
         $group.append(displayEQueryGroup(equeryGroup));
     });
@@ -58,11 +59,15 @@ var displayUQueryGroup = function(uqueryGroup) {
 };
 
 var displayEQueryGroup = function(equeryGroup) {
+    var $group = $('<div class="equeryGroup"/>');
+    var $h = $('<h3>Executed Query: </h3>').appendTo($group);
+    $h.append(displayConjQuery(equeryGroup.equery.query));
     var tuples = equeryGroup.tuples;
     var cols = getCols(equeryGroup);
     var attr = equeryGroup.attr;
     var $ts = displayTuples(cols, tuples, attr);
-    return $ts;
+    $ts.appendTo($group);
+    return $group;
 };
 
 var displayTuples = function(cols, tuples, attr) {
