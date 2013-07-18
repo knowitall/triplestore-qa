@@ -41,39 +41,33 @@ var writeResults = function(data) {
 
 var displayGroup = function(group) {
     var $g = $('<div class="answerGroup"/>');
-    $g.append($('<h2>' + group.alternates[0] + '</h2>'));
+    var $a = $('<div class="answer"/>').appendTo($g);
+    $a.append($('<h1>' + group.alternates[0] + '</h1>'));
+    $a.append($('<div class="score">Score = ' + group.score + '</div>'));
     $.each(group.uqueries , function(i, uqueryGroup) {
-        $g.append(displayUQueryGroup(uqueryGroup));
+        $.each(uqueryGroup.equeries, function(j, equeryGroup) {
+            $g.append(displayEQueryGroup(equeryGroup));
+        });
     });
     return $g;
 };
 
-var displayUQueryGroup = function(uqueryGroup) {
-    var $group = $('<div class="uqueryGroup"/>');
-    var $h = $('<h3>Underspecified Query: </h3>').appendTo($group);
-    $h.append(displayConjQuery(uqueryGroup.uquery));
-    $.each(uqueryGroup.equeries, function(i, equeryGroup) {
-        $group.append(displayEQueryGroup(equeryGroup));
-    });
-    return $group;
-};
-
 var displayEQueryGroup = function(equeryGroup) {
     var $group = $('<div class="equeryGroup"/>');
-    var $h = $('<h3>Executed Query: </h3>').appendTo($group);
-    $h.append(displayConjQuery(equeryGroup.equery.query));
     var tuples = equeryGroup.tuples;
     var cols = getCols(equeryGroup);
+    var colNames = getColNames(equeryGroup);
     var attr = equeryGroup.attr;
-    var $ts = displayTuples(cols, tuples, attr);
+    var $ts = displayTuples(cols, colNames, tuples, attr);
     $ts.appendTo($group);
     return $group;
 };
 
-var displayTuples = function(cols, tuples, attr) {
-    var $t = $('<table class="tuples"></table>');
+var displayTuples = function(cols, colNames, tuples, attr) {
+    var $tc = $('<div class="tuplesContainer"/>');
+    var $t = $('<table class="tuples"></table>').appendTo($tc);
     var $h = $('<tr/>').appendTo($t);
-    $.each(cols, function(i, col) { 
+    $.each(colNames, function(i, col) { 
         $h.append('<th>' + col + '</th>');
     });
     $.each(tuples, function(i, tuple) {
@@ -81,7 +75,9 @@ var displayTuples = function(cols, tuples, attr) {
         $t.append(tupleToRow(cols, tuple, attr));
     });
     dedupTable($t);
-    return $t;
+    $t.find('tr:even').addClass('even');
+    $t.find('tr:odd').addClass('odd');
+    return $tc;
 };
 
 var getCols = function(equeryGroup) {
@@ -94,6 +90,18 @@ var getCols = function(equeryGroup) {
         arr.push(tbl + ".rel");
         arr.push(tbl + ".arg2");
         arr.push(tbl + ".namespace");
+    });
+    return arr;
+};
+var getColNames = function(equeryGroup) {
+    var conjs = equeryGroup.equery.query.conjuncts;
+    var arr = new Array();
+    $.each(conjs, function(i, conj) {
+        var tbl = conj.name;
+        arr.push(conj.values.arg1);
+        arr.push(conj.values.rel);
+        arr.push(conj.values.arg2);
+        arr.push('namespace');
     });
     return arr;
 };
