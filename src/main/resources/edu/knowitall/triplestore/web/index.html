@@ -21,7 +21,6 @@ $(document).ready(function() {
         {q: '$y : ($x, directed by, woody allen) ($x, film location, $y) ($y, "type", "city")', note: ""},
     ];
     for (var i = 0; i < exs.length; i++) { addExample(exs[i]); }
-    $.getJSON('data.json', writeResults);
 });
 </script>
 </head>
@@ -57,7 +56,7 @@ $(document).ready(function() {
         width: 100px;
         padding: 10px;
         text-align: center;
-        background-color: white;
+        background-color: Beige;
     }
     .tuples th {
         border-bottom: 1px solid black;
@@ -90,9 +89,12 @@ $(document).ready(function() {
         float: right;
     }
     .answerGroup {
-        width: 1500px;
         display: table;
         margin-bottom: 50px;
+        width: 100%;
+    }
+    .endTuple {
+        border-right: 1px solid black;
     }
 </style>
 <body>

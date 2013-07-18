@@ -113,6 +113,9 @@ var tupleToRow = function(cols, tuple, attr) {
         if (col == attr) {
             $cell.addClass("highlight");
         }
+        if (i % 4 == 3 && i < cols.length - 1 && i > 0) {
+            $cell.addClass("endTuple");
+        }
         $row.append($cell);
     });
     return $row;
