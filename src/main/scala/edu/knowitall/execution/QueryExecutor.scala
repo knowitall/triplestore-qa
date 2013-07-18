@@ -42,14 +42,9 @@ case class IdentityExecutor(client: TriplestoreClient) extends QueryExecutor {
       UnsupportedOperationException(s"Unable to execute query type: $q")
   }
   
-  def deriveAnswersSimple(qo: ExecConjunctiveQuery): ADs =
-    for (q <- expandQuery(qo);
-         t <- joiner.joinQueries(q.query.conjuncts);
+  def deriveAnswersSimple(q: ExecConjunctiveQuery): ADs =
+    for (t <- joiner.joinQueries(q.query.conjuncts);
          et = ExecTuple(t, q)) 
       yield AnswerDerivation(q.projAttr, et)
-
-  def expandQuery(q: ExecConjunctiveQuery): List[ExecConjunctiveQuery] =
-    for (cq <- ListConjunctiveQuery.expandSetTLiterals(q.uquery)) 
-      yield ExecConjunctiveQuery(q.uquery, cq)
 
 }
