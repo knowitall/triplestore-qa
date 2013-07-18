@@ -159,6 +159,26 @@ case object TConjunct {
                        q <- fromString(s"r$i", s)) yield q }.toList
     queries
   }
+  
+  def replaceField(c: TConjunct, f: Field, vs: List[TVal]): List[TConjunct] = {
+    for (v <- vs) yield TConjunct(c.name, c.values + (f -> v))
+  }
+  
+  def expandSetTLiteralsField(c: TConjunct, f: Field): List[TConjunct] = {
+    c.values.get(f) match {
+      case Some(v: SetTLiteral) => replaceField(c, f, v.values)
+      case _ => List(c)
+    }
+  }
+  
+  def getSetTLiteral(c: TConjunct): Option[Field] = c.values.keys.find(c.values(_).isInstanceOf[SetTLiteral])
+  
+  def expandSetTLiterals(c: TConjunct): List[TConjunct] = {
+    getSetTLiteral(c) match {
+      case Some(f: Field) => expandSetTLiteralsField(c, f).flatMap(expandSetTLiterals)
+      case _ => List(c)
+    }
+  }
 } 
 
 /**
@@ -214,7 +234,18 @@ case object ListConjunctiveQuery {
     } else {
       None
     }
-  } 
+  }
+
+  def combine[A](xs: Traversable[Traversable[A]]): Seq[Seq[A]] =
+    xs.foldLeft(Seq(Seq.empty[A])) {
+    (x, y) => for (a <- x.view; b <- y) yield a :+ b
+  }
+  def expandSetTLiterals(cq: ListConjunctiveQuery): List[ListConjunctiveQuery] = {
+    val css = for (c <- cq.conjuncts; cs = TConjunct.expandSetTLiterals(c)) yield cs
+    val product = combine[TConjunct](css).toList
+    for (cs <- product) yield ListConjunctiveQuery(cq.qVar, cs.toList)
+  }
+
 }
 
 /**
