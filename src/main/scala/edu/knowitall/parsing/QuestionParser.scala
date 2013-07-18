@@ -12,7 +12,7 @@ trait QuestionParser {
 
 case class FormalQuestionParser() extends QuestionParser {
   override def parse(q: String) = ListConjunctiveQuery.fromString(q) match {
-    case Some(cq: ConjunctiveQuery) => List(cq)
+    case Some(cq: ListConjunctiveQuery) => ListConjunctiveQuery.expandSetTLiterals(cq)
     case _ => List()
   }
 }
