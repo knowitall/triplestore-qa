@@ -17,6 +17,9 @@ import org.apache.commons.io.IOUtils
 import edu.knowitall.apps.SimpleRepl
 import edu.knowitall.apps.QASystem
 import edu.knowitall.apps.JsonSerialization
+import unfiltered.request.HttpRequest
+import edu.knowitall.apps.QAConfig
+import edu.knowitall.apps.Components
 
 
 object WebRepl extends App {
@@ -28,15 +31,16 @@ object WebRepl extends App {
    */
   object Plan extends unfiltered.filter.Plan {
     
-    val qa = QASystem.getInstance
-    
     def intent = Intent {
       
       /**
        * Map the URL /query to the runQuery function.
        */
       case req @ GET(Path(Seg("query" :: Nil))) => 
-        runQuery(req.parameterValues("q").mkString(" "))
+        runQuery(req.parameterValues("q").mkString(" "), getConfig(req))
+        
+      case req @ GET(Path(Seg("listComponents" :: Nil))) =>
+        listComponents()
 
       /**
        * Map all other URL paths to get the static content stored as a 
@@ -46,13 +50,43 @@ object WebRepl extends App {
         
     }
     
-    def runQuery(query: String) = {
+    def getConfig(req: HttpRequest[_]): QAConfig = {
+      var config = QAConfig()
+      config = getParam(req, "parser") match {
+        case Some(s) => config.copy(parser = s)
+        case _ => config
+      }
+      config = getParam(req, "executor") match {
+        case Some(s) => config.copy(executor = s)
+        case _ => config
+      }
+      config = getParam(req, "grouper") match {
+        case Some(s) => config.copy(grouper = s)
+        case _ => config
+      }
+      config = getParam(req, "scorer") match {
+        case Some(s) => config.copy(scorer = s)
+        case _ => config
+      }
+      config
+    }
+    
+    def getParam(req: HttpRequest[_], name: String): Option[String] =
+      req.parameterValues(name).mkString(" ") match {
+        case s: String if s.trim() != "" => Some(s)
+        case _ => None
+      }
+    
+    def runQuery(query: String, config: QAConfig) = {
       logger.info(s"Got query '$query'")
+      val qa = QASystem.getInstance(config) match {
+        case Some(x) => x
+        case None => throw new IllegalStateException("could not get qa")
+      }
       val result = qa.answer(query)
       val resultJson = JsonSerialization.serializeAnswers(result)
-      ContentEncoding("application/json") ~> ResponseString(resultJson) ~> Ok
       logger.info(s"Finished computing results for '$query'")
-      ResponseString(resultJson) ~> Ok      
+      ContentEncoding("application/json") ~> ResponseString(resultJson) ~> Ok
     }
     
     def getStatic(path: String) = {
@@ -65,6 +99,15 @@ object WebRepl extends App {
           ResponseString("Not found!") ~> NotFound
         }
       }
+    
+    def listComponents() = {
+      val result = Map("parser" -> Map("name" -> "Question Parsing", "options" -> Components.parsers.keys.toList),
+                       "executor" -> Map("name" -> "Query Execution", "options" -> Components.executors.keys.toList),
+                       "grouper" -> Map("name" -> "Answer Grouping", "options" -> Components.groupers.keys.toList),
+                       "scorer" -> Map("name" -> "Answer Scoring", "options" -> Components.scorers.keys.toList))
+      val resultJson = JsonSerialization.serialize(result)
+      ContentEncoding("application/json") ~> ResponseString(resultJson) ~> Ok
+    }
   }
   
   /**

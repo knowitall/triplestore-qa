@@ -20,7 +20,7 @@ $(document).ready(function() {
         {q: '$x : ($x, directed by, woody allen) ($x, film location, $y) ($y, "type", "city")', note: "specify the query variable using a colon"},
         {q: '$y : ($x, directed by, woody allen) ($x, film location, $y) ($y, "type", "city")', note: ""},
     ];
-    for (var i = 0; i < exs.length; i++) { addExample(exs[i]); }
+    //for (var i = 0; i < exs.length; i++) { addExample(exs[i]); }
 });
 </script>
 </head>
@@ -60,7 +60,7 @@ $(document).ready(function() {
     }
     .tuples th {
         border-bottom: 1px solid black;
-        font-weight: normal;
+        font-weight: bold;
     }
     .even td {
         background-color: #f5f5f5;
@@ -96,12 +96,24 @@ $(document).ready(function() {
     .endTuple {
         border-right: 1px solid black;
     }
+    #config select {
+        width: 200px;
+        font-size: large;
+    }
+    #config {
+        margin: 5px;
+    }
+    #config td {
+        padding: 5px
+    }
 </style>
 <body>
     <div id="content">
         <h1>Triplestore Search</h1>
-        <table id="examples"></table><br/>
-        <div style="font-size: large; width: 100%">Input: <input id="inputbox"/></div>
+        <div style="font-size: large; width: 100%">
+        <div id="config"></div>
+        Input: <input id="inputbox"/>
+        </div>
         <div id="results">
         </div>
     </div>

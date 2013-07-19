@@ -13,6 +13,8 @@ import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.BasicAnswerGrouper
 import edu.knowitall.scoring.NumDerivationsScorer
 import edu.knowitall.triplestore.CachedTriplestoreClient
+import edu.knowitall.parsing.StringMatchingParser
+import edu.knowitall.scoring.UniformAnswerScorer
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
@@ -40,14 +42,37 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
   
 }
 case object QASystem {
-  def getInstance = {
-    val parser = FormalQuestionParser()
-    val client = SolrClient("http://rv-n12:8983/solr/triplestore", 500)
-    val cached = CachedTriplestoreClient(client, 100000)
-    val executor = IdentityExecutor(cached)
-    val grouper = BasicAnswerGrouper()
-    val scorer = NumDerivationsScorer()
-    val qa = QASystem(parser, executor, grouper, scorer)
-    qa
-  }
+  
+  def getInstance(config: QAConfig = QAConfig()): Option[QASystem] =
+    for (parser <- Components.parsers.get(config.parser);
+         executor <- Components.executors.get(config.executor);
+         grouper <- Components.groupers.get(config.grouper);
+         scorer <- Components.scorers.get(config.scorer))
+      yield QASystem(parser, executor, grouper, scorer)
+
+}
+
+case class QAConfig(parser: String = "formal", 
+                    executor: String = "identity",
+                    grouper: String = "basic",
+                    scorer: String = "numDerivations")
+
+case object Components {
+  
+  val baseClient = SolrClient("http://rv-n12:8983/solr/triplestore", 500)
+  val client = CachedTriplestoreClient(baseClient, 100000)
+  
+  val parsers: Map[String, QuestionParser] =
+    Map("formal" -> FormalQuestionParser(),
+      "keyword" -> StringMatchingParser(client))
+      
+  val executors: Map[String, QueryExecutor] =
+    Map("identity" -> IdentityExecutor(client))
+  
+  val groupers: Map[String, AnswerGrouper] =
+    Map("basic" -> BasicAnswerGrouper())
+  
+  val scorers: Map[String, AnswerScorer] =
+    Map("numDerivations" -> NumDerivationsScorer(),
+      "uniform" -> UniformAnswerScorer())
 }

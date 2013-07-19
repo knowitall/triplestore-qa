@@ -4,7 +4,9 @@ var maxRows = 50;
 var query = function() {
     $('#results').html('<img src="spinner.gif"/>');
     var q = $('#inputbox').val();
-    $.getJSON(url, {'q': q}, function(data) {
+    var opts = $('#config select').serializeObject();
+    opts.q = q;
+    $.getJSON(url, opts, function(data) {
         $('#results').html(writeResults(data))
     })
     .fail(function() { $('#results').html('Error.') });
@@ -18,8 +20,27 @@ var initialize = function() {
             query();
         }
     });
+    initConfig();
     $('#inputbox').focus();
 }
+
+var initConfig = function() {
+    var $conf = $('#config');
+    var $t = $('<table></table>').appendTo($conf);
+    $.getJSON('/listComponents', function(data) {
+        $.each(data, function(k, val) {
+            var $r = $('<tr/>').appendTo($t);
+            $r.append('<td style="text-align: right">' + val.name + ':</td>');
+            var $td = $('<td/>').appendTo($r);
+            var $sel = $('<select name="' + k + '"></select>').appendTo($td);
+            $.each(val.options, function(i, v) {
+                var $o = $('<option value="'+v+'">'+v+'</option>');
+                $o.appendTo($sel);
+            });
+            $sel.appendTo($r);
+        });
+    });
+};
 
 var addExample = function(ex) {
     var $link = $('<a href="#">'+ex.q+'</a>');
@@ -152,4 +173,21 @@ var dedupTable = function($t) {
         else
             seen[txt] = true;
     });
+};
+
+$.fn.serializeObject = function()
+{
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+        if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
 };
