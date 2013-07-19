@@ -136,6 +136,7 @@ case object SolrClient {
       case v: Float => Some(v)
       case v: Double => Some(v)
       case v: Integer => Some(v)
+      case v: Boolean => Some(v)
       case _ => None
     }
   }
