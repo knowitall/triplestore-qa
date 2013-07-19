@@ -13,7 +13,7 @@ import edu.knowitall.execution.TVal
 import edu.knowitall.execution.Search.Conjunction
 import edu.knowitall.execution.Search.FieldKeywords
 import edu.knowitall.execution.TConjunct
-import edu.knowitall.tool.postag.ClearPostagger
+import edu.knowitall.tool.tokenize.ClearTokenizer
 import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.execution.TLiteral
 import edu.knowitall.execution.QuotedTLiteral
@@ -70,14 +70,14 @@ case class StringMatchingParser(client: TriplestoreClient) extends LexiconParser
 
 case class OldParalexParser() extends LexiconParser {
   val lexicon = new SolrLexicon()
-  val postagger = new ClearPostagger
+  override val tokenizer = new ClearTokenizer
   val stemmer = new MorphaStemmer
   override def parse(q: String) = {
     super.parse(preprocess(q)).map(postprocess(_))
   }
 
   def preprocess(q: String): String = {
-    val nlpd = postagger.postag(q).map(stemmer.lemmatizePostaggedToken)
+    val nlpd = tokenizer.tokenize(q.toLowerCase()).map(stemmer.stemToken(_))
     nlpd.map(_.lemma).mkString(" ")
   }
   
