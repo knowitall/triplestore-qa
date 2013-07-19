@@ -16,6 +16,7 @@ import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.parsing.StringMatchingParser
 import edu.knowitall.scoring.UniformAnswerScorer
 import edu.knowitall.parsing.OldParalexParser
+import edu.knowitall.execution.RelationSynonymExecutor
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
@@ -69,7 +70,8 @@ case object Components {
       "paralex-old" -> OldParalexParser())
       
   val executors: Map[String, QueryExecutor] =
-    Map("identity" -> IdentityExecutor(client))
+    Map("identity" -> IdentityExecutor(client),
+        "berantRules" -> RelationSynonymExecutor(client, IdentityExecutor(client)))
   
   val groupers: Map[String, AnswerGrouper] =
     Map("basic" -> BasicAnswerGrouper())
