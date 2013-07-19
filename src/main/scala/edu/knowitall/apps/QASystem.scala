@@ -15,6 +15,7 @@ import edu.knowitall.scoring.NumDerivationsScorer
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.parsing.StringMatchingParser
 import edu.knowitall.scoring.UniformAnswerScorer
+import edu.knowitall.parsing.OldParalexParser
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
@@ -23,7 +24,7 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
   def answer(question: String): List[ScoredAnswerGroup] = {
     
     logger.info(s"Parsing question '$question'")
-    val queries = parser.parse(question)
+    val queries = parser.parse(question).take(10)
     
     logger.info(s"Executing queries for '$question'")
     val derivs = for (query <- queries.par; 
@@ -64,7 +65,8 @@ case object Components {
   
   val parsers: Map[String, QuestionParser] =
     Map("formal" -> FormalQuestionParser(),
-      "keyword" -> StringMatchingParser(client))
+      "keyword" -> StringMatchingParser(client),
+      "paralex-old" -> OldParalexParser())
       
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client))

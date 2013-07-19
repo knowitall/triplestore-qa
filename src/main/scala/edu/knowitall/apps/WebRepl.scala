@@ -1,4 +1,4 @@
-package edu.knowitall.triplestore
+package edu.knowitall.apps
 import org.slf4j.LoggerFactory
 import unfiltered.filter.Intent
 import unfiltered.response.ResponseString
@@ -14,12 +14,7 @@ import unfiltered.request.Mime
 import java.io.File
 import unfiltered.response.ContentEncoding
 import org.apache.commons.io.IOUtils
-import edu.knowitall.apps.SimpleRepl
-import edu.knowitall.apps.QASystem
-import edu.knowitall.apps.JsonSerialization
 import unfiltered.request.HttpRequest
-import edu.knowitall.apps.QAConfig
-import edu.knowitall.apps.Components
 
 
 object WebRepl extends App {

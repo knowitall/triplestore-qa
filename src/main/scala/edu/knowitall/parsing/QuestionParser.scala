@@ -13,6 +13,11 @@ import edu.knowitall.execution.TVal
 import edu.knowitall.execution.Search.Conjunction
 import edu.knowitall.execution.Search.FieldKeywords
 import edu.knowitall.execution.TConjunct
+import edu.knowitall.tool.postag.ClearPostagger
+import edu.knowitall.tool.stem.MorphaStemmer
+import edu.knowitall.execution.TLiteral
+import edu.knowitall.execution.QuotedTLiteral
+import edu.knowitall.execution.ListConjunctiveQuery
 
 trait QuestionParser {
   
@@ -27,12 +32,13 @@ case class FormalQuestionParser() extends QuestionParser {
   }
 }
 
-case class StringMatchingParser(client: TriplestoreClient) extends QuestionParser {
+abstract class LexiconParser extends QuestionParser {
   
-  val lexicon = StringMatchLexicon(client)
-  val parser = BottomUpParser(lexicon)
+  def lexicon: Lexicon
+  
   val tokenizer = new Tokenizer
   override def parse(q: String) = {
+    val parser = BottomUpParser(lexicon)
     val tokens = tokenizer.tokenize(q)
     val words = tokens.map(t => QWord(t.string)).toIndexedSeq
     val derivs = parser.parse(words)
@@ -56,4 +62,45 @@ case class StringMatchingParser(client: TriplestoreClient) extends QuestionParse
     ListConjunctiveQuery(tvar, List(conj))
   }
   
+}
+
+case class StringMatchingParser(client: TriplestoreClient) extends LexiconParser {
+  val lexicon = StringMatchLexicon(client)
+}
+
+case class OldParalexParser() extends LexiconParser {
+  val lexicon = new SolrLexicon()
+  val postagger = new ClearPostagger
+  val stemmer = new MorphaStemmer
+  override def parse(q: String) = {
+    super.parse(preprocess(q)).map(postprocess(_))
+  }
+
+  def preprocess(q: String): String = {
+    val nlpd = postagger.postag(q).map(stemmer.lemmatizePostaggedToken)
+    nlpd.map(_.lemma).mkString(" ")
+  }
+  
+  def postprocess(u: UQuery): UQuery = u match {
+    case cq: ConjunctiveQuery => {
+      val newConjuncts = cq.conjuncts.map(fixConjunct)
+      ListConjunctiveQuery(cq.qVar, newConjuncts)
+    }
+    case _ => u
+  }
+  
+  def fixConjunct(c: TConjunct): TConjunct = {
+    val newVals = for ((f, v) <- c.values) yield (f, fixTVal(v))
+    TConjunct(c.name, newVals)
+  }
+  
+  def fixTVal(tval: TVal): TVal = tval match {
+    case l: UnquotedTLiteral => fixLiteral(l.value)
+    case l: QuotedTLiteral => fixLiteral(l.value)
+    case _ => tval
+  }
+  
+  def fixLiteral(l: String): UnquotedTLiteral = {
+    UnquotedTLiteral(l.dropRight(2).replaceFirst("^be-", "").replace('-', ' '))
+  }
 }

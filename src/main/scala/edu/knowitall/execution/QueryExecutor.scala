@@ -1,7 +1,9 @@
 package edu.knowitall.execution
 import edu.knowitall.execution.Search.Field
+import edu.knowitall.execution.Search.rel
 import edu.knowitall.triplestore.TriplestoreClient
 import org.slf4j.LoggerFactory
+import edu.knowitall.tool.stem.MorphaStemmer
 
 trait UQuery
 
