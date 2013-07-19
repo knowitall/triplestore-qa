@@ -31,6 +31,16 @@ case class Tuple(attrs: Map[String, Any]) {
     case _ => None
   }
   
+  def getBoolean(a: String) = attrs.get(a) match {
+    case Some(x: Boolean) => Some(x)
+    case _ => None
+  }
+  
+  def getFloat(a: String): Option[Float] = attrs.get(a) match {
+    case Some(x: Float) => Some(x)
+    case _ => None
+  }
+  
   /* Renames the attributes using the given function */
   def rename(f: String => String): Tuple = {
     Tuple(attrs.map{ case (k, v) => (f(k), v) })
