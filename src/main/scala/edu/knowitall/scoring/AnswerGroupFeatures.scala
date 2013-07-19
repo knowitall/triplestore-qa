@@ -10,36 +10,31 @@ object AnswerGroupFeatures {
   import edu.knowitall.tool.conf.Feature.booleanToDouble
   import edu.knowitall.tool.conf.FeatureSet
   import scala.collection.immutable.SortedMap
+  import TupleFeatures._
   
-  type AnswerGroupFeature = Feature[AnswerGroup, Double]
+  type AG = AnswerGroup
+  type AnswerGroupFeature = Feature[AnswerGroup, Boolean]
+  
+  def tuples(group: AG) = group.derivations.map(_.etuple.tuple)
+  def queryDerivations(group: AG) = group.derivations.groupBy(_.etuple.equery)
   
   /**
    * Generic features that apply to any AnswerGroup
    */
-  val features: Seq[AnswerGroupFeature] = Seq(
+  val features: Seq[(String, AG => Boolean)] = Seq(
       
-    Feature.from[AnswerGroup, Boolean]("Has answers from ReVerb", { group => 
-      group.derivations.find(_.etuple.tuple.get("namespace").exists(_ == "reverb")).nonEmpty 
-    }),
+    ("Has answers from ReVerb", { group: AG => tuples(group) exists isFromNamespace("reverb") }),
   
-    Feature.from[AnswerGroup, Boolean]("Has answers from Freebase", { group => 
-      group.derivations.find(_.etuple.tuple.get("namespace").exists(_ == "freebase")).nonEmpty 
-    }),
+    ("Has answers from Freebase", { group: AG => tuples(group) exists isFromNamespace("freebase") }),
     
-    Feature.from[AnswerGroup, Boolean]("Has alternate surface forms", { group => 
-      group.alternates.size >= 2
-    }),
+    ("Has alternate surface forms", { group: AG => group.alternates.size >= 2 }),
     
-    Feature.from[AnswerGroup, Boolean]("Has more than one AnswerDerivation", { group => 
-      group.derivations.size >= 2
-    }),
+    ("Has more than one AnswerDerivation", { group: AG => group.derivations.size >= 2 }),
     
-    Feature.from[AnswerGroup, Boolean]("Join fields agree by fbid", { group => 
-      group.derivations.groupBy(_.etuple.equery).forall { case (query, derivs) => joinsAgreeByFbid(query, derivs) }
-    })
+    ("Join fields agree by fbid", { group: AG => queryDerivations(group) forall (joinsAgreeByFbid _).tupled })
   )
   
-  def featureSet = FeatureSet(features)
+  def featureSet: FeatureSet[AG, Double] = FeatureSet(features.map(p => booleanToDouble(Feature.from(p._1, p._2))))
   
   // Feature Helper methods
   import edu.knowitall.execution.ExecQuery
@@ -67,5 +62,15 @@ object AnswerGroupFeatures {
       // if there are zero or one distinct fbids, then they agree.
       distinctFbids.size <= 1
     }
+  }
+}
+
+object TupleFeatures {
+  
+  import edu.knowitall.execution.Tuple
+  
+  def isFromNamespace(ns: String)(tuple: Tuple) = tuple.get("namespace").exists {
+    case s: String => s.contains(ns)
+    case _ => false
   }
 }
