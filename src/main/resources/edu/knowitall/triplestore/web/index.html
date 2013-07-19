@@ -11,16 +11,16 @@ $(document).ready(function() {
     var exs = [
         {q: '?, type, us president', note: 'Leave out a field using a question mark'}, 
         {q: '?, "type", "us president"', note: 'Quote strings for exact matches'}, 
-        {q: "(salad, with, $x) ($x, source of, protein)", note: "Dollar signs prefixes introduce join variables"},
-        {q: "(salad, with, $x) ($x, source of, protein) ($x, compatible with, vegetarians)", note: ""},
-        {q: "(salad, with, $x) ($x, source of, protein) ($x, compatible with, vegans)", note: ""},
+        {q: "(salad, with, $x) ($x, high in, protein)", note: "Dollar signs prefixes introduce join variables"},
+        {q: "(salad, with, $x) ($x, high in, protein) ($x, compatible with, vegetarians)", note: ""},
+        {q: "(salad, with, $x) ($x, high in, protein) ($x, compatible with, vegans)", note: ""},
         {q: "($x, discovered, radium) ($x, born in, $y) ($y, type, city)", note: "Multiple joins are allowed"},
         {q: '(haggis, $r, scotland) ($x, $r, italy) ($x, "type", food)', note: "Joins over relations are allowed, too"},
         {q: '(haggis, $r, scotland) ($x, $r, france) ($x, "type", food)', note: ""},
         {q: '$x : ($x, directed by, woody allen) ($x, film location, $y) ($y, "type", "city")', note: "specify the query variable using a colon"},
         {q: '$y : ($x, directed by, woody allen) ($x, film location, $y) ($y, "type", "city")', note: ""},
     ];
-    //for (var i = 0; i < exs.length; i++) { addExample(exs[i]); }
+    for (var i = 0; i < exs.length; i++) { addExample(exs[i]); }
 });
 </script>
 </head>
@@ -110,6 +110,7 @@ $(document).ready(function() {
 <body>
     <div id="content">
         <h1>Triplestore Search</h1>
+        <div id="examples"></div>
         <div style="font-size: large; width: 100%">
         <div id="config"></div>
         Input: <input id="inputbox"/>

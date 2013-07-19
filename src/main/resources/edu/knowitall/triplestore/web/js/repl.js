@@ -47,7 +47,6 @@ var addExample = function(ex) {
     $link.click(function(e) {
         e.preventDefault();
         $('#inputbox').val(ex.q);
-        query();
     });
     var $item = $('<tr/>').appendTo($('#examples')).append("<td>" + ex.note + "</td>").append("<td>").append($link).append("</td>");
 };
