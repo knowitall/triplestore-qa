@@ -213,7 +213,7 @@ case class ListConjunctiveQuery(qVar: TVariable, conjuncts: List[TConjunct])
   }
 }
 case object ListConjunctiveQuery {
-  def fromString(s: String): Option[ConjunctiveQuery] = {
+  def fromString(s: String): Option[ListConjunctiveQuery] = {
     val parts = s.split(":", 2)
     if (parts.size == 2) {
       val left = parts(0)
@@ -236,13 +236,10 @@ case object ListConjunctiveQuery {
     }
   }
 
-  def combine[A](xs: Traversable[Traversable[A]]): Seq[Seq[A]] =
-    xs.foldLeft(Seq(Seq.empty[A])) {
-    (x, y) => for (a <- x.view; b <- y) yield a :+ b
-  }
+
   def expandSetTLiterals(cq: ConjunctiveQuery): List[ConjunctiveQuery] = {
     val css = for (c <- cq.conjuncts; cs = TConjunct.expandSetTLiterals(c)) yield cs
-    val product = combine[TConjunct](css).toList
+    val product = Utils.cartesian[TConjunct](css).toList
     for (cs <- product) yield ListConjunctiveQuery(cq.qVar, cs.toList)
   }
 
@@ -271,6 +268,9 @@ case object SimpleQuery {
   }
 }
 
-trait TConjunctRewriteRule {
-  def rewrite(c: TConjunct): List[TConjunct]
+object Utils {
+  def cartesian[A](xs: Traversable[Traversable[A]]): Seq[Seq[A]] =
+    xs.foldLeft(Seq(Seq.empty[A])) {
+    (x, y) => for (a <- x.view; b <- y) yield a :+ b
+  }
 }

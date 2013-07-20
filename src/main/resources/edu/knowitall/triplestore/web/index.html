@@ -11,9 +11,9 @@ $(document).ready(function() {
     var exs = [
         {q: '?, type, us president', note: 'Leave out a field using a question mark'}, 
         {q: '?, "type", "us president"', note: 'Quote strings for exact matches'}, 
-        {q: "(salad, with, $x) ($x, source of, protein)", note: "Dollar signs prefixes introduce join variables"},
-        {q: "(salad, with, $x) ($x, source of, protein) ($x, compatible with, vegetarians)", note: ""},
-        {q: "(salad, with, $x) ($x, source of, protein) ($x, compatible with, vegans)", note: ""},
+        {q: "(salad, with, $x) ($x, high in, protein)", note: "Dollar signs prefixes introduce join variables"},
+        {q: "(salad, with, $x) ($x, high in, protein) ($x, compatible with, vegetarians)", note: ""},
+        {q: "(salad, with, $x) ($x, high in, protein) ($x, compatible with, vegans)", note: ""},
         {q: "($x, discovered, radium) ($x, born in, $y) ($y, type, city)", note: "Multiple joins are allowed"},
         {q: '(haggis, $r, scotland) ($x, $r, italy) ($x, "type", food)', note: "Joins over relations are allowed, too"},
         {q: '(haggis, $r, scotland) ($x, $r, france) ($x, "type", food)', note: ""},
@@ -25,6 +25,9 @@ $(document).ready(function() {
 </script>
 </head>
 <style>
+    body {
+        font-family: arial;
+    }
     #inputbox {
         width: 90%;
         font-size: large;
@@ -32,17 +35,19 @@ $(document).ready(function() {
     }
     #results {
         width: 100%;
+        margin: 0 auto;
     }
     .equeryHead {
         display: inline;
     }
     .highlight {
-        color: red;
+        color: blue;
     }
     .conjunct {
         display: inline;
-        padding-left: 5px;
-        padding-right: 5px;
+        margin-right: 5px;
+    }
+    .tuplesContainer table {
     }
     .tuples {
         border-collapse: collapse;
@@ -51,20 +56,65 @@ $(document).ready(function() {
         width: 100px;
         padding: 10px;
         text-align: center;
-        border: 1px solid black;
+        background-color: Beige;
     }
-    .conjunctiveQuery {
-        margin: 10px;
-        padding: 10px;
-        display: inline;
+    .tuples th {
+        border-bottom: 1px solid black;
+        font-weight: bold;
+    }
+    .even td {
+        background-color: #f5f5f5;
+    }
+    .odd td {
+        background-color: #fffff0;
+    }
+    .answer {
+        text-align: right;
+        padding-right: 10px;
+        margin: 5px;
+        float: left;
+        width: 15%;
+    }
+    .answer h1 {
+        font-size: 16pt;
+        color: blue;
+    }
+    .score {
+        color: grey;
+    }
+    .equeryGroup {
+        margin: 5px;
+        padding: 5px;
+        width: 80%;
+        float: right;
+    }
+    .answerGroup {
+        display: table;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .endTuple {
+        border-right: 1px solid black;
+    }
+    #config select {
+        width: 200px;
+        font-size: large;
+    }
+    #config {
+        margin: 5px;
+    }
+    #config td {
+        padding: 5px
     }
 </style>
 <body>
-
     <div id="content">
         <h1>Triplestore Search</h1>
-        <table id="examples"></table><br/>
-        <div style="font-size: large; width: 100%">Input: <input id="inputbox"/></div>
+        <div id="examples"></div>
+        <div style="font-size: large; width: 100%">
+        <div id="config"></div>
+        Input: <input id="inputbox"/>
+        </div>
         <div id="results">
         </div>
     </div>

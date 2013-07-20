@@ -62,3 +62,9 @@ object LogisticAnswerScorer {
     new LogisticRegression(featureSet, weightsMap, intercept)
   }
 }
+
+case class NumDerivationsScorer() extends AnswerScorer {
+  override def scoreAnswer(group: AnswerGroup) = 
+    BasicScoredAnswer(group.answer, group.alternates, group.derivations, 
+        group.derivations.size.toDouble)
+}

@@ -48,6 +48,8 @@ libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-stem-
 
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-clear" % "2.4.1" exclude("com.github.scopt","scopt")
 
+libraryDependencies += "com.twitter" %% "util-collection" % "6.3.6"
+
 libraryDependencies ++= Seq(
     "net.databinder" %% "unfiltered-filter" % "0.6.8",
     "net.databinder" %% "unfiltered-jetty" % "0.6.8",
