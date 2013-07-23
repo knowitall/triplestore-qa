@@ -237,7 +237,7 @@ case object ListConjunctiveQuery {
         case v :: rest => v :: rest
         case _ => throw new IllegalArgumentException(s"Expected variable: $s")
       }
-      Some(ListConjunctiveQuery(qVars, conjuncts.toList))
+      Some(ListConjunctiveQuery(qVars.distinct, conjuncts.toList))
     } else {
       None
     }
