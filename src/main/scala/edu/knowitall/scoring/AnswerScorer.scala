@@ -26,17 +26,6 @@ case class UniformAnswerScorer(s: Double = 0.0) extends AnswerScorer {
     BasicScoredAnswer(group.answer, group.alternates, group.derivations, s)
 }
 
-case class ClassifierScoredAnswer(
-    answer: String, 
-    alternates: List[String], 
-    derivations: List[AnswerDerivation], 
-    score: Double, 
-    featureVector: Seq[(String, Double)]) extends ScoredAnswerGroup {
-  
-  def featureNames = featureVector.map(_._1)
-  def featureValues = featureVector.map(_._2)
-}
-
 abstract class ClassifierAnswerScorer(val confFunction: ConfidenceFunction[AnswerGroup]) extends AnswerScorer {
   override def scoreAnswer(group: AnswerGroup): ScoredAnswerGroup = {
     val featureNames = confFunction.featureSet.featureNames
@@ -44,7 +33,7 @@ abstract class ClassifierAnswerScorer(val confFunction: ConfidenceFunction[Answe
     require(featureNames.length == featureValues.length)
     val featureVector = featureNames.zip(featureValues)
     val confidence = confFunction
-    ClassifierScoredAnswer(group.answer, group.alternates, group.derivations, confFunction(group), featureVector)
+    BasicScoredAnswer(group.answer, group.alternates, group.derivations, confFunction(group))
   }
 }
 
