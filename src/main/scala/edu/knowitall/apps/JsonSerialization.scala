@@ -31,7 +31,7 @@ object JsonSerialization {
   }
 }
 
-case class ScoredAnswerInv(answer: String, alternates: List[String], 
+case class ScoredAnswerInv(answers: List[String], alternates: List[List[String]], 
     score: Double, uqueries: List[UQueryInv])
 object ScoredAnswerInv {
   def fromScoredAnswerGroup(sa: ScoredAnswerGroup): ScoredAnswerInv = {
@@ -53,15 +53,15 @@ object UQueryInv {
   }
 }
 
-case class ExecQueryInv(equery: ExecQuery, attr: String, tuples: List[Map[String, Any]])
+case class ExecQueryInv(equery: ExecQuery, attrs: List[String], tuples: List[Map[String, Any]])
 object ExecQueryInv {
   def fromDerivs(ds: List[AnswerDerivation]): List[ExecQueryInv] = {
     val grpd = ds.groupBy(_.etuple.equery)
     val tuples = for ((eqr, dsg) <- grpd; ts = dsg.map(_.etuple.tuple)) 
                  yield (eqr, ts.map(_.attrs))
-    val attrs = for ((eqr, dsg) <- grpd; d <- dsg) yield (eqr, d.attr)
-    val results = for ((eqr, ts) <- tuples; a <- attrs.get(eqr)) 
-                  yield ExecQueryInv(eqr, a, ts)
+    val attrs = for ((eqr, dsg) <- grpd; d <- dsg) yield (eqr, d.attrs)
+    val results = for ((eqr, ts) <- tuples; as <- attrs.get(eqr)) 
+                  yield ExecQueryInv(eqr, as, ts)
     results.toList
   }
 }

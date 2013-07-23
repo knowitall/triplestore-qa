@@ -11,7 +11,7 @@ class ConjunctiveQueryTest extends FlatSpec {
       case Some(cq: ListConjunctiveQuery) => cq
       case _ => throw new IllegalArgumentException("")
     }
-    assert(TVariable("x") === result.qVar)
+    assert(List(TVariable("x")) === result.qVars)
     assert(1 === result.conjuncts.size)
   }
   
@@ -21,7 +21,7 @@ class ConjunctiveQueryTest extends FlatSpec {
       case Some(cq: ListConjunctiveQuery) => cq
       case _ => throw new IllegalArgumentException("")
     }
-    assert(TVariable("x") === result.qVar)
+    assert(List(TVariable("x")) === result.qVars)
     assert(3 === result.conjuncts.size)
   }
   

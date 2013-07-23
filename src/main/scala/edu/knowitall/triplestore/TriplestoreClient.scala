@@ -236,19 +236,3 @@ case class TriplestorePlan(client: TriplestoreClient) {
   }
 
 }
-
-case class AKADictionary(exe: QueryExecutor) {
-  def aka(s: String): List[String] = {
-    val q1 = SimpleQuery("r", Map(
-        arg1 -> QuotedTLiteral(s), 
-        rel -> UnquotedTLiteral("also known as"), 
-        arg2 -> TVariable("x")))
-    val answers1 = exe.deriveAnswers(q1)
-    val q2 = SimpleQuery("r", Map(
-        arg2 -> QuotedTLiteral(s), 
-        rel -> UnquotedTLiteral("also known as"), 
-        arg1 -> TVariable("x")))
-    val answers2 = exe.deriveAnswers(q2)
-    (answers1 ++ answers2).map(_.answer.toLowerCase()).toList.distinct
-  }
-}

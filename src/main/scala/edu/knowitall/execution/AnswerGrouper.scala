@@ -5,12 +5,12 @@ trait AnswerGrouper {
 }
 
 trait AnswerGroup {
-  def answer: String
-  def alternates: List[String]
+  def answer: List[String]
+  def alternates: List[List[String]]
   def derivations: List[AnswerDerivation]
 }
 
-case class BasicAnswerGroup(answer: String, alternates: List[String], 
+case class BasicAnswerGroup(answer: List[String], alternates: List[List[String]], 
     derivations: List[AnswerDerivation]) extends AnswerGroup
     
 case class BasicAnswerGrouper(
@@ -18,10 +18,10 @@ case class BasicAnswerGrouper(
     extends AnswerGrouper {
   
   override def group(derivs: List[AnswerDerivation]): List[AnswerGroup] = {
-    val grouped = derivs.groupBy(d => norm(d.answer))
-    val groups = for ((answer, grp) <- grouped;
+    val grouped = derivs.groupBy(d => d.answer.map(norm))
+    val groups = for ((answers, grp) <- grouped;
                       alts = grp.map(_.answer).distinct) 
-                      yield BasicAnswerGroup(answer, alts, grp)
+                      yield BasicAnswerGroup(answers, alts, grp)
     groups.toList
   }
   

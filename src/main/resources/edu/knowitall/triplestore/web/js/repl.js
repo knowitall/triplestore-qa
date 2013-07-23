@@ -62,7 +62,7 @@ var writeResults = function(data) {
 var displayGroup = function(group) {
     var $g = $('<div class="answerGroup"/>');
     var $a = $('<div class="answer"/>').appendTo($g);
-    $a.append($('<h1>' + group.alternates[0] + '</h1>'));
+    $a.append($('<h1>' + group.alternates[0].join(", ") + '</h1>'));
     $a.append($('<div class="score">Score = ' + group.score + '</div>'));
     $.each(group.uqueries , function(i, uqueryGroup) {
         $.each(uqueryGroup.equeries, function(j, equeryGroup) {
