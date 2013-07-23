@@ -9,12 +9,12 @@ trait AnswerScorer {
 
 trait ScoredAnswerGroup extends AnswerGroup {
   def score: Double
-  def answer: String
-  def alternates: List[String]
+  def answer: List[String]
+  def alternates: List[List[String]]
   def derivations: List[AnswerDerivation]
 }
 
-case class BasicScoredAnswer(answer: String, alternates: List[String], 
+case class BasicScoredAnswer(answer: List[String], alternates: List[List[String]], 
     derivations: List[AnswerDerivation], score: Double) 
     extends ScoredAnswerGroup
     

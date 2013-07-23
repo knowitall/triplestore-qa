@@ -13,7 +13,7 @@ case class RelationRewrite(left: String, right: String, inverse: Boolean) {
   def apply(cq: ConjunctiveQuery): List[ConjunctiveQuery] = {
     val newCs = cq.conjuncts.map(apply(_))
     val conjSets = Utils.cartesian[TConjunct](newCs).toList
-    conjSets.map(cs => ListConjunctiveQuery(cq.qVar, cs.toList))
+    conjSets.map(cs => ListConjunctiveQuery(cq.qVars, cs.toList))
   }
   
   def apply(c: TConjunct): List[TConjunct] = {

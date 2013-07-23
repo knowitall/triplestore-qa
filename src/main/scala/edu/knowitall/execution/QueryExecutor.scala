@@ -13,17 +13,17 @@ trait ExecQuery {
 
 case class ExecConjunctiveQuery(uquery: ConjunctiveQuery, query: ConjunctiveQuery) extends ExecQuery {
   val conjuncts = uquery.conjuncts
-  val projAttr = uquery.qAttr
+  val projAttrs = uquery.qAttrs
 }
 
 case class ExecTuple(tuple: Tuple, equery: ExecQuery)
 
-case class AnswerDerivation(attr: String, etuple: ExecTuple) {
-  val answer = etuple.tuple.getString(attr) match {
-    case Some(a) => a
-    case _ => throw new 
-      IllegalArgumentException(s"$etuple does not have val for attr $attr")
-  }
+case class AnswerDerivation(attrs: List[String], etuple: ExecTuple) {
+  val candAnswers = attrs.map(etuple.tuple.getString(_))
+  val answer = candAnswers.map(x => x match {
+    case Some(s: String) => s
+    case None => throw new IllegalArgumentException(s"$etuple does not have vals for attrs $attrs")
+  })
 }
 
 trait QueryExecutor {
@@ -47,7 +47,7 @@ case class IdentityExecutor(client: TriplestoreClient) extends QueryExecutor {
   def deriveAnswersSimple(q: ExecConjunctiveQuery): ADs =
     for (t <- joiner.joinQueries(q.query.conjuncts);
          et = ExecTuple(t, q)) 
-      yield AnswerDerivation(q.projAttr, et)
+      yield AnswerDerivation(q.projAttrs, et)
 
 }
 

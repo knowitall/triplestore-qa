@@ -58,6 +58,14 @@ case object TVariable {
     case "?" => Some(TVariable("?"))
     case _ => None
   }
+  def fromStringMult(s: String): List[TVariable] = {
+    val parts = s.split(", *").toList
+    for (p <- parts; t = TVariable.fromString(p)) yield t match {
+      case Some(x) => x
+      case None => throw new 
+        IllegalArgumentException(s"Could not parse variables in: $s")
+    }
+  }
 }
 
 /**
@@ -182,55 +190,54 @@ case object TConjunct {
 } 
 
 /**
- * A conjunctive query consists of a qvar (query variable) and a list of 
- * conjuncts. A conjunctive query represents a select-join-project type
+ * A conjunctive query consists of a list of qvars (query variables) and a list 
+ * of conjuncts. A conjunctive query represents a select-join-project type
  * operation. The list of conjuncts represents the data to be selected.
  * The shared variables among the conjuncts encodes the join predicates. 
  * The qvar encodes the projection variable. qAttr is the tuple-attribute
  * to project onto. 
  */
 trait ConjunctiveQuery extends UQuery {
-  val qVar: TVariable
-  val qAttr: String
+  val qVars: List[TVariable]
+  val qAttrs: List[String]
   val conjuncts: List[TConjunct]
 }
 
 /**
  * A conjunctive query backed by a list of conjuncts.
  */
-case class ListConjunctiveQuery(qVar: TVariable, conjuncts: List[TConjunct])
+case class ListConjunctiveQuery(qVars: List[TVariable], 
+    conjuncts: List[TConjunct])
   extends ConjunctiveQuery {
   
   val conjunctNames = conjuncts.map(_.name)
   if (conjunctNames.distinct.size != conjunctNames.size) throw new 
     IllegalArgumentException(s"Conjuncts must have distinct names: $conjuncts")
   
-  val qas = {for (c <- conjuncts; a <- c.attrName(qVar)) yield a}.toList
-  val qAttr = qas match {
-    case a :: rest => a
-    case _ => throw new IllegalArgumentException(s"Query variable $qVar must "
-        + s"appear in at least one conjunct in $conjuncts")
-  }
+  val qas = {for (v <- qVars; c <- conjuncts; a <- c.attrName(v)) yield (v, a)}.groupBy(_._1)
+  val qAttrs = for (v <- qVars; group <- qas.get(v); (v, a) <- group.find(x => true)) yield a
+  
 }
 case object ListConjunctiveQuery {
   def fromString(s: String): Option[ListConjunctiveQuery] = {
     val parts = s.split(":", 2)
     if (parts.size == 2) {
       val left = parts(0)
-      val qVar = TVariable.fromString(parts(0)) match {
-        case Some(TVariable(v)) => TVariable(v)
-        case _ => throw new IllegalArgumentException(s"Expected variable: $left")
+      val qVars = TVariable.fromStringMult(parts(0)) match {
+        case head :: rest => head :: rest
+        case _ => 
+          throw new IllegalArgumentException(s"Expected variable: $left")
       }
       val conjuncts = TConjunct.fromStringMult(parts(1))
-      Some(ListConjunctiveQuery(qVar, conjuncts.toList))
+      Some(ListConjunctiveQuery(qVars, conjuncts.toList))
     } else if (parts.size == 1) {
       val s = parts(0)
       val conjuncts = TConjunct.fromStringMult(s)
-      val qVar = conjuncts.flatMap(_.vars).toList match {
-        case v :: rest => v
+      val qVars = conjuncts.flatMap(_.vars).toList match {
+        case v :: rest => v :: rest
         case _ => throw new IllegalArgumentException(s"Expected variable: $s")
       }
-      Some(ListConjunctiveQuery(qVar, conjuncts.toList))
+      Some(ListConjunctiveQuery(qVars, conjuncts.toList))
     } else {
       None
     }
@@ -240,7 +247,7 @@ case object ListConjunctiveQuery {
   def expandSetTLiterals(cq: ConjunctiveQuery): List[ConjunctiveQuery] = {
     val css = for (c <- cq.conjuncts; cs = TConjunct.expandSetTLiterals(c)) yield cs
     val product = Utils.cartesian[TConjunct](css).toList
-    for (cs <- product) yield ListConjunctiveQuery(cq.qVar, cs.toList)
+    for (cs <- product) yield ListConjunctiveQuery(cq.qVars, cs.toList)
   }
 
 }
@@ -253,13 +260,13 @@ case class SimpleQuery(name: String, map: Map[Field, TVal])
   val conjunct = TConjunct(name, map)
   val conjuncts = List(conjunct)
   val vars = map.values.collect{ case x: TVariable => x }.toList
-  val qVar = vars match {
-    case v :: Nil => v
+  val qVars = vars match {
+    case v :: Nil => List(v)
     case _ => throw new 
       IllegalArgumentException(s"SimpleQuery must have exactly one variable, "
           + s"got: $vars")
   }
-  val qAttr = conjunct.joinKeys(qVar)
+  val qAttrs = List(conjunct.joinKeys(qVars(0)))
 }
 case object SimpleQuery {
   def fromString(s: String) = TConjunct.fromString("r", s) match {

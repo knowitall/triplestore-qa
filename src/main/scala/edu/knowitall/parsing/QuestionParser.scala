@@ -59,7 +59,7 @@ abstract class LexiconParser extends QuestionParser {
     }
     val vals = Map[Field, TVal]((varField, tvar), (entField, entLit), (rel, relLit))
     val conj = TConjunct("r", vals)
-    ListConjunctiveQuery(tvar, List(conj))
+    ListConjunctiveQuery(List(tvar), List(conj))
   }
   
 }
@@ -84,7 +84,7 @@ case class OldParalexParser() extends LexiconParser {
   def postprocess(u: UQuery): UQuery = u match {
     case cq: ConjunctiveQuery => {
       val newConjuncts = cq.conjuncts.map(fixConjunct)
-      ListConjunctiveQuery(cq.qVar, newConjuncts)
+      ListConjunctiveQuery(cq.qVars, newConjuncts)
     }
     case _ => u
   }
