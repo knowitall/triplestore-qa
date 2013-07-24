@@ -1,0 +1,122 @@
+1	30 wagons	wagon train, made up of, ?	How many wagons are in a wagon train
+1	1943	Mercer Mayer, born in, ?	How old is mercer mayer
+1	1943-12-30	Mercer Mayer, date of birth, ?	How old is mercer mayer
+1	hutches	pet rabbits, live in, ?	Where a pet rabbit lives
+0	a million pounds	pet rabbits, live in, ?	Where a pet rabbit lives
+0	conditions	pet rabbits, live in, ?	Where a pet rabbit lives
+0	New Orleans	pet rabbits, live in, ?	Where a pet rabbit lives
+1	outside hutches	pet rabbits, live in, ?	Where a pet rabbit lives
+1	insects	salamanders, eat, ?	What does salamander eat
+1	worms	salamanders, eat, ?	What does salamander eat
+1	anuran tadpoles	salamanders, eat, ?	What does salamander eat
+1	slimy critters	salamanders, eat, ?	What does salamander eat
+0	its shed skins	salamanders, eat, ?	What does salamander eat
+1	worms and insects	salamanders, eat, ?	What does salamander eat
+1	insects and worms	salamanders, eat, ?	What does salamander eat
+1	small arthropods	salamanders, eat, ?	What does salamander eat
+0	fire	salamanders, eat, ?	What does salamander eat
+0	fire gratis	salamanders, eat, ?	What does salamander eat
+1	five feet	rattlesnakes, grow to, ?	What is a rattle snakes height
+1	5 feet	rattlesnakes, grow to, ?	What is a rattle snakes height
+1	Jawaharlal Nehru	?, became the first prime minister of, India	Who is the india first prim minister
+1	Nehru	?, became the first prime minister of, India	Who is the india first prim minister
+1	genres	music, divided into, ?	What is the musical term for structure
+0	three categories	music, divided into, ?	What is the musical term for structure
+0	a number	music, divided into, ?	What is the musical term for structure
+1	sections	music, divided into, ?	What is the musical term for structure
+0	two types	music, divided into, ?	What is the musical term for structure
+0	two sections	music, divided into, ?	What is the musical term for structure
+0	six periods	music, divided into, ?	What is the musical term for structure
+0	two parts	music, divided into, ?	What is the musical term for structure
+0	two groups	music, divided into, ?	What is the musical term for structure
+0	two categories	music, divided into, ?	What is the musical term for structure
+1	Quba	first mosque, was erected at, ?	What is the first mosque placed on earth
+1	Kizimkazi	first mosque, was erected at, ?	What is the first mosque placed on earth
+1	single molecules	sugars, are composed of, ?	What is sugar made of
+1	O , C , H and N.	sugars, are composed of, ?	What is sugar made of
+1	saccharides	sugars, are composed of, ?	What is sugar made of
+0	oxygen	sugars, are composed of, ?	What is sugar made of
+1	simple carbohydrates	sugars, are composed of, ?	What is sugar made of
+0	white sugar	sugars, are composed of, ?	What is sugar made of
+0	some reason	eyes, are for, ?	What is the function of an eye
+1	vision	eyes, are for, ?	What is the function of an eye
+0	all people	eyes, are for, ?	What is the function of an eye
+0	use	eyes, are for, ?	What is the function of an eye
+0	the face	eyes, are for, ?	What is the function of an eye
+0	the time	eyes, are for, ?	What is the function of an eye
+0	the first time	eyes, are for, ?	What is the function of an eye
+1	sight	eyes, are for, ?	What is the function of an eye
+1	light	eyes, are for, ?	What is the function of an eye
+0	signs	eyes, are for, ?	What is the function of an eye
+1	West Africa	Ghana, is a country in, ?	Where is Ghana
+1	western Africa	Ghana, is a country in, ?	Where is Ghana
+0	natural resources	Ghana, is a country in, ?	Where is Ghana
+0	the west	Ghana, is a country in, ?	Where is Ghana
+0	ancient China	Chinese new year, starts in, ?	What time of the year is Chinese new year
+1	January or February	Chinese new year, starts in, ?	What time of the year is Chinese new year
+0	style	Chinese new year, starts in, ?	What time of the year is Chinese new year
+0	the weight	sodium, loses, ?	How many electrons does sodium want to lose
+1	one electron	sodium, loses, ?	How many electrons does sodium want to lose
+1	an electron	sodium, loses, ?	How many electrons does sodium want to lose
+0	their glow	sodium, loses, ?	How many electrons does sodium want to lose
+0	the air	sodium, loses, ?	How many electrons does sodium want to lose
+0	more	sodium, loses, ?	How many electrons does sodium want to lose
+1	the one valence electron	sodium, loses, ?	How many electrons does sodium want to lose
+0	the Chlorine atom	sodium, loses, ?	How many electrons does sodium want to lose
+0	extra urinary potassium	sodium, loses, ?	How many electrons does sodium want to lose
+0	chlorine	sodium, loses, ?	How many electrons does sodium want to lose
+1	Coors Light	Colorado, beers from here, ?	What is made in Colorado
+1	The first commercial crop	?, produced in, Colorado	What is made in Colorado
+1	No zinc	?, produced in, Colorado	What is made in Colorado
+0	His newest play	?, produced in, Colorado	What is made in Colorado
+1	plant or animal matter	?, produced in, Colorado	What is made in Colorado
+0	No lead mines	?, produced in, Colorado	What is made in Colorado
+1	CO2	?, produced in, Colorado	What is made in Colorado
+1	Wind power	?, produced in, Colorado	What is made in Colorado
+0	companies	?, produced in, Colorado	What is made in Colorado
+1	Colorado Coal Quality Coal	?, produced in, Colorado	What is made in Colorado
+0	this play	?, produced in, Colorado	What is made in Colorado
+0	This color	?, dark kind of, purple	What is another word for dark purple
+1	Royal Cloak	?, dark kind of, purple	What is another word for dark purple
+1	2004-10-06	Lebron James, date of birth, ?	When is the birthday of lebron James
+1	1984-12-30	Lebron James, date of birth, ?	When is the birthday of lebron James
+1	December 30 , 1984	Lebron James, born on, ?	When is the birthday of lebron James
+1	the 30th	Lebron James, born on, ?	When is the birthday of lebron James
+1	December 30	Lebron James, born on, ?	When is the birthday of lebron James
+0	the cards	pokemon, just look like, ?	What do ruby Pokemon look like
+1	monsters	pokemon, just look like, ?	What do ruby Pokemon look like
+0	a Poke Ball	pokemon, just look like, ?	What do ruby Pokemon look like
+1	1996-08-10	Jacob Latimore, date of birth, ?	How old is Jacob latimore
+1	balloons	helium, used for, ?	What was helium used for
+1	leak detection	helium, used for, ?	What was helium used for
+1	some light gage stainless welding	helium, used for, ?	What was helium used for
+0	studies	helium, used for, ?	What was helium used for
+1	cryogenic processing	helium, used for, ?	What was helium used for
+0	re-filling	helium, used for, ?	What was helium used for
+0	an event	helium, used for, ?	What was helium used for
+1	balloons and blimps	helium, used for, ?	What was helium used for
+1	Wedding and Table decoration	helium, used for, ?	What was helium used for
+0	a number	helium, used for, ?	What was helium used for
+1	"NH4OH"	ammonium hydroxide, formula, ?	What is the formula for ammonium hydroxide
+1	H. H. Bennett Studio	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+1	Chula Vista Resort	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+1	Atlantis	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+1	Wizard Quest	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+1	Kalahari Resorts	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+1	Ho-Chunk Casino	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+1	Tommy Bartlett Exploratory	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+1	Mirror Lake State Park	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+1	Mt. Olympus Water & Theme Park	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+0	years	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+1	children	education, is good for, ?	What are the benefits of education
+0	our students	education, is good for, ?	What are the benefits of education
+1	people	education, is good for, ?	What are the benefits of education
+0	all	education, is good for, ?	What are the benefits of education
+1	business	education, is good for, ?	What are the benefits of education
+1	the nation	education, is good for, ?	What are the benefits of education
+1	life	education, is good for, ?	What are the benefits of education
+1	America	education, is good for, ?	What are the benefits of education
+1	everyone	education, is good for, ?	What are the benefits of education
+1	its own sake	education, is good for, ?	What are the benefits of education
+1	cave tours	mammoth cave national park, offers, ?	What to do at mammoth cave in Kentucky
+0	70 miles	mammoth cave national park, offers, ?	What to do at mammoth cave in Kentucky

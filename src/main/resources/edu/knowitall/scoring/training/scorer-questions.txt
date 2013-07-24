@@ -1,0 +1,51 @@
+How many wagons are in a wagon train	wagon train, made up of, ?
+How old is mercer mayer	mercer mayer, born in, ?
+How old is mercer mayer	mercer mayer, date of birth, ?
+Where a pet rabbit lives	pet rabbits, live in, ?
+What does salamander eat	salamanders, eat, ?
+What is a rattle snakes height	rattlesnakes, grow to, ?
+Who is the india first prim minister	?, became the first prime minister of, india
+What is the musical term for structure	music, divided into, ?
+What is the first mosque placed on earth	first mosque, was erected at, ?
+What is sugar made of	sugars, are composed of, ?
+What is sucrose made from?	sucrose, made from, ?
+What is the function of an eye	eyes, are for, ?
+Where is Ghana	ghana, is a country in, ?
+What time of the year is Chinese new year	chinese new year, starts in, ?
+How many electrons does sodium want to lose	sodium, loses, ?
+What is made in Colorado	colorado, beers from here, ?
+What is made in Colorado	?, produced in, colorado
+What is another word for dark purple	?, dark kind of, purple
+When is the birthday of lebron James	lebron james, date of birth, ?
+When is the birthday of lebron James	lebron james, born on, ?
+What do ruby Pokemon look like	pokemon, just look like, ?
+What exactly is a small video camera	a small video camera, is, ?
+How old is Jacob latimore	jacob latimore, date of birth, ?
+What was helium used for	helium, used for, ?
+What is the formula for ammonium hydroxide	ammonium hydroxide, formula, ?
+What are cool places to visit in Wisconsin	wisconsin, tourist attractions, ?
+What is an image map	image map, is, ?
+What are the benefits of education	education, is good for, ?
+What to do at mammoth cave in Kentucky	mammoth cave national park, offers, ?
+What cities are in mexico?	?, is city in, Mexico
+What countries border France?	$x: ($x, border, France) ($x, "type", country)
+What foods are high in both protein and fiber?	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)
+Where do bananas come from?	(banana, come from, ?)
+Who uses a bow and arrow?	(?, use, bow and arrow)
+Who developed Jazz music?	(?, develop, Jazz music)
+Where is NASA located?	(NASA, located in, ?)
+When was Georgetown college founded?	(Georgetown college, founded in, ?)
+What animals have feathers?	$x: ($x, is, an animal) ($x, has, feathers)
+What are bell peppers stored in?	(bell pepper, stored in, ?)
+What do computers understand?	 (computer, understand, ?)
+Where does the sun rise?	(the sun, rises in, ?)
+What is the largest country?	(?, is, largest country)
+Who betrayed Caesar?	(?, betrayed, Caesar)
+
+
+
+
+
+
+
+
