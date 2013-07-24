@@ -35,9 +35,16 @@
 1	single molecules	sugars, are composed of, ?	What is sugar made of
 1	O , C , H and N.	sugars, are composed of, ?	What is sugar made of
 1	saccharides	sugars, are composed of, ?	What is sugar made of
-0	oxygen	sugars, are composed of, ?	What is sugar made of
+1	oxygen	sugars, are composed of, ?	What is sugar made of
 1	simple carbohydrates	sugars, are composed of, ?	What is sugar made of
 0	white sugar	sugars, are composed of, ?	What is sugar made of
+1	sugar cane or sugar beets	sucrose, made from, ?	What is sucrose made from?
+1	vegetable oil and sugar	sucrose, made from, ?	What is sucrose made from?
+1	one part glucose	sucrose, made from, ?	What is sucrose made from?
+1	sugar cane	sucrose, made from, ?	What is sucrose made from?
+1	sugar beets	sucrose, made from, ?	What is sucrose made from?
+1	glucose	sucrose, made from, ?	What is sucrose made from?
+1	glucose and fructose units	sucrose, made from, ?	What is sucrose made from?
 0	some reason	eyes, are for, ?	What is the function of an eye
 1	vision	eyes, are for, ?	What is the function of an eye
 0	all people	eyes, are for, ?	What is the function of an eye
@@ -62,14 +69,14 @@
 0	the air	sodium, loses, ?	How many electrons does sodium want to lose
 0	more	sodium, loses, ?	How many electrons does sodium want to lose
 1	the one valence electron	sodium, loses, ?	How many electrons does sodium want to lose
-0	the Chlorine atom	sodium, loses, ?	How many electrons does sodium want to lose
-0	extra urinary potassium	sodium, loses, ?	How many electrons does sodium want to lose
-0	chlorine	sodium, loses, ?	How many electrons does sodium want to lose
+1	the Chlorine atom	sodium, loses, ?	How many electrons does sodium want to lose
+1	extra urinary potassium	sodium, loses, ?	How many electrons does sodium want to lose
+1	chlorine	sodium, loses, ?	How many electrons does sodium want to lose
 1	Coors Light	Colorado, beers from here, ?	What is made in Colorado
 1	The first commercial crop	?, produced in, Colorado	What is made in Colorado
-1	No zinc	?, produced in, Colorado	What is made in Colorado
+0	No zinc	?, produced in, Colorado	What is made in Colorado
 0	His newest play	?, produced in, Colorado	What is made in Colorado
-1	plant or animal matter	?, produced in, Colorado	What is made in Colorado
+0	plant or animal matter	?, produced in, Colorado	What is made in Colorado
 0	No lead mines	?, produced in, Colorado	What is made in Colorado
 1	CO2	?, produced in, Colorado	What is made in Colorado
 1	Wind power	?, produced in, Colorado	What is made in Colorado
@@ -81,16 +88,26 @@
 1	2004-10-06	Lebron James, date of birth, ?	When is the birthday of lebron James
 1	1984-12-30	Lebron James, date of birth, ?	When is the birthday of lebron James
 1	December 30 , 1984	Lebron James, born on, ?	When is the birthday of lebron James
-1	the 30th	Lebron James, born on, ?	When is the birthday of lebron James
+0	the 30th	Lebron James, born on, ?	When is the birthday of lebron James
 1	December 30	Lebron James, born on, ?	When is the birthday of lebron James
 0	the cards	pokemon, just look like, ?	What do ruby Pokemon look like
 1	monsters	pokemon, just look like, ?	What do ruby Pokemon look like
 0	a Poke Ball	pokemon, just look like, ?	What do ruby Pokemon look like
+0	the back	a small video camera, is, ?	What exactly is a small video camera
+0	the chest	a small video camera, is, ?	What exactly is a small video camera
+0	the abdomen	a small video camera, is, ?	What exactly is a small video camera
+0	one incision	a small video camera, is, ?	What exactly is a small video camera
+0	the vehicle	a small video camera, is, ?	What exactly is a small video camera
+0	the outer end	a small video camera, is, ?	What exactly is a small video camera
+0	one	a small video camera, is, ?	What exactly is a small video camera
+0	he rear license plate	a small video camera, is, ?	What exactly is a small video camera
+0	he colonoscope	a small video camera, is, ?	What exactly is a small video camera
+0	op	a small video camera, is, ?	What exactly is a small video camera
 1	1996-08-10	Jacob Latimore, date of birth, ?	How old is Jacob latimore
 1	balloons	helium, used for, ?	What was helium used for
 1	leak detection	helium, used for, ?	What was helium used for
 1	some light gage stainless welding	helium, used for, ?	What was helium used for
-0	studies	helium, used for, ?	What was helium used for
+1	studies	helium, used for, ?	What was helium used for
 1	cryogenic processing	helium, used for, ?	What was helium used for
 0	re-filling	helium, used for, ?	What was helium used for
 0	an event	helium, used for, ?	What was helium used for
@@ -103,13 +120,23 @@
 1	Atlantis	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
 1	Wizard Quest	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
 1	Kalahari Resorts	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
-1	Ho-Chunk Casino	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+1	Ho-Chunk Casino	wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
 1	Tommy Bartlett Exploratory	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
 1	Mirror Lake State Park	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
 1	Mt. Olympus Water & Theme Park	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
-0	years	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+1	years	Wisconsin, tourist attractions, ?	What are cool places to visit in Wisconsin
+0	a web page	image map, is, ?	What is an image map
+0	part	image map, is, ?	What is an image map
+0	the form	image map, is, ?	What is an image map
+0	a layer	image map, is, ?	What is an image map
+0	a client-side image map	image map, is, ?	What is an image map
+0	the top	image map, is, ?	What is an image map
+0	40� x	image map, is, ?	What is an image map
+0	multiple links	image map, is, ?	What is an image map
+0	your web server	image map, is, ?	What is an image map
+0	demand	image map, is, ?	What is an image map
 1	children	education, is good for, ?	What are the benefits of education
-0	our students	education, is good for, ?	What are the benefits of education
+1	our students	education, is good for, ?	What are the benefits of education
 1	people	education, is good for, ?	What are the benefits of education
 0	all	education, is good for, ?	What are the benefits of education
 1	business	education, is good for, ?	What are the benefits of education
@@ -120,3 +147,116 @@
 1	its own sake	education, is good for, ?	What are the benefits of education
 1	cave tours	mammoth cave national park, offers, ?	What to do at mammoth cave in Kentucky
 0	70 miles	mammoth cave national park, offers, ?	What to do at mammoth cave in Kentucky
+1	Cancun	?, is city in, Mexico	What cities are in mexico?
+1	Tijuana	?, is city in, Mexico	What cities are in mexico?
+1	Guadalajara	?, is city in, Mexico	What cities are in mexico?
+1	Albuquerque	?, is city in, Mexico	What cities are in mexico?
+1	Juarez	?, is city in, Mexico	What cities are in mexico?
+1	Saltillo	?, is city in, Mexico	What cities are in mexico?
+1	Santa Fe	?, is city in, Mexico	What cities are in mexico?
+1	Ciudad Juarez	?, is city in, Mexico	What cities are in mexico?
+1	Monterrey	?, is city in, Mexico	What cities are in mexico?
+1	Las Cruces	?, is city in, Mexico	What cities are in mexico?
+1	Spain	$x: ($x, border, France) ($x, "type", country)	What countries border France?
+1	Italy	$x: ($x, border, France) ($x, "type", country)	What countries border France?
+1	Germany	$x: ($x, border, France) ($x, "type", country)	What countries border France?
+1	Switzerland	$x: ($x, border, France) ($x, "type", country)	What countries border France?
+1	Belgium	$x: ($x, border, France) ($x, "type", country)	What countries border France?
+1	Luxembourg	$x: ($x, border, France) ($x, "type", country)	What countries border France?
+1	Andorra	$x: ($x, border, France) ($x, "type", country)	What countries border France?
+1	Sweden	$x: ($x, border, France) ($x, "type", country)	What countries border France?
+1	Monaco	$x: ($x, border, France) ($x, "type", country)	What countries border France?
+1	Libya	$x: ($x, border, France) ($x, "type", country)	What countries border France?
+1	Quinoa	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)	What foods are high in both protein and fiber?
+1	Amaranth	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)	What foods are high in both protein and fiber?
+1	Oats	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)	What foods are high in both protein and fiber?
+1	Edamame	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)	What foods are high in both protein and fiber?
+1	Spinach	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)	What foods are high in both protein and fiber?
+1	Tempeh	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)	What foods are high in both protein and fiber?
+1	Fat	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)	What foods are high in both protein and fiber?
+1	Grains	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)	What foods are high in both protein and fiber?
+1	Spelt	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)	What foods are high in both protein and fiber?
+1	Buckwheat	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)	What foods are high in both protein and fiber?
+1	Central America	(banana, come from, ?)	Where do bananas come from?
+1	Ecuador	(banana, come from, ?)	Where do bananas come from?
+1	nonunion plantations	(banana, come from, ?)	Where do bananas come from?
+0	the Australian chef Bill Granger	(banana, come from, ?)	Where do bananas come from?
+0	one single variety	(banana, come from, ?)	Where do bananas come from?
+1	Vietnam	(banana, come from, ?)	Where do bananas come from?
+0	a website	(banana, come from, ?)	Where do bananas come from?
+0	small farms	(banana, come from, ?)	Where do bananas come from?
+0	other parts	(banana, come from, ?)	Where do bananas come from?
+0	many countries	(banana, come from, ?)	Where do bananas come from?
+0	Some people	(?, use, bow and arrow)	Who uses a bow and arrow?
+0	The athletes	(?, use, bow and arrow)	Who uses a bow and arrow?
+0	both	(?, use, bow and arrow)	Who uses a bow and arrow?
+0	no one	(?, use, bow and arrow)	Who uses a bow and arrow?
+0	Other groups	(?, use, bow and arrow)	Who uses a bow and arrow?
+1	Hunters	(?, use, bow and arrow)	Who uses a bow and arrow?
+0	The men	(?, use, bow and arrow)	Who uses a bow and arrow?
+1	Katniss	(?, use, bow and arrow)	Who uses a bow and arrow?
+0	someone	(?, use, bow and arrow)	Who uses a bow and arrow?
+1	the Indians	(?, use, bow and arrow)	Who uses a bow and arrow?
+1	Students	(?, develop, Jazz music)	Who developed Jazz music?
+0	the piano	(?, develop, Jazz music)	Who developed Jazz music?
+1	Mumbles	(?, develop, Jazz music)	Who developed Jazz music?
+1	Jones	(?, develop, Jazz music)	Who developed Jazz music?
+0	Europe works	(?, develop, Jazz music)	Who developed Jazz music?
+0	quickstep	(?, develop, Jazz music)	Who developed Jazz music?
+0	music cultures	(?, develop, Jazz music)	Who developed Jazz music?
+1	Houston	(NASA, located in, ?)	Where is NASA located?
+1	Pasadena	(NASA, located in, ?)	Where is NASA located?
+1	Cleveland	(NASA, located in, ?)	Where is NASA located?
+0	this base	(NASA, located in, ?)	Where is NASA located?
+1	central Washington	(NASA, located in, ?)	Where is NASA located?
+1	the Scilands	(NASA, located in, ?)	Where is NASA located?
+1	California	(NASA, located in, ?)	Where is NASA located?
+1	Thule	(NASA, located in, ?)	Where is NASA located?
+1	Greenbelt	(NASA, located in, ?)	Where is NASA located?
+1	Goddard Space Flight	(NASA, located in, ?)	Where is NASA located?
+1	1839	(Georgetown college, founded in, ?)	When was Georgetown college founded?
+0	This one	$x: ($x, is, an animal) ($x, has, feathers)	What animals have feathers?
+0	The result	$x: ($x, is, an animal) ($x, has, feathers)	What animals have feathers?
+1	a dog	$x: ($x, is, an animal) ($x, has, feathers)	What animals have feathers?
+0	someone	$x: ($x, is, an animal) ($x, has, feathers)	What animals have feathers?
+1	A bird	$x: ($x, is, an animal) ($x, has, feathers)	What animals have feathers?
+0	the film	$x: ($x, is, an animal) ($x, has, feathers)	What animals have feathers?
+0	Love	$x: ($x, is, an animal) ($x, has, feathers)	What animals have feathers?
+0	's book	$x: ($x, is, an animal) ($x, has, feathers)	What animals have feathers?
+0	the left	$x: ($x, is, an animal) ($x, has, feathers)	What animals have feathers?
+0	the house	$x: ($x, is, an animal) ($x, has, feathers)	What animals have feathers?
+0	the sealed	(bell pepper, stored in, ?)	What are bell peppers stored in?
+1	the freezer	(bell pepper, stored in, ?)	What are bell peppers stored in?
+1	language	 (computer, understand, ?)	What do computers understand?
+1	numbers	 (computer, understand, ?)	What do computers understand?
+1	data	 (computer, understand, ?)	What do computers understand?
+0	all this	 (computer, understand, ?)	What do computers understand?
+1	English	 (computer, understand, ?)	What do computers understand?
+0	your problem	 (computer, understand, ?)	What do computers understand?
+0	my state	 (computer, understand, ?)	What do computers understand?
+0	their computers	 (computer, understand, ?)	What do computers understand?
+1	your commands	 (computer, understand, ?)	What do computers understand?
+0	the challenges	 (computer, understand, ?)	What do computers understand?
+1	the east	(the sun, rises in, ?)	Where does the sun rise?
+1	the West	(the sun, rises in, ?)	Where does the sun rise?
+1	the morning	(the sun, rises in, ?)	Where does the sun rise?
+1	sky	(the sun, rises in, ?)	Where does the sun rise?
+0	the East and sets	(the sun, rises in, ?)	Where does the sun rise?
+1	the horizon	(the sun, rises in, ?)	Where does the sun rise?
+1	the distance	(the sun, rises in, ?)	Where does the sun rise?
+1	the northeast	(the sun, rises in, ?)	Where does the sun rise?
+1	the North	(the sun, rises in, ?)	Where does the sun rise?
+0	every part	(the sun, rises in, ?)	Where does the sun rise?
+1	India	(?, is, largest country)	What is the largest country?
+1	China	(?, is, largest country)	What is the largest country?
+1	Brazil	(?, is, largest country)	What is the largest country?
+1	Indonesia	(?, is, largest country)	What is the largest country?
+1	the United States	(?, is, largest country)	What is the largest country?
+1	Canada	(?, is, largest country)	What is the largest country?
+1	Mexico	(?, is, largest country)	What is the largest country?
+1	Japan	(?, is, largest country)	What is the largest country?
+1	AUSTRALIA	(?, is, largest country)	What is the largest country?
+1	Russia	(?, is, largest country)	What is the largest country?
+1	Brutus	(?, betrayed, Caesar)	Who betrayed Caesar?
+1	Xena	(?, betrayed, Caesar)	Who betrayed Caesar?
+1	Cassius and Brutus	(?, betrayed, Caesar)	Who betrayed Caesar?
