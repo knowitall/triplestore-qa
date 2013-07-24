@@ -15,6 +15,7 @@ import edu.knowitall.scoring.NumDerivationsScorer
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.parsing.StringMatchingParser
 import edu.knowitall.scoring.UniformAnswerScorer
+import edu.knowitall.scoring.LogisticAnswerScorer
 import edu.knowitall.parsing.OldParalexParser
 import edu.knowitall.execution.RelationSynonymExecutor
 
@@ -78,5 +79,6 @@ case object Components {
   
   val scorers: Map[String, AnswerScorer] =
     Map("numDerivations" -> NumDerivationsScorer(),
-      "uniform" -> UniformAnswerScorer())
+      "uniform" -> UniformAnswerScorer(),
+      "logistic" -> new LogisticAnswerScorer())
 }
