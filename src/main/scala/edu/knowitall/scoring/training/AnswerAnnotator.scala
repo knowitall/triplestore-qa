@@ -4,23 +4,6 @@ import java.io.PrintStream
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.execution.ExecConjunctiveQuery
 
-case class InputRecord(nlQuery: String, uQuery: String)
-object InputRecord {
-  def fromString(str: String) = str.split("\t") match {
-    case Array(nlq, uq, _*) => InputRecord(nlq, uq)
-    case _ => throw new RuntimeException(s"Unrecognized input record: $str")
-  } 
-}
-
-case class OutputRecord(answer: String, uQuery: String, nlQuery: String) {
-  override def toString = Seq(answer, uQuery, nlQuery).mkString("\t")
-}
-object OutputRecord {
-  def fromGroup(input: InputRecord, group: AnswerGroup): OutputRecord = {
-    OutputRecord(group.alternates.head.head, input.uQuery, input.nlQuery)
-  }
-}
-
 /**
  * Reads in (nat. lang. query, uquery) as text, finds answers for uquery, and 
  * outputs (answer, uquery, nat. lang. query). One answer per line. For labeling. 
@@ -30,6 +13,23 @@ object OutputRecord {
  */
 class AnswerAnnotator(val input: Iterator[String], val output: PrintStream) {
 
+  case class InputRecord(nlQuery: String, uQuery: String)
+  object InputRecord {
+    def fromString(str: String) = str.split("\t") match {
+      case Array(nlq, uq, _*) => InputRecord(nlq, uq)
+      case _ => throw new RuntimeException(s"Unrecognized input record: $str")
+    }
+  }
+
+  case class OutputRecord(answer: String, uQuery: String, nlQuery: String) {
+    override def toString = Seq(answer, uQuery, nlQuery).mkString("\t")
+  }
+  object OutputRecord {
+    def fromGroup(input: InputRecord, group: AnswerGroup): OutputRecord = {
+      OutputRecord(group.alternates.head.head, input.uQuery, input.nlQuery)
+    }
+  }
+  
   import edu.knowitall.parsing.FormalQuestionParser
   import edu.knowitall.execution.{IdentityExecutor, BasicAnswerGrouper}
   import edu.knowitall.triplestore.{SolrClient, CachedTriplestoreClient}
@@ -40,7 +40,7 @@ class AnswerAnnotator(val input: Iterator[String], val output: PrintStream) {
   val executor = new IdentityExecutor(client)
   val grouper = new BasicAnswerGrouper()
   
-  def inputRecords = input map InputRecord.fromString
+  def inputRecords = input filter(_.nonEmpty) map InputRecord.fromString
   
   def answersFor(input: InputRecord): Seq[OutputRecord] = {
     
