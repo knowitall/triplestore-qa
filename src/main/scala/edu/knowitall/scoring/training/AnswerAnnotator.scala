@@ -17,13 +17,16 @@ case class OutputRecord(answer: String, uQuery: String, nlQuery: String) {
 }
 object OutputRecord {
   def fromGroup(input: InputRecord, group: AnswerGroup): OutputRecord = {
-    OutputRecord(group.answer.head, input.uQuery, input.nlQuery)
+    OutputRecord(group.alternates.head.head, input.uQuery, input.nlQuery)
   }
 }
 
 /**
  * Reads in (nat. lang. query, uquery) as text, finds answers for uquery, and 
  * outputs (answer, uquery, nat. lang. query). One answer per line. For labeling. 
+ * 
+ * Output is labeled by a human and then fed into TrainingDataReader, which
+ * provides an Iterable of labeled answergroups for a training function.
  */
 class AnswerAnnotator(val input: Iterator[String], val output: PrintStream) {
 
@@ -44,7 +47,8 @@ class AnswerAnnotator(val input: Iterator[String], val output: PrintStream) {
     val uQueries = parser.parse(input.uQuery)
     val answers = uQueries flatMap executor.deriveAnswers
     val groups = grouper group answers.toList
-    groups map { g => OutputRecord.fromGroup(input, g) }
+    val sortedGroups = groups.sortBy(-_.derivations.size).take(10) 
+    sortedGroups map { g => OutputRecord.fromGroup(input, g) }
   }
   
   def go(): Unit = {
