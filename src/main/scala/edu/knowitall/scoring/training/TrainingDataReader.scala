@@ -8,6 +8,7 @@ import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.execution.IdentityExecutor
 import edu.knowitall.execution.BasicAnswerGrouper
 import java.net.URL
+import scala.util.{Try, Success, Failure}
 
 class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[AnswerGroup]] {
   
@@ -36,7 +37,7 @@ class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[An
     alternates.contains(List(expectedAnswer))
   }
   
-  def labeledAnswerGroup(inputRec: InputRecord): LAG = {
+  def labeledAnswerGroup(inputRec: InputRecord): Try[LAG] = {
     // run the uquery to get answergroups
     val uQueries = parser.parse(inputRec.uquery)
     val answers = uQueries flatMap executor.deriveAnswers
@@ -44,18 +45,29 @@ class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[An
     // get just the groups with the answer we're interested in
     val groups = allGroups filter expectedGroupFilter(inputRec.answer)
     // take just the first one for now...
-    require(groups.size >= 1, s"No results obtained for training record $inputRec")
-    Labelled(inputRec.label, groups.head)
+    Try {
+      require(groups.size >= 1, s"No results obtained for training record $inputRec")
+      Labelled(inputRec.label, groups.head)
+    }
   }
   
   override def iterator: Iterator[LAG] = new Iterator[LAG]() {
     val source = io.Source.fromURL(trainingResource)
     val lines = source.getLines
+    val inputRecs = lines map { l => readInputRecord(l) }
+    val lags = inputRecs map labeledAnswerGroup flatMap {
+      case Success(lag) => Some(lag)
+      case Failure(e) => {
+        System.err.println(e.getMessage())
+        None
+      }
+    }
+     
     var closed = false
     
     override def hasNext = {
       if (closed) false
-      else if (!lines.hasNext) {
+      else if (!lags.hasNext) {
         source.close()
         closed = true
         false
@@ -64,9 +76,6 @@ class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[An
       }
     }
     
-    override def next = {
-      val inputRec = readInputRecord(lines.next)
-      labeledAnswerGroup(inputRec)
-    }
+    override def next = lags.next
   }
 }

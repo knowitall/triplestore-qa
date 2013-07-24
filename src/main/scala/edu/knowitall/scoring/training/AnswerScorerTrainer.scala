@@ -16,5 +16,12 @@ object AnswerScorerTrainer {
   
   def trainingData = new TrainingDataReader(trainingResource)
   
-  def classifier = trainer.train(trainingData)
+  def classifier = {
+    val classifier = trainer.train(trainingData)
+    val weights = classifier.featureWeights.iterator
+    weights.foreach { case (feature, weight) =>
+      System.err.println(s"$feature\t$weight")  
+    }
+    classifier
+  }
 }
