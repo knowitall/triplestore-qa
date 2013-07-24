@@ -8,10 +8,13 @@ import edu.knowitall.tool.conf.Feature.booleanToDouble
 import edu.knowitall.tool.conf.FeatureSet
 import scala.collection.immutable.SortedMap
 import TupleFeatures._
+import scala.language.implicitConversions
 
 object AnswerGroupFeatures {
 
   type AnswerGroupFeature = Feature[AnswerGroup, Double]
+  
+  implicit def boolToDouble(bool: Boolean) = if (bool) 1.0 else 0.0
   
   def allTuples(group: AnswerGroup)  = group.derivations.map(_.etuple.tuple)
   def allQueries(group: AnswerGroup) = group.derivations.map(_.etuple.equery).distinct
@@ -56,7 +59,23 @@ object AnswerGroupFeatures {
     def apply(group: AnswerGroup) = math.abs(CapitalAnswerTokens(group) - CapitalQueryTokens(group))
   }
   
-  object SharedTokenCount 
+  object AnswerStartsWithDeterminers extends AnswerGroupFeature("Answer starts with determiner") {
+    val determiners = Set("the", "a", "an", "these", "those", "that", "this", "some", "most", "all", "any")
+    def apply(group: AnswerGroup) = {
+      val firstAnswer = group.alternates.head.head
+      val firstAnswerToken = firstAnswer.split("\\s+").head.toLowerCase()
+      determiners.contains(firstAnswerToken)
+    }
+  }
+  
+  object AnswerContainsNegation extends AnswerGroupFeature("Answer contains a negation word") {
+    val negationWords = Set("no", "none", "never", "neither", "nobody", "nor", "nothing", "nowhere", "n't")
+    def apply(group: AnswerGroup) = {
+      val firstAnswer = group.alternates.head.head
+      val firstAnswerTokens = firstAnswer.split("\\s+").map(_.toLowerCase).toSet
+      negationWords.intersect(firstAnswerTokens).nonEmpty
+    }
+  }
   
   /**
    * Generic features that apply to any AnswerGroup
@@ -64,7 +83,9 @@ object AnswerGroupFeatures {
   val features: Seq[AnswerGroupFeature] = Seq(
       NumberOfNamespaces, 
       NumberOfAlternates,
-      NumberOfDerivations)
+      NumberOfDerivations,
+      AnswerStartsWithDeterminers,
+      AnswerContainsNegation)
 
   
   def featureSet: FeatureSet[AnswerGroup, Double] = FeatureSet(features)
