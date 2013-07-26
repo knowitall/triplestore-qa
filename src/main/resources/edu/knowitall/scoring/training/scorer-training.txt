@@ -59,7 +59,7 @@
 1	western Africa	Ghana, is a country in, ?	Where is Ghana
 0	natural resources	Ghana, is a country in, ?	Where is Ghana
 0	the west	Ghana, is a country in, ?	Where is Ghana
-0	ancient China	Chinese new year, starts in, ?	What time of the year is Chinese new year
+1	ancient China	Chinese new year, starts in, ?	What time of the year is Chinese new year
 1	January or February	Chinese new year, starts in, ?	What time of the year is Chinese new year
 0	style	Chinese new year, starts in, ?	What time of the year is Chinese new year
 0	the weight	sodium, loses, ?	How many electrons does sodium want to lose
@@ -88,7 +88,7 @@
 1	2004-10-06	Lebron James, date of birth, ?	When is the birthday of lebron James
 1	1984-12-30	Lebron James, date of birth, ?	When is the birthday of lebron James
 1	December 30 , 1984	Lebron James, born on, ?	When is the birthday of lebron James
-0	the 30th	Lebron James, born on, ?	When is the birthday of lebron James
+1	the 30th	Lebron James, born on, ?	When is the birthday of lebron James
 1	December 30	Lebron James, born on, ?	When is the birthday of lebron James
 0	the cards	pokemon, just look like, ?	What do ruby Pokemon look like
 1	monsters	pokemon, just look like, ?	What do ruby Pokemon look like
@@ -260,3 +260,454 @@
 1	Brutus	(?, betrayed, Caesar)	Who betrayed Caesar?
 1	Xena	(?, betrayed, Caesar)	Who betrayed Caesar?
 1	Cassius and Brutus	(?, betrayed, Caesar)	Who betrayed Caesar?
+0	all kinds	(fish scales, be for, ?)	What are fish scales for?
+0	the pull test	(fish scales, be for, ?)	What are fish scales for?
+0	the pitched roof extension	(fish scales, be for, ?)	What are fish scales for?
+1	November 11 , 1974	(leonardo dicaprio, born on, ?)	When was Leonardo DiCaprio born?
+1	the 11th	(leonardo dicaprio, born on, ?)	When was Leonardo DiCaprio born?
+1	November	(leonardo dicaprio, born on, ?)	When was Leonardo DiCaprio born?
+0	… Continue reading	(leonardo dicaprio, born on, ?)	When was Leonardo DiCaprio born?
+1	a pot	(water vapor, come from, ?)	Where does water vapor come from?
+0	two sources	(water vapor, come from, ?)	Where does water vapor come from?
+0	inadequate blade area	(water vapor, come from, ?)	Where does water vapor come from?
+1	the evaporation	(water vapor, come from, ?)	Where does water vapor come from?
+0	the tip	(water vapor, come from, ?)	Where does water vapor come from?
+1	lakes	(water vapor, come from, ?)	Where does water vapor come from?
+1	natural sources	(water vapor, come from, ?)	Where does water vapor come from?
+1	icy grains	(water vapor, come from, ?)	Where does water vapor come from?
+1	the warm water evaporating	(water vapor, come from, ?)	Where does water vapor come from?
+1	humans Humans	(?, predator of, squirrel)	What are predators of squirrels?
+1	crows	(?, predator of, squirrel)	What are predators of squirrels?
+0	our ordinary time sense	(?, have, "positive charge")	What things are positively charged?
+0	one	(?, have, "positive charge")	What things are positively charged?
+1	Protons	(?, have, "positive charge")	What things are positively charged?
+1	the hydrogen atoms	(?, have, "positive charge")	What things are positively charged?
+1	Tin ions	(?, have, "positive charge")	What things are positively charged?
+0	the cloud	(?, have, "positive charge")	What things are positively charged?
+1	Rob Ford	(?, is mayor of, Toronto)	Who is the mayor of Toronto?
+1	David Miller	(?, is mayor of, Toronto)	Who is the mayor of Toronto?
+1	John Sewell	(?, is mayor of, Toronto)	Who is the mayor of Toronto?
+0	the Faculty	(?, is mayor of, Toronto)	Who is the mayor of Toronto?
+0	Fictitious Bert Xanadu	(?, is mayor of, Toronto)	Who is the mayor of Toronto?
+1	Ford	(?, is mayor of, Toronto)	Who is the mayor of Toronto?
+1	the Hefty Rob Ford	(?, is mayor of, Toronto)	Who is the mayor of Toronto?
+1	water	(?, is necessary for, survival)	What is necessary for survival?
+1	sleep	(?, is necessary for, survival)	What is necessary for survival?
+1	your liver	(?, is necessary for, survival)	What is necessary for survival?
+1	Food	(?, is necessary for, survival)	What is necessary for survival?
+0	neither	(?, is necessary for, survival)	What is necessary for survival?
+1	love	(?, is necessary for, survival)	What is necessary for survival?
+1	fear	(?, is necessary for, survival)	What is necessary for survival?
+1	stress	(?, is necessary for, survival)	What is necessary for survival?
+1	Eating	(?, is necessary for, survival)	What is necessary for survival?
+1	Reason	(?, is necessary for, survival)	What is necessary for survival?
+0	months	(crocodiles, live for, ?)	How long do crocodiles live?
+1	three hundred years	(crocodiles, live for, ?)	How long do crocodiles live?
+1	least 50 years	(crocodiles, live for, ?)	How long do crocodiles live?
+1	70 years	(crocodiles, live for, ?)	How long do crocodiles live?
+0	captive breeding	(crocodiles, live for, ?)	How long do crocodiles live?
+1	50 years	(crocodiles, live for, ?)	How long do crocodiles live?
+0	a very	(crocodiles, live for, ?)	How long do crocodiles live?
+1	more than 100 years	(crocodiles, live for, ?)	How long do crocodiles live?
+1	life	(?, important for, happiness)	What is important for happiness?
+1	love	(?, important for, happiness)	What is important for happiness?
+1	Friends	(?, important for, happiness)	What is important for happiness?
+1	money	(?, important for, happiness)	What is important for happiness?
+1	good health	(?, important for, happiness)	What is important for happiness?
+1	a clean home	(?, important for, happiness)	What is important for happiness?
+0	the Earth	(?, important for, happiness)	What is important for happiness?
+1	Vacations	(?, important for, happiness)	What is important for happiness?
+1	a healthy puppy	(?, important for, happiness)	What is important for happiness?
+1	everyday life	(?, important for, happiness)	What is important for happiness?
+0	your body	(insulin, is for, ?)	What is insulin for?
+1	diabetes	(insulin, is for, ?)	What is insulin for?
+1	diabetics	(insulin, is for, ?)	What is insulin for?
+1	type 1 diabetes	(insulin, is for, ?)	What is insulin for?
+1	patients	(insulin, is for, ?)	What is insulin for?
+0	the conversion	(insulin, is for, ?)	What is insulin for?
+0	the cells	(insulin, is for, ?)	What is insulin for?
+0	the control	(insulin, is for, ?)	What is insulin for?
+1	survival	(insulin, is for, ?)	What is insulin for?
+0	people	(insulin, is for, ?)	What is insulin for?
+1	water	$x: ($x, used for, cooking) ($x, used for, cleaning)	What is used for both cooking and cleaning?
+1	Oil	$x: ($x, used for, cooking) ($x, used for, cleaning)	What is used for both cooking and cleaning?
+1	wood	$x: ($x, used for, cooking) ($x, used for, cleaning)	What is used for both cooking and cleaning?
+1	olive oil	$x: ($x, used for, cooking) ($x, used for, cleaning)	What is used for both cooking and cleaning?
+0	These products	$x: ($x, used for, cooking) ($x, used for, cleaning)	What is used for both cooking and cleaning?
+0	the method	$x: ($x, used for, cooking) ($x, used for, cleaning)	What is used for both cooking and cleaning?
+1	steam	$x: ($x, used for, cooking) ($x, used for, cleaning)	What is used for both cooking and cleaning?
+1	some herbs	$x: ($x, used for, cooking) ($x, used for, cleaning)	What is used for both cooking and cleaning?
+1	lemon juice	$x: ($x, used for, cooking) ($x, used for, cleaning)	What is used for both cooking and cleaning?
+0	this tool	$x: ($x, used for, cooking) ($x, used for, cleaning)	What is used for both cooking and cleaning?
+1	infection	($x, cured by, antibiotics)	What is cured by antibiotics?
+0	both diseases	($x, cured by, antibiotics)	What is cured by antibiotics?
+0	Nobody	($x, cured by, antibiotics)	What is cured by antibiotics?
+0	others	($x, cured by, antibiotics)	What is cured by antibiotics?
+0	the teeth	($x, cured by, antibiotics)	What is cured by antibiotics?
+0	some cases	($x, cured by, antibiotics)	What is cured by antibiotics?
+1	Lyme Disease	($x, cured by, antibiotics)	What is cured by antibiotics?
+0	TB	($x, cured by, antibiotics)	What is cured by antibiotics?
+0	bacterial vaginosis won’t	($x, cured by, antibiotics)	What is cured by antibiotics?
+1	Infectious arthritis	($x, cured by, antibiotics)	What is cured by antibiotics?
+1	Fire	?, melts, metal	What melts metal?
+1	an arc	?, melts, metal	What melts metal?
+1	heat	?, melts, metal	What melts metal?
+1	the welding	?, melts, metal	What melts metal?
+0	paint	?, melts, metal	What melts metal?
+1	the electrode	?, melts, metal	What melts metal?
+0	gas	?, melts, metal	What melts metal?
+0	this spot	?, melts, metal	What melts metal?
+1	The welding process	?, melts, metal	What melts metal?
+1	metal casting	?, melts, metal	What melts metal?
+1	coordination	cerebellum, is for, ?	What is the cerebellum for?
+1	movement	cerebellum, is for, ?	What is the cerebellum for?
+0	the opening and closing	cerebellum, is for, ?	What is the cerebellum for?
+1	balance	cerebellum, is for, ?	What is the cerebellum for?
+1	muscular coordination	cerebellum, is for, ?	What is the cerebellum for?
+1	co-ordination	cerebellum, is for, ?	What is the cerebellum for?
+1	coordination and balance	cerebellum, is for, ?	What is the cerebellum for?
+0	uses	cerebellum, is for, ?	What is the cerebellum for?
+1	voluntary muscle movements	cerebellum, is for, ?	What is the cerebellum for?
+1	speech	cerebellum, is for, ?	What is the cerebellum for?
+1	the penguins	leopard seal, eat, ?	What do leopard seals eat?
+0	an unusually high level	leopard seal, eat, ?	What do leopard seals eat?
+0	any animal	leopard seal, eat, ?	What do leopard seals eat?
+0	fourteen young penguins	leopard seal, eat, ?	What do leopard seals eat?
+1	Sternheimer	?, study, quantum physics	Who studies quantum physics?
+0	his colleagues	?, study, quantum physics	Who studies quantum physics?
+0	a Ph.D.	?, study, quantum physics	Who studies quantum physics?
+1	Carol	?, study, quantum physics	Who studies quantum physics?
+0	My hobby	?, study, quantum physics	Who studies quantum physics?
+0	an IQ	?, study, quantum physics	Who studies quantum physics?
+0	The more I	?, study, quantum physics	Who studies quantum physics?
+0	psi phenomena	?, study, quantum physics	Who studies quantum physics?
+1	Ms Marais	?, study, quantum physics	Who studies quantum physics?
+0	I’ve	?, study, quantum physics	Who studies quantum physics?
+1	rain	fresh water, come from, ?	Where does fresh water come from?
+1	rainfall	fresh water, come from, ?	Where does fresh water come from?
+0	the upland	fresh water, come from, ?	Where does fresh water come from?
+1	the Kilimanjaro	fresh water, come from, ?	Where does fresh water come from?
+0	the percolation	fresh water, come from, ?	Where does fresh water come from?
+1	wells	fresh water, come from, ?	Where does fresh water come from?
+0	the belly	fresh water, come from, ?	Where does fresh water come from?
+1	natural rainwater	fresh water, come from, ?	Where does fresh water come from?
+0	uptake zones	fresh water, come from, ?	Where does fresh water come from?
+1	the Biffy	fresh water, come from, ?	Where does fresh water come from?
+1	the heart	physical fitness, good for, ?	What is physical fitness good for?
+1	an unborn child	physical fitness, good for, ?	What is physical fitness good for?
+1	everyone	physical fitness, good for, ?	What is physical fitness good for?
+1	your health	physical fitness, good for, ?	What is physical fitness good for?
+1	Egyptians	?, built, pyramids	Who built the pyramids?
+1	The ancient Egyptians	?, built, pyramids	Who built the pyramids?
+0	the people	?, built, pyramids	Who built the pyramids?
+1	Aliens	?, built, pyramids	Who built the pyramids?
+1	Slaves	?, built, pyramids	Who built the pyramids?
+0	both	?, built, pyramids	Who built the pyramids?
+1	the pharaohs	?, built, pyramids	Who built the pyramids?
+1	an architect	?, built, pyramids	Who built the pyramids?
+1	The Maya	?, built, pyramids	Who built the pyramids?
+0	The pyramid	?, built, pyramids	Who built the pyramids?
+1	the light bulb	thomas edison, invent, ?	What did thomas edison invent?
+1	the phonograph	thomas edison, invent, ?	What did thomas edison invent?
+0	1879	thomas edison, invent, ?	What did thomas edison invent?
+1	the electric lightbulb	thomas edison, invent, ?	What did thomas edison invent?
+1	Incandescent light bulb	thomas edison, invent, ?	What did thomas edison invent?
+1	the incandescent lamp	thomas edison, invent, ?	What did thomas edison invent?
+1	the first Phonograph	thomas edison, invent, ?	What did thomas edison invent?
+1	the movie camera	thomas edison, invent, ?	What did thomas edison invent?
+1	the electric light	thomas edison, invent, ?	What did thomas edison invent?
+0	the medium	thomas edison, invent, ?	What did thomas edison invent?
+1	fruits and vegetables	(?, contains, antioxidants)	What contains antioxidants?
+1	Vegetables	(?, contains, antioxidants)	What contains antioxidants?
+1	coffee	(?, contains, antioxidants)	What contains antioxidants?
+1	green tea	(?, contains, antioxidants)	What contains antioxidants?
+1	chocolate	(?, contains, antioxidants)	What contains antioxidants?
+1	Beans	(?, contains, antioxidants)	What contains antioxidants?
+0	All these foods	(?, contains, antioxidants)	What contains antioxidants?
+1	The fruit	(?, contains, antioxidants)	What contains antioxidants?
+1	Cranberries	(?, contains, antioxidants)	What contains antioxidants?
+1	berries	(?, contains, antioxidants)	What contains antioxidants?
+1	these storms	(?, produce, wind)	What produces wind?
+1	The storm	(?, produce, wind)	What produces wind?
+1	Energy	(?, produce, wind)	What produces wind?
+1	Thunderstorms	(?, produce, wind)	What produces wind?
+1	electricity	(?, produce, wind)	What produces wind?
+0	the system	(?, produce, wind)	What produces wind?
+1	China	(?, produce, wind)	What produces wind?
+1	severe thunderstorms	(?, produce, wind)	What produces wind?
+1	Texas	(?, produce, wind)	What produces wind?
+1	the Sun	(?, produce, wind)	What produces wind?
+1	Mount Brandon	?, mountain in, Ireland	What mountains are in ireland?
+0	any snow	?, mountain in, Ireland	What mountains are in ireland?
+1	Carrantuohill	?, mountain in, Ireland	What mountains are in ireland?
+1	Carrauntuohill	?, mountain in, Ireland	What mountains are in ireland?
+1	Slieve Donard	?, mountain in, Ireland	What mountains are in ireland?
+1	Carrauntoohil	?, mountain in, Ireland	What mountains are in ireland?
+0	951 metres	?, mountain in, Ireland	What mountains are in ireland?
+0	the most	?, mountain in, Ireland	What mountains are in ireland?
+0	Kerry	?, mountain in, Ireland	What mountains are in ireland?
+1	immune system	bacteria, important for, ?	What are bacteria important for?
+1	good health	bacteria, important for, ?	What are bacteria important for?
+1	the health	bacteria, important for, ?	What are bacteria important for?
+0	quenching	bacteria, important for, ?	What are bacteria important for?
+0	your pond	bacteria, important for, ?	What are bacteria important for?
+0	the development	bacteria, important for, ?	What are bacteria important for?
+0	NETs	bacteria, important for, ?	What are bacteria important for?
+0	proper maintenance	bacteria, important for, ?	What are bacteria important for?
+0	the formation	bacteria, important for, ?	What are bacteria important for?
+0	the ecology	bacteria, important for, ?	What are bacteria important for?
+0	the burning	carbon dioxide, produced by, ?	What produces carbon dioxide?
+1	human activity	carbon dioxide, produced by, ?	What produces carbon dioxide?
+1	the cells	carbon dioxide, produced by, ?	What produces carbon dioxide?
+1	the respiration	carbon dioxide, produced by, ?	What produces carbon dioxide?
+1	burning fossil fuels	carbon dioxide, produced by, ?	What produces carbon dioxide?
+0	53 cars	carbon dioxide, produced by, ?	What produces carbon dioxide?
+1	Nature	carbon dioxide, produced by, ?	What produces carbon dioxide?
+1	volcanoes	carbon dioxide, produced by, ?	What produces carbon dioxide?
+1	the yeast	carbon dioxide, produced by, ?	What produces carbon dioxide?
+0	the introduction	carbon dioxide, produced by, ?	What produces carbon dioxide?
+0	a variety	hypertension, caused by, ?	What is hypertension caused by?
+0	other conditions	hypertension, caused by, ?	What is hypertension caused by?
+0	a number	hypertension, caused by, ?	What is hypertension caused by?
+0	mutations	hypertension, caused by, ?	What is hypertension caused by?
+0	a narrowing	hypertension, caused by, ?	What is hypertension caused by?
+0	an increase	hypertension, caused by, ?	What is hypertension caused by?
+1	high blood pressure	hypertension, caused by, ?	What is hypertension caused by?
+1	medications	hypertension, caused by, ?	What is hypertension caused by?
+1	some underlying condition	hypertension, caused by, ?	What is hypertension caused by?
+1	obesity	hypertension, caused by, ?	What is hypertension caused by?
+0	the country	?, is located in, Africa	What is located in africa?
+1	Egypt	?, is located in, Africa	What is located in africa?
+1	Uganda	?, is located in, Africa	What is located in africa?
+0	The Republic	?, is located in, Africa	What is located in africa?
+1	Malawi	?, is located in, Africa	What is located in africa?
+1	Zambia	?, is located in, Africa	What is located in africa?
+1	Namibia	?, is located in, Africa	What is located in africa?
+1	Mozambique	?, is located in, Africa	What is located in africa?
+1	Ghana	?, is located in, Africa	What is located in africa?
+0	The nation	?, is located in, Africa	What is located in africa?
+1	its cuisine	Belgium, is known for, ?	What is Belgium known for?
+1	its beer	Belgium, is known for, ?	What is Belgium known for?
+1	more street and music festivals	Belgium, is known for, ?	What is Belgium known for?
+1	its fine art and architecture	Belgium, is known for, ?	What is Belgium known for?
+1	lace	Belgium, is known for, ?	What is Belgium known for?
+1	its comic books	Belgium, is known for, ?	What is Belgium known for?
+0	the high standard	Belgium, is known for, ?	What is Belgium known for?
+0	its strengths	Belgium, is known for, ?	What is Belgium known for?
+1	its waffles	Belgium, is known for, ?	What is Belgium known for?
+1	the lowest antique prices	Belgium, is known for, ?	What is Belgium known for?
+1	its wines	$x: (France, is known for, $x) (Spain, is known for, $x)	What are France and Spain both known for?
+1	its cheese	$x: (France, is known for, $x) (Spain, is known for, $x)	What are France and Spain both known for?
+1	its beaches	$x: (France, is known for, $x) (Spain, is known for, $x)	What are France and Spain both known for?
+1	its friendly people	$x: (France, is known for, $x) (Spain, is known for, $x)	What are France and Spain both known for?
+0	its production	$x: (France, is known for, $x) (Spain, is known for, $x)	What are France and Spain both known for?
+1	wine	$x: (France, is known for, $x) (Spain, is known for, $x)	What are France and Spain both known for?
+1	its rich cultural heritage	$x: (France, is known for, $x) (Spain, is known for, $x)	What are France and Spain both known for?
+1	oil	?, is found in, Arctic	What is found in the Arctic?
+1	The beluga	?, is found in, Arctic	What is found in the Arctic?
+1	The snow fox	?, is found in, Arctic	What is found in the Arctic?
+0	history	?, is found in, Arctic	What is found in the Arctic?
+1	turbot	?, is found in, Arctic	What is found in the Arctic?
+0	this gull	?, is found in, Arctic	What is found in the Arctic?
+0	This light coated bear	?, is found in, Arctic	What is found in the Arctic?
+1	Rhodiola rosea	?, is found in, Arctic	What is found in the Arctic?
+1	The Alaskan blackfish	?, is found in, Arctic	What is found in the Arctic?
+1	The tiny mollusc Limacina helicina	?, is found in, Arctic	What is found in the Arctic?
+1	Plutonium	$x, is byproduct of, fission	What are some byproducts of fission?
+1	Strontium 90	$x, is byproduct of, fission	What are some byproducts of fission?
+1	Radioactive iodine	$x, is byproduct of, fission	What are some byproducts of fission?
+0	The acid	$x, is byproduct of, fission	What are some byproducts of fission?
+0	a significant constituent	$x, is byproduct of, fission	What are some byproducts of fission?
+0	the environment	$x, is byproduct of, fission	What are some byproducts of fission?
+0	the Fukushima reactors	$x, is byproduct of, fission	What are some byproducts of fission?
+1	The iodine	$x, is byproduct of, fission	What are some byproducts of fission?
+1	Pu-239	$x, is byproduct of, fission	What are some byproducts of fission?
+1	South East Africa	Mozambique, is located in, ?	Where is Mozambique?
+1	Southeastern Africa	Mozambique, is located in, ?	Where is Mozambique?
+1	Namaacha	Mozambique, is located in, ?	Where is Mozambique?
+0	the capital	Mozambique, is located in, ?	Where is Mozambique?
+1	Southern Africa	Mozambique, is located in, ?	Where is Mozambique?
+1	Maputo	Mozambique, is located in, ?	Where is Mozambique?
+1	Africa	Mozambique, is located in, ?	Where is Mozambique?
+1	nature	fractal, are found in, ?	Where are fractals found?
+0	different parts	fractal, are found in, ?	Where are fractals found?
+1	human society	fractal, are found in, ?	Where are fractals found?
+1	the body	fractal, are found in, ?	Where are fractals found?
+1	human systems	fractal, are found in, ?	Where are fractals found?
+0	my gallery	fractal, are found in, ?	Where are fractals found?
+0	a variety	fractal, are found in, ?	Where are fractals found?
+1	The Mandelbrot set	?, is example of | is type of | is kind of | is manifestation of, a fractal	What is an example of a fractal?
+1	a shoreline	?, is example of | is type of | is kind of | is manifestation of, a fractal	What is an example of a fractal?
+1	Etsy	?, is example of | is type of | is kind of | is manifestation of, a fractal	What is an example of a fractal?
+0	this process	?, is example of | is type of | is kind of | is manifestation of, a fractal	What is an example of a fractal?
+0	The self similarity	?, is example of | is type of | is kind of | is manifestation of, a fractal	What is an example of a fractal?
+1	The Sierpinski Triangle	?, is example of | is type of | is kind of | is manifestation of, a fractal	What is an example of a fractal?
+1	the Mandlebrot set	?, is example of | is type of | is kind of | is manifestation of, a fractal	What is an example of a fractal?
+1	A tree	?, is example of | is type of | is kind of | is manifestation of, a fractal	What is an example of a fractal?
+1	The Fibonacci Rabbit sequence	?, is example of | is type of | is kind of | is manifestation of, a fractal	What is an example of a fractal?
+1	The Sierpinski Carpet	?, is example of | is type of | is kind of | is manifestation of, a fractal	What is an example of a fractal?
+1	a number	information | data, consist of | is made of, ?	What is information made of?
+1	information	information | data, consist of | is made of, ?	What is information made of?
+1	the date	information | data, consist of | is made of, ?	What is information made of?
+0	your name	information | data, consist of | is made of, ?	What is information made of?
+0	a variety	information | data, consist of | is made of, ?	What is information made of?
+1	names	information | data, consist of | is made of, ?	What is information made of?
+1	several fields	information | data, consist of | is made of, ?	What is information made of?
+1	records	information | data, consist of | is made of, ?	What is information made of?
+1	observations	information | data, consist of | is made of, ?	What is information made of?
+0	the following	information | data, consist of | is made of, ?	What is information made of?
+0	reports	cryptozoology, is study of, ?	What is cryptozoology?
+1	hidden animals	cryptozoology, is study of, ?	What is cryptozoology?
+1	creatures	cryptozoology, is study of, ?	What is cryptozoology?
+1	animals	cryptozoology, is study of, ?	What is cryptozoology?
+1	mythical creatures	cryptozoology, is study of, ?	What is cryptozoology?
+0	the evidence	cryptozoology, is study of, ?	What is cryptozoology?
+1	mythic and legendary creatures	cryptozoology, is study of, ?	What is cryptozoology?
+1	mysterious creatures	cryptozoology, is study of, ?	What is cryptozoology?
+1	unfathomable animals	cryptozoology, is study of, ?	What is cryptozoology?
+1	unseen animals	cryptozoology, is study of, ?	What is cryptozoology?
+1	Cosmonaut Yuri Gagarin	?, first person in, space	Who was the first person in space?
+0	1961	?, first person in, space	Who was the first person in space?
+1	Soviet cosmonaut Yuri Gagarin	?, first person in, space	Who was the first person in space?
+1	Colonel Yang Liwei	?, first person in, space	Who was the first person in space?
+0	the Soviet cosmonaut	?, first person in, space	Who was the first person in space?
+0	China	?, first person in, space	Who was the first person in space?
+0	Jan 2006	?, first person in, space	Who was the first person in space?
+0	Nov 13 , 2006	?, first person in, space	Who was the first person in space?
+1	Gagarin	?, first person in, space	Who was the first person in space?
+0	The Russians	?, first person in, space	Who was the first person in space?
+1	Ethiopia	$x: (coffee, is produced in | is grown in | is export from, $x) ($x, is located in, Africa)	What places in Africa produce coffee?
+0	the country	$x: (coffee, is produced in | is grown in | is export from, $x) ($x, is located in, Africa)	What places in Africa produce coffee?
+0	one	$x: (coffee, is produced in | is grown in | is export from, $x) ($x, is located in, Africa)	What places in Africa produce coffee?
+0	the world	$x: (coffee, is produced in | is grown in | is export from, $x) ($x, is located in, Africa)	What places in Africa produce coffee?
+1	Rwanda	$x: (coffee, is produced in | is grown in | is export from, $x) ($x, is located in, Africa)	What places in Africa produce coffee?
+1	Tanzania	$x: (coffee, is produced in | is grown in | is export from, $x) ($x, is located in, Africa)	What places in Africa produce coffee?
+1	Africa	$x: (coffee, is produced in | is grown in | is export from, $x) ($x, is located in, Africa)	What places in Africa produce coffee?
+0	this region	$x: (coffee, is produced in | is grown in | is export from, $x) ($x, is located in, Africa)	What places in Africa produce coffee?
+1	the Ivory Coast	$x: (coffee, is produced in | is grown in | is export from, $x) ($x, is located in, Africa)	What places in Africa produce coffee?
+0	's coffee	$x: ($x, is produced in | is grown in, mountains)	What is produced in the mountains?
+1	the quinoa	$x: ($x, is produced in | is grown in, mountains)	What is produced in the mountains?
+1	Calasparra Rice	$x: ($x, is produced in | is grown in, mountains)	What is produced in the mountains?
+1	The best tea	$x: ($x, is produced in | is grown in, mountains)	What is produced in the mountains?
+0	the world	$x: ($x, is produced in | is grown in, mountains)	What is produced in the mountains?
+0	's tea	$x: ($x, is produced in | is grown in, mountains)	What is produced in the mountains?
+0	's Arabica	$x: ($x, is produced in | is grown in, mountains)	What is produced in the mountains?
+0	This plant	$x: ($x, is produced in | is grown in, mountains)	What is produced in the mountains?
+1	Marijuana	$x: ($x, is produced in | is grown in, mountains)	What is produced in the mountains?
+1	Excellent coffee	$x: ($x, is produced in | is grown in, mountains)	What is produced in the mountains?
+0	powerful X-rays	$x, discovered, neutron star	Who discovered neutron stars?
+0	planets	$x, discovered, neutron star	Who discovered neutron stars?
+1	astronomers	$x, discovered, neutron star	Who discovered neutron stars?
+1	NASA Astronomers	$x, discovered, neutron star	Who discovered neutron stars?
+1	Francis Crick	$x, discovered structure of, DNA	Who discovered the structure of DNA?
+1	scientists	$x, discovered structure of, DNA	Who discovered the structure of DNA?
+1	James Watson	$x, discovered structure of, DNA	Who discovered the structure of DNA?
+1	James D. Watson	$x, discovered structure of, DNA	Who discovered the structure of DNA?
+0	the biologists	$x, discovered structure of, DNA	Who discovered the structure of DNA?
+1	Crick and Watson	$x, discovered structure of, DNA	Who discovered the structure of DNA?
+1	Crick	$x, discovered structure of, DNA	Who discovered the structure of DNA?
+0	the famous quartet	$x, discovered structure of, DNA	Who discovered the structure of DNA?
+0	3:58 pm Francis Crick	$x, discovered structure of, DNA	Who discovered the structure of DNA?
+1	F. H. C. Crick	$x, discovered structure of, DNA	Who discovered the structure of DNA?
+1	Gutenberg	?, invented, printing press	Who invented the printing press?
+1	Johannes Gutenberg	?, invented, printing press	Who invented the printing press?
+1	Johann Gutenberg	?, invented, printing press	Who invented the printing press?
+1	Caxton	?, invented, printing press	Who invented the printing press?
+1	the Chinese	?, invented, printing press	Who invented the printing press?
+0	Specific topics	?, invented, printing press	Who invented the printing press?
+0	the who	?, invented, printing press	Who invented the printing press?
+1	John Gutenberg	?, invented, printing press	Who invented the printing press?
+0	1450 Gutenberg	?, invented, printing press	Who invented the printing press?
+0	A good example	?, invented, printing press	Who invented the printing press?
+1	the hospital	babies, come from, ?	Where do babies come from?
+0	a variety	babies, come from, ?	Where do babies come from?
+0	his or mother	babies, come from, ?	Where do babies come from?
+0	the same place	babies, come from, ?	Where do babies come from?
+0	the heart	babies, come from, ?	Where do babies come from?
+1	the eggs	babies, come from, ?	Where do babies come from?
+1	the womb	babies, come from, ?	Where do babies come from?
+0	the dead	babies, come from, ?	Where do babies come from?
+1	mommies	babies, come from, ?	Where do babies come from?
+0	home	babies, come from, ?	Where do babies come from?
+0	some	new york, is known for, ?	What is New York known for?
+1	its pizza	new york, is known for, ?	What is New York known for?
+1	its nightlife	new york, is known for, ?	What is New York known for?
+0	a lot	new york, is known for, ?	What is New York known for?
+0	his work	new york, is known for, ?	What is New York known for?
+1	its history	new york, is known for, ?	What is New York known for?
+1	fashion	new york, is known for, ?	What is New York known for?
+1	its museums	new york, is known for, ?	What is New York known for?
+1	its flag-waving patriotism	new york, is known for, ?	What is New York known for?
+1	its diversity	new york, is known for, ?	What is New York known for?
+1	its highly regarded public school system	denver, is known for, ?	What is Denver known for?
+1	its parks	denver, is known for, ?	What is Denver known for?
+1	year-round adventure	denver, is known for, ?	What is Denver known for?
+1	its trendy urban chic vibe	denver, is known for, ?	What is Denver known for?
+0	its focus	denver, is known for, ?	What is Denver known for?
+1	skiing	denver, is known for, ?	What is Denver known for?
+0	its houses	denver, is known for, ?	What is Denver known for?
+1	a calm demeanor	denver, is known for, ?	What is Denver known for?
+0	his role	denver, is known for, ?	What is Denver known for?
+1	its top quality schools	denver, is known for, ?	What is Denver known for?
+1	business	car, is used for, ?	What are cars used for?
+1	business purposes	car, is used for, ?	What are cars used for?
+1	short trips	car, is used for, ?	What are cars used for?
+1	personal purposes	car, is used for, ?	What are cars used for?
+1	personal use	car, is used for, ?	What are cars used for?
+1	storage	car, is used for, ?	What are cars used for?
+0	purposes	car, is used for, ?	What are cars used for?
+1	trips	car, is used for, ?	What are cars used for?
+1	official duties	car, is used for, ?	What are cars used for?
+0	people	car, is used for, ?	What are cars used for?
+0	the beans	chocolate, is made from, ?	What is chocolate made from?
+1	cocoa beans	chocolate, is made from, ?	What is chocolate made from?
+1	cocoa butter	chocolate, is made from, ?	What is chocolate made from?
+0	the seeds	chocolate, is made from, ?	What is chocolate made from?
+1	cacao beans	chocolate, is made from, ?	What is chocolate made from?
+0	a blend	chocolate, is made from, ?	What is chocolate made from?
+1	the cocoa	chocolate, is made from, ?	What is chocolate made from?
+1	plants	chocolate, is made from, ?	What is chocolate made from?
+0	scratch	chocolate, is made from, ?	What is chocolate made from?
+1	forastero beans	chocolate, is made from, ?	What is chocolate made from?
+1	antibacterial soap	cilantro, taste like, ?	What does cilantro taste like?
+1	soap	cilantro, taste like, ?	What does cilantro taste like?
+0	normal Italian parsley plus bits	cilantro, taste like, ?	What does cilantro taste like?
+1	a mild Thai curry	cilantro, taste like, ?	What does cilantro taste like?
+0	a dirty slap	cilantro, taste like, ?	What does cilantro taste like?
+1	dish soap	cilantro, taste like, ?	What does cilantro taste like?
+0	items	?, can be, recycle	What can be recycled?
+1	Paper	?, can be, recycle	What can be recycled?
+0	products	?, can be, recycle	What can be recycled?
+1	batteries	?, can be, recycle	What can be recycled?
+1	aluminum	?, can be, recycle	What can be recycled?
+0	Both	?, can be, recycle	What can be recycled?
+1	Paper bags	?, can be, recycle	What can be recycled?
+0	The following items	?, can be, recycle	What can be recycled?
+1	materials	?, can be, recycle	What can be recycled?
+1	containers	?, can be, recycle	What can be recycled?
+1	Disposable cups	?, can't be, recycle	What can't be recycled?
+1	all jewelry	?, can't be, recycle	What can't be recycled?
+0	PLA	?, can't be, recycle	What can't be recycled?
+1	Polystyrene	?, can't be, recycle	What can't be recycled?
+0	the consumer	?, can't be, recycle	What can't be recycled?
+0	list	?, can't be, recycle	What can't be recycled?
+1	responsibility	liberty, mean, ?	What does liberty mean?
+0	all	liberty, mean, ?	What does liberty mean?
+1	freedom	liberty, mean, ?	What does liberty mean?
+0	the country	liberty, mean, ?	What does liberty mean?
+0	liberty	liberty, mean, ?	What does liberty mean?
+0	society	liberty, mean, ?	What does liberty mean?
+0	the people	liberty, mean, ?	What does liberty mean?
+0	the government	liberty, mean, ?	What does liberty mean?
+0	capital	liberty, mean, ?	What does liberty mean?
+0	the right	liberty, mean, ?	What does liberty mean?
+0	everyone	freedom, mean, ?	What does freedom mean?
+0	the life	freedom, mean, ?	What does freedom mean?
+0	each other	freedom, mean, ?	What does freedom mean?
+0	different people	freedom, mean, ?	What does freedom mean?
+0	everybody	freedom, mean, ?	What does freedom mean?
+0	freedom	freedom, mean, ?	What does freedom mean?
+0	that other people	freedom, mean, ?	What does freedom mean?
+1	responsibility	freedom, mean, ?	What does freedom mean?
+1	a choice	freedom, mean, ?	What does freedom mean?
+0	an end	freedom, mean, ?	What does freedom mean?
