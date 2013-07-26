@@ -1,0 +1,95 @@
+How many wagons are in a wagon train	wagon train, made up of, ?
+How old is mercer mayer	mercer mayer, born in, ?
+How old is mercer mayer	mercer mayer, date of birth, ?
+Where a pet rabbit lives	pet rabbits, live in, ?
+What does salamander eat	salamanders, eat, ?
+What is a rattle snakes height	rattlesnakes, grow to, ?
+Who is the india first prim minister	?, became the first prime minister of, india
+What is the musical term for structure	music, divided into, ?
+What is the first mosque placed on earth	first mosque, was erected at, ?
+What is sugar made of	sugars, are composed of, ?
+What is sucrose made from?	sucrose, made from, ?
+What is the function of an eye	eyes, are for, ?
+Where is Ghana	ghana, is a country in, ?
+What time of the year is Chinese new year	chinese new year, starts in, ?
+How many electrons does sodium want to lose	sodium, loses, ?
+What is made in Colorado	colorado, beers from here, ?
+What is made in Colorado	?, produced in, colorado
+What is another word for dark purple	?, dark kind of, purple
+When is the birthday of lebron James	lebron james, date of birth, ?
+When is the birthday of lebron James	lebron james, born on, ?
+What do ruby Pokemon look like	pokemon, just look like, ?
+What exactly is a small video camera	a small video camera, is, ?
+How old is Jacob latimore	jacob latimore, date of birth, ?
+What was helium used for	helium, used for, ?
+What is the formula for ammonium hydroxide	ammonium hydroxide, formula, ?
+What are cool places to visit in Wisconsin	wisconsin, tourist attractions, ?
+What is an image map	image map, is, ?
+What are the benefits of education	education, is good for, ?
+What to do at mammoth cave in Kentucky	mammoth cave national park, offers, ?
+What cities are in mexico?	?, is city in, Mexico
+What countries border France?	$x: ($x, border, France) ($x, "type", country)
+What foods are high in both protein and fiber?	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)
+Where do bananas come from?	(banana, come from, ?)
+Who uses a bow and arrow?	(?, use, bow and arrow)
+Who developed Jazz music?	(?, develop, Jazz music)
+Where is NASA located?	(NASA, located in, ?)
+When was Georgetown college founded?	(Georgetown college, founded in, ?)
+What animals have feathers?	$x: ($x, is, an animal) ($x, has, feathers)
+What are bell peppers stored in?	(bell pepper, stored in, ?)
+What do computers understand?	 (computer, understand, ?)
+Where does the sun rise?	(the sun, rises in, ?)
+What is the largest country?	(?, is, largest country)
+Who betrayed Caesar?	(?, betrayed, Caesar)
+What are fish scales for?	(fish scales, be for, ?)
+When was Leonardo DiCaprio born?	(leonardo dicaprio, born on, ?)
+Where does water vapor come from?	(water vapor, come from, ?)
+What are predators of squirrels?	(?, predator of, squirrel)
+What things are positively charged?	(?, have, "positive charge")
+Who is the mayor of Toronto?	(?, is mayor of, Toronto)
+What is necessary for survival?	(?, is necessary for, survival)
+How long do crocodiles live?	(crocodiles, live for, ?)
+What is important for happiness?	(?, important for, happiness)
+What is insulin for?	(insulin, is for, ?)
+What is used for both cooking and cleaning?	$x: ($x, used for, cooking) ($x, used for, cleaning)
+What is cured by antibiotics?	($x, cured by, antibiotics)
+What melts metal?	?, melts, metal
+What is the cerebellum for?	cerebellum, is for, ?
+What do leopard seals eat?	leopard seal, eat, ?
+Who studies quantum physics?	?, study, quantum physics
+Where does fresh water come from?	fresh water, come from, ?
+What is physical fitness good for?	physical fitness, good for, ?
+Who built the pyramids?	?, built, pyramids
+What did thomas edison invent?	thomas edison, invent, ?
+What contains antioxidants?	(?, contains, antioxidants)
+What produces wind?	(?, produce, wind)
+What mountains are in ireland?	?, mountain in, Ireland
+What are bacteria important for?	bacteria, important for, ?
+What produces carbon dioxide?	carbon dioxide, produced by, ?
+What is hypertension caused by?	hypertension, caused by, ?
+What is located in africa?	?, is located in, Africa
+What is Belgium known for?	Belgium, is known for, ?
+What are France and Spain both known for?	$x: (France, is known for, $x) (Spain, is known for, $x)
+What is found in the Arctic?	?, is found in, Arctic
+What are some byproducts of fission?	$x, is byproduct of, fission
+Where is Mozambique?	Mozambique, is located in, ?
+Where are fractals found?	fractal, are found in, ?
+What is an example of a fractal?	?, is example of | is type of | is kind of | is manifestation of, a fractal
+What is information made of?	information | data, consist of | is made of, ?
+What is cryptozoology?	cryptozoology, is study of, ?
+Who was the first person in space?	?, first person in, space
+What places in Africa produce coffee?	$x: (coffee, is produced in | is grown in | is export from, $x) ($x, is located in, Africa)
+What is produced in the mountains?	$x: ($x, is produced in | is grown in, mountains)
+Who discovered neutron stars?	$x, discovered, neutron star
+Who discovered the structure of DNA?	$x, discovered structure of, DNA
+Who invented the printing press?	?, invented, printing press
+Where do babies come from?	babies, come from, ?
+What is New York known for?	new york, is known for, ?
+What is Denver known for?	denver, is known for, ?
+What are cars used for?	car, is used for, ?
+What is chocolate made from?	chocolate, is made from, ?
+What does cilantro taste like?	cilantro, taste like, ?
+What can be recycled?	?, can be, recycle
+What can't be recycled?	?, can't be, recycle
+What does liberty mean?	liberty, mean, ?
+What does freedom mean?	freedom, mean, ?
