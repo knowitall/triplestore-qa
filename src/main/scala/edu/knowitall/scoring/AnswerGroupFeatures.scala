@@ -2,10 +2,12 @@ package edu.knowitall.scoring
 
 import edu.knowitall.triplestore.TriplestoreClient
 import edu.knowitall.triplestore.CachedTriplestoreClient
+import edu.knowitall.triplestore.CountCachedTriplestoreClient
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.execution.ExecConjunctiveQuery
 import edu.knowitall.execution.Search.TSQuery
+import edu.knowitall.execution.Tuple
 import edu.knowitall.tool.conf.FeatureSet
 import edu.knowitall.tool.conf.Feature
 import edu.knowitall.tool.conf.Feature.booleanToDouble
@@ -23,15 +25,17 @@ object AnswerGroupFeatures {
   implicit def boolToDouble(bool: Boolean) = if (bool) 1.0 else 0.0
   
   val baseClient = SolrClient("http://rv-n12.cs.washington.edu:8983/solr/triplestore", 500)
-  val client = CachedTriplestoreClient(baseClient, 1000)
-  
+  val countCacheClient = CountCachedTriplestoreClient(baseClient, 10000)
+  val client = CachedTriplestoreClient(countCacheClient, 10000)
   
   def allTuples(group: AnswerGroup)  = group.derivations.map(_.etuple.tuple)
   def allQueries(group: AnswerGroup) = group.derivations.map(_.etuple.equery).distinct
   
   object MultipleNamespaces extends AnswerGroupFeature("Answer comes from multiple namespaces") {
     def apply(group: AnswerGroup) = {
-      val distinctNamespaces = allTuples(group).map(_.get("namespace").toString).distinct
+      def getNamespace(t: Tuple) = t.get("namespace").toString
+      val tupleNamespaces = allTuples(group) map getNamespace
+      val distinctNamespaces = tupleNamespaces.distinct
       distinctNamespaces.size > 1
     }
   }
@@ -41,7 +45,10 @@ object AnswerGroupFeatures {
   }
   
   object NumberOfDerivations extends AnswerGroupFeature("Number of AnswerDerivations in the AnswerGroup") {
-    def apply(group: AnswerGroup) = group.derivations.size.toDouble
+    def apply(group: AnswerGroup) = {
+      val numDerivations = group.derivations.size.toDouble
+      math.sqrt(numDerivations)
+    }
   }
   
   object AnswerContainsArticles extends AnswerGroupFeature("Answer contains article tokens") {
@@ -57,7 +64,7 @@ object AnswerGroupFeatures {
     val determiners = Set("these", "those", "that", "this", "some", "most", "all", "any", "both", "either")
     def apply(group: AnswerGroup) = {
       val firstAnswer = group.alternates.head.head
-      val firstAnswerTokens = firstAnswer.split("\\s+").map(_.toLowerCase).toSet
+      val firstAnswerTokens = firstAnswer.split("\\s+").headOption.map(_.toLowerCase).toSet
       determiners.intersect(firstAnswerTokens).nonEmpty
     }
   }
@@ -74,16 +81,19 @@ object AnswerGroupFeatures {
   object TriplestoreAnswerFrequency extends AnswerGroupFeature("Log of Frequency of answer in the triplestore") {
     val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ AnswerStartsWithDeterminers.determiners
     val splitRegex = "\\s+".r
+    
+    case class CountQuery(arg: String) extends TSQuery {
+      def toQueryString = {
+        val answerTokens = splitRegex.split(arg)
+        val filteredTokens = answerTokens.filter(tok => !junkTokens.contains(tok)).toSeq
+        val escapedTokens = filteredTokens map SolrClient.escape
+        val cleanAnswer = if (escapedTokens.nonEmpty) escapedTokens.mkString("\"", " ", "\"") else Seq("*")
+        "arg1:\"%s\"".format(cleanAnswer)
+      }
+    }
     def apply(group: AnswerGroup) = {
       val rawAnswer = group.alternates.head.head.toLowerCase
-      val answerTokens = splitRegex.split(rawAnswer)
-      val filteredTokens = answerTokens.filter(tok => !junkTokens.contains(tok)).toSeq
-      val escapedTokens = filteredTokens map SolrClient.escape
-      val cleanAnswer = if (escapedTokens.nonEmpty) escapedTokens.mkString("\"", " ", "\"") else Seq("*")
-      val query = new TSQuery { 
-        val toQueryString = "arg1:%s".format(cleanAnswer) 
-        override val toString = toQueryString
-      }
+      val query = CountQuery(rawAnswer)
       math.log(client.count(query).toDouble + 1)
     }
   }
