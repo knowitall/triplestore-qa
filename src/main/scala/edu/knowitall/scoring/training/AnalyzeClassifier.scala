@@ -51,8 +51,8 @@ object AnalyzeClassifier {
   def evalCrossValidation(numSplits: Int): Seq[Double] = {
     
     val dataSplits = crossValidationSplits(numSplits)
-    val allScoredItems = dataSplits.flatMap({ case (training, test) => eval(training, test) }) 
-    val sortedScoredItems = allScoredItems.sortBy(-_.score)
+    val allScoredItems = dataSplits.par.flatMap({ case (training, test) => eval(training, test) }) 
+    val sortedScoredItems = allScoredItems.toList.sortBy(-_.score)
     val sortedBooleans = sortedScoredItems.map(_.item.label)
     val precisionCurve = precRecall(sortedBooleans)
     precisionCurve
@@ -60,7 +60,7 @@ object AnalyzeClassifier {
   
   def main(args: Array[String]): Unit = {
     
-    evalCrossValidation(10).zipWithIndex foreach { case (prec, recall) =>
+    evalCrossValidation(4).zipWithIndex foreach { case (prec, recall) =>
       println(s"$recall\t$prec")  
     }
   }
