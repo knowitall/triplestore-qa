@@ -23,6 +23,8 @@ case class UniformAnswerScorer(s: Double = 0.0) extends AnswerScorer {
     BasicScoredAnswer(group.answer, group.alternates, group.derivations, s)
 }
 
+
+
 case class NumDerivationsScorer() extends AnswerScorer {
   override def scoreAnswer(group: AnswerGroup) = 
     BasicScoredAnswer(group.answer, group.alternates, group.derivations, 

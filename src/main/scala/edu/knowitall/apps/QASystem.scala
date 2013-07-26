@@ -15,6 +15,7 @@ import edu.knowitall.scoring.NumDerivationsScorer
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.parsing.StringMatchingParser
 import edu.knowitall.scoring.UniformAnswerScorer
+import edu.knowitall.scoring.LogisticAnswerScorer
 import edu.knowitall.parsing.OldParalexParser
 import edu.knowitall.execution.RelationSynonymExecutor
 
@@ -61,7 +62,7 @@ case class QAConfig(parser: String = "formal",
 
 case object Components {
   
-  val baseClient = SolrClient("http://rv-n12:8983/solr/triplestore", 500)
+  val baseClient = SolrClient("http://rv-n12.cs.washington.edu:8983/solr/triplestore", 500)
   val client = CachedTriplestoreClient(baseClient, 100000)
   
   val parsers: Map[String, QuestionParser] =
@@ -78,5 +79,6 @@ case object Components {
   
   val scorers: Map[String, AnswerScorer] =
     Map("numDerivations" -> NumDerivationsScorer(),
-      "uniform" -> UniformAnswerScorer())
+      "uniform" -> UniformAnswerScorer(),
+      "logistic" -> new LogisticAnswerScorer())
 }
