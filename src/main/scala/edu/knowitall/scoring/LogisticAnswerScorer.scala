@@ -19,5 +19,19 @@ abstract class ClassifierAnswerScorer(val confFunction: ConfidenceFunction[Answe
 
 class LogisticAnswerScorer(
     val logistic: LogisticRegression[AnswerGroup] = 
-      training.AnswerScorerTrainer.classifier) 
+      LogisticAnswerScorer.defaultClassifier) 
 extends ClassifierAnswerScorer(logistic)
+
+object LogisticAnswerScorer {
+  
+  val defaultModel = "logistic-scorer.model"
+    
+  val defaultModelURL = {
+    val url = getClass.getResource(defaultModel)
+    require(url != null, "Could not find " + defaultModel)
+    url
+  }
+  
+  val defaultClassifier = LogisticRegression.fromUrl(AnswerGroupFeatures.featureSet, defaultModelURL)
+  
+}
