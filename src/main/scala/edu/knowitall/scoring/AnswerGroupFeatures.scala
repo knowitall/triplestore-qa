@@ -1,14 +1,20 @@
 package edu.knowitall.scoring
 
+import edu.knowitall.triplestore.TriplestoreClient
+import edu.knowitall.triplestore.CachedTriplestoreClient
+import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.execution.ExecConjunctiveQuery
+import edu.knowitall.execution.Search.TSQuery
 import edu.knowitall.tool.conf.FeatureSet
 import edu.knowitall.tool.conf.Feature
 import edu.knowitall.tool.conf.Feature.booleanToDouble
 import edu.knowitall.tool.conf.FeatureSet
+import edu.knowitall.common.Resource.using
 import scala.collection.immutable.SortedMap
 import TupleFeatures._
 import scala.language.implicitConversions
+import io.Source
 
 object AnswerGroupFeatures {
 
@@ -16,13 +22,17 @@ object AnswerGroupFeatures {
   
   implicit def boolToDouble(bool: Boolean) = if (bool) 1.0 else 0.0
   
+  val baseClient = SolrClient("http://rv-n12.cs.washington.edu:8983/solr/triplestore", 500)
+  val client = CachedTriplestoreClient(baseClient, 1000)
+  
+  
   def allTuples(group: AnswerGroup)  = group.derivations.map(_.etuple.tuple)
   def allQueries(group: AnswerGroup) = group.derivations.map(_.etuple.equery).distinct
   
-  object NumberOfNamespaces extends AnswerGroupFeature("Number of distinct namespaces across all tuples") {
+  object MultipleNamespaces extends AnswerGroupFeature("Answer comes from multiple namespaces") {
     def apply(group: AnswerGroup) = {
       val distinctNamespaces = allTuples(group).map(_.get("namespace").toString).distinct
-      distinctNamespaces.size.toDouble
+      distinctNamespaces.size > 1
     }
   }
   
@@ -34,37 +44,21 @@ object AnswerGroupFeatures {
     def apply(group: AnswerGroup) = group.derivations.size.toDouble
   }
   
-  object CapitalAnswerTokens extends AnswerGroupFeature("Number of Capitalized Answer Tokens") {
-    val capitalRegex = "[A-Z]\\w+".r
-    def apply(group: AnswerGroup) = group.alternates.map({ alternate =>
-      alternate.map(answer => capitalRegex.findAllIn(answer).size).sum
-    }).max
-  }
-  
-  object CapitalQueryTokens extends AnswerGroupFeature("Number of Capitalized Query Tokens") {
-    import CapitalAnswerTokens.capitalRegex
-    def apply(group: AnswerGroup): Double = {
-      val queryLiteralFields = allQueries(group).map {
-        case equery: ExecConjunctiveQuery => equery.conjuncts.flatMap(_.literalFields)
-        case _ => Nil
-      }
-      val queryLiterals = queryLiteralFields.map(_.map(_._2.toString))
-      val queryLiteralCapitalCounts = queryLiterals.map(lits => lits.map(l => capitalRegex.findAllIn(l).size).sum)
-      (0 :: queryLiteralCapitalCounts).max
+  object AnswerContainsArticles extends AnswerGroupFeature("Answer contains article tokens") {
+    val articles = Set("the", "a", "an")
+    def apply(group: AnswerGroup) = {
+      val firstAnswer = group.alternates.head.head
+      val firstAnswerTokens = firstAnswer.split("\\s+").map(_.toLowerCase).toSet
+      articles.intersect(firstAnswerTokens).nonEmpty
     }
   }
   
-  object CapitalTokenDisparity extends AnswerGroupFeature(
-      "Absolute difference between number of capitalized tokens in answer and in query literals.") {
-    def apply(group: AnswerGroup) = math.abs(CapitalAnswerTokens(group) - CapitalQueryTokens(group))
-  }
-  
-  object AnswerStartsWithDeterminers extends AnswerGroupFeature("Answer starts with determiner") {
-    val determiners = Set("the", "a", "an", "these", "those", "that", "this", "some", "most", "all", "any")
+  object AnswerStartsWithDeterminers extends AnswerGroupFeature("Answer contains determiner") {
+    val determiners = Set("these", "those", "that", "this", "some", "most", "all", "any", "both", "either")
     def apply(group: AnswerGroup) = {
       val firstAnswer = group.alternates.head.head
-      val firstAnswerToken = firstAnswer.split("\\s+").head.toLowerCase()
-      determiners.contains(firstAnswerToken)
+      val firstAnswerTokens = firstAnswer.split("\\s+").map(_.toLowerCase).toSet
+      determiners.intersect(firstAnswerTokens).nonEmpty
     }
   }
   
@@ -77,15 +71,34 @@ object AnswerGroupFeatures {
     }
   }
   
+  object TriplestoreAnswerFrequency extends AnswerGroupFeature("Log of Frequency of answer in the triplestore") {
+    val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ AnswerStartsWithDeterminers.determiners
+    val splitRegex = "\\s+".r
+    def apply(group: AnswerGroup) = {
+      val rawAnswer = group.alternates.head.head.toLowerCase
+      val answerTokens = splitRegex.split(rawAnswer)
+      val filteredTokens = answerTokens.filter(tok => !junkTokens.contains(tok)).toSeq
+      val escapedTokens = filteredTokens map SolrClient.escape
+      val cleanAnswer = if (escapedTokens.nonEmpty) escapedTokens.mkString("\"", " ", "\"") else Seq("*")
+      val query = new TSQuery { 
+        val toQueryString = "arg1:%s".format(cleanAnswer) 
+        override val toString = toQueryString
+      }
+      math.log(client.count(query).toDouble + 1)
+    }
+  }
+  
   /**
    * Generic features that apply to any AnswerGroup
    */
   val features: Seq[AnswerGroupFeature] = Seq(
-      NumberOfNamespaces, 
+      MultipleNamespaces, 
       NumberOfAlternates,
       NumberOfDerivations,
+      AnswerContainsArticles,
       AnswerStartsWithDeterminers,
-      AnswerContainsNegation)
+      AnswerContainsNegation,
+      TriplestoreAnswerFrequency)
 
   
   def featureSet: FeatureSet[AnswerGroup, Double] = FeatureSet(features)
