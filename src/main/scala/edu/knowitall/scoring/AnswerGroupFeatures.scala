@@ -36,7 +36,7 @@ object AnswerGroupFeatures {
       def getNamespace(t: Tuple) = t.get("namespace").toString
       val tupleNamespaces = allTuples(group) map getNamespace
       val distinctNamespaces = tupleNamespaces.distinct
-      distinctNamespaces.size > 1
+      distinctNamespaces.size.toDouble
     }
   }
   
