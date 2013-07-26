@@ -60,7 +60,7 @@ object AnalyzeClassifier {
   
   def main(args: Array[String]): Unit = {
     
-    evalCrossValidation(4).zipWithIndex foreach { case (prec, recall) =>
+    evalCrossValidation(10).zipWithIndex foreach { case (prec, recall) =>
       println(s"$recall\t$prec")  
     }
   }
