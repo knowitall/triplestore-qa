@@ -98,6 +98,41 @@ object AnswerGroupFeatures {
     }
   }
   
+  object ExactRelationMatch extends AnswerGroupFeature("Query relation matches exactly") {
+    
+    import edu.knowitall.execution.TLiteral
+    import TriplestoreAnswerFrequency.junkTokens 
+    import TriplestoreAnswerFrequency.splitRegex
+    
+    def cleanRel(s: String) = {
+      val lc = s.toLowerCase
+      val split = splitRegex.split(lc)
+      val filtered = split.filter(tokenFilter)
+      filtered.mkString(" ")
+    }
+    
+    def tokenFilter(s: String) = !junkTokens.contains(s)
+    
+    val relRegex = "\\.rel$".r
+    
+    def apply(group: AnswerGroup) = {
+      val execConjQueryDerivs = group.derivations.filter(_.etuple.equery.isInstanceOf[ExecConjunctiveQuery])
+      execConjQueryDerivs.exists { deriv =>
+        val conjuncts = deriv.etuple.equery.asInstanceOf[ExecConjunctiveQuery].conjuncts
+        val relLiterals = conjuncts.map(_.rs).flatMap {
+          case t: TLiteral => Some(t.toString)
+          case _ => None
+        }
+        val relQuerySet = relLiterals.map(cleanRel).toSet
+        
+        val tupleRelAttrs = deriv.etuple.tuple.attrs.keys.filter(attr => relRegex.findFirstIn(attr).nonEmpty)
+        val tupleRels = tupleRelAttrs flatMap { attr => deriv.etuple.tuple.getString(attr) }
+        val tupleRelSet = tupleRels.map(cleanRel).toSet
+        tupleRelSet.intersect(relQuerySet).nonEmpty
+      }
+    }
+  }
+  
   /**
    * Generic features that apply to any AnswerGroup
    */
@@ -108,7 +143,8 @@ object AnswerGroupFeatures {
       AnswerContainsArticles,
       AnswerStartsWithDeterminers,
       AnswerContainsNegation,
-      TriplestoreAnswerFrequency)
+      TriplestoreAnswerFrequency,
+      ExactRelationMatch)
 
   
   def featureSet: FeatureSet[AnswerGroup, Double] = FeatureSet(features)
