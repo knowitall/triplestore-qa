@@ -37,14 +37,12 @@ class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[An
   }
   
   def labeledAnswerGroup(inputRec: InputRecord, groups: Seq[AnswerGroup]): Try[LAG] = {
-    // run the uquery to get answergroups
-    val allGroups = groupsForQuery(inputRec.uquery)
     // get just the groups with the answer we're interested in
-    val groups = allGroups filter expectedGroupFilter(inputRec.answer)
+    val filteredGroups = groups filter expectedGroupFilter(inputRec.answer)
     // take just the first one for now...
     Try {
-      require(groups.size >= 1, s"No results obtained for training record $inputRec")
-      Labelled(inputRec.label, groups.head)
+      require(filteredGroups.size >= 1, s"No results obtained for training record $inputRec")
+      Labelled(inputRec.label, filteredGroups.head)
     }
   }
   
@@ -57,7 +55,7 @@ class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[An
   
   lazy val labeledAnswerGroups = {
     val queryRecsPairs = queryGroupedRecs.iterator.toSeq
-    val groupsRecsPairs = queryRecsPairs.map { case (queryString, inputRecs) =>
+    val groupsRecsPairs = queryRecsPairs.par.map { case (queryString, inputRecs) =>
       val groups = groupsForQuery(queryString)
       (groups, inputRecs)
     }
