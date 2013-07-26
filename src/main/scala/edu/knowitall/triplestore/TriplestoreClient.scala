@@ -45,20 +45,39 @@ trait TriplestoreClient {
 case class CachedTriplestoreClient(client: TriplestoreClient, size: Int = 1000) 
   extends TriplestoreClient {
   
-  val map = new LruMap[(TSQuery, Int), List[Tuple]](size)
+  val tupleMap = new LruMap[(TSQuery, Int), List[Tuple]](size)
   
   def search(q: TSQuery, hits: Int): List[Tuple] = {
-    map.get((q, hits)) match {
+    tupleMap.get((q, hits)) match {
       case Some(x) => x
       case _ => {
         val results = client.search(q, hits)
-        map.put((q, hits), results)
+        tupleMap.put((q, hits), results)
         results
       }
     }
   }
   
   def count(q: TSQuery) = client.count(q)
+}
+
+case class CountCachedTriplestoreClient (client: TriplestoreClient, size: Int = 1000) 
+  extends TriplestoreClient {
+
+  val countMap = new LruMap[TSQuery, Int](size)
+
+  def search(q: TSQuery, hits: Int): List[Tuple] = client.search(q, hits)
+
+  def count(q: TSQuery) = {
+    countMap.get(q) match {
+      case Some(x) => x
+      case _ => {
+        val results = client.count(q)
+        countMap.put(q, results)
+        results
+      }
+    }
+  }
 }
 
 /**
