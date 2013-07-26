@@ -61,7 +61,7 @@ object AnswerGroupFeatures {
   }
   
   object AnswerStartsWithDeterminers extends AnswerGroupFeature("Answer contains determiner") {
-    val determiners = Set("these", "those", "that", "this", "some", "most", "all", "any", "both", "either")
+    val determiners = Set("these", "those", "that", "this", "some", "most", "all", "any", "both", "either", "each", "more", "less")
     def apply(group: AnswerGroup) = {
       val firstAnswer = group.alternates.head.head
       val firstAnswerTokens = firstAnswer.split("\\s+").headOption.map(_.toLowerCase).toSet
@@ -70,7 +70,7 @@ object AnswerGroupFeatures {
   }
   
   object AnswerContainsNegation extends AnswerGroupFeature("Answer contains a negation word") {
-    val negationWords = Set("no", "none", "never", "neither", "nobody", "nor", "nothing", "nowhere", "n't")
+    val negationWords = Set("no", "none", "never", "neither", "nobody", "nor", "nothing", "nowhere", "n't", "cannot", "cant", "can't", "wont")
     def apply(group: AnswerGroup) = {
       val firstAnswer = group.alternates.head.head
       val firstAnswerTokens = firstAnswer.split("\\s+").map(_.toLowerCase).toSet
@@ -98,37 +98,61 @@ object AnswerGroupFeatures {
     }
   }
   
-  object ExactRelationMatch extends AnswerGroupFeature("Query relation matches exactly") {
+  abstract class QueryFieldMatch(val subname: String) extends AnswerGroupFeature("Query fields match:" + subname) {
     
-    import edu.knowitall.execution.TLiteral
-    import TriplestoreAnswerFrequency.junkTokens 
+    import edu.knowitall.execution.{TLiteral, TConjunct}
+    import edu.knowitall.execution.Search.TSField
+
+    def normalizeLiteral(s: String): String
+    
+    /**
+     * Test whether fields in qconj match corresponding fields in tuple.
+     * Returns true if match, or if fields are absent
+     */
+    def queryFieldMatch(qconj: TConjunct, fields: Set[TSField], tuple: Tuple): Boolean = {
+
+      val fieldStrings = fields.map(_.name)
+      val existingLiteralFields = qconj.literalFields.filter { litfield => fieldStrings.contains(litfield._1) }
+      val cleanedLiteralFields = existingLiteralFields.toSeq.map {
+        case (field, literal) =>
+          (field.name, normalizeLiteral(literal.toString))
+      }
+      // tuple fields corresponding to literal fields
+      def fieldName(n: String) = s"${qconj.name}.$n"
+      val tupleFieldNames = cleanedLiteralFields.map(_._1).map(fieldName)
+      val tupleFields = tupleFieldNames.toSeq.map { name =>
+        val value = tuple.getString(name).getOrElse(throw new RuntimeException(s"Tuple does not have field $name"))
+        (name, normalizeLiteral(value))
+      }
+      require(cleanedLiteralFields.length == tupleFields.length)
+      cleanedLiteralFields.zip(tupleFields).forall {
+        case ((queryField, queryLiteral), (tupleField, tupleLiteral)) =>
+          queryLiteral == tupleLiteral
+      }
+    }
+  }
+    
+  object AnyRelExactMatch extends QueryFieldMatch(" Query relation exactly matches any tuple relation") {
+
+    import edu.knowitall.execution.Search.rel
+    import TriplestoreAnswerFrequency.junkTokens
     import TriplestoreAnswerFrequency.splitRegex
+    import edu.knowitall.tool.stem.MorphaStemmer
     
-    def cleanRel(s: String) = {
+    def normalizeLiteral(s: String) = {
       val lc = s.toLowerCase
       val split = splitRegex.split(lc)
-      val filtered = split.filter(tokenFilter)
+      val stems = split.map(MorphaStemmer.apply)
+      def tokenFilter(t: String) = !junkTokens.contains(t)
+      val filtered = stems.filter(tokenFilter)
       filtered.mkString(" ")
     }
-    
-    def tokenFilter(s: String) = !junkTokens.contains(s)
-    
-    val relRegex = "\\.rel$".r
-    
+   
     def apply(group: AnswerGroup) = {
       val execConjQueryDerivs = group.derivations.filter(_.etuple.equery.isInstanceOf[ExecConjunctiveQuery])
       execConjQueryDerivs.exists { deriv =>
         val conjuncts = deriv.etuple.equery.asInstanceOf[ExecConjunctiveQuery].conjuncts
-        val relLiterals = conjuncts.map(_.rs).flatMap {
-          case t: TLiteral => Some(t.toString)
-          case _ => None
-        }
-        val relQuerySet = relLiterals.map(cleanRel).toSet
-        
-        val tupleRelAttrs = deriv.etuple.tuple.attrs.keys.filter(attr => relRegex.findFirstIn(attr).nonEmpty)
-        val tupleRels = tupleRelAttrs flatMap { attr => deriv.etuple.tuple.getString(attr) }
-        val tupleRelSet = tupleRels.map(cleanRel).toSet
-        tupleRelSet.intersect(relQuerySet).nonEmpty
+        conjuncts.exists { qconj => queryFieldMatch(qconj, Set(rel), deriv.etuple.tuple) }
       }
     }
   }
@@ -138,13 +162,12 @@ object AnswerGroupFeatures {
    */
   val features: Seq[AnswerGroupFeature] = Seq(
       MultipleNamespaces, 
-      NumberOfAlternates,
       NumberOfDerivations,
       AnswerContainsArticles,
       AnswerStartsWithDeterminers,
       AnswerContainsNegation,
       TriplestoreAnswerFrequency,
-      ExactRelationMatch)
+      AnyRelExactMatch)
 
   
   def featureSet: FeatureSet[AnswerGroup, Double] = FeatureSet(features)
