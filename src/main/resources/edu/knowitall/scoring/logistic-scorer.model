@@ -1,8 +1,8 @@
-Answer comes from multiple namespaces	0.0
-Answer contains a negation word	-0.46614979790129624
-Answer contains article tokens	-0.6191253694155439
-Answer contains determiner	-1.2607467997209338
-Intercept	0.7796385348466074
-Log of Frequency of answer in the triplestore	-0.0468243746900689
-Number of AnswerDerivations in the AnswerGroup	0.03566720415771609
-Number of alternate forms of the answer	0.023772160147792907
+Answer comes from multiple namespaces	0.7446193051812661
+Answer contains a negation word	-0.3348547395788995
+Answer contains article tokens	-0.6749223888850453
+Answer contains determiner	-1.2643162355656576
+Intercept	0.7446193051812661
+Log of Frequency of answer in the triplestore	-0.12763343498680482
+Number of AnswerDerivations in the AnswerGroup	0.22535623433719115
+Number of alternate forms of the answer	-0.0023544313108224526
