@@ -64,7 +64,7 @@ case class CachedTriplestoreClient(client: TriplestoreClient, size: Int = 1000)
 case class CountCachedTriplestoreClient (client: TriplestoreClient, size: Int = 1000) 
   extends TriplestoreClient {
 
-  val countMap = new LruMap[TSQuery, Int](size)
+  val countMap = new LruMap[TSQuery, Long](size)
 
   def search(q: TSQuery, hits: Int): List[Tuple] = client.search(q, hits)
 
