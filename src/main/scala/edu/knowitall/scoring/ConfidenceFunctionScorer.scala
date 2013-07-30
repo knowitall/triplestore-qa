@@ -11,6 +11,8 @@ abstract class ConfidenceFunctionScorer extends AnswerScorer {
   
   def confFunction: ConfidenceFunction[AnswerGroup]
   
+  def featureSet: FeatureSet[AnswerGroup, Double]
+  
   override def scoreAnswer(group: AnswerGroup): ScoredAnswerGroup = {
     BasicScoredAnswer(group.answer, group.alternates, group.derivations, confFunction(group))
   }
@@ -27,12 +29,16 @@ case class LogisticAnswerScorer() extends ConfidenceFunctionScorer {
     url
   }
   
+  override val featureSet = AnswerGroupFeatures
+  
   override val confFunction = LogisticRegression.fromUrl(AnswerGroupFeatures, defaultModelURL)
 }
 
 case class DecisionTreeScorer() extends ConfidenceFunctionScorer {
   
   private val defaultTraining = training.TrainingDataReader.defaultTraining
+  
+  override val featureSet = AnswerGroupFeatures
   
   override val confFunction  = training.J48Trainer.train(defaultTraining)
 }
