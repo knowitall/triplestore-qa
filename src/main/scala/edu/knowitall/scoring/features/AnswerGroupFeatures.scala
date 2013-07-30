@@ -63,11 +63,11 @@ object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
     }
   }
   
-  object AnswerStartsWithDeterminers extends AnswerGroupFeature("Answer contains determiner") {
+  object AnswerContainsDeterminer extends AnswerGroupFeature("Answer contains determiner") {
     val determiners = Set("these", "those", "that", "this", "some", "most", "all", "any", "both", "either", "each", "more", "less")
     def apply(group: AnswerGroup) = {
       val firstAnswer = group.alternates.head.head
-      val firstAnswerTokens = firstAnswer.split("\\s+").headOption.map(_.toLowerCase).toSet
+      val firstAnswerTokens = firstAnswer.split("\\s+").map(_.toLowerCase).toSet
       determiners.intersect(firstAnswerTokens).nonEmpty
     }
   }
@@ -82,7 +82,7 @@ object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
   }
   
   object TriplestoreAnswerFrequency extends AnswerGroupFeature("Log of Frequency of answer in the triplestore") {
-    val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ AnswerStartsWithDeterminers.determiners
+    val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ AnswerContainsDeterminer.determiners
     val splitRegex = "\\s+".r
     
     case class CountQuery(arg: String) extends TSQuery {
@@ -102,7 +102,7 @@ object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
   }
   
   object TriplestoreQueryFrequency extends AnswerGroupFeature("Log of query literals in the triplestore") {
-    val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ AnswerStartsWithDeterminers.determiners
+    val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ AnswerContainsDeterminer.determiners
     val splitRegex = "\\s+".r
     
     def apply(group: AnswerGroup) = {
@@ -136,13 +136,13 @@ object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
    * Generic features that apply to any AnswerGroup
    */
   private val features: Seq[AnswerGroupFeature] = Seq(
-      MultipleNamespaces, 
       NumberOfDerivations,
       AnswerContainsArticles,
-      AnswerStartsWithDeterminers,
+      AnswerContainsDeterminer,
       AnswerContainsNegation,
-      LiteralFieldsSimilarity,
-      TriplestoreAnswerFrequency)
+      LiteralFieldsDifference,
+      TriplestoreAnswerFrequency
+    )
 
   
   override val featureMap = 
