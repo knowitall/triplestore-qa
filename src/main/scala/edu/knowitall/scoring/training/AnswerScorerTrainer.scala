@@ -53,3 +53,20 @@ object J48Trainer extends ConfidenceTrainer[AnswerGroup](AnswerGroupFeatures) {
     new WekaConfidenceFunction(features, j48, instances)
   }
 }
+
+object WekaLogisticTrainer extends ConfidenceTrainer[AnswerGroup](AnswerGroupFeatures) {
+  
+  import weka.core.Instance
+  import weka.classifiers.Classifier
+  import weka.classifiers.functions.Logistic
+  import unweka.WekaTrainingReader 
+  
+  def train(training: Iterable[Labelled[AnswerGroup]]): WekaConfidenceFunction = {
+    val instances = WekaTrainingReader.toInstances(training) 
+    val logistic = new Logistic()
+    logistic.setOptions(Array("-D"))
+    logistic.buildClassifier(instances)
+    new WekaConfidenceFunction(features, logistic, instances)
+  }
+}
+

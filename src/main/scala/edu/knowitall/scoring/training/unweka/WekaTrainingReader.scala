@@ -8,6 +8,7 @@ import weka.core.Instance
 import weka.core.Instances
 import weka.core.FastVector
 import weka.core.Attribute
+import scala.collection.JavaConverters._
 
 object WekaTrainingReader {
 
@@ -23,19 +24,23 @@ object WekaTrainingReader {
   
   private val labelAttr = new Attribute("label", labelValues)
   
+  private val attrs = {
+    val featureAttrs = featureSet.featureNames.map(name => new Attribute(name))
+    labelAttr +: featureAttrs
+  }
+  
   private val attrInfo = {
     val fastVect = new FastVector()
-    val featureAttrs = featureSet.featureNames.map(name => new Attribute(name))
-    val attributes = labelAttr +: featureAttrs
-    attributes foreach fastVect.addElement
+    attrs foreach fastVect.addElement
     fastVect
   }
   
   def toInstance(instances: Instances)(datum: Labelled[AnswerGroup]): Instance = {
     val classValue = if (datum.label) 1.0 else 0.0
-    val attrWeights = classValue +: featureSet.vectorize(datum.item)
-    val inst = new Instance(1.0, attrWeights.toArray)
+    val attrValues = classValue +: featureSet.vectorize(datum.item)
+    val inst = new Instance(attrs.size)
     inst.setDataset(instances)
+    attrs.zip(attrValues).foreach { case (attr, value) => inst.setValue(attr, value) }
     inst
   }
   

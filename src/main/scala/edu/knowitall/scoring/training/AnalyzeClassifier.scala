@@ -48,7 +48,7 @@ object AnalyzeClassifier {
   
   def eval(trainingSet: TrainingSet, testSet: TestSet): Set[ScoredItem] = {
 
-    val classifier = J48Trainer.train(trainingSet)
+    val classifier = WekaLogisticTrainer.train(trainingSet)
     def scoreDatum(datum: Labelled[AnswerGroup]) = Scored(datum, classifier(datum.item))
     val scoredItems = testSet map scoreDatum
     scoredItems
@@ -66,7 +66,7 @@ object AnalyzeClassifier {
   
   def main(args: Array[String]): Unit = {
     
-    evalCrossValidation(10).zipWithIndex foreach { case (prec, recall) =>
+    evalCrossValidation(3).zipWithIndex foreach { case (prec, recall) =>
       println(s"$recall\t$prec")  
     }
   }
