@@ -1,8 +1,8 @@
-Answer comes from multiple namespaces	0.5015411697506588
-Answer contains a negation word	-0.2854025127083252
-Answer contains article tokens	-0.5532819975151141
-Answer contains determiner	-1.1535903912386558
-Intercept	0.5015411697506588
-Log of Frequency of answer in the triplestore	-0.10705067721783018
-Number of AnswerDerivations in the AnswerGroup	0.15754092054225352
-Query fields match: Query relation exactly matches any tuple relation	0.3300331989602757
+Answer comes from multiple namespaces	0.6114922107537533
+Answer contains a negation word	-0.3246021074539738
+Answer contains article tokens	-0.5888824482921671
+Answer contains determiner	-1.084590908371282
+Intercept	0.6114922107537533
+Literal Fields Similarity	-0.0511769220382162
+Log of Frequency of answer in the triplestore	-0.10961136185225769
+Number of AnswerDerivations in the AnswerGroup	0.285599350309538

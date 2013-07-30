@@ -11,6 +11,8 @@ import edu.knowitall.parsing.FormalQuestionParser
 import edu.knowitall.execution.IdentityExecutor
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.BasicAnswerGrouper
+import edu.knowitall.execution.SingletonAnswerGrouper
+import edu.knowitall.execution.ExactAnswerGrouper
 import edu.knowitall.scoring.NumDerivationsScorer
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.parsing.StringMatchingParser
@@ -75,10 +77,14 @@ case object Components {
         "berantRules" -> RelationSynonymExecutor(client, IdentityExecutor(client)))
   
   val groupers: Map[String, AnswerGrouper] =
-    Map("basic" -> BasicAnswerGrouper())
+    Map("basic" -> BasicAnswerGrouper(),
+        "singleton" -> SingletonAnswerGrouper(),
+        "exact" -> ExactAnswerGrouper())
   
   val scorers: Map[String, AnswerScorer] =
-    Map("numDerivations" -> NumDerivationsScorer(),
-      "uniform" -> UniformAnswerScorer(),
-      "logistic" -> new LogisticAnswerScorer())
+    Map("logistic" -> LogisticAnswerScorer(),
+        "decision tree" -> LogisticAnswerScorer(),
+        "numDerivations" -> NumDerivationsScorer(),
+      "uniform" -> UniformAnswerScorer()
+      )
 }

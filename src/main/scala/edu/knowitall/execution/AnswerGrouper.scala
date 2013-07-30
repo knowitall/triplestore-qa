@@ -29,3 +29,25 @@ case class BasicAnswerGrouper(
 case object BasicAnswerGrouper {
   def normalize(s: String): String = StrSim.norm(s)
 }
+
+case class SingletonAnswerGrouper() extends AnswerGrouper {
+  def group(derivs: List[AnswerDerivation]): List[AnswerGroup] = {
+    val groups = for (deriv <- derivs;
+                      ans = deriv.answer;
+                      alts = List(deriv.answer);
+                      grp = List(deriv)) 
+                      yield BasicAnswerGroup(ans, alts, grp)
+    groups.toList
+  }
+}
+
+case class ExactAnswerGrouper() extends AnswerGrouper {
+  val identityGrouper = BasicAnswerGrouper(identity)
+  def group(derivs: List[AnswerDerivation]) = identityGrouper.group(derivs)
+}
+
+
+
+
+
+

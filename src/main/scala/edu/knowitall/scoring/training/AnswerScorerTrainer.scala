@@ -1,18 +1,20 @@
 package edu.knowitall.scoring.training
 
+import edu.knowitall.tool.conf.FeatureSet
 import edu.knowitall.tool.conf.impl.LogisticRegression
+import edu.knowitall.tool.conf.ConfidenceFunction
+import edu.knowitall.tool.conf.ConfidenceTrainer
 import edu.knowitall.tool.conf.BreezeLogisticRegressionTrainer
 import edu.knowitall.execution.AnswerGroup
-import edu.knowitall.scoring.AnswerGroupFeatures
+import edu.knowitall.scoring.features.AnswerGroupFeatures
 import edu.knowitall.tool.conf.Labelled
 import java.io.FileOutputStream
 
-object AnswerScorerTrainer {
+case object LogisticTrainer extends ConfidenceTrainer[AnswerGroup](AnswerGroupFeatures) {
   
-  def trainer = new BreezeLogisticRegressionTrainer[AnswerGroup](AnswerGroupFeatures.featureSet)
+  def trainer = new BreezeLogisticRegressionTrainer[AnswerGroup](features)
   
-  
-  def trainClassifier(training: Iterable[Labelled[AnswerGroup]]) = {
+  def train(training: Iterable[Labelled[AnswerGroup]]): LogisticRegression[AnswerGroup] = {
     val classifier = trainer.train(training)
     val weights = classifier.featureWeights.iterator
     weights.foreach { case (feature, weight) =>
@@ -21,7 +23,7 @@ object AnswerScorerTrainer {
     classifier
   }
   
-  lazy val loadDefaultClassifier = trainClassifier(TrainingDataReader.defaultTraining)
+  lazy val loadDefaultClassifier = train(TrainingDataReader.defaultTraining)
   
   def main(args: Array[String]): Unit = {
     
@@ -32,5 +34,22 @@ object AnswerScorerTrainer {
     loadDefaultClassifier.save(outStream)
     
     outStream.close()
+  }
+}
+
+object J48Trainer extends ConfidenceTrainer[AnswerGroup](AnswerGroupFeatures) {
+  
+  import weka.core.Instance
+  import weka.classifiers.Classifier
+  import weka.classifiers.trees.J48
+  import unweka.WekaTrainingReader 
+  
+  def train(training: Iterable[Labelled[AnswerGroup]]): WekaConfidenceFunction = {
+    val instances = WekaTrainingReader.toInstances(training) 
+    val j48 = new weka.classifiers.trees.J48()
+    val options = Array("-R", "-Q 1") 
+    j48.setOptions(options)
+    j48.buildClassifier(instances)
+    new WekaConfidenceFunction(features, j48, instances)
   }
 }

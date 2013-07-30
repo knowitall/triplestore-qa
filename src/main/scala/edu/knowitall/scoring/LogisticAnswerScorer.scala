@@ -5,24 +5,19 @@ import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.tool.conf.ConfidenceFunction
 import edu.knowitall.tool.conf.FeatureSet
 import edu.knowitall.tool.conf.impl.LogisticRegression
+import edu.knowitall.scoring.features.AnswerGroupFeatures
 
-abstract class ClassifierAnswerScorer(val confFunction: ConfidenceFunction[AnswerGroup]) extends AnswerScorer {
+abstract class ConfidenceFunctionScorer extends AnswerScorer {
+  
+  def confFunction: ConfidenceFunction[AnswerGroup]
+  
   override def scoreAnswer(group: AnswerGroup): ScoredAnswerGroup = {
-    val featureNames = confFunction.featureSet.featureNames
-    val featureValues = confFunction.featureSet.vectorize(group)
-    require(featureNames.length == featureValues.length)
-    val featureVector = featureNames.zip(featureValues)
-    val confidence = confFunction
     BasicScoredAnswer(group.answer, group.alternates, group.derivations, confFunction(group))
   }
 }
 
-class LogisticAnswerScorer(
-    val logistic: LogisticRegression[AnswerGroup] = 
-      LogisticAnswerScorer.defaultClassifier) 
-extends ClassifierAnswerScorer(logistic)
 
-object LogisticAnswerScorer {
+case class LogisticAnswerScorer() extends ConfidenceFunctionScorer {
   
   val defaultModel = "logistic-scorer.model"
     
@@ -32,6 +27,12 @@ object LogisticAnswerScorer {
     url
   }
   
-  val defaultClassifier = LogisticRegression.fromUrl(AnswerGroupFeatures.featureSet, defaultModelURL)
+  override val confFunction = LogisticRegression.fromUrl(AnswerGroupFeatures, defaultModelURL)
+}
+
+case class DecisionTreeScorer() extends ConfidenceFunctionScorer {
   
+  private val defaultTraining = training.TrainingDataReader.defaultTraining
+  
+  override val confFunction  = training.J48Trainer.train(defaultTraining)
 }

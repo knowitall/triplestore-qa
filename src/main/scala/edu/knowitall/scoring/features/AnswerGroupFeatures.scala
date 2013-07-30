@@ -1,26 +1,29 @@
-package edu.knowitall.scoring
-
-import edu.knowitall.triplestore.TriplestoreClient
+package edu.knowitall.scoring.features
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.triplestore.CountCachedTriplestoreClient
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.AnswerGroup
+import edu.knowitall.execution.ExecQuery
+import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.execution.ExecConjunctiveQuery
 import edu.knowitall.execution.Search.TSQuery
 import edu.knowitall.execution.Tuple
 import edu.knowitall.tool.conf.FeatureSet
 import edu.knowitall.tool.conf.Feature
-import edu.knowitall.tool.conf.Feature.booleanToDouble
 import edu.knowitall.tool.conf.FeatureSet
-import edu.knowitall.common.Resource.using
-import scala.collection.immutable.SortedMap
 import TupleFeatures._
+import edu.knowitall.execution.Search.TSField
+import edu.knowitall.execution.Search.rel
+import edu.knowitall.execution.TConjunct
+import edu.knowitall.tool.stem.MorphaStemmer
+import scala.Array.canBuildFrom
+import scala.Option.option2Iterable
+import scala.collection.immutable.SortedMap
 import scala.language.implicitConversions
-import io.Source
 
-object AnswerGroupFeatures {
+abstract class AnswerGroupFeature(name: String) extends Feature[AnswerGroup, Double](name)
 
-  type AnswerGroupFeature = Feature[AnswerGroup, Double]
+object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
   
   implicit def boolToDouble(bool: Boolean) = if (bool) 1.0 else 0.0
   
@@ -98,79 +101,52 @@ object AnswerGroupFeatures {
     }
   }
   
-  abstract class QueryFieldMatch(val subname: String) extends AnswerGroupFeature("Query fields match:" + subname) {
+  object TriplestoreQueryFrequency extends AnswerGroupFeature("Log of query literals in the triplestore") {
+    val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ AnswerStartsWithDeterminers.determiners
+    val splitRegex = "\\s+".r
     
-    import edu.knowitall.execution.{TLiteral, TConjunct}
-    import edu.knowitall.execution.Search.TSField
-
-    def normalizeLiteral(s: String): String
-    
-    /**
-     * Test whether fields in qconj match corresponding fields in tuple.
-     * Returns true if match, or if fields are absent
-     */
-    def queryFieldMatch(qconj: TConjunct, fields: Set[TSField], tuple: Tuple): Boolean = {
-
-      val fieldStrings = fields.map(_.name)
-      val existingLiteralFields = qconj.literalFields.filter { litfield => fieldStrings.contains(litfield._1) }
-      val cleanedLiteralFields = existingLiteralFields.toSeq.map {
-        case (field, literal) =>
-          (field.name, normalizeLiteral(literal.toString))
+    def apply(group: AnswerGroup) = {
+      val queries = group.derivations.map(_.etuple.equery).distinct
+      def conjunctCounts(eq: ExecQuery) = eq match {
+        case q: ExecConjunctiveQuery => {
+          val literalFields = q.conjuncts.flatMap(_.literalFields)
+          val counts = literalFields.map { case (field, value) =>
+            client.count(value.toConjunct(field))  
+          }
+          counts
+        }
+        case _ => throw new RuntimeException("unknown query type.")
       }
-      // tuple fields corresponding to literal fields
-      def fieldName(n: String) = s"${qconj.name}.$n"
-      val tupleFieldNames = cleanedLiteralFields.map(_._1).map(fieldName)
-      val tupleFields = tupleFieldNames.toSeq.map { name =>
-        val value = tuple.getString(name).getOrElse(throw new RuntimeException(s"Tuple does not have field $name"))
-        (name, normalizeLiteral(value))
-      }
-      require(cleanedLiteralFields.length == tupleFields.length)
-      cleanedLiteralFields.zip(tupleFields).forall {
-        case ((queryField, queryLiteral), (tupleField, tupleLiteral)) =>
-          queryLiteral == tupleLiteral
-      }
+      
+      val counts = queries flatMap conjunctCounts
+      
+      val avg = counts.sum.toDouble / counts.size.toDouble
+      
+      math.log(avg + 1)
     }
   }
-    
-  object AnyRelExactMatch extends QueryFieldMatch(" Query relation exactly matches any tuple relation") {
-
-    import edu.knowitall.execution.Search.rel
-    import TriplestoreAnswerFrequency.junkTokens
-    import TriplestoreAnswerFrequency.splitRegex
-    import edu.knowitall.tool.stem.MorphaStemmer
-    
-    def normalizeLiteral(s: String) = {
-      val lc = s.toLowerCase
-      val split = splitRegex.split(lc)
-      val stems = split.map(MorphaStemmer.apply)
-      def tokenFilter(t: String) = !junkTokens.contains(t)
-      val filtered = stems.filter(tokenFilter)
-      filtered.mkString(" ")
-    }
-   
+  
+  object AnswerQueryCountDifference extends AnswerGroupFeature("Difference between answer and query literals frequency.") {
     def apply(group: AnswerGroup) = {
-      val execConjQueryDerivs = group.derivations.filter(_.etuple.equery.isInstanceOf[ExecConjunctiveQuery])
-      execConjQueryDerivs.exists { deriv =>
-        val conjuncts = deriv.etuple.equery.asInstanceOf[ExecConjunctiveQuery].conjuncts
-        conjuncts.exists { qconj => queryFieldMatch(qconj, Set(rel), deriv.etuple.tuple) }
-      }
+      TriplestoreAnswerFrequency(group) - TriplestoreQueryFrequency(group)
     }
   }
   
   /**
    * Generic features that apply to any AnswerGroup
    */
-  val features: Seq[AnswerGroupFeature] = Seq(
+  private val features: Seq[AnswerGroupFeature] = Seq(
       MultipleNamespaces, 
       NumberOfDerivations,
       AnswerContainsArticles,
       AnswerStartsWithDeterminers,
       AnswerContainsNegation,
-      TriplestoreAnswerFrequency,
-      AnyRelExactMatch)
+      LiteralFieldsSimilarity,
+      TriplestoreAnswerFrequency)
 
   
-  def featureSet: FeatureSet[AnswerGroup, Double] = FeatureSet(features)
+  override val featureMap = 
+    SortedMap.empty[String, Feature[AnswerGroup, Double]] ++ features.map(feature => (feature.name, feature))
 }
 
 object TupleFeatures {

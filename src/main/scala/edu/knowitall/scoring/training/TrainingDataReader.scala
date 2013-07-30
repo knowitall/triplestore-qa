@@ -53,9 +53,9 @@ class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[An
   
   def queryGroupedRecs = inputRecords.groupBy(_.uquery)
   
-  lazy val labeledAnswerGroups = {
+  val labeledAnswerGroups = {
     val queryRecsPairs = queryGroupedRecs.iterator.toSeq
-    val groupsRecsPairs = queryRecsPairs.par.map { case (queryString, inputRecs) =>
+    val groupsRecsPairs = queryRecsPairs.map { case (queryString, inputRecs) =>
       val groups = groupsForQuery(queryString)
       (groups, inputRecs)
     }
@@ -94,5 +94,5 @@ object TrainingDataReader {
     url
   }
     
-  lazy val defaultTraining: Seq[Labelled[AnswerGroup]] = new TrainingDataReader(trainingResource).toSeq
+  val defaultTraining: Seq[Labelled[AnswerGroup]] = new TrainingDataReader(trainingResource).toSeq
 }

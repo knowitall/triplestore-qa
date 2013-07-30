@@ -3,8 +3,12 @@ package edu.knowitall.scoring.training
 import edu.knowitall.tool.conf.Labelled
 import edu.knowitall.execution.AnswerGroup
 
+import scala.util.Random
+
 object AnalyzeClassifier {
 
+  val rand = new Random(0)
+  
   val allTrainingData = TrainingDataReader.defaultTraining.toSet
   
   def precRecall(sorted: Seq[Boolean]): Seq[Double] = {
@@ -29,7 +33,9 @@ object AnalyzeClassifier {
     
     val testSize = math.ceil(allTrainingData.size.toDouble / splits.toDouble).toInt
     
-    val testSets: Seq[TestSet] = allTrainingData.grouped(testSize).map(_.toSet).toSeq
+    val shuffledData = rand.shuffle(allTrainingData.toSeq)
+    
+    val testSets: Seq[TestSet] = shuffledData.grouped(testSize).map(_.toSet).toSeq
     
     val trainingSets = testSets.map(tset => allTrainingData &~ tset)
     
@@ -42,7 +48,7 @@ object AnalyzeClassifier {
   
   def eval(trainingSet: TrainingSet, testSet: TestSet): Set[ScoredItem] = {
 
-    val classifier = AnswerScorerTrainer.trainClassifier(trainingSet)
+    val classifier = J48Trainer.train(trainingSet)
     def scoreDatum(datum: Labelled[AnswerGroup]) = Scored(datum, classifier(datum.item))
     val scoredItems = testSet map scoreDatum
     scoredItems
@@ -51,7 +57,7 @@ object AnalyzeClassifier {
   def evalCrossValidation(numSplits: Int): Seq[Double] = {
     
     val dataSplits = crossValidationSplits(numSplits)
-    val allScoredItems = dataSplits.par.flatMap({ case (training, test) => eval(training, test) }) 
+    val allScoredItems = dataSplits.flatMap({ case (training, test) => eval(training, test) }) 
     val sortedScoredItems = allScoredItems.toList.sortBy(-_.score)
     val sortedBooleans = sortedScoredItems.map(_.item.label)
     val precisionCurve = precRecall(sortedBooleans)

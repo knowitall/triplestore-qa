@@ -448,6 +448,7 @@ object Tabulator {
  * two strings. Lowercases them and removes some stop words first.
  */
 object StrSim {
+  
   val stops = Set("a", "an", "and", "are", "as", "at", "be", "but", "by",
       "for", "if", "in", "into", "is", "it",
       "no", "not", "of", "on", "or", "such",
@@ -456,11 +457,18 @@ object StrSim {
       "our", "ours", "him", "he", "his", "her", "its", "you", "that",
       "every", "all", "each", "those", "other", "both", "neither", "some",
       "'s")
-  
-  def norm(x: String) =
-    x.toLowerCase().split("\\s+").filter(!stops.contains(_)).mkString("")
+
+  def norm(x: String) = {
+    val lc = x.toLowerCase()
+    val split = lc.split("\\s+")
+    val noStops = split.filter { t => 
+      val lookup = !stops.contains(t)
+      lookup
+    }
+    val deSplit = noStops.mkString("")
+    deSplit
+  }
 
   def sim(x: String, y: String): Double = 
     JaroWinklerMetric.compare(norm(x), norm(y)).getOrElse(0.0)
-      
 }

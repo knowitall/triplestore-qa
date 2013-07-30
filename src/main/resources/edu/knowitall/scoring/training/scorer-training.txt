@@ -1032,7 +1032,7 @@
 0	No lead mines	?, produced in, colorado	What is made in Colorado
 0	's drug	?, produced in, colorado	What is made in Colorado
 1	The Changers Maroshi solar panel	?, produced in, colorado	What is made in Colorado
-0	Redfield	?, produced in, colorado	What is made in Colorado
+1	Redfield	?, produced in, colorado	What is made in Colorado
 1	Wind power	?, produced in, colorado	What is made in Colorado
 1	The first commercial crop	?, produced in, colorado	What is made in Colorado
 0	the way art	?, produced in, colorado	What is made in Colorado
