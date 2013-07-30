@@ -22,30 +22,30 @@ import edu.knowitall.tool.stem.MorphaStemmer
 import scala.Array.canBuildFrom
 import scala.Option.option2Iterable
 
-case object LiteralFieldsSimilarity extends AnswerGroupFeature("Literal Fields Similarity") {
+case object LiteralFieldsDifference extends AnswerGroupFeature("Literal Fields Difference") {
   
-  import FieldSimilarity.{conjuncts, avg}
+  import FieldDifference.{conjuncts, avg}
   
   def apply(group: AnswerGroup) = {
     val queries = group.derivations.map(_.etuple.equery)
     val cs = queries flatMap conjuncts
     val literalFields = cs.flatMap(_.literalFields).map(_._1.name).distinct
     require(literalFields.size >= 1, "No literals in any query conjunct.")
-    val diffs = literalFields.map(f => FieldSimilarity(f).apply(group))
+    val diffs = literalFields.map(f => FieldDifference(f).apply(group))
     val sum = diffs.sum
     sum
   }
 }
 
-case class FieldSimilarity(field: String) extends AnswerGroupFeature("Query-Field similarity: " + field) {
+case class FieldDifference(field: String) extends AnswerGroupFeature("Query-Field similarity: " + field) {
   
-  import FieldSimilarity._
+  import FieldDifference._
   
   val splitRegex = "\\s+".r
   
   def queryLiteral(qconj: TConjunct) = {
     val desiredField = qconj.literalFields.find { 
-      case (f, v) => f.name == this.field
+      case (f, v) => f.name == FieldDifference.this.field
     }
     desiredField.map { 
       case (f, v) => v.toString
@@ -53,7 +53,7 @@ case class FieldSimilarity(field: String) extends AnswerGroupFeature("Query-Fiel
   }
   
   def tupleLiteral(qconj: TConjunct, tuple: Tuple) = {
-    val fullField = qconj.name + "." + this.field
+    val fullField = qconj.name + "." + FieldDifference.this.field
     tuple.get(fullField).map(_.toString)
   }
   
@@ -102,7 +102,7 @@ case class FieldSimilarity(field: String) extends AnswerGroupFeature("Query-Fiel
   }
 }
 
-object FieldSimilarity {
+object FieldDifference {
   import AnswerGroupFeatures.TriplestoreAnswerFrequency.junkTokens
   def avg(ns: Iterable[Double]) = ns.sum.toDouble / ns.size.toDouble
   
