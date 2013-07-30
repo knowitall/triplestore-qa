@@ -7,6 +7,7 @@ import edu.knowitall.scoring.ScoredAnswerGroup
 import org.slf4j.LoggerFactory
 import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.AnswerGrouper
+import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.parsing.FormalQuestionParser
 import edu.knowitall.execution.IdentityExecutor
 import edu.knowitall.triplestore.SolrClient
@@ -36,7 +37,8 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
                       deriv <- derivs) yield deriv
     
     logger.info(s"Grouping answers for '$question'")
-    val groups = grouper.group(derivs.toList)
+    def answerString(group: AnswerGroup) = group.answer.mkString(" ")
+    val groups = grouper.group(derivs.toList).sortBy(answerString)
                       
     logger.info(s"Scoring answers for '$question'")
     val answers = for (group <- groups.par;
