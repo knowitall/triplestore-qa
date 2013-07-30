@@ -7,10 +7,13 @@ import edu.knowitall.scoring.ScoredAnswerGroup
 import org.slf4j.LoggerFactory
 import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.AnswerGrouper
+import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.parsing.FormalQuestionParser
 import edu.knowitall.execution.IdentityExecutor
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.BasicAnswerGrouper
+import edu.knowitall.execution.SingletonAnswerGrouper
+import edu.knowitall.execution.ExactAnswerGrouper
 import edu.knowitall.scoring.NumDerivationsScorer
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.parsing.StringMatchingParser
@@ -34,7 +37,8 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
                       deriv <- derivs) yield deriv
     
     logger.info(s"Grouping answers for '$question'")
-    val groups = grouper.group(derivs.toList)
+    def answerString(group: AnswerGroup) = group.answer.mkString(" ")
+    val groups = grouper.group(derivs.toList).sortBy(answerString)
                       
     logger.info(s"Scoring answers for '$question'")
     val answers = for (group <- groups.par;
@@ -75,10 +79,13 @@ case object Components {
         "berantRules" -> RelationSynonymExecutor(client, IdentityExecutor(client)))
   
   val groupers: Map[String, AnswerGrouper] =
-    Map("basic" -> BasicAnswerGrouper())
+    Map("basic" -> BasicAnswerGrouper(),
+        "singleton" -> SingletonAnswerGrouper(),
+        "exact" -> ExactAnswerGrouper())
   
   val scorers: Map[String, AnswerScorer] =
-    Map("numDerivations" -> NumDerivationsScorer(),
-      "uniform" -> UniformAnswerScorer(),
-      "logistic" -> new LogisticAnswerScorer())
+    Map("logistic" -> LogisticAnswerScorer(),
+        "numDerivations" -> NumDerivationsScorer(),
+      "uniform" -> UniformAnswerScorer()
+      )
 }

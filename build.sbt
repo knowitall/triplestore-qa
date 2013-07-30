@@ -64,6 +64,8 @@ libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-conf-breeze" % "2.4.2"
 
+libraryDependencies += "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.9"
+
 assemblySettings
 
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
@@ -91,3 +93,4 @@ resolvers ++= Seq("snapshots" at "http://oss.sonatype.org/content/repositories/s
                     "releases"  at "http://oss.sonatype.org/content/repositories/releases")
 
 EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Resource
+
