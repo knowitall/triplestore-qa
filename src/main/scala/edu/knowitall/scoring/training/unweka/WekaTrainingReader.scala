@@ -4,50 +4,54 @@ import edu.knowitall.scoring.training.TrainingDataReader
 import edu.knowitall.scoring.features.AnswerGroupFeatures
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.tool.conf.Labelled
+import weka.core.DenseInstance
 import weka.core.Instance
 import weka.core.Instances
-import weka.core.FastVector
 import weka.core.Attribute
-import scala.collection.JavaConverters._
+import scala.collection.JavaConversions._
+import java.util.ArrayList
 
 object WekaTrainingReader {
 
   private def rawTrainingData = TrainingDataReader.defaultTraining
   private val featureSet = AnswerGroupFeatures
   
-  private val labelValues = {
-    val vect = new FastVector()
-    vect.addElement("false")
-    vect.addElement("true")
-    vect
-  }
+  private val classValues = List("positive", "negative")
   
-  private val labelAttr = new Attribute("label", labelValues)
+  private val classAttr = new Attribute("class", classValues)
   
   private val attrs = {
     val featureAttrs = featureSet.featureNames.map(name => new Attribute(name))
-    labelAttr +: featureAttrs
+    featureAttrs :+ classAttr
   }
   
-  private val attrInfo = {
-    val fastVect = new FastVector()
-    attrs foreach fastVect.addElement
-    fastVect
+  private val attrsList = {
+    val list = new ArrayList[Attribute](attrs.size)
+    attrs foreach list.add
+    list
   }
   
-  def toInstance(instances: Instances)(datum: Labelled[AnswerGroup]): Instance = {
-    val classValue = if (datum.label) 1.0 else 0.0
-    val attrValues = classValue +: featureSet.vectorize(datum.item)
-    val inst = new Instance(attrs.size)
+  def toUnlabeledInstance(instances: Instances)(group: AnswerGroup): Instance = {
+    val attrValues = featureSet.vectorize(group)
+    val inst = new DenseInstance(attrValues.size)
+    inst.setDataset(instances)
+    attrs.zip(attrValues).foreach { case (attr, value) => inst.setValue(attr, value) }
+    inst
+  }
+  
+  def toLabeledInstance(instances: Instances)(datum: Labelled[AnswerGroup]): Instance = {
+    val label = if (datum.label) 1.0 else 0.0
+    val attrValues = featureSet.vectorize(datum.item) :+ label
+    val inst = new DenseInstance(attrs.size)
     inst.setDataset(instances)
     attrs.zip(attrValues).foreach { case (attr, value) => inst.setValue(attr, value) }
     inst
   }
   
   def toInstances(training: Iterable[Labelled[AnswerGroup]])  = {
-    val insts = new Instances("Default training instances", attrInfo, 2000)
-    training map toInstance(insts) foreach insts.add
-    insts.setClass(labelAttr)
+    val insts = new Instances("Default training instances", attrsList, 0)
+    insts.setClass(classAttr)
+    training map toLabeledInstance(insts) foreach insts.add
     insts
   }
   

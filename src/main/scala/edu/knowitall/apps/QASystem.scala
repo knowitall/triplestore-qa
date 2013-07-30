@@ -83,7 +83,6 @@ case object Components {
   
   val scorers: Map[String, AnswerScorer] =
     Map("logistic" -> LogisticAnswerScorer(),
-        "decision tree" -> LogisticAnswerScorer(),
         "numDerivations" -> NumDerivationsScorer(),
       "uniform" -> UniformAnswerScorer()
       )

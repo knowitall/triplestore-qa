@@ -7,7 +7,7 @@ import edu.knowitall.common.Resource.using
 import weka.classifiers.Classifier
 import weka.core.Instances
 import edu.knowitall.execution.AnswerGroup
-import unweka.WekaTrainingReader.toInstance
+import unweka.WekaTrainingReader.toUnlabeledInstance
 import java.io.OutputStream
 import java.io.File
 
@@ -17,8 +17,8 @@ class WekaConfidenceFunction(
     instances: Instances) extends ConfidenceFunction[AnswerGroup](featureSet) {
   
   def apply(group: AnswerGroup) = {
-    val inst = toInstance(instances)(Labelled(true, group))
-    classifier.classifyInstance(inst)
+    val inst = toUnlabeledInstance(instances)(group)
+    classifier.distributionForInstance(inst)(1)
   }
   
   def save(output: OutputStream): Unit = {

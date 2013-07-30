@@ -64,7 +64,7 @@ libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-conf-breeze" % "2.4.2"
 
-libraryDependencies += "nz.ac.waikato.cms.weka" % "weka-stable" % "3.6.9"
+libraryDependencies += "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.9"
 
 assemblySettings
 
