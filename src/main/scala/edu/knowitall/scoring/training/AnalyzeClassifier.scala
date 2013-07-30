@@ -48,7 +48,7 @@ object AnalyzeClassifier {
   
   def eval(trainingSet: TrainingSet, testSet: TestSet): Set[ScoredItem] = {
 
-    val classifier = RandomForestTrainer.train(trainingSet)
+    val classifier = LogisticTrainer.train(trainingSet)
     def scoreDatum(datum: Labelled[AnswerGroup]) = Scored(datum, classifier(datum.item))
     val scoredItems = testSet map scoreDatum
     scoredItems
