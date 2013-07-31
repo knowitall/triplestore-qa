@@ -1,26 +1,29 @@
-package edu.knowitall.scoring
-
-import edu.knowitall.triplestore.TriplestoreClient
+package edu.knowitall.scoring.features
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.triplestore.CountCachedTriplestoreClient
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.AnswerGroup
+import edu.knowitall.execution.ExecQuery
+import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.execution.ExecConjunctiveQuery
 import edu.knowitall.execution.Search.TSQuery
 import edu.knowitall.execution.Tuple
 import edu.knowitall.tool.conf.FeatureSet
 import edu.knowitall.tool.conf.Feature
-import edu.knowitall.tool.conf.Feature.booleanToDouble
 import edu.knowitall.tool.conf.FeatureSet
-import edu.knowitall.common.Resource.using
-import scala.collection.immutable.SortedMap
 import TupleFeatures._
+import edu.knowitall.execution.Search.TSField
+import edu.knowitall.execution.Search.rel
+import edu.knowitall.execution.TConjunct
+import edu.knowitall.tool.stem.MorphaStemmer
+import scala.Array.canBuildFrom
+import scala.Option.option2Iterable
+import scala.collection.immutable.SortedMap
 import scala.language.implicitConversions
-import io.Source
 
-object AnswerGroupFeatures {
+abstract class AnswerGroupFeature(name: String) extends Feature[AnswerGroup, Double](name)
 
-  type AnswerGroupFeature = Feature[AnswerGroup, Double]
+object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
   
   implicit def boolToDouble(bool: Boolean) = if (bool) 1.0 else 0.0
   
@@ -60,17 +63,17 @@ object AnswerGroupFeatures {
     }
   }
   
-  object AnswerStartsWithDeterminers extends AnswerGroupFeature("Answer contains determiner") {
-    val determiners = Set("these", "those", "that", "this", "some", "most", "all", "any", "both", "either")
+  object AnswerContainsDeterminer extends AnswerGroupFeature("Answer contains determiner") {
+    val determiners = Set("these", "those", "that", "this", "some", "most", "all", "any", "both", "either", "each", "more", "less")
     def apply(group: AnswerGroup) = {
       val firstAnswer = group.alternates.head.head
-      val firstAnswerTokens = firstAnswer.split("\\s+").headOption.map(_.toLowerCase).toSet
+      val firstAnswerTokens = firstAnswer.split("\\s+").map(_.toLowerCase).toSet
       determiners.intersect(firstAnswerTokens).nonEmpty
     }
   }
   
   object AnswerContainsNegation extends AnswerGroupFeature("Answer contains a negation word") {
-    val negationWords = Set("no", "none", "never", "neither", "nobody", "nor", "nothing", "nowhere", "n't")
+    val negationWords = Set("no", "none", "never", "neither", "nobody", "nor", "nothing", "nowhere", "n't", "cannot", "cant", "can't", "wont")
     def apply(group: AnswerGroup) = {
       val firstAnswer = group.alternates.head.head
       val firstAnswerTokens = firstAnswer.split("\\s+").map(_.toLowerCase).toSet
@@ -79,7 +82,7 @@ object AnswerGroupFeatures {
   }
   
   object TriplestoreAnswerFrequency extends AnswerGroupFeature("Log of Frequency of answer in the triplestore") {
-    val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ AnswerStartsWithDeterminers.determiners
+    val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ AnswerContainsDeterminer.determiners
     val splitRegex = "\\s+".r
     
     case class CountQuery(arg: String) extends TSQuery {
@@ -98,56 +101,52 @@ object AnswerGroupFeatures {
     }
   }
   
-  object ExactRelationMatch extends AnswerGroupFeature("Query relation matches exactly") {
-    
-    import edu.knowitall.execution.TLiteral
-    import TriplestoreAnswerFrequency.junkTokens 
-    import TriplestoreAnswerFrequency.splitRegex
-    
-    def cleanRel(s: String) = {
-      val lc = s.toLowerCase
-      val split = splitRegex.split(lc)
-      val filtered = split.filter(tokenFilter)
-      filtered.mkString(" ")
-    }
-    
-    def tokenFilter(s: String) = !junkTokens.contains(s)
-    
-    val relRegex = "\\.rel$".r
+  object TriplestoreQueryFrequency extends AnswerGroupFeature("Log of query literals in the triplestore") {
+    val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ AnswerContainsDeterminer.determiners
+    val splitRegex = "\\s+".r
     
     def apply(group: AnswerGroup) = {
-      val execConjQueryDerivs = group.derivations.filter(_.etuple.equery.isInstanceOf[ExecConjunctiveQuery])
-      execConjQueryDerivs.exists { deriv =>
-        val conjuncts = deriv.etuple.equery.asInstanceOf[ExecConjunctiveQuery].conjuncts
-        val relLiterals = conjuncts.map(_.rs).flatMap {
-          case t: TLiteral => Some(t.toString)
-          case _ => None
+      val queries = group.derivations.map(_.etuple.equery).distinct
+      def conjunctCounts(eq: ExecQuery) = eq match {
+        case q: ExecConjunctiveQuery => {
+          val literalFields = q.conjuncts.flatMap(_.literalFields)
+          val counts = literalFields.map { case (field, value) =>
+            client.count(value.toConjunct(field))  
+          }
+          counts
         }
-        val relQuerySet = relLiterals.map(cleanRel).toSet
-        
-        val tupleRelAttrs = deriv.etuple.tuple.attrs.keys.filter(attr => relRegex.findFirstIn(attr).nonEmpty)
-        val tupleRels = tupleRelAttrs flatMap { attr => deriv.etuple.tuple.getString(attr) }
-        val tupleRelSet = tupleRels.map(cleanRel).toSet
-        tupleRelSet.intersect(relQuerySet).nonEmpty
+        case _ => throw new RuntimeException("unknown query type.")
       }
+      
+      val counts = queries flatMap conjunctCounts
+      
+      val avg = counts.sum.toDouble / counts.size.toDouble
+      
+      math.log(avg + 1)
+    }
+  }
+  
+  object AnswerQueryCountDifference extends AnswerGroupFeature("Difference between answer and query literals frequency.") {
+    def apply(group: AnswerGroup) = {
+      TriplestoreAnswerFrequency(group) - TriplestoreQueryFrequency(group)
     }
   }
   
   /**
    * Generic features that apply to any AnswerGroup
    */
-  val features: Seq[AnswerGroupFeature] = Seq(
-      MultipleNamespaces, 
-      NumberOfAlternates,
+  private val features: Seq[AnswerGroupFeature] = Seq(
       NumberOfDerivations,
       AnswerContainsArticles,
-      AnswerStartsWithDeterminers,
+      AnswerContainsDeterminer,
       AnswerContainsNegation,
-      TriplestoreAnswerFrequency,
-      ExactRelationMatch)
+      LiteralFieldsDifference,
+      TriplestoreAnswerFrequency
+    )
 
   
-  def featureSet: FeatureSet[AnswerGroup, Double] = FeatureSet(features)
+  override val featureMap = 
+    SortedMap.empty[String, Feature[AnswerGroup, Double]] ++ features.map(feature => (feature.name, feature))
 }
 
 object TupleFeatures {
