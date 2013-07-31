@@ -1,5 +1,7 @@
 import AssemblyKeys._ 
 
+net.virtualvoid.sbt.graph.Plugin.graphSettings
+
 scalaVersion := "2.10.2"
 
 resolvers += "KnowItAll" at "http://knowitall.cs.washington.edu/maven2"
@@ -65,6 +67,10 @@ libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-conf-breeze" % "2.4.2"
 
 libraryDependencies += "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.9"
+
+libraryDependencies += "edu.washington.cs.knowitall.taggers" %% "taggers" % "0.1"
+
+libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-chunk-opennlp" % "2.4.2"
 
 assemblySettings
 
