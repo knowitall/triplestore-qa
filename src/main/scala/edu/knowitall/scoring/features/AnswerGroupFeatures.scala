@@ -89,8 +89,8 @@ object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
       AnswerContainsArticles,
       AnswerContainsDeterminer,
       AnswerContainsNegation,
-      LiteralFieldsDifference,
-      TriplestoreFeatures.AnswerFrequency,
+      //LiteralFieldsDifference,
+      //TriplestoreFeatures.AnswerFrequency,
       SystemFeatures.PostagRanking
     )
 

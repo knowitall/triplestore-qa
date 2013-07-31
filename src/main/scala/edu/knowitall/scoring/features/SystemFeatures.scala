@@ -25,11 +25,13 @@ object SystemFeatures {
       // get the queries run for this answergroup
       val queries = group.derivations.map(_.etuple.equery.uquery)
       val postagResults = postagSystem.answerUQueries(queries, queries.mkString(" | "))
-      val postagRanking = postagResults.map(_.answer) // Todo, fix ranking.
+      val postagRanking = postagResults.map(group => (group.answer, group.derivations.size)).toMap
       val groupPostags = postagGrouper.regroup(List(group)).map(_.answer).toSet
-      val index = postagRanking.indexWhere(postags => groupPostags.contains(postags))
-      require(index >= 0, "Couldn't find group postags.")
-      index
+      val postagLookup = postagRanking.keys.find(postags => groupPostags.contains(postags))
+      postagLookup match {
+        case Some(postags) => postagRanking(postags)
+        case None => 0
+      }
     }    
   }
 }
