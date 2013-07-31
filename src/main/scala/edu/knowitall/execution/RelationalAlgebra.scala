@@ -449,6 +449,12 @@ object Tabulator {
  */
 object StrSim {
   
+  import edu.knowitall.tool.stem.Lemmatized
+  import edu.knowitall.tool.stem.MorphaStemmer
+  import edu.knowitall.tool.postag.PostaggedToken
+  import edu.knowitall.tool.chunk.OpenNlpChunker
+  import edu.knowitall.tool.chunk.ChunkedToken
+  
   val stops = Set("a", "an", "and", "are", "as", "at", "be", "but", "by",
       "for", "if", "in", "into", "is", "it",
       "no", "not", "of", "on", "or", "such",
@@ -458,16 +464,28 @@ object StrSim {
       "every", "all", "each", "those", "other", "both", "neither", "some",
       "'s")
 
-  def norm(x: String) = {
+  val morpha = new MorphaStemmer()
+  
+  val chunker = new OpenNlpChunker()
+  
+  def lemmatize[T <: PostaggedToken](tokens: Iterable[T]): Seq[Lemmatized[T]] = 
+    morpha.synchronized { 
+    tokens.toSeq map morpha.lemmatizePostaggedToken
+  }
+  
+  def lemmatize(string: String): Seq[Lemmatized[ChunkedToken]] = lemmatize(chunker(string))
+  
+  def normTokens(x: String) = {
     val lc = x.toLowerCase()
     val split = lc.split("\\s+")
     val noStops = split.filter { t => 
       val lookup = !stops.contains(t)
       lookup
     }
-    val deSplit = noStops.mkString("")
-    deSplit
+    noStops
   }
+  
+  def norm(x: String) = normTokens(x).mkString("")
 
   def sim(x: String, y: String): Double = 
     JaroWinklerMetric.compare(norm(x), norm(y)).getOrElse(0.0)

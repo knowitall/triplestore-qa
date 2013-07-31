@@ -12,8 +12,11 @@ import edu.knowitall.parsing.FormalQuestionParser
 import edu.knowitall.execution.IdentityExecutor
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.BasicAnswerGrouper
+import edu.knowitall.execution.PostagAnswerGrouper
+import edu.knowitall.execution.PostagSampleAnswerGrouper
 import edu.knowitall.execution.SingletonAnswerGrouper
 import edu.knowitall.execution.ExactAnswerGrouper
+import edu.knowitall.execution.UQuery
 import edu.knowitall.scoring.NumDerivationsScorer
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.parsing.StringMatchingParser
@@ -21,6 +24,7 @@ import edu.knowitall.scoring.UniformAnswerScorer
 import edu.knowitall.scoring.LogisticAnswerScorer
 import edu.knowitall.parsing.OldParalexParser
 import edu.knowitall.execution.RelationSynonymExecutor
+
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
@@ -30,9 +34,13 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
     
     logger.info(s"Parsing question '$question'")
     val queries = parser.parse(question).take(10)
+    answerUQueries(queries, question)
+  }
+  
+  def answerUQueries(uqueries: Iterable[UQuery], question: String): List[ScoredAnswerGroup] = {
     
     logger.info(s"Executing queries for '$question'")
-    val derivs = for (query <- queries.par; 
+    val derivs = for (query <- uqueries.par; 
                       derivs = executor.deriveAnswers(query);
                       deriv <- derivs) yield deriv
     
@@ -43,10 +51,8 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
     logger.info(s"Scoring answers for '$question'")
     val answers = for (group <- groups.par;
                        scored = scorer.scoreAnswer(group)) yield scored
-    answers.toList.sortBy(-_.score)
-    
+    answers.toList.sortBy(-_.score)    
   }
-  
 }
 case object QASystem {
   
@@ -81,7 +87,9 @@ case object Components {
   val groupers: Map[String, AnswerGrouper] =
     Map("basic" -> BasicAnswerGrouper(),
         "singleton" -> SingletonAnswerGrouper(),
-        "exact" -> ExactAnswerGrouper())
+        "exact" -> ExactAnswerGrouper(),
+        "postagSample" -> PostagSampleAnswerGrouper(),
+        "postag" -> PostagAnswerGrouper())
   
   val scorers: Map[String, AnswerScorer] =
     Map("logistic" -> LogisticAnswerScorer(),

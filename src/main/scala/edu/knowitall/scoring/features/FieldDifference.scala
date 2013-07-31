@@ -103,7 +103,7 @@ case class FieldDifference(field: String) extends AnswerGroupFeature("Query-Fiel
 }
 
 object FieldDifference {
-  import AnswerGroupFeatures.TriplestoreAnswerFrequency.junkTokens
+  import TriplestoreFeatures.AnswerFrequency.junkTokens
   def avg(ns: Iterable[Double]) = ns.sum.toDouble / ns.size.toDouble
   
   def normalizeLiteral(ss: Seq[String]) = {
