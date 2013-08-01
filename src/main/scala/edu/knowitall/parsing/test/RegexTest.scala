@@ -11,7 +11,8 @@ import scala.collection.JavaConversions._
 
 object RegexTest extends App {
 
-  val expression = """ (?:<string="a"> | <string="an"> | <string="the">)? <pos="JJ">* (<arg1>:<pos='NNP'>+) (<rel>:<pos='NN'>+) (<arg2>:<pos='NNP'>+)"""
+  val expression = 
+    "<string='what'> (<rel>:<pos='VB.?' | pos='JJ'>+ <pos='IN' | pos='TO'>) (<ent>:<pos='NN.?'>+)"
 
   def compile(expr: String) = edu.knowitall.taggers.tag.PatternTagger.makeRegex(expr)
   
@@ -19,16 +20,11 @@ object RegexTest extends App {
   
   val regex = compile(expression)
   
-  val sentence = "The US president Barack Obama is travelling to Mexico."
+  val sentence = "what is high in protein"
     
   val chunked = chunker.chunk(sentence)
   
   val lemmatized = chunked map edu.knowitall.tool.stem.MorphaStemmer.stemPostaggedToken
   
-  println(regex.find(lemmatized).group("arg1").tokens.map(_.string))
-  
-  println(regex.find(lemmatized).group("rel").tokens.map(_.string))
-  
-  println(regex.find(lemmatized).group("arg2").tokens.map(_.string))
-  
+  println(regex.find(lemmatized).group("ent").tokens.map(_.string))
 } 
