@@ -9,6 +9,7 @@ import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.AnswerGrouper
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.parsing.FormalQuestionParser
+import edu.knowitall.parsing.pattern.PatternParser
 import edu.knowitall.execution.IdentityExecutor
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.BasicAnswerGrouper
@@ -50,6 +51,7 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
     logger.info(s"Scoring answers for '$question'")
     val answers = for (group <- groups.par;
                        scored = scorer.scoreAnswer(group)) yield scored
+    logger.info(s"Returning ${answers.size} answers.")
     answers.toList.sortBy(-_.score)    
   }
 }
@@ -80,7 +82,8 @@ case object Components {
   val parsers: Map[String, QuestionParser] =
     Map("formal" -> FormalQuestionParser(),
       "keyword" -> StringMatchingParser(client),
-      "paralex-old" -> OldParalexParser())
+      "paralex-old" -> OldParalexParser(),
+      "regex pattern" -> PatternParser())
       
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client),

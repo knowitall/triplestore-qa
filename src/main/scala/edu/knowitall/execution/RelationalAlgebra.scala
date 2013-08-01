@@ -473,7 +473,7 @@ object StrSim {
     tokens.toSeq map morpha.lemmatizePostaggedToken
   }
   
-  def lemmatize(string: String): Seq[Lemmatized[ChunkedToken]] = lemmatize(chunker(string))
+  def lemmatize(string: String): Seq[Lemmatized[ChunkedToken]] = chunker.synchronized(lemmatize(chunker(string)))
   
   def normTokens(x: String) = {
     val lc = x.toLowerCase()
