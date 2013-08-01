@@ -25,7 +25,6 @@ import edu.knowitall.scoring.LogisticAnswerScorer
 import edu.knowitall.parsing.OldParalexParser
 import edu.knowitall.execution.RelationSynonymExecutor
 
-
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
   val logger = LoggerFactory.getLogger(this.getClass) 
@@ -54,6 +53,9 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
     answers.toList.sortBy(-_.score)    
   }
 }
+
+case class CachedQASystem(qaSystem: QASystem)
+
 case object QASystem {
   
   def getInstance(config: QAConfig = QAConfig()): Option[QASystem] =

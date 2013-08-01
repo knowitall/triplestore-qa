@@ -60,16 +60,16 @@ case class PostagAnswerGrouper() extends AnswerGrouper {
 
   val basicGrouper = BasicAnswerGrouper(PostagAnswerGrouper.normalize)
   
-  private def renormAnswer(normAnswer: String => String)(group: BasicAnswerGroup) = {
+  private def renormAlts(normAnswer: String => String)(group: BasicAnswerGroup) = {
     group
-      .copy(answer = group.answer map normAnswer)
       .copy(alternates = group.alternates map { alt => alt map normAnswer })
   }
 
   override def group(derivs: List[AnswerDerivation]): List[BasicAnswerGroup] = {
-    val basicGroups = basicGrouper.group(derivs).iterator
-    val postagGroups = basicGroups map renormAnswer(PostagAnswerGrouper.normalize)
-    postagGroups.toList
+    val basicGroups = basicGrouper.group(derivs)
+    val postagGroups = basicGroups map renormAlts(PostagAnswerGrouper.normalize)
+    val postags = postagGroups.map(g => (g.answer, g.derivations.size))
+    postagGroups
   }
 }
 
