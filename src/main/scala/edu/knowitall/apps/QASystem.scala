@@ -93,12 +93,12 @@ case object Components {
     Map("basic" -> BasicAnswerGrouper(),
         "singleton" -> SingletonAnswerGrouper(),
         "exact" -> ExactAnswerGrouper(),
-        "postagSample" -> PostagSampleAnswerGrouper(),
+        "postag sample" -> PostagSampleAnswerGrouper(),
         "postag" -> PostagAnswerGrouper())
   
   val scorers: Map[String, AnswerScorer] =
     Map("logistic" -> LogisticAnswerScorer(),
         "numDerivations" -> NumDerivationsScorer(),
-      "uniform" -> UniformAnswerScorer()
+        "uniform" -> UniformAnswerScorer()
       )
 }
