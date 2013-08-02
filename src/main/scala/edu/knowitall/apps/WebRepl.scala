@@ -98,7 +98,7 @@ object WebRepl extends App {
     def listComponents() = {
       val result = Map("parser" -> Map("name" -> "Question Parsing", "options" -> Components.parsers.keys.toList),
                        "executor" -> Map("name" -> "Query Execution", "options" -> Components.executors.keys.toList),
-                       "grouper" -> Map("name" -> "Answer Grouping", "options" -> Components.groupers.keys.toList),
+                       "grouper" -> Map("name" -> "Answer Grouping", "options" -> Components.groupers.keys.toList.sorted),
                        "scorer" -> Map("name" -> "Answer Scoring", "options" -> Components.scorers.keys.toList))
       val resultJson = JsonSerialization.serialize(result)
       ContentEncoding("application/json") ~> ResponseString(resultJson) ~> Ok
