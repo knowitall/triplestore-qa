@@ -55,7 +55,7 @@ class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[An
   
   val labeledAnswerGroups = {
     val queryRecsPairs = queryGroupedRecs.iterator.toSeq
-    val groupsRecsPairs = queryRecsPairs.map { case (queryString, inputRecs) =>
+    val groupsRecsPairs = queryRecsPairs.par.map { case (queryString, inputRecs) =>
       val groups = groupsForQuery(queryString)
       (groups, inputRecs)
     }
