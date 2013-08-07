@@ -11,6 +11,7 @@ import edu.knowitall.execution.Conditions._
 import edu.knowitall.execution.Search._
 import edu.knowitall.execution._
 import com.twitter.util.LruMap
+import scala.collection.mutable.SynchronizedMap
 
 /**
  * The interface to a Triplestore.
@@ -45,7 +46,7 @@ trait TriplestoreClient {
 case class CachedTriplestoreClient(client: TriplestoreClient, size: Int = 1000) 
   extends TriplestoreClient {
   
-  val tupleMap = new LruMap[(TSQuery, Int), List[Tuple]](size)
+  val tupleMap = new LruMap[(TSQuery, Int), List[Tuple]](size) with SynchronizedMap[(TSQuery, Int), List[Tuple]]
   
   def search(q: TSQuery, hits: Int): List[Tuple] = {
     tupleMap.get((q, hits)) match {
@@ -64,7 +65,7 @@ case class CachedTriplestoreClient(client: TriplestoreClient, size: Int = 1000)
 case class CountCachedTriplestoreClient (client: TriplestoreClient, size: Int = 1000) 
   extends TriplestoreClient {
 
-  val countMap = new LruMap[TSQuery, Long](size)
+  val countMap = new LruMap[TSQuery, Long](size) with SynchronizedMap[TSQuery, Long]
 
   def search(q: TSQuery, hits: Int): List[Tuple] = client.search(q, hits)
 
