@@ -30,7 +30,7 @@ object SystemFeatures {
     
     def apply(group: AnswerGroup) = {
       // get the queries run for this answergroup
-      val queries = group.derivations.map(_.etuple.equery.uquery)
+      val queries = group.derivations.map(_.etuple.equery.uquery).distinct
       val postagResults = answerUQueriesCached(queries)
       val postagFrequencies = postagResults.map(group => (group.answer, group.derivations.size)).toMap
       val groupPostags = postagGrouper.regroup(List(group)).map(_.answer).toSet
@@ -46,7 +46,7 @@ object SystemFeatures {
     
     def apply(group: AnswerGroup) = {
       // get the queries run for this answergroup
-      val queries = group.derivations.map(_.etuple.equery.uquery)
+      val queries = group.derivations.map(_.etuple.equery.uquery).distinct
       val postagResults = answerUQueriesCached(queries)
       val postagFrequencies = postagResults.map(group => (group.answer, group.derivations.size)).toMap
       val sizeRanking = postagFrequencies.values.toSeq.distinct.sortBy(-_)

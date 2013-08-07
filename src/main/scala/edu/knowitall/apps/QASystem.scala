@@ -9,7 +9,7 @@ import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.AnswerGrouper
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.parsing.FormalQuestionParser
-import edu.knowitall.parsing.pattern.PatternParser
+import edu.knowitall.parsing.regex.RegexQuestionParser
 import edu.knowitall.execution.IdentityExecutor
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.BasicAnswerGrouper
@@ -83,7 +83,7 @@ case object Components {
     Map("formal" -> FormalQuestionParser(),
       "keyword" -> StringMatchingParser(client),
       "paralex-old" -> OldParalexParser(),
-      "regex pattern" -> PatternParser())
+      "regex" -> RegexQuestionParser())
       
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client),
