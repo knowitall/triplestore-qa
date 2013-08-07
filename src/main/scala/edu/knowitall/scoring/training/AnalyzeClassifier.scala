@@ -5,6 +5,8 @@ import edu.knowitall.execution.AnswerGroup
 
 import scala.util.Random
 
+case class Scored[T](item: T, score: Double)
+
 object AnalyzeClassifier {
 
   val rand = new Random(0)
@@ -20,8 +22,10 @@ object AnalyzeClassifier {
     
     for (label <- sorted) {
       total += 1
-      if (label) correct += 1
-      result ::= (correct.toDouble / total.toDouble)
+      if (label) {
+        correct += 1
+        result ::= (correct.toDouble / total.toDouble)
+      }
     }
     result.reverse.tails.filter(_.nonEmpty).toSeq.map { tail => tail.max }
   }
@@ -41,8 +45,6 @@ object AnalyzeClassifier {
     
     trainingSets.zip(testSets).toSeq
   }
-  
-  case class Scored[T](item: T, score: Double)
   
   type ScoredItem = Scored[Labelled[AnswerGroup]]
   
