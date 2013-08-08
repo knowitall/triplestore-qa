@@ -56,8 +56,6 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
   }
 }
 
-case class CachedQASystem(qaSystem: QASystem)
-
 case object QASystem {
   
   def getInstance(config: QAConfig = QAConfig()): Option[QASystem] =

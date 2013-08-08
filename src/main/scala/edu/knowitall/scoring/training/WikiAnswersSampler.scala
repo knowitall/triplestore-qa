@@ -45,11 +45,11 @@ object WikiAnswersSampler {
   def main(args: Array[String]): Unit = {
 
     val inputFile = args(0)
-    val outputFile = args(1)
+    val outputStream = if (args.length == 1) System.out else new PrintStream(args(1))
 
     val waSampler = new WikiAnswersSampler(inputFile)
 
-    using(new PrintStream(outputFile, "UTF8")) { output =>
+    using(outputStream) { output =>
       waSampler foreach output.println
     }
   }

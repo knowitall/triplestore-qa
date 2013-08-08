@@ -32,6 +32,8 @@ case object QAPair {
  */
 class AnswerFinder(val input: Seq[QAPair], val system: QASystem) {
 
+  val maxNewAnswers = 20
+  
   import AnalyzeTraining.getTopFieldValues
   import edu.knowitall.execution.Search
   import edu.knowitall.execution.AnswerGroup
@@ -61,17 +63,20 @@ class AnswerFinder(val input: Seq[QAPair], val system: QASystem) {
   private def findNewAnswers(question: String, existingAnswers: Seq[QAPair]): Seq[QAPair] = {
     
     // run the question
-    val systemAnswersJustifications = system.answer(question).map({ 
-      group => (group.alternates.head.head, getTopTuple(group)) 
-    }).toMap
+    val systemAnswersJustifications = try { 
+        system.answer(question).sortBy(-_.score).take(maxNewAnswers).map({ 
+        group => (group.alternates.head.head, getTopTuple(group)) 
+      }).toMap
+    } catch {
+      case e: Exception => {
+        e.printStackTrace()
+        Map.empty[String, String]
+      }
+    }
     
-    val existingAnswerStrings = existingAnswers.map(_.answer).toSet
+    val newAnswers = systemAnswersJustifications.iterator.map { case (ans, just) => QAPair("X", ans, question, just) }
     
-    val newAnswerStrings = systemAnswersJustifications.keySet.filterNot(ans => existingAnswerStrings.contains(ans))
-    
-    val newAnswers = newAnswerStrings.map(ans => QAPair("X", ans, question, systemAnswersJustifications(ans)))
-    
-    val combined = (existingAnswers ++ newAnswers).take(50)
+    val combined = (existingAnswers ++ (newAnswers))
     // if combined has size > 1 then we filter out the placeholder "X" answer.
     if (combined.size > 1) {
       combined.filterNot(_.answer == "X")
@@ -108,7 +113,7 @@ object EvaluationAnswerFinder extends App {
       source.getLines.map(QAPair.deserialize).toList
     }
     
-    val sysConfig = QAConfig("keyword", "identity", "basic", "logistic")
+    val sysConfig = QAConfig("paralex-old", "identity", "basic", "logistic")
     val system = QASystem.getInstance(sysConfig).get
     
     val answerFinder = new AnswerFinder(input, system)

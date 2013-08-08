@@ -48,25 +48,29 @@ object AnalyzeRegexQuestionParser extends App {
   import RegexQuestionPatterns.patterns
   import edu.knowitall.scoring.training.WikiAnswersSampler
   
-  val maxQs = 10
+  val maxQs = 50
+  
+  val random = new scala.util.Random(0)
   
   val wikiAnswersData = args(0)
   
-  val wikiSampler = new WikiAnswersSampler(wikiAnswersData).take(1000)
+  val wikiSampler = new WikiAnswersSampler(wikiAnswersData)
   
-  val matches = wikiSampler flatMap { question =>
+  val matches = wikiSampler.zipWithIndex flatMap { case (question, qnum) =>
+    if (qnum % 100 == 0) print(".")
     patterns.zipWithIndex.flatMap { case (pattern, index) =>
-      pattern.parse(question).map(uq => (index, question + "\t" + uq.toString))
+      pattern.parse(question).headOption.map(uq => (index, question + "\t" + uq.toString))
     }
   }
-  val matchesMap = matches.groupBy(_._1).map(p => (p._1, p._2.map(_._2))).toSeq.sortBy(_._1)
+  println
+  val matchesMap = (Seq() ++ matches).groupBy(_._1).map(p => (p._1, random.shuffle(p._2.map(_._2)))).toSeq.sortBy(_._1)
     
   matchesMap.foreach { case (index, questions) =>
     val pattern = patterns(index)
-    println(index)
-    questions.take(maxQs) foreach { q => println("\t" + q)}
-    if (questions.size > maxQs) println("%d more...".format(questions.size - maxQs))
-    println
+    println(index + "\t" + questions.size)
+    //questions.take(maxQs) foreach { q => println("\t" + q)}
+    //if (questions.size > maxQs) println("%d more...".format(questions.size - maxQs))
+    //println
   }
   
   System.out.flush()
