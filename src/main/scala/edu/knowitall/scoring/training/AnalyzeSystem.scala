@@ -9,39 +9,8 @@ case object Aggregate extends EvalMode // Consider all answers per question
 
 class AnalyzeSystem(val mode: EvalMode, val input: Seq[QAPair], val system: QASystem) {
   
-  def scorePairs(question: String, pairs: Seq[QAPair]): Seq[Scored[QAPair]] = {
-   
-    val answerScores: Map[String, Double] = system.answer(question).map(g => (g.alternates.head.head, g.score)).toMap
-    val existingScores = pairs.map(_.answer).toSet
-    (answerScores.keySet &~  existingScores).foreach { ans => System.err.println("Warning, found answer not in eval set: $ans")}
-    
-    val scoredPairs = pairs.flatMap { p =>
-      val scoreLookup = answerScores.get(p.answer)
-      scoreLookup match {
-        case Some(score) => Some(Scored(p, score))
-        case None => {
-          //System.err.println(s"Warning, no score found for $p")
-          None
-        }
-      }
-    }
-    mode match {
-      case OneAnswer => Seq(scoredPairs.maxBy(_.score))
-      case Aggregate => scoredPairs
-    }
-  }
-  
-  lazy val output: Seq[Scored[QAPair]] = {
-    
-    // don't bother with unlabeled questions
-    val allLabeled = input.filter(p => p.label == "1" || p.label == "0")
-    
-    val questionPairs = allLabeled.groupBy(_.question)
-    questionPairs.iterator.toSeq.flatMap { case (question, pairs) => scorePairs(question, pairs) }
-  }
-  
   def precision: Seq[Double] = {
-    val booleans = output.sortBy(-_.score).map(_.item.label == "1")
+    val booleans = input.sortBy(-_.confidence).map(_.label == "1")
     AnalyzeClassifier.precRecall(booleans)
   }
 }
@@ -52,10 +21,20 @@ object AnalyzeSystem extends App {
   import java.io.{File, PrintStream}
   import edu.knowitall.common.Resource.using
   
-  case class Config(inputFile: File = new File("."), output: PrintStream = System.out, singleAnswer: Boolean = true)
+  case class Config(inputFile: File = new File("."), 
+      output: PrintStream = System.out, 
+      singleAnswer: Boolean = true,
+      parserName: String = "regex",
+      executor: String = "identity",
+      grouper: String = "basic",
+      scorer: String = "logistic")
   
   val parser = new OptionParser[Config]("EvaluationAnswerFinder") {
     arg[File]("inputFile") action { (f, c) => c.copy(inputFile = f) }
+    arg[String]("parser") action { (f, c) => c.copy(parserName = f) }
+    arg[String]("executor") action { (f, c) => c.copy(executor = f) }
+    arg[String]("grouper") action { (f, c) => c.copy(grouper = f) }
+    arg[String]("scorer") action { (f, c) => c.copy(scorer = f) }
     opt[File]("outputFile") action { (f, c) => c.copy(output = new PrintStream(f)) }
     opt[Boolean]("multiAnswer") action { (b, c) => c.copy(singleAnswer = !b) } text("Consider all answers per question (default: consider only top answer")
   }
@@ -70,7 +49,7 @@ object AnalyzeSystem extends App {
       source.getLines.map(QAPair.deserialize).toList  
     }
     
-    val sysConfig = QAConfig("regex pattern", "identity", "basic", "logistic")
+    val sysConfig = QAConfig(config.parserName, config.executor, config.grouper, config.scorer)
     val system = QASystem.getInstance(sysConfig).get
     
     val mode = if (config.singleAnswer) OneAnswer else Aggregate
