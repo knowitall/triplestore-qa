@@ -7,15 +7,16 @@ import edu.knowitall.apps.QAConfig
  * Wrapper for labeled (answer, question) pairs. Represents
  * a line of file input or output. 
  */
-case class QAPair(label: String, answer: String, question: String, justification: String) {
-  def serialize = s"$label\t$answer\t$question\t$justification"
+case class QAPair(label: String, answer: String, question: String, justification: String, confidence: Double) {
+  def serialize = s"$label\t$answer\t$question\t$justification\t$confidence"
 }
 case object QAPair {
   def deserialize(str: String): QAPair = {
     val split = str.split("\t").map(_.trim)
     split match {
-      case Array(label, answer, question, justification, _*) => QAPair(label, answer, question, justification)
-      case Array(question)                => QAPair("X", "X", question, "X")
+      case Array(label, answer, question, justification, confidence, _*) => QAPair(label, answer, question, justification, confidence.toDouble)
+      case Array(label, answer, question, justification) => QAPair(label, answer, question, justification, -1)
+      case Array(question)                => QAPair("X", "X", question, "X", -1)
       case _ => throw new IllegalArgumentException(s"Invalid QAPair: $str")
     }
   }
@@ -32,10 +33,13 @@ case object QAPair {
  */
 class AnswerFinder(val input: Seq[QAPair], val system: QASystem) {
 
-  val maxNewAnswers = 20
+  val maxAnswers = 1
   
   import AnalyzeTraining.getTopFieldValues
   import edu.knowitall.execution.Search
+  import edu.knowitall.execution.Tuple
+  import edu.knowitall.execution.Operators.Project
+  import edu.knowitall.execution.Conditions.On
   import edu.knowitall.execution.AnswerGroup
   
   def output: Seq[QAPair] = {
@@ -62,27 +66,34 @@ class AnswerFinder(val input: Seq[QAPair], val system: QASystem) {
   
   private def findNewAnswers(question: String, existingAnswers: Seq[QAPair]): Seq[QAPair] = {
     
+    def justField(str: String) = str.endsWith("arg1") || str.endsWith("rel") || str.endsWith("arg2") || str.endsWith("namespace")
+    
     // run the question
-    val systemAnswersJustifications = try { 
-        system.answer(question).sortBy(-_.score).take(maxNewAnswers).map({ 
-        group => (group.alternates.head.head, getTopTuple(group)) 
+    val systemAnswers = try { 
+        system.answer(question).sortBy(-_.score).take(maxAnswers).map({ group =>
+        val headTuple = group.derivations.head.etuple.tuple
+        val cleanTuple = Tuple(headTuple.attrs.filter(p=>justField(p._1)))
+        val answer = group.alternates.head.head
+        (answer, QAPair("X", answer, question, cleanTuple.toString, group.score))
       }).toMap
     } catch {
       case e: Exception => {
         e.printStackTrace()
-        Map.empty[String, String]
+        Map.empty[String, QAPair]
       }
     }
     
-    val newAnswers = systemAnswersJustifications.iterator.map { case (ans, just) => QAPair("X", ans, question, just) }
-    
-    val combined = (existingAnswers ++ (newAnswers))
-    // if combined has size > 1 then we filter out the placeholder "X" answer.
-    if (combined.size > 1) {
-      combined.filterNot(_.answer == "X")
-    } else {
-      combined
+    // try to reuse existing answers
+    val newAnswers = systemAnswers.toSeq.map { case (ans, pair) =>
+      existingAnswers.find { 
+        case QAPair(label, exAns, _, _, _) => exAns == ans && (label == "0" || label == "1") 
+      } match { 
+        case Some(existingPair) => pair.copy(label = existingPair.label)
+        case None => pair
+      }
     }
+    
+    if (newAnswers.nonEmpty) newAnswers else Seq(QAPair("X", "X", question, "X", -1))
   }
 }
 
@@ -96,11 +107,22 @@ object EvaluationAnswerFinder extends App {
   import edu.knowitall.common.Resource.using
   import scala.io.Source
   
-  case class Config(inputFile: File = new File("."), output: PrintStream = System.out)
+  case class Config(
+      inputFile: File = new File("."), 
+      output: PrintStream = System.out, 
+      parserName: String = "regex", 
+      executor: String = "identity", 
+      grouper: String = "basic",
+      scorer: String = "logistic")
+  
   
   val parser = new OptionParser[Config]("EvaluationAnswerFinder") {
     arg[File]("inputFile") action { (f, c) => c.copy(inputFile = f) }
     opt[File]("outputFile") action { (f, c) => c.copy(output = new PrintStream(f, "UTF8")) }
+    opt[String]("parser") action { (f, c) => c.copy(parserName = f) }
+    opt[String]("executor") action { (f, c) => c.copy(executor = f) }
+    opt[String]("grouper") action { (f, c) => c.copy(grouper = f) }
+    opt[String]("scorer") action { (f, c) => c.copy(scorer = f) }
   }
   
   parser.parse(args, Config()).foreach { config =>
@@ -113,7 +135,7 @@ object EvaluationAnswerFinder extends App {
       source.getLines.map(QAPair.deserialize).toList
     }
     
-    val sysConfig = QAConfig("paralex-old", "identity", "basic", "logistic")
+    val sysConfig = QAConfig(config.parserName, config.executor, config.grouper, config.scorer)
     val system = QASystem.getInstance(sysConfig).get
     
     val answerFinder = new AnswerFinder(input, system)
