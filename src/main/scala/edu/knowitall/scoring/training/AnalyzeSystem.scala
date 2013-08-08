@@ -3,9 +3,13 @@ package edu.knowitall.scoring.training
 import edu.knowitall.apps.QASystem
 import edu.knowitall.apps.QAConfig
 
-class AnalyzeSystem(val input: Seq[QAPair], val system: QASystem) {
+sealed trait EvalMode
+case object OneAnswer extends EvalMode // Prec/Recall @ 1 - Only consider a single top-ranked answer per question
+case object Aggregate extends EvalMode // Consider all answers per question
+
+class AnalyzeSystem(val mode: EvalMode, val input: Seq[QAPair], val system: QASystem) {
   
-  def scorePairs(question: String, pairs: Seq[QAPair]): Scored[QAPair] = {
+  def scorePairs(question: String, pairs: Seq[QAPair]): Seq[Scored[QAPair]] = {
    
     val answerScores: Map[String, Double] = system.answer(question).map(g => (g.alternates.head.head, g.score)).toMap
     val existingScores = pairs.map(_.answer).toSet
@@ -21,7 +25,10 @@ class AnalyzeSystem(val input: Seq[QAPair], val system: QASystem) {
         }
       }
     }
-    scoredPairs.maxBy(_.score)
+    mode match {
+      case OneAnswer => Seq(scoredPairs.maxBy(_.score))
+      case Aggregate => scoredPairs
+    }
   }
   
   lazy val output: Seq[Scored[QAPair]] = {
@@ -30,7 +37,7 @@ class AnalyzeSystem(val input: Seq[QAPair], val system: QASystem) {
     val allLabeled = input.filter(p => p.label == "1" || p.label == "0")
     
     val questionPairs = allLabeled.groupBy(_.question)
-    questionPairs.iterator.toSeq.map { case (question, pairs) => scorePairs(question, pairs) }
+    questionPairs.iterator.toSeq.flatMap { case (question, pairs) => scorePairs(question, pairs) }
   }
   
   def precision: Seq[Double] = {
@@ -45,11 +52,12 @@ object AnalyzeSystem extends App {
   import java.io.{File, PrintStream}
   import edu.knowitall.common.Resource.using
   
-  case class Config(inputFile: File = new File("."), output: PrintStream = System.out)
+  case class Config(inputFile: File = new File("."), output: PrintStream = System.out, singleAnswer: Boolean = true)
   
   val parser = new OptionParser[Config]("EvaluationAnswerFinder") {
     arg[File]("inputFile") action { (f, c) => c.copy(inputFile = f) }
     opt[File]("outputFile") action { (f, c) => c.copy(output = new PrintStream(f)) }
+    opt[Boolean]("multiAnswer") action { (b, c) => c.copy(singleAnswer = !b) } text("Consider all answers per question (default: consider only top answer")
   }
   
   parser.parse(args, Config()).foreach { config =>
@@ -65,7 +73,9 @@ object AnalyzeSystem extends App {
     val sysConfig = QAConfig("regex pattern", "identity", "basic", "logistic")
     val system = QASystem.getInstance(sysConfig).get
     
-    val analyzer = new AnalyzeSystem(input, system)
+    val mode = if (config.singleAnswer) OneAnswer else Aggregate
+    
+    val analyzer = new AnalyzeSystem(mode, input, system)
     
     val output = analyzer.precision.zipWithIndex.map {
       case (prec, index) => s"$index\t$prec"
