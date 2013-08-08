@@ -4,7 +4,6 @@ import edu.knowitall.execution.TConjunct
 import edu.knowitall.execution.Tuple
 
 import edu.knowitall.triplestore.CachedTriplestoreClient
-import edu.knowitall.triplestore.CountCachedTriplestoreClient
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.execution.ExecQuery

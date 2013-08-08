@@ -5,14 +5,12 @@ import edu.knowitall.execution.ExecConjunctiveQuery
 import edu.knowitall.execution.ExecQuery
 import edu.knowitall.execution.Search.TSQuery
 import edu.knowitall.triplestore.SolrClient
-import edu.knowitall.triplestore.CountCachedTriplestoreClient
 import edu.knowitall.triplestore.CachedTriplestoreClient
 
 object TriplestoreFeatures {
   
   val baseClient = SolrClient("http://rv-n12.cs.washington.edu:8983/solr/triplestore", 500)
-  val countCacheClient = CountCachedTriplestoreClient(baseClient, 10000)
-  val client = CachedTriplestoreClient(countCacheClient, 10000)
+  val client = CachedTriplestoreClient(baseClient, 10000)
   
   object QueryFrequency extends AnswerGroupFeature("Log of query literals in the triplestore") {
     
