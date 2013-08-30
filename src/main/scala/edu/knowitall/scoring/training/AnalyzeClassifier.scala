@@ -11,7 +11,7 @@ object AnalyzeClassifier {
 
   val rand = new Random(0)
   
-  val allTrainingData = TrainingDataReader.defaultTraining.toSet
+  lazy val allTrainingData = TrainingDataReader.defaultTraining.toSet
   
   def precRecall(sorted: Seq[Boolean]): Seq[Double] = {
     

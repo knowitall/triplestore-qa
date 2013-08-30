@@ -4,21 +4,37 @@ import edu.knowitall.apps.QASystem
 import edu.knowitall.apps.QAConfig
 
 /**
- * Wrapper for labeled (answer, question) pairs. Represents
- * a line of file input or output. 
+ * Wrapper for paraphrase sets that are optionally labeled, answered, justified, confidenced.
  */
-case class QAPair(label: String, answer: String, question: String, justification: String, confidence: Double) {
-  def serialize = s"$label\t$answer\t$question\t$justification\t$confidence"
+case class ParaphraseSet(labelStr: String, answerStr: String, justificationStr: String, confidenceStr: String, questions: Set[String]) {
+  
+  def ifNotX(s: String) = if (s == "X") None else Some(s)
+  
+  def label = ifNotX(labelStr)
+  def answer = ifNotX(answerStr)
+  def justification = ifNotX(justificationStr)
+  def confidence = ifNotX(confidenceStr).map(_.toDouble)
+  
+  def serialize = {
+    val fields = Seq(labelStr, answerStr, justificationStr, confidenceStr) ++ questions.toSeq
+    fields.mkString("\t")
+  }
 }
-case object QAPair {
-  def deserialize(str: String): QAPair = {
-    val split = str.split("\t").map(_.trim)
+case object ParaphraseSet {
+  def deserialize(str: String): ParaphraseSet = {
+    val split = str.split("\t").map(_.trim).toList
     split match {
-      case Array(label, answer, question, justification, confidence, _*) => QAPair(label, answer, question, justification, confidence.toDouble)
-      case Array(label, answer, question, justification) => QAPair(label, answer, question, justification, -1)
-      case Array(question)                => QAPair("X", "X", question, "X", -1)
-      case _ => throw new IllegalArgumentException(s"Invalid QAPair: $str")
+      case labelStr :: answerStr :: justificationStr :: confidenceStr :: questions => {
+        require(questions.nonEmpty, "Empty question set.")
+        ParaphraseSet(labelStr, answerStr, justificationStr, confidenceStr, questions.toSet)
+      }
+      case _ => throw new IllegalArgumentException(s"Invalid ParaphraseSet: $str")
     }
+  }
+  
+  def fromParaphrases(str: String): ParaphraseSet = {
+    val split = str.split("\t").map(_.trim).toList
+    ParaphraseSet("X", "X", "X", "X", split.toSet)
   }
 }
 
@@ -31,10 +47,8 @@ case object QAPair {
  * Any new answers are appended to the input QAPairs with a blank or null label.
  * Labels for existing answers are preserved. 
  */
-class AnswerFinder(val input: Seq[QAPair], val system: QASystem) {
+class AnswerFinder(val input: Seq[ParaphraseSet], val system: QASystem, val allParaphrases: Boolean) {
 
-  val maxAnswers = 1
-  
   import AnalyzeTraining.getTopFieldValues
   import edu.knowitall.execution.Search
   import edu.knowitall.execution.Tuple
@@ -42,19 +56,20 @@ class AnswerFinder(val input: Seq[QAPair], val system: QASystem) {
   import edu.knowitall.execution.Conditions.On
   import edu.knowitall.execution.AnswerGroup
   
-  def output: Seq[QAPair] = {
+  def output: Seq[ParaphraseSet] = {
     
-    val qaSets = input.groupBy(_.question)
+    val pSets = input.groupBy(_.questions)
     
-    val allAnswers = qaSets.iterator.toSeq.flatMap { 
-      case (question, existingAnswers) => findNewAnswers(question, existingAnswers) 
+    val allAnswers = pSets.iterator.toSeq.map { 
+      case (questions, existingAnswers) => findNewAnswers(questions, existingAnswers) 
     }
     
     // put unlabeled data at the bottom
-    val unlabeledWithAnswers = allAnswers.filter(p => p.label == "X" && p.answer != "X").sortBy(_.question)
-    val unlabeledWithoutAnswers = allAnswers.filter(p => p.label == "X" && p.answer == "X").sortBy(_.question)
-    val labeled = allAnswers.filterNot(_.label == "X").sortBy(_.question)
-    (labeled ++ unlabeledWithAnswers ++ unlabeledWithoutAnswers).toSeq
+    val unlabeledWithAnswers = allAnswers.filter(p => p.label.isEmpty && p.answer.nonEmpty).groupBy(_.questions).flatMap(_._2)
+    val unlabeledWithoutAnswersOrJustification = allAnswers.filter(p => p.label.isEmpty && p.answer.isEmpty && p.justification.isEmpty).groupBy(_.questions).flatMap(_._2)
+    val unlabeledWithoutAnswersWithJustification = allAnswers.filter(p => p.label.isEmpty && p.answer.isEmpty && p.justification.nonEmpty).groupBy(_.questions).flatMap(_._2)
+    val labeled = allAnswers.filterNot(_.label.isEmpty).groupBy(_.questions).flatMap(_._2)
+    (labeled ++ unlabeledWithAnswers ++ unlabeledWithoutAnswersWithJustification ++ unlabeledWithoutAnswersOrJustification).toSeq
   }
   
   private def getTopTuple(group: AnswerGroup): String = {
@@ -64,36 +79,42 @@ class AnswerFinder(val input: Seq[QAPair], val system: QASystem) {
     (topArg1s ++ topRels ++ topArg2s).mkString("(", ", ", ")")
   }
   
-  private def findNewAnswers(question: String, existingAnswers: Seq[QAPair]): Seq[QAPair] = {
+  private def findNewAnswers(questions: Set[String], existingAnswers: Seq[ParaphraseSet]): ParaphraseSet = {
     
     def justField(str: String) = str.endsWith("arg1") || str.endsWith("rel") || str.endsWith("arg2") || str.endsWith("namespace")
-    
+
     // run the question
-    val systemAnswers = try { 
-        system.answer(question).sortBy(-_.score).take(maxAnswers).map({ group =>
-        val headTuple = group.derivations.head.etuple.tuple
-        val cleanTuple = Tuple(headTuple.attrs.filter(p=>justField(p._1)))
-        val answer = group.alternates.head.head
-        (answer, QAPair("X", answer, question, cleanTuple.toString, group.score))
-      }).toMap
-    } catch {
-      case e: Exception => {
-        e.printStackTrace()
-        Map.empty[String, QAPair]
+    val newPSet = {
+      val topQAnswer = try {
+        val questionsConsidered = if (allParaphrases) questions else questions.toSeq.take(1).toSet
+        questions.toSeq.flatMap(q => system.answer(q).map(a => (q, a))).sortBy(-_._2.score).take(1).toSeq.headOption
+      } catch {
+        case e: Exception => { e.printStackTrace(); None }
+      }
+      topQAnswer match {
+        case Some((question, group)) => {
+          val headTuple = group.derivations.head.etuple.tuple
+          val cleanTuple = Tuple(headTuple.attrs.filter(p => justField(p._1)))
+          val answer = group.alternates.head.head
+          ParaphraseSet("X", answer, question + " " + cleanTuple.toString, group.score.toString, questions)
+        }
+        case None => {
+          val just = questions.flatMap(q => (system.parser.parse(q).map(qu => q + " " + qu.toString))).headOption.getOrElse("X")
+          ParaphraseSet("X", "X", just, "X", questions)
+        }
       }
     }
     
     // try to reuse existing answers
-    val newAnswers = systemAnswers.toSeq.map { case (ans, pair) =>
-      existingAnswers.find { 
-        case QAPair(label, exAns, _, _, _) => exAns == ans && (label == "0" || label == "1") 
-      } match { 
-        case Some(existingPair) => pair.copy(label = existingPair.label)
-        case None => pair
-      }
+    val existingAnswer = existingAnswers.find(pset =>
+      pset.label.isDefined &&
+      pset.answer.isDefined && 
+      pset.answer == newPSet.answer && 
+      pset.questions.equals(newPSet.questions))
+    existingAnswer match {
+      case Some(pset) => newPSet.copy(labelStr = pset.labelStr)
+      case None => newPSet
     }
-    
-    if (newAnswers.nonEmpty) newAnswers else Seq(QAPair("X", "X", question, "X", -1))
   }
 }
 
@@ -109,6 +130,8 @@ object EvaluationAnswerFinder extends App {
   
   case class Config(
       inputFile: File = new File("."), 
+      inputRaw: Boolean = false,
+      allParaphrases: Boolean = true,
       output: PrintStream = System.out, 
       parserName: String = "regex", 
       executor: String = "identity", 
@@ -119,6 +142,8 @@ object EvaluationAnswerFinder extends App {
   val parser = new OptionParser[Config]("EvaluationAnswerFinder") {
     arg[File]("inputFile") action { (f, c) => c.copy(inputFile = f) }
     opt[File]("outputFile") action { (f, c) => c.copy(output = new PrintStream(f, "UTF8")) }
+    opt[Boolean]("allParaphrases") action { (b, c) => c.copy(allParaphrases = b) }
+    opt[Boolean]("inputType") action { (b, c) => c.copy(inputRaw = b) }
     opt[String]("parser") action { (f, c) => c.copy(parserName = f) }
     opt[String]("executor") action { (f, c) => c.copy(executor = f) }
     opt[String]("grouper") action { (f, c) => c.copy(grouper = f) }
@@ -131,14 +156,16 @@ object EvaluationAnswerFinder extends App {
   
   def run(config: Config): Unit = {
     
+    def deserializer = if (!config.inputRaw) ParaphraseSet.deserialize _ else ParaphraseSet.fromParaphrases _
+    
     val input = using(Source.fromFile(config.inputFile, "UTF8")) { source =>
-      source.getLines.map(QAPair.deserialize).toList
+      source.getLines.map(deserializer).toList
     }
     
     val sysConfig = QAConfig(config.parserName, config.executor, config.grouper, config.scorer)
     val system = QASystem.getInstance(sysConfig).get
     
-    val answerFinder = new AnswerFinder(input, system)
+    val answerFinder = new AnswerFinder(input, system, config.allParaphrases)
     
     val output = answerFinder.output.map(_.serialize)
     

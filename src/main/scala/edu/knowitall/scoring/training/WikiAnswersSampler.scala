@@ -3,37 +3,36 @@ package edu.knowitall.scoring.training
 /**
  * A utility (throw-away?) for sampling answers.
  */
-class WikiAnswersSampler(val inputFile: String) extends Iterable[String] {
+class WikiAnswersSampler(val inputFile: String) extends Iterable[Set[String]] {
 
   import io.Source
   
   /**
    * Get the median-length question.
    */
-  def processLine(line: String): String = {
+  def processLine(line: String): Set[String] = {
     
     val parts = line.split("\t")
     val questions = parts.filter(_.startsWith("q:"))
     val cleaned = questions.map(_.drop(2).trim)
-    val lengthSorted = cleaned.sortBy(_.length)
-    val midIndex = lengthSorted.length / 2
-    lengthSorted(midIndex)
+    cleaned.toSet
   }
   
-  def iterator = new Iterator[String]() {
+  def iterator = new Iterator[Set[String]]() {
     val source = io.Source.fromFile(inputFile, "UTF8")
     val lines = source.getLines
+    val questions = lines map processLine
     var closed = false
     def hasNext = {
       if (closed) false
-      else if (!lines.hasNext) {
+      else if (!questions.hasNext) {
         source.close
         closed = true
         false
       }
       else true
     }
-    def next = processLine(lines.next)
+    def next = questions.next
   }
 }
 
@@ -50,7 +49,7 @@ object WikiAnswersSampler {
     val waSampler = new WikiAnswersSampler(inputFile)
 
     using(outputStream) { output =>
-      waSampler foreach output.println
+      waSampler foreach { qset => output.println(qset.mkString("\t")) }
     }
   }
 }
