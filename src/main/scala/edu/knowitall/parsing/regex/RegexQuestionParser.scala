@@ -56,22 +56,13 @@ object AnalyzeRegexQuestionParser extends App {
   
   val wikiSampler = new WikiAnswersSampler(wikiAnswersData)
   
-  val matches = wikiSampler.zipWithIndex flatMap { case (question, qnum) =>
-    if (qnum % 100 == 0) print(".")
-    patterns.zipWithIndex.flatMap { case (pattern, index) =>
-      pattern.parse(question).headOption.map(uq => (index, question + "\t" + uq.toString))
-    }
-  }
-  println
-  val matchesMap = (Seq() ++ matches).groupBy(_._1).map(p => (p._1, random.shuffle(p._2.map(_._2)))).toSeq.sortBy(_._1)
-    
-  matchesMap.foreach { case (index, questions) =>
-    val pattern = patterns(index)
-    println(index + "\t" + questions.size)
-    //questions.take(maxQs) foreach { q => println("\t" + q)}
-    //if (questions.size > maxQs) println("%d more...".format(questions.size - maxQs))
-    //println
-  }
+  val matched = wikiSampler.flatMap(questionSet =>
+    questionSet.flatMap({ question =>
+      patterns.flatMap(_.parse(question).headOption).map(query => (question ,query))
+    }).headOption
+  )
+ 
+  println(matched.size)
   
-  System.out.flush()
+  matched.take(100).foreach { case (question, query) => println(question + "\t" + query)}
 }
