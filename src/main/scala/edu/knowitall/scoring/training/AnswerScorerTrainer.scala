@@ -9,6 +9,7 @@ import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.scoring.features.AnswerGroupFeatures
 import edu.knowitall.tool.conf.Labelled
 import java.io.FileOutputStream
+import edu.knowitall.scoring.WekaConfidenceFunction
 
 case object LogisticTrainer extends ConfidenceTrainer[AnswerGroup](AnswerGroupFeatures) {
   

@@ -1,15 +1,12 @@
-package edu.knowitall.scoring.training
+package edu.knowitall.scoring
 
 import edu.knowitall.tool.conf.ConfidenceFunction
 import edu.knowitall.tool.conf.FeatureSet
-import edu.knowitall.tool.conf.Labelled
-import edu.knowitall.common.Resource.using
 import weka.classifiers.Classifier
 import weka.core.Instances
 import edu.knowitall.execution.AnswerGroup
-import unweka.WekaTrainingReader.toUnlabeledInstance
+import training.unweka.WekaTrainingReader.toUnlabeledInstance
 import java.io.OutputStream
-import java.io.File
 
 class WekaConfidenceFunction(
     featureSet: FeatureSet[AnswerGroup, Double], 
