@@ -4,6 +4,7 @@ import edu.knowitall.execution.Search.rel
 import edu.knowitall.triplestore.TriplestoreClient
 import org.slf4j.LoggerFactory
 import edu.knowitall.tool.stem.MorphaStemmer
+import edu.knowitall.execution.synonyms.TriplestoreRelationSynonyms
 
 trait UQuery
 

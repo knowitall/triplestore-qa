@@ -1,12 +1,19 @@
-package edu.knowitall.execution
+package edu.knowitall.execution.synonyms
 import edu.knowitall.execution.Search.{rel, arg1, arg2}
 import edu.knowitall.triplestore.TriplestoreClient
 import edu.knowitall.execution.Search.TSQuery
 import edu.knowitall.tool.tokenize.ClearTokenizer
 import edu.knowitall.tool.stem.MorphaStemmer
+import edu.knowitall.execution.ListConjunctiveQuery
 import edu.knowitall.execution.Search.Conjunction
 import edu.knowitall.execution.Search.FieldKeywords
 import edu.knowitall.execution.Search.FieldPhrase
+import edu.knowitall.execution.ConjunctiveQuery
+import edu.knowitall.execution.TConjunct
+import edu.knowitall.execution.Tuple
+import edu.knowitall.execution.UnquotedTLiteral
+import edu.knowitall.execution.Utils
+import scala.Option.option2Iterable
 
 case class RelationRewrite(left: String, right: String, inverse: Boolean) {
   
@@ -41,10 +48,13 @@ case class RelationRewrite(left: String, right: String, inverse: Boolean) {
       List(c)
     }
   }
-  
 }
 
-case class TriplestoreRelationSynonyms(client: TriplestoreClient, max: Int = 10) {
+abstract class RelationSynonyms {
+  def getRewrites(left: String): List[RelationRewrite]
+}
+
+case class TriplestoreRelationSynonyms(client: TriplestoreClient, max: Int = 10) extends RelationSynonyms {
   
   val synRel = "berant_clear_gt13"
   val stemmer = new MorphaStemmer
