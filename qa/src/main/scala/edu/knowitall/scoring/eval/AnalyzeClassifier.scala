@@ -1,9 +1,10 @@
-package edu.knowitall.scoring.training
+package edu.knowitall.scoring.eval
 
 import edu.knowitall.tool.conf.Labelled
 import edu.knowitall.execution.AnswerGroup
-
 import scala.util.Random
+import edu.knowitall.scoring.training.LogisticTrainer
+import edu.knowitall.scoring.training.TrainingDataReader
 
 case class Scored[T](item: T, score: Double)
 

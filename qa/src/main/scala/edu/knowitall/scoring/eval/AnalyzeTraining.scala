@@ -1,4 +1,4 @@
-package edu.knowitall.scoring.training
+package edu.knowitall.scoring.eval
 
 import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.Search.TSField
@@ -8,8 +8,10 @@ import edu.knowitall.execution.ExecConjunctiveQuery
 import edu.knowitall.execution.TConjunct
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.scoring.LogisticAnswerScorer
-import edu.knowitall.apps.QASystem
 import edu.knowitall.tool.conf.Labelled
+import edu.knowitall.scoring.training.TrainingDataReader
+import java.io.PrintStream
+import scala.Option.option2Iterable
 
 /**
  * For now, annotate training data with most common relations that accompany an answer.

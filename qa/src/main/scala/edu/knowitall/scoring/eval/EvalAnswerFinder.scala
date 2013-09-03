@@ -1,7 +1,18 @@
-package edu.knowitall.scoring.training
+package edu.knowitall.scoring.eval
 
 import edu.knowitall.apps.QASystem
 import edu.knowitall.apps.QAConfig
+import AnalyzeTraining.getTopFieldValues
+import edu.knowitall.common.Resource.using
+import edu.knowitall.execution.AnswerGroup
+import edu.knowitall.execution.Search
+import edu.knowitall.execution.Tuple
+import java.io.File
+import java.io.PrintStream
+import scala.Array.canBuildFrom
+import scala.io.Source
+import scopt.OptionParser
+import edu.knowitall.scoring.eval.AnalyzeTraining
 
 /**
  * Wrapper for paraphrase sets that are optionally labeled, answered, justified, confidenced.
@@ -47,7 +58,7 @@ case object ParaphraseSet {
  * Any new answers are appended to the input QAPairs with a blank or null label.
  * Labels for existing answers are preserved. 
  */
-class AnswerFinder(val input: Seq[ParaphraseSet], val system: QASystem, val allParaphrases: Boolean) {
+class EvalAnswerFinder(val input: Seq[ParaphraseSet], val system: QASystem, val allParaphrases: Boolean) {
 
   import AnalyzeTraining.getTopFieldValues
   import edu.knowitall.execution.Search
@@ -165,7 +176,7 @@ object EvaluationAnswerFinder extends App {
     val sysConfig = QAConfig(config.parserName, config.executor, config.grouper, config.scorer)
     val system = QASystem.getInstance(sysConfig).get
     
-    val answerFinder = new AnswerFinder(input, system, config.allParaphrases)
+    val answerFinder = new EvalAnswerFinder(input, system, config.allParaphrases)
     
     val output = answerFinder.output.map(_.serialize)
     
