@@ -1,7 +1,9 @@
-package edu.knowitall.scoring.training
+package edu.knowitall.scoring.eval
 
-import edu.knowitall.apps.QASystem
-import edu.knowitall.apps.QAConfig
+import edu.knowitall.common.Resource.using
+import java.io.File
+import java.io.PrintStream
+import scopt.OptionParser
 
 sealed trait EvalMode
 case object OneAnswer extends EvalMode // Prec/Recall @ 1 - Only consider a single top-ranked answer per question
