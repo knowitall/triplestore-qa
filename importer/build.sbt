@@ -12,11 +12,13 @@ libraryDependencies += "org.apache.solr" % "solr-solrj" % "4.3.0"
 
 libraryDependencies += "commons-logging" % "commons-logging-api" % "1.0.4"
 
-libraryDependencies += "edu.washington.cs.knowitall.openie" % "openie-models_2.10" % "1.1-SNAP2" exclude("com.esotericsoftware.minlog","minlog")
+libraryDependencies += "edu.washington.cs.knowitall.openie" % "openie-models_2.10" % "1.1-SNAPSHOT" exclude("com.esotericsoftware.minlog","minlog")
 
 libraryDependencies += "com.github.scopt" %% "scopt" % "3.0.0"
 
 libraryDependencies += "com.twitter" %% "util-collection" % "6.3.6"
+
+libraryDependencies += "edu.washington.cs.knowitall.openie" %% "openie-populator" % "1.1-SNAPSHOT"
 
 assemblySettings
 
