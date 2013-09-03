@@ -107,14 +107,26 @@
    -->
    <field name="doctype" type="string" indexed="true" stored="true" />
 
+   <!-- triplestore-qa code expects a namespace field, which basically does the same thing as doctype. Keep both for now... -->
+   <field name="namespace" type="string" indexed="true" stored="true" />
+   <copyField source="doctype" dest="namespace"/>
+
    <!-- common fields to all docs -->
 
    <!-- relations and sentence extractions share a global id space -->
    <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" /> 
 
-   <field name="arg1" type="text_general" indexed="true" stored="true" omitNorms="true"/>
-   <field name="rel" type="text_general" indexed="true" stored="true" omitNorms="true"/>
-   <field name="arg2" type="text_general" indexed="true" stored="true" omitNorms="true"/>
+   <field name="arg1" type="extraction" indexed="true" stored="true" omitNorms="true"/>
+   <field name="rel" type="extraction" indexed="true" stored="true" omitNorms="true"/>
+   <field name="arg2" type="extraction" indexed="true" stored="true" omitNorms="true"/>
+
+   <field name="arg1_exact" type="lowercase" indexed="true" stored="true"/>      
+   <field name="rel_exact" type="lowercase" indexed="true" stored="true"/>       
+   <field name="arg2_exact" type="lowercase" indexed="true" stored="true"/>    
+
+   <copyField source="arg1" dest="arg1_exact"/>
+   <copyField source="rel" dest="rel_exact"/>
+   <copyField source="arg2" dest="arg2_exact"/>
 
    <field name="_version_" type="long" indexed="true" stored="true"/>
    <field name="timestamp" type="date" indexed="true" stored="true" default="NOW" multiValued="false"/>
@@ -177,9 +189,18 @@
 
    <field name="url" type="string" indexed="false" stored="true" />
 
- </fields>
+  </fields>
 
- <uniqueKey>id</uniqueKey>
+  <uniqueKey>id</uniqueKey>
+  
+  <dynamicField name="*_s" type="string" indexed="false" stored="true"/>
+  <dynamicField name="*_ss" type="string" indexed="false" stored="true" multiValued="true"/>
+  <dynamicField name="*_i" type="int" indexed="false" stored="true"/>
+  <dynamicField name="*_is" type="int" indexed="false" stored="true" multiValued="true"/>
+  <dynamicField name="*_f" type="float" indexed="false" stored="true"/>
+  <dynamicField name="*_fs" type="float" indexed="false" stored="true" multiValued="true"/>
+  <dynamicField name="*_b" type="boolean" indexed="false" stored="true"/>
+  <dynamicField name="*_bs" type="boolean" indexed="false" stored="true" multiValued="true"/>
 
   <!-- copyField commands copy one field to another at the time a document
         is added to the index.  It's used either to index the same field differently,
@@ -213,7 +234,23 @@
     <!-- boolean type: "true" or "false" -->
     <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
 
-    <!-- sortMissingLast and sortMissingFirst attributes are optional attributes are
+    <fieldType name="extraction" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+      <analyzer type="index">                                                   
+        <tokenizer class="solr.WhitespaceTokenizerFactory"/>                    
+        <filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1" catenateWords="1" catenateNumbers="1" catenateAll="0" splitOnCaseChange="1"/>
+        <filter class="solr.LowerCaseFilterFactory"/>                           
+        <filter class="edu.knowitall.solr.MorphaTokenFilterFactory"/>                          
+      </analyzer>                                                               
+      <analyzer type="query">                                                   
+        <tokenizer class="solr.WhitespaceTokenizerFactory"/>                    
+        <filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1" catenateWords="0" catenateNumbers="0" catenateAll="0" splitOnCaseChange="1"/>
+        <filter class="solr.LowerCaseFilterFactory"/>                           
+        <filter class="solr.KeywordMarkerFilterFactory" protected="protwords.txt"/>
+        <filter class="edu.knowitall.solr.MorphaTokenFilterFactory"/>                          
+      </analyzer>                                                               
+    </fieldType> 
+
+   <!-- sortMissingLast and sortMissingFirst attributes are optional attributes are
          currently supported on types that are sorted internally as strings
          and on numeric types.
 	     This includes "string","boolean", and, as of 3.5 (and 4.x),
