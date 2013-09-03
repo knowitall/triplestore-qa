@@ -11,8 +11,13 @@ import edu.knowitall.openie.models.Extraction
 import scopt.OptionParser
 import scala.util.Success
 import scala.util.Failure
+import edu.knowitall.browser.solr.NewSolrLoader
 
 trait Format {
+  
+  def namespace: String
+  
+  val idFactory: () => String
 
   def docIterator(): Iterator[SolrInputDocument]
 }
@@ -28,13 +33,22 @@ abstract class TupleFormat extends Format {
     for ((k, v) <- rec) {
       doc.addField(k, v)
     }
+
+    if (doc.getFieldValue("id") == null) {
+      doc.addField("id", idFactory())
+    }
+
+    if (doc.getFieldValue("namespace") == null) {
+      doc.addField("namespace", namespace)
+    }
+    
     return doc
   }
 
   def docIterator(): Iterator[SolrInputDocument] = groupIterator map recordToSolr
 }
 
-case class ProbaseFormat() extends TupleFormat {
+case class ProbaseFormat(namespace: String, idFactory: () => String) extends TupleFormat {
 
   val relationName = "Instance Of"
 
@@ -70,7 +84,7 @@ case class ProbaseFormat() extends TupleFormat {
   }
 }
 
-case class PlainTextFormat() extends TupleFormat {
+case class PlainTextFormat(namespace: String, idFactory: () => String) extends TupleFormat {
 
   case class Triple(arg1: String, rel: String, arg2: String)
 
@@ -99,64 +113,27 @@ case class PlainTextFormat() extends TupleFormat {
   }
 }
 
-case class ClusteredOpenIE4Format() extends TupleFormat {
+case class ClusteredOpenIE4Format(namespace: String, idFactory: () => String) extends Format {
 
   def close() = ()
 
-  def groupIterator() = {
+  private def clusterIterator() = {
     val source = io.Source.fromInputStream(System.in, "UTF8")
     source.getLines.grouped(1000).flatMap { group =>
       group.par flatMap { l =>
         val tryRead = ExtractionCluster.formatter.read(l)
         tryRead match {
-          case Success(cluster) => Some(clusterToRecord(cluster))
+          case Success(cluster) => Some(cluster)
           case Failure(ex) => { ex.printStackTrace(); None }
         }
       }
     }
   }
 
-  def clusterToRecord(cluster: ExtractionCluster[Extraction]): List[(String, Any)] = {
-    var lst = List.empty[(String, Any)]
-    val maxConfInst = cluster.instances.maxBy(_.confidence)
-    lst = ("arg1", getArg1(maxConfInst)) :: lst
-    lst = ("rel", getRel(maxConfInst)) :: lst
-    lst = ("arg2", getArg2(maxConfInst)) :: lst
-    lst = lst ++ getOptionals(cluster)
-    return lst
-  }
-
-  def getArg1(inst: Extraction): String = inst.arg1Text
-
-  def getArg2(inst: Extraction): String = inst.arg2Text
-
-  def getRel(inst: Extraction): String = inst.relText
-
-  def getOptionals(cluster: ExtractionCluster[Extraction]): List[(String, Any)] = {
-    var lst = List.empty[(String, Any)]
-    lst = lst ++ argOptionals("arg1", cluster.arg1) ++ argOptionals("arg2", cluster.arg2)
-    for (corp <- cluster.corpora) {
-      lst = ("corpora_ss", corp) :: lst
-    }
-    lst = ("num_extrs_i", cluster.instances.size) :: lst
-    val confs = cluster.instances.map(i => i.confidence).toList
-    val maxConf = confs match { case x :: xs => confs.max case _ => 0.0 }
-    lst = ("conf_f", maxConf) :: lst
-    return lst
-  }
-
-  def argOptionals(name: String, arg: ExtractionArgument): List[(String, String)] = {
-    var lst = List.empty[(String, String)]
-    if (arg.hasEntity) {
-      val fbid = arg.entity.get.fbid
-      lst = (name + "_fbid_s", fbid) :: lst
-    }
-
-    return lst
-  }
+  def docIterator() = clusterIterator().flatMap(c => NewSolrLoader.toSolrDocuments(c, idFactory))
 }
 
-case class GroupedReVerbFormat() extends TupleFormat {
+case class GroupedReVerbFormat(namespace: String, idFactory: () => String) extends TupleFormat {
 
   type REG = ExtractionGroup[ReVerbExtraction]
   type RINST = Instance[ReVerbExtraction]

@@ -9,11 +9,12 @@ import edu.knowitall.openie.models.Extraction
 import scopt.OptionParser
 import scala.util.Success
 import scala.util.Failure
+import java.util.concurrent.atomic.AtomicLong
 
 object Importer {
 
   case class Config(
-    val format: TupleFormat = PlainTextFormat(),
+    val format: String = "plain",
     val solrUrl: String = "",
     val namespace: String = "",
     val idPrefix: String = "")
@@ -23,15 +24,7 @@ object Importer {
 
       arg[String]("solr-url") action { (str: String, c: Config) => c.copy(solrUrl = str) }
 
-      arg[String]("format") action {
-        (str: String, c: Config) =>
-          str match {
-            case "plain" => c.copy(format = PlainTextFormat())
-            case "reverb" => c.copy(format = GroupedReVerbFormat())
-            case "openie4" => c.copy(format = ClusteredOpenIE4Format())
-            case "probase" => c.copy(format = ProbaseFormat())
-          }
-      } text ("format (plain|reverb|openie4|probase)")
+      arg[String]("format") action { (str: String, c: Config) => c.copy(format = str) } text ("format (plain|reverb|openie4|probase)")
 
       opt[String]('n', "namespace") optional () action {
         (str: String, c: Config) => c.copy(namespace = str)
@@ -42,7 +35,6 @@ object Importer {
       }
 
     }
-
     parser.parse(args, Config()) match {
       case Some(config) => run(config)
       case None =>
@@ -53,28 +45,27 @@ object Importer {
   def run(config: Config) = {
     val url = config.solrUrl
     val namespace = config.namespace
-    var idPrefix = config.idPrefix
+    val idPrefix = if (config.idPrefix.nonEmpty) config.idPrefix else namespace
     val solr = new ConcurrentUpdateSolrServer(url, 1000, 4)
+    
+    val id = new AtomicLong(0)
+    def getNextId() =  idPrefix + id.getAndIncrement()
+    val idFactory = getNextId _
 
-    if (idPrefix == "") {
-      idPrefix = namespace
+    val format = config.format match {
+      case "plain" =>   PlainTextFormat(config.namespace, idFactory)
+      case "reverb" =>  GroupedReVerbFormat(config.namespace, idFactory)
+      case "openie4" => ClusteredOpenIE4Format(config.namespace, idFactory)
+      case "probase" => ProbaseFormat(config.namespace, idFactory)
+      case _ => throw new IllegalArgumentException("Invalid format: " + config.format)
     }
 
-    var count = 0;
+
     var start = System.currentTimeMillis()
-    for (doc <- config.format.docIterator) {
-
-      if (doc.getFieldValue("id") == null) {
-        doc.addField("id", idPrefix + count)
-      }
-
-      if (doc.getFieldValue("namespace") == null) {
-        doc.addField("namespace", namespace)
-      }
+    for (doc <- format.docIterator) {
 
       solr.add(doc)
-      count += 1
-      if (count % 10000 == 0) {
+      if (id.get % 10000 == 0) {
         System.err.print(".")
       }
     }
@@ -82,7 +73,7 @@ object Importer {
     solr.commit()
     var runTime = (System.currentTimeMillis() - start) / 1000
     System.err.println()
-    System.err.println("Added " + count + " docs in " + runTime + "secs")
+    System.err.println("Added " + id.get + " docs in " + runTime + "secs")
     solr.shutdownNow()
   }
 }
