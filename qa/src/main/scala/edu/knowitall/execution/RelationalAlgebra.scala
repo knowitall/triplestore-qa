@@ -375,9 +375,9 @@ object Search {
       val splitGroups = tgroups.values.toSeq.flatMap(_.toSeq.grouped(10))
       // make pairs of (join attributes, tuples) where join attributes is not empty.
       val attrsGroups = splitGroups.iterator.map { tuples => (tuples.flatMap(_.getString(lAttr)), tuples) } filter(_._1.nonEmpty)
-      // map to new pairs of (AndQueries, Tuples) by converting join attributes to queries.
+      // map to new pairs of (Join Attribute Disjunction, Tuples) by converting join attributes to queries.
       val queryGroups = attrsGroups.map { case (attrs, tuples) => (Disjunction(attrs.map(a => FieldKeywords(field, a)): _*), tuples) } 
-      // map to (Disjunction, Tuples) by combining Andqueries
+      // map to (disjunctive search-join query, Tuples to join with) by combining disjunction with 
       val disjunctionGroups = queryGroups.map { case (disj, tuples) => (Conjunction(disj, ps.query), tuples) }
       // for each pair, execute the disjunction and join the result with tuples
       disjunctionGroups.toSeq.par.flatMap { case (q, tuples) =>
