@@ -5,17 +5,18 @@ import edu.knowitall.triplestore.TriplestoreClient
 
 case class ClassInstanceExecutor(executor: QueryExecutor) extends QueryExecutor {
  
-  import ClassInstanceExecutor.{ciRels, ciRelSetLiteral}
+  import ClassInstanceExecutor.{ciRels, ciRelSetLiteral, ciRelSet}
   
   def expandConjunct(c: TConjunct): List[TConjunct] = {
     val rel = c.values.get(Search.rel).collect { case UnquotedTLiteral(v: String) => v.toLowerCase }
     rel match {
       case None => List(c)
       case Some(litRel) =>
-        if (!ciRels.contains(litRel)) {
+        if (!ciRelSet.contains(litRel)) {
           List(c)
         } else {
-          List(c.copy(values = c.values + (Search.rel -> ciRelSetLiteral)))
+          //List(c.copy(values = c.values + (Search.rel -> ciRelSetLiteral)))
+          ciRels.map(cir => c.copy(values = c.values + (Search.rel -> QuotedTLiteral(cir))))
         }
     } 
   }
@@ -37,7 +38,7 @@ case class ClassInstanceExecutor(executor: QueryExecutor) extends QueryExecutor 
 
 object ClassInstanceExecutor {
   
-  val ciRels = Set("type", "is", 
+  val ciRels = List("type", "is", 
       "are", 
       "is a kind of", 
       "are a kind of", 
@@ -48,5 +49,7 @@ object ClassInstanceExecutor {
       "Instance",
       "Instance Of")
       
-  val ciRelSetLiteral = SetTLiteral(ciRels.toList.map(QuotedTLiteral(_)))
+  val ciRelSet = ciRels.toSet
+      
+  val ciRelSetLiteral = SetTLiteral(ciRels.map(QuotedTLiteral(_)))
 } 

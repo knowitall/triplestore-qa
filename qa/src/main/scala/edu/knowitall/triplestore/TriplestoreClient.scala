@@ -92,7 +92,7 @@ case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
     val query = SolrClient.buildCountQuery(q)
     val resp = server.query(query)
     val c = resp.getResults().getNumFound()
-    logger.info(s"Found $c hits for query: $q")
+    logger.info(s"Found $c hits for query: ${q.toQueryString}")
     return c
   }
   
@@ -100,13 +100,13 @@ case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
    * Searches Solr and returns Tuple objects.
    */
   def search(q: TSQuery, maxHits: Int = defaultMaxHits): List[Tuple] ={
-    logger.info(s"Searching for query: $q")
+    logger.info(s"Searching for query: ${q.toQueryString}")
     val query = SolrClient.buildQuery(q)
     query.setRows(hits)
     val resp = server.query(query)
     val results = resp.getResults().toList.map(SolrClient.docToTuple)
     val n = results.size
-    logger.info(s"Loaded $n tuples into memory for query: $q")
+    logger.info(s"Loaded $n tuples into memory for query: ${q.toQueryString}")
     return results
   }
   

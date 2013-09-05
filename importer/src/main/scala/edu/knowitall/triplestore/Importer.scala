@@ -39,7 +39,6 @@ object Importer {
       case Some(config) => run(config)
       case None =>
     }
-
   }
 
   def run(config: Config) = {

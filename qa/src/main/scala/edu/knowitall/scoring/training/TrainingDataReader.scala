@@ -17,7 +17,7 @@ class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[An
   import TrainingDataReader.InputRecord
   
   val parser = new FormalQuestionParser()
-  val baseclient = SolrClient("http://rv-n12.cs.washington.edu:8983/solr/triplestore", 500)
+  val baseclient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 500)
   val cachedClient = CachedTriplestoreClient(baseclient, 5000)
   val executor = new IdentityExecutor(cachedClient)
   val grouper = new BasicAnswerGrouper()
@@ -77,7 +77,7 @@ object TrainingDataReader {
 
   object InputRecord {
     def fromString(str: String) = str.split("\t") match {
-      case Array(lString, answer, uqString, nlqString) => {
+      case Array(lString, answer, just, uqString, nlqString) => {
         val label = lString match {
           case "0" => false
           case "1" => true
