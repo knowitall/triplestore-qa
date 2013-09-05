@@ -71,7 +71,25 @@ case class Joiner(client: TriplestoreClient) {
    */  
   def join(nodes: List[TableNode]): Iterable[Tuple] = {
     val joined = mergeLowest(nodes).map(toTuplesNode(_))
-    joined.map(_.tuples).foldLeft(emptyTuples)(prod).toList
+    val cleaned = joined map eliminateRemainingVars
+    cleaned.map(_.tuples).foldLeft(emptyTuples)(prod).toList
+  }
+    
+  def eliminateRemainingVars(tn: TuplesNode): TuplesNode = {
+    
+    tn.joinAttrs.find(_._2.size > 1) match {
+      case Some((v, attrs)) => {
+        val tuples = tn.tuples.filter { t =>
+          attrs.sliding(2).forall { 
+            case List(a1, a2) => AttrsSim(a1, a2, 0.9).apply(t)
+            case _ => throw new RuntimeException()
+          }
+        }
+        val newTuplesNode = TuplesNode(tuples, tn.joinAttrs-v)
+        eliminateRemainingVars(newTuplesNode)
+      }
+      case None => tn
+    }
   }
     
   /* Picks the lowest-cost variable, merges the nodes, and then repeats until
