@@ -6,12 +6,36 @@ import java.io.PrintStream
 import java.io.File
 import scopt.OptionParser
 import edu.knowitall.common.Resource.using
+import edu.knowitall.execution.Tuple
+
+object TuplePrinter {
+  
+  val fieldNames = Seq("arg1", "rel", "arg2")
+  
+  def fieldPartNames(part: Int): Seq[String] = fieldNames.map(fn => s"r$part.$fn") 
+  
+  def printTuplePart(tuple: Tuple, part: Int): Option[String] = {
+    val parts = fieldPartNames(part)
+    tuple.get(parts.head) match {
+      case Some(_) => {
+        val values = parts.flatMap(tuple.get)
+        val strings = values.map(_.toString)
+        Some(strings.mkString(", "))
+      }
+      case None => None
+    }
+  }
+  def printTuple(tuple: Tuple): String = {
+    val partStrings = (0 to 3).map(part => printTuplePart(tuple, part)).takeWhile(_.isDefined).map(_.get)
+    partStrings.map(s => s"($s)").mkString(" ")
+  }
+}
 
 object TrainingAnswerFinder {
 
   case class InputQuestion(englishQuestion: String, formalQuestion: String)
   
-  case class OutputQuestion(answer: String, inputQ: InputQuestion)
+  case class OutputQuestion(answer: String, inputQ: InputQuestion, justification: String)
   
   case class Config(
       inputFile: File = new File("."), 
@@ -40,6 +64,8 @@ object TrainingAnswerFinder {
     } 
   }
   
+  
+  
   def run(config: Config): Unit = {
 
     val sysConfig = QAConfig(config.parserName, config.executor, config.grouper, config.scorer)
@@ -58,12 +84,14 @@ object TrainingAnswerFinder {
       val outputQs = inputQs.flatMap { q =>
         val answerGroups = system.answer(q.formalQuestion)
         val answers = answerGroups.map(_.alternates.head.head)
+        val justifications = answerGroups.map(_.derivations.head.etuple.tuple).map(t => TuplePrinter.printTuple(t))
         val topAnswers = answers.take(config.maxAnswersPerQ)
-        topAnswers.map(a => OutputQuestion(a, q))
+        val topJustifications = justifications.take(config.maxAnswersPerQ)
+        topAnswers.zip(topJustifications).map { case (a, j) => OutputQuestion(a, q, j) }
       }
       
       outputQs.toList.foreach { oq => 
-        val outFields = Seq("X", oq.answer, oq.inputQ.formalQuestion, oq.inputQ.englishQuestion)
+        val outFields = Seq("X", oq.answer, oq.justification, oq.inputQ.formalQuestion, oq.inputQ.englishQuestion)
         val outString = outFields.mkString("\t")
         config.output.println(outString)
       }
