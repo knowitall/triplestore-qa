@@ -359,20 +359,35 @@ object Search {
         IllegalArgumentException(s"field must be arg1, rel, or arg2: $rAttr")
     }
     
+    val tripleField = """r\d+\.(arg1|arg2|rel)""".r.pattern
+    
     (ts: Tuples, ps: PartialSearcher) => {
-      for (
-          // For each tuple in the smaller table...
-          t1 <- ts.par;
-          // Get the value v of the smaller table's join attribute
-          v <- t1.getString(lAttr).toSeq;
-          // Construct the t1-specific query
-          q = AndPhrase(ps.query, field, v);
-          // Execute the query using the partial searcher
-          t2 <- ps.search(q).par;
-          // Join the two tuples together
-          t3 = t1.join(t2);
-          // If the join condition is satisfied, then return the joined tuple
-          if cond(t3)) yield t3
+      // functions for getting just the free triple fields out of a tuple.
+      def minusJoinAttr(t: Tuple): Set[Any] = {
+        def isTripleField(str: String): Boolean = tripleField.matcher(str).matches
+        def freeTripleFields(t: Tuple): Set[String] = t.attrs.keySet.filter(isTripleField) - lAttr
+        freeTripleFields(t).map(k => t.attrs(k)).toSet
+      }
+      
+      // group tuples that are the same minus their join attribute:
+      val tgroups = ts.groupBy(minusJoinAttr)
+      // split up groups with too many tuples:
+      val splitGroups = tgroups.values.toSeq.flatMap(_.toSeq.grouped(10))
+      // make pairs of (join attributes, tuples) where join attributes is not empty.
+      val attrsGroups = splitGroups.iterator.map { tuples => (tuples.flatMap(_.getString(lAttr)), tuples) } filter(_._1.nonEmpty)
+      // map to new pairs of (AndQueries, Tuples) by converting join attributes to queries.
+      val queryGroups = attrsGroups.map { case (attrs, tuples) => (Disjunction(attrs.map(a => FieldKeywords(field, a)): _*), tuples) } 
+      // map to (Disjunction, Tuples) by combining Andqueries
+      val disjunctionGroups = queryGroups.map { case (disj, tuples) => (Conjunction(disj, ps.query), tuples) }
+      // for each pair, execute the disjunction and join the result with tuples
+      disjunctionGroups.toSeq.par.flatMap { case (q, tuples) =>
+        val qts = ps.search(q)   
+        for (
+            t1 <- qts;
+            t2 <- tuples;
+            t3 = t1.join(t2);
+            if (cond(t3))) yield t3
+      }
     }.toList
   }
 }
