@@ -252,16 +252,12 @@ case object Joiner {
 /* TuplesNodes can be either TableNodes or QueryNodes. */
 case class TuplesNode(tuples: List[Tuple], 
     joinAttrs: Map[TVariable, List[String]]) extends TableNode {
-  def getJoinAttrs(v: TVariable): List[String] = joinAttrs.get(v) match {
-    case Some(v) => v
-    case _ => List[String]()
-  }
 }
 
 /* TableNodes store data from partially-executed queries. */
 trait TableNode {
   val joinAttrs: Map[TVariable, List[String]]
-  def getJoinAttrs(v: TVariable): List[String]
+  def getJoinAttrs(v: TVariable) = joinAttrs.getOrElse(v, Nil)
   def hasVariable(v: TVariable) = joinAttrs.contains(v)
 }
 
@@ -271,8 +267,4 @@ case class QueryNode(conj: TConjunct) extends TableNode {
   val joinAttrs = { 
     for (v <- jks.keys; attr <- jks.get(v)) yield (v, List(attr)) 
   }.toMap
-  def getJoinAttrs(v: TVariable): List[String] = joinAttrs.get(v) match {
-    case Some(v) => v
-    case _ => List[String]()
-  }
 }
