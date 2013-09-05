@@ -27,81 +27,90 @@ import edu.knowitall.scoring.UniformAnswerScorer
 import edu.knowitall.scoring.LogisticAnswerScorer
 import edu.knowitall.parsing.OldParalexParser
 import edu.knowitall.execution.RelationSynonymExecutor
+import edu.knowitall.common.Timing
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
-  val logger = LoggerFactory.getLogger(this.getClass) 
-  
+  val logger = LoggerFactory.getLogger(this.getClass)
+
   def answer(question: String): List[ScoredAnswerGroup] = {
-    
+
     logger.info(s"Parsing question '$question'")
     val queries = parser.parse(question).take(10)
     answerUQueries(queries, question)
   }
-  
+
   def answerUQueries(uqueries: Iterable[UQuery], question: String): List[ScoredAnswerGroup] = {
-    
+
     logger.info(s"Executing queries for '$question'")
-    val derivs = for (query <- uqueries.par; 
-                      derivs = executor.deriveAnswers(query);
-                      deriv <- derivs) yield deriv
+    val (nsExec, derivs) = Timing.time {
+      for (
+        query <- uqueries.par;
+        derivs = executor.deriveAnswers(query);
+        deriv <- derivs
+      ) yield deriv
+    }
+
+    logger.info("Executed queries in " + Timing.Seconds.format(nsExec))
     
     logger.info(s"Grouping answers for '$question'")
     def answerString(group: AnswerGroup) = group.answer.mkString(" ")
     val groups = grouper.group(derivs.toList).sortBy(answerString)
-                      
+
     logger.info(s"Scoring answers for '$question'")
-    val answers = for (group <- groups.par;
-                       scored = scorer.scoreAnswer(group)) yield scored
+    val answers = for (
+      group <- groups.par;
+      scored = scorer.scoreAnswer(group)
+    ) yield scored
     logger.info(s"Returning ${answers.size} answers.")
-    answers.toList.sortBy(-_.score)    
+    answers.toList.sortBy(-_.score)
   }
 }
 
 case object QASystem {
-  
+
   def getInstance(config: QAConfig = QAConfig()): Option[QASystem] =
-    for (parser <- Components.parsers.get(config.parser);
-         executor <- Components.executors.get(config.executor);
-         grouper <- Components.groupers.get(config.grouper);
-         scorer <- Components.scorers.get(config.scorer))
-      yield QASystem(parser, executor, grouper, scorer)
+    for (
+      parser <- Components.parsers.get(config.parser);
+      executor <- Components.executors.get(config.executor);
+      grouper <- Components.groupers.get(config.grouper);
+      scorer <- Components.scorers.get(config.scorer)
+    ) yield QASystem(parser, executor, grouper, scorer)
 
 }
 
-case class QAConfig(parser: String = "formal", 
-                    executor: String = "identity",
-                    grouper: String = "basic",
-                    scorer: String = "numDerivations")
+case class QAConfig(parser: String = "formal",
+  executor: String = "identity",
+  grouper: String = "basic",
+  scorer: String = "numDerivations")
 
 case object Components {
-  
-  val baseClient = SolrClient("http://rv-n12.cs.washington.edu:8983/solr/triplestore", 500)
+
+  val baseClient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 500)
   val client = CachedTriplestoreClient(baseClient, 100000)
-  
+
   val parsers: Map[String, QuestionParser] =
     Map("formal" -> FormalQuestionParser(),
       "keyword" -> StringMatchingParser(client),
       "paralex-old" -> OldParalexParser(),
       "regex" -> RegexQuestionParser())
-      
+
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client),
-        "berantRules" -> RelationSynonymExecutor(client, IdentityExecutor(client)),
-        "classInstance" -> ClassInstanceExecutor(IdentityExecutor(client)),
-        "lexiconArgSyns" -> new LexiconSynonymExecutor(IdentityExecutor(client)),
-        "combined" -> new LexiconSynonymExecutor(ClassInstanceExecutor(RelationSynonymExecutor(client, IdentityExecutor(client)))))
-  
+      "berantRules" -> RelationSynonymExecutor(client, IdentityExecutor(client)),
+      "classInstance" -> ClassInstanceExecutor(IdentityExecutor(client)),
+      "lexiconArgSyns" -> new LexiconSynonymExecutor(IdentityExecutor(client)),
+      "combined" -> new LexiconSynonymExecutor(ClassInstanceExecutor(RelationSynonymExecutor(client, IdentityExecutor(client)))))
+
   val groupers: Map[String, AnswerGrouper] =
     Map("basic" -> BasicAnswerGrouper(),
-        "singleton" -> SingletonAnswerGrouper(),
-        "exact" -> ExactAnswerGrouper(),
-        "postag sample" -> PostagSampleAnswerGrouper(),
-        "postag" -> PostagAnswerGrouper())
-  
+      "singleton" -> SingletonAnswerGrouper(),
+      "exact" -> ExactAnswerGrouper(),
+      "postag sample" -> PostagSampleAnswerGrouper(),
+      "postag" -> PostagAnswerGrouper())
+
   val scorers: Map[String, AnswerScorer] =
     Map("logistic" -> LogisticAnswerScorer(),
-        "numDerivations" -> NumDerivationsScorer(),
-        "uniform" -> UniformAnswerScorer()
-      )
+      "numDerivations" -> NumDerivationsScorer(),
+      "uniform" -> UniformAnswerScorer())
 }
