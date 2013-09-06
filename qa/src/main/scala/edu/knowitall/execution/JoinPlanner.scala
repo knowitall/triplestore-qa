@@ -248,10 +248,9 @@ case object Joiner {
   // Merges the given maps.
   def mergeJoinAttrs(attrs1: JA, attrs2: JA): JA = {
     val allVars = attrs1.keySet union attrs2.keySet
-    val e: List[String] = List[String]()
     val newPairs = for (v <- allVars;
-         as1 = attrs1.getOrElse(v, e).toSet;
-         as2 = attrs2.getOrElse(v, e).toSet)
+         as1 = attrs1.getOrElse(v, Nil).toSet;
+         as2 = attrs2.getOrElse(v, Nil).toSet)
       yield (v, (as1 ++ as2).toList)
     return newPairs.toMap
   }
