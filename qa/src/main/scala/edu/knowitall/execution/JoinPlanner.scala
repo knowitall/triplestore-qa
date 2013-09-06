@@ -71,11 +71,19 @@ case class Joiner(client: TriplestoreClient) {
    */  
   def join(nodes: List[TableNode]): Iterable[Tuple] = {
     val joined = mergeLowest(nodes).map(toTuplesNode(_))
-    val cleaned = joined map eliminateRemainingVars
+    val cleaned = joined map eliminateStrandedVars
     cleaned.map(_.tuples).foldLeft(emptyTuples)(prod).toList
   }
-    
-  def eliminateRemainingVars(tn: TuplesNode): TuplesNode = {
+   
+  /*
+   * Eliminates any join variables that were not eliminated 
+   * during the join process - for example,
+   * (salad, $r, $x) (beef, $r, $x) will leave $r stranded 
+   * in a single TuplesNode at the end of join processing,
+   * but still referring to r0.rel and r1.rel. This method
+   * enforces the join condition within a single TuplesNode.
+   */
+  def eliminateStrandedVars(tn: TuplesNode): TuplesNode = {
     
     tn.joinAttrs.find(_._2.size > 1) match {
       case Some((v, attrs)) => {
@@ -86,7 +94,7 @@ case class Joiner(client: TriplestoreClient) {
           }
         }
         val newTuplesNode = TuplesNode(tuples, tn.joinAttrs-v)
-        eliminateRemainingVars(newTuplesNode)
+        eliminateStrandedVars(newTuplesNode)
       }
       case None => tn
     }
