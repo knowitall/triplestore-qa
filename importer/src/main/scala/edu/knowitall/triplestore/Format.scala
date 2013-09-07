@@ -11,7 +11,7 @@ import edu.knowitall.openie.models.Extraction
 import scopt.OptionParser
 import scala.util.Success
 import scala.util.Failure
-import edu.knowitall.browser.solr.NewSolrLoader
+import edu.knowitall.browser.solr.SolrDocumentConverter
 
 trait Format {
   
@@ -130,7 +130,7 @@ case class ClusteredOpenIE4Format(namespace: String, idFactory: () => String) ex
     }
   }
 
-  def docIterator() = clusterIterator().flatMap(c => NewSolrLoader.toSolrDocuments(c, idFactory))
+  def docIterator() = clusterIterator().flatMap(c => SolrDocumentConverter.toSolrDocuments(c, idFactory))
 }
 
 case class GroupedReVerbFormat(namespace: String, idFactory: () => String) extends TupleFormat {
