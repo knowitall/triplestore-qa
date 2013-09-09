@@ -248,7 +248,10 @@ object Search {
   }
   
   /* Used to escape characters that have special meanings in Lucene. */
-  def escape = ClientUtils.escapeQueryChars _
+  def escape(str: String) = {
+    val escaped = ClientUtils.escapeQueryChars(str)
+    escaped.replaceAll("NOT", "not")
+  }
   
   /* A query that searches the given field for the given keywords. Splits the
    * string v into words, and then converts them into a Lucene query
