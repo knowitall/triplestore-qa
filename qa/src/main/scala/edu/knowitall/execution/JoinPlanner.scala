@@ -71,7 +71,33 @@ case class Joiner(client: TriplestoreClient) {
    */  
   def join(nodes: List[TableNode]): Iterable[Tuple] = {
     val joined = mergeLowest(nodes).map(toTuplesNode(_))
-    joined.map(_.tuples).foldLeft(emptyTuples)(prod).toList
+    val cleaned = joined map eliminateStrandedVars
+    cleaned.map(_.tuples).foldLeft(emptyTuples)(prod).toList
+  }
+   
+  /*
+   * Eliminates any join variables that were not eliminated 
+   * during the join process - for example,
+   * (salad, $r, $x) (beef, $r, $x) will leave $r stranded 
+   * in a single TuplesNode at the end of join processing,
+   * but still referring to r0.rel and r1.rel. This method
+   * enforces the join condition within a single TuplesNode.
+   */
+  def eliminateStrandedVars(tn: TuplesNode): TuplesNode = {
+    
+    tn.joinAttrs.find(_._2.size > 1) match {
+      case Some((v, attrs)) => {
+        val tuples = tn.tuples.filter { t =>
+          attrs.sliding(2).forall { 
+            case List(a1, a2) => AttrsSim(a1, a2, 0.9).apply(t)
+            case _ => throw new RuntimeException()
+          }
+        }
+        val newTuplesNode = TuplesNode(tuples, tn.joinAttrs-v)
+        eliminateStrandedVars(newTuplesNode)
+      }
+      case None => tn
+    }
   }
     
   /* Picks the lowest-cost variable, merges the nodes, and then repeats until
@@ -222,10 +248,9 @@ case object Joiner {
   // Merges the given maps.
   def mergeJoinAttrs(attrs1: JA, attrs2: JA): JA = {
     val allVars = attrs1.keySet union attrs2.keySet
-    val e: List[String] = List[String]()
     val newPairs = for (v <- allVars;
-         as1 = attrs1.getOrElse(v, e).toSet;
-         as2 = attrs2.getOrElse(v, e).toSet)
+         as1 = attrs1.getOrElse(v, Nil).toSet;
+         as2 = attrs2.getOrElse(v, Nil).toSet)
       yield (v, (as1 ++ as2).toList)
     return newPairs.toMap
   }
@@ -252,16 +277,12 @@ case object Joiner {
 /* TuplesNodes can be either TableNodes or QueryNodes. */
 case class TuplesNode(tuples: List[Tuple], 
     joinAttrs: Map[TVariable, List[String]]) extends TableNode {
-  def getJoinAttrs(v: TVariable): List[String] = joinAttrs.get(v) match {
-    case Some(v) => v
-    case _ => List[String]()
-  }
 }
 
 /* TableNodes store data from partially-executed queries. */
 trait TableNode {
   val joinAttrs: Map[TVariable, List[String]]
-  def getJoinAttrs(v: TVariable): List[String]
+  def getJoinAttrs(v: TVariable) = joinAttrs.getOrElse(v, Nil)
   def hasVariable(v: TVariable) = joinAttrs.contains(v)
 }
 
@@ -271,8 +292,4 @@ case class QueryNode(conj: TConjunct) extends TableNode {
   val joinAttrs = { 
     for (v <- jks.keys; attr <- jks.get(v)) yield (v, List(attr)) 
   }.toMap
-  def getJoinAttrs(v: TVariable): List[String] = joinAttrs.get(v) match {
-    case Some(v) => v
-    case _ => List[String]()
-  }
 }

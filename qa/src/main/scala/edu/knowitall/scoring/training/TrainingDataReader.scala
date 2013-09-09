@@ -73,18 +73,19 @@ class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[An
 
 object TrainingDataReader {
   
-  case class InputRecord(val label: Boolean, val answer: String, val uquery: String, val nlQuery: String)
+  case class InputRecord(val label: Boolean, val answer: String, val uquery: String, val just: String)
 
   object InputRecord {
     def fromString(str: String) = str.split("\t") match {
-      case Array(lString, answer, just, uqString, nlqString) => {
+      case Array(lString, answer, question, justification) => {
         val label = lString match {
           case "0" => false
           case "1" => true
           case _ => throw new RuntimeException(s"Invalid label: $lString")
         }
-        InputRecord(label, answer, uqString, nlqString)
+        InputRecord(label, answer, question, justification)
       }
+      case _ => throw new RuntimeException("Invalid input record ("+str.split("\t").length+"): " + str)
     }
   }
     
