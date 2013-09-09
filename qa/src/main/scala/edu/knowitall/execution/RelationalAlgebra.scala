@@ -500,7 +500,7 @@ object StrSim {
     noStops
   }
   
-  def norm(x: String) = normTokens(x).mkString("")
+  def norm(x: String) = normTokens(x).mkString(" ")
 
   def sim(x: String, y: String): Double = 
     JaroWinklerMetric.compare(norm(x), norm(y)).getOrElse(0.0)
