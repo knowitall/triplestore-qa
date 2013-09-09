@@ -1,4 +1,8 @@
-package edu.knowitall.scoring.training
+package edu.knowitall.util
+
+import edu.knowitall.common.Resource.using
+import java.io.PrintStream
+import scala.Array.canBuildFrom
 
 /**
  * A utility (throw-away?) for sampling answers.

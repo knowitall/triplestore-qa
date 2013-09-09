@@ -46,7 +46,7 @@ object RegexQuestionParserRepl extends App {
 object AnalyzeRegexQuestionParser extends App { 
   
   import RegexQuestionPatterns.patterns
-  import edu.knowitall.scoring.training.WikiAnswersSampler
+  import edu.knowitall.util.WikiAnswersSampler
   
   val maxQs = 50
   
