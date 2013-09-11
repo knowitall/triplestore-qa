@@ -248,7 +248,13 @@ object Search {
   }
   
   /* Used to escape characters that have special meanings in Lucene. */
-  def escape = ClientUtils.escapeQueryChars _
+  def luceneEscape = ClientUtils.escapeQueryChars _
+  def quoteLogic(w: String) = w match {
+    case "AND" => "\"AND\""
+    case "OR" => "\"OR\""
+    case _ => w
+  }
+  def escape(w: String) = quoteLogic(luceneEscape(w))
   
   /* A query that searches the given field for the given keywords. Splits the
    * string v into words, and then converts them into a Lucene query
