@@ -252,6 +252,7 @@ object Search {
   def quoteLogic(w: String) = w match {
     case "AND" => "\"AND\""
     case "OR" => "\"OR\""
+    case "NOT" => "\"NOT\""
     case _ => w
   }
   def escape(w: String) = quoteLogic(luceneEscape(w))
@@ -506,7 +507,7 @@ object StrSim {
     noStops
   }
   
-  def norm(x: String) = normTokens(x).mkString("")
+  def norm(x: String) = normTokens(x).mkString(" ")
 
   def sim(x: String, y: String): Double = 
     JaroWinklerMetric.compare(norm(x), norm(y)).getOrElse(0.0)

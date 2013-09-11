@@ -12,9 +12,11 @@ resolvers ++= Seq(
     "Restlet bullshit" at "http://maven.restlet.org/"
 )
 
+organization := "edu.knowitall.triplestore-qa"
+
 name := "triplestore-qa"
 
-version := "0.1"
+version := "0.1-SNAPSHOT"
 
 scalaVersion := "2.10.2"
 
