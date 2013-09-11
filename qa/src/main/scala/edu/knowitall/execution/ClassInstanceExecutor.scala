@@ -46,7 +46,6 @@ object ClassInstanceExecutor {
       "are a type of", 
       "is an example of", 
       "are examples of",
-      "Instance",
       "Instance Of")
       
   val ciRelSet = ciRels.toSet
