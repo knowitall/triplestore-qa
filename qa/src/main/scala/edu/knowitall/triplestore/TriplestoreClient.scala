@@ -12,6 +12,7 @@ import edu.knowitall.execution.Search._
 import edu.knowitall.execution._
 import com.twitter.util.LruMap
 import scala.collection.mutable.SynchronizedMap
+import java.util.ArrayList
 
 /**
  * The interface to a Triplestore.
@@ -148,6 +149,7 @@ case object SolrClient {
       case v: Double => Some(v)
       case v: Integer => Some(v)
       case v: Boolean => Some(v)
+      case v: ArrayList[_] => Some(v.asScala.toList) // required for support of multiValued fields
       case _ => None
     }
   }
