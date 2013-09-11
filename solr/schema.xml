@@ -140,18 +140,18 @@
 
    <!-- arg1 metadata -->
    <field name="arg1_entity_id" type="string" indexed="true" stored="true"/>
-   <field name="arg1_entity_name" type="string_ci" indexed="true" stored="true"/>
+   <field name="arg1_entity_name" type="string_ci_splitting" indexed="true" stored="true"/>
    <field name="arg1_entity_inlink_ratio" type="double" indexed="false" stored="true"/>
    <field name="arg1_entity_score" type="double" indexed="false" stored="true"/>
    <field name="arg1_fulltypes" type="string_ci" indexed="false" stored="true" multiValued="true"/>
-   <field name="arg1_types" type="string_ci" indexed="true" stored="false" multiValued="true"/>
+   <field name="arg1_types" type="string_ci_splitting" indexed="true" stored="false" multiValued="true"/>
 
    <!-- arg2 metadata -->
    <field name="arg2_entity_id" type="string" indexed="true" stored="true"/>
-   <field name="arg2_entity_name" type="string_ci" indexed="true" stored="true"/>
+   <field name="arg2_entity_name" type="string_ci_splitting" indexed="true" stored="true"/>
    <field name="arg2_entity_inlink_ratio" type="double" indexed="false" stored="true"/>
    <field name="arg2_entity_score" type="double" indexed="false" stored="true"/>
-   <field name="arg2_fulltypes" type="string_ci" stored="true" multiValued="true"/>
+   <field name="arg2_fulltypes" type="string_ci_splitting" stored="true" multiValued="true"/>
    <field name="arg2_types" type="string_ci" indexed="true" stored="false" multiValued="true"/>
 
    <!-- The corpora from which this relation was extracted.
@@ -227,6 +227,15 @@
         sortMissingLast="true" omitNorms="true">
         <analyzer>
             <tokenizer class="solr.KeywordTokenizerFactory"/>           
+            <filter class="solr.LowerCaseFilterFactory" />
+        </analyzer>
+    </fieldType> 
+
+    <!-- Case Insensitive with Whitespace Tokenization-->
+    <fieldType name="string_ci_splitting" class="solr.TextField"
+        sortMissingLast="true" omitNorms="true">
+        <analyzer>
+            <tokenizer class="solr.WhitespaceTokenizerFactory"/>                    
             <filter class="solr.LowerCaseFilterFactory" />
         </analyzer>
     </fieldType> 
