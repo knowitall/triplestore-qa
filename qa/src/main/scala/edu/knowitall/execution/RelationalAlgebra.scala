@@ -248,10 +248,14 @@ object Search {
   }
   
   /* Used to escape characters that have special meanings in Lucene. */
-  def escape(str: String) = {
-    val escaped = ClientUtils.escapeQueryChars(str)
-    escaped.replaceAll("NOT", "not")
+  def luceneEscape = ClientUtils.escapeQueryChars _
+  def quoteLogic(w: String) = w match {
+    case "AND" => "\"AND\""
+    case "OR" => "\"OR\""
+    case "NOT" => "\"NOT\""
+    case _ => w
   }
+  def escape(w: String) = quoteLogic(luceneEscape(w))
   
   /* A query that searches the given field for the given keywords. Splits the
    * string v into words, and then converts them into a Lucene query
@@ -365,19 +369,11 @@ object Search {
     val tripleField = """r\d+\.(arg1|arg2|rel)""".r.pattern
     
     (ts: Tuples, ps: PartialSearcher) => {
-      // functions for getting just the free triple fields out of a tuple.
-      def minusJoinAttr(t: Tuple): Set[Any] = {
-        def isTripleField(str: String): Boolean = tripleField.matcher(str).matches
-        def freeTripleFields(t: Tuple): Set[String] = t.attrs.keySet.filter(isTripleField) - lAttr
-        freeTripleFields(t).map(k => t.attrs(k)).toSet
-      }
-      
-      // group tuples that are the same minus their join attribute:
-      val tgroups = ts.groupBy(minusJoinAttr)
-      // split up groups with too many tuples:
-      val splitGroups = tgroups.values.toSeq.flatMap(_.toSeq.grouped(10))
+
+      // split up into chunks
+      val splitGroups = ts.grouped(10).map(_.toSeq)
       // make pairs of (join attributes, tuples) where join attributes is not empty.
-      val attrsGroups = splitGroups.iterator.map { tuples => (tuples.flatMap(_.getString(lAttr)), tuples) } filter(_._1.nonEmpty)
+      val attrsGroups = splitGroups.map { tuples => (tuples.flatMap(_.getString(lAttr)), tuples) } filter(_._1.nonEmpty)
       // map to new pairs of (Join Attribute Disjunction, Tuples) by converting join attributes to queries.
       val queryGroups = attrsGroups.map { case (attrs, tuples) => (Disjunction(attrs.map(a => FieldKeywords(field, a)): _*), tuples) } 
       // map to (disjunctive search-join query, Tuples to join with) by combining disjunction with 
