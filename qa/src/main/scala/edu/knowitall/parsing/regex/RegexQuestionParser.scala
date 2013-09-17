@@ -20,13 +20,24 @@ import edu.knowitall.execution.Search.{arg1, rel, arg2}
 import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.tool.chunk.OpenNlpChunker
 import scala.collection.JavaConversions._
+import edu.knowitall.tool.postag.StanfordPostagger
 
+class DummyChunker {
+  private val tagger = new StanfordPostagger()
+  def apply(s: String): Seq[ChunkedToken] = tagger(s) map (t => new ChunkedToken("", t.postag, t.string, t.offsets.start))
+}
 
 case class RegexQuestionParser() extends QuestionParser {
   
   import RegexQuestionPatterns.patterns
   
-  def parse(question: String) = patterns.flatMap(p => p.parse(question)) 
+  private val chunker = new DummyChunker()
+
+  def lemmatize(string: String): Seq[Lemmatized[ChunkedToken]] = chunker.synchronized { chunker(string).toList map MorphaStemmer.stemPostaggedToken }
+  
+  def parse(question: String) = parse(lemmatize(question))
+  
+  def parse(question: Seq[Lemmatized[ChunkedToken]]) = patterns.flatMap(p => p.parse(question))
 }
 
 object RegexQuestionParserRepl extends App {
@@ -56,9 +67,11 @@ object AnalyzeRegexQuestionParser extends App {
   
   val wikiSampler = new WikiAnswersSampler(wikiAnswersData)
   
+  val parser = RegexQuestionParser()
+  
   val matched = wikiSampler.flatMap(questionSet =>
     questionSet.flatMap({ question =>
-      patterns.flatMap(_.parse(question).headOption).map(query => (question ,query))
+      patterns.flatMap(_.parse(parser.lemmatize(question)).headOption).map(query => (question ,query))
     }).headOption
   )
  

@@ -42,10 +42,6 @@ case class RegexQuestionPattern(val groups: Seq[String], pattern: String, templa
   
   val regex = makeRegex(pattern)
   
-  def parse(question: String): Seq[UQuery] = {
-    parse(RegexQuestionPattern.lemmatize(question))
-  }
-  
   def parse(tokens: Seq[Lemmatized[ChunkedToken]]): Seq[UQuery] = {
     val tryMatch = regex.`match`(tokens)
     if (tryMatch == null || tryMatch.isEmpty()) return Seq.empty
@@ -77,7 +73,6 @@ object RegexQuestionPattern {
   
   def formalParse(filledTemplate: String) = formalParser.parse(filledTemplate)
   
-  def lemmatize(string: String) = chunker.synchronized { chunker(string).toList map MorphaStemmer.stemPostaggedToken }
 }
 
 object RegexQuestionPatterns {
