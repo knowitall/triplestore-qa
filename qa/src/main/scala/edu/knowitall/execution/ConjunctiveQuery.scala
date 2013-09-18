@@ -201,6 +201,12 @@ trait ConjunctiveQuery extends UQuery {
   val qVars: List[TVariable]
   val qAttrs: List[String]
   val conjuncts: List[TConjunct]
+  
+  override def toString(): String = {
+    val varString = qVars.map(_.toString).mkString(",")
+    val conjString = conjuncts.mkString(" ")
+    varString + ": " + conjString 
+  }
 }
 
 /**
