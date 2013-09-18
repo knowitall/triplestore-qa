@@ -109,9 +109,11 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
     }
   }
   
+  val nonEmpty = "(.+)".r
   def relExists(arg: AbstractedArg): Boolean = {
-    val n = arg.conjunct.literalFields.toList match {
-      case List((Search.rel, r)) => client.count(FieldKeywords(Search.rel, r.toString()))
+    val items = arg.conjunct.literalFields.toList.map(x => (x._1, x._2.toString))
+    val n = items match {
+      case List((Search.rel, nonEmpty(r))) => client.count(FieldKeywords(Search.rel, r))
       case _ => 0
     }
     return n > 0
