@@ -20,6 +20,10 @@ import edu.knowitall.execution.Search
 import edu.knowitall.parsing.ArgVar
 import edu.knowitall.execution.TConjunct
 import edu.knowitall.execution.TVariable
+import edu.knowitall.triplestore.TriplestoreClient
+import edu.knowitall.execution.QueryExecutor
+import edu.knowitall.execution.Search.FieldPhrase
+import edu.knowitall.triplestore.CachedTriplestoreClient
 
 case class QACluster(answers: Seq[String], questions: Seq[String])
 
@@ -46,7 +50,8 @@ case class ParsedQuestion(string: String, qWords: List[QWord], parses: List[TCon
 case class AbstractedArg(arg: List[QWord], conjunct: TConjunct)
 
 case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
-    tokenizer: Tokenizer = new ClearTokenizer()) {
+    tokenizer: Tokenizer = new ClearTokenizer(),
+    client: TriplestoreClient = CachedTriplestoreClient(SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 500), 100000)) {
   
   def filterQuery(uq: UQuery): Option[TConjunct] = uq match {
     case ListConjunctiveQuery(List(v), List(c)) => Some(TConjunct(c.name, c.values))
@@ -87,12 +92,27 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
     }
   }
   
+  def relExists(arg: AbstractedArg): Boolean = {
+    val n = arg.conjunct.literalFields.toList match {
+      case List((Search.rel, r)) => client.count(FieldPhrase(Search.rel, r.toString()))
+      case _ => 0
+    }
+    return n > 0
+  }
+  
   def isAbstracted(aq: List[QToken]) = aq.count(t => t == ArgVar) == 1
   
   def generateTemplates(c: QACluster): List[OutputRecord] = {
     try {
       val qs = c.questions.map(parseQuestion) 
-      val records = for (q1 <- qs; q2 <- qs; arg <- getArgs(q1); abs = abstractArg(q2, arg.arg); if isAbstracted(abs)) yield OutputRecord(abs, arg.conjunct)
+      val records = 
+        for (q1 <- qs;
+        	 q2 <- qs;
+        	 arg <- getArgs(q1);
+        	 if relExists(arg);
+        	 abs = abstractArg(q2, arg.arg);
+        	 if isAbstracted(abs)) 
+          yield OutputRecord(abs, arg.conjunct)
       records.toList.distinct
     } catch {
       case e: Throwable => {
