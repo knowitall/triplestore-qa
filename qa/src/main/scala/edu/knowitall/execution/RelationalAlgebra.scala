@@ -283,8 +283,8 @@ object Search {
   case class CountQuery(arg: String) extends TSQuery {
     def toQueryString = {
       arg match {
-        case "" => "arg1:*"
-        case _ => "arg1:\"%s\" OR arg2:\"%s\"".format(arg, arg)
+        case "" => "*:*" // much faster than arg1_exact:*
+        case _ => "arg1_exact:\"%s\" OR arg2_exact:\"%s\"".format(arg, arg)
       }
     }
   }
