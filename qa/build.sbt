@@ -34,8 +34,6 @@ libraryDependencies += "org.apache.solr" % "solr" % "4.3.1"
 
 libraryDependencies += "org.apache.solr" % "solr-core" % "4.3.1"
 
-libraryDependencies += "commons-logging" % "commons-logging-api" % "1.0.4"
-
 libraryDependencies += "com.github.scopt" %% "scopt" % "3.0.0"
 
 libraryDependencies += "com.rockymadden.stringmetric" % "stringmetric-core" % "0.25.3"
