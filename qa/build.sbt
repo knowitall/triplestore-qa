@@ -40,8 +40,6 @@ libraryDependencies += "com.github.scopt" %% "scopt" % "3.0.0"
 
 libraryDependencies += "com.rockymadden.stringmetric" % "stringmetric-core" % "0.25.3"
 
-libraryDependencies += "org.apache.lucene" % "lucene-core" % "4.3.1"
-
 libraryDependencies += "org.apache.lucene" % "lucene-analyzers-common" % "4.3.1"
 
 libraryDependencies += "jline" % "jline" % "2.11"
