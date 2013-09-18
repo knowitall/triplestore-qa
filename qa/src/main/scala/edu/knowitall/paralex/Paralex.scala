@@ -20,10 +20,12 @@ import edu.knowitall.execution.Search
 import edu.knowitall.parsing.ArgVar
 import edu.knowitall.execution.TConjunct
 import edu.knowitall.execution.TVariable
+import edu.knowitall.execution.UnquotedTLiteral
 import edu.knowitall.triplestore.TriplestoreClient
 import edu.knowitall.execution.QueryExecutor
 import edu.knowitall.execution.Search.FieldPhrase
 import edu.knowitall.triplestore.CachedTriplestoreClient
+import edu.knowitall.execution.Search.FieldKeywords
 
 case class QACluster(answers: Seq[String], questions: Seq[String])
 
@@ -42,7 +44,11 @@ case object QACluster {
 }
 
 case class OutputRecord(template: Seq[QToken], query: TConjunct) {
-  override def toString = template.mkString(" ") + "\t" + query.toString
+  val stemmedTemplate = template.map(qt => qt match {
+    case QWord(w) => QWord(MorphaStemmer.stem(w))
+    case x => x
+  })
+  override def toString = stemmedTemplate.mkString(" ") + "\t" + query.toString
 }
 
 case class ParsedQuestion(string: String, qWords: List[QWord], parses: List[TConjunct])
@@ -58,6 +64,15 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
     case _ => None
   }
   
+  val relStops = Set("be", "the", "a", "an")
+  
+  def normalizeRel(s: String): String = {
+    val lems = for (t <- tokenizer(s.toLowerCase()); 
+    				l = MorphaStemmer.stemToken(t).lemma;
+    				if !relStops.contains(l)) yield l
+    lems.mkString(" ")
+  }
+  
   def getArg(sq: TConjunct): AbstractedArg = {
     val fields = sq.literalFields
     val fields2 = for ((f, v) <- fields; if f == Search.arg1 || f == Search.arg2) 
@@ -68,7 +83,9 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
       case _ => throw new IllegalStateException(s"Could not find non-variable arg in $fields")
     }
     val arg = toQWords(sq.values(argField).toString().toLowerCase())
-    val newConj = TConjunct(sq.name, sq.values + (argField -> TVariable("y")))
+    val rel = normalizeRel(sq.values(Search.rel).toString)
+    val newVals = sq.values + (argField -> TVariable("y")) + (Search.rel -> UnquotedTLiteral(rel))
+    val newConj = TConjunct(sq.name, newVals)
     AbstractedArg(arg, newConj)
   }
   
@@ -94,7 +111,7 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
   
   def relExists(arg: AbstractedArg): Boolean = {
     val n = arg.conjunct.literalFields.toList match {
-      case List((Search.rel, r)) => client.count(FieldPhrase(Search.rel, r.toString()))
+      case List((Search.rel, r)) => client.count(FieldKeywords(Search.rel, r.toString()))
       case _ => 0
     }
     return n > 0
