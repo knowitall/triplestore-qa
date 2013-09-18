@@ -11,5 +11,5 @@
   <root level="WARN">
     <appender-ref ref="STDOUT"/>
   </root>
-  <logger name="edu.knowitall" level="INFO" />
+  <logger name="edu.knowitall" level="WARN" />
 </configuration>
