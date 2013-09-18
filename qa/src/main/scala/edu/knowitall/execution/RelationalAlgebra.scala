@@ -284,7 +284,8 @@ object Search {
     def toQueryString = {
       arg match {
         case "" => "*:*" // much faster than arg1_exact:*
-        case _ => "arg1_exact:\"%s\" OR arg2_exact:\"%s\"".format(arg, arg)
+        // just do arg1 for speed...
+        case _ => "arg1:\"%s\"".format(arg, arg)
       }
     }
   }
