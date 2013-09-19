@@ -26,6 +26,7 @@ import edu.knowitall.execution.QueryExecutor
 import edu.knowitall.execution.Search.FieldPhrase
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.execution.Search.FieldKeywords
+import scala.util.Random
 
 case class QACluster(answers: Seq[String], questions: Seq[String])
 
@@ -109,7 +110,8 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
   
   def generateTemplates(c: QACluster): List[OutputRecord] = {
     try {
-      val qs = c.questions.map(parseQuestion) 
+      val qstrs = Random.shuffle(c.questions.filter(_.size < 80)).take(25)
+      val qs = qstrs.map(parseQuestion) 
       val records = 
         for (q1 <- qs;
         	 arg <- getArgs(q1);
@@ -129,3 +131,14 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
   
 }
 
+trait QuestionParaphraser {
+  def paraphrase(s: String, k: Int): List[String]
+}
+
+class ParalexQuestionParser(paraphraser: QuestionParaphraser, parser: QuestionParser, k: Int)
+  extends QuestionParser {
+  def parse(q: String): Iterable[UQuery] = {
+    val questions = paraphraser.paraphrase(q, k)
+    for (pq <- questions; query <- parser.parse(pq)) yield query
+  }
+}
