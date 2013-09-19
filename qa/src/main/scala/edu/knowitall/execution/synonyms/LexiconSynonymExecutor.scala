@@ -1,15 +1,6 @@
-package edu.knowitall.execution.synonyms
+package edu.knowitall.execution
+package synonyms
 
-import edu.knowitall.execution.AnswerDerivation
-import edu.knowitall.execution.ConjunctiveQuery
-import edu.knowitall.execution.QueryExecutor
-import edu.knowitall.execution.Search
-import edu.knowitall.execution.TConjunct
-import edu.knowitall.execution.UQuery
-import edu.knowitall.execution.UnquotedTLiteral
-import edu.knowitall.execution.QuotedTLiteral
-import edu.knowitall.execution.ListConjunctiveQuery
-import edu.knowitall.execution.Utils
 
 class LexiconSynonymExecutor(val synServer: LexiconSynonyms, val baseExecutor: QueryExecutor) extends QueryExecutor {
   
