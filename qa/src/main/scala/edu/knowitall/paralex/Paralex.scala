@@ -126,9 +126,9 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
       val qs = c.questions.map(parseQuestion) 
       val records = 
         for (q1 <- qs;
-        	 q2 <- qs;
         	 arg <- getArgs(q1);
         	 if relExists(arg);
+        	 q2 <- qs;
         	 abs = abstractArg(q2, arg.arg);
         	 if isAbstracted(abs)) 
           yield OutputRecord(abs, arg.conjunct)
