@@ -110,8 +110,8 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
   }
   
   val nonEmpty = "(.+)".r
-  def relExists(arg: AbstractedArg): Boolean = {
-    val items = arg.conjunct.literalFields.toList.map(x => (x._1, x._2.toString))
+  def relExists(c: TConjunct): Boolean = {
+    val items = c.literalFields.toList.map(x => (x._1, x._2.toString))
     val n = items match {
       case List((Search.rel, nonEmpty(r))) => client.count(FieldKeywords(Search.rel, r))
       case _ => 0
@@ -127,12 +127,11 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
       val records = 
         for (q1 <- qs;
         	 arg <- getArgs(q1);
-        	 if relExists(arg);
         	 q2 <- qs;
         	 abs = abstractArg(q2, arg.arg);
         	 if isAbstracted(abs)) 
           yield OutputRecord(abs, arg.conjunct)
-      records.toList.distinct
+      records.toList.distinct.filter(r => relExists(r.query))
     } catch {
       case e: Throwable => {
         e.printStackTrace(System.err)
