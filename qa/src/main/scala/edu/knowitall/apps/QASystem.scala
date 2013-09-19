@@ -11,7 +11,7 @@ import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.parsing.FormalQuestionParser
 import edu.knowitall.parsing.regex.RegexQuestionParser
 import edu.knowitall.execution.IdentityExecutor
-import edu.knowitall.execution.LexiconSynonymExecutor
+import edu.knowitall.execution.synonyms.LexiconSynonymExecutor
 import edu.knowitall.execution.ClassInstanceExecutor
 import edu.knowitall.execution.StopwordExecutor
 import edu.knowitall.execution.generalize.FrequencyGeneralizingExecutor
