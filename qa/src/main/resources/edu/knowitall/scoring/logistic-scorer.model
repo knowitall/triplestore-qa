@@ -1,8 +1,8 @@
-Answer contains a negation word	-0.18727463330689487
-Answer contains article tokens	-0.34319715426183606
-Answer contains determiner	-1.1089433415293326
-Intercept	0.6630103004215436
-Literal Fields Difference	-0.06181166456704078
-Log of Frequency of answer in the triplestore	-0.04503070115662495
-Normalized postags ranking in query results.	-0.05246324246479173
-Number of AnswerDerivations in the AnswerGroup	0.15470969642510618
+Answer contains a negation word	-0.2121738865158222
+Answer contains article tokens	-0.35875746154671395
+Answer contains determiner	-1.1133232037116882
+Intercept	0.6466534196839755
+Literal Fields Difference	-0.06231704036510348
+Log of Frequency of answer in the triplestore	-0.04379899837815167
+Normalized postags ranking in query results.	-0.05126603876518113
+Number of AnswerDerivations in the AnswerGroup	0.15703413242990566
