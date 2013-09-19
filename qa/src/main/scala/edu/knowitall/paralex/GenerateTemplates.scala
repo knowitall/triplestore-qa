@@ -31,6 +31,9 @@ object GenerateTemplatesCLI extends App {
     val c = QACluster.fromString(line)
     generator.generateTemplates(c).map(_.toString)
   }
-  val lines = Source.fromInputStream(System.in, "UTF8").getLines
-  lines.flatMap(lineToTemplates).foreach(println)
+  Source.fromInputStream(System.in, "UTF8").getLines
+  val groups = Source.fromInputStream(System.in, "UTF8").getLines.grouped(100)
+  groups.foreach { lines => 
+  	lines.par.flatMap(lineToTemplates) foreach println
+  }
 }
