@@ -43,12 +43,19 @@ case object QACluster {
   }
 }
 
-case class OutputRecord(template: Seq[QToken], query: TConjunct) {
-  val stemmedTemplate = template.map(qt => qt match {
+case class OutputRecord(template1: Seq[QToken], template2: Seq[QToken]) {
+  def stem(tpl: Seq[QToken]) = tpl.map(qt => qt match {
     case QWord(w) => QWord(MorphaStemmer.stem(w))
     case x => x
-  })
-  override def toString = stemmedTemplate.mkString(" ") + "\t" + query.toString
+  }).mkString(" ")
+  val stemmedTemplate1 = stem(template1)
+  val stemmedTemplate2 = stem(template2)
+  override def toString = stemmedTemplate1 + "\t" + stemmedTemplate2
+  def ordered = if (stemmedTemplate1 < stemmedTemplate2) {
+    OutputRecord(template1, template2)
+  } else {
+    OutputRecord(template2, template1)
+  }
 }
 
 case class ParsedQuestion(string: String, qWords: List[QWord], parses: List[TConjunct])
@@ -56,21 +63,11 @@ case class ParsedQuestion(string: String, qWords: List[QWord], parses: List[TCon
 case class AbstractedArg(arg: List[QWord], conjunct: TConjunct)
 
 case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
-    tokenizer: Tokenizer = new ClearTokenizer(),
-    client: TriplestoreClient = CachedTriplestoreClient(SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 500), 100000)) {
+    tokenizer: Tokenizer = new ClearTokenizer()) {
   
   def filterQuery(uq: UQuery): Option[TConjunct] = uq match {
     case ListConjunctiveQuery(List(v), List(c)) => Some(TConjunct(c.name, c.values))
     case _ => None
-  }
-  
-  val relStops = Set("be", "the", "a", "an")
-  
-  def normalizeRel(s: String): String = {
-    val lems = for (t <- tokenizer(s.toLowerCase()); 
-    				l = MorphaStemmer.stemToken(t).lemma;
-    				if !relStops.contains(l)) yield l
-    lems.mkString(" ")
   }
   
   def getArg(sq: TConjunct): AbstractedArg = {
@@ -83,8 +80,7 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
       case _ => throw new IllegalStateException(s"Could not find non-variable arg in $fields")
     }
     val arg = toQWords(sq.values(argField).toString().toLowerCase())
-    val rel = normalizeRel(sq.values(Search.rel).toString)
-    val newVals = sq.values + (argField -> TVariable("y")) + (Search.rel -> UnquotedTLiteral(rel))
+    val newVals = sq.values + (argField -> TVariable("y"))
     val newConj = TConjunct(sq.name, newVals)
     AbstractedArg(arg, newConj)
   }
@@ -109,16 +105,6 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
     }
   }
   
-  val nonEmpty = "(.+)".r
-  def relExists(c: TConjunct): Boolean = {
-    val items = c.literalFields.toList.map(x => (x._1, x._2.toString))
-    val n = items match {
-      case List((Search.rel, nonEmpty(r))) => client.count(FieldKeywords(Search.rel, r))
-      case _ => 0
-    }
-    return n > 0
-  }
-  
   def isAbstracted(aq: List[QToken]) = aq.count(t => t == ArgVar) == 1
   
   def generateTemplates(c: QACluster): List[OutputRecord] = {
@@ -127,11 +113,12 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
       val records = 
         for (q1 <- qs;
         	 arg <- getArgs(q1);
+        	 abs1 = abstractArg(q1, arg.arg);
         	 q2 <- qs;
-        	 abs = abstractArg(q2, arg.arg);
-        	 if isAbstracted(abs)) 
-          yield OutputRecord(abs, arg.conjunct)
-      records.toList.distinct.filter(r => relExists(r.query))
+        	 abs2 = abstractArg(q2, arg.arg);
+        	 if isAbstracted(abs2)) 
+          yield OutputRecord(abs1, abs2).ordered
+      records.toList.distinct.filter(a => a.template1 != a.template2)
     } catch {
       case e: Throwable => {
         e.printStackTrace(System.err)
