@@ -27,6 +27,11 @@ import edu.knowitall.execution.Search.FieldPhrase
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.execution.Search.FieldKeywords
 import scala.util.Random
+import scala.io.Source
+import scala.collection.immutable.HashMap
+import shapeless.ToList
+import edu.knowitall.execution.ConjunctiveQuery
+import edu.knowitall.scoring.NumDerivationsScorer
 
 case class QACluster(answers: Seq[String], questions: Seq[String])
 
@@ -135,10 +140,100 @@ trait QuestionParaphraser {
   def paraphrase(s: String, k: Int): List[String]
 }
 
+case class MapQuestionParaphraser(map: Map[String, List[(String, Double)]]) extends QuestionParaphraser {
+  val maxSize = 4
+  val tokenizer = new ClearTokenizer()
+  def normalize(s: String): Seq[QWord] = tokenizer(s.toLowerCase).map(MorphaStemmer.stemToken).map(t => QWord(t.lemma))
+  def intervals(size: Int, max: Int) =
+    for (i <- Range(0, size); j <- Range(i, size); if j+1-i <= max) yield (i, j+1)
+    
+    case class Abstracted(arg: Seq[QWord], template: Seq[QToken]) { 
+      def templateString = template.mkString(" ")
+      def substitute = { for (q <- template) yield q match {
+        case QWord(x) => List(QWord(x))
+        case ArgVar => arg
+      }}.flatten
+    }
+    
+  def templatize(ws: Seq[QWord]): Seq[Abstracted] = {
+      val n = ws.size
+      for ((i, j) <- intervals(n, maxSize);
+    	   left = ws.slice(0, i);
+    	   right = ws.slice(j, n);
+    	   arg = ws.slice(i, j);
+    	   abs = Abstracted(arg, left ++ List(ArgVar) ++ right)
+    	   ) yield abs
+  }
+  def templateToQTokens(s: String) = {
+    val toks = s.split(" ")
+    val i = toks.indexOf("$y")
+    val n = toks.size
+    if (i >= 0) {
+      val left = toks.slice(0, i).map(x => QWord(x)).toList
+      val right = toks.slice(i+1, n).map(x => QWord(x)).toList
+      left ++ List(ArgVar) ++ right 
+    } else {
+      toks.map(x => QWord(x)).toList
+    }
+  }
+  
+  override def paraphrase(s: String, k: Int) = {
+    val q = normalize(s)
+    val temps = templatize(q)
+    val matches = for (t <- temps;
+    				items = map.getOrElse(t.templateString, List());
+    				(pp, score) <- items) yield (Abstracted(t.arg, templateToQTokens(pp)).substitute, score)
+    matches.sortBy(x => -x._2).map(x => x._1.mkString(" ")).toList
+  }
+}
+object MapQuestionParaphraser {
+  def fromFile(path: String) = {
+    val iter = Source.fromFile(path, "UTF8").getLines.grouped(1000)
+    val items = for (g <- iter; line <- g.par; item <- processLine(line)) yield item
+    MapQuestionParaphraser(items.toMap)
+  }
+  def processLine(s: String): Option[(String, List[(String, Double)])] = {
+    val fields = s.split("\t").toList
+    fields match {
+      case key :: rest => Some((key, toPairs(rest)))
+      case _ => None
+    }
+  }
+  def parseDouble(s: String) = try { Some(s.toDouble) } catch { case e:Throwable => None }
+  def toPairs(rest: List[String]): List[(String, Double)] = {
+    rest.grouped(2).flatMap {
+      pair => pair match {
+        case List(a: String, b: String) => parseDouble(b) match {
+          case Some(d) => Some(a, d)
+          case _ => None
+        }
+        case _ => None
+      }
+    }.toList
+  }
+}
+
 class ParalexQuestionParser(paraphraser: QuestionParaphraser, parser: QuestionParser, k: Int)
   extends QuestionParser {
   def parse(q: String): Iterable[UQuery] = {
-    val questions = paraphraser.paraphrase(q, k)
+    val questions = paraphraser.paraphrase(q, k) ++ List(q)
     for (pq <- questions; query <- parser.parse(pq)) yield query
   }
+}
+
+object FooBar extends App {
+  val pp = MapQuestionParaphraser.fromFile("pmi_agg.txt")
+  val base = new RegexQuestionParser()
+  val parser = new ParalexQuestionParser(pp, base, 10)
+  val baseClient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 500)
+  val client = CachedTriplestoreClient(baseClient, 100000)
+  val executor = IdentityExecutor(client)
+  val grouper = BasicAnswerGrouper()
+  val scorer = NumDerivationsScorer()
+  val qa = QASystem(parser, executor, grouper, scorer)
+  val question = args(0)
+  println(s"Original question: $question")
+  val answers = qa.answer(question).sortBy(-1*_.score)
+  for (a <- answers) println(a.answer.mkString(" "))
+  
 }
