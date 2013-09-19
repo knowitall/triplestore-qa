@@ -34,6 +34,7 @@ object GenerateTemplatesCLI extends App {
   
   val input = Source.fromInputStream(System.in, "UTF8").getLines
   if (args.size > 0 && args(0) == "threaded") {
+	System.err.println("Running in threaded mode")
   	val groups = input.grouped(100)
   	groups.foreach { lines => 
   		lines.par.flatMap(lineToTemplates).foreach(println)
