@@ -18,3 +18,4 @@
 (?i)^other\b.*
 (?i)^both\b.*
 (?i)^most\b.*
+^\p{Punct}+.*
