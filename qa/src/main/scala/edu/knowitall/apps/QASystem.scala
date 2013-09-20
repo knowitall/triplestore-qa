@@ -4,6 +4,7 @@ import edu.knowitall.scoring.AnswerScorer
 import edu.knowitall.execution.QueryExecutor
 import edu.knowitall.parsing.QuestionParser
 import edu.knowitall.scoring.ScoredAnswerGroup
+import edu.knowitall.paralex.ParalexQuestionParser
 import org.slf4j.LoggerFactory
 import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.AnswerGrouper
@@ -28,6 +29,8 @@ import edu.knowitall.scoring.LogisticAnswerScorer
 import edu.knowitall.parsing.OldParalexParser
 import edu.knowitall.execution.RelationSynonymExecutor
 import edu.knowitall.common.Timing
+import edu.knowitall.execution.DefaultFilters
+import edu.knowitall.paralex.SolrQuestionParaphraser
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
@@ -36,7 +39,7 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
   def answer(question: String): List[ScoredAnswerGroup] = {
 
     logger.info(s"Parsing question '$question'")
-    val queries = parser.parse(question).take(10)
+    val queries = parser.parse(question)//.take(100)
     answerUQueries(queries, question)
   }
 
@@ -75,7 +78,7 @@ case object QASystem {
       executor <- Components.executors.get(config.executor);
       grouper <- Components.groupers.get(config.grouper);
       scorer <- Components.scorers.get(config.scorer)
-    ) yield QASystem(parser, executor, grouper, scorer)
+    ) yield QASystem(parser, DefaultFilters.wrap(executor), grouper, scorer)
 
 }
 
@@ -86,14 +89,16 @@ case class QAConfig(parser: String = "formal",
 
 case object Components {
 
-  val baseClient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 500)
+  val baseClient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 100)
   val client = CachedTriplestoreClient(baseClient, 100000)
+  val pp = SolrQuestionParaphraser("http://rv-n12.cs.washington.edu:28983/solr/paraphrase")
 
   val parsers: Map[String, QuestionParser] =
     Map("formal" -> FormalQuestionParser(),
       "keyword" -> StringMatchingParser(client),
       "paralex-old" -> OldParalexParser(),
-      "regex" -> RegexQuestionParser())
+      "regex" -> RegexQuestionParser(),
+      "paralex" -> new ParalexQuestionParser(pp, RegexQuestionParser()))
 
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client),
