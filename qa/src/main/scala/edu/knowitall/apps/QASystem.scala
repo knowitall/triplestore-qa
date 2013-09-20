@@ -29,8 +29,8 @@ import edu.knowitall.scoring.LogisticAnswerScorer
 import edu.knowitall.parsing.OldParalexParser
 import edu.knowitall.execution.RelationSynonymExecutor
 import edu.knowitall.common.Timing
-import edu.knowitall.paralex.MapQuestionParaphraser
 import edu.knowitall.execution.DefaultFilters
+import edu.knowitall.paralex.SolrQuestionParaphraser
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
@@ -91,14 +91,14 @@ case object Components {
 
   val baseClient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 100)
   val client = CachedTriplestoreClient(baseClient, 100000)
-  val pp = MapQuestionParaphraser.fromFile("pmi_agg.txt")
+  val pp = SolrQuestionParaphraser("http://rv-n12.cs.washington.edu:28983/solr/paraphrase")
 
   val parsers: Map[String, QuestionParser] =
     Map("formal" -> FormalQuestionParser(),
       "keyword" -> StringMatchingParser(client),
       "paralex-old" -> OldParalexParser(),
       "regex" -> RegexQuestionParser(),
-      "paralex" -> new ParalexQuestionParser(pp, RegexQuestionParser(), 10))
+      "paralex" -> new ParalexQuestionParser(pp, RegexQuestionParser()))
 
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client),
