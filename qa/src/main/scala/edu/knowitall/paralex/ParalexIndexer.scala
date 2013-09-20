@@ -9,13 +9,16 @@ import org.slf4j.LoggerFactory
 import org.apache.solr.client.solrj.impl.HttpSolrServer
 import org.apache.solr.client.solrj.SolrQuery
 
-case class ParaphraseTemplateClient(solrUrl: String, hitLimit: Int) {
+case class ParaphraseTemplateClient(solrUrl: String, hitLimit: Int = 500) {
+  val logger = LoggerFactory.getLogger(this.getClass)
   val server = new HttpSolrServer(solrUrl)
   val searchField = "template1_exact"
-  def paraphrases(s: String, limit: Int): List[(String, Double)] = {
-    val query = new SolrQuery(s"${searchField}:(${s})")
+  def paraphrases(s: String, limit: Int = hitLimit): List[(String, Double)] = {
+    val query = new SolrQuery(s"""${searchField}:"${s}"""")
     query.setRows(hitLimit)
+    logger.info(s"Sending query: ${query.toString()}")
     val resp = server.query(query)
+    logger.info(s"Found ${resp.getResults().getNumFound()} hits")
     val pairs = resp.getResults().toList.flatMap(TemplatePair.fromDocument)
     pairs.map(p => (p.template2, p.score))
   }
