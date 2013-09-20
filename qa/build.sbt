@@ -1,5 +1,9 @@
 import AssemblyKeys._ 
 
+import com.typesafe.sbt.SbtStartScript
+
+seq(SbtStartScript.startScriptForClassesSettings: _*)
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
 scalaVersion := "2.10.2"
@@ -30,13 +34,9 @@ libraryDependencies += "org.apache.solr" % "solr" % "4.3.1"
 
 libraryDependencies += "org.apache.solr" % "solr-core" % "4.3.1"
 
-libraryDependencies += "commons-logging" % "commons-logging-api" % "1.0.4"
-
 libraryDependencies += "com.github.scopt" %% "scopt" % "3.0.0"
 
 libraryDependencies += "com.rockymadden.stringmetric" % "stringmetric-core" % "0.25.3"
-
-libraryDependencies += "org.apache.lucene" % "lucene-core" % "4.3.1"
 
 libraryDependencies += "org.apache.lucene" % "lucene-analyzers-common" % "4.3.1"
 
@@ -74,6 +74,12 @@ libraryDependencies += "edu.washington.cs.knowitall.taggers" %% "taggers" % "0.1
 
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-chunk-opennlp" % "2.4.2"
 
+libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-stanford" % "2.4.2"
+
+libraryDependencies += "edu.washington.cs.knowitall" % "openregex-scala_2.10" % "1.0.4"
+
+libraryDependencies += "com.nicta" % "scoobi_2.10" % "0.7.0-RC2-cdh3"
+
 assemblySettings
 
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
@@ -102,3 +108,14 @@ resolvers ++= Seq("snapshots" at "http://oss.sonatype.org/content/repositories/s
 
 EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Resource
 
+assemblySettings                                                                
+                                                                                
+mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>            
+  {                                                                             
+    case x => {                                                                 
+      val oldstrat = old(x)                                                     
+      if (oldstrat == MergeStrategy.deduplicate) MergeStrategy.first            
+      else oldstrat                                                             
+    }                                                                           
+  }                                                                             
+} 
