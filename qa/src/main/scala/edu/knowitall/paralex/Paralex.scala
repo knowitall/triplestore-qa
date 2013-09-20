@@ -66,17 +66,18 @@ case class OutputRecord(template1: Seq[QToken], template2: Seq[QToken]) {
 
 case class ParsedQuestion(string: String, qWords: List[QWord], parses: List[TConjunct])
 
-case class AbstractedArg(arg: List[QWord], conjunct: TConjunct)
 
 case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
     tokenizer: Tokenizer = new ClearTokenizer()) {
+  
+  case class AbstractedQueryArg(arg: List[QWord], conjunct: TConjunct)
   
   def filterQuery(uq: UQuery): Option[TConjunct] = uq match {
     case ListConjunctiveQuery(List(v), List(c)) => Some(TConjunct(c.name, c.values))
     case _ => None
   }
   
-  def getArg(sq: TConjunct): AbstractedArg = {
+  def getArg(sq: TConjunct): AbstractedQueryArg = {
     val fields = sq.literalFields
     val fields2 = for ((f, v) <- fields; if f == Search.arg1 || f == Search.arg2) 
       yield (f,v)
@@ -88,7 +89,7 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
     val arg = toQWords(sq.values(argField).toString().toLowerCase())
     val newVals = sq.values + (argField -> TVariable("y"))
     val newConj = TConjunct(sq.name, newVals)
-    AbstractedArg(arg, newConj)
+    AbstractedQueryArg(arg, newConj)
   }
   
   def toQWords(s: String) = tokenizer.tokenize(s).map(t => QWord(t.string)).toList
@@ -99,7 +100,7 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
     ParsedQuestion(q, qWords, parses)
   }
   
-  def getArgs(pq: ParsedQuestion): List[AbstractedArg] = pq.parses.map(getArg)
+  def getArgs(pq: ParsedQuestion): List[AbstractedQueryArg] = pq.parses.map(getArg)
   
   def abstractArg(pq: ParsedQuestion, arg: List[QWord]): List[QToken] = {
     val qw = pq.qWords
@@ -140,32 +141,23 @@ trait QuestionParaphraser {
   def paraphrase(s: String): List[String]
 }
 
+case class AbstractedArg(arg: Seq[QWord], template: Seq[QToken]) { 
+  def templateString = template.mkString(" ")
+  def substitute = { for (q <- template) yield q match {
+    case QWord(x) => List(QWord(x))
+    case ArgVar => arg
+  }}.flatten
+}
+
 case class SolrQuestionParaphraser(url: String) extends QuestionParaphraser {
   
   val client = new ParaphraseTemplateClient(url)
   val maxSize = 4
+  val argExtractor = new ArgumentExtractor(maxSize)
   val tokenizer = new ClearTokenizer()
   def normalize(s: String): Seq[QWord] = tokenizer(s.toLowerCase).map(MorphaStemmer.stemToken).map(t => QWord(t.lemma))
-  def intervals(size: Int, max: Int) =
-    for (i <- Range(0, size); j <- Range(i, size); if j+1-i <= max) yield (i, j+1)
-    
-    case class Abstracted(arg: Seq[QWord], template: Seq[QToken]) { 
-      def templateString = template.mkString(" ")
-      def substitute = { for (q <- template) yield q match {
-        case QWord(x) => List(QWord(x))
-        case ArgVar => arg
-      }}.flatten
-    }
-    
-  def templatize(ws: Seq[QWord]): Seq[Abstracted] = {
-      val n = ws.size
-      for ((i, j) <- intervals(n, maxSize);
-    	   left = ws.slice(0, i);
-    	   right = ws.slice(j, n);
-    	   arg = ws.slice(i, j);
-    	   abs = Abstracted(arg, left ++ List(ArgVar) ++ right)
-    	   ) yield abs
-  }
+
+
   def templateToQTokens(s: String) = {
     val toks = s.split(" ")
     val i = toks.indexOf("$y")
@@ -181,10 +173,10 @@ case class SolrQuestionParaphraser(url: String) extends QuestionParaphraser {
   
   override def paraphrase(s: String) = {
     val q = normalize(s)
-    val temps = templatize(q)
+    val temps = argExtractor.arguments(q)
     val matches = for (t <- temps;
     				items = client.paraphrases(t.templateString);
-    				(pp, score) <- items) yield (Abstracted(t.arg, templateToQTokens(pp)).substitute, score)
+    				(pp, score) <- items) yield (AbstractedArg(t.arg, templateToQTokens(pp)).substitute, score)
     matches.sortBy(x => -x._2).map(x => x._1.mkString(" ")).toList
   }
 }
