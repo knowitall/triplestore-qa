@@ -137,10 +137,12 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
 }
 
 trait QuestionParaphraser {
-  def paraphrase(s: String, k: Int): List[String]
+  def paraphrase(s: String): List[String]
 }
 
-case class MapQuestionParaphraser(map: Map[String, List[(String, Double)]]) extends QuestionParaphraser {
+case class SolrQuestionParaphraser(url: String) extends QuestionParaphraser {
+  
+  val client = new ParaphraseTemplateClient(url)
   val maxSize = 4
   val tokenizer = new ClearTokenizer()
   def normalize(s: String): Seq[QWord] = tokenizer(s.toLowerCase).map(MorphaStemmer.stemToken).map(t => QWord(t.lemma))
@@ -177,63 +179,20 @@ case class MapQuestionParaphraser(map: Map[String, List[(String, Double)]]) exte
     }
   }
   
-  override def paraphrase(s: String, k: Int) = {
+  override def paraphrase(s: String) = {
     val q = normalize(s)
     val temps = templatize(q)
     val matches = for (t <- temps;
-    				items = map.getOrElse(t.templateString, List());
+    				items = client.paraphrases(t.templateString);
     				(pp, score) <- items) yield (Abstracted(t.arg, templateToQTokens(pp)).substitute, score)
     matches.sortBy(x => -x._2).map(x => x._1.mkString(" ")).toList
   }
 }
-object MapQuestionParaphraser {
-  def fromFile(path: String) = {
-    val iter = Source.fromFile(path, "UTF8").getLines.grouped(1000)
-    val items = for (g <- iter; line <- g.par; item <- processLine(line)) yield item
-    MapQuestionParaphraser(items.toMap)
-  }
-  def processLine(s: String): Option[(String, List[(String, Double)])] = {
-    val fields = s.split("\t").toList
-    fields match {
-      case key :: rest => Some((key, toPairs(rest)))
-      case _ => None
-    }
-  }
-  def parseDouble(s: String) = try { Some(s.toDouble) } catch { case e:Throwable => None }
-  def toPairs(rest: List[String]): List[(String, Double)] = {
-    rest.grouped(2).flatMap {
-      pair => pair match {
-        case List(a: String, b: String) => parseDouble(b) match {
-          case Some(d) => Some(a, d)
-          case _ => None
-        }
-        case _ => None
-      }
-    }.toList
-  }
-}
 
-class ParalexQuestionParser(paraphraser: QuestionParaphraser, parser: QuestionParser, k: Int)
+class ParalexQuestionParser(paraphraser: QuestionParaphraser, parser: QuestionParser)
   extends QuestionParser {
   def parse(q: String): Iterable[UQuery] = {
-    val questions = paraphraser.paraphrase(q, k) ++ List(q)
+    val questions = paraphraser.paraphrase(q) ++ List(q)
     for (pq <- questions; query <- parser.parse(pq)) yield query
   }
-}
-
-object FooBar extends App {
-  val pp = MapQuestionParaphraser.fromFile("pmi_agg.txt")
-  val base = new RegexQuestionParser()
-  val parser = new ParalexQuestionParser(pp, base, 10)
-  val baseClient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 500)
-  val client = CachedTriplestoreClient(baseClient, 100000)
-  val executor = IdentityExecutor(client)
-  val grouper = BasicAnswerGrouper()
-  val scorer = NumDerivationsScorer()
-  val qa = QASystem(parser, executor, grouper, scorer)
-  val question = args(0)
-  println(s"Original question: $question")
-  val answers = qa.answer(question).sortBy(-1*_.score)
-  for (a <- answers) println(a.answer.mkString(" "))
-  
 }
