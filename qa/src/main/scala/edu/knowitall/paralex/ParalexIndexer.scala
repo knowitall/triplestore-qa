@@ -1,11 +1,25 @@
 package edu.knowitall.paralex
 import scala.io.Source
+import scala.collection.JavaConversions._
 import org.apache.solr.common.SolrDocument
 import org.apache.solr.common.SolrInputDocument
 import org.apache.solr.client.solrj.impl.ConcurrentUpdateSolrServer
 import org.apache.solr.client.solrj.SolrServer
 import org.slf4j.LoggerFactory
 import org.apache.solr.client.solrj.impl.HttpSolrServer
+import org.apache.solr.client.solrj.SolrQuery
+
+case class ParaphraseTemplateClient(solrUrl: String, hitLimit: Int) {
+  val server = new HttpSolrServer(solrUrl)
+  val searchField = "template1_exact"
+  def paraphrases(s: String, limit: Int): List[(String, Double)] = {
+    val query = new SolrQuery(s"${searchField}:(${s})")
+    query.setRows(hitLimit)
+    val resp = server.query(query)
+    val pairs = resp.getResults().toList.flatMap(TemplatePair.fromDocument)
+    pairs.map(p => (p.template2, p.score))
+  }
+}
 
 case class TemplatePair(template1: String, template2: String, score: Double)
 
@@ -18,6 +32,15 @@ case object TemplatePair {
         case Some(score) => Some(TemplatePair(t1, t2, score))
         case _ => None
       }
+      case _ => None
+    }
+  }
+  def fromDocument(doc: SolrDocument): Option[TemplatePair] = {
+    val t1obj: Any = doc.getFieldValue("template1")
+    val t2obj: Any = doc.getFieldValue("template2")
+    val sobj: Any = doc.getFieldValue("score")
+    (t1obj, t2obj, sobj) match {
+      case (t1: String, t2: String, s: Float) => Some(TemplatePair(t1, t2, s))
       case _ => None
     }
   }
@@ -61,5 +84,6 @@ object ParalexIndexer extends App {
      val lines = Source.fromInputStream(System.in, "UTF8").getLines
      val groups = lines.grouped(groupSize)
      for (group <- groups; line <- group.par) indexer.indexLine(line)
+     server.commit()
   }
 } 
