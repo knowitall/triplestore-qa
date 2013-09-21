@@ -31,6 +31,7 @@ import edu.knowitall.execution.RelationSynonymExecutor
 import edu.knowitall.common.Timing
 import edu.knowitall.execution.DefaultFilters
 import edu.knowitall.paralex.SolrQuestionParaphraser
+import edu.knowitall.parsing.regex.RegexQuestionParser
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
