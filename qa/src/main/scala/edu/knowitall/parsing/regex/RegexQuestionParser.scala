@@ -35,7 +35,7 @@ case class RegexQuestionParser() extends QuestionParser {
 
   def lemmatize(string: String): Seq[Lemmatized[ChunkedToken]] = chunker.synchronized { chunker(string).toList map MorphaStemmer.stemPostaggedToken }
   
-  def parse(question: String) = parse(lemmatize(question))
+  def parse(question: String) = parse(lemmatize(question)).map(uq => uq.copy(question = question))
   
   def parse(question: Seq[Lemmatized[ChunkedToken]]) = patterns.flatMap(p => p.parse(question))
 }

@@ -244,7 +244,7 @@ case object ListConjunctiveQuery {
   }
 
 
-  def expandSetTLiterals(cq: ConjunctiveQuery): List[ConjunctiveQuery] = {
+  def expandSetTLiterals(cq: ConjunctiveQuery): List[ListConjunctiveQuery] = {
     val css = for (c <- cq.conjuncts; cs = TConjunct.expandSetTLiterals(c)) yield cs
     val product = Utils.cartesian[TConjunct](css).toList
     for (cs <- product) yield ListConjunctiveQuery(cq.question, cq.qVars, cs.toList)

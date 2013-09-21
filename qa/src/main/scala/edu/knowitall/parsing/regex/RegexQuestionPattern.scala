@@ -21,6 +21,7 @@ import edu.knowitall.execution.Search.{arg1, rel, arg2}
 import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.tool.chunk.OpenNlpChunker
 import scala.collection.JavaConversions._
+import edu.knowitall.execution.ConjunctiveQuery
 
 
 /**
@@ -42,7 +43,7 @@ case class RegexQuestionPattern(val groups: Seq[String], pattern: String, templa
   
   val regex = makeRegex(pattern)
   
-  def parse(tokens: Seq[Lemmatized[ChunkedToken]]): Seq[UQuery] = {
+  def parse(tokens: Seq[Lemmatized[ChunkedToken]]): Seq[ListConjunctiveQuery] = {
     val tryMatch = regex.`match`(tokens)
     if (tryMatch == null || tryMatch.isEmpty()) return Seq.empty
     else {
@@ -52,7 +53,7 @@ case class RegexQuestionPattern(val groups: Seq[String], pattern: String, templa
         (g, groupLookup.tokens.map(_.string).mkString(" "))
       })
       val filledTemplates = templates.map(t => fillTemplate(groupTexts, t))
-      filledTemplates flatMap RegexQuestionPattern.formalParse      
+      filledTemplates flatMap RegexQuestionPattern.formalParse
     }
   }
   
@@ -71,7 +72,7 @@ object RegexQuestionPattern {
   
   private val formalParser = new FormalQuestionParser()
   
-  def formalParse(filledTemplate: String) = formalParser.parse(filledTemplate)
+  def formalParse(filledTemplate: String): List[ListConjunctiveQuery] = formalParser.parse(filledTemplate)
   
 }
 
