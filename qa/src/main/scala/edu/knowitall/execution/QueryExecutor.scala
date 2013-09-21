@@ -6,7 +6,9 @@ import org.slf4j.LoggerFactory
 import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.execution.synonyms.TriplestoreRelationSynonyms
 
-trait UQuery
+trait UQuery {
+  val question: String
+}
 
 trait ExecQuery {
   val uquery: UQuery

@@ -206,7 +206,7 @@ trait ConjunctiveQuery extends UQuery {
 /**
  * A conjunctive query backed by a list of conjuncts.
  */
-case class ListConjunctiveQuery(qVars: List[TVariable], 
+case class ListConjunctiveQuery(question: String, qVars: List[TVariable], 
     conjuncts: List[TConjunct])
   extends ConjunctiveQuery {
   
@@ -229,7 +229,7 @@ case object ListConjunctiveQuery {
           throw new IllegalArgumentException(s"Expected variable: $left")
       }
       val conjuncts = TConjunct.fromStringMult(parts(1))
-      Some(ListConjunctiveQuery(qVars, conjuncts.toList))
+      Some(ListConjunctiveQuery(s, qVars, conjuncts.toList))
     } else if (parts.size == 1) {
       val s = parts(0)
       val conjuncts = TConjunct.fromStringMult(s)
@@ -237,7 +237,7 @@ case object ListConjunctiveQuery {
         case v :: rest => v :: rest
         case _ => throw new IllegalArgumentException(s"Expected variable: $s")
       }
-      Some(ListConjunctiveQuery(qVars.distinct, conjuncts.toList))
+      Some(ListConjunctiveQuery(s, qVars.distinct, conjuncts.toList))
     } else {
       None
     }
@@ -247,7 +247,7 @@ case object ListConjunctiveQuery {
   def expandSetTLiterals(cq: ConjunctiveQuery): List[ConjunctiveQuery] = {
     val css = for (c <- cq.conjuncts; cs = TConjunct.expandSetTLiterals(c)) yield cs
     val product = Utils.cartesian[TConjunct](css).toList
-    for (cs <- product) yield ListConjunctiveQuery(cq.qVars, cs.toList)
+    for (cs <- product) yield ListConjunctiveQuery(cq.question, cq.qVars, cs.toList)
   }
 
 }
@@ -255,7 +255,7 @@ case object ListConjunctiveQuery {
 /**
  * A simple query is a conjunctive query that has a single conjunct.
  */
-case class SimpleQuery(name: String, map: Map[Field, TVal])
+case class SimpleQuery(question: String, name: String, map: Map[Field, TVal])
   extends ConjunctiveQuery { 
   val conjunct = TConjunct(name, map)
   val conjuncts = List(conjunct)
@@ -270,7 +270,7 @@ case class SimpleQuery(name: String, map: Map[Field, TVal])
 }
 case object SimpleQuery {
   def fromString(s: String) = TConjunct.fromString("r", s) match {
-    case Some(TConjunct(name, map)) => Some(SimpleQuery(name, map))
+    case Some(TConjunct(name, map)) => Some(SimpleQuery(s, name, map))
     case _ => None
   }
 }

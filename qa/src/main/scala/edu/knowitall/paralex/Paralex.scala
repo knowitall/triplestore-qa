@@ -73,7 +73,7 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
   case class AbstractedQueryArg(arg: List[QWord], conjunct: TConjunct)
   
   def filterQuery(uq: UQuery): Option[TConjunct] = uq match {
-    case ListConjunctiveQuery(List(v), List(c)) => Some(TConjunct(c.name, c.values))
+    case ListConjunctiveQuery(uq.question, List(v), List(c)) => Some(TConjunct(c.name, c.values))
     case _ => None
   }
   
