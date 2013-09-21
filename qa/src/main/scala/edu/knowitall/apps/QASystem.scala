@@ -14,6 +14,7 @@ import edu.knowitall.parsing.regex.RegexQuestionParser
 import edu.knowitall.execution.IdentityExecutor
 import edu.knowitall.execution.LexiconSynonymExecutor
 import edu.knowitall.execution.ClassInstanceExecutor
+import edu.knowitall.execution.StopwordExecutor
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.BasicAnswerGrouper
 import edu.knowitall.execution.PostagAnswerGrouper
@@ -103,6 +104,7 @@ case object Components {
 
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client),
+      "stopword" -> StopwordExecutor(IdentityExecutor(client)),
       "berantRules" -> RelationSynonymExecutor(client, IdentityExecutor(client)),
       "classInstance" -> ClassInstanceExecutor(IdentityExecutor(client)),
       "lexiconArgSyns" -> new LexiconSynonymExecutor(IdentityExecutor(client)),
