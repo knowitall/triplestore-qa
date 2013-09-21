@@ -95,6 +95,8 @@ object RegexQuestionPatterns {
 
   private val rel = s"$verb+ (?:$word* $prep)?"
   
+  private val property = s"<lemma='be'> <pos='DT'> (${word}+) <lemma='of'>"
+  
   private val ent = s"$word+"
   
   private val punct = "<pos='.'>"
@@ -181,6 +183,14 @@ object RegexQuestionPatterns {
   new RegexQuestionPattern(
     Seq("type", "rel", "ent"),
     s"$whatWhich (<type>:$ent) (<rel>:$rel (?:$prep)?) (<ent>:$ent) $punct?",
-    "$x: ($x, "+isa+", $type) ($x, $rel, $ent)")
+    "$x: ($x, "+isa+", $type) ($x, $rel, $ent)"),
+  
+  // what is the population of texas => (texas, have population of, ?)
+  new RegexQuestionPattern(
+      Seq("ent", "rel"),
+      s"<lemma='what'> <lemma='be'> <pos='DT'> (<rel>:${word}+) <lemma='of'> (<ent>:$ent) $punct?",
+      "$x: ($ent, have $rel of, $x)" 
+      )  
+  
   )
 }
