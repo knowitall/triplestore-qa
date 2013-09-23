@@ -86,7 +86,7 @@ object SystemAnalyzer {
     val precs = precRecall(bools)
     val py = precs.zipWithIndex
     val pr = py.map { case (prec, yld) => (prec, (yld+ 1.0).toDouble/totalQuestions) }
-    pr.foreach { case (prec, recall) => output.println(s"%.03f$recall\t%.03f$prec") }
+    pr.foreach { case (prec, recall) => output.println(f"$recall%.03f\t$prec%.03f") }
     
     output.print("\n\n\n")
     
