@@ -15,7 +15,7 @@ import edu.knowitall.execution.TVal
 import edu.knowitall.execution.UQuery
 import edu.knowitall.execution.UnquotedTLiteral
 
-class FrequencyGeneralizingExecutor(baseExecutor: QueryExecutor, tsClient: TriplestoreClient) extends QueryExecutor {
+class FrequencyGeneralizingExecutor(val baseExecutor: QueryExecutor, tsClient: TriplestoreClient) extends GeneralizingExecutor {
 
   def tsFrequency(word: String): Long = {
     val countQuery = CountQuery(word)
@@ -107,22 +107,12 @@ class FrequencyGeneralizingExecutor(baseExecutor: QueryExecutor, tsClient: Tripl
     else (Iterator(generalization) ++ { conjunctGeneralizations(generalization) })
   }
   
-  def listQueryGeneralizations(lcq: ListConjunctiveQuery): Iterator[ListConjunctiveQuery] = {
+  def generalizations(lcq: ListConjunctiveQuery): Iterator[ListConjunctiveQuery] = {
     val conjGeneralizations = conjunctGeneralizations(lcq.conjuncts)
     conjGeneralizations.map(cs => lcq.copy(conjuncts = cs.toList))
   }
   
-  type ADs = Iterable[AnswerDerivation]
-  
-  def deriveAnswers(q: UQuery): ADs = q match {
-    case c: ListConjunctiveQuery => { 
-      // don't run all of the generalizations - just go until one gets answers, then stop
-      val queryResponses = listQueryGeneralizations(c) map baseExecutor.deriveAnswers
-      queryResponses.find(_.nonEmpty).getOrElse(Nil)
-    }
-    case _ => throw new 
-      UnsupportedOperationException(s"Unable to execute query type: $q")
-  } 
+
 }
 
 
