@@ -9,7 +9,7 @@ import edu.knowitall.triplestore.CachedTriplestoreClient
 
 object TriplestoreFeatures {
   
-  val baseClient = SolrClient("http://rv-n12.cs.washington.edu:8983/solr/triplestore", 500)
+  val baseClient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 500)
   val client = CachedTriplestoreClient(baseClient, 10000)
   
   object QueryFrequency extends AnswerGroupFeature("Log of query literals in the triplestore") {
