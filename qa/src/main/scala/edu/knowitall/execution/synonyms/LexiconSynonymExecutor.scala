@@ -1,6 +1,6 @@
 package edu.knowitall.execution
+package synonyms
 
-import synonyms.LexiconSynonyms
 
 class LexiconSynonymExecutor(val synServer: LexiconSynonyms, val baseExecutor: QueryExecutor) extends QueryExecutor {
   

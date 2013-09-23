@@ -12,9 +12,10 @@ import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.parsing.FormalQuestionParser
 import edu.knowitall.parsing.regex.RegexQuestionParser
 import edu.knowitall.execution.IdentityExecutor
-import edu.knowitall.execution.LexiconSynonymExecutor
+import edu.knowitall.execution.synonyms.LexiconSynonymExecutor
 import edu.knowitall.execution.ClassInstanceExecutor
 import edu.knowitall.execution.StopwordExecutor
+import edu.knowitall.execution.generalize.DiffGeneralizingExecutor
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.BasicAnswerGrouper
 import edu.knowitall.execution.PostagAnswerGrouper
@@ -28,7 +29,7 @@ import edu.knowitall.parsing.StringMatchingParser
 import edu.knowitall.scoring.UniformAnswerScorer
 import edu.knowitall.scoring.LogisticAnswerScorer
 import edu.knowitall.parsing.OldParalexParser
-import edu.knowitall.execution.RelationSynonymExecutor
+import edu.knowitall.execution.synonyms.RelationSynonymExecutor
 import edu.knowitall.common.Timing
 import edu.knowitall.execution.DefaultFilters
 import edu.knowitall.paralex.SolrQuestionParaphraser
@@ -104,7 +105,8 @@ case object Components {
 
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client),
-      "stopword" -> StopwordExecutor(IdentityExecutor(client)),
+        "stopword" -> StopwordExecutor(IdentityExecutor(client)),
+        "generalize" -> StopwordExecutor(new DiffGeneralizingExecutor(IdentityExecutor(client))),
       "berantRules" -> RelationSynonymExecutor(client, IdentityExecutor(client)),
       "classInstance" -> ClassInstanceExecutor(IdentityExecutor(client)),
       "lexiconArgSyns" -> new LexiconSynonymExecutor(IdentityExecutor(client)),
