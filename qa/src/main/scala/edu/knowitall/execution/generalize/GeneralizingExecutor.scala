@@ -15,9 +15,8 @@ abstract class GeneralizingExecutor extends QueryExecutor {
   
   def deriveAnswers(q: UQuery): ADs = q match {
     case c: ListConjunctiveQuery => { 
-      val gens = generalizations(c).toSeq
-      gens.map(_.toString) foreach logger.info
-      val queryResponses = (Seq(c) ++ gens) map baseExecutor.deriveAnswers
+      val gens = Iterator(c) ++ generalizations(c)
+      val queryResponses = gens map baseExecutor.deriveAnswers
       queryResponses.find(_.nonEmpty).getOrElse(Nil)
     }
     case _ => throw new 
