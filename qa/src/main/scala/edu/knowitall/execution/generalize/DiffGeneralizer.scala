@@ -22,7 +22,7 @@ class DiffGeneralizingExecutor(val baseExecutor: QueryExecutor, diffGen: DiffGen
   /**
    * Supplies "reasonable" default values for minscore and maxrewrites.  
    */
-  def this(baseExec: QueryExecutor) = this(baseExec, minScore = 1.5, maxRewrites = 5)
+  def this(baseExec: QueryExecutor) = this(baseExec, minScore = 7, maxRewrites = 1)
     
   import DiffGeneralizer.normTokens
   import DiffGeneralizer.Lemma
@@ -163,8 +163,7 @@ object Test {
     
     val dg = new DiffGeneralizingExecutor(null, new DiffGeneralizer("http://rv-n12:10893/solr/triplestore", 0.0), 4)
     
-    //val qs = "$x: ($x, is a great example of, a common cat species) ($x, is the other name for, a business organization)"
-    val qs = "$x: ($x, is the most commonly used car in, the US)"
+    val qs = "$x: ($x, \"type\", state) ($x, has, the highest mountan)"
     
     val query = ListConjunctiveQuery.fromString(qs).get
     
