@@ -26,7 +26,7 @@ trait QuestionParser {
 }
 
 case class FormalQuestionParser() extends QuestionParser {
-  override def parse(q: String) = ListConjunctiveQuery.fromString(q) match {
+  override def parse(q: String): List[ListConjunctiveQuery] = ListConjunctiveQuery.fromString(q) match {
     case Some(cq: ListConjunctiveQuery) => ListConjunctiveQuery.expandSetTLiterals(cq)
     case _ => List()
   }
@@ -42,10 +42,10 @@ abstract class LexiconParser extends QuestionParser {
     val tokens = tokenizer.tokenize(q)
     val words = tokens.map(t => QWord(t.string)).toIndexedSeq
     val derivs = parser.parse(words)
-    derivs.map(d => queryToConj(d.query))
+    derivs.map(d => queryToConj(q, d.query))
   }
   
-  def queryToConj(q: SimpleQuery): ConjunctiveQuery = {
+  def queryToConj(ques: String, q: SimpleQuery): ConjunctiveQuery = {
     val entLit = UnquotedTLiteral(q.entity)
     val relLit = UnquotedTLiteral(q.relation)
     val tvar = TVariable("x")
@@ -59,7 +59,7 @@ abstract class LexiconParser extends QuestionParser {
     }
     val vals = Map[Field, TVal]((varField, tvar), (entField, entLit), (rel, relLit))
     val conj = TConjunct("r", vals)
-    ListConjunctiveQuery(List(tvar), List(conj))
+    ListConjunctiveQuery(ques, List(tvar), List(conj))
   }
   
 }
@@ -84,7 +84,7 @@ case class OldParalexParser() extends LexiconParser {
   def postprocess(u: UQuery): UQuery = u match {
     case cq: ConjunctiveQuery => {
       val newConjuncts = cq.conjuncts.map(fixConjunct)
-      ListConjunctiveQuery(cq.qVars, newConjuncts)
+      ListConjunctiveQuery(u.question, cq.qVars, newConjuncts)
     }
     case _ => u
   }

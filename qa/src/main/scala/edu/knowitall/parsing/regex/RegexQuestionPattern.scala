@@ -21,6 +21,7 @@ import edu.knowitall.execution.Search.{arg1, rel, arg2}
 import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.tool.chunk.OpenNlpChunker
 import scala.collection.JavaConversions._
+import edu.knowitall.execution.ConjunctiveQuery
 
 
 /**
@@ -42,11 +43,7 @@ case class RegexQuestionPattern(val groups: Seq[String], pattern: String, templa
   
   val regex = makeRegex(pattern)
   
-  def parse(question: String): Seq[UQuery] = {
-    parse(RegexQuestionPattern.lemmatize(question))
-  }
-  
-  def parse(tokens: Seq[Lemmatized[ChunkedToken]]): Seq[UQuery] = {
+  def parse(tokens: Seq[Lemmatized[ChunkedToken]]): Seq[ListConjunctiveQuery] = {
     val tryMatch = regex.`match`(tokens)
     if (tryMatch == null || tryMatch.isEmpty()) return Seq.empty
     else {
@@ -56,7 +53,7 @@ case class RegexQuestionPattern(val groups: Seq[String], pattern: String, templa
         (g, groupLookup.tokens.map(_.string).mkString(" "))
       })
       val filledTemplates = templates.map(t => fillTemplate(groupTexts, t))
-      filledTemplates flatMap RegexQuestionPattern.formalParse      
+      filledTemplates flatMap RegexQuestionPattern.formalParse
     }
   }
   
@@ -75,9 +72,8 @@ object RegexQuestionPattern {
   
   private val formalParser = new FormalQuestionParser()
   
-  def formalParse(filledTemplate: String) = formalParser.parse(filledTemplate)
+  def formalParse(filledTemplate: String): List[ListConjunctiveQuery] = formalParser.parse(filledTemplate)
   
-  def lemmatize(string: String) = chunker.synchronized { chunker(string).toList map MorphaStemmer.stemPostaggedToken }
 }
 
 object RegexQuestionPatterns {
@@ -98,6 +94,8 @@ object RegexQuestionPatterns {
   private val prep = "<pos='RB'>? <pos='IN' | pos='TO' | pos='RP'> <pos='RB'>?";
 
   private val rel = s"$verb+ (?:$word* $prep)?"
+  
+  private val property = s"<lemma='be'> <pos='DT'> (${word}+) <lemma='of'>"
   
   private val ent = s"$word+"
   
@@ -185,6 +183,14 @@ object RegexQuestionPatterns {
   new RegexQuestionPattern(
     Seq("type", "rel", "ent"),
     s"$whatWhich (<type>:$ent) (<rel>:$rel (?:$prep)?) (<ent>:$ent) $punct?",
-    "$x: ($x, "+isa+", $type) ($x, $rel, $ent)")
+    "$x: ($x, "+isa+", $type) ($x, $rel, $ent)"),
+  
+  // what is the population of texas => (texas, have population of, ?)
+  new RegexQuestionPattern(
+      Seq("ent", "rel"),
+      s"<lemma='what'> <lemma='be'> <pos='DT'> (<rel>:${word}+) <lemma='of'> (<ent>:$ent) $punct?",
+      "$x: ($ent, have $rel of, $x)" 
+      )  
+  
   )
 }

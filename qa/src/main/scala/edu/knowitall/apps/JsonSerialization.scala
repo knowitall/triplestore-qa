@@ -42,13 +42,13 @@ object ScoredAnswerInv {
   }
 }
 
-case class UQueryInv(uquery: UQuery, equeries: List[ExecQueryInv])
+case class UQueryInv(question: String, uquery: UQuery, equeries: List[ExecQueryInv])
 object UQueryInv {
   def fromDerivs(ds: List[AnswerDerivation]): List[UQueryInv] = {
     val grpd = ds.groupBy(_.etuple.equery.uquery)
     val results = for ((uqr, derivs) <- grpd;
                        eqs = ExecQueryInv.fromDerivs(derivs)) 
-                  yield UQueryInv(uqr, eqs.toList)
+                  yield UQueryInv(uqr.question, uqr, eqs.toList)
     results.toList
   }
 }

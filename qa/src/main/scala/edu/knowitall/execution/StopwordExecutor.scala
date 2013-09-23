@@ -4,7 +4,7 @@ case class StopwordExecutor(baseExecutor: QueryExecutor) extends QueryExecutor {
   
   import java.util.regex.Pattern
   
-  val stops = Set("a", "an", "the", "'s")
+  val stops = Set("a", "an", "the", "'s", "these", "those", "some", "that", "something")
   
   type ADs = Iterable[AnswerDerivation]
   

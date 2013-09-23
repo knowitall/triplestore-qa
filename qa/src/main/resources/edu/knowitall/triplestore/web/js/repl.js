@@ -65,6 +65,7 @@ var displayGroup = function(group) {
     $a.append($('<h1>' + group.alternates[0].join(", ") + '</h1>'));
     $a.append($('<div class="score">Score = ' + group.score + '</div>'));
     $.each(group.uqueries , function(i, uqueryGroup) {
+        $g.append($('<div class="interpQuestion">'+uqueryGroup.question+'</div>'));
         $.each(uqueryGroup.equeries, function(j, equeryGroup) {
             $g.append(displayEQueryGroup(equeryGroup));
         });
