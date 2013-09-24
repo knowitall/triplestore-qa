@@ -279,6 +279,16 @@ object Search {
     val realField = f.toExact
     def toQueryString = realField.toString() + ":\"" + escape(v) + "\"" 
   }
+
+  case class CountQuery(arg: String) extends TSQuery {
+    def toQueryString = {
+      arg match {
+        case "" => "*:*" // much faster than arg1_exact:*
+        // just do arg1 for speed...
+        case _ => "arg1:\"%s\"".format(arg, arg)
+      }
+    }
+  }
   
   /* Some shortcut functions for each of the fields. */
   val Arg1Eq = (v: String) => FieldPhrase(arg1.toExact, v)

@@ -61,7 +61,7 @@ object SystemAnalyzer {
       val labeledAjs = ajMap.iterator.flatMap({ case (answer, (_, score)) =>
         val goldAj = goldAjs.get(answer)
         goldAj match {
-          case Some(AnswerJustification("0" | "1", _, _)) => Some((answer, (goldAj.get, score)))
+          case Some(AnswerJustification("0" | "1", _, _, _)) => Some((answer, (goldAj.get, score)))
           case _ => {
             System.err.println(s"Warning, no label for (Q,A): ($qString, $answer)")
             None
@@ -86,7 +86,7 @@ object SystemAnalyzer {
     val precs = precRecall(bools)
     val py = precs.zipWithIndex
     val pr = py.map { case (prec, yld) => (prec, (yld+ 1.0).toDouble/totalQuestions) }
-    pr.foreach { case (prec, recall) => output.println(s"%.03f$recall\t%.03f$prec") }
+    pr.foreach { case (prec, recall) => output.println(f"$recall%.03f\t$prec%.03f") }
     
     output.print("\n\n\n")
     
@@ -102,7 +102,8 @@ object SystemAnalyzer {
       val answer = topAnswer.alternates.head.head
       val topTuple = topAnswer.derivations.head.etuple.tuple
       val justification = TuplePrinter.printTuple(topTuple)
-      (answer -> (AnswerJustification("X", answer, justification), topAnswer.score))
+      val query = topAnswer.derivations.head.etuple.equery.uquery.toString
+      (answer -> (AnswerJustification("X", answer, justification, query), topAnswer.score))
     }
     answerJust.toMap
   }

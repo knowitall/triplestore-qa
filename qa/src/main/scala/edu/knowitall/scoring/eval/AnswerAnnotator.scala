@@ -15,13 +15,24 @@ import edu.knowitall.util.TuplePrinter
  */
 object AnswerAnnotator {
   
-  case class AnswerJustification(label: String, answer: String, justification: String)
+  case class AnswerJustification(label: String, answer: String, justification: String, query: String)
   
   case class Question(question: String, answerJustification: Option[AnswerJustification]) {
     override def toString(): String = {
       answerJustification match {
-        case Some(AnswerJustification(label, answer, justification)) => Seq(label, answer, question, justification).mkString("\t")
-        case None => Seq("X", "X", question, "X").mkString("\t")
+        case Some(AnswerJustification(label, answer, justification, query)) => Seq(label, answer, question, justification, query).mkString("\t")
+        case None => Seq("X", "X", question, "X", "X").mkString("\t")
+      }
+    }
+
+    // Attempts to parse the question
+    def formatString(config: Config): String = {
+      answerJustification match {
+        case Some(AnswerJustification(label, answer, justification, query)) => Seq(label, answer, question, justification, query).mkString("\t")
+        case None => {
+          val parsedQuery = config.system.parser.parse(question).headOption.map(_.toString).getOrElse("X")
+          Seq("X", "X", question, "X", parsedQuery).mkString("\t")
+        }
       }
     }
   }
@@ -29,8 +40,8 @@ object AnswerAnnotator {
   object Question {
     def fromString(str: String): Question = {
       str.split("\t") match {
-        case Array("X", "X", question, "X", _*) => Question(question, None)
-        case Array(label, answer, question, justification, _*) => Question(question, Some(AnswerJustification(label, answer, justification)))
+        case Array("X", "X", question, "X", _, _*) => Question(question, None)
+        case Array(label, answer, question, justification, query, _*) => Question(question, Some(AnswerJustification(label, answer, justification, query)))
         case Array(question) => Question(question, None)
         case _ => throw new RuntimeException("Unrecognized input record: "+str)
       }
@@ -74,7 +85,7 @@ object AnswerAnnotator {
     }
     using(new PrintStream(config.outputFile, "UTF8")) { output =>
 
-      answerQuestions(config, questions) foreach output.println
+      answerQuestions(config, questions) foreach { q => output.println(q.formatString(config)) }
     }
   }
   
@@ -96,9 +107,9 @@ object AnswerAnnotator {
     }
     // sort new answers to the top of the list,
     // and unanswered questions to the bottom.
-    augmentedQuestions.toSeq.sortBy { q => 
+    augmentedQuestions.toSeq.sortBy { q =>
       q.answerJustification match {
-        case Some(AnswerJustification("X", _, _)) => 0
+        case Some(AnswerJustification("X", _, _, _)) => 0
         case Some(x: AnswerJustification) => 0.5
         case None => 1
       }
@@ -116,7 +127,8 @@ object AnswerAnnotator {
       val answer = topAnswer.alternates.head.head
       val topTuple = topAnswer.derivations.head.etuple.tuple
       val justification = TuplePrinter.printTuple(topTuple)
-      (answer -> AnswerJustification("X", answer, justification))
+      val query = topAnswer.derivations.head.etuple.equery.uquery.toString
+      (answer -> AnswerJustification("X", answer, justification, query))
     }
     answerJust.toMap
   }

@@ -3,7 +3,7 @@ package edu.knowitall.scoring.features
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.execution.ExecConjunctiveQuery
 import edu.knowitall.execution.ExecQuery
-import edu.knowitall.execution.Search.TSQuery
+import edu.knowitall.execution.Search.CountQuery
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.triplestore.CachedTriplestoreClient
 
@@ -45,18 +45,17 @@ object TriplestoreFeatures {
     import AnswerGroupFeatures.AnswerContainsDeterminer.determiners
     import QueryFrequency.splitRegex
     val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ determiners
-    case class CountQuery(arg: String) extends TSQuery {
-      def toQueryString = {
-        val answerTokens = splitRegex.split(arg)
-        val filteredTokens = answerTokens.filter(tok => !junkTokens.contains(tok)).toSeq
-        val escapedTokens = filteredTokens map SolrClient.escape
-        val cleanAnswer = if (escapedTokens.nonEmpty) escapedTokens.mkString("\"", " ", "\"") else Seq("*")
-        "arg1:\"%s\"".format(cleanAnswer)
-      }
-    }
+    
+
+    
     def apply(group: AnswerGroup) = {
+      
       val rawAnswer = group.alternates.head.head.toLowerCase
-      val query = CountQuery(rawAnswer)
+      val answerTokens = splitRegex.split(rawAnswer)
+      val filteredTokens = answerTokens.filter(tok => !junkTokens.contains(tok)).toSeq
+      val escapedTokens = filteredTokens map SolrClient.escape
+      val cleanAnswer = if (escapedTokens.nonEmpty) escapedTokens.mkString(" ") else "" 
+      val query = CountQuery(cleanAnswer)
       math.log(client.count(query).toDouble + 1)
     }
   }
