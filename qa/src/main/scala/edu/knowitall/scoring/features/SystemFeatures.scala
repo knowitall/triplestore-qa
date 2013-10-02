@@ -6,28 +6,31 @@ import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.execution.UQuery
 import com.twitter.util.LruMap
+import org.slf4j.LoggerFactory
 
 object SystemFeatures {
 
-  val postagConfig = QAConfig(parser = "formal", 
+  private val logger = LoggerFactory.getLogger(this.getClass)
+
+  val postagConfig = QAConfig(parser = "formal",
                               executor = "identity",
                               grouper = "postag",
                               scorer = "numDerivations")
-  
+
   val postagSystem = QASystem.getInstance(postagConfig).getOrElse {
     throw new RuntimeException("Unable to load postag-answer system configuration.")
   }
-  
+
   val postagSystemCache = new LruMap[List[UQuery], List[AnswerGroup]](1000)
-  
-  def answerUQueriesCached(queries: List[UQuery]): List[AnswerGroup] = {
+
+  def answerUQueriesCached(queries: List[UQuery]): List[AnswerGroup] = postagSystemCache.synchronized {
     postagSystemCache.getOrElseUpdate(queries, postagSystem.answerUQueries(queries, queries.mkString(" | ")))
   }
-  
+
   val postagGrouper = postagSystem.grouper
-  
+
   object PostagFrequency extends AnswerGroupFeature("Normalized postags frequency in query results.") {
-    
+
     def apply(group: AnswerGroup) = {
       // get the queries run for this answergroup
       val queries = group.derivations.map(_.etuple.equery.uquery).distinct
@@ -39,11 +42,11 @@ object SystemFeatures {
         case Some(postags) => postagFrequencies(postags)
         case None => 0
       }
-    }    
+    }
   }
-  
+
   object PostagRanking extends AnswerGroupFeature("Normalized postags ranking in query results.") {
-    
+
     def apply(group: AnswerGroup) = {
       // get the queries run for this answergroup
       val queries = group.derivations.map(_.etuple.equery.uquery).distinct
@@ -57,9 +60,12 @@ object SystemFeatures {
           val rank = sizeRanking.indexWhere(_ == postagFrequencies(postags))
           rank
         }
-        case None => throw new RuntimeException("postag not found.")
+        case None => {
+          logger.error("postag not found: " + postagLookup.map(_.toString))
+          100.0 // throw new RuntimeException("postag not found.")
+        }
       }
-    }    
+    }
   }
-  
+
 }
