@@ -30,31 +30,10 @@ object ExtractData extends ScoobiApp {
     x._2.toList.take(500).distinct.sorted
   
   def run() {
-      
-    lazy val tagger = new StanfordPostagger()
-    lazy val tokenizer = new ClearTokenizer()
-    def processQuestion(q: String): Option[String] = try {
-      val tokens = tokenizer(q)
-      val tagged = tagger.postagTokens(tokens)
-      val lemmatized = tagged.map(MorphaStemmer.lemmatizePostaggedToken)
-      val strTokens = tokens.map(_.string).mkString(" ")
-      val strTags = tagged.map(_.postag).mkString(" ")
-      val strLems = lemmatized.map(_.lemma.toLowerCase).mkString(" ")
-      val result = s"${q}\t${strTokens}\t${strLems}\t${strTags}"
-      Some(result)
-    } catch {
-      case e: Throwable => { e.printStackTrace(System.err); None }
-    }
-    def processQuestionCluster(qs: List[String]): String = {
-      val proccessed = qs.flatMap(processQuestion)
-      proccessed.mkString("\t")
-    }
-    
     val lines = textFromLzo(args(0))
     val paras = lines.mapFlatten(getParaphrases)
     val plainClusters = paras.groupByKey.map(distinctSorted).distinct
-    val procClusters = plainClusters.map(processQuestionCluster)
-    persist(procClusters.toTextFile(args(1), true))
+    persist(plainClusters.toTextFile(args(1), true))
   }
 
 }
