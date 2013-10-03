@@ -27,7 +27,7 @@ object ExtractData extends ScoobiApp {
     for (x <- items; y <- items) yield (x, y)
     
   def distinctSorted(x: (String, Iterable[String])) = 
-    x._2.toList.take(50).distinct.sorted
+    x._2.toList.take(500).distinct.sorted
   
   def run() {
       
@@ -52,8 +52,9 @@ object ExtractData extends ScoobiApp {
     
     val lines = textFromLzo(args(0))
     val paras = lines.mapFlatten(getParaphrases)
-    val plainClusters = paras.groupByKey.map(distinctSorted).map(processQuestionCluster).distinct
-    persist(plainClusters.toTextFile(args(1), true))
+    val plainClusters = paras.groupByKey.map(distinctSorted).distinct
+    val procClusters = plainClusters.map(processQuestionCluster)
+    persist(procClusters.toTextFile(args(1), true))
   }
 
 }
