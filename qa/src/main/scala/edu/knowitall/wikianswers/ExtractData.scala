@@ -45,17 +45,15 @@ object ExtractData extends ScoobiApp {
     } catch {
       case e: Throwable => { e.printStackTrace(System.err); None }
     }
-    def processQuestionCluster(line: String): String = {
-      val qs = line.split("\t").toList
+    def processQuestionCluster(qs: List[String]): String = {
       val proccessed = qs.flatMap(processQuestion)
       proccessed.mkString("\t")
     }
     
     val lines = textFromLzo(args(0))
     val paras = lines.mapFlatten(getParaphrases)
-    val plainClusters = paras.groupByKey.map(distinctSorted).distinct.map(_.mkString("\t"))
-    val procdClusters = plainClusters.map(processQuestionCluster)
-    persist(procdClusters.toTextFile(args(1), true))
+    val plainClusters = paras.groupByKey.map(distinctSorted).distinct.map(processQuestionCluster)
+    persist(plainClusters.toTextFile(args(1), true))
   }
 
 }
