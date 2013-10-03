@@ -10,6 +10,8 @@ scalaVersion := "2.10.2"
 
 resolvers += "KnowItAll" at "http://knowitall.cs.washington.edu/maven2"
 
+resolvers += "ClouderaRepo" at "https://repository.cloudera.com/content/repositories/releases"
+
 resolvers ++= Seq(
     "Sonatype OSS Releases" at "http://oss.sonatype.org/content/repositories/releases/",
     "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
