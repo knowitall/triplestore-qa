@@ -52,7 +52,7 @@ object ExtractData extends ScoobiApp {
     
     val lines = textFromLzo(args(0))
     val paras = lines.mapFlatten(getParaphrases)
-    val plainClusters = paras.groupByKey.map(distinctSorted).distinct.map(processQuestionCluster)
+    val plainClusters = paras.groupByKey.map(distinctSorted).map(processQuestionCluster).distinct
     persist(plainClusters.toTextFile(args(1), true))
   }
 
