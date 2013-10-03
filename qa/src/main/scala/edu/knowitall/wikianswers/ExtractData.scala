@@ -31,8 +31,8 @@ object ExtractData extends ScoobiApp {
   
   def run() {
       
-    val tagger = new StanfordPostagger()
-    val tokenizer = new ClearTokenizer()
+    lazy val tagger = new StanfordPostagger()
+    lazy val tokenizer = new ClearTokenizer()
     def processQuestion(q: String): Option[String] = try {
       val tokens = tokenizer(q)
       val tagged = tagger.postagTokens(tokens)
