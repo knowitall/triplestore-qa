@@ -31,8 +31,8 @@ object ExtractData extends ScoobiApp {
   
   def run() {
       
-    val tagger = new StanfordPostagger()
-    val tokenizer = new ClearTokenizer()
+    lazy val tagger = new StanfordPostagger()
+    lazy val tokenizer = new ClearTokenizer()
     def processQuestion(q: String): Option[String] = try {
       val tokens = tokenizer(q)
       val tagged = tagger.postagTokens(tokens)
@@ -45,17 +45,15 @@ object ExtractData extends ScoobiApp {
     } catch {
       case e: Throwable => { e.printStackTrace(System.err); None }
     }
-    def processQuestionCluster(line: String): String = {
-      val qs = line.split("\t").toList
+    def processQuestionCluster(qs: List[String]): String = {
       val proccessed = qs.flatMap(processQuestion)
       proccessed.mkString("\t")
     }
     
     val lines = textFromLzo(args(0))
     val paras = lines.mapFlatten(getParaphrases)
-    val plainClusters = paras.groupByKey.map(distinctSorted).distinct.map(_.mkString("\t"))
-    val procdClusters = plainClusters.map(processQuestionCluster)
-    persist(procdClusters.toTextFile(args(1), true))
+    val plainClusters = paras.groupByKey.map(distinctSorted).distinct.map(processQuestionCluster)
+    persist(plainClusters.toTextFile(args(1), true))
   }
 
 }
