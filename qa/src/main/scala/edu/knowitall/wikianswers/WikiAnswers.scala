@@ -1,5 +1,7 @@
 package edu.knowitall.wikianswers
 import java.net.URLDecoder
+import edu.knowitall.tool.stem.Lemmatized
+import edu.knowitall.tool.postag.PostaggedToken
 
 case class WikiAnswersDoc(filename: String, content: String, docType: String) {
   override def toString = s"$filename\t${content.replaceAll("\t", " ")}\t$docType"
