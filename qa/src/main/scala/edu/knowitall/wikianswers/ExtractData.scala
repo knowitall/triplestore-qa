@@ -32,7 +32,7 @@ object ExtractData extends ScoobiApp {
   def run() {
     val lines = textFromLzo(args(0))
     val paras = lines.mapFlatten(getParaphrases)
-    val plainClusters = paras.groupByKey.map(distinctSorted).distinct
+    val plainClusters = paras.groupByKey.map(distinctSorted).distinct.map(_.mkString("\t"))
     persist(plainClusters.toTextFile(args(1), true))
   }
 
