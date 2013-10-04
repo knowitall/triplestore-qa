@@ -21,7 +21,7 @@ object TemplateCounterJob extends ScoobiApp {
     val input = args(0)
     val output = args(1)
     val lines = fromTextFile(input)
-    val results = lines.mapFlatten(getCounts).groupByKey.combine(Reduction.Sum.int).map(x => s"${x._1}\t${x._2}")
+    val results = lines.mapFlatten(getCounts).groupByKey.combine(Reduction.Sum.int).filterNot(x => x._2 < 10).map(x => s"${x._1}\t${x._2}")
     persist(results.toTextFile(output, true))
   }
 
