@@ -3,8 +3,9 @@ package edu.knowitall.wikianswers
 import edu.knowitall.tool.stem.Lemmatized
 import edu.knowitall.tool.postag.PostaggedToken
 import edu.knowitall.tool.tokenize.Token
+import edu.knowitall.tool.chunk.ChunkedToken
 
-case class Question(text: String, annotated: Seq[Lemmatized[PostaggedToken]])
+case class Question(text: String, annotated: Seq[Lemmatized[ChunkedToken]])
 
 case object Question {
   def fromFields(fields: Seq[String]): Option[Question] = {
@@ -14,7 +15,8 @@ case object Question {
         val lemmas = slemmas.split("\t").toSeq
         val tags = stags.split("\t").toSeq
         val taggedTokens = (tokens zip tags) map { case (token, tag) => new PostaggedToken(token, tag) }
-        val res = (taggedTokens zip lemmas) map { case (tt, lem) => new Lemmatized(tt, lem) }
+        val chunkedTokens = taggedTokens.map(t => new ChunkedToken(t, ""))
+        val res = (chunkedTokens zip lemmas) map { case (tt, lem) => new Lemmatized(tt, lem) }
         Some(Question(text, res))
       } 
       case _ => None
