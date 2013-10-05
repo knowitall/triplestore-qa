@@ -5,6 +5,13 @@ import edu.knowitall.tool.chunk.ChunkedToken
 import edu.knowitall.tool.tokenize.Token
 import edu.knowitall.tool.postag.PostaggedToken
 import edu.knowitall.tool.chunk.Chunker
+import edu.washington.cs.knowitall.regex.RegularExpression
+import edu.washington.cs.knowitall.regex.ExpressionFactory
+import edu.washington.cs.knowitall.regex.Expression
+import edu.washington.cs.knowitall.logic.Expression.{Arg => LogicArg}
+import edu.washington.cs.knowitall.regex.Expression.BaseExpression
+import edu.washington.cs.knowitall.logic.LogicExpression
+import com.google.common.base.{Function => GuavaFunction}
 
 object NlpUtils {
   
@@ -41,6 +48,32 @@ object NlpUtils {
       } 
       case _ => None
     }
+  }
+  
+  type TokenType = Lemmatized[ChunkedToken]
+  def makeRegex(expr: String): RegularExpression[TokenType] = {
+    val factory = new ExpressionFactory[TokenType]() {
+      override def create(token: String): BaseExpression[TokenType] = {
+        new BaseExpression[TokenType](token) {
+          val logic = LogicExpression.compile(token,
+          new GuavaFunction[String, LogicArg[TokenType]]() {
+            override def apply(s: String): LogicArg[TokenType] = {
+              new LogicArg[TokenType]() {
+                val pat = "(.*?)\\s*=\\s*'(.*)'".r
+                override def apply(t: TokenType) = s match {
+                  case pat("pos", value) => t.postag == value
+                  case pat("lemma", value) => t.lemma.toLowerCase() == value.toLowerCase()
+                  case pat("string", value) => t.string == value
+                  case pat("chunk", value) => t.chunk == value
+                }
+              }
+            }
+          })
+          override def apply(t: TokenType) = logic.apply(t)
+        }
+      }
+    }
+    RegularExpression.compile(expr, factory)
   }
 
 }
