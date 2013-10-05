@@ -15,7 +15,7 @@ case class TemplateCounter(cluster: QuestionCluster) {
   val templatePairs: Set[(String, String)] = {
     val pairs = for (q1 <- absCluster; q2 <- absCluster; if q1 != q2) yield List(q1, q2)
     val allPairs = pairs flatMap {
-      case List(q1, q2) if q1.valueString == q2.valueString => Some((q1.template.templateString, q2.template.templateString))
+      case List(q1, q2) if q1.valueString == q2.valueString && q1.template.templateString != q2.template.templateString => Some((q1.template.templateString, q2.template.templateString))
       case _ => None
     }
     allPairs.toSet
