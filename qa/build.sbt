@@ -72,8 +72,6 @@ libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-conf-
 
 libraryDependencies += "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.9"
 
-libraryDependencies += "edu.washington.cs.knowitall.taggers" %% "taggers" % "0.1"
-
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-chunk-opennlp" % "2.4.2"
 
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-stanford" % "2.4.2"
@@ -123,3 +121,7 @@ mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
     }                                                                           
   }                                                                             
 } 
+
+excludedJars in assembly <<= (fullClasspath in assembly) map { cp => 
+  cp filter {c=> List("scalatest", "lucene", "shapeless", "solr") exists {c.data.getName contains _} }
+}
