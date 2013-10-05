@@ -10,7 +10,7 @@ object TemplateCounterJob extends ScoobiApp {
   def lineToCluster(line: String): QuestionCluster = QuestionCluster.fromString(line)
   
   def getCounts(line: String): List[(String, Int)] = {
-    System.err.prinln(line.slice(0, 80))
+    System.err.println(line.slice(0, 80))
     val cluster = lineToCluster(line)
     val counter = new TemplateCounter(cluster)
     val pairs = for ((q1, q2) <- counter.templatePairs) yield (s"$q1|$q2", 1)
