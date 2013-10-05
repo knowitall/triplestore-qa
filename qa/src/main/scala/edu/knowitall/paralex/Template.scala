@@ -2,7 +2,7 @@ package edu.knowitall.paralex
 
 import edu.knowitall.tool.stem.Lemmatized
 import edu.knowitall.tool.chunk.ChunkedToken
-import edu.knowitall.taggers.tag.PatternTagger.makeRegex
+import edu.knowitall.util.NlpUtils.makeRegex
 import scala.collection.JavaConversions._
 import edu.knowitall.util.NlpUtils
 

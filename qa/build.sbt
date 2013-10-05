@@ -72,8 +72,6 @@ libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-conf-
 
 libraryDependencies += "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.9"
 
-libraryDependencies += "edu.washington.cs.knowitall.taggers" %% "taggers" % "0.1"
-
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-chunk-opennlp" % "2.4.2"
 
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-stanford" % "2.4.2"
