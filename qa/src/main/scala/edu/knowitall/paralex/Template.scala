@@ -9,7 +9,7 @@ import edu.knowitall.util.NlpUtils
 case class Template(left: Seq[Lemmatized[ChunkedToken]], right: Seq[Lemmatized[ChunkedToken]]) {
   def substitute(value: Seq[Lemmatized[ChunkedToken]]) = left ++ value ++ right
   def serialize = NlpUtils.serialize(left) + "|" + NlpUtils.serialize(right)
-  def templateString = left.map(_.lemma.toLowerCase()).mkString(" ") + " $y " + right.map(_.lemma.toLowerCase()).mkString(" ")
+  def templateString = (left.map(_.lemma.toLowerCase()).mkString(" ") + " $y " + right.map(_.lemma.toLowerCase()).mkString(" ")).trim
 }
 
 case object Template {
@@ -24,7 +24,7 @@ case object Template {
 case class AbstractedQuestion(value: Seq[Lemmatized[ChunkedToken]], template: Template) {
   def this(q: Seq[Lemmatized[ChunkedToken]], i: Int, j: Int) = this(q.slice(i, j), Template(q.slice(0, i), q.slice(j, q.size)))
   def substitute = template.substitute(value)
-  def valueString = value.map(_.lemma.toLowerCase()).mkString(" ")
+  def valueString = value.map(_.lemma.toLowerCase()).mkString(" ").trim()
   def serialize = NlpUtils.serialize(value) + "|" + template.serialize 
 }
 
@@ -45,10 +45,14 @@ case object AbstractedQuestion {
   def intervals(size: Int, max: Int) =
     for (i <- Range(0, size); j <- Range(i, size); if j+1-i <= max) yield (i, j+1)
     
+  def detInTemplate(abs: AbstractedQuestion) = abs.template.left.size > 0 && abs.template.left.last.postag == "DT"
+  
+  def keepAbs(abs: AbstractedQuestion) = !detInTemplate(abs)
+    
   def generateAbstracted(question: Seq[Lemmatized[ChunkedToken]]): Iterable[AbstractedQuestion] = 
     for ((i, j) <- intervals(question.size, maxSize); 
     	 abs = new AbstractedQuestion(question, i, j);
-    	 if valuePattern(abs.value))
+    	 if valuePattern(abs.value) && keepAbs(abs))
       yield abs
   
 }
