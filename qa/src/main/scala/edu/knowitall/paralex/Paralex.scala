@@ -32,6 +32,9 @@ import scala.collection.immutable.HashMap
 import shapeless.ToList
 import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.scoring.NumDerivationsScorer
+import edu.knowitall.tool.stem.Lemmatized
+import edu.knowitall.tool.chunk.ChunkedToken
+
 
 case class QACluster(answers: Seq[String], questions: Seq[String])
 
