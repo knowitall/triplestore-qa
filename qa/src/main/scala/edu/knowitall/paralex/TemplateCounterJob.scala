@@ -4,6 +4,7 @@ import com.nicta.scoobi.application.ScoobiApp
 import com.nicta.scoobi.Scoobi._
 import edu.knowitall.wikianswers.QuestionCluster
 import com.nicta.scoobi.core.Reduction
+import scala.io.Source
 
 object TemplateCounterJob extends ScoobiApp {
   
@@ -26,4 +27,9 @@ object TemplateCounterJob extends ScoobiApp {
     persist(results.toTextFile(output, true))
   }
 
+}
+
+object TemplateCounterTest extends App {
+  val lines = Source.fromInputStream(System.in, "UTF8").getLines
+  lines.flatMap(TemplateCounterJob.getCounts) foreach println
 }
