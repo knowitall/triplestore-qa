@@ -17,7 +17,6 @@ object TemplateCounterJob extends ScoobiApp {
     val marginals = for (q <- counter.templateStrings) yield (s"$q", 1)
     val result = (pairs.toList ++ marginals.toList).distinct
     val r = new scala.util.Random
-    if (r.nextDouble < 0.001) System.err.println(s"Returning $result")
     result
   }
   
