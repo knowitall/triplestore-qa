@@ -22,48 +22,48 @@ import scala.Array.canBuildFrom
 import scala.Option.option2Iterable
 
 case object LiteralFieldsDifference extends AnswerGroupFeature("Literal Fields Difference") {
-  
+
   import FieldDifference.{conjuncts, avg}
-  
+
   def apply(group: AnswerGroup) = {
-    val queries = group.derivations.map(_.etuple.equery)
-    val cs = queries flatMap conjuncts
+    val queries = group.derivations.map(_.etuple.equery).distinct
+    val cs = queries.flatMap(conjuncts).distinct
     val literalFields = cs.flatMap(_.literalFields).map(_._1.name).distinct
     require(literalFields.size >= 1, "No literals in any query conjunct.")
     val diffs = literalFields.map(f => FieldDifference(f).apply(group))
-    val sum = diffs.sum
-    sum
+    val max = diffs.max
+    max
   }
 }
 
 case class FieldDifference(field: String) extends AnswerGroupFeature("Query-Field similarity: " + field) {
-  
+
   import FieldDifference._
-  
+
   val splitRegex = "\\s+".r
-  
+
   def queryLiteral(qconj: TConjunct) = {
-    val desiredField = qconj.literalFields.find { 
+    val desiredField = qconj.literalFields.find {
       case (f, v) => f.name == FieldDifference.this.field
     }
-    desiredField.map { 
+    desiredField.map {
       case (f, v) => v.toString
     }
   }
-  
+
   def tupleLiteral(qconj: TConjunct, tuple: Tuple) = {
     val fullField = qconj.name + "." + FieldDifference.this.field
     tuple.get(fullField).map(_.toString)
   }
-  
+
   def apply(group: AnswerGroup) = {
     val queriesToDerivations = group.derivations.groupBy(d => d.etuple.equery)
     val queriesToTuples = queriesToDerivations.map{case (query, derivs) => (query, derivs.map(_.etuple.tuple)) }
-    val conjunctsToTuples = queriesToTuples.flatMap { case (query, tuples) => 
-      conjuncts(query).map { c => (c, tuples) }  
+    val conjunctsToTuples = queriesToTuples.flatMap { case (query, tuples) =>
+      conjuncts(query).map { c => (c, tuples) }
     }
     val diffs = conjunctsToTuples.flatMap { case (conjunct, tuples) =>
-      queryLiteral(conjunct) match { 
+      queryLiteral(conjunct) match {
         case Some(qs) => {
           val tliterals = tuples.map(t => tupleLiteral(conjunct, t).get).distinct
           tliterals.map { tl => cleanTokenDifference(qs, tl) }
@@ -71,27 +71,19 @@ case class FieldDifference(field: String) extends AnswerGroupFeature("Query-Fiel
         case None => Seq(0)
       }
     }
-    
-    avg(diffs.map(d => (d*d).toDouble))
+
+    diffs.max
   }
-  
+
   def cleanTokenDifference(literal1: String, literal2: String): Int = {
-    
+
     val ls1 = splitRegex.split(literal1)
     val ls2 = splitRegex.split(literal2)
-    
+
     val cls1 = normalizeLiteral(ls1).toSet
     val cls2 = normalizeLiteral(ls2).toSet
-    
+
     symmetricDiff(cls1, cls2).size
-  }
-  
-  def tokenDifference(literal1: String, literal2: String): Int = {
-    
-    val ls1 = splitRegex.split(literal1).toSet
-    val ls2 = splitRegex.split(literal2).toSet
-    
-    symmetricDiff(ls1, ls2).size
   }
 
   def symmetricDiff[T](s1: Set[T], s2: Set[T]): Set[T] = {
@@ -104,7 +96,7 @@ case class FieldDifference(field: String) extends AnswerGroupFeature("Query-Fiel
 object FieldDifference {
   import TriplestoreFeatures.AnswerFrequency.junkTokens
   def avg(ns: Iterable[Double]) = ns.sum.toDouble / ns.size.toDouble
-  
+
   def normalizeLiteral(ss: Seq[String]) = {
     val lcs = ss.map(_.toLowerCase)
     val stems = lcs.map(MorphaStemmer.apply)
@@ -112,7 +104,7 @@ object FieldDifference {
     val filtered = stems.filter(tokenFilter)
     filtered
   }
-  
+
   def conjuncts(query: ExecQuery) = query match {
     case q: ExecConjunctiveQuery => q.conjuncts
     case _ => Nil
