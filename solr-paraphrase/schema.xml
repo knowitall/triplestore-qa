@@ -69,7 +69,10 @@
    <field name="template2" type="text_general" indexed="true" stored="true" required="true"/>
    <field name="template1_exact" type="lowercase" indexed="true" stored="true" required="true"/>
    <field name="template2_exact" type="lowercase" indexed="true" stored="true" required="true"/>
-   <field name="score" type="float" indexed="false" stored="true" required="true"/>
+   <field name="score" type="float" indexed="true" stored="true" required="true"/>
+   <field name="joint_count" type="float" indexed="false" stored="true" required="true"/>
+   <field name="marg_count1" type="float" indexed="false" stored="true" required="true"/>
+   <field name="marg_count2" type="float" indexed="false" stored="true" required="true"/>
    <field name="_version_" type="long" indexed="true"  stored="true"/>
  </fields>
 
