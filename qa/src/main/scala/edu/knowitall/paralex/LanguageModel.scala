@@ -7,11 +7,15 @@ import scalaj.http.Http
 import scala.io.Source
 
 trait LanguageModel {
-  
+  /**
+   * Queries a string, returns its log probability.
+   */
   def query(s: String): Double
-  
+  /**
+   * Does a batch query of a bunch of strings, returns a list of the (input,
+   * log probability) pairs.
+   */
   def query(s: Iterable[String]): List[(String, Double)]
-
 }
 
 case class KenLmServer(url: String = "http://localhost", port: Int = 8080) extends LanguageModel {
@@ -25,13 +29,4 @@ case class KenLmServer(url: String = "http://localhost", port: Int = 8080) exten
     val lines = Http.post(root).params("q" -> joined).asString.trim.split("\n")
     lst.zip(lines).map { case (a, b) => (a, b.toDouble) }
   }
-}
-case object KenLmServer {
-  def escape(s: String) = URLEncoder.encode(s, "UTF8").replace("+", "%20")
-}
-
-case object LMTest extends App {
-  val lm = KenLmServer("http://localhost", 8089)
-  val lines = Source.fromInputStream(System.in, "UTF8").getLines.toList
-  lm.query(lines).foreach { case (a,b) => println(s"$b\t$a") }
 }
