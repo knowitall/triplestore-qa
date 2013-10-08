@@ -35,7 +35,7 @@ case object TemplatePair {
     
   def parseDouble(s: String) = try { Some(s.toDouble) } catch { case e:Throwable => None }
   
-  val linePat = "(.*)\t(.*)\t([0-9](\\.[0-9]*)?)\t([0-9](\\.[0-9]*)?)\t([0-9](\\.[0-9]*)?)".r
+  val linePat = "(.*)\t(.*)\t([0-9](?:\\.[0-9]*)?)\t([0-9](?:\\.[0-9]*)?)\t([0-9](?:\\.[0-9]*)?)".r
   def fromString(s: String): Option[TemplatePair] = {
     s match {
       case linePat(t1, t2, js, ms1, ms2) => Some(new TemplatePair(t1, t2, js, ms1, ms2))
