@@ -4,7 +4,9 @@ import edu.knowitall.tool.stem.Lemmatized
 import edu.knowitall.tool.chunk.ChunkedToken
 import edu.knowitall.collection.immutable.Interval
 
-case class ArgQuestion(question: Seq[String], argInterval: Interval)
+case class ArgQuestion(question: Seq[String], argInterval: Interval) {
+  def arg: String = question.slice(argInterval.start, argInterval.end).mkString(" ")
+}
 
 case class ParaphraseDerivation(question: ArgQuestion, 
     paraphrase: ArgQuestion, templates: TemplatePair)
@@ -13,7 +15,7 @@ trait ParaphraseGenerator {
   def generate(question: Seq[String]): Iterable[ParaphraseDerivation]
 }
 
-class SolrParaphraseGenerator(url: String, maxHits: Int = 500, maxArgLength: Int = 4) extends ParaphraseGenerator {
+class SolrParaphraseGenerator(url: String = "http://rv-n12.cs.washington.edu:28983/solr/paraphrase", maxHits: Int = 500, maxArgLength: Int = 4) extends ParaphraseGenerator {
   val client = new ParaphraseTemplateClient(url)
   def intervals(size: Int) =
     for (i <- Range(0, size); j <- Range(i, size); if j+1-i <= maxArgLength) yield Interval.open(i, j+1)
@@ -40,7 +42,7 @@ class SolrParaphraseGenerator(url: String, maxHits: Int = 500, maxArgLength: Int
     val i = templSeq.indexOf("$y")
     if (i >= 0) {
       val left = templSeq.slice(0, i)
-      val right = templSeq.slice(i+arg.size, templSeq.size)
+      val right = templSeq.slice(i+1, templSeq.size)
       val para = ArgQuestion(left ++ arg ++ right, Interval.open(i, i+arg.size))
       para
     } else {
