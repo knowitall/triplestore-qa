@@ -174,14 +174,14 @@ case class SolrQuestionParaphraser(url: String) extends QuestionParaphraser {
     }
   }
   
-  override def paraphrase(s: String) = {
-    val q = normalize(s)
+  override def paraphrase(s: String) = List() //{
+   /* val q = normalize(s)
     val temps = argExtractor.arguments(q)
     val matches = for (t <- temps;
     				items = client.paraphrases(t.templateString);
     				(pp, score) <- items) yield (AbstractedArg(t.arg, templateToQTokens(pp)).substitute, score)
     matches.sortBy(x => -x._2).map(x => x._1.mkString(" ")).toList
-  }
+  }*/
 }
 
 class ParalexQuestionParser(paraphraser: QuestionParaphraser, parser: QuestionParser)
