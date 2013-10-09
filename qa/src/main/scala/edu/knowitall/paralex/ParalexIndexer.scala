@@ -8,6 +8,7 @@ import org.apache.solr.client.solrj.SolrServer
 import org.slf4j.LoggerFactory
 import org.apache.solr.client.solrj.impl.HttpSolrServer
 import org.apache.solr.client.solrj.SolrQuery
+import org.apache.solr.client.solrj.SolrQuery.SortClause
 
 case class ParaphraseTemplateClient(solrUrl: String, hitLimit: Int = 500) {
   val logger = LoggerFactory.getLogger(this.getClass)
@@ -16,15 +17,16 @@ case class ParaphraseTemplateClient(solrUrl: String, hitLimit: Int = 500) {
   def paraphrases(s: String, limit: Int = hitLimit): List[(String, Double)] = {
     val query = new SolrQuery(s"""${searchField}:"${s}"""")
     query.setRows(hitLimit)
+    query.addSort(new SortClause("joint_count", SolrQuery.ORDER.desc))
     logger.info(s"Sending query: ${query.toString()}")
     val resp = server.query(query)
     logger.info(s"Found ${resp.getResults().getNumFound()} hits")
     val pairs = resp.getResults().toList.flatMap(TemplatePair.fromDocument)
-    pairs.map(p => (p.template2, p.score))
+    pairs.map(p => (p.template2, p.pmi))
   }
 }
 
-case class TemplatePair(template1: String, template2: String, score: Double, count1: Double, count2: Double, jointCount: Double) {
+case class TemplatePair(template1: String, template2: String, pmi: Double, count1: Double, count2: Double, jointCount: Double) {
   def this(t1: String, t2: String, j: Double, c1: Double, c2: Double) = this(t1, t2, TemplatePair.pmi(j, c1, c2), c1, c2, j)
   def this(t1: String, t2: String, j: String, c1: String, c2: String) = this(t1, t2, j.toDouble, c1.toDouble, c2.toDouble)
 }
@@ -44,7 +46,7 @@ case object TemplatePair {
   def fromDocument(doc: SolrDocument): Option[TemplatePair] = {
     val t1obj: Any = doc.getFieldValue("template1")
     val t2obj: Any = doc.getFieldValue("template2")
-    val sobj: Any = doc.getFieldValue("score")
+    val sobj: Any = doc.getFieldValue("pmi")
     val count1obj: Any = doc.getFieldValue("marg_count1")
     val count2obj: Any = doc.getFieldValue("marg_count2")
     val jointobj: Any = doc.getFieldValue("joint_count")
@@ -61,9 +63,9 @@ class ParalexIndexer(server: SolrServer) {
   
   def pairToDoc(pair: TemplatePair): SolrInputDocument = {
     val doc = new SolrInputDocument
-    doc.addField("template1", pair.template1, pair.score.toFloat)
-    doc.addField("template2", pair.template2, pair.score.toFloat)
-    doc.addField("score", pair.score)
+    doc.addField("template1", pair.template1, pair.pmi.toFloat)
+    doc.addField("template2", pair.template2, pair.pmi.toFloat)
+    doc.addField("score", pair.pmi)
     doc.addField("id", s"${pair.template1}|${pair.template2}")
     doc.addField("marg_count1", s"${pair.count1}")
     doc.addField("marg_count2", s"${pair.count2}")
