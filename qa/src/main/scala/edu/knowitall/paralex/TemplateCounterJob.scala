@@ -16,7 +16,6 @@ object TemplateCounterJob extends ScoobiApp {
     val pairs = for ((q1, q2) <- counter.templatePairs; List(qa, qb) = List(q1, q2).sortBy(x => x.toString())) yield (s"$qa|$qb", 1)
     val marginals = for (q <- counter.templateStrings) yield (s"$q", 1)
     val result = (pairs.toList ++ marginals.toList).distinct
-    val r = new scala.util.Random
     result
   }
   
