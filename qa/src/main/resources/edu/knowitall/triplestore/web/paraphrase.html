@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Web REPL</title>
+<script src="js/jquery-latest.min.js"></script>
+<script src="js/paraphrase.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script>
+$(document).ready(function() {
+    initialize();
+});
+</script>
+</head>
+<style>
+    body {
+        font-family: arial;
+    }
+    #inputbox {
+        width: 90%;
+        font-size: large;
+        font-family: courier;
+    }
+    #results {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .equeryHead {
+        display: inline;
+    }
+    .highlight {
+        color: blue;
+    }
+    .conjunct {
+        display: inline;
+        margin-right: 5px;
+    }
+    .tuplesContainer table {
+    }
+    .tuples {
+        border-collapse: collapse;
+    }
+    .tuples td {
+        width: 100px;
+        padding: 10px;
+        text-align: center;
+        background-color: Beige;
+    }
+    .tuples th {
+        border-bottom: 1px solid black;
+        font-weight: bold;
+    }
+    .even td {
+        background-color: #f5f5f5;
+    }
+    .odd td {
+        background-color: #fffff0;
+    }
+    .answer {
+        text-align: right;
+        padding-right: 10px;
+        margin: 5px;
+        float: left;
+        width: 15%;
+    }
+    .answer h1 {
+        font-size: 16pt;
+        color: blue;
+    }
+    .score {
+        color: grey;
+    }
+    .equeryGroup {
+        margin: 5px;
+        padding: 5px;
+        width: 80%;
+        float: right;
+    }
+    .answerGroup {
+        display: table;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .endTuple {
+        border-right: 1px solid black;
+    }
+    #config select {
+        width: 200px;
+        font-size: large;
+    }
+    #config {
+        margin: 5px;
+    }
+    #config td {
+        padding: 5px
+    }
+    .interpQuestion {
+        width: 80%;
+        float: right;
+        margin-top: 20px;
+        color: grey;
+        font-style: italic;
+        padding: 5px;
+    }
+</style>
+<body>
+    <div id="content">
+        <h1>Paraphrase</h1>
+        <div style="font-size: large; width: 100%">
+        Input: <input id="inputbox"/>
+        </div>
+        <div id="results">
+        </div>
+    </div>
+
+</body>
+</html>
