@@ -14,15 +14,15 @@ case class ParaphraseTemplateClient(solrUrl: String, hitLimit: Int = 500) {
   val logger = LoggerFactory.getLogger(this.getClass)
   val server = new HttpSolrServer(solrUrl)
   val searchField = "template1_exact"
-  def paraphrases(s: String, limit: Int = hitLimit): List[(String, Double)] = {
+  def paraphrases(s: String, limit: Int = hitLimit) = {
     val query = new SolrQuery(s"""${searchField}:"${s}"""")
     query.setRows(hitLimit)
-    query.addSort(new SortClause("joint_count", SolrQuery.ORDER.desc))
+    query.addSort(new SortClause("pmi", SolrQuery.ORDER.desc))
     logger.info(s"Sending query: ${query.toString()}")
     val resp = server.query(query)
     logger.info(s"Found ${resp.getResults().getNumFound()} hits")
     val pairs = resp.getResults().toList.flatMap(TemplatePair.fromDocument)
-    pairs.map(p => (p.template2, p.pmi))
+    pairs
   }
 }
 
