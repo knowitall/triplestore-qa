@@ -61,8 +61,8 @@ class ParalexIndexer(server: SolrServer) {
   
   def pairToDoc(pair: TemplatePair): SolrInputDocument = {
     val doc = new SolrInputDocument
-    doc.addField("template1", pair.template1)
-    doc.addField("template2", pair.template2)
+    doc.addField("template1", pair.template1, pair.score.toFloat)
+    doc.addField("template2", pair.template2, pair.score.toFloat)
     doc.addField("score", pair.score)
     doc.addField("id", s"${pair.template1}|${pair.template2}")
     doc.addField("marg_count1", s"${pair.count1}")
@@ -72,6 +72,7 @@ class ParalexIndexer(server: SolrServer) {
   }
   
   def indexPair(pair: TemplatePair) = {
+
     server.add(pairToDoc(pair))
   }
   
