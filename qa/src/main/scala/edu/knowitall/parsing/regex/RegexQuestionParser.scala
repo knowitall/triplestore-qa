@@ -23,7 +23,7 @@ import scala.collection.JavaConversions._
 import edu.knowitall.tool.postag.StanfordPostagger
 
 class DummyChunker {
-  private val tagger = new StanfordPostagger()
+  private lazy val tagger = new StanfordPostagger()
   def apply(s: String): Seq[ChunkedToken] = tagger(s) map (t => new ChunkedToken("", t.postag, t.string, t.offsets.start))
 }
 
