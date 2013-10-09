@@ -95,13 +95,14 @@ case object Components {
   val baseClient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 100)
   val client = CachedTriplestoreClient(baseClient, 100000)
   val pp = SolrQuestionParaphraser("http://rv-n12.cs.washington.edu:28983/solr/paraphrase")
+  val regexParser = RegexQuestionParser()
 
   val parsers: Map[String, QuestionParser] =
     Map("formal" -> FormalQuestionParser(),
       "keyword" -> StringMatchingParser(client),
       "paralex-old" -> OldParalexParser(),
-      "regex" -> RegexQuestionParser(),
-      "paralex" -> new ParalexQuestionParser(pp, RegexQuestionParser()))
+      "regex" -> regexParser,
+      "paralex" -> new ParalexQuestionParser(pp, regexParser))
 
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client),
