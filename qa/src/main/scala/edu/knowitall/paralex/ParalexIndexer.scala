@@ -65,7 +65,7 @@ class ParalexIndexer(server: SolrServer) {
     val doc = new SolrInputDocument
     doc.addField("template1", pair.template1, pair.pmi.toFloat)
     doc.addField("template2", pair.template2, pair.pmi.toFloat)
-    doc.addField("score", pair.pmi)
+    doc.addField("pmi", pair.pmi)
     doc.addField("id", s"${pair.template1}|${pair.template2}")
     doc.addField("marg_count1", s"${pair.count1}")
     doc.addField("marg_count2", s"${pair.count2}")
