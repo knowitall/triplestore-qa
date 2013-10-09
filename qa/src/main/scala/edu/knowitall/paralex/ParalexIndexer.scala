@@ -35,10 +35,9 @@ case object TemplatePair {
     
   def parseDouble(s: String) = try { Some(s.toDouble) } catch { case e:Throwable => None }
   
-  val linePat = "(.*)\t(.*)\t([0-9](?:\\.[0-9]*)?)\t([0-9](?:\\.[0-9]*)?)\t([0-9](?:\\.[0-9]*)?)".r
   def fromString(s: String): Option[TemplatePair] = {
-    s match {
-      case linePat(t1, t2, js, ms1, ms2) => Some(new TemplatePair(t1, t2, js, ms1, ms2))
+    s.split("\t", 5) match {
+      case Array(t1, t2, js, ms1, ms2) => Some(new TemplatePair(t1, t2, js, ms1, ms2))
       case _ => None
     }
   }
@@ -66,6 +65,9 @@ class ParalexIndexer(server: SolrServer) {
     doc.addField("template2", pair.template2)
     doc.addField("score", pair.score)
     doc.addField("id", s"${pair.template1}|${pair.template2}")
+    doc.addField("marg_count1", s"${pair.count1}")
+    doc.addField("marg_count2", s"${pair.count2}")
+    doc.addField("joint_count", s"${pair.jointCount}")
     doc
   }
   
