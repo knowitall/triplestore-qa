@@ -103,9 +103,7 @@ object RegexQuestionPatterns {
 
   val prep = "<pos='RB'>? <pos='IN' | pos='TO' | pos='RP'> <pos='RB'>?";
 
-  val relTail = s"$prep+ (?:$word* $prep)?"
-
-  val rel = s"$verb+ (?:$word* $prep)?"
+  val rel = s"$verb+ (?:$modifier* $word* $prep)?"
 
   val property = s"<lemma='be'> <pos='DT'> (${word}+) <lemma='of'>"
 
@@ -215,7 +213,7 @@ object RegexQuestionPatterns {
       s"<lemma='what' | lemma='which'> $classInst $prep (<ent1>:$ent) (<rel>:$rel) (<ent2>:$ent) $punct?",
       "($x, " + isa + ", $ent1) ($x, $rel, $ent2)"),
 
-    // Hottest place in the US? => ($x, is the hottest place in, the us)
+    // Hottest place in the US? => ($x, is hottest place in, the us)
     new RegexQuestionPattern(
       Seq("ent1", "ent2", "prep"),
       s"(<ent1>:$ent) (<prep>:$prep) (<ent2>:$ent) $punct?",
