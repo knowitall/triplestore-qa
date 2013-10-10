@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+ # -*- coding: utf-8 -*-
 import web
 import sys
 import kenlm
@@ -22,7 +24,7 @@ class score:
         return [lm.score(q) for q in queries]
 
     def GET(self):
-        i = web.input()
+        i = web.input(_unicode=False)
         queries = [q.strip() for q in i.q.split('|')]
         print >>sys.stderr, "queries:\n%s" % str('\n'.join(queries))
         return '\n'.join('%0.4f' % s for s in self.get_scores(queries))
