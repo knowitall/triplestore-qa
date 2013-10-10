@@ -15,6 +15,7 @@ import java.io.File
 import unfiltered.response.ContentEncoding
 import org.apache.commons.io.IOUtils
 import unfiltered.request.HttpRequest
+import edu.knowitall.paralex.ParaphraseDemo
 
 
 object WebRepl extends App {
@@ -36,6 +37,9 @@ object WebRepl extends App {
         
       case req @ GET(Path(Seg("listComponents" :: Nil))) =>
         listComponents()
+        
+      case req @ GET(Path(Seg("paraphrase" :: Nil))) =>
+        paraphrase(req.parameterValues("q").mkString(" "))
 
       /**
        * Map all other URL paths to get the static content stored as a 
@@ -43,6 +47,13 @@ object WebRepl extends App {
        */
       case req @ GET(Path(path)) => getStatic(path)
         
+    }
+    
+    val pdemo = new ParaphraseDemo()
+    def paraphrase(query: String) = {
+      val results = pdemo.paraphrase(query)
+      val resultJson = JsonSerialization.serialize(results)
+      ContentEncoding("application/json") ~> ResponseString(resultJson) ~> Ok
     }
     
     def getConfig(req: HttpRequest[_]): QAConfig = {

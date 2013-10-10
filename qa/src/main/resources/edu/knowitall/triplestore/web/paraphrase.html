@@ -4,23 +4,29 @@
 <meta charset="utf-8">
 <title>Web REPL</title>
 <script src="js/jquery-latest.min.js"></script>
-<script src="js/repl.js"></script>
+<script src="js/paraphrase.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
 <script>
 $(document).ready(function() {
     initialize();
-    var exs = [
-        {q: '?, type, us president', note: 'Leave out a field using a question mark'}, 
-        {q: '?, "type", "us president"', note: 'Quote strings for exact matches'}, 
-        {q: "(salad, with, $x) ($x, high in, protein)", note: "Dollar signs prefixes introduce join variables"},
-        {q: "(salad, with, $x) ($x, high in, protein) ($x, compatible with, vegetarians)", note: ""},
-        {q: "(salad, with, $x) ($x, high in, protein) ($x, compatible with, veganism)", note: ""},
-        {q: "($x, discovered, radium) ($x, born in, $y) ($y, type, city)", note: "Multiple joins are allowed"},
-        {q: '(haggis, $r, scotland) ($x, $r, italy) ($x, "type", food)', note: "Joins over relations are allowed, too"},
-        {q: '(haggis, $r, scotland) ($x, $r, france) ($x, "type", food)', note: ""},
-        {q: '$x : ($x, directed by, woody allen) ($x, film location, $y) ($y, "type", "city")', note: "specify the query variable using a colon"},
-        {q: '$y : ($x, directed by, woody allen) ($x, film location, $y) ($y, "type", "city")', note: ""},
-    ];
-    //for (var i = 0; i < exs.length; i++) { addExample(exs[i]); }
+    var examples = [
+        'What is good for a sunburn?',
+        'Are there any famous people from Detroit?',
+        'What companies did Steve Jobs start?',
+        'How can you tell if you have an protein deficiency?',
+        'What fuel does an internal combustion engine use?',
+        'What ingredients are in italian cuisine?',
+        'What is the max speed of a collins class submarine?',
+        'What country does the royal navy belong to?'
+    ]
+    $.each(examples, function(i, ex) {
+        addExample(ex);
+    });
+    $('#tog').click(function(e) {
+        e.preventDefault();
+        $('#examples').toggle();
+    });
+    $('#tog').click();
 });
 </script>
 </head>
@@ -114,13 +120,23 @@ $(document).ready(function() {
         font-style: italic;
         padding: 5px;
     }
+    #resultTable td, th {
+    word-wrap: break-word;
+    max-width: 400px;
+    padding: 10px;
+    }
+    #resultTable { width: 100%}
+    #examples {
+        font-size: small;
+    }
+    #tog { font-size: small ; }
 </style>
 <body>
     <div id="content">
-        <h1>Triplestore Search</h1>
-        <div id="examples"></div>
+        <h1>Paraphrase</h1>
         <div style="font-size: large; width: 100%">
-        <div id="config"></div>
+        <div id="tog"><a href="#">Show/Hide Examples</a></div>
+        <table id="examples"></table>
         Input: <input id="inputbox"/>
         </div>
         <div id="results">

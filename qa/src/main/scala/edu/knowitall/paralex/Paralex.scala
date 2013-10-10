@@ -32,6 +32,10 @@ import scala.collection.immutable.HashMap
 import shapeless.ToList
 import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.scoring.NumDerivationsScorer
+import edu.knowitall.tool.stem.Lemmatized
+import edu.knowitall.tool.chunk.ChunkedToken
+import edu.knowitall.tool.postag.StanfordPostagger
+
 
 case class QACluster(answers: Seq[String], questions: Seq[String])
 
@@ -137,10 +141,6 @@ case class TemplateGenerator(parser: QuestionParser = RegexQuestionParser(),
   
 }
 
-trait QuestionParaphraser {
-  def paraphrase(s: String): List[String]
-}
-
 case class AbstractedArg(arg: Seq[QWord], template: Seq[QToken]) { 
   def templateString = template.mkString(" ")
   def substitute = { for (q <- template) yield q match {
@@ -149,42 +149,44 @@ case class AbstractedArg(arg: Seq[QWord], template: Seq[QToken]) {
   }}.flatten
 }
 
-case class SolrQuestionParaphraser(url: String) extends QuestionParaphraser {
+trait QuestionParaphraser {
+  def scorer: ParaphraseScorer
+  def generator: ParaphraseGenerator
+  def paraphrase(s: String): List[String]
+}
+
+
+case class SimpleQuestionParaphraser(scorer: ParaphraseScorer, generator: ParaphraseGenerator) extends QuestionParaphraser {
+  lazy val tagger = new StanfordPostagger()
+  lazy val tokenizer = new ClearTokenizer()
+  val logger = LoggerFactory.getLogger(this.getClass)
   
-  val client = new ParaphraseTemplateClient(url)
-  val maxSize = 4
-  val argExtractor = new ArgumentExtractor(maxSize)
-  val tokenizer = new ClearTokenizer()
-  def normalize(s: String): Seq[QWord] = tokenizer(s.toLowerCase).map(MorphaStemmer.stemToken).map(t => QWord(t.lemma))
-
-
-  def templateToQTokens(s: String) = {
-    val toks = s.split(" ")
-    val i = toks.indexOf("$y")
-    val n = toks.size
-    if (i >= 0) {
-      val left = toks.slice(0, i).map(x => QWord(x)).toList
-      val right = toks.slice(i+1, n).map(x => QWord(x)).toList
-      left ++ List(ArgVar) ++ right 
-    } else {
-      toks.map(x => QWord(x)).toList
-    }
+  def stemString(s: String): Seq[String] = {
+    val tokens = tokenizer(s)
+    val tagged = tagger.postagTokens(tokens)
+    val lemmas = tagged.map(t => MorphaStemmer.lemmatizePostaggedToken(t).lemma.toLowerCase()) 
+    lemmas
   }
   
   override def paraphrase(s: String) = {
-    val q = normalize(s)
-    val temps = argExtractor.arguments(q)
-    val matches = for (t <- temps;
-    				items = client.paraphrases(t.templateString);
-    				(pp, score) <- items) yield (AbstractedArg(t.arg, templateToQTokens(pp)).substitute, score)
-    matches.sortBy(x => -x._2).map(x => x._1.mkString(" ")).toList
+    val stemmed = stemString(s)
+    val paraphrases = generator.generate(stemmed)
+    val scored = scorer.scoreAll(paraphrases)
+    val grouped = scored.groupBy(sp => sp.deriv.paraphrase.question).values
+    val maxed = grouped.map(g => g.maxBy(d => d.score)).toList
+    maxed.sortBy(d => -d.score).map(d => d.deriv.paraphrase.question.mkString(" "))
   }
 }
 
 class ParalexQuestionParser(paraphraser: QuestionParaphraser, parser: QuestionParser)
   extends QuestionParser {
+  val logger = LoggerFactory.getLogger(this.getClass)
+
   def parse(q: String): Iterable[UQuery] = {
-    val questions = paraphraser.paraphrase(q) ++ List(q)
-    for (pq <- questions; query <- parser.parse(pq)) yield query
+    val paraphrases = paraphraser.paraphrase(q)
+    logger.debug(s"Paraphrased '$q' to ${paraphrases}")
+    val questions = List(q) ++ paraphrases
+    val queries = for (pq <- questions; query <- parser.parse(pq)) yield query
+    queries
   }
 }
