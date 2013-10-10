@@ -9,6 +9,24 @@
 <script>
 $(document).ready(function() {
     initialize();
+    var examples = [
+        'What is good for a sunburn?',
+        'Are there any famous people from Detroit?',
+        'What companies did Steve Jobs start?',
+        'How can you tell if you have an protein deficiency?',
+        'What fuel does an internal combustion engine use?',
+        'What ingredients are in italian cuisine?',
+        'What is the max speed of a collins class submarine?',
+        'What country does the royal navy belong to?'
+    ]
+    $.each(examples, function(i, ex) {
+        addExample(ex);
+    });
+    $('#tog').click(function(e) {
+        e.preventDefault();
+        $('#examples').toggle();
+    });
+    $('#tog').click();
 });
 </script>
 </head>
@@ -102,11 +120,23 @@ $(document).ready(function() {
         font-style: italic;
         padding: 5px;
     }
+    #resultTable td, th {
+    word-wrap: break-word;
+    max-width: 400px;
+    padding: 10px;
+    }
+    #resultTable { width: 100%}
+    #examples {
+        font-size: small;
+    }
+    #tog { font-size: small ; }
 </style>
 <body>
     <div id="content">
         <h1>Paraphrase</h1>
         <div style="font-size: large; width: 100%">
+        <div id="tog"><a href="#">Show/Hide Examples</a></div>
+        <table id="examples"></table>
         Input: <input id="inputbox"/>
         </div>
         <div id="results">
