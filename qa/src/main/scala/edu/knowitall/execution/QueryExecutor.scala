@@ -34,22 +34,22 @@ trait QueryExecutor {
 }
 
 case class IdentityExecutor(client: TriplestoreClient) extends QueryExecutor {
-  
-  val logger = LoggerFactory.getLogger(this.getClass) 
-  
+
+  val logger = LoggerFactory.getLogger(this.getClass)
+
   val joiner = Joiner(client)
-  
+
   type ADs = Iterable[AnswerDerivation]
-  
+
   def deriveAnswers(q: UQuery): ADs = q match {
     case c: ConjunctiveQuery => deriveAnswersSimple(ExecConjunctiveQuery(c, c))
-    case _ => throw new 
+    case _ => throw new
       UnsupportedOperationException(s"Unable to execute query type: $q")
   }
-  
+
   def deriveAnswersSimple(q: ExecConjunctiveQuery): ADs =
     for (t <- joiner.joinQueries(q.query.conjuncts);
-         et = ExecTuple(t, q)) 
+         et = ExecTuple(t, q))
       yield AnswerDerivation(q.projAttrs, et)
 
 }
