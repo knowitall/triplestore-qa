@@ -1,6 +1,6 @@
 package edu.knowitall.apps
 
-import edu.knowitall.scoring.AnswerScorer
+import edu.knowitall.scoring.AnswerRanker
 import edu.knowitall.execution.QueryExecutor
 import edu.knowitall.parsing.QuestionParser
 import edu.knowitall.scoring.ScoredAnswerGroup
@@ -28,6 +28,7 @@ import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.parsing.StringMatchingParser
 import edu.knowitall.scoring.UniformAnswerScorer
 import edu.knowitall.scoring.LogisticAnswerScorer
+import edu.knowitall.scoring.AnswerDerivationOrderingRanker
 import edu.knowitall.parsing.OldParalexParser
 import edu.knowitall.execution.synonyms.RelationSynonymExecutor
 import edu.knowitall.common.Timing
@@ -35,7 +36,7 @@ import edu.knowitall.execution.DefaultFilters
 import edu.knowitall.paralex.SolrQuestionParaphraser
 import edu.knowitall.parsing.regex.RegexQuestionParser
 
-case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
+case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, ranker: AnswerRanker) {
 
   val logger = LoggerFactory.getLogger(this.getClass)
 
@@ -58,16 +59,13 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
     }
 
     logger.info("Executed queries in " + Timing.Seconds.format(nsExec))
-    
+
     logger.info(s"Grouping answers for '$question'")
     def answerString(group: AnswerGroup) = group.answer.mkString(" ")
     val groups = grouper.group(derivs.toList).sortBy(answerString)
 
     logger.info(s"Scoring answers for '$question'")
-    val answers = for (
-      group <- groups.par;
-      scored = scorer.scoreAnswer(group)
-    ) yield scored
+    val answers = ranker.rankAnswers(question, groups)
     logger.info(s"Returning ${answers.size} answers.")
     answers.toList.sortBy(-_.score)
   }
@@ -82,7 +80,6 @@ case object QASystem {
       grouper <- Components.groupers.get(config.grouper);
       scorer <- Components.scorers.get(config.scorer)
     ) yield QASystem(parser, DefaultFilters.wrap(executor), grouper, scorer)
-
 }
 
 case class QAConfig(parser: String = "formal",
@@ -119,8 +116,9 @@ case object Components {
       "postag sample" -> PostagSampleAnswerGrouper(),
       "postag" -> PostagAnswerGrouper())
 
-  val scorers: Map[String, AnswerScorer] =
+  val scorers: Map[String, AnswerRanker] =
     Map("logistic" -> LogisticAnswerScorer(),
+        "derivOrdering" -> AnswerDerivationOrderingRanker(),
       "numDerivations" -> NumDerivationsScorer(),
       "uniform" -> UniformAnswerScorer())
 }
