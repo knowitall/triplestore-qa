@@ -76,8 +76,6 @@ libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-chunk
 
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-stanford" % "2.4.2"
 
-libraryDependencies += "edu.washington.cs.knowitall" % "openregex-scala_2.10" % "1.0.4"
-
 libraryDependencies += "com.nicta" % "scoobi_2.10" % "0.7.0-RC2-cdh3"
 
 assemblySettings
