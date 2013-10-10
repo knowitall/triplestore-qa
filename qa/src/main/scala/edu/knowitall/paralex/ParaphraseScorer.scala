@@ -24,7 +24,7 @@ class PmiLmScorer(url: String = "http://rv", port: Int = 8089) extends Paraphras
   override def scoreAll(derivs: Iterable[ParaphraseDerivation]) = {
     val dlist = derivs.toList
     val scores = client.query(dlist.map(_.paraphrase.question.mkString(" "))).map(_._2)
-    for ((d, score) <- dlist.zip(scores)) yield ScoredParaphraseDerivation(d, score * d.templates.pmi)
+    for ((d, score) <- dlist.zip(scores)) yield ScoredParaphraseDerivation(d, -score * d.templates.pmi)
   }
 }
 
