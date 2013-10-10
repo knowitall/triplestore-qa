@@ -49,3 +49,5 @@ the third
 the last
 the other
 the others
+each
+all
