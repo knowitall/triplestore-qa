@@ -32,8 +32,10 @@ import edu.knowitall.parsing.OldParalexParser
 import edu.knowitall.execution.synonyms.RelationSynonymExecutor
 import edu.knowitall.common.Timing
 import edu.knowitall.execution.DefaultFilters
-import edu.knowitall.paralex.SolrQuestionParaphraser
 import edu.knowitall.parsing.regex.RegexQuestionParser
+import edu.knowitall.paralex.SolrParaphraseGenerator
+import edu.knowitall.paralex.PmiLmScorer
+import edu.knowitall.paralex.SimpleQuestionParaphraser
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
@@ -61,7 +63,7 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
     
     logger.info(s"Grouping answers for '$question'")
     def answerString(group: AnswerGroup) = group.answer.mkString(" ")
-    val groups = grouper.group(derivs.toList).sortBy(answerString)
+    val groups = grouper.group(derivs.take(100).toList).sortBy(answerString)
 
     logger.info(s"Scoring answers for '$question'")
     val answers = for (
@@ -94,7 +96,9 @@ case object Components {
 
   val baseClient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 100)
   val client = CachedTriplestoreClient(baseClient, 100000)
-  val pp = SolrQuestionParaphraser("http://rv-n12.cs.washington.edu:28983/solr/paraphrase")
+  val paraGenerator = new SolrParaphraseGenerator(maxHits = 1000)
+  val paraScorer = new PmiLmScorer()
+  val pp = SimpleQuestionParaphraser(paraScorer, paraGenerator)
   val regexParser = RegexQuestionParser()
 
   val parsers: Map[String, QuestionParser] =
