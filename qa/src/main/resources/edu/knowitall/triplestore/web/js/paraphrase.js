@@ -43,19 +43,20 @@ var initConfig = function() {
 };
 
 var addExample = function(ex) {
-    var $link = $('<a href="#">'+ex.q+'</a>');
+    var $link = $('<a href="#">'+ex+'</a>');
     $link.click(function(e) {
         e.preventDefault();
-        $('#inputbox').val(ex.q);
+        $('#inputbox').val(ex);
+        query();
     });
-    var $item = $('<tr/>').appendTo($('#examples')).append("<td>" + ex.note + "</td>").append("<td>").append($link).append("</td>");
+    var $item = $('<tr/>').appendTo($('#examples')).append("<td>").append($link).append("</td>");
 };
 
 var writeResults = function(data) {
     var $r = $('#results');
     $r.html('');
     var $t = $('<table id="resultTable"/>').appendTo($r);
-    var cols = ['paraphrase', 'score', 'arg', 'template', 'pmi', 'lm']; 
+    var cols = ['score', 'paraphrase', 'arg', 'template', 'pmi', 'lm']; 
     var $thead = $('<thead/>').appendTo($t);
     var $head = $('<tr/>').appendTo($thead);
     var $tbody = $('<tbody/>').appendTo($t);
@@ -72,7 +73,8 @@ var writeResults = function(data) {
         });
     });
     $t.addClass("tablesorter");
-    $t.tablesorter({sortList: [[1,0]]});
+    $t.tablesorter({sortList: [[1,0]], widgets: ['zebra']});
+    $thead.find('th:first').click();
 };
 
 var displayGroup = function(group) {
