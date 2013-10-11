@@ -123,6 +123,8 @@ object RegexQuestionPatterns {
 
   val classInst = "<lemma='type' | lemma='kind' | lemma='class' | lemma='sort'>"
 
+  val aux = "<lemma='be' | lemma='have' | lemma='do'>"  
+    
   val patterns = Seq(
 
     // 0. What $R $E? (~9/10)
@@ -134,7 +136,7 @@ object RegexQuestionPatterns {
     // 1. What/who was $e $r $prep? (~9/10)
     new RegexQuestionPattern(
       Seq("rel1", "rel2", "ent"),
-      s"$whatWho (<rel1>:<lemma='be'>) (<ent>:$ent) (<rel2>:$rel $prep+) $punct?",
+      s"$whatWho (<rel1>:$aux) (<ent>:$ent) (<rel2>:$rel $prep+) $punct?",
       "($ent, $rel1 $rel2, $x)"),
 
     // 2. What/who $r $prep? $e? (~8/10)
@@ -152,37 +154,37 @@ object RegexQuestionPatterns {
     // 4. When be $e $r? (10/10) (low recall)
     new RegexQuestionPattern(
       Seq("rel1", "rel2", "ent"),
-      s"<lemma='when'> (<rel1>:<lemma='be'>) (<ent>:$ent) (<rel2>:$rel) $punct?",
+      s"<lemma='when'> (<rel1>:$aux) (<ent>:$ent) (<rel2>:$rel) $punct?",
       Seq("($ent, $rel1 $rel2 in, $x)", "($ent, $rel1 $rel2 on, $x)")),
 
     // 5. Where did $e $r (10/10) (no unique recall, but probably higher prec)
     new RegexQuestionPattern(
       Seq("ent", "rel"),
-      s"<lemma='where'> <lemma='do'> (<ent>:$ent) (<rel>:$verb+ $prep+) $punct?",
+      s"<lemma='where'> $aux (<ent>:$ent) (<rel>:$verb+ $prep+) $punct?",
       "($ent, $rel, $x)"),
 
     // 6. (10/10, but no unique recall)
     new RegexQuestionPattern(
       Seq("ent", "rel"),
-      s"<lemma='where'> <lemma='do'> (<ent>:$ent) (<rel>:$rel) $punct?",
+      s"<lemma='where'> $aux (<ent>:$ent) (<rel>:$rel) $punct?",
       "($ent, $rel in, $x)"),
 
     // 7. no unique recall
     new RegexQuestionPattern(
       Seq("ent", "rel"),
-      s"<lemma='when'> <lemma='do'> (<ent>:$ent) (<rel>:$rel) $punct?",
+      s"<lemma='when'> $aux (<ent>:$ent) (<rel>:$rel) $punct?",
       Seq("($ent, $rel in, $x)", "($ent, $rel on, $x)")),
 
     // 8. what/who did $e $r (low recall)
     new RegexQuestionPattern(
       Seq("ent", "rel"),
-      s"$whatWho <lemma='do'> (<ent>:$ent) (<rel>:$rel) $punct?",
+      s"$whatWho $aux (<ent>:$ent) (<rel>:$rel) $punct?",
       "($ent, $rel, $x)"),
 
     // 9. what $type have/do/be $ent $rel? (low recall)
     new RegexQuestionPattern(
       Seq("ent", "type", "rel"),
-      s"<lemma='what' | lemma='which'> (<type>:$ent) <lemma='do' | lemma='have' | lemma='be'> (<ent>:$ent) (<rel>:$rel (?:$prep)?) $punct?",
+      s"<lemma='what' | lemma='which'> (<type>:$ent) $aux (<ent>:$ent) (<rel>:$rel (?:$prep)?) $punct?",
       "$x: ($x, " + isa + ", $type) ($ent, $rel, $x)"),
 
     // 10. what $type $rel+prep $ent? (What foods are high in protein) (good recall) 9/10 prec.
@@ -206,7 +208,7 @@ object RegexQuestionPatterns {
     // What type of restaurant does Bob like? -> ($x, type, restaurant) (bob, like, $x)
     new RegexQuestionPattern(
       Seq("ent1", "ent2", "rel"),
-      s"<lemma='what' | lemma='which'> <lemma='type' | lemma='kind'> <lemma='of'> (<ent1>:$ent) <lemma='do'> (<ent2>:$ent) (<rel>:$rel) $punct?",
+      s"<lemma='what' | lemma='which'> <lemma='type' | lemma='kind'> <lemma='of'> (<ent1>:$ent) $aux (<ent2>:$ent) (<rel>:$rel) $punct?",
       "$x: ($x, " + isa + ", $ent1) ($ent2, $rel, $x)"),
 
     // What type of magma is produced by Krakatau?
