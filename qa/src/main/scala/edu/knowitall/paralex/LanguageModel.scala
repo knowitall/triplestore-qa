@@ -5,6 +5,7 @@ import java.net.URI
 import java.net.URLEncoder
 import scalaj.http.Http
 import scala.io.Source
+import scalaj.http.HttpOptions
 
 trait LanguageModel {
   /**
@@ -26,7 +27,11 @@ case class KenLmServer(url: String = "http://localhost", port: Int = 8080) exten
   override def query(s: Iterable[String]) = {
     val lst = s.toList
     val joined = lst.mkString("|")
-    val lines = Http.post(root).params("q" -> joined).asString.trim.split("\n")
+    val lines = Http.post(root).
+    			option(HttpOptions.connTimeout(5000)).
+    			option(HttpOptions.readTimeout(5000)).
+    			params("q" -> joined).
+    			asString.trim.split("\n")
     lst.zip(lines).map { case (a, b) => (a, b.toDouble) }
   }
 }
