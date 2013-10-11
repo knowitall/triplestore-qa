@@ -7,12 +7,13 @@ import scala.collection.JavaConversions._
 import org.apache.solr.common.SolrDocument
 import java.util.ArrayList
 import org.slf4j.LoggerFactory
-import edu.knowitall.execution.Conditions._ 
+import edu.knowitall.execution.Conditions._
 import edu.knowitall.execution.Search._
 import edu.knowitall.execution._
 import com.twitter.util.LruMap
 import scala.collection.mutable.SynchronizedMap
 import java.util.ArrayList
+import com.typesafe.config.ConfigFactory
 
 /**
  * The interface to a Triplestore.
@@ -80,6 +81,8 @@ case class CachedTriplestoreClient(client: TriplestoreClient, size: Int = 1000)
  */
 case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
 
+  def this() = this(SolrClient.defaultUrl, SolrClient.defaultMaxHits)
+  
   val logger = LoggerFactory.getLogger(this.getClass) 
   
   val server = new HttpSolrServer(url)
@@ -113,6 +116,9 @@ case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
   
 }
 case object SolrClient {
+  val conf = ConfigFactory.load()
+  val defaultUrl = conf.getString("triplestore.url")
+  val defaultMaxHits = conf.getInt("triplestore.maxHits")
     
   def escape(s: String): String = ClientUtils.escapeQueryChars(s)
   
