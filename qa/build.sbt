@@ -84,6 +84,8 @@ libraryDependencies += "com.nicta" % "scoobi_2.10" % "0.7.0-RC2-cdh3"
 
 libraryDependencies += "org.apache.hadoop" % "hadoop-lzo" % "0.4.13"
 
+libraryDependencies += "com.typesafe" % "config" % "1.0.2"
+
 assemblySettings
 
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
