@@ -28,8 +28,8 @@ case class KenLmServer(url: String = "http://localhost", port: Int = 8080) exten
     val lst = s.toList
     val joined = lst.mkString("|")
     val lines = Http.post(root).
-    			option(HttpOptions.connTimeout(5000)).
-    			option(HttpOptions.readTimeout(5000)).
+    			option(HttpOptions.connTimeout(10000)).
+    			option(HttpOptions.readTimeout(10000)).
     			params("q" -> joined).
     			asString.trim.split("\n")
     lst.zip(lines).map { case (a, b) => (a, b.toDouble) }
