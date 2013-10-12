@@ -58,6 +58,10 @@ object WebRepl extends App {
     
     def getConfig(req: HttpRequest[_]): QAConfig = {
       var config = QAConfig()
+      config = getParam(req, "paraphraser") match {
+        case Some(s) => config.copy(paraphraser = s)
+        case _ => config
+      }
       config = getParam(req, "parser") match {
         case Some(s) => config.copy(parser = s)
         case _ => config
