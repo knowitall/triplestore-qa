@@ -26,8 +26,10 @@ var initialize = function() {
 
 var initConfig = function() {
     var $conf = $('#config');
-    var $t = $('<table></table>').appendTo($conf);
+    $conf.html('<img src="spinner.gif"/>');
+    var $t = $('<table></table>');
     $.getJSON('/listComponents', function(data) {
+        $conf.html($t);
         $.each(data, function(k, val) {
             var $r = $('<tr/>').appendTo($t);
             $r.append('<td style="text-align: right">' + val.name + ':</td>');
