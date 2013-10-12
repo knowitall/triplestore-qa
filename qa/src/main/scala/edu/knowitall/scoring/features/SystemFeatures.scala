@@ -24,7 +24,9 @@ object SystemFeatures {
   val postagSystemCache = new LruMap[List[UQuery], List[AnswerGroup]](1000)
 
   def answerUQueriesCached(queries: List[UQuery]): List[AnswerGroup] = postagSystemCache.synchronized {
-    postagSystemCache.getOrElseUpdate(queries, postagSystem.answerUQueries(queries, queries.mkString(" | ")))
+    val derivs = postagSystem.execute(queries)
+    val groups = postagSystem.group(derivs)
+    postagSystemCache.getOrElseUpdate(queries, groups.toList)
   }
 
   val postagGrouper = postagSystem.grouper
