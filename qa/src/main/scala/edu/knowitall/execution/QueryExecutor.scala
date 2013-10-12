@@ -27,6 +27,7 @@ case class AnswerDerivation(attrs: List[String], etuple: ExecTuple) {
     case Some(s: String) => s
     case None => throw new IllegalArgumentException(s"$etuple does not have vals for attrs $attrs")
   })
+  val answerString = answer.mkString(" ")
 }
 
 trait QueryExecutor {
