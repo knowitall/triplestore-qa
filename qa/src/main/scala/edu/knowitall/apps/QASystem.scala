@@ -37,61 +37,72 @@ import edu.knowitall.paralex.SolrParaphraseGenerator
 import edu.knowitall.paralex.PmiLmScorer
 import edu.knowitall.paralex.SimpleQuestionParaphraser
 import com.typesafe.config.ConfigFactory
+import edu.knowitall.paralex.QuestionParaphraser
+import edu.knowitall.paralex.EmptyParaphraser
 
-case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
+case class QASystem(paraphraser: QuestionParaphraser, parser: QuestionParser, 
+    executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
 
   val conf = ConfigFactory.load()
   val logger = LoggerFactory.getLogger(this.getClass)
   val maxDerivs = conf.getInt("qa.maxDerivs")
   val maxUQueries = conf.getInt("qa.maxUQueries")
+  val maxParaphrases = conf.getInt("qa.maxParaphrases")
+  val maxAnswerGroups = conf.getInt("qa.maxAnswerGroups")
 
   def answer(question: String): List[ScoredAnswerGroup] = {
-
-    logger.info(s"Parsing question '$question'")
-    val queries = parser.parse(question).take(maxUQueries)
-    answerUQueries(queries, question)
-  }
-
-  def answerUQueries(uqueries: Iterable[UQuery], question: String): List[ScoredAnswerGroup] = {
-
-    logger.info(s"Executing queries for '$question'")
-    val (nsExec, derivs) = Timing.time {
-      for (
-        query <- uqueries.par;
-        derivs = executor.deriveAnswers(query);
-        deriv <- derivs
-      ) yield deriv
-    }
-
-    logger.info("Executed queries in " + Timing.Seconds.format(nsExec))
     
-    logger.info(s"Grouping answers for '$question'")
-    def answerString(group: AnswerGroup) = group.answer.mkString(" ")
-    val groups = grouper.group(derivs.take(maxDerivs).toList).sortBy(answerString)
-
-    logger.info(s"Scoring answers for '$question'")
-    val answers = for (
-      group <- groups.par;
-      scored = scorer.scoreAnswer(group)
-    ) yield scored
-    logger.info(s"Returning ${answers.size} answers.")
-    answers.toList.sortBy(-_.score)
+    logger.info(s"Answering question '$question'")
+    val paraphrases = Iterable(question) ++ paraphrase(question)
+    
+    logger.info(s"Paraphrased '$question' to:\n'${paraphrases.mkString("\n")}")
+    val uqueries = parse(paraphrases)
+    
+    logger.info(s"Parsed '$question' into queries:\n'${uqueries.mkString("\n")}")
+    val derivations = execute(uqueries)
+    
+    logger.info(s"Derived answers from '$question' to:\n'${derivations.map(_.answerString).mkString("\n")}")
+    val answerGroups = group(derivations)
+    
+    logger.info(s"Grouped answers from '$question' to :\n'${answerGroups.map(_.answerString).mkString("\n")}")
+    val scored = score(answerGroups).toList.sortBy(-_.score)
+    
+    logger.info(s"Scored answers from '$question' to :\n${scored.map(g => g.score + " " + g.answerString).mkString("\n")}")
+    scored.take(maxAnswerGroups)
   }
+  
+  def paraphrase(question: String): Iterable[String] = 
+    paraphraser.paraphrase(question).take(maxParaphrases)
+    
+  def parse(questions: Iterable[String]): Iterable[UQuery] = 
+    questions.par.flatMap(parser.parse).toList.take(maxUQueries)
+    
+  def execute(uqueries: Iterable[UQuery]): Iterable[AnswerDerivation] =
+    uqueries.par.flatMap(executor.deriveAnswers).toList.take(maxDerivs)
+    
+  def group(derivs: Iterable[AnswerDerivation]): Iterable[AnswerGroup] =
+    grouper.group(derivs.toList)
+    
+  def score(groups: Iterable[AnswerGroup]): Iterable[ScoredAnswerGroup] =
+    groups.par.map(scorer.scoreAnswer).toList
+  
 }
 
 case object QASystem {
 
   def getInstance(config: QAConfig = QAConfig()): Option[QASystem] =
     for (
+      paraphraser <- Components.paraphrasers.get(config.paraphraser);
       parser <- Components.parsers.get(config.parser);
       executor <- Components.executors.get(config.executor);
       grouper <- Components.groupers.get(config.grouper);
       scorer <- Components.scorers.get(config.scorer)
-    ) yield QASystem(parser, DefaultFilters.wrap(executor), grouper, scorer)
+    ) yield QASystem(paraphraser, parser, DefaultFilters.wrap(executor), grouper, scorer)
 
 }
 
-case class QAConfig(parser: String = "formal",
+case class QAConfig(paraphraser: String = "empty",
+  parser: String = "formal",
   executor: String = "identity",
   grouper: String = "basic",
   scorer: String = "numDerivations")
@@ -105,12 +116,15 @@ case object Components {
   val pp = SimpleQuestionParaphraser(paraScorer, paraGenerator)
   val regexParser = RegexQuestionParser()
 
+  val paraphrasers: Map[String, QuestionParaphraser] =
+    Map("empty" -> EmptyParaphraser, 
+        "templatesLm" -> SimpleQuestionParaphraser(paraScorer, paraGenerator))
+  
   val parsers: Map[String, QuestionParser] =
     Map("formal" -> FormalQuestionParser(),
       "keyword" -> StringMatchingParser(client),
       "paralex-old" -> OldParalexParser(),
-      "regex" -> regexParser,
-      "paralex" -> new ParalexQuestionParser(pp, regexParser))
+      "regex" -> regexParser)
 
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client),
