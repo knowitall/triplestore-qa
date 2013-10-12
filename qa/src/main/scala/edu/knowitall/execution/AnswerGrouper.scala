@@ -11,12 +11,13 @@ trait AnswerGrouper {
 
 trait AnswerGroup {
   def answer: List[String]
+  def answerString: String = answer.mkString(" ")
   def alternates: List[List[String]]
   def derivations: List[AnswerDerivation]
 }
 
 case class BasicAnswerGroup(answer: List[String], alternates: List[List[String]], 
-    derivations: List[AnswerDerivation]) extends AnswerGroup
+    derivations: List[AnswerDerivation]) extends AnswerGroup 
     
 case class BasicAnswerGrouper(
     norm: String => String = BasicAnswerGrouper.normalize)
