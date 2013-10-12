@@ -150,11 +150,12 @@ case class AbstractedArg(arg: Seq[QWord], template: Seq[QToken]) {
 }
 
 trait QuestionParaphraser {
-  def scorer: ParaphraseScorer
-  def generator: ParaphraseGenerator
   def paraphrase(s: String): List[String]
 }
 
+object EmptyParaphraser extends QuestionParaphraser {
+  override def paraphrase(s: String) = List()
+}
 
 case class SimpleQuestionParaphraser(scorer: ParaphraseScorer, generator: ParaphraseGenerator) extends QuestionParaphraser {
   lazy val tagger = new StanfordPostagger()
