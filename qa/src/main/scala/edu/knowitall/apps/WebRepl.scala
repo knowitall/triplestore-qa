@@ -16,6 +16,7 @@ import unfiltered.response.ContentEncoding
 import org.apache.commons.io.IOUtils
 import unfiltered.request.HttpRequest
 import edu.knowitall.paralex.ParaphraseDemo
+import scala.collection.immutable.ListMap
 
 
 object WebRepl extends App {
@@ -111,7 +112,9 @@ object WebRepl extends App {
       }
     
     def listComponents() = {
-      val result = Map("parser" -> Map("name" -> "Question Parsing", "options" -> Components.parsers.keys.toList),
+      val result = ListMap(
+    		  		   "paraphraser" -> Map("name" -> "Paraphraser", "options" -> Components.paraphrasers.keys.toList),
+    		  		   "parser" -> Map("name" -> "Question Parsing", "options" -> Components.parsers.keys.toList),
                        "executor" -> Map("name" -> "Query Execution", "options" -> Components.executors.keys.toList),
                        "grouper" -> Map("name" -> "Answer Grouping", "options" -> Components.groupers.keys.toList.sorted),
                        "scorer" -> Map("name" -> "Answer Scoring", "options" -> Components.scorers.keys.toList))
