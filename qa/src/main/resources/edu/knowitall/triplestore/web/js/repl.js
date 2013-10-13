@@ -30,7 +30,9 @@ var initConfig = function() {
     var $t = $('<table></table>');
     $.getJSON('/listComponents', function(data) {
         $conf.html($t);
-        $.each(data, function(k, val) {
+        var defaults = data.defaults;
+        var components = data.components;
+        $.each(components, function(k, val) {
             var $r = $('<tr/>').appendTo($t);
             $r.append('<td style="text-align: right">' + val.name + ':</td>');
             var $td = $('<td/>').appendTo($r);
@@ -39,6 +41,7 @@ var initConfig = function() {
                 var $o = $('<option value="'+v+'">'+v+'</option>');
                 $o.appendTo($sel);
             });
+            $sel.val(defaults[k]);
             $sel.appendTo($r);
         });
     });
@@ -67,7 +70,8 @@ var displayGroup = function(group) {
     $a.append($('<h1>' + group.alternates[0].join(", ") + '</h1>'));
     $a.append($('<div class="score">Score = ' + group.score + '</div>'));
     $.each(group.uqueries , function(i, uqueryGroup) {
-        $g.append($('<div class="interpQuestion">'+uqueryGroup.question+'</div>'));
+        console.log(uqueryGroup);
+        $g.append($('<div class="interpQuestion">'+uqueryGroup.uquery.paraphrase.target+'</div>'));
         $.each(uqueryGroup.equeries, function(j, equeryGroup) {
             $g.append(displayEQueryGroup(equeryGroup));
         });
@@ -104,7 +108,7 @@ var displayTuples = function(cols, colNames, tuples, attr) {
 };
 
 var getCols = function(equeryGroup) {
-    var uquery = equeryGroup.equery.uquery;
+    var uquery = equeryGroup.equery.uquery.query;
     var conjs = uquery.conjuncts;
     var arr = new Array();
     $.each(conjs, function(i, conj) {
@@ -117,7 +121,7 @@ var getCols = function(equeryGroup) {
     return arr;
 };
 var getColNames = function(equeryGroup) {
-    var conjs = equeryGroup.equery.query.conjuncts;
+    var conjs = equeryGroup.equery.query.query.conjuncts;
     var arr = new Array();
     $.each(conjs, function(i, conj) {
         var tbl = conj.name;

@@ -9,7 +9,6 @@ import edu.washington.cs.knowitall.regex.RegularExpression
 import edu.washington.cs.knowitall.regex.ExpressionFactory
 import edu.washington.cs.knowitall.regex.Expression
 import edu.knowitall.util.NlpUtils.makeRegex
-import edu.knowitall.execution.UQuery
 import edu.knowitall.execution.ListConjunctiveQuery
 import edu.knowitall.parsing.QuestionParser
 import edu.knowitall.execution.UnquotedTLiteral
@@ -41,7 +40,7 @@ case class RegexQuestionParser() extends QuestionParser {
     lemmas
   }
 
-  def parse(question: String) = parse(lemmatize(question)).map(uq => uq.copy(question = question))
+  def parse(question: String) = parse(lemmatize(question))
 
   def parse(question: Seq[Lemmatized[ChunkedToken]]) = patterns.flatMap(p => p.parse(question))
 }

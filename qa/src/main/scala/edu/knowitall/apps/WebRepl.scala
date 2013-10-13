@@ -15,8 +15,8 @@ import java.io.File
 import unfiltered.response.ContentEncoding
 import org.apache.commons.io.IOUtils
 import unfiltered.request.HttpRequest
-import edu.knowitall.paralex.ParaphraseDemo
 import scala.collection.immutable.ListMap
+import edu.knowitall.paraphrasing.template.TemplateParaphraser
 
 
 object WebRepl extends App {
@@ -50,15 +50,15 @@ object WebRepl extends App {
         
     }
     
-    val pdemo = new ParaphraseDemo()
+    val paraphraser = new TemplateParaphraser()
     def paraphrase(query: String) = {
-      val results = pdemo.paraphrase(query)
+      val results = paraphraser.paraphraseToStrings(query)
       val resultJson = JsonSerialization.serialize(results)
       ContentEncoding("application/json") ~> ResponseString(resultJson) ~> Ok
     }
     
     def getConfig(req: HttpRequest[_]): QAConfig = {
-      var config = QAConfig()
+      var config = new QAConfig()
       config = getParam(req, "paraphraser") match {
         case Some(s) => config.copy(paraphraser = s)
         case _ => config
@@ -112,12 +112,13 @@ object WebRepl extends App {
       }
     
     def listComponents() = {
-      val result = ListMap(
+      val components = ListMap(
     		  		   "paraphraser" -> Map("name" -> "Paraphraser", "options" -> Components.paraphrasers.keys.toList),
     		  		   "parser" -> Map("name" -> "Question Parsing", "options" -> Components.parsers.keys.toList),
                        "executor" -> Map("name" -> "Query Execution", "options" -> Components.executors.keys.toList),
                        "grouper" -> Map("name" -> "Answer Grouping", "options" -> Components.groupers.keys.toList.sorted),
                        "scorer" -> Map("name" -> "Answer Scoring", "options" -> Components.scorers.keys.toList))
+      val result = Map("components" -> components, "defaults" -> Components.defaults) 
       val resultJson = JsonSerialization.serialize(result)
       ContentEncoding("application/json") ~> ResponseString(resultJson) ~> Ok
     }

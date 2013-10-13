@@ -5,21 +5,16 @@ import org.slf4j.LoggerFactory
 
 abstract class GeneralizingExecutor extends QueryExecutor {
 
-  type ADs = Iterable[AnswerDerivation]
-
   private val logger = LoggerFactory.getLogger(this.getClass)
   
   def baseExecutor: QueryExecutor 
   
-  def generalizations(q: ListConjunctiveQuery): Iterator[ListConjunctiveQuery]
+  def generalizations(q: ConjunctiveQuery): Iterator[ConjunctiveQuery]
   
-  def deriveAnswers(q: UQuery): ADs = q match {
-    case c: ListConjunctiveQuery => { 
-      val gens = Iterator(c) ++ generalizations(c)
-      val queryResponses = gens map baseExecutor.deriveAnswers
-      queryResponses.find(_.nonEmpty).getOrElse(Nil)
-    }
-    case _ => throw new 
-      UnsupportedOperationException(s"Unable to execute query type: $q")
-  } 
+  override def execute(q: ConjunctiveQuery): Iterable[ExecTuple] = {
+    val gens = Iterator(q) ++ generalizations(q)
+    val queryResponses = gens map baseExecutor.execute
+    queryResponses.find(_.nonEmpty).getOrElse(Nil)
+  }
+
 }

@@ -8,7 +8,6 @@ import edu.washington.cs.knowitall.regex.RegularExpression
 import edu.washington.cs.knowitall.regex.ExpressionFactory
 import edu.washington.cs.knowitall.regex.Expression
 import edu.knowitall.util.NlpUtils.makeRegex
-import edu.knowitall.execution.UQuery
 import edu.knowitall.execution.ListConjunctiveQuery
 import edu.knowitall.parsing.QuestionParser
 import edu.knowitall.parsing.FormalQuestionParser
