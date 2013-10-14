@@ -52,7 +52,7 @@ object WebRepl extends App {
     
     val paraphraser = new TemplateParaphraser()
     def paraphrase(query: String) = {
-      val results = paraphraser.paraphraseToStrings(query)
+      val results = paraphraser.paraphrase(query)
       val resultJson = JsonSerialization.serialize(results)
       ContentEncoding("application/json") ~> ResponseString(resultJson) ~> Ok
     }
