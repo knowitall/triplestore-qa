@@ -7,6 +7,7 @@ var query = function() {
     var opts = $('#config select').serializeObject();
     opts.q = q;
     $.getJSON(url, opts, function(data) {
+        console.log(data);
         $('#results').html(writeResults(data))
     })
     .fail(function() { $('#results').html('Error.') });
@@ -67,17 +68,60 @@ var writeResults = function(data) {
 var displayGroup = function(group) {
     var $g = $('<div class="answerGroup"/>');
     var $a = $('<div class="answer"/>').appendTo($g);
-    $a.append($('<h1>' + group.alternates[0].join(", ") + '</h1>'));
+    $a.append($('<h1>' + group.answer + '</h1>'));
     $a.append($('<div class="score">Score = ' + group.score + '</div>'));
-    $.each(group.uqueries , function(i, uqueryGroup) {
-        console.log(uqueryGroup);
-        $g.append($('<div class="interpQuestion">'+uqueryGroup.uquery.paraphrase.target+'</div>'));
-        $.each(uqueryGroup.equeries, function(j, equeryGroup) {
-            $g.append(displayEQueryGroup(equeryGroup));
-        });
+    $a.append($('<div class="score">' + group.derivations.length + ' derivation(s)</div>'));
+    var $derivs = $('<div class="derivationGroup"/>').appendTo($g);
+    $.each(group.derivations, function(i, derivation) {
+        var $deriv = $('<div class="derivation"/>').appendTo($derivs);
+        $deriv.append($('<h3>Derivation ' + (i+1) + '</h3>'));
+        $deriv.append(displayDerivInfo(derivation));
+        $deriv.append(displayDerivationTables(derivation.tables));
     });
     return $g;
 };
+
+var displayDerivInfo = function(derivation) {
+    var $table = $('<table class="derivInfo"/>');
+    var $tr2 = $('<tr/>').appendTo($table);
+    $tr2.append('<td><b>Paraphrases:</b></td>');
+    $tr2.append($('<td/>').append(displayParaphrases(derivation.paraphrases)));
+    var $tr3 = $('<tr/>').appendTo($table);
+    $tr3.append('<td><b>Parsed Queries:</b></td>');
+    $tr3.append($('<td/>').append(displayParserQueries(derivation.parserQueries)));
+    var $tr1 = $('<tr/>').appendTo($table);
+    $tr1.append('<td><b>Executed Query:</b></td>');
+    $tr1.append($('<td/>').append(displayConjQuery(derivation.executedQuery)));
+    return $table;
+};
+
+var displayParserQueries = function(queries) {
+    var $queries = $('<span/>');
+    $.each(queries, function(i, query) {
+        var $q = displayConjQuery(query).append('<br/>');
+        $q.appendTo($queries);
+    });
+    return $queries;
+};
+
+var displayDerivationTables = function(tables) {
+    var $tables = $('<div class="derivationTables"/>');
+    $.each(tables, function(i, table) {
+        $tables.append(displayDerivationTable(table));
+    });
+    return $tables;
+};
+
+var displayDerivationTable = function(table) {
+    var cols = getCols(table);
+    var colNames = getColNames(table);
+    var $ts = displayTuples(cols, colNames, table.tuples);
+    return $ts;
+};
+
+var displayParaphrases = function(paraphrases) {
+    return paraphrases.join("<br/>");
+}
 
 var displayEQueryGroup = function(equeryGroup) {
     var $group = $('<div class="equeryGroup"/>');
@@ -90,7 +134,7 @@ var displayEQueryGroup = function(equeryGroup) {
     return $group;
 };
 
-var displayTuples = function(cols, colNames, tuples, attr) {
+var displayTuples = function(cols, colNames, tuples) {
     var $tc = $('<div class="tuplesContainer"/>');
     var $t = $('<table class="tuples"></table>').appendTo($tc);
     var $h = $('<tr/>').appendTo($t);
@@ -99,7 +143,7 @@ var displayTuples = function(cols, colNames, tuples, attr) {
     });
     $.each(tuples, function(i, tuple) {
         if (i >= maxRows) { return; }
-        $t.append(tupleToRow(cols, tuple, attr));
+        $t.append(tupleToRow(cols, tuple));
     });
     dedupTable($t);
     $t.find('tr:even').addClass('even');
@@ -107,42 +151,31 @@ var displayTuples = function(cols, colNames, tuples, attr) {
     return $tc;
 };
 
-var getCols = function(equeryGroup) {
-    var uquery = equeryGroup.equery.uquery.query;
-    var conjs = uquery.conjuncts;
+var getCols = function(table) {
+    var conj = table.conjunct;
     var arr = new Array();
-    $.each(conjs, function(i, conj) {
-        var tbl = conj.name;
-        arr.push(tbl + ".arg1");
-        arr.push(tbl + ".rel");
-        arr.push(tbl + ".arg2");
-        arr.push(tbl + ".namespace");
-    });
+    var tbl = conj.name;
+    arr.push(tbl + ".arg1");
+    arr.push(tbl + ".rel");
+    arr.push(tbl + ".arg2");
+    arr.push(tbl + ".namespace");
     return arr;
 };
-var getColNames = function(equeryGroup) {
-    var conjs = equeryGroup.equery.query.query.conjuncts;
+var getColNames = function(table) {
+    var conj = table.conjunct;
+    var tbl = conj.name;
     var arr = new Array();
-    $.each(conjs, function(i, conj) {
-        var tbl = conj.name;
-        arr.push(conj.values.arg1);
-        arr.push(conj.values.rel);
-        arr.push(conj.values.arg2);
-        arr.push('namespace');
-    });
+    arr.push(conj.values.arg1);
+    arr.push(conj.values.rel);
+    arr.push(conj.values.arg2);
+    arr.push('namespace');
     return arr;
 };
 
-var tupleToRow = function(cols, tuple, attr) {
+var tupleToRow = function(cols, tuple) {
     var $row = $('<tr/>')
     $.each(cols, function(i, col) {
-        var $cell = $('<td>' + tuple[col] + '</td>');
-        if (col == attr) {
-            $cell.addClass("highlight");
-        }
-        if (i % 4 == 3 && i < cols.length - 1 && i > 0) {
-            $cell.addClass("endTuple");
-        }
+        var $cell = $('<td>' + tuple.attrs[col] + '</td>');
         $row.append($cell);
     });
     return $row;
