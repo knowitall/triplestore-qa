@@ -27,16 +27,11 @@ class LexiconSynonymExecutor(val synServer: LexiconSynonyms, val baseExecutor: Q
     }
   }
    
-  def expandConjQuery(q: ConjunctiveQuery): List[ConjunctiveQuery] = {
+  def expandQuery(q: ConjunctiveQuery): List[ConjunctiveQuery] = {
     val newCs = q.conjuncts.map(expandConjunct).distinct
     val conjSets = Utils.cartesian[TConjunct](newCs).toList
-    conjSets.map(cs => ListConjunctiveQuery(q.question, q.qVars, cs.toList))
+    conjSets.map(cs => ListConjunctiveQuery(q.qVars, cs.toList))
   }
   
-  def expandQuery(uquery: UQuery): List[UQuery] = uquery match {
-    case q: ConjunctiveQuery => expandConjQuery(q)
-    case _ => List(uquery)
-  }
-  
-  def deriveAnswers(uquery: UQuery): Iterable[AnswerDerivation] = expandQuery(uquery).flatMap(baseExecutor.deriveAnswers)
+  override def execute(q: ConjunctiveQuery): Iterable[ExecTuple] = expandQuery(q).flatMap(baseExecutor.execute)
 }

@@ -1,9 +1,5 @@
-package edu.knowitall.paralex
-
-import edu.knowitall.tool.stem.Lemmatized
-import edu.knowitall.tool.chunk.ChunkedToken
+package edu.knowitall.paraphrasing.template
 import edu.knowitall.wikianswers.QuestionCluster
-import edu.knowitall.wikianswers.Question
 
 case class TemplateCounter(cluster: QuestionCluster) {
   

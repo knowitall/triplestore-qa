@@ -197,10 +197,10 @@ case object TConjunct {
  * The qvar encodes the projection variable. qAttr is the tuple-attribute
  * to project onto. 
  */
-trait ConjunctiveQuery extends UQuery {
-  val qVars: List[TVariable]
-  val qAttrs: List[String]
-  val conjuncts: List[TConjunct]
+trait ConjunctiveQuery {
+  def qVars: List[TVariable]
+  def qAttrs: List[String]
+  def conjuncts: List[TConjunct]
   
   override def toString(): String = {
     val varString = qVars.map(_.toString).mkString(",")
@@ -212,8 +212,7 @@ trait ConjunctiveQuery extends UQuery {
 /**
  * A conjunctive query backed by a list of conjuncts.
  */
-case class ListConjunctiveQuery(question: String, qVars: List[TVariable], 
-    conjuncts: List[TConjunct])
+case class ListConjunctiveQuery(qVars: List[TVariable], conjuncts: List[TConjunct])
   extends ConjunctiveQuery {
   
   val conjunctNames = conjuncts.map(_.name)
@@ -235,7 +234,7 @@ case object ListConjunctiveQuery {
           throw new IllegalArgumentException(s"Expected variable: $left")
       }
       val conjuncts = TConjunct.fromStringMult(parts(1))
-      Some(ListConjunctiveQuery(s, qVars, conjuncts.toList))
+      Some(ListConjunctiveQuery(qVars, conjuncts.toList))
     } else if (parts.size == 1) {
       val s = parts(0)
       val conjuncts = TConjunct.fromStringMult(s)
@@ -243,7 +242,7 @@ case object ListConjunctiveQuery {
         case v :: rest => v :: rest
         case _ => throw new IllegalArgumentException(s"Expected variable: $s")
       }
-      Some(ListConjunctiveQuery(s, qVars.distinct, conjuncts.toList))
+      Some(ListConjunctiveQuery(qVars.distinct, conjuncts.toList))
     } else {
       None
     }
@@ -253,7 +252,7 @@ case object ListConjunctiveQuery {
   def expandSetTLiterals(cq: ConjunctiveQuery): List[ListConjunctiveQuery] = {
     val css = for (c <- cq.conjuncts; cs = TConjunct.expandSetTLiterals(c)) yield cs
     val product = Utils.cartesian[TConjunct](css).toList
-    for (cs <- product) yield ListConjunctiveQuery(cq.question, cq.qVars, cs.toList)
+    for (cs <- product) yield ListConjunctiveQuery(cq.qVars, cs.toList)
   }
 
 }

@@ -2,9 +2,7 @@ package edu.knowitall.scoring.features
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.AnswerGroup
-import edu.knowitall.execution.ExecQuery
 import edu.knowitall.execution.ConjunctiveQuery
-import edu.knowitall.execution.ExecConjunctiveQuery
 import edu.knowitall.execution.Search.TSQuery
 import edu.knowitall.execution.Tuple
 import edu.knowitall.tool.conf.FeatureSet
@@ -26,8 +24,8 @@ object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
   
   implicit def boolToDouble(bool: Boolean) = if (bool) 1.0 else 0.0
   
-  def allTuples(group: AnswerGroup)  = group.derivations.map(_.etuple.tuple)
-  def allQueries(group: AnswerGroup) = group.derivations.map(_.etuple.equery).distinct
+  def allTuples(group: AnswerGroup)  = group.derivations.map(d => d.execTuple.tuple)
+  def allQueries(group: AnswerGroup) = group.derivations.map(d => d.parsedQuery).distinct
   
   object MultipleNamespaces extends AnswerGroupFeature("Answer comes from multiple namespaces") {
     def apply(group: AnswerGroup) = {

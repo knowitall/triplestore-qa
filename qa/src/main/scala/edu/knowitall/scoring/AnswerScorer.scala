@@ -1,7 +1,7 @@
 package edu.knowitall.scoring
 
-import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.AnswerGroup
+import edu.knowitall.apps.AnswerDerivation
 
 trait AnswerScorer {
   def scoreAnswer(group: AnswerGroup): ScoredAnswerGroup

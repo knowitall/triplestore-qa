@@ -37,20 +37,45 @@ $(document).ready(function() {
         width: 100%;
         margin: 0 auto;
     }
-    .equeryHead {
+    .derivInfo td {
+        vertical-align: top;
+        padding-bottom: 5px;
+    }
+    .paraphrases ul {
+        margin-left: none;
+    }
+    .conjunctiveQuery {
         display: inline;
+        font-family: courier;
     }
     .highlight {
         color: blue;
+    }
+    .derivationGroup {
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+    }
+    .derivation {
+        margin-left: 0px;
+        margin-top: 0px;
+        overflow: hidden;
+        border: 1px solid grey;
+        margin: 10px;
+        padding: 10px;
     }
     .conjunct {
         display: inline;
         margin-right: 5px;
     }
     .tuplesContainer table {
+        border: 1px solid black;
+        margin: 5px;
+        font-size: small;
     }
     .tuples {
         border-collapse: collapse;
+        float: left;
     }
     .tuples td {
         width: 100px;
@@ -73,7 +98,7 @@ $(document).ready(function() {
         padding-right: 10px;
         margin: 5px;
         float: left;
-        width: 15%;
+        width: 150px;
     }
     .answer h1 {
         font-size: 16pt;
@@ -82,19 +107,10 @@ $(document).ready(function() {
     .score {
         color: grey;
     }
-    .equeryGroup {
-        margin: 5px;
-        padding: 5px;
-        width: 80%;
-        float: right;
-    }
     .answerGroup {
-        display: table;
         margin-bottom: 50px;
         width: 100%;
-    }
-    .endTuple {
-        border-right: 1px solid black;
+        overflow: hidden;
     }
     #config select {
         width: 200px;
@@ -105,14 +121,6 @@ $(document).ready(function() {
     }
     #config td {
         padding: 5px
-    }
-    .interpQuestion {
-        width: 80%;
-        float: right;
-        margin-top: 20px;
-        color: grey;
-        font-style: italic;
-        padding: 5px;
     }
 </style>
 <body>

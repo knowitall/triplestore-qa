@@ -1,22 +1,22 @@
-package edu.knowitall.paralex
-
-import edu.knowitall.tool.stem.Lemmatized
-import edu.knowitall.tool.chunk.ChunkedToken
+package edu.knowitall.paraphrasing.template
 import edu.knowitall.collection.immutable.Interval
 import com.typesafe.config.ConfigFactory
+import edu.knowitall.paraphrasing.ScoredParaphraseDerivation
 
 case class ArgQuestion(question: Seq[String], argInterval: Interval) {
   def arg: String = question.slice(argInterval.start, argInterval.end).mkString(" ")
 }
 
-case class ParaphraseDerivation(question: ArgQuestion, 
-    paraphrase: ArgQuestion, templates: TemplatePair)
-    
-trait ParaphraseGenerator {
-  def generate(question: Seq[String]): Iterable[ParaphraseDerivation]
+case class TemplateParaphraseDerivation(question: ArgQuestion, 
+    paraphrase: ArgQuestion, templates: TemplatePair, score: Double = 0.0) extends ScoredParaphraseDerivation {
+  val questionString = question.question.mkString(" ")
 }
 
-class SolrParaphraseGenerator(url: String, maxHits: Int, maxArgLength: Int) extends ParaphraseGenerator {
+trait TemplateParaphraseGenerator {
+  def generate(question: Seq[String]): Iterable[TemplateParaphraseDerivation]
+}
+
+class SolrParaphraseGenerator(url: String, maxHits: Int, maxArgLength: Int) extends TemplateParaphraseGenerator {
   def this() = this(SolrParaphraseGenerator.defaultUrl, 
       SolrParaphraseGenerator.defaultMaxHits,
       SolrParaphraseGenerator.defaultMaxArgLength)
@@ -55,9 +55,9 @@ class SolrParaphraseGenerator(url: String, maxHits: Int, maxArgLength: Int) exte
     
   }
   
-  override def generate(question: Seq[String]): Iterable[ParaphraseDerivation] = {
+  override def generate(question: Seq[String]): Iterable[TemplateParaphraseDerivation] = {
     for (aq <- abstractQuestion(question); t <- templates(aq); para = substitute(aq, t)) 
-      yield ParaphraseDerivation(aq, para, t)
+      yield TemplateParaphraseDerivation(aq, para, t)
       
   }
 
