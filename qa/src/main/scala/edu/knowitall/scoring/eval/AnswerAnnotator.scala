@@ -201,8 +201,8 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
           None,
           None,
           Some(parse.toString),
-          question,
           pp.target,
+          question,
           config.paraphraser,
           config.parser,
           config.executor,
@@ -223,7 +223,7 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
     val justification = TuplePrinter.printTuple(topTuple)
     val query = answer.derivations.head.execTuple.query.toString
     val scoreString = "%.03f" format answer.score
-    val paraphrase = answer.derivations.head.question
+    val paraphrase = answer.derivations.head.paraphrase.target
 
     val b64 = b64serializeSag(answer)
 
