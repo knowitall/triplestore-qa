@@ -15,9 +15,8 @@ output=$2
 jobName="template counter"
 requireConfVar "hadoop.streaming.jar"
 requireConfVar "python"
+requireConfVar "templates.reducers"
 
 map="$START_SCRIPT $mapperClass"
 reduce="$python $PROJECT_ROOT/src/main/scripts/util/aggsum.py 2"
-cmd="hadoop jar \"${hadoop_streaming_jar}\" -input \"${input}\" -output \"${output}\" -mapper \"${map}\" -reducer \"${reduce}\" -D mapred.job.name=\"${jobName}\""
-
-echo $cmd
+hadoop jar ${hadoop_streaming_jar} -Dmapred.reduce.tasks="${templates_reducers}" -Dmapred.job.name="${jobName}" -input "${input}" -output "${output}" -mapper "${map}" -reducer "${reduce}"
