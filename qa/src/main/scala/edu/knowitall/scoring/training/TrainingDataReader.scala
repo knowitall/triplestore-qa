@@ -1,8 +1,10 @@
 package edu.knowitall.scoring.training
 
+import edu.knowitall.apps.QAConfig
+import edu.knowitall.apps.QASystem
 import edu.knowitall.tool.conf.Labelled
 import edu.knowitall.execution.AnswerGroup
-import edu.knowitall.parsing.FormalQuestionParser
+import edu.knowitall.paralex.ParalexQuestionParser
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.execution.ConjunctiveQuery
@@ -15,25 +17,7 @@ import edu.knowitall.scoring.eval.{InputRecord => EvalRecord}
 
 class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[AnswerGroup]] {
 
-  val parser = new FormalQuestionParser()
-  val baseclient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 500)
-  val cachedClient = CachedTriplestoreClient(baseclient, 5000)
-  val executor = new IdentityExecutor(cachedClient)
-  val grouper = new BasicAnswerGrouper()
-
   type LAG = Labelled[AnswerGroup]
-
-  def expectedGroupFilter(expectedAnswer: String)(group: AnswerGroup): Boolean = {
-    val alternates = group.alternates.toSet
-    alternates.contains(List(expectedAnswer))
-  }
-
-  def groupsForQuery(uQueryString: String) = {
-    val uQueries = parser.parse(uQueryString)
-    val answers = uQueries flatMap executor.deriveAnswers
-    val allGroups = grouper group answers.toList
-    allGroups
-  }
 
   def labeledAnswerGroups = using(io.Source.fromURL(trainingResource, "UTF8")) { source =>
     val inputRecs = source.getLines map { l => EvalRecord.fromString(l) }

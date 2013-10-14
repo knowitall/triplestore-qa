@@ -3,6 +3,7 @@ package edu.knowitall.scoring.eval
 import java.io.File
 import edu.knowitall.apps.QAConfig
 import edu.knowitall.apps.QASystem
+import edu.knowitall.execution.UQuery
 import edu.knowitall.scoring.ScoredAnswerGroup
 import edu.knowitall.util.TuplePrinter
 import java.io.ByteArrayOutputStream
@@ -131,6 +132,33 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
     else merged
   }
 
+
+  /**
+   * Paralex might crash due to KenLM server... so retry indefinitely. (hack)
+   */
+  def parseHelper(q: String): Iterable[UQuery] = {
+
+    var done = false
+    var queries = Iterable.empty[UQuery]
+    var errors = 0
+    var delayMs = 10
+
+    while (!done) {
+      try {
+        queries = config.system.parser.parse(q)
+        done = true
+      } catch {
+        case e: Exception => {
+          errors += 1
+          System.err.println(s"retry, sleep $delayMs ms #$errors: ${e.getMessage}")
+          Thread.sleep(delayMs)
+          if (delayMs < 500) delayMs *= 2
+        }
+      }
+    }
+    queries
+  }
+
   /**
    * Execute each of the questions using the given config, returning a map
    * to the results obtained (in the form of inputrecords). Each question
@@ -138,7 +166,7 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
    * with it.
    */
   def execute(questions: Iterable[String]): Map[String, Seq[InputRecord]] = {
-    val rawParses = questions.map(q => (q, config.system.parser.parse(q))).filter(_._2.nonEmpty)
+    val rawParses = questions.map(q => (q, parseHelper(q))).filter(_._2.nonEmpty)
     val rawParsesAnswers = rawParses.map { case (q, parses) =>
       val answers = config.system.answerUQueries(parses, q).take(config.numAnswers)
       (q, parses, answers)

@@ -1,6 +1,6 @@
-Answer contains a negation word	0.0
-Answer postags in Set(DT NN, DT NNS, DT JJ, DT VGB)	-0.4762919497646048
-Intercept	-0.09500774441923496
-Literal Fields Difference	-0.17889750698720275
-Minimum Confidence	0.0
-Number of AnswerDerivations in the AnswerGroup	0.31879092030171674
+Answer contains a negation word	-1.6497386651947172E-6
+Answer postags in Set(DT NN, DT NNS, DT JJ, DT VGB)	-0.38769192665293795
+Intercept	-0.6253703029010853
+Literal Fields Difference	-0.04938721823154949
+Minimum Confidence	-0.5133955744455618
+Number of AnswerDerivations in the AnswerGroup	0.13810995993838654

@@ -73,7 +73,7 @@ object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
       val confs = allAttrs.collect {
         case (confRegex(), x: Float) => math.max(min, x.toDouble)
       }
-      (min :: confs).min
+      if (confs.isEmpty) min else confs.min
     }
   }
 
