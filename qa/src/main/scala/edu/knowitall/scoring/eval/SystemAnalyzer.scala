@@ -9,13 +9,11 @@ import java.io.ObjectInputStream
 class SystemAnalyzer(config: Config, results: Seq[InputRecord]) {
 
   val rescored = {
-    if (config.system.ranker.isInstanceOf[AnswerScorer]) {
-      results.filter(r => r.json.isDefined && r.label.isDefined).map { r =>
-        val sag = InputRecord.b64deserializeSag(r.json.get)
-        val score = reScoreSag(r.question, sag)
-        r.copy(scoreString = Some("%.03f" format score))
-      }
-    } else results
+    results.filter(r => r.json.isDefined && r.label.isDefined).map { r =>
+      val sag = InputRecord.b64deserializeSag(r.json.get)
+      val score = reScoreSag(sag)
+      r.copy(scoreString = Some("%.03f" format score))
+    }
   }
 
   // enforce max numAnswers per question by taking the top scored answers.
@@ -27,8 +25,8 @@ class SystemAnalyzer(config: Config, results: Seq[InputRecord]) {
 
   val sorted = numLimited.sortBy(-_.scoreString.get.toDouble).map(_.copy(json = None))
 
-  def reScoreSag(originalQuestion: String, sag: ScoredAnswerGroup): Double = {
-    config.system.ranker.asInstanceOf[AnswerScorer].scoreAnswer(originalQuestion, sag).score
+  def reScoreSag(sag: ScoredAnswerGroup): Double = {
+    config.system.scorer.scoreAnswer(sag).score
   }
 
   def precRecall = {
@@ -90,7 +88,6 @@ object SystemAnalyzer {
             rec.grouper == config.grouper &&
             rec.scorer == config.scorer
         }
-
         val filteredRecords = inputRecords.filter(filter)
 
         val analyzer = new SystemAnalyzer(config, filteredRecords)

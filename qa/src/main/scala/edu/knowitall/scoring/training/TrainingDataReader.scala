@@ -4,7 +4,6 @@ import edu.knowitall.apps.QAConfig
 import edu.knowitall.apps.QASystem
 import edu.knowitall.tool.conf.Labelled
 import edu.knowitall.execution.AnswerGroup
-import edu.knowitall.paralex.ParalexQuestionParser
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.execution.ConjunctiveQuery
@@ -13,6 +12,7 @@ import edu.knowitall.execution.BasicAnswerGrouper
 import java.net.URL
 import edu.knowitall.common.Resource.using
 import scala.util.{Try, Success, Failure}
+
 import edu.knowitall.scoring.eval.{InputRecord => EvalRecord}
 
 class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[AnswerGroup]] {

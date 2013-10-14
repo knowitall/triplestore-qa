@@ -1,11 +1,10 @@
 package edu.knowitall.scoring.features
 
 import edu.knowitall.execution.AnswerGroup
-import edu.knowitall.execution.ExecConjunctiveQuery
-import edu.knowitall.execution.ExecQuery
 import edu.knowitall.execution.Search.CountQuery
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.triplestore.CachedTriplestoreClient
+import edu.knowitall.execution.ConjunctiveQuery
 
 object TriplestoreFeatures {
 
@@ -20,16 +19,14 @@ object TriplestoreFeatures {
     val splitRegex = "\\s+".r
 
     def apply(group: AnswerGroup) = {
-      val queries = group.derivations.map(_.etuple.equery).distinct
-      def conjunctCounts(eq: ExecQuery) = eq match {
-        case q: ExecConjunctiveQuery => {
-          val literalFields = q.conjuncts.flatMap(_.literalFields)
-          val counts = literalFields.map { case (field, value) =>
-            client.count(value.toConjunct(field))
-          }
-          counts
+
+      val queries = group.derivations.map(d => d.execTuple.query).distinct
+      def conjunctCounts(q: ConjunctiveQuery) = {
+        val literalFields = q.conjuncts.flatMap(_.literalFields)
+        val counts = literalFields.map { case (field, value) =>
+          client.count(value.toConjunct(field))
         }
-        case _ => throw new RuntimeException("unknown query type.")
+        counts
       }
 
       val counts = queries flatMap conjunctCounts

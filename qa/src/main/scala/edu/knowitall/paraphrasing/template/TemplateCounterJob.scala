@@ -1,10 +1,10 @@
-package edu.knowitall.paralex
+package edu.knowitall.paraphrasing.template
 
 import com.nicta.scoobi.application.ScoobiApp
 import com.nicta.scoobi.Scoobi._
 import edu.knowitall.wikianswers.QuestionCluster
-import com.nicta.scoobi.core.Reduction
 import scala.io.Source
+
 
 object TemplateCounterJob extends ScoobiApp {
   

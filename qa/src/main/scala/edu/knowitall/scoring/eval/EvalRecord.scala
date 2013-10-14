@@ -21,7 +21,7 @@ case class InputRecord(
     scorer: String,
     json: Option[String]) {
 
-  def sysConfig = QAConfig(parser, executor, grouper, scorer)
+  def sysConfig = QAConfig("TODO", parser, executor, grouper, scorer)
 
   override def toString: String = {
     val fields: Seq[String] = Seq(

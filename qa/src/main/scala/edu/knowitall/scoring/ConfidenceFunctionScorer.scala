@@ -1,6 +1,5 @@
 package edu.knowitall.scoring
 
-import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.tool.conf.ConfidenceFunction
 import edu.knowitall.tool.conf.FeatureSet
@@ -13,7 +12,7 @@ abstract class ConfidenceFunctionScorer extends AnswerScorer {
 
   def featureSet: FeatureSet[AnswerGroup, Double]
 
-  override def scoreAnswer(originalQuestion: String, group: AnswerGroup): ScoredAnswerGroup = {
+  override def scoreAnswer(group: AnswerGroup): ScoredAnswerGroup = {
     BasicScoredAnswer(group.answer, group.alternates, group.derivations, confFunction(group))
   }
 }

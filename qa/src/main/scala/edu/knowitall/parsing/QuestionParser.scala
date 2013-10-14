@@ -1,6 +1,5 @@
 package edu.knowitall.parsing
 
-import edu.knowitall.execution.UQuery
 import edu.knowitall.execution.Search.{arg1, arg2, rel}
 import edu.knowitall.execution.Search.Field
 import edu.knowitall.execution.ConjunctiveQuery
@@ -21,7 +20,7 @@ import edu.knowitall.execution.ListConjunctiveQuery
 
 trait QuestionParser {
   
-  def parse(q: String): Iterable[UQuery]
+  def parse(q: String): Iterable[ConjunctiveQuery]
 
 }
 
@@ -37,7 +36,7 @@ abstract class LexiconParser extends QuestionParser {
   def lexicon: Lexicon
   
   val tokenizer = new Tokenizer
-  override def parse(q: String) = {
+  override def parse(q: String): Iterable[ConjunctiveQuery] = {
     val parser = BottomUpParser(lexicon)
     val tokens = tokenizer.tokenize(q)
     val words = tokens.map(t => QWord(t.string)).toIndexedSeq
@@ -59,7 +58,7 @@ abstract class LexiconParser extends QuestionParser {
     }
     val vals = Map[Field, TVal]((varField, tvar), (entField, entLit), (rel, relLit))
     val conj = TConjunct("r", vals)
-    ListConjunctiveQuery(ques, List(tvar), List(conj))
+    ListConjunctiveQuery(List(tvar), List(conj))
   }
   
 }
@@ -81,12 +80,9 @@ case class OldParalexParser() extends LexiconParser {
     nlpd.map(_.lemma).mkString(" ")
   }
   
-  def postprocess(u: UQuery): UQuery = u match {
-    case cq: ConjunctiveQuery => {
-      val newConjuncts = cq.conjuncts.map(fixConjunct)
-      ListConjunctiveQuery(u.question, cq.qVars, newConjuncts)
-    }
-    case _ => u
+  def postprocess(cq: ConjunctiveQuery): ConjunctiveQuery = {
+    val newConjuncts = cq.conjuncts.map(fixConjunct)
+    ListConjunctiveQuery(cq.qVars, newConjuncts)
   }
   
   def fixConjunct(c: TConjunct): TConjunct = {

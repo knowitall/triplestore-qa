@@ -1,7 +1,7 @@
 package edu.knowitall.scoring
 
-import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.AnswerGroup
+import edu.knowitall.apps.AnswerDerivation
 
 /**
  * An AnswerRanker takes a set of AnswerGroups and sorts them in some useful way.
@@ -16,10 +16,10 @@ trait AnswerRanker {
 trait AnswerScorer extends AnswerRanker {
 
   override def rankAnswers(originalQuestion: String, groups: Seq[AnswerGroup]): Seq[ScoredAnswerGroup] = {
-    groups.map(group => scoreAnswer(originalQuestion, group)).sortBy(-_.score)
+    groups.map(group => scoreAnswer(group)).sortBy(-_.score)
   }
 
-  def scoreAnswer(originalQuestion: String, group: AnswerGroup): ScoredAnswerGroup
+  def scoreAnswer(group: AnswerGroup): ScoredAnswerGroup
 }
 
 trait ScoredAnswerGroup extends AnswerGroup {
@@ -34,12 +34,12 @@ case class BasicScoredAnswer(answer: List[String], alternates: List[List[String]
     extends ScoredAnswerGroup
 
 case class UniformAnswerScorer(s: Double = 0.0) extends AnswerScorer {
-  override def scoreAnswer(originalQuestion: String, group: AnswerGroup) =
+  override def scoreAnswer(group: AnswerGroup) =
     BasicScoredAnswer(group.answer, group.alternates, group.derivations, s)
 }
 
 case class NumDerivationsScorer() extends AnswerScorer {
-  override def scoreAnswer(originalQuestion: String, group: AnswerGroup) =
+  override def scoreAnswer(group: AnswerGroup) =
     BasicScoredAnswer(group.answer, group.alternates, group.derivations,
         group.derivations.size.toDouble)
 }

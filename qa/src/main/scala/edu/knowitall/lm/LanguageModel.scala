@@ -1,4 +1,4 @@
-package edu.knowitall.paralex
+package edu.knowitall.lm
 
 import java.net.URL
 import java.net.URI
@@ -26,7 +26,7 @@ case class KenLmServer(url: String, timeOut: Int) extends LanguageModel {
   override def query(s: String): Double = {
     Http(root).params("q" -> s).asString.toDouble
   }
-  override def query(s: Iterable[String]) = {
+  def queryBatch(s: Iterable[String]) = {
     val lst = s.toList
     val joined = lst.mkString("|")
     val lines = Http.post(root).
@@ -36,10 +36,15 @@ case class KenLmServer(url: String, timeOut: Int) extends LanguageModel {
     			asString.trim.split("\n")
     lst.zip(lines).map { case (a, b) => (a, b.toDouble) }
   }
+  override def query(s: Iterable[String]) = {
+    val groups = s.grouped(KenLmServer.batchSize)
+    groups.flatMap(queryBatch).toList
+  }
 }
 
 case object KenLmServer {
   val conf = ConfigFactory.load()
   val defaultUrl = conf.getString("lm.url")
   val defaultTimeout = conf.getInt("lm.timeout")
+  val batchSize = conf.getInt("lm.batchSize");
 }

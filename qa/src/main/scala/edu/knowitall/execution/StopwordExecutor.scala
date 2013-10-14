@@ -6,16 +6,11 @@ case class StopwordExecutor(baseExecutor: QueryExecutor) extends QueryExecutor {
   
   val stops = Set("a", "an", "the", "'s", "these", "those", "some", "that", "something")
   
-  type ADs = Iterable[AnswerDerivation]
+  override def execute(q: ConjunctiveQuery): Iterable[ExecTuple] = 
+    baseExecutor.execute(cleanQuery(q))
   
-  def deriveAnswers(q: UQuery): ADs = q match {
-    case c: ListConjunctiveQuery => baseExecutor.deriveAnswers(cleanQuery(c))
-    case _ => throw new 
-      UnsupportedOperationException(s"Unable to execute query type: $q")
-  }
-  
-  def cleanQuery(q: ListConjunctiveQuery): ListConjunctiveQuery = {
-    q.copy(conjuncts = q.conjuncts map cleanConjunct)
+  def cleanQuery(q: ConjunctiveQuery): ListConjunctiveQuery = {
+    ListConjunctiveQuery(q.qVars, q.conjuncts map cleanConjunct)
   }
 
   def cleanConjunct(c: TConjunct): TConjunct = {

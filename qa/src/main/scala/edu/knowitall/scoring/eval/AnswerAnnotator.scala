@@ -3,7 +3,8 @@ package edu.knowitall.scoring.eval
 import java.io.File
 import edu.knowitall.apps.QAConfig
 import edu.knowitall.apps.QASystem
-import edu.knowitall.execution.UQuery
+import edu.knowitall.apps.AnswerDerivation
+import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.scoring.ScoredAnswerGroup
 import edu.knowitall.util.TuplePrinter
 import java.io.ByteArrayOutputStream
@@ -17,12 +18,13 @@ case class Config(
     outputFile: File = new File("."),
     numAnswers: Int = 1,
     removeStale: Boolean = false,
+    paraphraser: String = "paraphrase",
     parser: String   = "regex",
     executor: String = "identity",
     grouper: String  = "basic",
     scorer: String   = "logistic") {
 
-	def sysConfig = QAConfig(parser, executor, grouper, scorer)
+	def sysConfig = QAConfig(paraphraser, parser, executor, grouper, scorer)
     def system = {
 	  QASystem.getInstance(sysConfig).get
 	}
@@ -136,10 +138,10 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
   /**
    * Paralex might crash due to KenLM server... so retry indefinitely. (hack)
    */
-  def parseHelper(q: String): Iterable[UQuery] = {
+  def parseHelper(q: String): Iterable[ConjunctiveQuery] = {
 
     var done = false
-    var queries = Iterable.empty[UQuery]
+    var queries = Iterable.empty[ConjunctiveQuery]
     var errors = 0
     var delayMs = 10
 
@@ -166,21 +168,29 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
    * with it.
    */
   def execute(questions: Iterable[String]): Map[String, Seq[InputRecord]] = {
-    val rawParses = questions.map(q => (q, parseHelper(q))).filter(_._2.nonEmpty)
-    val rawParsesAnswers = rawParses.map { case (q, parses) =>
-      val answers = config.system.answerUQueries(parses, q).take(config.numAnswers)
-      (q, parses, answers)
+
+    val rawParses = questions.map { q =>
+      val pps = config.system.paraphrase(q)
+      val parses = pps.flatMap(pp => config.system.parse(pp).map(qq => (pp, qq)))
+      if (parses.isEmpty) None
+      else Some(parses.minBy(_._1.derivation.score))
     }
-    val convertedAnswers = rawParsesAnswers.map { case (question, parses, sags) =>
+
+    val rawParsesAnswers = questions.map(q => (q, config.system.answer(q))).zip(rawParses).map { case ((question, answers), pparse) =>
+      (question, answers, pparse.map(_._1), pparse.map(_._2))
+    }
+
+    val convertedAnswers = for ((question, sags, ppOpt, parseOpt) <- rawParsesAnswers;
+                                  if (parseOpt.isDefined)) yield {
       if (!sags.isEmpty) (question, sags.map(s => convertAnswer(s, question)))
       else {
         val result = InputRecord(None,
           None,
           None,
           None,
-          Some(parses.head.toString),
-          parses.head.question,
+          Some(parseOpt.get.toString),
           question,
+          ppOpt.get.target,
           config.parser,
           config.executor,
           config.grouper,
@@ -196,11 +206,11 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
 
   def convertAnswer(sag: ScoredAnswerGroup, question: String): InputRecord = {
     val answer = sag.alternates.head.head
-    val topTuple = sag.derivations.head.etuple.tuple
+    val topTuple = sag.derivations.head.execTuple.tuple
     val justification = TuplePrinter.printTuple(topTuple)
-    val query = sag.derivations.head.etuple.equery.uquery.toString
+    val query = sag.derivations.head.execTuple.query.toString
     val scoreString = "%.03f" format sag.score
-    val paraphrase = sag.derivations.head.etuple.equery.uquery.question
+    val paraphrase = sag.derivations.head.question
 
     val b64 = b64serializeSag(sag)
 
