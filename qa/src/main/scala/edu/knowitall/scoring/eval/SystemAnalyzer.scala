@@ -48,7 +48,7 @@ class SystemAnalyzer(config: Config, results: Seq[InputRecord]) {
         result ::= (correct.toDouble / total.toDouble)
       }
     }
-    result.reverse//.tails.filter(_.nonEmpty).toSeq.map { tail => tail.max }
+    result.reverse
   }
 }
 
@@ -63,6 +63,7 @@ object SystemAnalyzer {
       arg[File]("inputFile")  action { (f, c) => c.copy(inputFile = f) }
       arg[File]("outputFile") action { (f, c) => c.copy(outputFile = f) }
       opt[Int]("numAnswers")  action { (f, c) => c.copy(numAnswers = f) } text("Number of top answers to consider")
+      opt[String]("paraphraser") action { (s, c) => c.copy(paraphraser = s) }
       opt[String]("parser")   action { (s, c) => c.copy(parser = s) }
       opt[String]("executor") action { (s, c) => c.copy(executor = s) }
       opt[String]("basic")    action { (s, c) => c.copy(grouper = s) }

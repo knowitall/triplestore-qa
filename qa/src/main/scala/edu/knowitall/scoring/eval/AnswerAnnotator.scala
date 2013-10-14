@@ -18,14 +18,15 @@ case class Config(
     outputFile: File = new File("."),
     numAnswers: Int = 1,
     removeStale: Boolean = false,
-    paraphraser: String = "paraphrase",
+    paraphraser: String = "identity",
     parser: String   = "regex",
     executor: String = "identity",
     grouper: String  = "basic",
     scorer: String   = "logistic") {
 
-	def sysConfig = QAConfig(paraphraser, parser, executor, grouper, scorer)
-    def system = {
+	lazy val sysConfig = QAConfig(paraphraser, parser, executor, grouper, scorer)
+    lazy val system = {
+	  println(sysConfig)
 	  QASystem.getInstance(sysConfig).get
 	}
   }
@@ -60,8 +61,9 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
   def convenienceSort(results: Seq[InputRecord]): Seq[InputRecord] = {
     val sortScores = results.map { r =>
       val sortScore = {
-        if (r.answer.isDefined && !r.label.isDefined) 3
-        else if (r.answer.isDefined) 2
+        if (r.answer.isDefined && !r.label.isDefined) 4
+        else if (r.answer.isDefined && r.label.isDefined && r.json.isDefined) 3
+        else if (r.answer.isDefined && r.label.isDefined && !r.json.isDefined) 2
         else if (r.query.isDefined) 1
         else 0
       }
@@ -116,6 +118,7 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
     // also, now that we've re-used past labels, it's time to filter out old results from this
     // system config if the stale option is set.
     val filtered = if (config.removeStale) oldResults.filterNot { r =>
+      r.paraphraser == config.paraphraser &&
       r.parser == config.parser &&
       r.executor == config.executor &&
       r.grouper == config.grouper &&
@@ -169,28 +172,38 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
    */
   def execute(questions: Iterable[String]): Map[String, Seq[InputRecord]] = {
 
-    val rawParses = questions.map { q =>
+    val qSeq = questions.toSeq
+
+    val rawParses = qSeq.map { q =>
       val pps = config.system.paraphrase(q)
       val parses = pps.flatMap(pp => config.system.parse(pp).map(qq => (pp, qq)))
       if (parses.isEmpty) None
       else Some(parses.minBy(_._1.derivation.score))
     }
 
-    val rawParsesAnswers = questions.map(q => (q, config.system.answer(q))).zip(rawParses).map { case ((question, answers), pparse) =>
-      (question, answers, pparse.map(_._1), pparse.map(_._2))
+    val rawParsesAnswers = qSeq.map(q => (q, config.system.answer(q))).zip(rawParses).map { case ((question, answers), pparse) =>
+
+      (question, answers.take(config.numAnswers), pparse.map(_._1), pparse.map(_._2))
     }
 
-    val convertedAnswers = for ((question, sags, ppOpt, parseOpt) <- rawParsesAnswers;
-                                  if (parseOpt.isDefined)) yield {
-      if (!sags.isEmpty) (question, sags.map(s => convertAnswer(s, question)))
+    val filteredParsesAnswers = rawParsesAnswers.collect({ case (question, answers, Some(paraphrase), Some(query)) =>
+      (question, answers, paraphrase, query)
+    })
+
+    val convertedAnswers =
+      filteredParsesAnswers.map { case (question, answers, pp, parse) =>
+      if (!answers.isEmpty) {
+        (question, answers.map(s => convertAnswer(s, question)))
+      }
       else {
         val result = InputRecord(None,
           None,
           None,
           None,
-          Some(parseOpt.get.toString),
+          Some(parse.toString),
           question,
-          ppOpt.get.target,
+          pp.target,
+          config.paraphraser,
           config.parser,
           config.executor,
           config.grouper,
@@ -204,23 +217,24 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
 
   private val cleanup = "\n+|\\s+".r
 
-  def convertAnswer(sag: ScoredAnswerGroup, question: String): InputRecord = {
-    val answer = sag.alternates.head.head
-    val topTuple = sag.derivations.head.execTuple.tuple
+  def convertAnswer(answer: ScoredAnswerGroup, question: String): InputRecord = {
+    val answerString = answer.alternates.head.head
+    val topTuple = answer.derivations.head.execTuple.tuple
     val justification = TuplePrinter.printTuple(topTuple)
-    val query = sag.derivations.head.execTuple.query.toString
-    val scoreString = "%.03f" format sag.score
-    val paraphrase = sag.derivations.head.question
+    val query = answer.derivations.head.execTuple.query.toString
+    val scoreString = "%.03f" format answer.score
+    val paraphrase = answer.derivations.head.question
 
-    val b64 = b64serializeSag(sag)
+    val b64 = b64serializeSag(answer)
 
     InputRecord(None,
-        Some(answer),
+        Some(answerString),
         Some(scoreString),
         Some(justification),
         Some(query),
         paraphrase,
         question,
+        config.paraphraser,
         config.parser,
         config.executor,
         config.grouper,
@@ -240,7 +254,6 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
     b64.encodeAsString(yourBytes)
   }
 
-
   def b64deserializeSag(string: String): ScoredAnswerGroup = {
     val yourBytes = new Base64().decode(string)
     val bis = new ByteArrayInputStream(yourBytes)
@@ -251,8 +264,6 @@ class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
     sag
   }
 }
-
-
 
 object AnswerAnnotator {
 
@@ -266,6 +277,7 @@ object AnswerAnnotator {
       arg[File]("outputFile") action { (f, c) => c.copy(outputFile = f) }
       opt[Int]("numAnswers")  action { (f, c) => c.copy(numAnswers = f) } text("Number of new answers to add")
       opt[Unit]("removeStale")  action { (f, c) => c.copy(removeStale = true) } text("Dont keep answers only found with this system config during prior runs")
+      opt[String]("paraphraser") action { (s, c) => c.copy(paraphraser = s) }
       opt[String]("parser")   action { (s, c) => c.copy(parser = s) }
       opt[String]("executor") action { (s, c) => c.copy(executor = s) }
       opt[String]("basic")    action { (s, c) => c.copy(grouper = s) }

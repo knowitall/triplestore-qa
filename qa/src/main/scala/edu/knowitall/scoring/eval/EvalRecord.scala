@@ -15,6 +15,7 @@ case class InputRecord(
     query: Option[String],
     paraphrase: String,
     question: String,
+    paraphraser: String,
     parser: String,
     executor: String,
     grouper: String,
@@ -32,6 +33,7 @@ case class InputRecord(
       query.getOrElse("X"),
       paraphrase,
       scoreString.getOrElse("X"),
+      paraphraser,
       parser,
       executor,
       grouper,
@@ -62,6 +64,7 @@ object InputRecord {
     "Query",
     "Paraphrase",
     "Score",
+    "Paraphraser",
     "Parser",
     "Executor",
     "Grouper",
@@ -76,10 +79,10 @@ object InputRecord {
 
   def fromString(str: String): InputRecord = str.split("\t") match {
     // wrap plain file of questions in empty input record
-    case Array(question) => InputRecord(None, None, None, None, None, question, question, "NA", "NA", "NA", "NA", None)
-    case Array(label, answer, question, just, query, pphrase, score, parser, exec, grouper, scorer, json) =>
+    case Array(question) => InputRecord(None, None, None, None, None, question, question, "NA", "NA", "NA", "NA", "NA", None)
+    case Array(label, answer, question, just, query, pphrase, score, paraphraser, parser, exec, grouper, scorer, json) =>
 
-      InputRecord(nx(label), nx(answer), nx(score), nx(just), nx(query), pphrase, question, parser, exec, grouper, scorer, nx(json))
+      InputRecord(nx(label), nx(answer), nx(score), nx(just), nx(query), pphrase, question, paraphraser, parser, exec, grouper, scorer, nx(json))
     case _ => throw new RuntimeException("Don't know how to parse:\n"+str)
   }
 
