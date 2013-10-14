@@ -37,15 +37,19 @@ import edu.knowitall.parsing.regex.RegexQuestionParser
 import edu.knowitall.paralex.SolrParaphraseGenerator
 import edu.knowitall.paralex.PmiLmScorer
 import edu.knowitall.paralex.SimpleQuestionParaphraser
+import com.typesafe.config.ConfigFactory
 
 case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, ranker: AnswerRanker) {
 
+  val conf = ConfigFactory.load()
   val logger = LoggerFactory.getLogger(this.getClass)
+  val maxDerivs = conf.getInt("qa.maxDerivs")
+  val maxUQueries = conf.getInt("qa.maxUQueries")
 
   def answer(question: String): List[ScoredAnswerGroup] = {
 
     logger.info(s"Parsing question '$question'")
-    val queries = parser.parse(question)//.take(100)
+    val queries = parser.parse(question).take(maxUQueries)
     answerUQueries(queries, question)
   }
 
@@ -64,7 +68,7 @@ case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: An
 
     logger.info(s"Grouping answers for '$question'")
     def answerString(group: AnswerGroup) = group.answer.mkString(" ")
-    val groups = grouper.group(derivs.take(100).toList).sortBy(answerString)
+    val groups = grouper.group(derivs.take(maxDerivs).toList).sortBy(answerString)
 
     logger.info(s"Scoring answers for '$question'")
     val answers = ranker.rankAnswers(question, groups)
@@ -90,10 +94,10 @@ case class QAConfig(parser: String = "formal",
   scorer: String = "numDerivations")
 
 case object Components {
-
-  val baseClient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 100)
-  val client = CachedTriplestoreClient(baseClient, 100000)
-  val paraGenerator = new SolrParaphraseGenerator(maxHits = 1000)
+  
+  val baseClient = new SolrClient()
+  val client = CachedTriplestoreClient(baseClient)
+  val paraGenerator = new SolrParaphraseGenerator()
   val paraScorer = new PmiLmScorer()
   val pp = SimpleQuestionParaphraser(paraScorer, paraGenerator)
   val regexParser = RegexQuestionParser()

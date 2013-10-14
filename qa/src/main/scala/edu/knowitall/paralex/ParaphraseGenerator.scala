@@ -3,6 +3,7 @@ package edu.knowitall.paralex
 import edu.knowitall.tool.stem.Lemmatized
 import edu.knowitall.tool.chunk.ChunkedToken
 import edu.knowitall.collection.immutable.Interval
+import com.typesafe.config.ConfigFactory
 
 case class ArgQuestion(question: Seq[String], argInterval: Interval) {
   def arg: String = question.slice(argInterval.start, argInterval.end).mkString(" ")
@@ -15,7 +16,10 @@ trait ParaphraseGenerator {
   def generate(question: Seq[String]): Iterable[ParaphraseDerivation]
 }
 
-class SolrParaphraseGenerator(url: String = "http://rv-n12.cs.washington.edu:28983/solr/paraphrase", maxHits: Int = 500, maxArgLength: Int = 4) extends ParaphraseGenerator {
+class SolrParaphraseGenerator(url: String, maxHits: Int, maxArgLength: Int) extends ParaphraseGenerator {
+  def this() = this(SolrParaphraseGenerator.defaultUrl, 
+      SolrParaphraseGenerator.defaultMaxHits,
+      SolrParaphraseGenerator.defaultMaxArgLength)
   val client = new ParaphraseTemplateClient(url)
   def intervals(size: Int) =
     for (i <- Range(0, size); j <- Range(i, size); if j+1-i <= maxArgLength) yield Interval.open(i, j+1)
@@ -57,4 +61,11 @@ class SolrParaphraseGenerator(url: String = "http://rv-n12.cs.washington.edu:289
       
   }
 
+}
+
+case object SolrParaphraseGenerator {
+  val conf = ConfigFactory.load()
+  val defaultUrl = conf.getString("paraphrase.url")
+  val defaultMaxHits = conf.getInt("paraphrase.maxHits")
+  val defaultMaxArgLength = conf.getInt("paraphrase.maxArgLength")
 }
