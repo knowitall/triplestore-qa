@@ -100,9 +100,9 @@ object SystemAnalyzer {
     val top = scoredAnswerGroups.take(config.numAnswers)
     val answerJust = top.map { topAnswer => 
       val answer = topAnswer.alternates.head.head
-      val topTuple = topAnswer.derivations.head.etuple.tuple
+      val topTuple = topAnswer.derivations.head.execTuple.tuple
       val justification = TuplePrinter.printTuple(topTuple)
-      val query = topAnswer.derivations.head.etuple.equery.uquery.toString
+      val query = topAnswer.derivations.head.execTuple.query.toString
       (answer -> (AnswerJustification("X", answer, justification, query), topAnswer.score))
     }
     answerJust.toMap

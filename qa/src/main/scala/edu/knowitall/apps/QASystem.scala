@@ -4,9 +4,7 @@ import edu.knowitall.scoring.AnswerScorer
 import edu.knowitall.execution.QueryExecutor
 import edu.knowitall.parsing.QuestionParser
 import edu.knowitall.scoring.ScoredAnswerGroup
-import edu.knowitall.paralex.ParalexQuestionParser
 import org.slf4j.LoggerFactory
-import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.AnswerGrouper
 import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.parsing.FormalQuestionParser
@@ -22,7 +20,6 @@ import edu.knowitall.execution.PostagAnswerGrouper
 import edu.knowitall.execution.PostagSampleAnswerGrouper
 import edu.knowitall.execution.SingletonAnswerGrouper
 import edu.knowitall.execution.ExactAnswerGrouper
-import edu.knowitall.execution.UQuery
 import edu.knowitall.scoring.NumDerivationsScorer
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.parsing.StringMatchingParser
@@ -33,84 +30,124 @@ import edu.knowitall.execution.synonyms.RelationSynonymExecutor
 import edu.knowitall.common.Timing
 import edu.knowitall.execution.DefaultFilters
 import edu.knowitall.parsing.regex.RegexQuestionParser
-import edu.knowitall.paralex.SolrParaphraseGenerator
-import edu.knowitall.paralex.PmiLmScorer
-import edu.knowitall.paralex.SimpleQuestionParaphraser
+import edu.knowitall.paraphrasing.template.SolrParaphraseGenerator
 import com.typesafe.config.ConfigFactory
+import edu.knowitall.paraphrasing.Paraphraser
+import edu.knowitall.paraphrasing.Paraphrase
+import edu.knowitall.paraphrasing.IdentityParaphraser
+import edu.knowitall.paraphrasing.template.TemplateParaphraser
+import edu.knowitall.execution.ConjunctiveQuery
+import edu.knowitall.execution.ExecTuple
 
-case class QASystem(parser: QuestionParser, executor: QueryExecutor, grouper: AnswerGrouper, scorer: AnswerScorer) {
+case class QASystem(paraphraser: Paraphraser,
+					parser: QuestionParser, 
+					executor: QueryExecutor,
+					grouper: AnswerGrouper,
+					scorer: AnswerScorer) {
 
   val conf = ConfigFactory.load()
   val logger = LoggerFactory.getLogger(this.getClass)
   val maxDerivs = conf.getInt("qa.maxDerivs")
   val maxUQueries = conf.getInt("qa.maxUQueries")
+  val maxParaphrases = conf.getInt("qa.maxParaphrases")
+  val maxAnswerGroups = conf.getInt("qa.maxAnswerGroups")
 
   def answer(question: String): List[ScoredAnswerGroup] = {
-
-    logger.info(s"Parsing question '$question'")
-    val queries = parser.parse(question).take(maxUQueries)
-    answerUQueries(queries, question)
-  }
-
-  def answerUQueries(uqueries: Iterable[UQuery], question: String): List[ScoredAnswerGroup] = {
-
-    logger.info(s"Executing queries for '$question'")
-    val (nsExec, derivs) = Timing.time {
-      for (
-        query <- uqueries.par;
-        derivs = executor.deriveAnswers(query);
-        deriv <- derivs
-      ) yield deriv
-    }
-
-    logger.info("Executed queries in " + Timing.Seconds.format(nsExec))
     
-    logger.info(s"Grouping answers for '$question'")
-    def answerString(group: AnswerGroup) = group.answer.mkString(" ")
-    val groups = grouper.group(derivs.take(maxDerivs).toList).sortBy(answerString)
-
-    logger.info(s"Scoring answers for '$question'")
-    val answers = for (
-      group <- groups.par;
-      scored = scorer.scoreAnswer(group)
-    ) yield scored
-    logger.info(s"Returning ${answers.size} answers.")
-    answers.toList.sortBy(-_.score)
+    logger.info(s"Answering question '$question'")
+    
+    val derivations = for (pp <- paraphrase(question).par;
+    					   query <- parse(pp);
+    					   execTuple <- execute(query))
+    					yield AnswerDerivation(question, pp, query, execTuple)
+    
+    val groups = group(derivations.toList)
+    val scored = score(groups)
+    scored
   }
+  
+  def paraphrase(question: String): Iterable[Paraphrase] = {
+    val allParas = IdentityParaphraser.paraphrase(question) ++ 
+    			paraphraser.paraphrase(question)
+    val paras = allParas.distinct.take(maxParaphrases)
+    logger.info(s"Paraphrased '$question' to:\n${paras.map(_.target).mkString("\n")}")
+    paras
+  }  
+    
+  def parse(pp: Paraphrase): Iterable[ConjunctiveQuery] = {
+    val question = pp.target
+    val queries = parser.parse(question)
+    logger.info(s"Parsed '$question' into queries:\n${queries.mkString("\n")}")
+    queries
+  }
+    
+  def execute(query: ConjunctiveQuery): Iterable[ExecTuple] = {
+    val tuples = executor.execute(query)
+    logger.info(s"Derived answers:\n${tuples.map(_.answerString).mkString("\n")}")
+    tuples
+  }
+    
+  def group(derivs: Iterable[AnswerDerivation]): Iterable[AnswerGroup] =
+    grouper.group(derivs.toList)
+    
+  def score(groups: Iterable[AnswerGroup]): List[ScoredAnswerGroup] = {
+    val scored = groups.par.map(scorer.scoreAnswer).toList.sortBy(-_.score).take(maxAnswerGroups)
+    logger.info(s"Scored answers:\n${scored.map(g => g.score + " " + g.answerString).mkString("\n")}")
+    scored
+  }
+  
 }
 
 case object QASystem {
 
-  def getInstance(config: QAConfig = QAConfig()): Option[QASystem] =
+  def getInstance(config: QAConfig = new QAConfig()): Option[QASystem] =
     for (
+      paraphraser <- Components.paraphrasers.get(config.paraphraser);
       parser <- Components.parsers.get(config.parser);
       executor <- Components.executors.get(config.executor);
       grouper <- Components.groupers.get(config.grouper);
       scorer <- Components.scorers.get(config.scorer)
-    ) yield QASystem(parser, DefaultFilters.wrap(executor), grouper, scorer)
+    ) yield QASystem(paraphraser, parser, DefaultFilters.wrap(executor), grouper, scorer)
 
 }
 
-case class QAConfig(parser: String = "formal",
-  executor: String = "identity",
-  grouper: String = "basic",
-  scorer: String = "numDerivations")
+case class QAConfig(paraphraser: String, parser: String, executor: String,
+  grouper: String, scorer: String) {
+  def this() = this(QAConfig.defaultParaphraser, QAConfig.defaultParser,
+      QAConfig.defaultExecutor, QAConfig.defaultGrouper, QAConfig.defaultScorer)
+}
+case object QAConfig {
+  val conf = ConfigFactory.load()
+  val defaultParaphraser = conf.getString("qa.defaultParaphraser")
+  val defaultParser = conf.getString("qa.defaultParser")
+  val defaultExecutor = conf.getString("qa.defaultExecutor")
+  val defaultGrouper = conf.getString("qa.defaultGrouper")
+  val defaultScorer = conf.getString("qa.defaultScorer")
+}
 
 case object Components {
   
   val baseClient = new SolrClient()
   val client = CachedTriplestoreClient(baseClient)
   val paraGenerator = new SolrParaphraseGenerator()
-  val paraScorer = new PmiLmScorer()
-  val pp = SimpleQuestionParaphraser(paraScorer, paraGenerator)
   val regexParser = RegexQuestionParser()
+  
+  val defaults = Map(
+      "paraphraser" -> QAConfig.defaultParaphraser,
+      "parser" -> QAConfig.defaultParser,
+      "executor" -> QAConfig.defaultExecutor,
+      "grouper" -> QAConfig.defaultGrouper,
+      "scorer" -> QAConfig.defaultScorer)
 
+  val paraphrasers: Map[String, Paraphraser] =
+    Map("identity" -> IdentityParaphraser, 
+        "templatesLm" -> new TemplateParaphraser())
+  
   val parsers: Map[String, QuestionParser] =
     Map("formal" -> FormalQuestionParser(),
       "keyword" -> StringMatchingParser(client),
       "paralex-old" -> OldParalexParser(),
-      "regex" -> regexParser,
-      "paralex" -> new ParalexQuestionParser(pp, regexParser))
+      "regex" -> regexParser)
 
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client),

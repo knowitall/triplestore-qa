@@ -56,24 +56,27 @@ var writeResults = function(data) {
     var $r = $('#results');
     $r.html('');
     var $t = $('<table id="resultTable"/>').appendTo($r);
-    var cols = ['score', 'paraphrase', 'arg', 'template', 'pmi', 'lm']; 
+    var cols = ['score', 'paraphrase', 'source template', 'target template']; 
     var $thead = $('<thead/>').appendTo($t);
     var $head = $('<tr/>').appendTo($thead);
     var $tbody = $('<tbody/>').appendTo($t);
     $.each(cols, function(j, name) {
         $head.append('<th>' + name + '</th>');
     });
-    $.each(data, function(i, deriv) {
-        deriv['score'] = deriv['score'].toFixed(2)
+    $.each(data, function(i, x) {
+        var deriv = x.derivation;
+        var row = [deriv.score.toFixed(2), x.target, deriv.templates.template1, deriv.templates.template2];
+        /*deriv['score'] = deriv['score'].toFixed(2)
         deriv['pmi'] = deriv['pmi'].toFixed(2)
-        deriv['lm'] = deriv['lm'].toFixed(2)
+        deriv['lm'] = deriv['lm'].toFixed(2)*/
         var $tr = $('<tr/>').appendTo($tbody);
-        $.each(cols, function(j, name) {
-            $tr.append('<td>' + deriv[name] + '</td>');
+        $.each(row, function(j, val) {
+            $tr.append('<td>' + val  + '</td>');
         });
     });
     $t.addClass("tablesorter");
     $t.tablesorter({sortList: [[1,0]], widgets: ['zebra']});
+    $thead.find('th:first').click();
     $thead.find('th:first').click();
 };
 

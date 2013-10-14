@@ -10,7 +10,7 @@ case class RelationSynonymExecutor(client: TriplestoreClient, executor: QueryExe
   val syns = TriplestoreRelationSynonyms(client, max)
   val logger = LoggerFactory.getLogger(this.getClass)
   
-  def expandConjunctiveQuery(q: ConjunctiveQuery): List[UQuery] = {
+  def expandQuery(q: ConjunctiveQuery): List[ConjunctiveQuery] = {
     val rels = q.conjuncts.flatMap(_.values.get(rel))
     logger.debug(s"rels = $rels")
     val litRels = rels.collect { case UnquotedTLiteral(v: String) => v }
@@ -20,15 +20,6 @@ case class RelationSynonymExecutor(client: TriplestoreClient, executor: QueryExe
     logger.debug(s"result = $result")
     result.distinct
   }
-  
-  def expandQuery(q: UQuery): List[UQuery] = q match {
-    case q: ConjunctiveQuery => {
-      val results = expandConjunctiveQuery(q)
-      logger.debug(s"Expanded query $q into $results")
-      results
-    }
-    case _ => List(q)
-  }
-  
-  def deriveAnswers(q: UQuery) = expandQuery(q).par.flatMap(executor.deriveAnswers(_)).toList
+
+  override def execute(q: ConjunctiveQuery) = expandQuery(q).par.flatMap(executor.execute(_)).toList
 }

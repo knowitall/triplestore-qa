@@ -14,18 +14,16 @@ trait AnswerFilter {
 object AnswerFilter {
   // Mnemonics
   type QE = QueryExecutor
-  type ADPred = (AnswerDerivation => Boolean)
+  type ETPred = (ExecTuple => Boolean)
   type SPred = (String => Boolean)
   
-  // A filter is a function from a QE to a QE
-  def createDerivFilter(f: ADPred): (QE => QE) = exec => new QE {
-    def deriveAnswers(uq: UQuery) = exec.deriveAnswers(uq).filter(f)
+  def createExecTupleFilter(f: ETPred): (QE => QE) = exec => new QE {
+    def execute(q: ConjunctiveQuery) = exec.execute(q).filter(f)
   }
   
-  // Filter over the string answer value of the answer derivation
   def createStringFilter(f: SPred): (QE => QE) = {
-    val adpred = (d: AnswerDerivation) => f(d.answer.mkString(", "))
-    createDerivFilter(adpred)
+    val etpred = (et: ExecTuple) => f(et.answer.mkString(", "))
+    createExecTupleFilter(etpred)
   }
   
   def compose(af1: AnswerFilter, af2: AnswerFilter) = new AnswerFilter {

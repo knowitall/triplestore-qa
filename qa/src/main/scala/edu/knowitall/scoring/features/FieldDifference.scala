@@ -2,12 +2,9 @@ package edu.knowitall.scoring.features
 
 import edu.knowitall.execution.TConjunct
 import edu.knowitall.execution.Tuple
-
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.AnswerGroup
-import edu.knowitall.execution.ExecQuery
-import edu.knowitall.execution.ExecConjunctiveQuery
 import edu.knowitall.execution.Search.TSQuery
 import edu.knowitall.execution.Tuple
 import edu.knowitall.tool.conf.FeatureSet
@@ -20,13 +17,14 @@ import edu.knowitall.execution.TConjunct
 import edu.knowitall.tool.stem.MorphaStemmer
 import scala.Array.canBuildFrom
 import scala.Option.option2Iterable
+import edu.knowitall.execution.ConjunctiveQuery
 
 case object LiteralFieldsDifference extends AnswerGroupFeature("Literal Fields Difference") {
   
   import FieldDifference.{conjuncts, avg}
   
   def apply(group: AnswerGroup) = {
-    val queries = group.derivations.map(_.etuple.equery)
+    val queries = group.derivations.map(d => d.execTuple.query)
     val cs = queries flatMap conjuncts
     val literalFields = cs.flatMap(_.literalFields).map(_._1.name).distinct
     require(literalFields.size >= 1, "No literals in any query conjunct.")
@@ -57,8 +55,8 @@ case class FieldDifference(field: String) extends AnswerGroupFeature("Query-Fiel
   }
   
   def apply(group: AnswerGroup) = {
-    val queriesToDerivations = group.derivations.groupBy(d => d.etuple.equery)
-    val queriesToTuples = queriesToDerivations.map{case (query, derivs) => (query, derivs.map(_.etuple.tuple)) }
+    val queriesToDerivations = group.derivations.groupBy(d => d.execTuple.query)
+    val queriesToTuples = queriesToDerivations.map{case (query, derivs) => (query, derivs.map(d => d.execTuple.tuple)) }
     val conjunctsToTuples = queriesToTuples.flatMap { case (query, tuples) => 
       conjuncts(query).map { c => (c, tuples) }  
     }
@@ -113,8 +111,5 @@ object FieldDifference {
     filtered
   }
   
-  def conjuncts(query: ExecQuery) = query match {
-    case q: ExecConjunctiveQuery => q.conjuncts
-    case _ => Nil
-  }
+  def conjuncts(query: ConjunctiveQuery) = query.conjuncts
 }

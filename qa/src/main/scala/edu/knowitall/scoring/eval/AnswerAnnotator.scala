@@ -52,12 +52,13 @@ object AnswerAnnotator {
       inputFile: File = new File("."), 
       outputFile: File = new File("."),
       numAnswers: Int = 1,
+      paraphraser: String = "identity",
       parser: String   = "regex",
       executor: String = "identity",
       grouper: String  = "basic",
       scorer: String   = "logistic") {
     
-	  lazy val sysConfig = QAConfig(parser, executor, grouper, scorer)
+	  lazy val sysConfig = QAConfig(paraphraser, parser, executor, grouper, scorer)
       lazy val system = QASystem.getInstance(sysConfig).get 
   }
 
@@ -125,9 +126,9 @@ object AnswerAnnotator {
     val top = scoredAnswerGroups.take(config.numAnswers)
     val answerJust = top.map { topAnswer => 
       val answer = topAnswer.alternates.head.head
-      val topTuple = topAnswer.derivations.head.etuple.tuple
+      val topTuple = topAnswer.derivations.head.execTuple.tuple
       val justification = TuplePrinter.printTuple(topTuple)
-      val query = topAnswer.derivations.head.etuple.equery.uquery.toString
+      val query = topAnswer.derivations.head.execTuple.query.toString
       (answer -> AnswerJustification("X", answer, justification, query))
     }
     answerJust.toMap

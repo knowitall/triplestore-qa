@@ -1,10 +1,12 @@
-package edu.knowitall.paralex
+package edu.knowitall.paraphrasing.template
 
 import edu.knowitall.tool.stem.Lemmatized
 import edu.knowitall.tool.chunk.ChunkedToken
 import edu.knowitall.util.NlpUtils.makeRegex
 import scala.collection.JavaConversions._
 import edu.knowitall.util.NlpUtils
+import com.typesafe.config.ConfigFactory
+import edu.knowitall.tool.stem.Lemmatized.viewAsToken
 
 case class Template(left: Seq[Lemmatized[ChunkedToken]], right: Seq[Lemmatized[ChunkedToken]]) {
   def substitute(value: Seq[Lemmatized[ChunkedToken]]) = left ++ value ++ right
@@ -30,6 +32,8 @@ case class AbstractedQuestion(value: Seq[Lemmatized[ChunkedToken]], template: Te
 
 case object AbstractedQuestion {
   
+  val conf = ConfigFactory.load()
+  
   def deserialize(s: String): AbstractedQuestion = {
     s.split("|", 1) match {
       case Array(value, rest) => AbstractedQuestion(NlpUtils.deserialize(value), Template.deserialize(rest))
@@ -37,7 +41,7 @@ case object AbstractedQuestion {
     }
   }
   
-  val maxSize = 4
+  val maxSize = conf.getInt("paraphrase.maxArgLength")
   val valuePattern = makeRegex("^<pos='$' | pos='PRP$' | pos='CD' | pos='DT' | pos='JJ' | pos='JJS' | pos='JJR' | pos='NN' " +
       "| pos='NNS' | pos='NNP' | pos='NNPS' | pos='POS' | pos='PRP' | pos='RB' | pos='RBR' | pos='RBS' " +
       "| pos='VBN' | pos='VBG'>+$")

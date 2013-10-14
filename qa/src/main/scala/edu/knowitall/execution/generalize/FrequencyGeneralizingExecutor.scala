@@ -3,7 +3,6 @@ package edu.knowitall.execution.generalize
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.triplestore.TriplestoreClient
 import edu.knowitall.execution.Search.CountQuery
-import edu.knowitall.execution.AnswerDerivation
 import edu.knowitall.execution.ListConjunctiveQuery
 import edu.knowitall.execution.QueryExecutor
 import edu.knowitall.execution.Search.Field
@@ -12,8 +11,8 @@ import edu.knowitall.execution.Search.arg2
 import edu.knowitall.execution.Search.rel
 import edu.knowitall.execution.TConjunct
 import edu.knowitall.execution.TVal
-import edu.knowitall.execution.UQuery
 import edu.knowitall.execution.UnquotedTLiteral
+import edu.knowitall.execution.ConjunctiveQuery
 
 class FrequencyGeneralizingExecutor(val baseExecutor: QueryExecutor, tsClient: TriplestoreClient) extends GeneralizingExecutor {
 
@@ -107,9 +106,9 @@ class FrequencyGeneralizingExecutor(val baseExecutor: QueryExecutor, tsClient: T
     else (Iterator(generalization) ++ { conjunctGeneralizations(generalization) })
   }
   
-  def generalizations(lcq: ListConjunctiveQuery): Iterator[ListConjunctiveQuery] = {
+  override def generalizations(lcq: ConjunctiveQuery): Iterator[ConjunctiveQuery] = {
     val conjGeneralizations = conjunctGeneralizations(lcq.conjuncts)
-    conjGeneralizations.map(cs => lcq.copy(conjuncts = cs.toList))
+    conjGeneralizations.map(cs => ListConjunctiveQuery(lcq.qVars, cs.toList))
   }
   
 

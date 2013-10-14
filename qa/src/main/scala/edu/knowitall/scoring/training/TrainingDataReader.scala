@@ -11,6 +11,8 @@ import edu.knowitall.execution.BasicAnswerGrouper
 import java.net.URL
 import edu.knowitall.common.Resource.using
 import scala.util.{Try, Success, Failure}
+import edu.knowitall.paraphrasing.IdentityParaphraser
+import edu.knowitall.apps.AnswerDerivation
 
 class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[AnswerGroup]] {
 
@@ -30,9 +32,11 @@ class TrainingDataReader(val trainingResource: URL) extends Iterable[Labelled[An
   }
   
   def groupsForQuery(uQueryString: String) = {
-    val uQueries = parser.parse(uQueryString)
-    val answers = uQueries flatMap executor.deriveAnswers
-    val allGroups = grouper group answers.toList
+    val derivs = for (pp <- IdentityParaphraser.paraphrase(uQueryString);
+    				  query <- parser.parse(uQueryString);
+    				  et <- executor.execute(query))
+    			   yield AnswerDerivation(uQueryString, pp, query, et) 
+    val allGroups = grouper group derivs.toList
     allGroups
   }
   

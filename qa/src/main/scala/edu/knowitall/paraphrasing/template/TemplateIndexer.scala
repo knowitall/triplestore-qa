@@ -1,4 +1,4 @@
-package edu.knowitall.paralex
+package edu.knowitall.paraphrasing.template
 import scala.io.Source
 import scala.collection.JavaConversions._
 import org.apache.solr.common.SolrDocument
@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory
 import org.apache.solr.client.solrj.impl.HttpSolrServer
 import org.apache.solr.client.solrj.SolrQuery
 import org.apache.solr.client.solrj.SolrQuery.SortClause
+import scala.Option.option2Iterable
 
 case class ParaphraseTemplateClient(solrUrl: String, hitLimit: Int = 500) {
   val logger = LoggerFactory.getLogger(this.getClass)
@@ -57,7 +58,7 @@ case object TemplatePair {
   }
 }
 
-class ParalexIndexer(server: SolrServer) {
+class TemplateIndexer(server: SolrServer) {
   
   val logger = LoggerFactory.getLogger(this.getClass)
   
@@ -89,13 +90,13 @@ class ParalexIndexer(server: SolrServer) {
  * pipe (template1, template2, joint count, marginal count1, marginal count2)
  * triples into stdin.
  */
-object ParalexIndexer extends App {
+object TemplateIndexer extends App {
   val logger = LoggerFactory.getLogger(this.getClass)
   override def main(args: Array[String]) {
      val groupSize = 100000
      val solrUrl = args(0)
      val server = new ConcurrentUpdateSolrServer(solrUrl, 1000, 4)
-     val indexer = new ParalexIndexer(server)
+     val indexer = new TemplateIndexer(server)
      val lines = Source.fromInputStream(System.in, "UTF8").getLines
      val groups = lines.grouped(groupSize)
      for (group <- groups; line <- group.par) indexer.indexLine(line)

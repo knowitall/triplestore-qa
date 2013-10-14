@@ -35,8 +35,8 @@ class RuleGeneralizingExecutor(val baseExecutor: QueryExecutor) extends Generali
     conj.copy(values = modifiersStripped)
   }
   
-  def strip(q: ListConjunctiveQuery, filter: PostaggedToken => Boolean): ListConjunctiveQuery = {
-    q.copy(conjuncts = q.conjuncts map { c => strip(c, filter) })
+  def strip(q: ConjunctiveQuery, filter: PostaggedToken => Boolean): ConjunctiveQuery = {
+    ListConjunctiveQuery(q.qVars, q.conjuncts map { c => strip(c, filter) })
   }
   
   def stripLeftmost(s: String): String = s.split(" ").drop(1).mkString(" ")
@@ -60,30 +60,30 @@ class RuleGeneralizingExecutor(val baseExecutor: QueryExecutor) extends Generali
     }
   }
   
-  def stripModifiers(q: ListConjunctiveQuery) = strip(q, isModifier _)
+  def stripModifiers(q: ConjunctiveQuery) = strip(q, isModifier _)
   
-  def stripPrepositions(q: ListConjunctiveQuery) = strip(q, isPreposition _)
+  def stripPrepositions(q: ConjunctiveQuery) = strip(q, isPreposition _)
   
-  def stripLeftmost(q: ListConjunctiveQuery): Option[ListConjunctiveQuery] = {
+  def stripLeftmost(q: ConjunctiveQuery): Option[ConjunctiveQuery] = {
     
     val conjunctOpts = q.conjuncts map stripLeftmost
     conjunctOpts.find(_.isEmpty) match {
       case Some(empty) => None
       case None => 
         val conjunctsGet = conjunctOpts.map(_.get)
-        Some(q.copy(conjuncts = conjunctsGet))
+        Some(ListConjunctiveQuery(q.qVars, conjunctsGet))
     }
   }
   
-  def generalizations(q: ListConjunctiveQuery): Iterator[ListConjunctiveQuery] = {
+  override def generalizations(q: ConjunctiveQuery): Iterator[ConjunctiveQuery] = {
     val noModifiers = stripModifiers(q)
     val noPreps = stripPrepositions(noModifiers)
     
     logger.info(s"generalizations($q)")
     
-    var leftmosts = Seq.empty[ListConjunctiveQuery]
+    var leftmosts = Seq.empty[ConjunctiveQuery]
     var strippedLeft = stripLeftmost(noPreps)
-    var last: Option[ListConjunctiveQuery] = None
+    var last: Option[ConjunctiveQuery] = None
     while (!strippedLeft.isEmpty && strippedLeft != last) {
       leftmosts = leftmosts ++ Seq(strippedLeft.get)
       last = strippedLeft

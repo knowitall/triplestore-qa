@@ -31,7 +31,7 @@ class DiffGeneralizingExecutor(val baseExecutor: QueryExecutor, diffGen: DiffGen
     def rewriteString = rewriteTokens.map(_.string).mkString(" ")
   }
   
-  def generalizations(query: ListConjunctiveQuery): Iterator[ListConjunctiveQuery] = {
+  override def generalizations(query: ConjunctiveQuery): Iterator[ConjunctiveQuery] = {
     
     // get a list of all the transformations we'd want to make to the query...
     // in the form of (conjunct name, field name, rewrite, score)
@@ -53,7 +53,7 @@ class DiffGeneralizingExecutor(val baseExecutor: QueryExecutor, diffGen: DiffGen
       val rewrittenConjuncts = lastQuery.conjuncts.map { c => 
         if (c.name == rewrite.conjName) rewrittenConj else c  
       }
-      val rewrittenQuery = lastQuery.copy(conjuncts = rewrittenConjuncts)
+      val rewrittenQuery = ListConjunctiveQuery(lastQuery.qVars, rewrittenConjuncts)
       appliedRewrites ::= rewrittenQuery
       lastQuery = rewrittenQuery
     }
