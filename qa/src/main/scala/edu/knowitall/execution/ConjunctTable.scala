@@ -2,6 +2,7 @@ package edu.knowitall.execution
 
 import edu.knowitall.apps.AnswerDerivation
 import edu.knowitall.apps.QASystem
+import edu.knowitall.apps.QAConfig
 
 case class ConjunctTable(conjunct: TConjunct, tuples: List[Tuple]) {
   override def toString = s"${conjunct}\n${Tabulator.tuplesToTable(tuples)}"
@@ -34,16 +35,22 @@ case object ConjunctTable {
 }
 
 object MyTest extends App {
-  val qa = QASystem.getInstance().get
-  val groups = qa.answer("Which founding fathers owned slaves?")
-  for (group <- groups; 
-       derivs = group.derivations;
-       groupedDerivs = derivs.groupBy(d => d.execTuple.query);
-       (query, subDerivs) <- groupedDerivs;
-       x = println("-----------------------------------\n" + query);
-       subTuples = subDerivs.map(d => d.execTuple);
-       tables = ConjunctTable.factorExecTuples(subTuples);
-       table <- tables;
-       y = println(table.toString + "\n")) {}  
+  val qa = QASystem.getInstance((new QAConfig()).copy(paraphraser = "templatesLm")).get
+  val groups = qa.answer("What ingredients are in Indian cuisine?")
+  for (group <- groups) {
+    println(group.answerString)
+    println(group.score)
+    for (deriv <- group.invertedDerivations) {
+      println(s"\tFrom Query: ${deriv.execQuery}")
+      println(s"\tFrom Parsed Queries: ${deriv.parsedQueries.mkString(", ")}")
+      println(s"\tFrom Paraphrases: ${deriv.paraphrases.map(_.target).mkString(", ")}")
+      println(s"\tEvidence:")
+      for (tbl <- deriv.tables) {
+        println(s"\t${tbl.conjunct}")
+        println(Tabulator.tuplesToTable(tbl.tuples))
+      }
+      println("-"*80)
+    }
+  }
     
 }

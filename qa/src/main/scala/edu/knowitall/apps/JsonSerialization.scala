@@ -15,6 +15,9 @@ import edu.knowitall.execution.Tuple
 import edu.knowitall.scoring.ScoredAnswerGroup
 import scala.language.reflectiveCalls
 import org.slf4j.LoggerFactory
+import edu.knowitall.execution.ConjunctiveQuery
+import edu.knowitall.execution.ConjunctTable
+import edu.knowitall.execution.InvertedAnswerDerivation
 
 object JsonSerialization {
   
@@ -23,8 +26,24 @@ object JsonSerialization {
   implicit val formats = DefaultFormats + MapSerializer + TValSerializer
   def serialize(any: Any): String = pretty(render(decompose(any)))
   def serializeAnswers(groups: List[ScoredAnswerGroup]): String = {
-    ""
+    val objs = groups.map(new SerializedAnswerGroup(_))
+    pretty(render(decompose(objs)))
   }
+}
+
+case class SerializedAnswerGroup(answer: String, 
+								 score: Double,
+								 derivations: List[SerializedDerivation]) {
+  def this(g: ScoredAnswerGroup) =
+    this(g.answer.mkString(" "), g.score, g.invertedDerivations.map(new SerializedDerivation(_)))
+}
+
+case class SerializedDerivation(executedQuery: ConjunctiveQuery,
+								paraphrases: List[String],
+								parserQueries: List[ConjunctiveQuery],
+								tables: List[ConjunctTable]) {
+  def this(d: InvertedAnswerDerivation) =
+    this(d.execQuery, d.paraphrases.map(_.target), d.parsedQueries, d.tables)
 }
 
 object MapSerializer extends Serializer[Map[Any, Any]] {

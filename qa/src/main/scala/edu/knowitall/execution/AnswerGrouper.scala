@@ -16,6 +16,8 @@ trait AnswerGroup {
   def answerString: String = answer.mkString(" ")
   def alternates: List[List[String]]
   def derivations: List[AnswerDerivation]
+  val invertedDerivations: List[InvertedAnswerDerivation] =
+    InvertedAnswerDerivation.fromDerivations(derivations)
 }
 
 case class BasicAnswerGroup(answer: List[String], alternates: List[List[String]], 
