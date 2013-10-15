@@ -145,18 +145,22 @@ object QuerySimilarity extends AnswerGroupFeature("ExecQuery similarity") {
     // turn query into bag-of-words
     val originalBag = queryToBag(originalQuery)
     val execBag     = queryToBag(execQuery)
+    simCosine(originalBag, execBag)
+  }
+
+  def simCosine(a: Map[String, Int], b: Map[String, Int]): Double = {
     // norm
-    val origNorm = math.sqrt(originalBag.valuesIterator.map(v => v*v).sum)
-    val execNorm = math.sqrt(execBag.valuesIterator.map(v => v*v).sum)
+    val aNorm = math.sqrt(a.valuesIterator.map(v => v*v).sum)
+    val bNorm = math.sqrt(b.valuesIterator.map(v => v*v).sum)
     // dot
-    val sharedKeys = originalBag.keySet.intersect(execBag.keySet).toSeq
+    val sharedKeys = a.keySet.intersect(b.keySet).toSeq
     val dotVector = {
       for (key <- sharedKeys) yield {
-        originalBag(key) * execBag(key)
+        a(key) * b(key)
       }
     }
     val dotProduct = dotVector.sum.toDouble
-    val cosineSim = dotProduct.toDouble / (origNorm * execNorm).toDouble
+    val cosineSim = dotProduct.toDouble / (aNorm * bNorm).toDouble
     cosineSim
   }
 
