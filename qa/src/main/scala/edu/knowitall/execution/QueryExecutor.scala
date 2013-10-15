@@ -19,14 +19,13 @@ trait QueryExecutor {
 }
 
 case class IdentityExecutor(client: TriplestoreClient) extends QueryExecutor {
-  
-  val logger = LoggerFactory.getLogger(this.getClass) 
-  
+
+  val logger = LoggerFactory.getLogger(this.getClass)
+
   val joiner = Joiner(client)
-  
+
   override def execute(q: ConjunctiveQuery): Iterable[ExecTuple] = {
     for (t <- joiner.joinQueries(q.conjuncts);
          et = ExecTuple(t, q)) yield et
   }
-
 }

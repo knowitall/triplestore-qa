@@ -63,6 +63,8 @@ object RegexQuestionParserRepl extends App {
 //    }
 //
 //    println(lemmas)
+    println(lemmasQ.map(_.lemma))
+    println(lemmasQ.map(_.string))
     println(lemmasQ.map(_.postag))
     println(lemmasQ.map(_.chunk))
     val queries = RegexQuestionPatterns.patterns.map(_.parse(lemmasQ)).zipWithIndex
