@@ -37,7 +37,7 @@ object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
       NumberOfDerivations,
       NumberUniqueTriples,
       LiteralFieldsDifference,
-      FieldDifference("rel"),
+      FieldDifference("rel"), // assumes rel will never be a variable!
       TemplateScore,
       WhenFeature,
       QuerySimilarity,
@@ -89,7 +89,6 @@ object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
     }
   }
 
-  // TODO: add to featureset after finishing new training data 9-26...
   case class MatchesPostagPatterns(patterns: Set[String]) extends AnswerGroupFeature("Answer postags in " + patterns.toString) {
     import edu.knowitall.execution.PostagAnswerGrouper.normalize
     def apply(group: AnswerGroup) = {
