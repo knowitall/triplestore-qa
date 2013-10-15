@@ -61,3 +61,14 @@ more
 less
 former
 text/html
+i've
+ive
+i'm
+im
+i'd
+who
+what
+where
+when
+why
+how
