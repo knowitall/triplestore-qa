@@ -7,50 +7,50 @@ import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.execution.ConjunctiveQuery
 
 object TriplestoreFeatures {
-  
+
   val baseClient = SolrClient("http://rv-n12.cs.washington.edu:10893/solr/triplestore", 500)
   val client = CachedTriplestoreClient(baseClient, 10000)
-  
+
   object QueryFrequency extends AnswerGroupFeature("Log of query literals in the triplestore") {
-    
+
     import AnswerGroupFeatures.AnswerContainsDeterminer.determiners
-    
+
     val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ determiners
     val splitRegex = "\\s+".r
-    
+
     def apply(group: AnswerGroup) = {
+
       val queries = group.derivations.map(d => d.execTuple.query).distinct
-      def conjunctCounts(q: ConjunctiveQuery) = {        
+      def conjunctCounts(q: ConjunctiveQuery) = {
         val literalFields = q.conjuncts.flatMap(_.literalFields)
         val counts = literalFields.map { case (field, value) =>
-          client.count(value.toConjunct(field))  
+          client.count(value.toConjunct(field))
         }
-        counts      
+        counts
       }
-      
+
       val counts = queries flatMap conjunctCounts
-      
+
       val avg = counts.sum.toDouble / counts.size.toDouble
-      
+
       math.log(avg + 1)
     }
   }
 
   object AnswerFrequency extends AnswerGroupFeature("Log of Frequency of answer in the triplestore") {
-    
-    import AnswerGroupFeatures.AnswerContainsDeterminer.determiners
-    import QueryFrequency.splitRegex
-    val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ determiners
-    
 
-    
+    import AnswerGroupFeatures.AnswerContainsDeterminer.determiners
+    import edu.knowitall.execution.StrSim.stops
+    import QueryFrequency.splitRegex
+    val junkTokens = Set("a", "an", "the", "or", "and", "&") ++ determiners ++ stops
+
     def apply(group: AnswerGroup) = {
-      
+
       val rawAnswer = group.alternates.head.head.toLowerCase
       val answerTokens = splitRegex.split(rawAnswer)
       val filteredTokens = answerTokens.filter(tok => !junkTokens.contains(tok)).toSeq
       val escapedTokens = filteredTokens map SolrClient.escape
-      val cleanAnswer = if (escapedTokens.nonEmpty) escapedTokens.mkString(" ") else "" 
+      val cleanAnswer = if (escapedTokens.nonEmpty) escapedTokens.mkString(" ") else ""
       val query = CountQuery(cleanAnswer)
       math.log(client.count(query).toDouble + 1)
     }

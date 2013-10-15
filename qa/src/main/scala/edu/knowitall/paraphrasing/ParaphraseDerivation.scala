@@ -6,6 +6,6 @@ trait ScoredParaphraseDerivation extends ParaphraseDerivation {
   def score: Double
 }
 
-object IdentityDerivation extends ScoredParaphraseDerivation {
+case object IdentityDerivation extends ScoredParaphraseDerivation {
   override val score = 1.0
 }

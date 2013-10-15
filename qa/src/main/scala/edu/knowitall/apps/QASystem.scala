@@ -1,6 +1,6 @@
 package edu.knowitall.apps
 
-import edu.knowitall.scoring.AnswerScorer
+import edu.knowitall.scoring.AnswerRanker
 import edu.knowitall.execution.QueryExecutor
 import edu.knowitall.parsing.QuestionParser
 import edu.knowitall.scoring.ScoredAnswerGroup
@@ -25,6 +25,7 @@ import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.parsing.StringMatchingParser
 import edu.knowitall.scoring.UniformAnswerScorer
 import edu.knowitall.scoring.LogisticAnswerScorer
+import edu.knowitall.scoring.AnswerScorer
 import edu.knowitall.parsing.OldParalexParser
 import edu.knowitall.execution.synonyms.RelationSynonymExecutor
 import edu.knowitall.common.Timing
@@ -32,6 +33,7 @@ import edu.knowitall.execution.DefaultFilters
 import edu.knowitall.parsing.regex.RegexQuestionParser
 import edu.knowitall.paraphrasing.template.SolrParaphraseGenerator
 import com.typesafe.config.ConfigFactory
+
 import edu.knowitall.paraphrasing.Paraphraser
 import edu.knowitall.paraphrasing.Paraphrase
 import edu.knowitall.paraphrasing.IdentityParaphraser
@@ -40,7 +42,7 @@ import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.execution.ExecTuple
 
 case class QASystem(paraphraser: Paraphraser,
-					parser: QuestionParser, 
+					parser: QuestionParser,
 					executor: QueryExecutor,
 					grouper: AnswerGrouper,
 					scorer: AnswerScorer) {
@@ -53,49 +55,49 @@ case class QASystem(paraphraser: Paraphraser,
   val maxAnswerGroups = conf.getInt("qa.maxAnswerGroups")
 
   def answer(question: String): List[ScoredAnswerGroup] = {
-    
+
     logger.info(s"Answering question '$question'")
-    
+
     val derivations = for (pp <- paraphrase(question).par;
     					   query <- parse(pp);
     					   execTuple <- execute(query))
     					yield AnswerDerivation(question, pp, query, execTuple)
-    
+
     val groups = group(derivations.toList)
     val scored = score(groups)
     scored
   }
-  
+
   def paraphrase(question: String): Iterable[Paraphrase] = {
-    val allParas = IdentityParaphraser.paraphrase(question) ++ 
+    val allParas = IdentityParaphraser.paraphrase(question) ++
     			paraphraser.paraphrase(question)
     val paras = allParas.distinct.take(maxParaphrases)
     logger.info(s"Paraphrased '$question' to:\n${paras.map(_.target).mkString("\n")}")
     paras
-  }  
-    
+  }
+
   def parse(pp: Paraphrase): Iterable[ConjunctiveQuery] = {
     val question = pp.target
     val queries = parser.parse(question)
     logger.info(s"Parsed '$question' into queries:\n${queries.mkString("\n")}")
     queries
   }
-    
+
   def execute(query: ConjunctiveQuery): Iterable[ExecTuple] = {
     val tuples = executor.execute(query)
     logger.info(s"Derived answers:\n${tuples.map(_.answerString).mkString("\n")}")
     tuples
   }
-    
+
   def group(derivs: Iterable[AnswerDerivation]): Iterable[AnswerGroup] =
     grouper.group(derivs.toList)
-    
+
   def score(groups: Iterable[AnswerGroup]): List[ScoredAnswerGroup] = {
     val scored = groups.par.map(scorer.scoreAnswer).toList.sortBy(-_.score).take(maxAnswerGroups)
     logger.info(s"Scored answers:\n${scored.map(g => g.score + " " + g.answerString).mkString("\n")}")
     scored
   }
-  
+
 }
 
 case object QASystem {
@@ -108,7 +110,6 @@ case object QASystem {
       grouper <- Components.groupers.get(config.grouper);
       scorer <- Components.scorers.get(config.scorer)
     ) yield QASystem(paraphraser, parser, DefaultFilters.wrap(executor), grouper, scorer)
-
 }
 
 case class QAConfig(paraphraser: String, parser: String, executor: String,
@@ -126,12 +127,12 @@ case object QAConfig {
 }
 
 case object Components {
-  
+
   val baseClient = new SolrClient()
   val client = CachedTriplestoreClient(baseClient)
   val paraGenerator = new SolrParaphraseGenerator()
   val regexParser = RegexQuestionParser()
-  
+
   val defaults = Map(
       "paraphraser" -> QAConfig.defaultParaphraser,
       "parser" -> QAConfig.defaultParser,
@@ -140,9 +141,9 @@ case object Components {
       "scorer" -> QAConfig.defaultScorer)
 
   val paraphrasers: Map[String, Paraphraser] =
-    Map("identity" -> IdentityParaphraser, 
+    Map("identity" -> IdentityParaphraser,
         "templatesLm" -> new TemplateParaphraser())
-  
+
   val parsers: Map[String, QuestionParser] =
     Map("formal" -> FormalQuestionParser(),
       "keyword" -> StringMatchingParser(client),

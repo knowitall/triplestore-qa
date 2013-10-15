@@ -54,7 +54,7 @@ libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-stem-
 
 libraryDependencies += "org.scalaj" %% "scalaj-http" % "0.3.10"
 
-libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-clear" % "2.4.1" exclude("com.github.scopt","scopt")
+libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-clear" % "2.4.2" exclude("com.github.scopt","scopt")
 
 libraryDependencies += "com.twitter" %% "util-collection" % "6.3.6"
 
@@ -78,13 +78,13 @@ libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-chunk
 
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-stanford" % "2.4.2"
 
-libraryDependencies += "edu.washington.cs.knowitall" % "openregex-scala_2.10" % "1.0.4"
-
 libraryDependencies += "com.nicta" % "scoobi_2.10" % "0.7.0-RC2-cdh3"
 
 libraryDependencies += "org.apache.hadoop" % "hadoop-lzo" % "0.4.13"
 
 libraryDependencies += "com.typesafe" % "config" % "1.0.2"
+
+libraryDependencies += "edu.washington.cs.knowitall" % "openregex-scala_2.10" % "1.0.4"
 
 assemblySettings
 

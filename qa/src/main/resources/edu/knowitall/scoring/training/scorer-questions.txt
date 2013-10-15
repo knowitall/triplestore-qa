@@ -1,95 +1,511 @@
-How many wagons are in a wagon train	wagon train, made up of, ?
-How old is mercer mayer	mercer mayer, born in, ?
-How old is mercer mayer	mercer mayer, date of birth, ?
-Where a pet rabbit lives	pet rabbits, live in, ?
-What does salamander eat	salamanders, eat, ?
-What is a rattle snakes height	rattlesnakes, grow to, ?
-Who is the india first prim minister	?, became the first prime minister of, india
-What is the musical term for structure	music, divided into, ?
-What is the first mosque placed on earth	first mosque, was erected at, ?
-What is sugar made of	sugars, are composed of, ?
-What is sucrose made from?	sucrose, made from, ?
-What is the function of an eye	eyes, are for, ?
-Where is Ghana	ghana, is a country in, ?
-What time of the year is Chinese new year	chinese new year, starts in, ?
-How many electrons does sodium want to lose	sodium, loses, ?
-What is made in Colorado	colorado, beers from here, ?
-What is made in Colorado	?, produced in, colorado
-What is another word for dark purple	?, dark kind of, purple
-When is the birthday of lebron James	lebron james, date of birth, ?
-When is the birthday of lebron James	lebron james, born on, ?
-What do ruby Pokemon look like	pokemon, just look like, ?
-What exactly is a small video camera	a small video camera, is, ?
-How old is Jacob latimore	jacob latimore, date of birth, ?
-What was helium used for	helium, used for, ?
-What is the formula for ammonium hydroxide	ammonium hydroxide, formula, ?
-What are cool places to visit in Wisconsin	wisconsin, tourist attractions, ?
-What is an image map	image map, is, ?
-What are the benefits of education	education, is good for, ?
-What to do at mammoth cave in Kentucky	mammoth cave national park, offers, ?
-What cities are in mexico?	?, is city in, Mexico
-What countries border France?	$x: ($x, border, France) ($x, "type", country)
-What foods are high in both protein and fiber?	$x: ($x, "type", food) ($x, high in, protein) ($x, high in, fiber)
-Where do bananas come from?	(banana, come from, ?)
-Who uses a bow and arrow?	(?, use, bow and arrow)
-Who developed Jazz music?	(?, develop, Jazz music)
-Where is NASA located?	(NASA, located in, ?)
-When was Georgetown college founded?	(Georgetown college, founded in, ?)
-What animals have feathers?	$x: ($x, is, an animal) ($x, has, feathers)
-What are bell peppers stored in?	(bell pepper, stored in, ?)
-What do computers understand?	 (computer, understand, ?)
-Where does the sun rise?	(the sun, rises in, ?)
-What is the largest country?	(?, is, largest country)
-Who betrayed Caesar?	(?, betrayed, Caesar)
-What are fish scales for?	(fish scales, be for, ?)
-When was Leonardo DiCaprio born?	(leonardo dicaprio, born on, ?)
-Where does water vapor come from?	(water vapor, come from, ?)
-What are predators of squirrels?	(?, predator of, squirrel)
-What things are positively charged?	(?, have, "positive charge")
-Who is the mayor of Toronto?	(?, is mayor of, Toronto)
-What is necessary for survival?	(?, is necessary for, survival)
-How long do crocodiles live?	(crocodiles, live for, ?)
-What is important for happiness?	(?, important for, happiness)
-What is insulin for?	(insulin, is for, ?)
-What is used for both cooking and cleaning?	$x: ($x, used for, cooking) ($x, used for, cleaning)
-What is cured by antibiotics?	($x, cured by, antibiotics)
-What melts metal?	?, melts, metal
-What is the cerebellum for?	cerebellum, is for, ?
-What do leopard seals eat?	leopard seal, eat, ?
-Who studies quantum physics?	?, study, quantum physics
-Where does fresh water come from?	fresh water, come from, ?
-What is physical fitness good for?	physical fitness, good for, ?
-Who built the pyramids?	?, built, pyramids
-What did thomas edison invent?	thomas edison, invent, ?
-What contains antioxidants?	(?, contains, antioxidants)
-What produces wind?	(?, produce, wind)
-What mountains are in ireland?	?, mountain in, Ireland
-What are bacteria important for?	bacteria, important for, ?
-What produces carbon dioxide?	carbon dioxide, produced by, ?
-What is hypertension caused by?	hypertension, caused by, ?
-What is located in africa?	?, is located in, Africa
-What is Belgium known for?	Belgium, is known for, ?
-What are France and Spain both known for?	$x: (France, is known for, $x) (Spain, is known for, $x)
-What is found in the Arctic?	?, is found in, Arctic
-What are some byproducts of fission?	$x, is byproduct of, fission
-Where is Mozambique?	Mozambique, is located in, ?
-Where are fractals found?	fractal, are found in, ?
-What is an example of a fractal?	?, is example of | is type of | is kind of | is manifestation of, a fractal
-What is information made of?	information | data, consist of | is made of, ?
-What is cryptozoology?	cryptozoology, is study of, ?
-Who was the first person in space?	?, first person in, space
-What places in Africa produce coffee?	$x: (coffee, is produced in | is grown in | is export from, $x) ($x, is located in, Africa)
-What is produced in the mountains?	$x: ($x, is produced in | is grown in, mountains)
-Who discovered neutron stars?	$x, discovered, neutron star
-Who discovered the structure of DNA?	$x, discovered structure of, DNA
-Who invented the printing press?	?, invented, printing press
-Where do babies come from?	babies, come from, ?
-What is New York known for?	new york, is known for, ?
-What is Denver known for?	denver, is known for, ?
-What are cars used for?	car, is used for, ?
-What is chocolate made from?	chocolate, is made from, ?
-What does cilantro taste like?	cilantro, taste like, ?
-What can be recycled?	?, can be, recycle
-What can't be recycled?	?, can't be, recycle
-What does liberty mean?	liberty, mean, ?
-What does freedom mean?	freedom, mean, ?
+Can a cigarette cause a fire?
+Which government shares responsiblity and power with the states?
+Who is the successor company to the Knights Life Insurance Company of America?
+What type of sounds do leopards make?
+When was Sándor Kocsis born?
+Is sodium hydroxide a compound element or mixture?
+What specialist who treats arthritis and related disorders?
+What is J. J. Bittenbinder's birthday?
+According to greek mythology who was the true friend of Damon?
+What is Kurt's dad's name on glee?
+When is Barry Ferguson's birthday?
+Should animals be kept in zoos all their lifes?
+Why is the earthquake in Haiti an important event?
+How do you say Tuesday in irish?
+Which gases are used to make some light bulbs?
+What are two key aspects of quasars?
+What energy conversions take place in an electrical motor?
+What are the two types of energy provided by the Sun?
+Is russia now communist?
+What famous events happened july 1983?
+Where did buddy holly last perform before the plane crash?
+Which quadrilaterals have diagonals that are always perpendicular?
+What is the largest planet in our solar system?
+How many sisters does booboo stewart have?
+What is best site for making a website?
+What is the nationality of Brian O'driscoll?
+What is the melting points of lithium?
+On what day did the stock market crash?
+What are the products of anaerobic respiration in plant cells?
+What are the percentages of the main religions in Ireland?
+Which state has the most trucks?
+How long did american revolution war last?
+What does eastern tiger salamanders eat?
+How do you say end in an african language?
+Which organ acts as both an endocrine and exocrine gland?
+Does water is use in chemical toilet?
+How large is a panda?
+What is plural for valley?
+What season did grey die in grey's anatomy?
+What are the monuments in washington state?
+Where to find dingos?
+The process by which the constitiution was approved by the states is know as?
+Viking explorer who discovered and named Greenland?
+How much does the t mobile sidekick cost?
+Some humorous things to do to your girlfriend?
+Where a chromosome is found?
+How do wild dogs breath?
+What is the top selling cereal in the US?
+What do you call words that mean the same thing or nearly the same thing?
+What number does dwyane wade wear?
+What are the matching pairs of chromosomes in a diploid cell called?
+Functions of illuminator in a microscope?
+Who dumped tea into the Boston Harbor?
+What is the name of the connecticut hockey team?
+Who is core company of ece?
+Zion church in south africa - in what do they believe?
+What is asexual reproduction in bacteria?
+How was Neanderthals lifestyle?
+What was the Green Bay Packers best season record?
+When was Jack Gibson born?
+How much did alexander cartwright weigh at birth?
+Functions of a circulation section in the library?
+Year massachusetts became a state?
+What is the name of billa film hero?
+Type of rock formed when molten rock solidifies?
+What is the value of a Dale Earnhardt Jr autograph?
+Total fat cholesterol and sodium are examples of?
+Who are tim burners-lee's children?
+When did Christopher Columbus start his journey?
+Is there a statute of limitations for forgery in california?
+When is Francis I's birthday?
+Is Barry Newman related to Paul Newman?
+What part of the brain regulates breathing heartbeat and blood pressure?
+Which european countries is hydrogenated and partially hydrogenated oil banned?
+What is a seed that is alive but inactive called?
+Who created timbuktu?
+What is the scientific name of cow hide?
+The colony of the Quakers?
+Does television transfixes the mind for hours?
+Does transparent let no light through?
+Cheese take long time to cool?
+How many siblings does Chris Brown have?
+What color are leaves of inkberry?
+When was dell get made?
+Who are some of the official sponsors for the Super Bowl?
+What is the united states government called today?
+How many soliders were killed in ww1?
+What is the bond that is formed when electrons are shared between atoms?
+How much does a bull terrier weigh?
+What is an object that weighs 500 kilograms?
+How much money does a Yale professor earn?
+Which vitamin deficiency do cause vision problem?
+How many atoms of sodium are found in the formula unit of sodium carbonate?
+What is a number that can be divided into a number without a remainder?
+What type of cell is a bacteriophage?
+What is another word for Mountain top?
+What method do you use when amortizing a bond premium?
+What are the names of moons around saturn?
+How many cereals are there in the world?
+Where does scout finch live?
+In flowers where does fertilization take place?
+How do say best friends in italy?
+What is the capacity of the burj al arab?
+Was Salvador Dali in good health?
+Who made space stations?
+How do you type happy birthday in spanish?
+What includes the range and the interquartile range?
+Where did the golden retreiver originate?
+How much weight loss would a girl have to lose to miss a period?
+Medical term for surrounding a bone?
+Is kiro from cinema bizarre a girl?
+Who is formal beginning of psychology is associated with?
+What will an umbrella bird eat in the wild?
+What time did william and kate get married at in england time zone?
+What is theodoer taylor siblings name?
+Did slaves get to see thier family?
+Who sings brown eyed girl?
+What is Etta James Fan mail adress?
+What type of magma is produced by krakatoa?
+How malaria vector?
+Is great white sharks endangered?
+Do don omar wife has kids?
+What do you call a person who fixes water pipes?
+What is Hansen's disease also known as?
+What country does the capuchin live in?
+Which type of crop is millet?
+What is the condition where your hands and face are puffy?
+What are the two types of gold mining?
+What should you drink before a softball game?
+United states is found on what continent?
+How many places john marshall traveled?
+Is a lobster arthropod?
+How many spots on a lady bug?
+Who is the male greek god of love?
+Can you wash your air walker shoes?
+Is paul pierce and antonio pierce related?
+Is Taylor Swift related to Brad Paisley?
+Can sulfur be purchased in its pure form?
+What is class of spectral sequence?
+Can you download mp3 songs on a ipod?
+What body system pumps blood throughout the body?
+When was Heinrich born?
+What are the things wild turkeys eat?
+How long it takes to finish the study of herpetology?
+Which countries practiced communism?
+How long has Saturn had rings?
+How many marine biologist's are there in the US?
+Which Scandinavian country means the northern way?
+What is the phrase village when translated from English to Japanese?
+Can overweight people lose weight?
+During replication what is responsible for joining the nucleotides of a new DNA strand together?
+The aorta is an example of?
+Is grandmaster flash dead?
+Why are Tigers extinct?
+When was the comb invented?
+What does MCC stand for in cricket?
+Can rocks come from space?
+What is the duties of Georgia's Commissioner of Agriculture?
+What was a large estate owned by lord called?
+Can you take zoloft with codeine?
+What is the most important food group in the world?
+How does body keep a constant temperature?
+What is the first Capital City in Jamaica that was under spanish rule?
+What is the formula of the ionic compound formed from Mg and N?
+Who helped the seminoles?
+Is condenstaion the opposite of evaporation?
+Calorific value of petrol?
+How fast can the african wild dog run?
+Where did priests live in medeival times?
+The Security Council is made up of 5 permanent members and?
+What is the worlds northern most tropical sea?
+What is the receptor muscle in the knee jerk reflex?
+What are the names of the various parts of a division problem?
+How much does it cost to obtain a marriage license in Texas?
+Can you substitute yogurt for oil in cake mix?
+Does everyone use their brain?
+What are the mistakes in this sentence?
+Is corporate income tax the largest single source of federal revenue?
+How many matches has Sania Mirza played?
+What type of trees characterize boreal forest?
+What were the warriors in europe?
+Is a barcode reader an example of an output device?
+Which country is the Sounthern neighbor of the United States?
+How many points does it take to get your license suspended or revoked in TN?
+What european city is called the city of music?
+What is the second book of law in the bible?
+How much does a female orangutan weigh?
+When did the europeans start of war?
+What is the structural adaptations of dog?
+Do george lopez have any children?
+What is the main ingredient in Xtra detergent?
+Is jimmy lin and ruby lin related?
+A very young plant grown from a seed is called?
+When did terence blacker die?
+Where did monica lewinsky buy her dress that got president clinton in hot water?
+How old do you have to be to sign up for boxing?
+What countrys did adolf hitler invade in world war 2?
+What was the slave population of south carolina 1700's?
+What is the most popular city in the US?
+When can infants see colors?
+What is the song from the ford flex commercial?
+Which is more sensitive test fehlings test or benedicts test?
+What river system is found in the Gila river?
+Is buddha bad?
+How much bottom level team in BPL pay?
+Does the river nile flood once a year?
+Are crocks water shoes?
+Where does curare come from?
+What are some examples of web browsers?
+Who is the top actor of 2009?
+What is it when a plant adds carbon to the soil?
+Where is the worst part to touch a horse?
+Is blueberry a real berry?
+Name two ways in which pollen can be carried from flower to flower?
+What is snake fear?
+How many amps do car lights use?
+What is David Del Rio's birthday?
+How many amino acids exist in glycine?
+Does hungary have a large middle class or is it a rich class or poor class?
+What is the person who is being bullied called?
+Is a abdomen a head?
+Did Jane Adams build the first hull house?
+What are Non-Prescription Drugs?
+Why are the planets named after gods and goddesses?
+A substance thats attracted to water molecules is called what?
+What do rolypolies eat?
+Where did the electric guitar originate?
+Is taoism a philosophy or a religion?
+How does the earth get its heat?
+How long does it take for chickens to lay their eggs?
+A type of inflorescence found in parsley dill etc?
+What two presidents had funerals at the National Cathedral?
+Who played female roles in shakespeare's times?
+Do rabbit lay eggs?
+What kind of dog was the dog Atticus shot in to kill a mockingbird?
+When was the first civilization develop?
+How long did Jerry Rice stayed in college?
+What state does the bald eagle represent?
+What are the properties of ABS plastic?
+Is Gloria Stuart still alive?
+An underground layer of spongy rock that holds water is an what?
+Is athletes foot a bacteria or a fungus?
+What stone is the british museum made of?
+What is warthogs population?
+What is Charles Snead Houston's birthday?
+What was the name given to muhammed's departure from mecca to medina?
+What is the chemical formula for lithium dichromate?
+What was the book ''origin of species''?
+What counrty stands between panama and nicaragua?
+Do you write your name on the wedding card?
+When was the first corded drill invented?
+What is joe jonas eye and hair colour?
+Horses are from what european herritage?
+How many games have the Patriots lost?
+When does 2011-2012 fantasy football start?
+What should you wear to your graduation?
+Is copper wire is an example of a poor conductor?
+When is Bob Brozman's birthday?
+What do donkeys often carry?
+Is Lemuel Gulliver the character that expresses the idea of Swift?
+What is the 3rd charcter created on sponge-bob?
+What waters border Alabama?
+Is it true the process by which plants use energy from the sun to make food is called chloroplasticity?
+What is salt water made up of?
+Who are some fauve artist?
+What is the difference between an iPad and a tablet?
+Is it legal in the uk to have a pet chimp?
+Was Switzerland involved in war world 2?
+What is the most popular brand of soccer ball?
+A good present for a boy who wants to be a cowboy?
+What is south carolinas state color?
+How many calories are in a crunch chocolate bar?
+What is the name of the biggest river in New York State?
+Which animal has the best sense of smell that are alive today?
+What kind of microorganisms present in sludge?
+NBA player who wore number 1 in the NBA?
+What is the full form of ISI trade mark?
+Where would you find a doctors?
+What is the common name of a bobcat?
+How tall is doc shaw?
+What is the unemployment rate in Illinois now?
+What did ben franklin do in life?
+A sudden movement of the earth's crust is called a?
+Fibrous joints are classified as?
+What direction that is usually at the top of a map?
+What are some examples of an opening prayer for class?
+What bug live for a day?
+What is Ferdinand von Zeppelin's birthday?
+Who are pizarro's victims?
+What are two kinds of blood cells in your body?
+What is is the latin word for through?
+What is the relationship of your children to your cousins children?
+Which is the country that does not celebrate independence day?
+What are some of spain's important people?
+Can you take klonopin to relax from meth?
+What is alice walkers dads name?
+What types of juices clean pennies the best?
+Can you get herpes 2 from kissing?
+What do you call a DJ's countdown?
+What diseases did it have on the slave ship?
+What skills did Polish bring to the US?
+What was the date jackie chan was born?
+When is Ross Martin's birthday?
+What is the real date of oxygen discovery?
+What do platelets release that initiates the blood clotting process?
+Where can sunset times for 2010 be found?
+How are local and provincial government alike?
+What do leaves on a plant do?
+The five basics types of cameras are?
+What group promotes the rights of women artist?
+When did illinois belong to the US?
+What is the valve that separated the right atrium and the right ventricle?
+Is gas a physical state of matter?
+What are corporation characteristics?
+What is the name for a soft bone condition in children?
+How does a tiger shark find it's food?
+Does edgar degas have a brother or a sister?
+Are there zombies in haiti?
+Who use biology in their work?
+What is the transfer of heat by circulation or movement?
+Is cheese a type of mold or fungus?
+What race is jack barakat?
+What was the title of music-themed television show in australia?
+What is Marc Torrejón's birthday?
+How many different types of pasta sauces are there?
+Name some physical characteristics of island tree snail?
+How long time can a person live without food?
+When did Florida part of the US?
+What is the most known irregular galaxy?
+Who invented the first one-piece wrought- iron plow?
+Who is the current indian railways minister?
+When is C. J. Chenier's birthday?
+Who is the father of modern printing?
+What date was mothers day in 1965?
+What is the best and cheapest cell phone servece?
+How many students attend Bemidji State University?
+Strongest football team?
+What constellation is the great square?
+What does an algebric equation include?
+Who is the band who does bautista's entrance music?
+What is the scientific name for a geckos?
+The anatomical space between two neurons?
+Where eucalyptus originate from?
+When will next meteor hit earth?
+What was the aztec calendar stone used for?
+What is a sweetened mixture of milk and eggs?
+What is a class B felony in Oregon?
+What happens to heat during an endothermic reaction?
+What vegetable is small and round?
+What colony was established in the 1607?
+What direction do most surface currents south of the equator move?
+How do you say again on spanish?
+What is the natural source of light?
+Does rice pudding have carbohydrate?
+What baseball team did Atlanta have before the Braves?
+How far can a killer whale swim in an hour?
+What was the biggest success of Pablo Picasso?
+Does a hepatitis C virus contain DNA or RNA?
+Where in the cell is DNA in cells?
+What state was president obama born from?
+What percent of water on earth is polluted?
+What is Gerald North's birthday?
+Process when hot water changes to steam?
+Which side women wear watch?
+Does demi lavato like dogs?
+What is The most abundant element by mass in your body?
+What happened to the man who fell into the bubblegum mixing machine?
+If 80 years old is an octogenarian what is 60 years old?
+The hottest place in the US?
+Can a boy suck his own penis and start cumming?
+What river forms on the Texas' northern boundary?
+When is Ronnie Vannucci Jr.'s birthday?
+Which state produces the most NASCAR drivers?
+How much does a probation officer make in NJ?
+Who sang American pie?
+When did the US fight a war with North Korea?
+Are chico stores closing?
+Joseph Haydn what is he remembered most for?
+What colour eyes does prince william have?
+If you are co owner on a deed can you be made to move?
+Who demanded that Gorbachev tear down the Berlin wall?
+You need more about when was texas established?
+When was Victor Amadeus I born?
+Who made the suez canal made?
+Is ted turner still part owner of cnn?
+What is the freezing point of oxygen?
+How many people died on the day micheal jackson died?
+Which band released diamonds and dust?
+How do i know if your bmw has bluetooth?
+Who is a librocubicularist?
+How old do you have to be to become a chemist?
+How can you eat pumpkins?
+How long does a mother rabbit carry her babys?
+What is the layer under skin called?
+What year was Neil Diamond born?
+What is the difference between a prokaryotic and eukaryotic?
+What are the 3 credit reporting agencies?
+Role of the defense attorneys?
+Is locrosse a game that the native american people use to play?
+What does the snowy egret bird eat?
+Average waist size for a 10 year old boy?
+Who wrote early to bed and early to rise makes a manhealthywealthy and wise?
+Mode of nutrition in amoeba?
+Do horses see colors?
+What are fun games for kids to join?
+What did Hippocrates like to do?
+Who makes the loudest roar at the zoo?
+Who was the President of the labor union?
+What is the heads of the phalanges to form the knuckles called?
+Does a graduated cylinder measure volume of water?
+Is saturated fat from a plant or animal?
+How do Chinese people live?
+What is gray called in french?
+What is Mark Rosenzweig's birthday?
+Does Leonardo Dicaprio have a brother?
+How many appendages does an arachnid have?
+What is bulgarias climate?
+Which colony was a havoc for catholics in the seventeenth century?
+What are major parts in the skeletal system?
+What is the subdominant of b flat?
+When is Choi Kyung-Ju's birthday?
+What is Jose Luis Rodriguez's birthday?
+Which substance is needed for celluar respiration to occur?
+What are the two types of dry B climates?
+What is the fastest log flume?
+What 6 products and from cows?
+What city in michigan has a population of 1500 people?
+What scriptures are there to validate that Paul was married?
+Latest invention in the field of computer hardware?
+French for good evening?
+When was Mike Tyson born?
+How old was holden in catcher in the rye?
+Which operating systems are free?
+How does cultural change occur?
+The domain that corresponds to the kingdom eubacteria is what?
+Can you use plain flour in a pizza?
+What is the most preferred lacrosse brand for stick head?
+How many eggs to bluebirds lay?
+What are ten german christmas tradition and what days do they happen?
+What company made princess diana's tiara?
+What was bb kings band name?
+What is the general climate in Cambodia?
+What ocean is in the far north?
+What does vaginal lubrication taste like?
+Why does your stomach have pain all the time?
+What do you call the people who perform autopsies?
+What is the urban percentage of population in Australia?
+The way a surface reflects light is called a?
+Is a killer whale a vertebrate or an invertebrate?
+Does ray ray have any brothers or sisters?
+What is hawaii's most polular island?
+What is the name of the country to the north of bhutan?
+Who was american president ww1?
+On the US show House what is houses job?
+The leader of the american militia at fort necessity?
+Name something that is about 1 yard long?
+At a national level what kind of government is the US a indirect or direct?
+What eats the bobtail squid?
+Who would win in a fight the hulk or the thing?
+How many curves does the Amazon river have?
+What are the zip codes for bakersfield?
+What is the maids name in the jacket by andrew clement?
+What type of country is colombia?
+How much fish do dolphins eat in a day?
+What is it when you fear death?
+Does helium form compounds?
+How does syphilis cause pshychological disturbances?
+How is blood pumped around the human body?
+Is a hair perm a mixture or compound?
+Chris brown height in inches?
+What happens when a plate of oceanic crust collides with continental crust?
+Ceramic material is bad conductor?
+What is Ted Williams's birthday?
+Who sings the theme song for the cadillac commercial?
+Which WWE superstar lives in tampa?
+The constitution established what type of government?
+What is the charge for growing marijuana?
+How many pounds in a gallon milk?
+How long do red fox babies stay with their parents?
+Is Carel Struycken Married and to who?
+When was Saint Paul MN discovered?
+What are four producers from the arctic?
+How much do cat vaccinations cost?
+Will ill chickens lay eggs?
+What is the function of the high power objective lens on a microscope?
+What was the first toy invented?
+What is the correct name for seed pods in apples?
+What are the most sold auto parts?
+Do you find starfish in herds?
+What is the top selling soft drink in the world?
+What are organisms made out of one cell called?
+Is arnold palmer related to ryan palmer?
+How do most people earn their money in russia?
+Does lemon juice clean pennies?
+What is Jennifer Love Hewitt's Email Address?
+What family does tomatoes come from?
+Where did baltimore get its name?
+How much chocolate does australia eat a day?
+What minerals contain oxygen and silicon?
+Is Mercedes Ellington Duke Ellington's child?
+Can you plant the seeds inside a pepper?
+What are the features of daily life in China?
+What were john jay's interests?
+What are some examples of lattices?
+What is the function of long beak of bird toucan?
+How much did Textile workers make per hour in the 1800's?
+How long does a desert road runner live?
+What date did glee start?
+Who is the ceo of coca-cola india?
+What are the coronary arteries connected to?
+Does phentermine have same chemical in it as methamphetamine?
