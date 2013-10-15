@@ -16,7 +16,7 @@ import edu.knowitall.tool.stem.Lemmatized
 /**
  *  Could be used to implement an "answer ranker"
  */
-case class AnswerDerivationOrderingRanker() /* extends AnswerRanker */ {
+case class AnswerDerivationOrderingRanker() extends AnswerRanker {
 
   def rankAnswers(originalQuestion: String, groups: Seq[AnswerGroup]): Seq[ScoredAnswerGroup] = {
 
