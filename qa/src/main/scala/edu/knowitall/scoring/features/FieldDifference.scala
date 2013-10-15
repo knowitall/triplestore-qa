@@ -1,23 +1,29 @@
 package edu.knowitall.scoring.features
 
-import edu.knowitall.execution.TConjunct
-import edu.knowitall.execution.Tuple
-import edu.knowitall.triplestore.CachedTriplestoreClient
-import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.AnswerGroup
+import edu.knowitall.execution.ConjunctiveQuery
+import edu.knowitall.execution.QuotedTLiteral
+import edu.knowitall.execution.Search.rel
+import edu.knowitall.execution.Search.TSField
 import edu.knowitall.execution.Search.TSQuery
+import edu.knowitall.execution.SetTLiteral
+import edu.knowitall.execution.TConjunct
+import edu.knowitall.execution.TConjunct
+import edu.knowitall.execution.TLiteral
 import edu.knowitall.execution.Tuple
-import edu.knowitall.tool.conf.FeatureSet
+import edu.knowitall.execution.Tuple
+import edu.knowitall.execution.UnquotedTLiteral
 import edu.knowitall.tool.conf.Feature
 import edu.knowitall.tool.conf.FeatureSet
-import TupleFeatures._
-import edu.knowitall.execution.Search.TSField
-import edu.knowitall.execution.Search.rel
-import edu.knowitall.execution.TConjunct
+import edu.knowitall.tool.conf.FeatureSet
+import edu.knowitall.tool.stem.Lemmatized
 import edu.knowitall.tool.stem.MorphaStemmer
+import edu.knowitall.tool.chunk.ChunkedToken
+import edu.knowitall.triplestore.CachedTriplestoreClient
+import edu.knowitall.triplestore.SolrClient
 import scala.Array.canBuildFrom
 import scala.Option.option2Iterable
-import edu.knowitall.execution.ConjunctiveQuery
+import TupleFeatures._
 
 case object LiteralFieldsDifference extends AnswerGroupFeature("Literal Fields Difference") {
 
@@ -107,4 +113,57 @@ object FieldDifference {
   }
 
   def conjuncts(query: ConjunctiveQuery) = query.conjuncts
+}
+
+object QuerySimilarity extends AnswerGroupFeature("ExecQuery similarity") {
+
+  import edu.knowitall.execution.StrSim.stops
+  import edu.knowitall.execution.StrSim.lemmatize
+
+  def lemmaFilter(lemma: Lemmatized[ChunkedToken]) = !lemma.token.isPunctuation && !lemma.string.isEmpty
+
+  def toLemmaBag(str: String): Map[String, Int] = {
+    val lemmas = lemmatize(str).filter(lemmaFilter).map(_.lemma)
+    lemmas.groupBy(identity).map { case (lemma, lemmas) => (lemma, lemmas.size) }
+  }
+
+  def queryToBag(query: ConjunctiveQuery): Map[String, Int] = {
+    // first, get all of the literals...
+    val queryLiterals = query.conjuncts.flatMap(_.literalFields).map(_._2)
+    // then get all of the strings
+    def collectStrings(literal: TLiteral): Seq[String] = literal match {
+      case UnquotedTLiteral(string) => Seq(string)
+      case QuotedTLiteral(string) => Seq(string)
+      case SetTLiteral(literals) => literals.flatMap(collectStrings)
+    }
+    val queryStrings = queryLiterals.flatMap(collectStrings)
+    val lemmaCounts = queryStrings.flatMap(s => toLemmaBag(s).iterator)
+    lemmaCounts.groupBy(_._1).map { case (lemma, lemmaCounts) => (lemma, lemmaCounts.map(_._2).sum) }
+  }
+
+  def simQ(originalQuery: ConjunctiveQuery, execQuery: ConjunctiveQuery): Double = {
+    // turn query into bag-of-words
+    val originalBag = queryToBag(originalQuery)
+    val execBag     = queryToBag(execQuery)
+    // norm
+    val origNorm = math.sqrt(originalBag.valuesIterator.map(v => v*v).sum)
+    val execNorm = math.sqrt(execBag.valuesIterator.map(v => v*v).sum)
+    // dot
+    val sharedKeys = originalBag.keySet.intersect(execBag.keySet).toSeq
+    val dotVector = {
+      for (key <- sharedKeys) yield {
+        originalBag(key) * execBag(key)
+      }
+    }
+    val dotProduct = dotVector.sum.toDouble
+    val cosineSim = dotProduct.toDouble / (origNorm * execNorm).toDouble
+    cosineSim
+  }
+
+  def apply(group: AnswerGroup) = {
+    val queryPairs = group.derivations.map(d => (d.parsedQuery, d.execTuple.query))
+    val sims = queryPairs.map { case (oq, eq) => simQ(oq, eq) }
+    val max = sims.max
+    max
+  }
 }

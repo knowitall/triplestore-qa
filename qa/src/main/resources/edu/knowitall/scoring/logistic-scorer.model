@@ -1,6 +1,10 @@
-Answer contains a negation word	-1.6497386651947172E-6
-Answer postags in Set(DT NN, DT NNS, DT JJ, DT VGB)	-0.38769192665293795
-Intercept	-0.6253703029010853
-Literal Fields Difference	-0.04938721823154949
-Minimum Confidence	-0.5133955744455618
-Number of AnswerDerivations in the AnswerGroup	0.13810995993838654
+Answer postags in Set(DT NN, DT NNS, DT JJ, DT VGB)	-0.05869343254218627
+ExecQuery similarity	-0.017686454195122457
+Intercept	-0.017686454195122374
+Literal Fields Difference	0.04517198044807251
+Minimum Confidence	0.015518482793105524
+Number of AnswerDerivations in the AnswerGroup	0.2129900170157352
+Number of Unique Triples in the AnswerGroup	0.03955919392753059
+Query-Field similarity: rel	-0.2538847426626879
+Template Score	0.00953479815180184
+When question w/o numeric answer	-0.03752003930320156

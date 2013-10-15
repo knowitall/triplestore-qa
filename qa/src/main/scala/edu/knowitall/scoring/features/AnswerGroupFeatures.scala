@@ -35,10 +35,36 @@ object AnswerGroupFeatures extends FeatureSet[AnswerGroup, Double] {
   private val features: Seq[AnswerGroupFeature] = Seq(
       MinConfidence,
       NumberOfDerivations,
-      AnswerContainsNegation,
+      NumberUniqueTriples,
       LiteralFieldsDifference,
+      FieldDifference("rel"),
+      TemplateScore,
+      WhenFeature,
+      QuerySimilarity,
       MatchesPostagPatterns(Set("DT NN", "DT NNS", "DT JJ", "DT VGB"))
     )
+
+  object TemplateScore extends AnswerGroupFeature("Template Score") {
+    def apply(group: AnswerGroup) = {
+      val scores = group.derivations.map(_.paraphrase.derivation.score)
+      val numScores = scores.size.toDouble
+      (scores.sum.toDouble) / numScores
+    }
+  }
+
+  private val numeric = ".*\\d+.*".r
+
+  object WhenFeature extends AnswerGroupFeature("When question w/o numeric answer") {
+    def apply(group: AnswerGroup) = {
+      def isWhen = group.derivations.head.question.toLowerCase.trim.startsWith("when")
+      def isNumeric = numeric.pattern.matcher(group.alternates.head.head).matches
+      if (isWhen && !isNumeric) {
+        1.0
+      } else {
+        0.0
+      }
+    }
+  }
 
   object QuestionQueryOverlap extends AnswerGroupFeature("Question / Query overlap") {
 
