@@ -84,6 +84,7 @@ object SystemAnalyzer {
         val inputRecords = source.getLines.map(InputRecord.fromString).toSeq
 
         def filter(rec: InputRecord) = {
+          rec.paraphraser == config.paraphraser &&
           rec.parser == config.parser &&
             rec.executor == config.executor &&
             rec.grouper == config.grouper &&
