@@ -4,6 +4,7 @@ from sys import argv
 # sum reducer
 
 count_index = int(argv[1]) - 1
+min_freq = float(argv[2]) if len(argv) > 2 else 0.0
 prev_key = None
 nums = []
 for line in stdin:
@@ -12,7 +13,7 @@ for line in stdin:
     key = '\t'.join(fields)
     if prev_key is not None and key != prev_key:
         total = sum(nums)
-        print '%s\t%s' % (total, prev_key)
+        if total >= min_freq: print '%s\t%s' % (total, prev_key)
         nums = []
     nums.append(num)
     prev_key = key
