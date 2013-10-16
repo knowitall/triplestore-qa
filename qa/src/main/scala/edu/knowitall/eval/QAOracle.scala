@@ -65,7 +65,7 @@ object QAOracle {
   }
   
   def labelsFromInputStream(is: InputStream) = {
-    val triples = Source.fromInputStream(is).getLines.filter(_.startsWith("LABEL\t")).map(readLine)
+    val triples = Source.fromInputStream(is, "UTF8").getLines.filter(_.startsWith("LABEL\t")).map(readLine)
     triples.map(triple => (triple._1, triple._2) -> triple._3).toMap
   }
   
