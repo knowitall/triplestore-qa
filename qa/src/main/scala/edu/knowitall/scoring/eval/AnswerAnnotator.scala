@@ -1,66 +1,274 @@
 package edu.knowitall.scoring.eval
 
 import java.io.File
-import scopt.OptionParser
-import edu.knowitall.common.Resource.using
-import scala.io.Source
-import java.io.PrintStream
 import edu.knowitall.apps.QAConfig
 import edu.knowitall.apps.QASystem
+import edu.knowitall.apps.AnswerDerivation
+import edu.knowitall.execution.ConjunctiveQuery
+import edu.knowitall.scoring.ScoredAnswerGroup
 import edu.knowitall.util.TuplePrinter
+import java.io.ByteArrayOutputStream
+import java.io.ObjectOutputStream
+import java.io.ByteArrayInputStream
+import java.io.ObjectInputStream
+import org.apache.commons.codec.binary.Base64
+
+case class Config(
+    inputFile: File = new File("."),
+    outputFile: File = new File("."),
+    numAnswers: Int = 1,
+    removeStale: Boolean = false,
+    paraphraser: String = "identity",
+    parser: String   = "regex",
+    executor: String = "identity",
+    grouper: String  = "basic",
+    scorer: String   = "logistic") {
+
+	lazy val sysConfig = QAConfig(paraphraser, parser, executor, grouper, scorer)
+    lazy val system = {
+	  println(sysConfig)
+	  QASystem.getInstance(sysConfig).get
+	}
+  }
 
 /**
- * Reads in a list of questions and annotates them with answers. Can optionally read in it's own output
- * format and augment it with additional answers.
- */
-object AnswerAnnotator {
-  
-  case class AnswerJustification(label: String, answer: String, justification: String, query: String)
-  
-  case class Question(question: String, answerJustification: Option[AnswerJustification]) {
-    override def toString(): String = {
-      answerJustification match {
-        case Some(AnswerJustification(label, answer, justification, query)) => Seq(label, answer, question, justification, query).mkString("\t")
-        case None => Seq("X", "X", question, "X", "X").mkString("\t")
-      }
-    }
+  * Only re-uses answer labels if the answer, question, and justification are exactly the same.
+  */
+class AnswerAnnotator(config: Config, input: Seq[InputRecord]) {
 
-    // Attempts to parse the question
-    def formatString(config: Config): String = {
-      answerJustification match {
-        case Some(AnswerJustification(label, answer, justification, query)) => Seq(label, answer, question, justification, query).mkString("\t")
-        case None => {
-          val parsedQuery = config.system.parser.parse(question).headOption.map(_.toString).getOrElse("X")
-          Seq("X", "X", question, "X", parsedQuery).mkString("\t")
+  def output(): Seq[InputRecord] = {
+
+    // get map of (question string -> inputRecord)
+    val questionMap = input.groupBy(_.question)
+    // execute each question string under the given config,
+    // and get map of question string -> input record
+    // for the current execution
+    val currentExecutionMap = execute(questionMap.keys)
+    // merge the two -- In particular, results from currentExecutionMap will have no labels.
+    // go through and find cases where the label might be re-used from previously existing results,
+    // (the results in questionMap).
+    val mergedMap = merge(questionMap, currentExecutionMap)
+
+    // for convenience, sort the results so that unlabeled ones are at the very top, followed by
+    // unlabeled ones, followed by parsed-but-unanswered ones, followed by the rest.
+    convenienceSort(mergedMap.values.toSeq.flatten)
+  }
+
+  /**
+   * sort the results so that unlabeled ones are at the very top, followed by
+   * unlabeled ones, followed by parsed-but-unanswered ones, followed by the rest.
+   */
+  def convenienceSort(results: Seq[InputRecord]): Seq[InputRecord] = {
+    val sortScores = results.map { r =>
+      val sortScore = {
+        if (r.answer.isDefined && !r.label.isDefined) 4
+        else if (r.answer.isDefined && r.label.isDefined && r.json.isDefined) 3
+        else if (r.answer.isDefined && r.label.isDefined && !r.json.isDefined) 2
+        else if (r.query.isDefined) 1
+        else 0
+      }
+      (r, sortScore)
+    }
+    sortScores.sortBy(-_._2).map(_._1)
+  }
+
+  /**
+   * For results in newResultsMap that share the same answer, question, and justification
+   * as a result in previousResultsMap, give the same label to the new result.
+   *
+   * For results in newResultsMap that share the same answer, question, justification, AND system configuration
+   * use the new result's confidence value and paraphrase.
+   *
+   * Only keep the dummy InputRecords (with parse=None) if there are no other results with a parse.
+   */
+  def merge(previousResultsMap: Map[String, Seq[InputRecord]], newResultsMap: Map[String, Seq[InputRecord]]): Map[String, Seq[InputRecord]] = {
+
+    val allKeys = (previousResultsMap.keySet ++ newResultsMap.keySet).toSeq
+    allKeys.map { key =>
+      val oldResults = previousResultsMap.get(key).toSeq.flatten
+      val newResults = newResultsMap.get(key).toSeq.flatten
+      (key, mergeSingleQuestionResults(oldResults, newResults))
+    }.toMap
+  }
+
+  /**
+   * Given a set of results for a particular question,
+   * re-use labels where answers share the same answer string, justification string, and question string.
+   * Then, if old and new results share all fields except confidence, update to new confidence.
+   */
+  def mergeSingleQuestionResults(oldResults: Seq[InputRecord], newResults: Seq[InputRecord]): Seq[InputRecord] = {
+
+    val oldAJs = oldResults.groupBy(ir => (ir.answer, ir.just))
+    val newAJs = newResults.groupBy(ir => (ir.answer, ir.just))
+    val labelsReused = newAJs.map {
+      case (key @ (Some(answer), Some(just)), results) => {
+        // get old results for this (answer, just)
+        val oldRs = oldAJs.get(key).toSeq.flatten
+        // ensure that they all have the same label
+        val oldLabels = oldRs.flatMap(_.label).distinct
+        require(oldLabels.size <= 1, "All should have same label:\n"+oldRs.foreach(println))
+        // assign the label to the new results.
+        val labeledNewResults = results.map(_.copy(label = oldLabels.headOption))
+        (key, labeledNewResults)
+      }
+      case kv => kv
+    }
+    // now, group them by everything except their score, and where groups have more than one score,
+    // keep only the most recent.
+    // also, now that we've re-used past labels, it's time to filter out old results from this
+    // system config if the stale option is set.
+    val filtered = if (config.removeStale) oldResults.filterNot { r =>
+      r.paraphraser == config.paraphraser &&
+      r.parser == config.parser &&
+      r.executor == config.executor &&
+      r.grouper == config.grouper &&
+      r.scorer == config.scorer
+    } else oldResults
+    val oldGroups = filtered.groupBy(_.copy(scoreString = None, json=None))
+    val newGroups = labelsReused.values.toSeq.flatten.groupBy(_.copy(scoreString = None, json=None))
+    val allKeys = (oldGroups.keySet ++ newGroups.keySet).toSeq
+    val merged = allKeys.map(key => (oldGroups.get(key), newGroups.get(key))).map {
+      case (_, Some(newR)) => newR.head
+      case (Some(oldR), None) => oldR.head
+      case (None, None) => throw new RuntimeException("This shouldn't happen!")
+    }
+    // finally, if merged has size greater than one, remove any dummy inputrecords
+    if (merged.size > 1) merged.filterNot(_.query.isEmpty)
+    else merged
+  }
+
+
+  /**
+   * Paralex might crash due to KenLM server... so retry indefinitely. (hack)
+   */
+  def parseHelper(q: String): Iterable[ConjunctiveQuery] = {
+
+    var done = false
+    var queries = Iterable.empty[ConjunctiveQuery]
+    var errors = 0
+    var delayMs = 10
+
+    while (!done) {
+      try {
+        queries = config.system.parser.parse(q)
+        done = true
+      } catch {
+        case e: Exception => {
+          errors += 1
+          System.err.println(s"retry, sleep $delayMs ms #$errors: ${e.getMessage}")
+          Thread.sleep(delayMs)
+          if (delayMs < 500) delayMs *= 2
         }
       }
     }
+    queries
   }
-  
-  object Question {
-    def fromString(str: String): Question = {
-      str.split("\t") match {
-        case Array("X", "X", question, "X", _, _*) => Question(question, None)
-        case Array(label, answer, question, justification, query, _*) => Question(question, Some(AnswerJustification(label, answer, justification, query)))
-        case Array(question) => Question(question, None)
-        case _ => throw new RuntimeException("Unrecognized input record: "+str)
+
+  /**
+   * Execute each of the questions using the given config, returning a map
+   * to the results obtained (in the form of inputrecords). Each question
+   * shall have no more than config.numAnswers inputrecords associated
+   * with it.
+   */
+  def execute(questions: Iterable[String]): Map[String, Seq[InputRecord]] = {
+
+    val qSeq = questions.toSeq
+
+    val rawParses = qSeq.map { q =>
+      val pps = config.system.paraphrase(q)
+      val parses = pps.flatMap(pp => config.system.parse(pp).map(qq => (pp, qq)))
+      if (parses.isEmpty) None
+      else Some(parses.minBy(_._1.derivation.score))
+    }
+
+    val rawParsesAnswers = qSeq.map(q => (q, config.system.answer(q))).zip(rawParses).map { case ((question, answers), pparse) =>
+
+      (question, answers.take(config.numAnswers), pparse.map(_._1), pparse.map(_._2))
+    }
+
+    val filteredParsesAnswers = rawParsesAnswers.collect({ case (question, answers, Some(paraphrase), Some(query)) =>
+      (question, answers, paraphrase, query)
+    })
+
+    val convertedAnswers =
+      filteredParsesAnswers.map { case (question, answers, pp, parse) =>
+      if (!answers.isEmpty) {
+        (question, answers.map(s => convertAnswer(s, question)))
+      }
+      else {
+        val result = InputRecord(None,
+          None,
+          None,
+          None,
+          Some(parse.toString),
+          pp.target,
+          question,
+          config.paraphraser,
+          config.parser,
+          config.executor,
+          config.grouper,
+          config.scorer,
+          None)
+        (question, Seq(result))
       }
     }
+    convertedAnswers.toMap
   }
-  
-  case class Config(
-      inputFile: File = new File("."), 
-      outputFile: File = new File("."),
-      numAnswers: Int = 1,
-      paraphraser: String = "identity",
-      parser: String   = "regex",
-      executor: String = "identity",
-      grouper: String  = "basic",
-      scorer: String   = "logistic") {
-    
-	  lazy val sysConfig = QAConfig(paraphraser, parser, executor, grouper, scorer)
-      lazy val system = QASystem.getInstance(sysConfig).get 
+
+  private val cleanup = "\n+|\\s+".r
+
+  def convertAnswer(answer: ScoredAnswerGroup, question: String): InputRecord = {
+    val answerString = answer.alternates.head.head
+    val topTuple = answer.derivations.head.execTuple.tuple
+    val justification = TuplePrinter.printTuple(topTuple)
+    val query = answer.derivations.head.execTuple.query.toString
+    val scoreString = "%.03f" format answer.score
+    val paraphrase = answer.derivations.head.paraphrase.target
+
+    val b64 = b64serializeSag(answer)
+
+    InputRecord(None,
+        Some(answerString),
+        Some(scoreString),
+        Some(justification),
+        Some(query),
+        paraphrase,
+        question,
+        config.paraphraser,
+        config.parser,
+        config.executor,
+        config.grouper,
+        config.scorer,
+        Some(b64))
   }
+
+  private val b64 = new Base64()
+
+  def b64serializeSag(sag: ScoredAnswerGroup): String = {
+    val bos = new ByteArrayOutputStream();
+    val out = new ObjectOutputStream(bos);
+    out.writeObject(sag);
+    val yourBytes = bos.toByteArray();
+    out.close()
+    bos.close()
+    b64.encodeAsString(yourBytes)
+  }
+
+  def b64deserializeSag(string: String): ScoredAnswerGroup = {
+    val yourBytes = new Base64().decode(string)
+    val bis = new ByteArrayInputStream(yourBytes)
+    val ois = new ObjectInputStream(bis)
+    val sag = ois.readObject().asInstanceOf[ScoredAnswerGroup]
+    bis.close()
+    ois.close()
+    sag
+  }
+}
+
+object AnswerAnnotator {
+
+  import scopt.OptionParser
+  import edu.knowitall.common.Resource.using
 
   def main(args: Array[String]): Unit = {
 
@@ -68,6 +276,8 @@ object AnswerAnnotator {
       arg[File]("inputFile")  action { (f, c) => c.copy(inputFile = f) }
       arg[File]("outputFile") action { (f, c) => c.copy(outputFile = f) }
       opt[Int]("numAnswers")  action { (f, c) => c.copy(numAnswers = f) } text("Number of new answers to add")
+      opt[Unit]("removeStale")  action { (f, c) => c.copy(removeStale = true) } text("Dont keep answers only found with this system config during prior runs")
+      opt[String]("paraphraser") action { (s, c) => c.copy(paraphraser = s) }
       opt[String]("parser")   action { (s, c) => c.copy(parser = s) }
       opt[String]("executor") action { (s, c) => c.copy(executor = s) }
       opt[String]("basic")    action { (s, c) => c.copy(grouper = s) }
@@ -81,56 +291,13 @@ object AnswerAnnotator {
   }
 
   def run(config: Config): Unit = {
-    val questions = using(Source.fromFile(config.inputFile, "UTF8")) { input =>
-      input.getLines.map(Question.fromString).toList
-    }
-    using(new PrintStream(config.outputFile, "UTF8")) { output =>
 
-      answerQuestions(config, questions) foreach { q => output.println(q.formatString(config)) }
-    }
-  }
-  
-  def answerQuestions(config: Config, questions: List[Question]): Seq[Question] = {
-    // deserialize questions
-    // group by question and answer strings
-    val questionsGrouped = questions.groupBy(_.question).map { case (qString, qs) => 
-      val ajs = qs.flatMap(_.answerJustification)
-      (qString, ajs.map(a => (a.answer, a)).toMap)
-    } 
-    // try to find previously unknown answers
-    val moreAnswers = questionsGrouped.iterator.map { case (qString, ajs) => (qString, findMoreAnswers(config, qString, ajs)) }
-    // map back to Question objects
-    val augmentedQuestions = moreAnswers.flatMap { case (qString, ajs) =>
-      if (ajs.nonEmpty)
-        ajs.iterator.map { case (answer, aj) => Question(qString, Some(aj)) }
-      else 
-        Iterator(Question(qString, None)) 
-    }
-    // sort new answers to the top of the list,
-    // and unanswered questions to the bottom.
-    augmentedQuestions.toSeq.sortBy { q =>
-      q.answerJustification match {
-        case Some(AnswerJustification("X", _, _, _)) => 0
-        case Some(x: AnswerJustification) => 0.5
-        case None => 1
+    using (io.Source.fromFile(config.inputFile, "UTF8")) { source =>
+      using (new java.io.PrintStream(config.outputFile, "UTF8")) { output =>
+        val inputRecords = source.getLines.map(InputRecord.fromString).toSeq
+        val annotator = new AnswerAnnotator(config, inputRecords)
+        annotator.output() foreach output.println
       }
     }
-  }
-  
-  def findMoreAnswers(config: Config, qString: String, answerJusts: Map[String, AnswerJustification]): Map[String, AnswerJustification] = {
-    findTopAnswers(config, qString) ++ answerJusts
-  }
-  
-  def findTopAnswers(config: Config, question: String): Map[String, AnswerJustification] = {
-    val scoredAnswerGroups = config.system.answer(question)
-    val top = scoredAnswerGroups.take(config.numAnswers)
-    val answerJust = top.map { topAnswer => 
-      val answer = topAnswer.alternates.head.head
-      val topTuple = topAnswer.derivations.head.execTuple.tuple
-      val justification = TuplePrinter.printTuple(topTuple)
-      val query = topAnswer.derivations.head.execTuple.query.toString
-      (answer -> AnswerJustification("X", answer, justification, query))
-    }
-    answerJust.toMap
   }
 }

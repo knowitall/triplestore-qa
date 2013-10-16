@@ -1,8 +1,10 @@
-Answer contains a negation word	-0.2121738865158222
-Answer contains article tokens	-0.35875746154671395
-Answer contains determiner	-1.1133232037116882
-Intercept	0.6466534196839755
-Literal Fields Difference	-0.06231704036510348
-Log of Frequency of answer in the triplestore	-0.04379899837815167
-Normalized postags ranking in query results.	-0.05126603876518113
-Number of AnswerDerivations in the AnswerGroup	0.15703413242990566
+Answer postags in Set(DT NN, DT NNS, DT JJ, DT VGB)	-0.05869343254218627
+ExecQuery similarity	-0.017686454195122457
+Intercept	-0.017686454195122374
+Literal Fields Difference	0.04517198044807251
+Minimum Confidence	0.015518482793105524
+Number of AnswerDerivations in the AnswerGroup	0.2129900170157352
+Number of Unique Triples in the AnswerGroup	0.03955919392753059
+Query-Field similarity: rel	-0.2538847426626879
+Template Score	0.00953479815180184
+When question w/o numeric answer	-0.03752003930320156
