@@ -7,6 +7,7 @@ import java.io.InputStream
 import scala.io.Source
 import java.io.FileInputStream
 import java.io.PrintWriter
+import java.io.File
 
 trait QAOracle {
 
@@ -30,6 +31,11 @@ trait QAOracle {
 
 }
 
+trait UpdateableQAOracle extends QAOracle {
+  def save
+  def update(q: String, a: String, label: Boolean)
+}
+
 object QAOracle {
     
   val tokenizer = new ClearTokenizer()
@@ -46,27 +52,37 @@ object QAOracle {
   }
   
   def readLine(line: String): (String, String, Boolean) = {
-    val fields = line.split("\t", 3)
+    val fields = line.split("\t", 4)
     fields match {
-      case Array(q, a, l) => (normalize(q), normalize(a), l.toBoolean)
+      case Array(tag, l, q, a) => (normalize(q), normalize(a), getBoolean(l))
       case _ => throw new IllegalArgumentException(s"Could not parse line: '$line'")
     }
   }
+  def getBoolean(s: String) = s.toLowerCase() match {
+    case "0" => false
+    case "false" => false
+    case _ => true
+  }
   
   def labelsFromInputStream(is: InputStream) = {
-    val triples = Source.fromInputStream(is).getLines.map(readLine)
+    val triples = Source.fromInputStream(is).getLines.filter(_.startsWith("LABEL\t")).map(readLine)
     triples.map(triple => (triple._1, triple._2) -> triple._3).toMap
   }
   
   def fromFile(fn: String) = labelsFromInputStream(new FileInputStream(fn))
 } 
 
-class FileQAOracle(path: String) extends QAOracle {
-  val labels =  scala.collection.mutable.Map(QAOracle.fromFile(path).toSeq: _*)
+class FileQAOracle(path: String) extends UpdateableQAOracle {
+  val file = new File(path)
+  val labels = if (file.exists()) {
+    scala.collection.mutable.Map(QAOracle.fromFile(path).toSeq: _*)
+  } else {
+    scala.collection.mutable.Map[(String, String), Boolean]()
+  }
   override def getLabel(q: String, a: String) = labels.get((q, a))
   def save = {
     val output = new PrintWriter(path)
-    for (((q, a), l) <- labels) output.println(s"$q\t$a\t$l")
+    for (((q, a), l) <- labels) output.println(s"LABEL\t$l\t$q\t$a")
     output.close()
   }
   def update(q: String, a: String, label: Boolean) = labels += ((q, a) -> label)
