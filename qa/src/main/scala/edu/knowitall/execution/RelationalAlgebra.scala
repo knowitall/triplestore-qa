@@ -190,7 +190,7 @@ object Operators {
    * as a nested loop over each iterable of tuples.
    */
   def NestedLoopJoin(p: TuplePred) = (ts1: Tuples, ts2: Tuples) => {
-    for (t1 <- ts1.par; t2 <- ts2.par; j = t1.join(t2); if p(j)) yield j
+    for (t1 <- ts1.par; t2 <- ts2; j = t1.join(t2); if p(j)) yield j
   }.toList
 
   /* Joins together all pairs of tuples. */
