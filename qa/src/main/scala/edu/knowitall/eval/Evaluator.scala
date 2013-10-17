@@ -1,10 +1,13 @@
 package edu.knowitall.eval
 
 import scala.io.Source
+import java.io.PrintWriter
+import com.typesafe.config.ConfigFactory
+import java.io.File
 
 object Evaluator extends App {
   
-  def evaluate(questions: List[String], oracle: QAOracle, output: QASystemOutput) {
+  def evaluate(writer: PrintWriter, questions: List[String], oracle: QAOracle, output: QASystemOutput) {
     var numCorrect = 0.0
     var numAnswered = 0.0
     for (q <- questions; a <- output.topAnswerFor(q)) {
@@ -19,11 +22,11 @@ object Evaluator extends App {
     }
     val precision = numCorrect / numAnswered
     val accuracy = numCorrect / questions.size
-    println(s"${questions.size} questions")
-    println(s"${numAnswered} answered")
-    println(s"${numCorrect} correct")
-    println(s"${precision} precision")
-    println(s"${accuracy} accuracy")
+    writer.println(s"${questions.size} questions")
+    writer.println(s"${numAnswered} answered")
+    writer.println(s"${numCorrect} correct")
+    writer.println(s"${precision} precision")
+    writer.println(s"${accuracy} accuracy")
   }
   
   val questionsPath = args(0)
@@ -33,6 +36,12 @@ object Evaluator extends App {
   val questions = Source.fromFile(questionsPath, "UTF8").getLines.toList
   val oracle = new FileQAOracle(labelsPath)
   val output = QASystemOutput.fromPath(outputPath)
-  evaluate(questions, oracle, output)
+  
+  val conf = ConfigFactory.load()
+  val writer = new PrintWriter(new File(outputPath, conf.getString("eval.score.file")))
+
+  
+  evaluate(writer, questions, oracle, output)
+  writer.close()
 
 }
