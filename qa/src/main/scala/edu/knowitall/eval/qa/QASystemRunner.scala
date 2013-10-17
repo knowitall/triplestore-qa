@@ -4,8 +4,11 @@ import edu.knowitall.apps.QASystem
 import java.io.File
 import java.io.IOException
 import scala.io.Source
+import org.slf4j.LoggerFactory
 
 class QASystemRunner(qa: QASystem, path: String) {
+  
+  val logger = LoggerFactory.getLogger(this.getClass)
 
   val outputFile = new File(path)
   if (!outputFile.exists()) {
@@ -17,12 +20,18 @@ class QASystemRunner(qa: QASystem, path: String) {
   
   def runFile(path: String) = {
     val lines = Source.fromFile(path, "UTF8").getLines.toList
+    logger.info(s"Running QA System on '$path'")
+    logger.info(s"'$path' contains ${lines.size} questions")
     run(path, lines)
   }
   
   def run(name: String, questions: List[String]) = {
-    val records = for (q <- questions;
-    				   group <- qa.answer(q);
+    val n = questions.size
+    val records = for ((q, i) <- questions.zipWithIndex;
+    				   group <- {
+    				     logger.info(s"Question ${i+1} of ${n}")
+    				     qa.answer(q)
+    				   };
     				   r = QAOutputRecord.fromScoredAnswerGroup(q, group))
     				yield r
     val output = new QASystemOutput(path, records.toList, name)

@@ -8,7 +8,7 @@ class AnswerLabeler(oracle: UpdateableOracle, output: QASystemOutput) {
   def generateTopLabelFile = {
     for (q <- output.questions; a <- output.topOutputFor(q); if !oracle.hasLabel(q, a)) {
       println(s"LABEL\t0\t$q\t$a")
-      val r = output.recordsFor(q, a).take(1)(0)
+      val r = output.qaRecordsFor(q, a).take(1)(0)
       println(r.derivation.split(";").take(1)(0).replaceAll(" => ", "\n=>\n"))
       println("\n")
     } 

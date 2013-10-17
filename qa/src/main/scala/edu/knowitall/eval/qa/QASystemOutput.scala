@@ -25,6 +25,14 @@ case class QASystemOutput(path: String, records: List[QAOutputRecord], config: M
   private val questionToRecords = records.groupBy(r => normalize(r.question))
   private val questionAnswerToRecords = records.groupBy(r => (normalize(r.question), normalize(r.answer)))
   
+  val qaRecords = records
+  
+  def qaRecordsFor(input: String, output: String): List[QAOutputRecord] = {
+    val in = normalize(input)
+    val on = normalize(output)
+    questionAnswerToRecords.getOrElse((in, on), List()).toList
+  }
+  
   def save = {
     
     val dir = new File(path)
