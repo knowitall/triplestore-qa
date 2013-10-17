@@ -14,7 +14,7 @@ class ParaphraseSystemRunner(paraphraser: Paraphraser, path: String) {
   
   def runFile(path: String) = {
 	val lines = Source.fromFile(path, "UTF8").getLines.toList
-	
+	run(path, lines)
   }
   
   def run(name: String, inputs: List[String]) = {
