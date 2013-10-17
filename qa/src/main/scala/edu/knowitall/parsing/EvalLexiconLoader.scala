@@ -43,7 +43,7 @@ class EvalLexiconLoader(
   
   private val lexWeights = using(Source.fromFile(lexWeightFile, "UTF8")) { source => 
       System.err.println(s"Loading Lexicon weights...")
-      source.getLines.map(l => splitRegex.split(l).toList).map({ case weight :: lexItemEncoding => 
+      source.getLines.map(l => splitRegex.split(l).toList).collect({ case weight :: lexItemEncoding => 
         require(lexItemEncoding.length >= 3, "Unrecognized lexitem encoding.")
         (lexItemEncoding.map(_.toInt), weight.toDouble) 
     }).toMap
