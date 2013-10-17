@@ -4,6 +4,7 @@ abstract class OutputRecord {
   def input: String
   def output: String
   def score: Double
+  override def toString = s"$input\t$output\t$score"
 }
 
 object OutputRecord {
