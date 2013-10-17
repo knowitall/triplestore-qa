@@ -16,8 +16,8 @@ import edu.knowitall.eval.OutputRecord
 
 case class QASystemOutput(path: String, records: List[QAOutputRecord], config: Map[String, String], name: String) extends SystemOutput {
   
-  def this(path: String, name: String) = this(path, QASystemOutput.loadRecords(path), QASystemOutput.loadConfig(path), name)
-  def this(path: String, records: List[QAOutputRecord], name: String) = this(path, records, QASystemOutput.getCurrentConfig, name)
+  def this(path: String, name: String) = this(path, QASystemOutput.loadRecords(path), SystemOutput.loadConfig(path), name)
+  def this(path: String, records: List[QAOutputRecord], name: String) = this(path, records, SystemOutput.getCurrentConfig, name)
 
   val questions = records.map(_.question).distinct
   val questionAnswers = records.map(r => (r.question, r.answer)).distinct
@@ -33,7 +33,7 @@ case class QASystemOutput(path: String, records: List[QAOutputRecord], config: M
     questionAnswerToRecords.getOrElse((in, on), List()).toList
   }
   
-  def save = {
+  override def save = {
     
     val dir = new File(path)
     if (dir.exists() && !dir.isDirectory()) throw new IllegalStateException(s"$dir exists but is not a directory")
@@ -69,17 +69,7 @@ case object QASystemOutput {
     val lines = Source.fromFile(new File(path, outputFile)).getLines
     lines.map(QAOutputRecord.fromLine).toList
   }
-  def loadConfig(path: String) = {
-    val lines = Source.fromFile(new File(path, configFile)).getLines
-    val pairs = lines map { line: String =>
-      line.split("\t", 2) match {
-        case Array(k, v) => (k, v)
-        case _ => throw new IllegalArgumentException(s"Could not parse line: $line")
-      }
-    }
-    pairs.toMap
-  }
-  def getCurrentConfig = conf.root().asScala.map(pair => (pair._1, pair._2.render(ConfigRenderOptions.concise))).toMap
+  
 
   def fromPath(path: String) = {
     val name = Source.fromFile(new File(path, nameFile)).getLines.mkString("\n")
