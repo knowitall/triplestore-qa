@@ -1,13 +1,14 @@
 package edu.knowitall.eval
 
 import scala.io.Source
+import edu.knowitall.eval.qa.QASystemOutput
 
 object Evaluator extends App {
   
-  def evaluate(questions: List[String], oracle: QAOracle, output: QASystemOutput) {
+  def evaluate(questions: List[String], oracle: Oracle, output: SystemOutput) {
     var numCorrect = 0.0
     var numAnswered = 0.0
-    for (q <- questions; a <- output.topAnswerFor(q)) {
+    for (q <- questions; a <- output.topOutputFor(q)) {
       numAnswered += 1
       if (oracle.hasLabel(q, a)) {
       	if (oracle.isCorrect(q, a)) {
@@ -31,8 +32,8 @@ object Evaluator extends App {
   val outputPath = args(2)
   
   val questions = Source.fromFile(questionsPath, "UTF8").getLines.toList
-  val oracle = new FileQAOracle(labelsPath)
-  val output = QASystemOutput.fromPath(outputPath)
+  val oracle = new FileOracle(labelsPath)
+  val output = SystemOutput.fromPath(outputPath)
   evaluate(questions, oracle, output)
 
 }

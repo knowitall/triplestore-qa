@@ -23,9 +23,9 @@ class QASystemRunner(qa: QASystem, path: String) {
   def run(name: String, questions: List[String]) = {
     val records = for (q <- questions;
     				   group <- qa.answer(q);
-    				   r = SystemOutputRecord.fromScoredAnswerGroup(q, group))
+    				   r = QAOutputRecord.fromScoredAnswerGroup(q, group))
     				yield r
-    val output = new QASystemOutput(path, records, name)
+    val output = new QASystemOutput(path, records.toList, name)
     output.save
   }
   

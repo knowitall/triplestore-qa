@@ -1,0 +1,22 @@
+package edu.knowitall.eval
+
+abstract class OutputRecord {
+  def input: String
+  def output: String
+  def score: Double
+}
+
+object OutputRecord {
+  
+  private case class OutputRecordImpl(input: String, output: String, 
+      score: Double) extends OutputRecord {
+    def apply(input: String, output: String, score: Double) =
+      OutputRecordImpl(input, output, score)
+  }
+  
+  def fromLine(line: String): OutputRecord = line.split("\t").toList match {
+    case i :: o :: s :: rest => OutputRecordImpl(i, o, s.toDouble)
+    case _ => throw new IllegalArgumentException(s"Could not parse line: $line")
+  }
+
+}

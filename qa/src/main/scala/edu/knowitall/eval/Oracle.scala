@@ -1,4 +1,4 @@
-package edu.knowitall.eval.qa
+package edu.knowitall.eval
 
 import edu.knowitall.tool.tokenize.ClearTokenizer
 import edu.knowitall.tool.postag.StanfordPostagger
@@ -9,21 +9,21 @@ import java.io.FileInputStream
 import java.io.PrintWriter
 import java.io.File
 
-trait QAOracle {
+trait Oracle {
 
-  def getLabel(q: String, a: String): Option[Boolean]
+  def getLabel(input: String, output: String): Option[Boolean]
   
-  def isCorrect(question: String, answer: String): Boolean = {
-    val (q, a) = QAOracle.normalizePair(question, answer)
-    getLabel(q, a) match {
+  def isCorrect(input: String, output: String): Boolean = {
+    val (i, o) = Oracle.normalizePair(input, output)
+    getLabel(i, o) match {
     	case Some(label) => label
-    	case _ => throw new IllegalStateException(s"No label for ($question, $answer)")
+    	case _ => throw new IllegalStateException(s"No label for ($input, $output)")
     }
   }
   
-  def hasLabel(question: String, answer: String): Boolean = {
-    val (q, a) = QAOracle.normalizePair(question, answer)
-    getLabel(q, a) match {
+  def hasLabel(input: String, output: String): Boolean = {
+    val (i, o) = Oracle.normalizePair(input, output)
+    getLabel(i, o) match {
       case Some(label) => true
       case _ => false
     }
@@ -31,18 +31,18 @@ trait QAOracle {
 
 }
 
-trait UpdateableQAOracle extends QAOracle {
+trait UpdateableOracle extends Oracle {
   def save
-  def update(q: String, a: String, label: Boolean)
+  def update(input: String, output: String, label: Boolean)
 }
 
-object QAOracle {
+object Oracle {
     
   val tokenizer = new ClearTokenizer()
   val tagger = new StanfordPostagger()
   val lemmatizer = new MorphaStemmer()
   
-  def normalizePair(q: String, a: String) = (normalize(q), normalize(a))
+  def normalizePair(input: String, output: String) = (normalize(input), normalize(output))
   
   def normalize(s: String): String = {
     val tokens = tokenizer(s)
@@ -54,7 +54,7 @@ object QAOracle {
   def readLine(line: String): (String, String, Boolean) = {
     val fields = line.split("\t", 4)
     fields match {
-      case Array(tag, l, q, a) => (normalize(q), normalize(a), getBoolean(l))
+      case Array(tag, l, i, o) => (normalize(i), normalize(o), getBoolean(l))
       case _ => throw new IllegalArgumentException(s"Could not parse line: '$line'")
     }
   }
@@ -72,18 +72,18 @@ object QAOracle {
   def fromFile(fn: String) = labelsFromInputStream(new FileInputStream(fn))
 } 
 
-class FileQAOracle(path: String) extends UpdateableQAOracle {
+class FileOracle(path: String) extends UpdateableOracle {
   val file = new File(path)
   val labels = if (file.exists()) {
-    scala.collection.mutable.Map(QAOracle.fromFile(path).toSeq: _*)
+    scala.collection.mutable.Map(Oracle.fromFile(path).toSeq: _*)
   } else {
     scala.collection.mutable.Map[(String, String), Boolean]()
   }
-  override def getLabel(q: String, a: String) = labels.get((q, a))
+  override def getLabel(input: String, output: String) = labels.get((input, output))
   def save = {
     val output = new PrintWriter(path)
-    for (((q, a), l) <- labels) output.println(s"LABEL\t$l\t$q\t$a")
+    for (((i, o), l) <- labels) output.println(s"LABEL\t$l\t$i\t$o")
     output.close()
   }
-  def update(q: String, a: String, label: Boolean) = labels += ((q, a) -> label)
+  def update(i: String, o: String, label: Boolean) = labels += ((i, o) -> label)
 }

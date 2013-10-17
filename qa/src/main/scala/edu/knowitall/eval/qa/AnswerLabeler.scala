@@ -1,9 +1,12 @@
 package edu.knowitall.eval.qa
 
-class AnswerLabeler(oracle: UpdateableQAOracle, output: QASystemOutput) {
+import edu.knowitall.eval.UpdateableOracle
+import edu.knowitall.eval.FileOracle
+
+class AnswerLabeler(oracle: UpdateableOracle, output: QASystemOutput) {
   
   def generateTopLabelFile = {
-    for (q <- output.questions; a <- output.topAnswerFor(q); if !oracle.hasLabel(q, a)) {
+    for (q <- output.questions; a <- output.topOutputFor(q); if !oracle.hasLabel(q, a)) {
       println(s"LABEL\t0\t$q\t$a")
       val r = output.recordsFor(q, a).take(1)(0)
       println(r.derivation.split(";").take(1)(0).replaceAll(" => ", "\n=>\n"))
@@ -24,7 +27,7 @@ class AnswerLabeler(oracle: UpdateableQAOracle, output: QASystemOutput) {
 object AnswerLabeler extends App {
   val labelsPath = args(0)
   val outputPath = args(1)
-  val oracle = new FileQAOracle(labelsPath)
+  val oracle = new FileOracle(labelsPath)
   val output = QASystemOutput.fromPath(outputPath)
   val labeler = new AnswerLabeler(oracle, output)
   labeler.generateTopLabelFile
