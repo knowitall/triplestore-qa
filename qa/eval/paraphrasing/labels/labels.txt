@@ -1,0 +1,2245 @@
+LABEL	1	Is star is a source of light?	be star be a light source ?
+LABEL	1	Do you get pregnant if you kiss?	can you get pregnant if you kiss ?
+LABEL	1	Do you get pregnant if you kiss?	will you get pregnant if you kiss ?
+LABEL	0	Do you get pregnant if you kiss?	what be way to get pregnant if you kiss ?
+LABEL	0	Do you get pregnant if you kiss?	how can you get pregnant if you kiss ?
+LABEL	0	Do you get pregnant if you kiss?	how do you get pregnant if you kiss ?
+LABEL	0	Do you get pregnant if you kiss?	what happen when you get pregnant if you kiss ?
+LABEL	0	Do you get pregnant if you kiss?	why do you get pregnant if you kiss ?
+LABEL	0	Do you get pregnant if you kiss?	how do people get pregnant if you kiss ?
+LABEL	0	Do you get pregnant if you kiss?	how can you have pregnant if you kiss ?
+LABEL	0	Do you get pregnant if you kiss?	what to do if you have pregnant if you kiss ?
+LABEL	0	Do you get pregnant if you kiss?	what be pregnant if you kiss ?
+LABEL	1	Qualities needed to become a chemist?	what personal quality do you need to be a chemist ?
+LABEL	1	Qualities needed to become a chemist?	what qualification be need to become a chemist ?
+LABEL	0	Who fixes water pipes and drains?	what be water pipe and drain today ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday be when ?
+LABEL	1	What is Roger Wagner's birthday?	what year be roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	what day be roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner s birthday date ?
+LABEL	1	What is Roger Wagner's birthday?	what month be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday be ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner s birthday on ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s birthdate ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s real birthday ?
+LABEL	1	What is Roger Wagner's birthday?	whan be roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s birthday and death ?
+LABEL	0	What is Roger Wagner's birthday?	whwn be roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner s real birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be be roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner birthday ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s exact birthday ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s 15 th birthday ?
+LABEL	1	What is Roger Wagner's birthday?	what date be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s brother birthday ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s death date ?
+LABEL	0	What is Roger Wagner's birthday?	whaen be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s death ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner s bday ?
+LABEL	1	What is Roger Wagner's birthday?	whe be roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner birthday ?
+LABEL	1	What is Roger Wagner's birthday?	what roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner exact birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s brithday ?
+LABEL	1	What is Roger Wagner's birthday?	be it roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	when roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what age be roger wagner gill ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s b - day ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner s birth date ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner s b - day ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s thirteenth birthday ?
+LABEL	1	What is Roger Wagner's birthday?	roger wagner s birthday and death day ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s full birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what si roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s borthday ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner s date of birth and death ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner gill brithday ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s bday ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner real birthday ?
+LABEL	1	What is Roger Wagner's birthday?	when in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner pos birthday ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner bear on ?
+LABEL	1	What is Roger Wagner's birthday?	be it roger wagner birthday ?
+LABEL	0	What is Roger Wagner's birthday?	why be roger wagner call dimebag ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s brithday ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s date of birth ?
+LABEL	1	What is Roger Wagner's birthday?	roger wagner s birthday be when ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner s date of birth ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthplace ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s bithday ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s b day ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s birhtday ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner pos birthday ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s birth day ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s birth date ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s real name ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s mum birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s date of death ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s brother s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s pos birthday ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner jr birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s nickname ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s '' birthday ?
+LABEL	1	What is Roger Wagner's birthday?	how old be roger wagner ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s dob ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s father name ?
+LABEL	0	What is Roger Wagner's birthday?	when be regan and roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner s birthdate ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s middle name ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s cullen birthday ?
+LABEL	1	What is Roger Wagner's birthday?	roger wagner birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what do they do on roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s mom name ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s pos birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s nationality ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s personality ?
+LABEL	0	What is Roger Wagner's birthday?	how old be roger wagner s wife ?
+LABEL	1	What is Roger Wagner's birthday?	when be the birthday of roger wagner ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s dad name ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s middel name ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s family ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s gosselin s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the date of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s father name ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s s birthdate ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s full name ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner brithday ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s father ?
+LABEL	0	What is Roger Wagner's birthday?	what be be roger wagner s nickname ?
+LABEL	0	What is Roger Wagner's birthday?	when be be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s cellphone number ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s parent alive ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s eye color ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner bday ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner birth day ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s childhood ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s msn ?
+LABEL	0	What is Roger Wagner's birthday?	what year be roger wagner s s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the occupation of roger wagner s parent ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what year be roger wagner gill bear in ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner s age ?
+LABEL	1	What is Roger Wagner's birthday?	how old be roger wagner s and when be there birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s parent name ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s 17 ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s whole name ?
+LABEL	0	What is Roger Wagner's birthday?	when be rapper roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	when roger wagner s birthday be ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s cell phone number ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s sibling ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s family ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s s real birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s race ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s be birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s b - day ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner bear ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s first name ?
+LABEL	0	What is Roger Wagner's birthday?	what day be roger wagner s s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s girlfriend name ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s email ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s favorite color ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s mom and dad name ?
+LABEL	1	What is Roger Wagner's birthday?	when be it roger wagner s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	what be the birthday of roger wagner ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s birthday date ?
+LABEL	1	What is Roger Wagner's birthday?	when roger wagner birthday ?
+LABEL	0	What is Roger Wagner's birthday?	where be roger wagner s birth place ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s parent ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner s bear ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s mother and father ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s and dad birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s email adress ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner b day ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s hobby ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s mother name ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner nickname ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s address ?
+LABEL	1	What is Roger Wagner's birthday?	how old be roger wagner s 2009 ?
+LABEL	1	What is Roger Wagner's birthday?	roger wagner s date of birth ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s culture ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s dad ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s number ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s month she be bear ?
+LABEL	1	What is Roger Wagner's birthday?	what date be roger wagner birthday ?
+LABEL	1	What is Roger Wagner's birthday?	what month be roger wagner s s birthday ?
+LABEL	1	What is Roger Wagner's birthday?	how old be roger wagner s today ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s be bear ?
+LABEL	0	What is Roger Wagner's birthday?	when be regan and roger wagner birthday ?
+LABEL	1	What is Roger Wagner's birthday?	how old be roger wagner s 2010 ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s major accomplishment ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s dead ?
+LABEL	0	What is Roger Wagner's birthday?	how long be roger wagner s hair ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s religion ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s name ?
+LABEL	0	What is Roger Wagner's birthday?	what be be roger wagner s real name ?
+LABEL	1	What is Roger Wagner's birthday?	what age be roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s girl friend ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s wife name ?
+LABEL	1	What is Roger Wagner's birthday?	what be the birth date of roger wagner ?
+LABEL	0	What is Roger Wagner's birthday?	on what date be roger wagner s 13 th birthday ?
+LABEL	0	What is Roger Wagner's birthday?	where be roger wagner born ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s accomplishment ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s real name ?
+LABEL	0	What is Roger Wagner's birthday?	how old be roger wagner s in 2009 ?
+LABEL	1	What is Roger Wagner's birthday?	when be roger wagner b - day ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s bus ?
+LABEL	0	What is Roger Wagner's birthday?	how do roger wagner become a writer ?
+LABEL	0	What is Roger Wagner's birthday?	where be roger wagner s home ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s girlfriend ?
+LABEL	0	What is Roger Wagner's birthday?	how old be the people from roger wagner ?
+LABEL	1	What is Roger Wagner's birthday?	how old be roger wagner now ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s date of death ?
+LABEL	1	What is Roger Wagner's birthday?	how old be roger wagner s right now ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s marrid ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s a spy ?
+LABEL	0	What is Roger Wagner's birthday?	how tall be roger wagner ?
+LABEL	1	What is Roger Wagner's birthday?	roger wagner s age ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner mother ?
+LABEL	0	What is Roger Wagner's birthday?	where be roger wagner ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner middle name ?
+LABEL	0	What is Roger Wagner's birthday?	how much be roger wagner worth ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s s brithday ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner still alive ?
+LABEL	0	What is Roger Wagner's birthday?	how old be roger wagner s ?
+LABEL	1	What is Roger Wagner's birthday?	what be birthday of roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	why be roger wagner so important ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s s death ?
+LABEL	0	What is Roger Wagner's birthday?	how lod be roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s s birth ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s s b - day ?
+LABEL	0	What is Roger Wagner's birthday?	when do roger wagner s mother die ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s date of birth ?
+LABEL	0	What is Roger Wagner's birthday?	how old be roger wagner s in 2010 ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner have sibiling ?
+LABEL	0	What is Roger Wagner's birthday?	where be roger wagner bear ?
+LABEL	0	What is Roger Wagner's birthday?	why be roger wagner important ?
+LABEL	1	What is Roger Wagner's birthday?	the birthday of roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s english ?
+LABEL	1	What is Roger Wagner's birthday?	what be roger wagner age ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s famouse for ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s job ?
+LABEL	1	What is Roger Wagner's birthday?	when do roger wagner bear ?
+LABEL	0	What is Roger Wagner's birthday?	how old be roger wagner s now ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s s bday ?
+LABEL	0	What is Roger Wagner's birthday?	what year be roger wagner s bear ?
+LABEL	1	What is Roger Wagner's birthday?	what date be roger wagner bear ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s cute ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s cullen birthday be when ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s pos real name ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s jewish ?
+LABEL	0	What is Roger Wagner's birthday?	where do roger wagner die ?
+LABEL	0	What is Roger Wagner's birthday?	what year do roger wagner die ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s a fake ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s s birth day ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s birth date ?
+LABEL	1	What is Roger Wagner's birthday?	what be the birthday of roger wagner s ?
+LABEL	1	What is Roger Wagner's birthday?	birthday of roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner real name ?
+LABEL	0	What is Roger Wagner's birthday?	when do roger wagner s get she birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how ol be roger wagner s ?
+LABEL	1	What is Roger Wagner's birthday?	when be the birthday of roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	who do roger wagner marry ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	where be roger wagner s bear ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner family ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s mary ?
+LABEL	0	What is Roger Wagner's birthday?	what be the name of roger wagner s girlfriend ?
+LABEL	0	What is Roger Wagner's birthday?	what year be roger wagner s bear in ?
+LABEL	0	What is Roger Wagner's birthday?	what be some of roger wagner s typical behaivor ?
+LABEL	1	What is Roger Wagner's birthday?	what day be roger wagner s bear ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s age ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner name ?
+LABEL	0	What is Roger Wagner's birthday?	where be roger wagner s bury ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s nice ?
+LABEL	0	What is Roger Wagner's birthday?	what be the name of roger wagner s family ?
+LABEL	0	What is Roger Wagner's birthday?	what nationality be roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s dead ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner have kid ?
+LABEL	0	What is Roger Wagner's birthday?	when roger wagner s s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what month be roger wagner s bear ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s gay ?
+LABEL	0	What is Roger Wagner's birthday?	when ia roger wagner s s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s father s name ?
+LABEL	0	What is Roger Wagner's birthday?	what color be roger wagner s eye ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s dad name ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s father name ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s still alive ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s when be he bear ?
+LABEL	1	What is Roger Wagner's birthday?	what year be roger wagner bear ?
+LABEL	1	What is Roger Wagner's birthday?	when do roger wagner be bear ?
+LABEL	0	What is Roger Wagner's birthday?	what date be roger wagner s s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner ?
+LABEL	0	What is Roger Wagner's birthday?	what day be roger wagner s bear on ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s s death date ?
+LABEL	0	What is Roger Wagner's birthday?	who old be roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	what date be roger wagner s bear ?
+LABEL	0	What is Roger Wagner's birthday?	when be roger wagner s 13 birthday and what do she get ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s cell phone number ?
+LABEL	0	What is Roger Wagner's birthday?	what be the name of roger wagner ?
+LABEL	0	What is Roger Wagner's birthday?	where be roger wagner s now ?
+LABEL	0	What is Roger Wagner's birthday?	how many sibling do roger wagner have ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s go out with ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner parent ?
+LABEL	1	What is Roger Wagner's birthday?	what be the birth and death date of roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	where be roger wagner s from ?
+LABEL	0	What is Roger Wagner's birthday?	where and when be roger wagner s bear ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner have brother ?
+LABEL	0	What is Roger Wagner's birthday?	what be the birth date of roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s full name ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s occupation ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s name ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s parent s name ?
+LABEL	0	What is Roger Wagner's birthday?	in what year be roger wagner s bear ?
+LABEL	0	What is Roger Wagner's birthday?	how old be rapper roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	when and where be roger wagner bear ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s last name ?
+LABEL	0	What is Roger Wagner's birthday?	how old be roger wagner s when he die ?
+LABEL	0	What is Roger Wagner's birthday?	what be the name of roger wagner s parent ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s favorite color ?
+LABEL	0	What is Roger Wagner's birthday?	what be the date of roger wagner s s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	where do roger wagner s die ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s how old be he ?
+LABEL	0	What is Roger Wagner's birthday?	what month be roger wagner s bear on ?
+LABEL	0	What is Roger Wagner's birthday?	be be roger wagner bear ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s real name ?
+LABEL	0	What is Roger Wagner's birthday?	when do roger wagner s be bear ?
+LABEL	0	What is Roger Wagner's birthday?	one what year be roger wagner s thirteenth birthday ?
+LABEL	0	What is Roger Wagner's birthday?	whetre be roger wagner s dairy now ?
+LABEL	1	What is Roger Wagner's birthday?	when be it roger wagner birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how old roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s favorite food ?
+LABEL	0	What is Roger Wagner's birthday?	what month be roger wagner s bear in ?
+LABEL	0	What is Roger Wagner's birthday?	where do roger wagner s name come from ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s smoke ?
+LABEL	0	What is Roger Wagner's birthday?	be be roger wagner s from ?
+LABEL	0	What is Roger Wagner's birthday?	who do roger wagner s date ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner look like ?
+LABEL	0	What is Roger Wagner's birthday?	what top be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the age of roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s when do he die ?
+LABEL	0	What is Roger Wagner's birthday?	what colour eye do roger wagner s have ?
+LABEL	0	What is Roger Wagner's birthday?	where be roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	how old id roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s die ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s s mother ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner do for a living ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s s girlfriend ?
+LABEL	0	What is Roger Wagner's birthday?	be be roger wagner s bear ?
+LABEL	0	What is Roger Wagner's birthday?	what happen to roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s have brother ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s have a girlfriend ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner do ?
+LABEL	0	What is Roger Wagner's birthday?	what country be roger wagner s from ?
+LABEL	0	What is Roger Wagner's birthday?	when be bear roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	what other info be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s have a family ?
+LABEL	0	What is Roger Wagner's birthday?	when roger wagner s be bear ?
+LABEL	0	What is Roger Wagner's birthday?	how many fan do roger wagner s have ?
+LABEL	0	What is Roger Wagner's birthday?	when be it roger wagner s s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	which html tag be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	who be career roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how do roger wagner s become famous ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s s parent ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s have child ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s do for live ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s have sibling ?
+LABEL	0	What is Roger Wagner's birthday?	when do roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s s name ?
+LABEL	0	What is Roger Wagner's birthday?	be do roger wagner live ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s have kid ?
+LABEL	0	What is Roger Wagner's birthday?	what kill roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	how many child do roger wagner s have ?
+LABEL	0	What is Roger Wagner's birthday?	where be roger wagner s birthday from twilght ?
+LABEL	0	What is Roger Wagner's birthday?	how many wife do roger wagner s have ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s have any kid ?
+LABEL	0	What is Roger Wagner's birthday?	how do roger wagner s die ?
+LABEL	0	What is Roger Wagner's birthday?	where do roger wagner s live ?
+LABEL	0	What is Roger Wagner's birthday?	what number pharoh be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	when do roger wagner s die ?
+LABEL	0	What is Roger Wagner's birthday?	history of roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	where do roger wagner s come from ?
+LABEL	0	What is Roger Wagner's birthday?	what be the real name of roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	who kill roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	how do you know tv be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be do roger wagner s live ?
+LABEL	0	What is Roger Wagner's birthday?	rthwhen be roger wagner s gosellin s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	be the senator roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the date of roger wagner s s birth ?
+LABEL	0	What is Roger Wagner's birthday?	do you like roger wagner s ?
+LABEL	0	What is Roger Wagner's birthday?	what where your roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday and when be it issue ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s do ?
+LABEL	0	What is Roger Wagner's birthday?	how do you find inert gas be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the 4 primary roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what do chemical and roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday from a band ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday from the austin power movie ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday in ft worth ?
+LABEL	0	What is Roger Wagner's birthday?	what be glacier and roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be example of medication that be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday in toyko japan ?
+LABEL	0	What is Roger Wagner's birthday?	what be northeren roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	new testament with roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	an expert on roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday from the late 1600 ?
+LABEL	0	What is Roger Wagner's birthday?	who devople roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	who be invove with roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what do scientist belive roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be grimmjows roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the international significance of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the loweat roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday in she tribe ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday in a meadow ?
+LABEL	0	What is Roger Wagner's birthday?	which of the html tag be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday at an angle ?
+LABEL	0	What is Roger Wagner's birthday?	what be ten country of asia that be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be dry mango roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday from nectar in a sieve ?
+LABEL	0	What is Roger Wagner's birthday?	what be the shaman roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the amu of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be some positive contribute about roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what airlane have roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	3examples about roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday - phil ?
+LABEL	0	What is Roger Wagner's birthday?	what be ash in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be an invertibrate roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	identify the aim of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be president ronald roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday in the hold world ?
+LABEL	0	What is Roger Wagner's birthday?	how do merchandising business differ from roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday oa ?
+LABEL	0	What is Roger Wagner's birthday?	what be a stat on roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what kind of backing do roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be tomis roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be enrery roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be losane roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how many cell layersdo roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the buderigar roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how do you doocean roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday - ro ?
+LABEL	0	What is Roger Wagner's birthday?	what be to exceed roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be a instresting fact about roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the nuclide of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what si a stetement of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday in wa call ?
+LABEL	0	What is Roger Wagner's birthday?	who reinstitute roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be oligosaccharide roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday sleeep ?
+LABEL	0	What is Roger Wagner's birthday?	what be the name of the last russian roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	desalination use roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be a group of consecutive roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be abraraham roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be interal and roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	who be khafe and roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what school do roger wagner s go to ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday agaent ?
+LABEL	0	What is Roger Wagner's birthday?	five different way to roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	who be promoter in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be a bmo roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be a assassin roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how can you transmitt roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be so not roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be land under roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be private cost and roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	which of the 5 bourogh have roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be encouragement of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be a firh roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be sarcomere and roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	in the 1 st centuary what be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be some law that affetc roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be the spruce goose roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday in african theatre ?
+LABEL	0	What is Roger Wagner's birthday?	which of the follow rely on roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	meiosis form roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	difference between impoetncy and roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday and extracurricular activity ?
+LABEL	0	What is Roger Wagner's birthday?	how do you cure a l4-5 roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	pitch range of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	where be the alpine tundra roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what emotion come from roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the focus pf roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	definecian of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be a ledge or roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be man s role of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	wich two country lead roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be a platuea roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the principle objective to roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday at playmouth ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday and commandment ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday to soil conservation ?
+LABEL	0	What is Roger Wagner's birthday?	what be the striped legless roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the process of start roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday in 1478-1834 ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday in the 17oo ?
+LABEL	0	What is Roger Wagner's birthday?	why should get of rid of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	can you scrach roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	do you repay a monetized roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what do france think of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be this same as roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be some of the most impressive of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	which be leafy roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the book concern roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be illegeal in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday when he play baseball ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday present in marble ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday come from africa ?
+LABEL	0	What is Roger Wagner's birthday?	what be the transmition strenght of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how do sediment relate to roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday that boy like ?
+LABEL	0	What is Roger Wagner's birthday?	who could view roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday and shanty ?
+LABEL	0	What is Roger Wagner's birthday?	what be style relate to roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how effectively would you teach roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	name some soluble and roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the difference between feneral director and roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	huge tower of rock and be roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how be thing organize in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	yhe definition for roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday or oa ?
+LABEL	0	What is Roger Wagner's birthday?	state this as roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be a powerfull addictive roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	why be we soldier call roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be use in automotive roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday at a mass ?
+LABEL	0	What is Roger Wagner's birthday?	be ion - exchange roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	more about muscle roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be the scope of national roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	where do people believe in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how long be roger wagner s birthday activity ?
+LABEL	0	What is Roger Wagner's birthday?	what do flashback have to do with roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be laconic s roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what device be create during roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday and itsformation ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday and denotain ?
+LABEL	0	What is Roger Wagner's birthday?	which be the lead centre in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what property be call roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	do grass have a large roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday or other career ?
+LABEL	0	What is Roger Wagner's birthday?	what be survey call in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what knowledge be study in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday be mary tudor ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday you shape ?
+LABEL	0	What is Roger Wagner's birthday?	current finance topic in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday or heterogamous ?
+LABEL	0	What is Roger Wagner's birthday?	benefit of effectively manage roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday satanisim ?
+LABEL	0	What is Roger Wagner's birthday?	do the student affect roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	benefit of verbal processor roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what would violate the rule of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday that he paint ?
+LABEL	0	What is Roger Wagner's birthday?	be erosion and landslide both roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday in one linkage group ?
+LABEL	0	What is Roger Wagner's birthday?	what do the british do it roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	whatn be roger wagner s birthday make ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday of second language acqusition ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday at a whole ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday in the 1920s hooker ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday of wrd ?
+LABEL	0	What is Roger Wagner's birthday?	in what way be merchandise business diff from roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	example of own action exceed roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s birthday on jaguar ?
+LABEL	0	What is Roger Wagner's birthday?	philosophical view on ethic and roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be 32 degree fahrenheit roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be a function of cell in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what do isonolumatam mean in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	whta be a n example of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	why do american soldiger call themself roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what should you include in a essay for roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday and the house of savory ?
+LABEL	0	What is Roger Wagner's birthday?	member of the phylum - roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday of the leprachaun ?
+LABEL	0	What is Roger Wagner's birthday?	should government increase their regulation of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	who be the composer who rote music in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday for everythingtrickbeginner ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday of healthcare product ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday by gurtenberg ?
+LABEL	0	What is Roger Wagner's birthday?	what stack be roger wagner s birthday in ?
+LABEL	0	What is Roger Wagner's birthday?	where to start an online roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	who reject britain request for liberal roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday number in fortworth ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday between teens ?
+LABEL	0	What is Roger Wagner's birthday?	what be nitty - gritty relative to roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday age between teens ?
+LABEL	0	What is Roger Wagner's birthday?	what be not design to use roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday for the sneaker ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday and who actually achive it ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday for the ipad ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s birthday to pari ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday out from mario ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday made3 of ?
+LABEL	0	What is Roger Wagner's birthday?	how be roger wagner s birthday by activity ?
+LABEL	0	What is Roger Wagner's birthday?	why be roger wagner s birthday in debt trap ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday evr build ?
+LABEL	0	What is Roger Wagner's birthday?	what be the function or reason of perform roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday plateue ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday for the you belong with i ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday ever research ?
+LABEL	0	What is Roger Wagner's birthday?	why be roger wagner s birthday so rtard ?
+LABEL	0	What is Roger Wagner's birthday?	which substance pass theough the membrane in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday fresh soil ?
+LABEL	0	What is Roger Wagner's birthday?	what be the some utility available for test roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what roger wagner s birthday and other substance ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday thing to go ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday sre ?
+LABEL	0	What is Roger Wagner's birthday?	what be simalaraty between the cold war and roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	how be roger wagner s birthday occir ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday within ia ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday during ww1 and2 ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday recently alive material ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday be a halogen ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday a incomplete fracture ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday awarede for ?
+LABEL	0	What is Roger Wagner's birthday?	for what purpose bleaching powder be use in roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	isolaton of the mixed roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday lead to lanslide ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday of heat for a box ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday of icp in order ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday be for a micro computer ?
+LABEL	0	What is Roger Wagner's birthday?	how do roger wagner s birthday on radish ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s birthday that be design by ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday on supersecret com ?
+LABEL	0	What is Roger Wagner's birthday?	what be the list of thing of the use of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday wikianswerscomqwhat be character motivation ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday or do it get hunt by predator ?
+LABEL	0	What is Roger Wagner's birthday?	why do roger wagner s birthday for scientist ?
+LABEL	0	What is Roger Wagner's birthday?	first russian leader to use the title roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	who cancel the un election in the 1954 roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday diffrent from crater ?
+LABEL	0	What is Roger Wagner's birthday?	why be it necesary for scientist to develop roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	why be roger wagner s birthday army first ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday of be a commincator ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday consist in ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday of the olar system ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday primarily move by ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday about astronomyt ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday ueast for ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s birthday with columbium record ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday and what be a book that he write ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday engine on the market ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s birthday buonarrrotus ?
+LABEL	0	What is Roger Wagner's birthday?	what do you want to do in your roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday he be ever in ?
+LABEL	0	What is Roger Wagner's birthday?	why be roger wagner s birthday call firestone ?
+LABEL	0	What is Roger Wagner's birthday?	how be roger wagner s birthday by their activity ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday serve in colonial ameriaca ?
+LABEL	0	What is Roger Wagner's birthday?	why be roger wagner s birthday extremely rapid ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday on the modern state ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday essential in phoptosynthesis ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday how do you wirt it ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s birthday on priesthood ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday look like in canada ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday deck for downhill ride ?
+LABEL	0	What is Roger Wagner's birthday?	who be roger wagner s birthday and satirist who write ar poetica ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s birthday found new york ?
+LABEL	0	What is Roger Wagner's birthday?	how can you get the best view of your roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s birthday girl represent ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday highly or low electronegative ?
+LABEL	0	What is Roger Wagner's birthday?	why be roger wagner s birthday southwest and west ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday or global group ?
+LABEL	0	What is Roger Wagner's birthday?	be there roger wagner s birthday in 1917 ?
+LABEL	0	What is Roger Wagner's birthday?	why be roger wagner s birthday unconventional surrender grant ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday be ------------------------------- ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday be most commonly associate with what ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday active move a lot ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday proposition in e - comerse ?
+LABEL	0	What is Roger Wagner's birthday?	what 3 category roger wagner s birthday in ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday how to design ?
+LABEL	0	What is Roger Wagner's birthday?	what be consider to be a complete guide to roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be jaguar roger wagner s birthday in the world ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday and how do it affect the price of gold ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday be not rocket science ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday responsible for chemical ion regulation ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday common with lesbian ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday another boycott of british goods ?
+LABEL	0	What is Roger Wagner's birthday?	what be the ohio roger wagner s birthday number ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday be not very effective initially bacause ?
+LABEL	0	What is Roger Wagner's birthday?	what be mean roger wagner s birthday game ?
+LABEL	0	What is Roger Wagner's birthday?	how be roger wagner s birthday hard to attain ?
+LABEL	0	What is Roger Wagner's birthday?	what be '' roger wagner s birthday '' in poetry ?
+LABEL	0	What is Roger Wagner's birthday?	what be the two roger wagner s birthday in a cell ?
+LABEL	0	What is Roger Wagner's birthday?	which roger wagner s birthday appear first ?
+LABEL	0	What is Roger Wagner's birthday?	how big be roger wagner s birthday anywere in the universe ?
+LABEL	0	What is Roger Wagner's birthday?	be human roger wagner s birthday ever ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s birthday live on today ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s birthday for a schedule ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday be nt concern with what ?
+LABEL	0	What is Roger Wagner's birthday?	what roger wagner s birthday do you celerbrate ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday for the equation of velocity ?
+LABEL	0	What is Roger Wagner's birthday?	what roger wagner s birthday should be use with nafta ?
+LABEL	0	What is Roger Wagner's birthday?	what6 be all of the use of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	what be frech roger wagner s birthday call ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday be surround by joint capsule ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday for uk media job ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday to reduce trade ?
+LABEL	0	What is Roger Wagner's birthday?	which be roger wagner s birthday put into a computer ?
+LABEL	0	What is Roger Wagner's birthday?	why roger wagner s birthday be important in africa ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday number in new milford ct ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday of the supermarket inventory system ?
+LABEL	0	What is Roger Wagner's birthday?	what r roger wagner s birthday for teenager ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday for the mililitary in ww11 ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s birthday produce at night ?
+LABEL	0	What is Roger Wagner's birthday?	what be the cause of roger wagner s birthday and factory ?
+LABEL	0	What is Roger Wagner's birthday?	whar be the follow be part of roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday mariah and be she 12 ?
+LABEL	0	What is Roger Wagner's birthday?	how roger wagner s birthday be different from man ?
+LABEL	0	What is Roger Wagner's birthday?	what do your roger wagner s birthday most ?
+LABEL	0	What is Roger Wagner's birthday?	who be ancient roger wagner s birthday and why ?
+LABEL	0	What is Roger Wagner's birthday?	what be some of roger wagner s birthday besides grain ?
+LABEL	0	What is Roger Wagner's birthday?	fact on roger wagner s birthday ww2 ?
+LABEL	0	What is Roger Wagner's birthday?	what be thr roger wagner s birthday know for ?
+LABEL	0	What is Roger Wagner's birthday?	124 roger wagner s birthday in cm ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s birthday change today technology ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday of the constructivist movement ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday for make usb driver ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s birthday fit to car ?
+LABEL	0	What is Roger Wagner's birthday?	what be roger wagner s birthday that he share with jona in the book the giver ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday that they use be what ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday that make king cobra endange ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday that result form digestion be call ?
+LABEL	0	What is Roger Wagner's birthday?	be clay roger wagner s birthday in size ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday of a 16-17yr old ?
+LABEL	0	What is Roger Wagner's birthday?	what be a desert roger wagner s birthday have ?
+LABEL	0	What is Roger Wagner's birthday?	what roger wagner s birthday be visible only in thick skin ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s birthday stand for and what be ?
+LABEL	0	What is Roger Wagner's birthday?	what be the example of roger wagner s birthday of farm ?
+LABEL	0	What is Roger Wagner's birthday?	what be the other roger wagner s birthday in neon ?
+LABEL	0	What is Roger Wagner's birthday?	what thig have roger wagner s birthday in they ?
+LABEL	0	What is Roger Wagner's birthday?	what do happen when roger wagner s birthday at night ?
+LABEL	0	What is Roger Wagner's birthday?	name roger wagner s birthday present during the early new testament ?
+LABEL	0	What is Roger Wagner's birthday?	what can roger wagner s birthday make into food ?
+LABEL	0	What is Roger Wagner's birthday?	when do roger wagner s birthday meaarry ?
+LABEL	0	What is Roger Wagner's birthday?	what be the date of roger wagner s birthday from mtetna ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s birthday illuminate action ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday use to cascade into the lower four dma channel ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday have impact the ecosystme how ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday of a baby bear in 2004 ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s birthday foccuss on ?
+LABEL	0	What is Roger Wagner's birthday?	customer roger wagner s birthday on amazoncom ?
+LABEL	0	What is Roger Wagner's birthday?	what accomlishment be roger wagner s birthday know for ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday that move thigh at the hip ?
+LABEL	0	What is Roger Wagner's birthday?	how do roger wagner s birthday the people of the south ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s birthday mean an a email ?
+LABEL	0	What is Roger Wagner's birthday?	what be the difference between roger wagner s birthday and sewage treatment plant ?
+LABEL	0	What is Roger Wagner's birthday?	what food cause roger wagner s birthday level ?
+LABEL	0	What is Roger Wagner's birthday?	who roger wagner s birthday bill from congress ?
+LABEL	0	What is Roger Wagner's birthday?	who have play roger wagner s birthday of all time ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday can be distinguish from flow because ?
+LABEL	0	What is Roger Wagner's birthday?	be the puritan and roger wagner s birthday the same ?
+LABEL	0	What is Roger Wagner's birthday?	be roger wagner s birthday bind with the need molecule be active or passive transport ?
+LABEL	0	What is Roger Wagner's birthday?	when do roger wagner s birthday start baal ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday can be transit by ?
+LABEL	0	What is Roger Wagner's birthday?	where and what be roger wagner s birthday plateua ?
+LABEL	0	What is Roger Wagner's birthday?	who have roger wagner s birthday you the world ?
+LABEL	0	What is Roger Wagner's birthday?	in which state do roger wagner s birthday in history happen ?
+LABEL	0	What is Roger Wagner's birthday?	be step sister be roger wagner s birthday or no ?
+LABEL	0	What is Roger Wagner's birthday?	describe roger wagner s birthday and the egyptan write system ?
+LABEL	0	What is Roger Wagner's birthday?	what benefit do china receive from roger wagner s birthday pos ?
+LABEL	0	What is Roger Wagner's birthday?	last roger wagner s birthday of russian ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s birthday have an icy composition ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s birthday have to do in the senate ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday and how they pick up stuff on their way ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s birthday grow in scotlnad ?
+LABEL	0	What is Roger Wagner's birthday?	what be one of the word from roger wagner s birthday in english ?
+LABEL	0	What is Roger Wagner's birthday?	how do you create roger wagner s birthday from xl ?
+LABEL	0	What is Roger Wagner's birthday?	what contribution do roger wagner s birthday make to north america ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday doctrine of freedom and election ?
+LABEL	0	What is Roger Wagner's birthday?	what be 2 roger wagner s birthday for anger ?
+LABEL	0	What is Roger Wagner's birthday?	atlanta - base organization that stage sit - in and other roger wagner s birthday ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s birthday open the mississippus river permanently ?
+LABEL	0	What is Roger Wagner's birthday?	who where roger wagner s birthday and cabinet official ?
+LABEL	0	What is Roger Wagner's birthday?	what be 5 of roger wagner s birthday or discovery ?
+LABEL	0	What is Roger Wagner's birthday?	why be nt roger wagner s birthday an author ?
+LABEL	0	What is Roger Wagner's birthday?	hide roger wagner s birthday on layout ?
+LABEL	0	What is Roger Wagner's birthday?	interpret a worksheet for roger wagner s birthday and ?
+LABEL	0	What is Roger Wagner's birthday?	the strongest known roger wagner s birthday be what ?
+LABEL	0	What is Roger Wagner's birthday?	what be the diffrence between roger wagner s birthday and a uncomplete circuit ?
+LABEL	0	What is Roger Wagner's birthday?	by definition roger wagner s birthday involve ?
+LABEL	0	What is Roger Wagner's birthday?	what do roger wagner s birthday stsnd for on the rem cycle ?
+LABEL	0	What is Roger Wagner's birthday?	can you tell what do roger wagner s birthday means ?
+LABEL	0	What is Roger Wagner's birthday?	do roger wagner s birthday have a ph near 7 ?
+LABEL	0	What is Roger Wagner's birthday?	who have roger wagner s birthday in the world and how big ?
+LABEL	0	What is Roger Wagner's birthday?	how do the first roger wagner s birthday get create ?
+LABEL	0	What is Roger Wagner's birthday?	what be the universal roger wagner s birthday for cell ?
+LABEL	0	What is Roger Wagner's birthday?	what be the advantage of roger wagner s birthday in a give state ?
+LABEL	0	What is Roger Wagner's birthday?	how categorize roger wagner s birthday in accounting ?
+LABEL	0	What is Roger Wagner's birthday?	where be the highest percentage of roger wagner s birthday find ?
+LABEL	0	What is Roger Wagner's birthday?	wich roger wagner s birthday be exsicute ?
+LABEL	0	What is Roger Wagner's birthday?	what be bob roger wagner s birthday and swing ?
+LABEL	0	What is Roger Wagner's birthday?	the difference between roger wagner s birthday and glacial depostion ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday can be process and use again through ?
+LABEL	0	What is Roger Wagner's birthday?	which element be use as roger wagner s birthday in automobile ?
+LABEL	0	What is Roger Wagner's birthday?	a concept of roger wagner s birthday refer to ?
+LABEL	0	What is Roger Wagner's birthday?	what be your roger wagner s birthday for maa ?
+LABEL	0	What is Roger Wagner's birthday?	what movie be accredit with be roger wagner s birthday of the world ?
+LABEL	0	What is Roger Wagner's birthday?	what be the special acheivement of macarthur at roger wagner s birthday in korea ?
+LABEL	0	What is Roger Wagner's birthday?	what do traditional yankee roger wagner s birthday believe ?
+LABEL	0	What is Roger Wagner's birthday?	what be the width of roger wagner s birthday spatula ?
+LABEL	0	What is Roger Wagner's birthday?	how much roger wagner s birthday be in a 200 bar argon tank ?
+LABEL	0	What is Roger Wagner's birthday?	what kind of roger wagner s birthday of rubber product worldwide ?
+LABEL	0	What is Roger Wagner's birthday?	how be ciliate roger wagner s birthday measure ?
+LABEL	0	What is Roger Wagner's birthday?	how do television deal with roger wagner s birthday in 1970s ?
+LABEL	0	What is Roger Wagner's birthday?	what be the daily activity in roger wagner s birthday of texa ?
+LABEL	0	What is Roger Wagner's birthday?	stage of roger wagner s birthday on corruption in tanzanium ?
+LABEL	0	What is Roger Wagner's birthday?	in roger wagner s birthday what be time exceed ?
+LABEL	0	What is Roger Wagner's birthday?	how be roger wagner s birthday different and what do you know ?
+LABEL	0	What is Roger Wagner's birthday?	what be meteoroid roger wagner s birthday meteorite ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday gain their power with the support of who ?
+LABEL	0	What is Roger Wagner's birthday?	how roger wagner s birthday can be turn ito business opportunity ?
+LABEL	0	What is Roger Wagner's birthday?	example on customer roger wagner s birthday in marketing ?
+LABEL	0	What is Roger Wagner's birthday?	define roger wagner s birthday and effect on ecconomy of pakistan ?
+LABEL	0	What is Roger Wagner's birthday?	delegate roger wagner s birthday try to ?
+LABEL	0	What is Roger Wagner's birthday?	anlyze the rational work for roger wagner s birthday make ?
+LABEL	0	What is Roger Wagner's birthday?	which roger wagner s birthday be use to cascasde into the lower four dma channel ?
+LABEL	0	What is Roger Wagner's birthday?	what isthe roger wagner s birthday for the teaching process ?
+LABEL	0	What is Roger Wagner's birthday?	what do you need to make roger wagner s birthday with a machine ?
+LABEL	0	What is Roger Wagner's birthday?	in which roger wagner s birthday arsenal be list ?
+LABEL	0	What is Roger Wagner's birthday?	usain roger wagner s birthday in 200 meter ?
+LABEL	0	What is Roger Wagner's birthday?	8 winter begin on roger wagner s birthday and when do it end ?
+LABEL	0	What is Roger Wagner's birthday?	ribose in roger wagner s birthday solution ?
+LABEL	0	What is Roger Wagner's birthday?	can atmospheric roger wagner s birthday be solid ?
+LABEL	0	What is Roger Wagner's birthday?	how many differnt roger wagner s birthday variety be there ?
+LABEL	0	What is Roger Wagner's birthday?	which roger wagner s birthday be use to cascade into a lower four dma channel ?
+LABEL	0	What is Roger Wagner's birthday?	what branch roger wagner s birthday congressional bill ?
+LABEL	0	What is Roger Wagner's birthday?	which branch roger wagner s birthday congressional bill ?
+LABEL	0	What is Roger Wagner's birthday?	hoe do you make really powerful roger wagner s birthday in life ?
+LABEL	0	What is Roger Wagner's birthday?	the size and roger wagner s birthday of the audience ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday just inferior to the sternum be also call ?
+LABEL	0	What is Roger Wagner's birthday?	how do you change roger wagner s birthday to msv ?
+LABEL	0	What is Roger Wagner's birthday?	which roger wagner s birthday be use to cascade into the four lower dma channel ?
+LABEL	0	What is Roger Wagner's birthday?	cyber citizenship and roger wagner s birthday to do ?
+LABEL	0	What is Roger Wagner's birthday?	roger wagner s birthday give what two capital city to vietnamese countire ?
+LABEL	0	What is Roger Wagner's birthday?	what be the blue number roger wagner s birthday use for ?
+LABEL	0	What is Roger Wagner's birthday?	what grow on roger wagner s birthday that can be harmful ?
+LABEL	0	What is Roger Wagner's birthday?	what system do roger wagner s birthday have to regulate temperature ?
+LABEL	0	What is Roger Wagner's birthday?	direct roger wagner s birthday and indirect human activity ?
+LABEL	0	What is Roger Wagner's birthday?	lollard be the french roger wagner s birthday be call ?
+LABEL	0	What is Roger Wagner's birthday?	whitch of roger wagner s birthday can be see from space ?
+LABEL	0	What is Roger Wagner's birthday?	defference between roger wagner s birthday to general ethic ?
+LABEL	0	What is Roger Wagner's birthday?	the branch that approve or roger wagner s birthday bill ?
+LABEL	0	What is Roger Wagner's birthday?	what three roger wagner s birthday be mention and what be they like ?
+LABEL	0	What is Roger Wagner's birthday?	all roger wagner s birthday product s punch line ?
+LABEL	0	What is Roger Wagner's birthday?	information roger wagner s birthday about these process ?
+LABEL	0	What is Roger Wagner's birthday?	which roger wagner s birthday have a superficial layer of flatten cell ?
+LABEL	0	What is Roger Wagner's birthday?	which roger wagner s birthday be use to casade the lower four dma chsnnel ?
+LABEL	0	What is Roger Wagner's birthday?	what do egiptian roger wagner s birthday do each day ?
+LABEL	0	What is Roger Wagner's birthday?	what roger wagner s birthday would a plage of both your house - mercutio be ?
+LABEL	0	What is Roger Wagner's birthday?	what do white roger wagner s birthday and supergiant star have in common ?
+LABEL	0	What is Roger Wagner's birthday?	who organize roger wagner s birthday and rebuilt japan after world war 2 ?
+LABEL	0	What is Roger Wagner's birthday?	what practical use do apollo roger wagner s birthday ave ?
+LABEL	0	What is Roger Wagner's birthday?	what be one roger wagner s birthday a spoonful of sugar could undergo ?
+LABEL	0	What is Roger Wagner's birthday?	what be some healthful roger wagner s birthday you can make ?
+LABEL	0	What is Roger Wagner's birthday?	be cosmos roger wagner s birthday or perinial ?
+LABEL	0	What is Roger Wagner's birthday?	1 roger wagner s birthday hour in information literacy ?
+LABEL	0	What is Roger Wagner's birthday?	what do you think be the most significant roger wagner s birthday during this era ?
+LABEL	0	What is Roger Wagner's birthday?	what be the function of the two roger wagner s birthday tooth in frog ?
+LABEL	0	What is Roger Wagner's birthday?	be cyrstal in volcanic roger wagner s birthday small ?
+LABEL	0	What is Roger Wagner's birthday?	refkex be part of roger wagner s birthday mechanism ?
+LABEL	0	What is Roger Wagner's birthday?	how far along be you if roger wagner s birthday be 19000 ?
+LABEL	0	What is Roger Wagner's birthday?	a spanish roger wagner s birthday that hold soldier ?
+LABEL	0	What is Roger Wagner's birthday?	how do you make an elementarymultiple roger wagner s birthday test in science ?
+LABEL	0	What is Roger Wagner's birthday?	difference between bombay roger wagner s birthday and new york stock exchange ?
+LABEL	0	What is Roger Wagner's birthday?	bibical joshua5vs1 what those the name roger wagner s birthday main ?
+LABEL	0	What is Roger Wagner's birthday?	what be the southern china roger wagner s birthday physical part ?
+LABEL	0	What is Roger Wagner's birthday?	purpose of purchase roger wagner s birthday from the general public by central bank ?
+LABEL	0	What is Roger Wagner's birthday?	during slavery roger wagner s birthday song be keep alive by ?
+LABEL	0	What is Roger Wagner's birthday?	compare to roger wagner s birthday how big be the giraffe ?
+LABEL	0	What is Roger Wagner's birthday?	quick fact on how roger wagner s birthday make clean water ?
+LABEL	0	What is Roger Wagner's birthday?	what temporary roger wagner s birthday be produce by the tca cylce ?
+LABEL	0	What is Roger Wagner's birthday?	what bwa the use of roger wagner s birthday in worled war 1 ?
+LABEL	0	What is Roger Wagner's birthday?	how much experience do roger wagner s birthday need to make max pay ?
+LABEL	0	What is Roger Wagner's birthday?	be the trem roger wagner s birthday a monograpf ?
+LABEL	0	What is Roger Wagner's birthday?	3 cause for roger wagner s birthday nicholasius abdication ?
+LABEL	0	What is Roger Wagner's birthday?	what do the letter roger wagner s birthday stand for and what be an epo ?
+LABEL	0	What is Roger Wagner's birthday?	the watershed roger wagner s birthday step plus philippine ?
+LABEL	0	What is Roger Wagner's birthday?	who lead a revolt at roger wagner s birthday and be hang for his crime ?
+LABEL	0	What is Roger Wagner's birthday?	how do you get access to heater roger wagner s birthday on 99 mer g - marquis ?
+LABEL	0	What is Roger Wagner's birthday?	what discovery chang the term roger wagner s birthday to nobel gas ?
+LABEL	0	What is Roger Wagner's birthday?	delegate to roger wagner s birthday try to replace the four power treaty ?
+LABEL	0	What is Roger Wagner's birthday?	who commit roger wagner s birthday in the world and what do he do so bad ?
+LABEL	0	What is Roger Wagner's birthday?	if roger wagner s birthday solution turn red what substance be in the solution ?
+LABEL	0	What is Roger Wagner's birthday?	whether the word roger wagner s birthday can be use in place of producer ?
+LABEL	0	What is Roger Wagner's birthday?	i do nt get to roger wagner s birthday guico advertisment do you ?
+LABEL	0	What is Roger Wagner's birthday?	be a program that create roger wagner s birthday or machine code from specification of the require functionality ?
+LABEL	1	How long were the ancient rome chariot races?	about how long be the ancient rome chariot race ?
+LABEL	1	How long were the ancient rome chariot races?	how far be the ancient rome chariot race ?
+LABEL	1	How long were the ancient rome chariot races?	how long do the ancient rome chariot race last ?
+LABEL	1	How long were the ancient rome chariot races?	how many mile be the ancient rome chariot race ?
+LABEL	1	How long were the ancient rome chariot races?	how long do ancient rome chariot race last ?
+LABEL	0	How long were the ancient rome chariot races?	how long be around the ancient rome chariot race ?
+LABEL	0	How long were the ancient rome chariot races?	how long be round the ancient rome chariot race ?
+LABEL	0	How long were the ancient rome chariot races?	how long be round the world the ancient rome chariot race ?
+LABEL	0	How long were the ancient rome chariot races?	how long be around the world the ancient rome chariot race ?
+LABEL	0	How long were the ancient rome chariot races?	how far be the ancient rome chariot ?
+LABEL	0	How long were the ancient rome chariot races?	how long be the ancient rome chariot ?
+LABEL	0	When was Arthur Ashe born?	who be arthur ashe ?
+LABEL	1	When was Arthur Ashe born?	where be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	how old be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear in ?
+LABEL	1	When was Arthur Ashe born?	what year be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	when do arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe bear and what year ?
+LABEL	1	When was Arthur Ashe born?	when be he bear arthur ashe ?
+LABEL	1	When was Arthur Ashe born?	where be arthur ashe bear and what year ?
+LABEL	0	When was Arthur Ashe born?	how be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	what day be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe die ?
+LABEL	1	When was Arthur Ashe born?	what day be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe bear at ?
+LABEL	0	When was Arthur Ashe born?	where do arthur ashe die ?
+LABEL	0	When was Arthur Ashe born?	why do arthur ashe die ?
+LABEL	0	When was Arthur Ashe born?	what hospital be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe bear and die ?
+LABEL	1	When was Arthur Ashe born?	what be the birthdate of arthur ashe ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe birthday ?
+LABEL	0	When was Arthur Ashe born?	how do arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be he bear arthur ashe ?
+LABEL	1	When was Arthur Ashe born?	what month and day be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	what year be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	what year do arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	why be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where do arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe bear and when do he die ?
+LABEL	1	When was Arthur Ashe born?	in what year be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where arthur ashe die ?
+LABEL	1	When was Arthur Ashe born?	what be arthur ashe s birthday ?
+LABEL	1	When was Arthur Ashe born?	when and where be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe bear and where ?
+LABEL	1	When was Arthur Ashe born?	what be arthur ashe birthday ?
+LABEL	0	When was Arthur Ashe born?	who do arthur ashe die ?
+LABEL	0	When was Arthur Ashe born?	what year do arthur ashe die ?
+LABEL	0	When was Arthur Ashe born?	what hospital be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what country be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have a daughter ?
+LABEL	1	When was Arthur Ashe born?	arthur ashe birthday ?
+LABEL	1	When was Arthur Ashe born?	where be arthur ashe bear and when ?
+LABEL	0	When was Arthur Ashe born?	what do arthur ashe die from ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe remember for ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe die ?
+LABEL	1	When was Arthur Ashe born?	arthur ashe s birthdate ?
+LABEL	0	When was Arthur Ashe born?	how old be arthur ashe when he die ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and when do she die ?
+LABEL	1	When was Arthur Ashe born?	what time be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe win ?
+LABEL	0	When was Arthur Ashe born?	how be arthur ashe s childhood ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe bear on ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear at ?
+LABEL	1	When was Arthur Ashe born?	when arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where do arthur ashe grow up ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and be ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe bear where ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear '' ?
+LABEL	1	When was Arthur Ashe born?	what be the birth date of arthur ashe ?
+LABEL	1	When was Arthur Ashe born?	what year be arthur ashe bear and where ?
+LABEL	0	When was Arthur Ashe born?	when be king arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	where and when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in east london ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in england ?
+LABEL	1	When was Arthur Ashe born?	when arthur ashe birthday ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear on land ?
+LABEL	0	When was Arthur Ashe born?	where arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe bear and where be he bear ?
+LABEL	1	When was Arthur Ashe born?	what year do arthur ashe bear in ?
+LABEL	1	When was Arthur Ashe born?	what be arthur ashe s date of birth ?
+LABEL	1	When was Arthur Ashe born?	what day do arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear and raise ?
+LABEL	1	When was Arthur Ashe born?	in which year be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what day do arthur ashe die ?
+LABEL	1	When was Arthur Ashe born?	what be arthur ashe s birthdate ?
+LABEL	1	When was Arthur Ashe born?	what year be arthur ashe birthday ?
+LABEL	0	When was Arthur Ashe born?	be be arthur ashe bear and when ?
+LABEL	1	When was Arthur Ashe born?	which year be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	how arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe s birthday ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe bear and die ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe live ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and where be she bear ?
+LABEL	1	When was Arthur Ashe born?	which year be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	date of birth of arthur ashe ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe the first bear ?
+LABEL	1	When was Arthur Ashe born?	what place be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	what be arthur ashe s age ?
+LABEL	0	When was Arthur Ashe born?	where do arthur ashe get bear ?
+LABEL	0	When was Arthur Ashe born?	lot of interesting fact about arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe s bear ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have a meez ?
+LABEL	1	When was Arthur Ashe born?	when do arthur ashe get bear ?
+LABEL	0	When was Arthur Ashe born?	wich year be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who be sir arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	in which country be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	which of arthur ashe die ?
+LABEL	0	When was Arthur Ashe born?	early life of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	how where arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	what year do arthur ashe bear and die ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe s biography ?
+LABEL	1	When was Arthur Ashe born?	what date be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe s astrological sign ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a philosopher ?
+LABEL	0	When was Arthur Ashe born?	where be the birth place of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe get marry ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a folk ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear from ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe s parent call ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a gd ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe s hometown ?
+LABEL	1	When was Arthur Ashe born?	birth date of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what time do arthur ashe die ?
+LABEL	0	When was Arthur Ashe born?	what year do arthur ashe live ?
+LABEL	1	When was Arthur Ashe born?	what year be arthur ashe be bear in ?
+LABEL	1	When was Arthur Ashe born?	which year do arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what country be arthur ashe bear in ?
+LABEL	1	When was Arthur Ashe born?	what year be arthur ashe bear on ?
+LABEL	1	When was Arthur Ashe born?	what age be arthur ashe ?
+LABEL	1	When was Arthur Ashe born?	what be the day of birth of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a hoe ?
+LABEL	0	When was Arthur Ashe born?	what year do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe s life like ?
+LABEL	0	When was Arthur Ashe born?	where in australium be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe s exploration ?
+LABEL	0	When was Arthur Ashe born?	whe be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	what year do arthur ashe get bear ?
+LABEL	1	When was Arthur Ashe born?	what day be arthur ashe bear on ?
+LABEL	0	When was Arthur Ashe born?	when and where do arthur ashe die ?
+LABEL	0	When was Arthur Ashe born?	anything about arthur ashe ?
+LABEL	1	When was Arthur Ashe born?	what day be be arthur ashe bear in ?
+LABEL	1	When was Arthur Ashe born?	what month be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have child ?
+LABEL	0	When was Arthur Ashe born?	what hospital be arthur ashe bear at ?
+LABEL	1	When was Arthur Ashe born?	when year be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be and when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have a mum ?
+LABEL	0	When was Arthur Ashe born?	when where arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	what day be arthur ashe birthday ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have a girlfriend ?
+LABEL	0	When was Arthur Ashe born?	when do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have a gf ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have a family ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear or hatch ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe s brithday ?
+LABEL	0	When was Arthur Ashe born?	what date where arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what dat be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what day do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when arthur ashe die ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have tattoo ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	where do arthur ashe live when she be bear ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have a child ?
+LABEL	0	When was Arthur Ashe born?	whene be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe s religon ?
+LABEL	0	When was Arthur Ashe born?	where be sir arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	biography of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear where ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have sibling ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe s occupation ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in virginium ?
+LABEL	0	When was Arthur Ashe born?	what do arthur ashe work as ?
+LABEL	1	When was Arthur Ashe born?	what year and date be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	whn be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what do arthur ashe do now ?
+LABEL	1	When was Arthur Ashe born?	birth and death of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	who be arthur ashe s name ?
+LABEL	1	When was Arthur Ashe born?	when do arthur ashe die and be bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in england ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a bitch ?
+LABEL	0	When was Arthur Ashe born?	when be sir arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how old do arthur ashe die ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe marry ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have a brother ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe s birth name ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have aid ?
+LABEL	0	When was Arthur Ashe born?	whare be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in 1986 ?
+LABEL	0	When was Arthur Ashe born?	wher be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	when be the birthday of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have a pet ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe be bear on ?
+LABEL	1	When was Arthur Ashe born?	arthur ashe birth ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in canada ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have a girl friend ?
+LABEL	0	When was Arthur Ashe born?	what be the birth of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what mounth be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a person ?
+LABEL	0	When was Arthur Ashe born?	hw old be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	wen be arthur ashe bear ?
+LABEL	1	When was Arthur Ashe born?	what time be arthur ashe bear at ?
+LABEL	0	When was Arthur Ashe born?	when bear arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in idaho ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe death ?
+LABEL	1	When was Arthur Ashe born?	what month be arthur ashe bear in ?
+LABEL	1	When was Arthur Ashe born?	when do arthur ashe die and when be he bear ?
+LABEL	0	When was Arthur Ashe born?	when be president arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear and be ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a good guy ?
+LABEL	0	When was Arthur Ashe born?	what town be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	which year be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who be the father of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe be bear in what country ?
+LABEL	0	When was Arthur Ashe born?	what day be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in bc ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a christian ?
+LABEL	0	When was Arthur Ashe born?	how old be arthur ashe when she die ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a bad person ?
+LABEL	0	When was Arthur Ashe born?	on what date be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear in '' ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear and die ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in 1970 ?
+LABEL	0	When was Arthur Ashe born?	story of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe have a dog ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe be gay ?
+LABEL	0	When was Arthur Ashe born?	whan be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when and where be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	what you learn about arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe the explorer bear ?
+LABEL	0	When was Arthur Ashe born?	why be malaysium call arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in scotland ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe cyrus birthday ?
+LABEL	0	When was Arthur Ashe born?	what hapen to arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be bear arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	how do arthur ashe get bear ?
+LABEL	0	When was Arthur Ashe born?	be be arthur ashe bear at ?
+LABEL	0	When was Arthur Ashe born?	which state be arthur ashe bear in ?
+LABEL	1	When was Arthur Ashe born?	when be arthur ashe bear and why ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in the book ?
+LABEL	0	When was Arthur Ashe born?	when die arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what state be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in 1952 ?
+LABEL	1	When was Arthur Ashe born?	what be the age of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	who be the name of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a virgin ?
+LABEL	0	When was Arthur Ashe born?	what do arthur ashe do in the civil war ?
+LABEL	0	When was Arthur Ashe born?	what do arthur ashe value ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe become a saint ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe return ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe be bear and when he die ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in arizona ?
+LABEL	0	When was Arthur Ashe born?	what good about arthur ashe ?
+LABEL	1	When was Arthur Ashe born?	what month be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when and be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in 1998 ?
+LABEL	0	When was Arthur Ashe born?	how be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how old arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	where do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the birthday of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in kenya ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe iius bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in connecticut ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe s bday ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a singer ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a girl ?
+LABEL	0	When was Arthur Ashe born?	photo of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe parent ?
+LABEL	0	When was Arthur Ashe born?	what day and month be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what time be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how old be mr arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what date and year be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when wad arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in 1995 ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe be bear when ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a republican ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in north america ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe 19 ?
+LABEL	0	When was Arthur Ashe born?	who be marry to arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe ticklish ?
+LABEL	0	When was Arthur Ashe born?	in what year be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in what year ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe s birth day ?
+LABEL	0	When was Arthur Ashe born?	what kill arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	how old be arthur ashe today ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in 2005 ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in illinoi ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe susannah bear ?
+LABEL	0	When was Arthur Ashe born?	how old be arthur ashe now ?
+LABEL	0	When was Arthur Ashe born?	what grade be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	where do arthur ashe get there name ?
+LABEL	0	When was Arthur Ashe born?	what century be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	where do arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when be general arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how old be arthur ashe 2009 ?
+LABEL	0	When was Arthur Ashe born?	how old be zoey in arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear exactly ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe william bear at ?
+LABEL	0	When was Arthur Ashe born?	what country and year be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear on ?
+LABEL	0	When was Arthur Ashe born?	whao be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe a real person ?
+LABEL	0	When was Arthur Ashe born?	when and where be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear date ?
+LABEL	0	When was Arthur Ashe born?	how do arthur ashe from ?
+LABEL	0	When was Arthur Ashe born?	when do be arthur ashe bear and die ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe husband ?
+LABEL	0	When was Arthur Ashe born?	when wil be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe bear and why ?
+LABEL	0	When was Arthur Ashe born?	in what city be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what nationality be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what date be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe bear '' ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in 1900 ?
+LABEL	0	When was Arthur Ashe born?	whan be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe be bear in what year ?
+LABEL	0	When was Arthur Ashe born?	more about arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what month and date be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe william from ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in britain ?
+LABEL	0	When was Arthur Ashe born?	what state be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	age of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	be be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how old be arthur ashe in 2010 ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear in and why ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in the caribbean ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	where do arthur ashe get their name ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and what be it ?
+LABEL	0	When was Arthur Ashe born?	what be the name or arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	how do arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in ad ?
+LABEL	0	When was Arthur Ashe born?	who old be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what year be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in 1787 ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe cyrus bear ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe be bear in the year ?
+LABEL	0	When was Arthur Ashe born?	how old be be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe be how old ?
+LABEL	0	When was Arthur Ashe born?	how old be arthur ashe in 2009 ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in 1776 ?
+LABEL	0	When was Arthur Ashe born?	what year be be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear when ?
+LABEL	0	When was Arthur Ashe born?	wer do arthur ashe live ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe willam bear ?
+LABEL	0	When was Arthur Ashe born?	where and when be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear day ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in the uk ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe live and die ?
+LABEL	0	When was Arthur Ashe born?	what exact day be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the full name of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what be the 15 island in arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe be bear in what country ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe born ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe cyrus bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe born ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe age ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in nz ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe on earth ?
+LABEL	0	When was Arthur Ashe born?	why be arthur ashe call malaysium ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe s date of birth ?
+LABEL	0	When was Arthur Ashe born?	what city be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe be bear in what year ?
+LABEL	0	When was Arthur Ashe born?	why do they kill arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in the movie ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear alone ?
+LABEL	0	When was Arthur Ashe born?	where do arthur ashe study ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe when be he bear ?
+LABEL	0	When was Arthur Ashe born?	what be the exact date that be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in ma ?
+LABEL	0	When was Arthur Ashe born?	who be the wife of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	who be the mother of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe king bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe borthday ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe susanna bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe birth ?
+LABEL	0	When was Arthur Ashe born?	when as arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be henrus and arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	inwhat year be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	on what year be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	do any of arthur ashe die ?
+LABEL	0	When was Arthur Ashe born?	when be tudor arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the year be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	what city be be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe biography ?
+LABEL	0	When was Arthur Ashe born?	what be the birthdate of be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	why be the dodger call arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe age ?
+LABEL	0	When was Arthur Ashe born?	the age of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe die and how ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in nj ?
+LABEL	0	When was Arthur Ashe born?	how rich be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe inspiration ?
+LABEL	0	When was Arthur Ashe born?	who and when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how old be arthur ashe in 2011 ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear in the northeast ?
+LABEL	0	When was Arthur Ashe born?	profile of be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when wa arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe william bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear and where ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe william bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe s birth ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear - ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe born ?
+LABEL	0	When was Arthur Ashe born?	birth place of be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	why be arthur ashe bear in scotland ?
+LABEL	0	When was Arthur Ashe born?	wher be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who be the family of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what be the background of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe birth date ?
+LABEL	0	When was Arthur Ashe born?	what day be arthur ashe kelly bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bday ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe when be she bear ?
+LABEL	0	When was Arthur Ashe born?	how be arthur ashe now ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear in switzerland ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe brithday ?
+LABEL	0	When was Arthur Ashe born?	where be be arthur ashe bear and when ?
+LABEL	0	When was Arthur Ashe born?	why and when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe carter bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in 09 ?
+LABEL	0	When was Arthur Ashe born?	can you see a picture of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe twin bear ?
+LABEL	0	When was Arthur Ashe born?	what town be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe be bear where ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe from ?
+LABEL	0	When was Arthur Ashe born?	which month of the year be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe home country ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe form ?
+LABEL	0	When was Arthur Ashe born?	when be cladius arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear naturally ?
+LABEL	0	When was Arthur Ashe born?	when in arthur ashe s birthday ?
+LABEL	0	When was Arthur Ashe born?	when arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when and where be arthur ashe born ?
+LABEL	0	When was Arthur Ashe born?	when in arthur ashe birthday ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe b day ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe around ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe alive ?
+LABEL	0	When was Arthur Ashe born?	what year do arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	what town be be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	who be gen arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear from jl ?
+LABEL	0	When was Arthur Ashe born?	when and where be arthur ashe bear at ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe birth date ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe realy name ?
+LABEL	0	When was Arthur Ashe born?	date of birth of be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe date of birth ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe bear in the uk ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bron ?
+LABEL	0	When was Arthur Ashe born?	when be leif arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe msn ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe create ?
+LABEL	0	When was Arthur Ashe born?	n what year be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in sa ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear on and where ?
+LABEL	0	When was Arthur Ashe born?	how be arthur ashe bear in 1822 ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in hawius ?
+LABEL	0	When was Arthur Ashe born?	how old be arthur ashe from jl ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in 1921 ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe boen ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe still alive ?
+LABEL	0	When was Arthur Ashe born?	what kind of person be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what and when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bithday ?
+LABEL	0	When was Arthur Ashe born?	what be it when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe date of birth ?
+LABEL	0	When was Arthur Ashe born?	where arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe like girl ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe pos birthday ?
+LABEL	0	When was Arthur Ashe born?	where arthur ashe be found ?
+LABEL	0	When was Arthur Ashe born?	who be arthur ashe daddy ?
+LABEL	0	When was Arthur Ashe born?	what the date of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in bangalore ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear every year ?
+LABEL	0	When was Arthur Ashe born?	on what date be arthur ashe bear on ?
+LABEL	0	When was Arthur Ashe born?	when do be arthur ashe get bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in sydney ?
+LABEL	0	When was Arthur Ashe born?	what day be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	whaen be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who be arthur ashe go out with ?
+LABEL	0	When was Arthur Ashe born?	what month be leif arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe emo ?
+LABEL	0	When was Arthur Ashe born?	name all of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe jewish ?
+LABEL	0	When was Arthur Ashe born?	be be arthur ashe marry ?
+LABEL	0	When was Arthur Ashe born?	wwhen be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how famous be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	how old id arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear into the we ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe bear from jl ?
+LABEL	0	When was Arthur Ashe born?	who do arthur ashe go with ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe rich ?
+LABEL	0	When was Arthur Ashe born?	where be be arthur ashe bear at ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear date ?
+LABEL	0	When was Arthur Ashe born?	who and where be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe single ?
+LABEL	0	When was Arthur Ashe born?	what date be arthur ashe bear on ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe the patron of ?
+LABEL	0	When was Arthur Ashe born?	when be william arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear and when do he die ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in britian ?
+LABEL	0	When was Arthur Ashe born?	when be dr arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	do you have a picture of arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	how be old arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe william bear ?
+LABEL	0	When was Arthur Ashe born?	do any one know arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what year be christopher arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe date of birth ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear die ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear during world war 2 ?
+LABEL	0	When was Arthur Ashe born?	whne be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe filipino ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe hispanic ?
+LABEL	0	When was Arthur Ashe born?	do arthur ashe eat other inca ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe willam bear in ?
+LABEL	0	When was Arthur Ashe born?	when where be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be dr arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and last ?
+LABEL	0	When was Arthur Ashe born?	what be the birth of be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	be be arthur ashe bear in austrium ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe bear in britain ?
+LABEL	0	When was Arthur Ashe born?	what be sir arthur ashe name ?
+LABEL	0	When was Arthur Ashe born?	what be the year be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in brittan ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe the patron saint of ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in aus ?
+LABEL	0	When was Arthur Ashe born?	where w arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the date of be arthur ashe birthday ?
+LABEL	0	When was Arthur Ashe born?	when be the explorer arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe birhtday ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in 1839 ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe and clinton kelly a couple ?
+LABEL	0	When was Arthur Ashe born?	what be the birth date of be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe greek ?
+LABEL	0	When was Arthur Ashe born?	when and where do arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe still live ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe spanish ?
+LABEL	0	When was Arthur Ashe born?	where be saint arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe singel ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe english ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear twilight ?
+LABEL	0	When was Arthur Ashe born?	what date as arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in the victorian ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe bear in russium ?
+LABEL	0	When was Arthur Ashe born?	do inca eat other arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe myspace ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe bear birth ?
+LABEL	0	When was Arthur Ashe born?	what time be arthur ashe bear in wisconsin ?
+LABEL	0	When was Arthur Ashe born?	what hospital be be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in hockey ?
+LABEL	0	When was Arthur Ashe born?	what do arthur ashe accomplish ?
+LABEL	0	When was Arthur Ashe born?	what be the date when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe arrest for ?
+LABEL	0	When was Arthur Ashe born?	what be the date of when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what day be be arthur ashe bear on ?
+LABEL	0	When was Arthur Ashe born?	what day be arthur ashe william bear ?
+LABEL	0	When was Arthur Ashe born?	what month be arthur ashe bear on ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe divorce ?
+LABEL	0	When was Arthur Ashe born?	what where arthur ashe call ?
+LABEL	0	When was Arthur Ashe born?	what be the date arthur ashe be bear and die ?
+LABEL	0	When was Arthur Ashe born?	how be arthur ashe bear in a car ?
+LABEL	0	When was Arthur Ashe born?	why be arthur ashe name north dakota ?
+LABEL	0	When was Arthur Ashe born?	from what to what year be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when and be be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear in time ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe where be he bear ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe hometown ?
+LABEL	0	When was Arthur Ashe born?	who do arthur ashe like ?
+LABEL	0	When was Arthur Ashe born?	wherewa arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe birthplace ?
+LABEL	0	When was Arthur Ashe born?	where do arthur ashe currently live ?
+LABEL	0	When was Arthur Ashe born?	how be arthur ashe bear and by who ?
+LABEL	0	When was Arthur Ashe born?	what thing be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	whwn be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the birthday of be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	where and when be arthur ashe bear in the world ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in kalgoorlie ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	what year where arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the exact date that arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe in jail ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in derby ?
+LABEL	0	When was Arthur Ashe born?	when arthur ashe be bear and die ?
+LABEL	0	When was Arthur Ashe born?	when be saint arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be henrus and arthur ashe birthday ?
+LABEL	0	When was Arthur Ashe born?	be be be arthur ashe bear at ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear in 2014 ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe b - day ?
+LABEL	0	When was Arthur Ashe born?	what be the name of arthur ashe name ?
+LABEL	0	When was Arthur Ashe born?	w be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	in what year be arthur ashe bear in the us ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in the industrial revolution ?
+LABEL	0	When was Arthur Ashe born?	what age be be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	be be arthur ashe now ?
+LABEL	0	When was Arthur Ashe born?	how many island in arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	whe and where be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear in briten ?
+LABEL	0	When was Arthur Ashe born?	what year arthur ashe be bear in ?
+LABEL	0	When was Arthur Ashe born?	how fat be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what be the biography of be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	where do arthur ashe sleep ?
+LABEL	0	When was Arthur Ashe born?	when where and why be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who do arthur ashe date ?
+LABEL	0	When was Arthur Ashe born?	when be barack arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when arthur ashe be bear and when he die ?
+LABEL	0	When was Arthur Ashe born?	when and by who be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	why be arthur ashe bear in 1923 ?
+LABEL	0	When was Arthur Ashe born?	who do arthur ashe have sex with ?
+LABEL	0	When was Arthur Ashe born?	what cause arthur ashe s death ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in the carribean ?
+LABEL	0	When was Arthur Ashe born?	when be st arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who be william arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	whenn be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear in kalgoorlie ?
+LABEL	0	When was Arthur Ashe born?	who be arthur ashe and what do she do ?
+LABEL	0	When was Arthur Ashe born?	wene be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the date when be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	in what decade be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when in 2010 be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who be arthur ashe mum ?
+LABEL	0	When was Arthur Ashe born?	when be the exact date of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the year that be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe best poem ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and use ?
+LABEL	0	When was Arthur Ashe born?	what happen to the wavelength if be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be it when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe cell phone number ?
+LABEL	0	When was Arthur Ashe born?	what moth be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how old be arthur ashe before he die ?
+LABEL	0	When was Arthur Ashe born?	what year exactly be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how be baby arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	hen be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	on which date be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	whrn be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	hwen be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be john arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what yerar be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	wehn be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when exactly be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who be be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	who do arthur ashe go out with ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe birth day ?
+LABEL	0	When was Arthur Ashe born?	what yeardayand month be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe bear into england ?
+LABEL	0	When was Arthur Ashe born?	what be a date of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	what year be the song arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who id arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	what date be be arthur ashe bear on ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear you should ?
+LABEL	0	When was Arthur Ashe born?	when be the be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be where arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be george arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	do you love arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	the year arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	what happen when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when do te be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when will be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when in arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when be the film arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how can you meet arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear on the ground ?
+LABEL	0	When was Arthur Ashe born?	when date be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear to germany ?
+LABEL	0	When was Arthur Ashe born?	wean be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in history ?
+LABEL	0	When was Arthur Ashe born?	who be arthur ashe currently date ?
+LABEL	0	When was Arthur Ashe born?	who do arthur ashe marrie ?
+LABEL	0	When was Arthur Ashe born?	what do it mean when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe kid bear ?
+LABEL	0	When was Arthur Ashe born?	when be the inventor arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where do be arthur ashe get bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in england and in bristol ?
+LABEL	0	When was Arthur Ashe born?	be be arthur ashe dead ?
+LABEL	0	When was Arthur Ashe born?	be where be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe bear in maya ?
+LABEL	0	When was Arthur Ashe born?	what be the date be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where in britain be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what exact date be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what cave be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	what year and month be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe found ?
+LABEL	0	When was Arthur Ashe born?	who be go out with arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when when arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	why be arthur ashe stupid ?
+LABEL	0	When was Arthur Ashe born?	when s arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what happen in arthur ashe life ?
+LABEL	0	When was Arthur Ashe born?	what date be arthur ashe bear in london ?
+LABEL	0	When was Arthur Ashe born?	what yea be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how early be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe date someone ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe family name ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear in or for ?
+LABEL	0	When was Arthur Ashe born?	will be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe birthday ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and who by ?
+LABEL	0	When was Arthur Ashe born?	what date be arthur ashe cyrus bear ?
+LABEL	0	When was Arthur Ashe born?	who be st arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	in which decade be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe bear in massachusset ?
+LABEL	0	When was Arthur Ashe born?	be be arthur ashe hot ?
+LABEL	0	When was Arthur Ashe born?	when be henrus and arthur ashe s birthday ?
+LABEL	0	When was Arthur Ashe born?	when wa be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what uear be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be the song be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear of canada ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe birthdate ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe how tall be he ?
+LABEL	0	When was Arthur Ashe born?	what be the year arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	wjen be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the 1 st be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear by white people ?
+LABEL	0	When was Arthur Ashe born?	what should you do when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when arthur ashe be bear and marry ?
+LABEL	0	When was Arthur Ashe born?	what sport do arthur ashe do ?
+LABEL	0	When was Arthur Ashe born?	when in be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what ear be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	by who and when be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear on air ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear board ?
+LABEL	0	When was Arthur Ashe born?	in what battle be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when id be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who be dr arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	why be arthur ashe a hero ?
+LABEL	0	When was Arthur Ashe born?	what yesr be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear after 2012 ?
+LABEL	0	When was Arthur Ashe born?	what be the history behind arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	in which year do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the book of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	why be arthur ashe call the dodger ?
+LABEL	0	When was Arthur Ashe born?	the date for arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe bear and death day ?
+LABEL	0	When was Arthur Ashe born?	what country be arthur ashe from ?
+LABEL	0	When was Arthur Ashe born?	when it be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when do be arthur ashe live ?
+LABEL	0	When was Arthur Ashe born?	what be the exact date that arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	whenwa be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe s birthday ?
+LABEL	0	When was Arthur Ashe born?	when be 3 d arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when arthur ashe be found ?
+LABEL	0	When was Arthur Ashe born?	when be delwhen be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be the movie arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	what be the date when arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when w be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear from slavery ?
+LABEL	0	When was Arthur Ashe born?	what centurey where arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when do be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	in england what be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear date to ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear for gun ?
+LABEL	0	When was Arthur Ashe born?	what book do arthur ashe write ?
+LABEL	0	When was Arthur Ashe born?	when be the design of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	year arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	what year be be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be it be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when where be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	whwn be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be the book of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be it arthur ashe s birthday ?
+LABEL	0	When was Arthur Ashe born?	what be the age of be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when wa the first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when about be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when as be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear back again ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and who find it ?
+LABEL	0	When was Arthur Ashe born?	what date be william arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear which port on a sound card be use to send sound out ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and birth year ?
+LABEL	0	When was Arthur Ashe born?	which day be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be administrative arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and who invent they ?
+LABEL	0	When was Arthur Ashe born?	wich year be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when wre arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when wer arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	whe be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how old be be arthur ashe today ?
+LABEL	0	When was Arthur Ashe born?	who be edward arthur ashe and where be he bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear by hand ?
+LABEL	0	When was Arthur Ashe born?	wheni arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when you arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what happen to be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear by charle goodyear ?
+LABEL	0	When was Arthur Ashe born?	when be thw arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in the 2011 christchurch earthquake ?
+LABEL	0	When was Arthur Ashe born?	when aw arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what century be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear to britain ?
+LABEL	0	When was Arthur Ashe born?	hwen be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear - ?
+LABEL	0	When was Arthur Ashe born?	how many time be arthur ashe bear a year ?
+LABEL	0	When was Arthur Ashe born?	in what year be be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	what be the date arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	how do you look like arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when ia arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be thr be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what state be arthur ashe kelly bear in ?
+LABEL	0	When was Arthur Ashe born?	by who be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when o arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how be arthur ashe bear by we ?
+LABEL	0	When was Arthur Ashe born?	what be the dat of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear during cellular respiration ?
+LABEL	0	When was Arthur Ashe born?	when be this year arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what iz arthur ashe real name ?
+LABEL	0	When was Arthur Ashe born?	how do arthur ashe change the world ?
+LABEL	0	When was Arthur Ashe born?	what yearwas arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear for 2010 ?
+LABEL	0	When was Arthur Ashe born?	when do be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	when william arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe date of birth ?
+LABEL	0	When was Arthur Ashe born?	when w arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what day be the feast of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	when do be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe bear - when ?
+LABEL	0	When was Arthur Ashe born?	what be the date that arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when be first day of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the name of adolf arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	how and when do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be bratz arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when and by whom be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the us be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year wsa arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when isthe arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	in which month be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be the book arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how many year ago do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the city of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how be thw arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	which year do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the year that arthur ashe be bear in ?
+LABEL	0	When was Arthur Ashe born?	what langugue be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear dominican ?
+LABEL	0	When was Arthur Ashe born?	what time of year be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be sweet arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	which day be celebrate as arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear faught ?
+LABEL	0	When was Arthur Ashe born?	what month and day be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when waa arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear out of goat ?
+LABEL	0	When was Arthur Ashe born?	when be jonathan arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when wsa arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear to europe ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear olypic ?
+LABEL	0	When was Arthur Ashe born?	how long ago be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	hen be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	about what year ago be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be early arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be teh be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear of judah ?
+LABEL	0	When was Arthur Ashe born?	when wasn arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear airing ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear for 2011 ?
+LABEL	0	When was Arthur Ashe born?	when and by who be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who and when be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what dynasty be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when wha arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the cause of arthur ashe s death ?
+LABEL	0	When was Arthur Ashe born?	when what arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be it arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what date be be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and what kind will it be ?
+LABEL	0	When was Arthur Ashe born?	what type of furnicure be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear to the we ?
+LABEL	0	When was Arthur Ashe born?	where do be arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when be the sony arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what town be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be thhe arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe bear by galileo ?
+LABEL	0	When was Arthur Ashe born?	where be banana and arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how long be it till arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the handheld arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when you celebrate arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who be know as arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	in which year be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear out in canada ?
+LABEL	0	When was Arthur Ashe born?	when be hte be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how long do arthur ashe stay with their mother ?
+LABEL	0	When was Arthur Ashe born?	what be first day of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the firt arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear by subduction ?
+LABEL	0	When was Arthur Ashe born?	what year be arthur ashe bear of new zealand ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear presadent ?
+LABEL	0	When was Arthur Ashe born?	when be thefirst arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what colony be arthur ashe in ?
+LABEL	0	When was Arthur Ashe born?	what s arthur ashe bear on a ship ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe s name ?
+LABEL	0	When was Arthur Ashe born?	when r arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the game of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be bounty arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the mail by arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be brian arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	by whom be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be teh arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what have arthur ashe do ?
+LABEL	0	When was Arthur Ashe born?	when be the portable arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the country of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be regan and arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what come first stone or arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the begining of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be the firt arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the normal arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be tne arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear to president ?
+LABEL	0	When was Arthur Ashe born?	be any of arthur ashe alive ?
+LABEL	0	When was Arthur Ashe born?	when ii arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	why be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what grade be arthur ashe in ?
+LABEL	0	When was Arthur Ashe born?	when waw arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how old be be arthur ashe now ?
+LABEL	0	When was Arthur Ashe born?	what date do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be it arthur ashe birthday ?
+LABEL	0	When was Arthur Ashe born?	when be he be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear from jail ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear for saskatchewan ?
+LABEL	0	When was Arthur Ashe born?	when nwa arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	which day arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be eastern arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	wen be arthur ashe bear in the uk ?
+LABEL	0	When was Arthur Ashe born?	when be the first show of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be hawaiian arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the 1 st arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how be the ancient roman arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be paul arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be thr arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when will be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what town be arthur ashe from ?
+LABEL	0	When was Arthur Ashe born?	when where arthur ashe bear in wale ?
+LABEL	0	When was Arthur Ashe born?	'' when be arthur ashe bear '' ?
+LABEL	0	When was Arthur Ashe born?	whe nwa arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear in1638 ?
+LABEL	0	When was Arthur Ashe born?	when wasa arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when wher arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear by the english ?
+LABEL	0	When was Arthur Ashe born?	how and when be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when wass arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the eltronical arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what culture be arthur ashe from ?
+LABEL	0	When was Arthur Ashe born?	when be thre arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when and where do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be maddie and arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the name of arthur ashe and sister ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe age ?
+LABEL	0	When was Arthur Ashe born?	wen be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	date for be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	why do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what happen aboard arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	why be the covered arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when wasv arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what day be national arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how old be be arthur ashe in 2010 ?
+LABEL	0	When was Arthur Ashe born?	be be arthur ashe bear right now ?
+LABEL	0	When was Arthur Ashe born?	when be browny arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	why be time call arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the religion of arthur ashe indian ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear of a bush ?
+LABEL	0	When was Arthur Ashe born?	when weren arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the play arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the song in arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the unknown arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what place be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear brn ?
+LABEL	0	When was Arthur Ashe born?	what date be john arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the current arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be crayola arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	arthur ashe bear by rizal ?
+LABEL	0	When was Arthur Ashe born?	when ware arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be maglav arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be elevator arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year wwa arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	on what day be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when and why be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	which country be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the frist be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what century be be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	when be acient arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when where arthur ashe bear and by who ?
+LABEL	0	When was Arthur Ashe born?	when be ther arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be chew arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the household arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be the first egyptian arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how be a covered arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be author arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the charity arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear out in us ?
+LABEL	0	When was Arthur Ashe born?	where and when do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what country be most arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	how be first arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be 1 st arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be edith and arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe bear occour ?
+LABEL	0	When was Arthur Ashe born?	when be first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be pierre arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the 1 st day of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how green arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when where the first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the kitchen arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the date when leif arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	what year be the personal arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear '' ?
+LABEL	0	When was Arthur Ashe born?	when be uganda bango arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear from top flight football ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear and who ?
+LABEL	0	When was Arthur Ashe born?	when be the virgin arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe full name ?
+LABEL	0	When was Arthur Ashe born?	what yearwa arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be sweet arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be sport arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear in weson super mare ?
+LABEL	0	When was Arthur Ashe born?	when be the musical arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the oldest greenland arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when and where arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	when be the market frankfort arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear to wrestle ?
+LABEL	0	When was Arthur Ashe born?	wen be the first arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear celebrate on ?
+LABEL	0	When was Arthur Ashe born?	when be robert arthur ashe bear in canada ?
+LABEL	0	When was Arthur Ashe born?	what be the day of be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	whe be the first arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the team arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what period of time be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	in what year do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be the musical arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when and where be the uss arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how many millioon of year ago be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how can be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe bear premire ?
+LABEL	0	When was Arthur Ashe born?	when be wheat arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be cattle arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the year when the first arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what country be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be the electric arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the rig arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear in australium ?
+LABEL	0	When was Arthur Ashe born?	when be the company arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when and where be the battle of arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear by in 1638 ?
+LABEL	0	When was Arthur Ashe born?	whn be the first arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear to the olympics ?
+LABEL	0	When was Arthur Ashe born?	who be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what day do you celebrate arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	reason for be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be hawaiian soap arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be a first arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be rissium most arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe bear startend ?
+LABEL	0	When was Arthur Ashe born?	why be arthur ashe bear of carbon ?
+LABEL	0	When was Arthur Ashe born?	what be the day arthur ashe be bear ?
+LABEL	0	When was Arthur Ashe born?	how do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the electric be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what age do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how be arthur ashe bear or how be it create ?
+LABEL	0	When was Arthur Ashe born?	what year be the hair arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear the block be hot ?
+LABEL	0	When was Arthur Ashe born?	when be the first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the first hair arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where be be arthur ashe bear by ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear for provincial ?
+LABEL	0	When was Arthur Ashe born?	what be the name of be arthur ashe ?
+LABEL	0	When was Arthur Ashe born?	how much arthur ashe weight ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear for she baby ?
+LABEL	0	When was Arthur Ashe born?	where in the world be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	in what year be chew arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the date of st arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear and why ?
+LABEL	0	When was Arthur Ashe born?	what date be the first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how long be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	the first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when wa the first arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear and by who ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear of 1916 ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear and what be the issue be involve ?
+LABEL	0	When was Arthur Ashe born?	what year be the game arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be wagon arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe bear begen ?
+LABEL	0	When was Arthur Ashe born?	when be home arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be be arthur ashe bear on ?
+LABEL	0	When was Arthur Ashe born?	how old be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear on purpose or on accident ?
+LABEL	0	When was Arthur Ashe born?	what year be the battle of arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	where be arthur ashe bear by boston manufacturing ?
+LABEL	0	When was Arthur Ashe born?	first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	which date arthur ashe bear be ?
+LABEL	0	When was Arthur Ashe born?	whene be the first arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	in what year be the first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what year be the first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the home arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	whan be the first arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what time do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the hair arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the exact date of be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the element arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	who do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the eastern arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the date of be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	where in the world be the most arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear to wwe in 2011 ?
+LABEL	0	When was Arthur Ashe born?	date of be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what state be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what city be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe bear start in the midwest ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear he be ever in ?
+LABEL	0	When was Arthur Ashe born?	be do be arthur ashe live ?
+LABEL	0	When was Arthur Ashe born?	how do you be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when when be the first arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	be arthur ashe bear by german in world war 2 ?
+LABEL	0	When was Arthur Ashe born?	when be the mission arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what country be be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	egyptian live during arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	which country be be arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	why be the first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when will be arthur ashe bear in the philipine ?
+LABEL	0	When was Arthur Ashe born?	how much can you find out about arthur ashe life before and after ?
+LABEL	0	When was Arthur Ashe born?	where be be arthur ashe from ?
+LABEL	0	When was Arthur Ashe born?	what be the biggest be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	whaen be arthur ashe bear come out ?
+LABEL	0	When was Arthur Ashe born?	when be the last be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be arthur ashe bear for normally ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear for municipal in saskatchewan ?
+LABEL	0	When was Arthur Ashe born?	what be the result of be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear in the us ?
+LABEL	0	When was Arthur Ashe born?	what be the date of hernando arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	he be arthur ashe bear due ?
+LABEL	0	When was Arthur Ashe born?	what be the year of arthur ashe bear start ?
+LABEL	0	When was Arthur Ashe born?	what be the process of be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	how be the first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be the first roller arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what make be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be the year of be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be brian arthur ashe bear in canada ?
+LABEL	0	When was Arthur Ashe born?	what season be sweet arthur ashe bear in ?
+LABEL	0	When was Arthur Ashe born?	when be arthur ashe bear for gov of in ?
+LABEL	0	When was Arthur Ashe born?	when be martin arthur ashe bear in canada ?
+LABEL	0	When was Arthur Ashe born?	where be the first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	in what country be be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe bear date ?
+LABEL	0	When was Arthur Ashe born?	what do be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear and who by ?
+LABEL	0	When was Arthur Ashe born?	be it arthur ashe bear today ?
+LABEL	0	When was Arthur Ashe born?	what two thing be arthur ashe bear for ?
+LABEL	0	When was Arthur Ashe born?	what be the date for arthur ashe bear in 2009 ?
+LABEL	0	When was Arthur Ashe born?	what be most arthur ashe bear from ?
+LABEL	0	When was Arthur Ashe born?	on what date will arthur ashe bear be ?
+LABEL	0	When was Arthur Ashe born?	why be arthur ashe bear as a face for baffle ?
+LABEL	0	When was Arthur Ashe born?	who invent be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear and who invent it ?
+LABEL	0	When was Arthur Ashe born?	what happen in arthur ashe bear period ?
+LABEL	0	When was Arthur Ashe born?	what be the first be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	by whom be be arthur ashe bear by ?
+LABEL	0	When was Arthur Ashe born?	why do government pay raise go into effect after arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe name ?
+LABEL	0	When was Arthur Ashe born?	how many gold medal have arthur ashe vilus win ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear and by whom ?
+LABEL	0	When was Arthur Ashe born?	who make be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear to wrestle ?
+LABEL	0	When was Arthur Ashe born?	what be the purpose of be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear date ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe bear from ?
+LABEL	0	When was Arthur Ashe born?	what5 be arthur ashe bear ever make ?
+LABEL	0	When was Arthur Ashe born?	what you arthur ashe bear for ?
+LABEL	0	When was Arthur Ashe born?	when and who be be arthur ashe bear by ?
+LABEL	0	When was Arthur Ashe born?	who be be arthur ashe bear to ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear year ?
+LABEL	0	When was Arthur Ashe born?	when be administrative arthur ashe bear in 2010 ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear in england ?
+LABEL	0	When was Arthur Ashe born?	when and who be arthur ashe bear by ?
+LABEL	0	When was Arthur Ashe born?	where do be arthur ashe come from ?
+LABEL	0	When was Arthur Ashe born?	how do you get be arthur ashe bear ?
+LABEL	0	When was Arthur Ashe born?	on which day be arthur ashe bear celebrate ?
+LABEL	0	When was Arthur Ashe born?	when be administrative arthur ashe bear 2010 ?
+LABEL	0	When was Arthur Ashe born?	when do arthur ashe bear of the brimbank council do ?
+LABEL	0	When was Arthur Ashe born?	what pakistani arthur ashe bear in march ?
+LABEL	0	When was Arthur Ashe born?	where will arthur ashe bear be keep ?
+LABEL	0	When was Arthur Ashe born?	have arthur ashe bear ever do drug ?
+LABEL	0	When was Arthur Ashe born?	when be robert arthur ashe bear of canada ?
+LABEL	0	When was Arthur Ashe born?	which arthur ashe bear in the early 19 century ?
+LABEL	0	When was Arthur Ashe born?	when will arthur ashe bear onccr ?
+LABEL	0	When was Arthur Ashe born?	who be be arthur ashe bear by ?
+LABEL	0	When was Arthur Ashe born?	when be the first arthur ashe bear in store ?
+LABEL	0	When was Arthur Ashe born?	when be administrative arthur ashe bear 2009 ?
+LABEL	0	When was Arthur Ashe born?	have arthur ashe bear already come out ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear in uk ?
+LABEL	0	When was Arthur Ashe born?	what be the world arthur ashe bear out of ?
+LABEL	0	When was Arthur Ashe born?	in what year be arthur ashe bear to the euorpean parliement ?
+LABEL	0	When was Arthur Ashe born?	what do thoma be arthur ashe bear do ?
+LABEL	0	When was Arthur Ashe born?	5 arthur ashe bear in peru be ?
+LABEL	0	When was Arthur Ashe born?	what do be arthur ashe bear make ?
+LABEL	0	When was Arthur Ashe born?	when will it be arthur ashe bear after 2010 ?
+LABEL	0	When was Arthur Ashe born?	when will arthur ashe bear be in the bvus ?
+LABEL	0	When was Arthur Ashe born?	when be the first arthur ashe bear and by whom ?
+LABEL	0	When was Arthur Ashe born?	in arthur ashe bear be celebrate on which day ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear in britain ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear in the uk ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear start ?
+LABEL	0	When was Arthur Ashe born?	where be be arthur ashe bear from ?
+LABEL	0	When was Arthur Ashe born?	wher be arthur ashe bear go to be heald ?
+LABEL	0	When was Arthur Ashe born?	what country be be arthur ashe bear from ?
+LABEL	0	When was Arthur Ashe born?	when be bring arthur ashe bear 2009 ?
+LABEL	0	When was Arthur Ashe born?	amount of arthur ashe bear s a year ?
+LABEL	0	When was Arthur Ashe born?	when be martin arthur ashe bear of canada ?
+LABEL	0	When was Arthur Ashe born?	when with arthur ashe bear occer ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear in great britain ?
+LABEL	0	When was Arthur Ashe born?	what be pine arthur ashe bear for ?
+LABEL	0	When was Arthur Ashe born?	where be be arthur ashe bear hold ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear invent ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear in united kingdom ?
+LABEL	0	When was Arthur Ashe born?	who do be arthur ashe bear marry ?
+LABEL	0	When was Arthur Ashe born?	why be be arthur ashe bear so important ?
+LABEL	0	When was Arthur Ashe born?	when be be arthur ashe bear out ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear in the united kingdom ?
+LABEL	0	When was Arthur Ashe born?	where do be arthur ashe bear from ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe bear of ?
+LABEL	0	When was Arthur Ashe born?	what be be arthur ashe bear for ?
+LABEL	0	When was Arthur Ashe born?	when do be arthur ashe bear come out ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear of england ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear of britain ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear of uk ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear of great britain ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear of the uk ?
+LABEL	0	When was Arthur Ashe born?	when be winston leonard spencer - arthur ashe bear of united kingdom ?
+LABEL	0	When was Arthur Ashe born?	what do be arthur ashe bear do ?
+LABEL	0	When was Arthur Ashe born?	what be the first arthur ashe bear in canada and where be it put ?
+LABEL	0	When was Arthur Ashe born?	what state hold arthur ashe bear and a good predicion who it would be ?
+LABEL	0	When was Arthur Ashe born?	which period happen first arthur ashe bear stone age bronze age ?
+LABEL	1	What countries were involved in the Spanish war?	what foreign country be involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	who be involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	which 2 country be involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	why do you get involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	which country be involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	which country where involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	which country be in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	country that be involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country be in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	who be the country involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country where involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country where in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what 2 country be involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country be invovle in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what countire be involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	how many country be involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what contry be involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	country that participate in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what be the country involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	which country wre involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country s be involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what city be involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what party be involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	how many country be invovle in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	all country involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what two country be involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	who be country involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country and state be involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	country involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	which contry be involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country be involve during the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what 2 country be in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	how many continent be involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be involove in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	why do the us get involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	name of country involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	main country involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	why do the us become involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country be involve the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	who else be involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what county be involve during the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what werethe country involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	country that be involve in in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	who be all involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	who be fight in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	which country participate in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country participate in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	why do country get involve in in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what be area that be involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	how many country participate in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country wer involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	people involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what be the country that be involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	why do the us become involve in the war in the spanish ?
+LABEL	0	What countries were involved in the Spanish war?	what be the name of the country invole in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	why and how be australium involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what countire be involve with the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	the spanish war who be involve ?
+LABEL	0	What countries were involved in the Spanish war?	why be the country involve in in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be not involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what important party be involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be invole with the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country be involve with the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	which country of people be involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	who waz involve in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country be involve in the spanish conflict ?
+LABEL	0	What countries were involved in the Spanish war?	who be invold in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country be apart of the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	the spanish war be between what two country ?
+LABEL	0	What countries were involved in the Spanish war?	who be involve with the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	how many country be in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country be represent in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	who be the key people involve with the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what be the spanish war and who be involve ?
+LABEL	0	What countries were involved in the Spanish war?	who be in the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country have part of the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	who be the country or people involve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	how do country overcome the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country be effect by the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	how many catacity be involve with the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country be involve in in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	who be involve in thepersian the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be involve with the 1 st the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be involve in persain the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be involve in e the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be involve in perian the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what 2 country be involvedin the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be involve on the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	country involve int eh persian the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what be the country envolve in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be involve in the spanish airlift ?
+LABEL	1	What countries were involved in the Spanish war?	what country be part of the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	who be involve in the 1991 the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be involve during the persian the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	country of the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what 2 country control the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be at the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country do the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be involve in persian the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	which country be affect by the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be involve in the spanish war in 1929 ?
+LABEL	0	What countries were involved in the Spanish war?	where be the money spend on the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what country do the spanish war affect ?
+LABEL	0	What countries were involved in the Spanish war?	what country be involve in the perisian the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	who start the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what be the country in the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	who benefit from the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what country be in combat for the persina the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	what two country come into existence due to the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	which country be use the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	why do european country get involve with persian the spanish war ?
+LABEL	1	What countries were involved in the Spanish war?	which country do the spanish war affect ?
+LABEL	1	What countries were involved in the Spanish war?	what country be the spanish war between ?
+LABEL	0	What countries were involved in the Spanish war?	the first the spanish war start beacause of what country ?
+LABEL	0	What countries were involved in the Spanish war?	what if the spanish war never happend ?
+LABEL	0	What countries were involved in the Spanish war?	when do the spanish war start and end in all country ?
+LABEL	1	What countries were involved in the Spanish war?	what country be affect by the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	what nation get involve in the presian the spanish war ?
+LABEL	0	What countries were involved in the Spanish war?	how do the spanish war get involve with ww2 ?
+LABEL	0	What countries were involved in the Spanish war?	what country do the spanish war take over ?
+LABEL	0	What countries were involved in the Spanish war?	which country be involve in the spanish war war ?
+LABEL	1	What countries were involved in the Spanish war?	do the spanish war hurt any other country ?
+LABEL	0	What countries were involved in the Spanish war?	who be involve in the spanish war besides germany and the we ?
+LABEL	0	What countries were involved in the Spanish war?	what be the spanish war country ?
+LABEL	0	What countries were involved in the Spanish war?	what country be affect by the spanish war 1929-1932 ?
+LABEL	0	What countries were involved in the Spanish war?	how do other country get involve in the spanish war when it start in the us ?
+LABEL	0	What countries were involved in the Spanish war?	what country be the spanish war in ?
