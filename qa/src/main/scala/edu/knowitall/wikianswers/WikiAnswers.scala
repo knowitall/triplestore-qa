@@ -84,7 +84,7 @@ case object WikiAnswersDoc {
   }
   
   def cleanQuestion(q: String): Option[String] = try { 
-    URLDecoder.decode(q) match {
+    URLDecoder.decode(q, "UTF8") match {
     	case s if s.startsWith("FAQ") => None
     	case s if s.startsWith("NEWQ") => None
     	case s if s.startsWith("Special") => None
