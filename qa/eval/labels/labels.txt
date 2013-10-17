@@ -6621,3 +6621,243 @@ $x: ($x, "is a", date) (abraham lincoln, inaugurated, $x)
 March 4 and 6
 
 
+LABEL	0	what is the current government system in france?	data
+what is the current government system in france?
+=>
+$x: ($x, cause, government system)
+=>
+$x: ($x, cause, government system)
+=>
+(r.namespace: reverb, r.arg1: data, r.rel: cause damage to, r.arg2: government and business systems)
+=>
+data
+
+
+LABEL	1	what to see in staten island new york?	garbage
+what to see in staten island new york?
+=>
+$x: ($x, to, staten island new york)
+=>
+$x: ($x, to, staten island new york)
+=>
+(r.namespace: reverb, r.arg1: garbage, r.rel: makes its way to, r.arg2: Staten Island New York)
+=>
+garbage
+
+
+LABEL	0	who is the leader of cuba 2012?	emperors
+who is the leader of cuba 2012?
+=>
+$x: ($x, overthrow, 2012)
+=>
+$x: ($x, overthrow, 2012)
+=>
+(r.namespace: reverb, r.arg1: emperors, r.rel: had been overthrown in, r.arg2: 2012)
+=>
+emperors
+
+
+LABEL	0	where is alex rodriguez from?	2003
+where is alex rodriguez from?
+=>
+$x: (alex rodriguez, in, $x)
+=>
+$x: (alex rodriguez, in, $x)
+=>
+(r.namespace: openie4, r.arg1: Alex Rodriguez, r.rel: tested in, r.arg2: 2003)
+=>
+2003
+
+
+LABEL	0	what language do they speak in iceland wikipedia?	users
+what language do they speak in iceland wikipedia?
+=>
+$x: ($x, language of, wikipedium)
+=>
+$x: ($x, language of, wikipedium)
+=>
+(r.namespace: reverb, r.arg1: users, r.rel: access the German-language version of, r.arg2: Wikipedia)
+=>
+users
+
+
+LABEL	1	what is the name of the bengals quarterback?	glad carson
+what is the name of the bengals quarterback?
+=>
+$x: ($x, quarterback of, cincinnati bengals)
+=>
+$x: ($x, quarterback of, cincinnati bengals)
+=>
+(r.namespace: reverb, r.arg1: glad Carson, r.rel: is the quarterback of, r.arg2: the Cincinnati Bengals)
+=>
+glad Carson
+
+
+LABEL	0	where is pyramids located in egypt?	circle
+where is pyramids located in egypt?
+=>
+$x: ($x, represent of, pyramid)
+=>
+$x: ($x, represent of, pyramid)
+=>
+(r.namespace: reverb, r.arg1: the circle, r.rel: represents the height of, r.arg2: the pyramid)
+=>
+the circle
+
+
+LABEL	1	who does joakim noah play for?	france
+who does joakim noah play for?
+=>
+$x: (joakim noah, play for, $x)
+=>
+$x: (joakim noah, play for, $x)
+=>
+(r.namespace: openie4, r.arg1: Joakim Noah, r.rel: to play for, r.arg2: France)
+=>
+France
+
+
+LABEL	0	what school did kurt vonnegut go to?	breath
+what school did kurt vonnegut go to?
+=>
+$x: (kurt vonnegut, like, $x)
+=>
+$x: (kurt vonnegut, like, $x)
+=>
+(r.namespace: reverb, r.arg1: ?Kurt Vonnegut Laughter, r.rel: is like, r.arg2: a breath)
+=>
+a breath
+
+
+LABEL	0	what form of government does czech republic have?	european affairs
+what form of government does czech republic have?
+=>
+$x: ($x, form, czech republic)
+=>
+$x: ($x, form, czech republic)
+=>
+(r.namespace: reverb, r.arg1: European Affairs, r.rel: forms part of, r.arg2: the Czech Republic?s Office)
+=>
+European Affairs
+
+
+LABEL	0	what type of government does australia use?	australia
+what type of government does australia use?
+=>
+$x: ($x, structure, australium)
+=>
+$x: ($x, structure, australium)
+=>
+(r.namespace: reverb, r.arg1: Australia, r.rel: is structured as, r.arg2: an Australia-UK co-production)
+=>
+Australia
+
+
+LABEL	0	where does joey king live?	excuse
+where does joey king live?
+=>
+$x: (joey logano, king of, $x)
+=>
+$x: (joey logano, king of, $x)
+=>
+(r.namespace: reverb, r.arg1: Joey Logano, r.rel: has been the king of, r.arg2: the excuse)
+=>
+the excuse
+
+
+LABEL	0	what experiments did marie curie conduct?	university
+what experiments did marie curie conduct?
+=>
+$x: (experiment, will conduct, $x)
+=>
+$x: (experiment, will conduct, $x)
+=>
+(r.namespace: reverb, r.arg1: Controlled experiments, r.rel: will be conducted at, r.arg2: the University)
+=>
+the University
+
+
+LABEL	0	what date was abraham lincoln inaugurated?	president
+what date was abraham lincoln inaugurated?
+=>
+$x: (lincoln, inaugurate, $x)
+=>
+$x: (lincoln, inaugurate, $x)
+=>
+(r.namespace: reverb, r.arg1: Lincoln, r.rel: was inaugurated, r.arg2: President)
+=>
+President
+
+
+LABEL	0	what shows did henry winkler produce?	hank zipzer
+what shows did henry winkler produce?
+=>
+$x: ($x, s, henry winkler)
+=>
+$x: ($x, s, henry winkler)
+=>
+(r.namespace: freebase, r.arg1: Hank Zipzer, r.rel: Author(s), r.arg2: Henry Winkler)
+=>
+Hank Zipzer
+
+
+LABEL	0	where is auburn university at?	brown
+where is auburn university at?
+=>
+$x: ($x, be of, auburn university)
+=>
+$x: ($x, be of, auburn university)
+=>
+(r.namespace: reverb, r.arg1: Brown, r.rel: is a graduate of, r.arg2: Auburn University)
+=>
+Brown
+
+
+LABEL	0	where is alex rodriguez from?	particular
+what culture be alex rodriguez ?
+=>
+$x: ($x, "is a kind of", culture) ($x, be, alex rodriguez)
+=>
+$x: ($x, "is a kind of", culture) ($x, be, alex rodriguez)
+=>
+(r0.arg1: particular, r1.rel: is, r0.namespace: reverb, r1.arg2: Alex Rodriguez, r0.arg2: culture-war tag, r0.rel: is a kind of, r1.namespace: reverb, r1.arg1: particular)
+=>
+particular
+
+
+LABEL	0	what form of government does czech republic have?	education
+what kind of government be in czech republic ?
+=>
+$x: ($x, "is an example of", government) ($x, be in, czech republic)
+=>
+$x: ($x, "is an example of", government) ($x, be in, czech republic)
+=>
+(r0.arg1: education, r1.rel: is recognised in, r0.namespace: reverb, r1.arg2: the Czech Republic, r0.arg2: wasteful government spending, r0.rel: is an example of, r1.namespace: reverb, r1.arg1: their education)
+=>
+education
+
+
+LABEL	1	what languages do scottish people speak?	english
+what languages do scottish people speak?
+=>
+$x: ($x, "type", languages) (scottish people, speak, $x)
+=>
+$x: ($x, "type", languages) (scottish people, speak, $x)
+=>
+(r0.arg1: English, r1.rel: speak, r0.namespace: freebase, r1.arg2: English, r0.arg2: Language, r0.rel: Type, r1.namespace: openie4, r1.arg1: Scottish people)
+=>
+English
+
+
+LABEL	0	what type of government does australia use?	education
+what type of government do australium have ?
+=>
+$x: ($x, "is an example of", government) (australium, have, $x)
+=>
+$x: ($x, "is an example of", government) (australium, have, $x)
+=>
+(r0.arg1: education, r1.rel: have expressed concerns about, r0.namespace: reverb, r1.arg2: education, r0.arg2: wasteful government spending, r0.rel: is an example of, r1.namespace: reverb, r1.arg1: Australia)
+=>
+education
+
+
