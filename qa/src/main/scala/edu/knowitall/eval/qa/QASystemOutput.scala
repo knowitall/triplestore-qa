@@ -1,4 +1,4 @@
-package edu.knowitall.eval
+package edu.knowitall.eval.qa
 
 import com.typesafe.config.ConfigFactory
 import java.io.File
@@ -10,40 +10,14 @@ import edu.knowitall.apps.AnswerDerivation
 import com.typesafe.config.ConfigRenderOptions
 import edu.knowitall.execution.Tuple
 import edu.knowitall.execution.Search
+import edu.knowitall.eval.Oracle
+import edu.knowitall.eval.SystemOutput
+import edu.knowitall.eval.OutputRecord
 
-case class SystemOutputRecord(question: String, answer: String, score: Double, derivation: String) {
-  override def toString = s"$question\t$answer\t$score\t$derivation"
-}
-case object SystemOutputRecord {
-  def fromLine(line: String) = line.split("\t") match {
-    case Array(q, a, s, d) => SystemOutputRecord(q, a, s.toDouble, d)
-    case _ => throw new IllegalArgumentException(s"Could not parse line: $line")
-  }
-  def fromScoredAnswerGroup(question: String, group: ScoredAnswerGroup) = {
-    val answer = group.answerString
-    val derivs = group.derivations.map(derivationToString).mkString("; ")
-    SystemOutputRecord(question, answer, group.score, derivs)
-  }
-  def derivationToString(d: AnswerDerivation) = {
-    val answer = d.answerString
-    val para = d.paraphrase.target
-    val query = d.parsedQuery.toString
-    val equery = d.execTuple.query.toString
-    val tuple = project(d.execTuple.tuple)
-    s"$para => $query => $equery => $tuple => $answer"
-  }
-  def project(t: Tuple): String = {
-    val tup = Search.ProjectTriples(List(t)).toList(0)
-    tup.toString
-  }
-}
-
-case class QASystemOutput(path: String, records: List[SystemOutputRecord], config: Map[String, String], name: String) {
+case class QASystemOutput(path: String, records: List[QAOutputRecord], config: Map[String, String], name: String) extends SystemOutput {
   
   def this(path: String, name: String) = this(path, QASystemOutput.loadRecords(path), QASystemOutput.loadConfig(path), name)
-  def this(path: String, records: List[SystemOutputRecord], name: String) = this(path, records, QASystemOutput.getCurrentConfig, name)
-  
-  def normalize = QAOracle.normalize _
+  def this(path: String, records: List[QAOutputRecord], name: String) = this(path, records, QASystemOutput.getCurrentConfig, name)
 
   val questions = records.map(_.question).distinct
   val questionAnswers = records.map(r => (r.question, r.answer)).distinct
@@ -67,24 +41,13 @@ case class QASystemOutput(path: String, records: List[SystemOutputRecord], confi
     for ((k, v) <- config) configWriter.println(s"$k\t$v")
     configWriter.close()
     
+    
+    
     val namePath = new File(path, QASystemOutput.nameFile)
     val nameWriter = new PrintWriter(namePath)
     nameWriter.println(name)
     nameWriter.close()
      
-  }
-  
-  def recordsFor(q: String, a: String) = {
-    val qn = normalize(q)
-    val an = normalize(a)
-    questionAnswerToRecords.getOrElse((qn, an), List())
-  }
-  
-  def topAnswerFor(q: String): Option[String] = {
-    questionToRecords.get(normalize(q)) match {
-      case Some(l) => Some(l.maxBy(_.score).answer)
-      case _ => None
-    }
   }
 
 }
@@ -94,9 +57,9 @@ case object QASystemOutput {
   val outputFile = conf.getString("eval.output.file")
   val configFile = conf.getString("eval.config.file")
   val nameFile = conf.getString("eval.name.file")
-  def loadRecords(path: String) = {
+  def loadRecords(path: String): List[QAOutputRecord] = {
     val lines = Source.fromFile(new File(path, outputFile)).getLines
-    lines.map(SystemOutputRecord.fromLine).toList
+    lines.map(QAOutputRecord.fromLine).toList
   }
   def loadConfig(path: String) = {
     val lines = Source.fromFile(new File(path, configFile)).getLines
@@ -109,6 +72,7 @@ case object QASystemOutput {
     pairs.toMap
   }
   def getCurrentConfig = conf.root().asScala.map(pair => (pair._1, pair._2.render(ConfigRenderOptions.concise))).toMap
+
   def fromPath(path: String) = {
     val name = Source.fromFile(new File(path, nameFile)).getLines.mkString("\n")
     new QASystemOutput(path, name)

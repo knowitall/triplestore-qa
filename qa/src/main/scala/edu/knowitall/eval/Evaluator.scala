@@ -1,16 +1,13 @@
 package edu.knowitall.eval
 
 import scala.io.Source
-import java.io.PrintWriter
-import com.typesafe.config.ConfigFactory
-import java.io.File
 
 object Evaluator extends App {
   
-  def evaluate(writer: PrintWriter, questions: List[String], oracle: QAOracle, output: QASystemOutput) {
+  def evaluate(questions: List[String], oracle: Oracle, output: SystemOutput) {
     var numCorrect = 0.0
     var numAnswered = 0.0
-    for (q <- questions; a <- output.topAnswerFor(q)) {
+    for (q <- questions; a <- output.topOutputFor(q)) {
       numAnswered += 1
       if (oracle.hasLabel(q, a)) {
       	if (oracle.isCorrect(q, a)) {
@@ -34,14 +31,8 @@ object Evaluator extends App {
   val outputPath = args(2)
   
   val questions = Source.fromFile(questionsPath, "UTF8").getLines.toList
-  val oracle = new FileQAOracle(labelsPath)
-  val output = QASystemOutput.fromPath(outputPath)
-  
-  val conf = ConfigFactory.load()
-  val writer = new PrintWriter(new File(outputPath, conf.getString("eval.score.file")))
-
-  
-  evaluate(writer, questions, oracle, output)
-  writer.close()
+  val oracle = new FileOracle(labelsPath)
+  val output = SystemOutput.fromPath(outputPath)
+  evaluate(questions, oracle, output)
 
 }
