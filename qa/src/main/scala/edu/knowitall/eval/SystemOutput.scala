@@ -9,6 +9,10 @@ import com.typesafe.config.ConfigRenderOptions
 
 abstract class SystemOutput {
   
+  def inputs: List[String] = records.map(_.input)
+  
+  def inputOutputs: List[(String, String)] = records.map(r => (r.input, r.output)).toList.distinct
+  
   def config: Map[String, String]
   
   def path: String
@@ -31,6 +35,15 @@ abstract class SystemOutput {
       case _ => None
     }
   }
+  
+  def topScoreFor(input: String, output: String): Option[Double] = {
+    recordsFor(input, output) match {
+      case Nil => None
+      case l: List[OutputRecord] => Some(l.maxBy(_.score).score)  
+    }
+  }
+  
+  def hasOutputFor(input: String) = inputToRecords.contains(input)
   
   def records: List[OutputRecord]
   

@@ -7,6 +7,7 @@ import com.typesafe.config.ConfigFactory
 
 object Evaluator extends App {
   
+  
   def evaluate(writer: PrintWriter, inputs: List[String], oracle: Oracle, output: SystemOutput) {
     var numCorrect = 0.0
     var numAnswered = 0.0
