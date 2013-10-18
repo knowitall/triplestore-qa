@@ -1,0 +1,5 @@
+50 questions
+20.0 answered
+10.0 correct
+0.5 precision
+0.2 accuracy
