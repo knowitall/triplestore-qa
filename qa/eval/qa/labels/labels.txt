@@ -13052,3 +13052,56 @@ LABEL	1	When was the first computers developed?	early 1980s
 LABEL	1	What country developed Pizza?	us-new york
 LABEL	1	Where does the term computer come from?	john brunner
 LABEL	1	What is the most complex of animals?	humans
+LABEL	0	What is the area in Massachusetts in square miles?	dead-zone.e
+LABEL	1	What are the raw material of aerobic respiration?	glucose.e
+LABEL	1	What are Finland's major products?	log.e
+LABEL	0	What is one landmark about mexico?	banda.e
+LABEL	0	How many red fox left?	carrion.e
+LABEL	0	Did george w bush die?	april-5-,-1863.e
+LABEL	0	What is the best speaker in the world?	subwoofer.e
+LABEL	0	What are the five question words?	wu.e
+LABEL	1	What is tantalum's origin?	coltan.e
+LABEL	1	What is the main goal of psychoanalysis?	change.e
+LABEL	0	What is the second book of law?	natalie-aranda.e
+LABEL	0	Where did st peter die?	1156.e
+LABEL	0	What is Energy transformation examples?	love.e
+LABEL	0	What is the War of 1812 name?	creek-war.e
+LABEL	0	What is the common plants in grassland?	cichorium-intybus.e
+LABEL	0	Is the human body matter?	changeability.e
+LABEL	0	What is Catherine Dent's birthday?	baton-rouge.e
+LABEL	1	What is the overall goal of the endocrine system?	metabolism.e
+LABEL	0	What are the earliest land plant?	worm.e
+LABEL	1	What do you call a gangs leader?	ace.e
+LABEL	0	When was T. E. Lawrence born?	motorcycle-accident.e
+LABEL	0	When did the rev died?	1811.e
+LABEL	0	What is the food of plant plankton?	fertilizer.e
+LABEL	0	How big is asia in mile?	117-million-litre.e
+LABEL	0	What is Alan Dale's birthday?	dunedin.e
+LABEL	0	Is there matter in space?	class-c.e
+LABEL	0	How many pets does 50 cent have?	.e
+LABEL	0	What are the parts of a globe and a map?	fantasy.e
+LABEL	1	When was Arthur Ashe born?	1943.e
+LABEL	1	When and where was baseball invented?	america.e
+LABEL	0	What is the other name for the silver?	white.e
+LABEL	0	What is the world's best video game?	jill.e
+LABEL	0	When was the first computers developed?	us.e
+LABEL	0	What is the best stock?	thigh-high.e
+LABEL	0	What are the research topics in computer science?	association.e
+LABEL	0	What is the common animal for costa rica?	language-spanish.e
+LABEL	0	What are the salaries of a science teacher?	india.e
+LABEL	0	What work does princess diana do?	pam.e
+LABEL	0	Which religion has pillars?	faith.e
+LABEL	0	What the temperature of soft ice cream?	zero-degree.e
+LABEL	0	What was the date of prophet Mohammed's birthday?	last-week.e
+LABEL	0	Where does the term computer come from?	software.e
+LABEL	0	What is the most complex of animals?	increase-number-of-child.e
+LABEL	0	What is the bad impact of computing?	software.e
+LABEL	0	What is the smallest populated city in michigan?	benzie-county.e
+LABEL	0	What is the most commonly used car in the US?	honda-insight.e
+LABEL	0	What are some subordinate conjunctions?	new-moon.e
+LABEL	0	What was the release date for halo reach?	september-25th.e
+LABEL	0	Can you eat field corn?	iowa.e
+LABEL	1	Fats are a type of?	nutrient.e
+LABEL	0	What is the population of Muslims?	child.e
+LABEL	0	What is the national food dish of denmark?	canoe.e
+LABEL	0	What is the root language in West Africa?	vodun.e
