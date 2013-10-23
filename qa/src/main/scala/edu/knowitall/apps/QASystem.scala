@@ -58,15 +58,18 @@ case class QASystem(paraphraser: Paraphraser,
 
     logger.info(s"Answering question '$question'")
 
-    val derivations = for (pp <- paraphrase(question).par;
-    					   query <- parse(pp);
-    					   execTuple <- execute(query))
-    					yield AnswerDerivation(question, pp, query, execTuple)
-
+    val derivations = deriveAnswers(question)
     val groups = group(derivations.toList)
     val scored = score(groups)
     scored
   }
+  
+  def deriveAnswers(question: String): List[AnswerDerivation] = {
+    for (pp <- paraphrase(question).par;
+         query <- parse(pp);
+         execTuple <- execute(query))
+      yield AnswerDerivation(question, pp, query, execTuple)
+  }.toList
 
   def paraphrase(question: String): Iterable[Paraphrase] = {
     val allParas = IdentityParaphraser.paraphrase(question) ++
