@@ -17,6 +17,7 @@ trait TVal
  * Base trait for triple literal values.
  */
 trait TLiteral extends TVal {
+  def value: String
   def toConjunct(field: Field): TSQuery
 }
 
@@ -72,6 +73,7 @@ case object TVariable {
  * Triple values can also be the disjunction of a set of literals. 
  */
 case class SetTLiteral(values: List[TLiteral]) extends TVal with TLiteral {
+  override def value = values.mkString(" | ")
   override def toString = values.mkString(" | ") 
   override def toConjunct(field: Field) =
     Disjunction(values.map(_.toConjunct(field)):_*)
