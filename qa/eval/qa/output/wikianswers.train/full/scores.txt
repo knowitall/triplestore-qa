@@ -1,0 +1,5 @@
+356 questions
+61.0 answered
+23.0 correct
+0.3770491803278688 precision
+0.06460674157303371 accuracy
