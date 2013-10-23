@@ -10332,3 +10332,2715 @@ LABEL	1	what are the 7 sacraments of the catholic church?	Sacrament of Penance
 LABEL	1	what are the 7 sacraments of the catholic church?	Eucharist in the Catholic Church
 LABEL	1	what team did david beckham play for before la galaxy?	Preston North End F.C.
 LABEL	1	who is the current leader of france 2010?	Nicolas Sarkozy
+LABEL	1	What sound do wrens make?	nestbox
+
+What sound do wrens make?
+=>
+$x: ($x, sound like, wren)
+=>
+$x: ($x, sound like, wren)
+=>
+(r.namespace: reverb, r.arg1: Nestbox, r.rel: Sounds like, r.arg2: house wrens)
+=>
+Nestbox; What sound do wrens make?
+=>
+$x: ($x, sound, wren)
+=>
+$x: ($x, sound, wren)
+=>
+(r.namespace: reverb, r.arg1: Nestbox, r.rel: Sounds like, r.arg2: house wrens)
+=>
+Nestbox
+
+LABEL	0	What are some Characteristics of a business organization?	left hemisphere
+
+What are some Characteristics of a business organization?
+=>
+$x: (business, characteristic of, $x)
+=>
+$x: (business, characteristic of, $x)
+=>
+(r.namespace: reverb, r.arg1: business, r.rel: were characteristic of, r.arg2: the left hemisphere)
+=>
+the left hemisphere; What are some Characteristics of a business organization?
+=>
+$x: (business, characteristic of, $x)
+=>
+$x: (business, characteristic of, $x)
+=>
+(r.namespace: reverb, r.arg1: business, r.rel: used to be characteristic of, r.arg2: the left hemisphere)
+=>
+the left hemisphere
+
+LABEL	0	Where did st peter die?	jesus
+
+Where did st peter die?
+=>
+$x: ($x, die, peter)
+=>
+$x: ($x, die, peter)
+=>
+(r.namespace: openie4, r.arg1: Jesus, r.rel: died for, r.arg2: Peter)
+=>
+Jesus; Where did st peter die?
+=>
+$x: ($x, die, peter)
+=>
+$x: ($x, die, peter)
+=>
+(r.namespace: reverb, r.arg1: Jesus, r.rel: died for, r.arg2: Peter)
+=>
+Jesus; Where did st peter die?
+=>
+$x: ($x, die, peter)
+=>
+$x: ($x, die, peter)
+=>
+(r.namespace: reverb, r.arg1: Jesus, r.rel: died with, r.arg2: Peter)
+=>
+Jesus; Where did st peter die?
+=>
+$x: ($x, die, peter)
+=>
+$x: ($x, die, peter)
+=>
+(r.namespace: reverb, r.arg1: Jesus, r.rel: had died for, r.arg2: Peter)
+=>
+Jesus; Where did st peter die?
+=>
+$x: ($x, die, peter)
+=>
+$x: ($x, die, peter)
+=>
+(r.namespace: reverb, r.arg1: Jesus, r.rel: die, r.arg2: ? 2 Peter 2:21-25 1)
+=>
+Jesus; Where did st peter die?
+=>
+$x: ($x, do in, peter)
+=>
+$x: ($x, do in, peter)
+=>
+(r.namespace: reverb, r.arg1: Jesus, r.rel: do in, r.arg2: Peters behalf)
+=>
+Jesus; Where did st peter die?
+=>
+$x: ($x, do in, peter)
+=>
+$x: ($x, do in, peter)
+=>
+(r.namespace: reverb, r.arg1: Jesus, r.rel: did in, r.arg2: Peter , James and John)
+=>
+Jesus; Where did st peter die?
+=>
+$x: ($x, do on, peter)
+=>
+$x: ($x, do on, peter)
+=>
+(r.namespace: reverb, r.arg1: Jesus, r.rel: does spiritual surgery on, r.arg2: Peter?s heart)
+=>
+Jesus; Where did st peter die?
+=>
+$x: ($x, do on, peter)
+=>
+$x: ($x, do on, peter)
+=>
+(r.namespace: reverb, r.arg1: Jesus, r.rel: did n?t put His hand gently on, r.arg2: Peter?s shoulder)
+=>
+Jesus; Where did st peter die?
+=>
+$x: ($x, do on, peter)
+=>
+$x: ($x, do on, peter)
+=>
+(r.namespace: reverb, r.arg1: Jesus, r.rel: did n?t give up on, r.arg2: Peter though)
+=>
+Jesus; Where did st peter die?
+=>
+$x: (peter, happen to, $x)
+=>
+$x: (peter, happen to, $x)
+=>
+(r.namespace: reverb, r.arg1: Peter, r.rel: happened to, r.arg2: Jesus)
+=>
+Jesus; Where did st peter die?
+=>
+$x: (peter, happen to, $x)
+=>
+$x: (peter, happen to, $x)
+=>
+(r.namespace: reverb, r.arg1: Peter, r.rel: would happen to, r.arg2: Jesus)
+=>
+Jesus
+
+LABEL	0	What is the War of 1812 name?	1997
+
+What is the War of 1812 name?
+=>
+$x: (war of 1812, date, $x)
+=>
+$x: (war of 1812, date, $x)
+=>
+(r.namespace: freebase, r.arg1: A wampum denied : Procter's War of 1812, r.rel: Publication date, r.arg2: 1997)
+=>
+1997; What is the War of 1812 name?
+=>
+$x: (war of 1812, date, $x)
+=>
+$x: (war of 1812, date, $x)
+=>
+(r.namespace: freebase, r.arg1: The War of 1812 (Wargamer's Guide), r.rel: Publication date, r.arg2: 1997)
+=>
+1997; What is the War of 1812 name?
+=>
+$x: (war of 1812, date, $x)
+=>
+$x: (war of 1812, date, $x)
+=>
+(r.namespace: freebase, r.arg1: War Of 1812 (Voices from the Past), r.rel: Publication date, r.arg2: 1997)
+=>
+1997; What is the War of 1812 name?
+=>
+$x: (war of 1812, date, $x)
+=>
+$x: (war of 1812, date, $x)
+=>
+(r.namespace: freebase, r.arg1: Guidebook to the historic sites of the War of 1812, r.rel: Publication date, r.arg2: 1997)
+=>
+1997; What is the War of 1812 name?
+=>
+$x: (war of 1812, date, $x)
+=>
+$x: (war of 1812, date, $x)
+=>
+(r.namespace: freebase, r.arg1: Swords and sword makers of the War of 1812, r.rel: Publication date, r.arg2: 1997)
+=>
+1997; What is the War of 1812 name?
+=>
+$x: (war of 1812, date, $x)
+=>
+$x: (war of 1812, date, $x)
+=>
+(r.namespace: freebase, r.arg1: War of 1812 eyewitness accounts: an annotated bibliography, r.rel: Publication date, r.arg2: 1997)
+=>
+1997
+
+LABEL	0	What is the importance of meteors?	debris
+
+What is the importance of meteors?
+=>
+$x: (meteor, cause, $x)
+=>
+$x: (meteor, cause, $x)
+=>
+(r.namespace: openie4, r.arg1: Meteor showers, r.rel: are caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteor, cause, $x)
+=>
+$x: (meteor, cause, $x)
+=>
+(r.namespace: reverb, r.arg1: Meteor showers, r.rel: are caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteor, cause, $x)
+=>
+$x: (meteor, cause, $x)
+=>
+(r.namespace: openie4, r.arg1: The Leonid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteor, cause, $x)
+=>
+$x: (meteor, cause, $x)
+=>
+(r.namespace: reverb, r.arg1: The Perseid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteor, cause, $x)
+=>
+$x: (meteor, cause, $x)
+=>
+(r.namespace: openie4, r.arg1: The Perseid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteor, cause, $x)
+=>
+$x: (meteor, cause, $x)
+=>
+(r.namespace: reverb, r.arg1: The Leonid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteors, cause, $x)
+=>
+$x: (meteors, cause, $x)
+=>
+(r.namespace: openie4, r.arg1: Meteor showers, r.rel: are caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteors, cause, $x)
+=>
+$x: (meteors, cause, $x)
+=>
+(r.namespace: reverb, r.arg1: Meteor showers, r.rel: are caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteors, cause, $x)
+=>
+$x: (meteors, cause, $x)
+=>
+(r.namespace: openie4, r.arg1: The Leonid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteors, cause, $x)
+=>
+$x: (meteors, cause, $x)
+=>
+(r.namespace: reverb, r.arg1: The Perseid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteors, cause, $x)
+=>
+$x: (meteors, cause, $x)
+=>
+(r.namespace: openie4, r.arg1: The Perseid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteors, cause, $x)
+=>
+$x: (meteors, cause, $x)
+=>
+(r.namespace: reverb, r.arg1: The Leonid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteor shower, cause, $x)
+=>
+$x: (meteor shower, cause, $x)
+=>
+(r.namespace: openie4, r.arg1: Meteor showers, r.rel: are caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteor shower, cause, $x)
+=>
+$x: (meteor shower, cause, $x)
+=>
+(r.namespace: reverb, r.arg1: Meteor showers, r.rel: are caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteor shower, cause, $x)
+=>
+$x: (meteor shower, cause, $x)
+=>
+(r.namespace: openie4, r.arg1: The Leonid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteor shower, cause, $x)
+=>
+$x: (meteor shower, cause, $x)
+=>
+(r.namespace: reverb, r.arg1: The Perseid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteor shower, cause, $x)
+=>
+$x: (meteor shower, cause, $x)
+=>
+(r.namespace: openie4, r.arg1: The Perseid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris; What is the importance of meteors?
+=>
+$x: (meteor shower, cause, $x)
+=>
+$x: (meteor shower, cause, $x)
+=>
+(r.namespace: reverb, r.arg1: The Leonid meteor shower, r.rel: is caused by, r.arg2: debris)
+=>
+debris
+
+LABEL	0	What do you call a gangs leader?	sharpton
+
+What do you call a gangs leader?
+=>
+$x: ($x, call, gang leader)
+=>
+$x: ($x, call, gang leader)
+=>
+(r.namespace: reverb, r.arg1: Sharpton, r.rel: calls, r.arg2: Bush L.A. gang leader)
+=>
+Sharpton; What do you call a gangs leader?
+=>
+$x: ($x, call, gang leader)
+=>
+$x: ($x, call, gang leader)
+=>
+(r.namespace: reverb, r.arg1: Sharpton, r.rel: calls, r.arg2: Bush L.A. gang leader)
+=>
+Sharpton
+
+LABEL	0	Who ended slavery in the civil war?	united states
+
+Who ended slavery in the civil war?
+=>
+$x: (civil war, end slavery in, $x)
+=>
+$x: (civil war, end slavery in, $x)
+=>
+(r.namespace: reverb, r.arg1: The Civil War, r.rel: ended slavery in, r.arg2: the United States)
+=>
+the United States; Who ended slavery in the civil war?
+=>
+$x: (civil war, end slavery in, $x)
+=>
+$x: (civil war, end slavery in, $x)
+=>
+(r.namespace: reverb, r.arg1: the Civil War, r.rel: ended slavery in, r.arg2: the United States)
+=>
+the United States; Who ended slavery in the civil war?
+=>
+$x: (civil war, end slavery in, $x)
+=>
+$x: (civil war, end slavery in, $x)
+=>
+(r.namespace: reverb, r.arg1: The American Civil War, r.rel: ended slavery in, r.arg2: the United States)
+=>
+the United States; Who ended slavery in the civil war?
+=>
+$x: (civil war, end slavery in, $x)
+=>
+$x: (civil war, end slavery in, $x)
+=>
+(r.namespace: reverb, r.arg1: a bloody civil war, r.rel: ended slavery in, r.arg2: the United States)
+=>
+the United States
+
+LABEL	0	When was T. E. Lawrence born?	tremadog
+
+When was T. E. Lawrence born?
+=>
+$x: (t. e. lawrence, birth place of, $x)
+=>
+$x: (t. e. lawrence, birth place of, $x)
+=>
+(r.namespace: freebase, r.arg1: T. E. Lawrence, r.rel: Place of birth, r.arg2: Tremadog)
+=>
+Tremadog; When was T. E. Lawrence born?
+=>
+$x: ($x, bear, t. e. lawrence)
+=>
+$x: ($x, bear, t. e. lawrence)
+=>
+(r.namespace: freebase, r.arg1: Tremadog, r.rel: People born here, r.arg2: T. E. Lawrence)
+=>
+Tremadog
+
+LABEL	0	What did paul dirac discovered?	blackness
+
+What did paul dirac discovered?
+=>
+$x: (paul dirac, do, $x)
+=>
+$x: (paul dirac, do, $x)
+=>
+(r.namespace: reverb, r.arg1: ?Paul Dirac ? Heaven, r.rel: has something to do with, r.arg2: blackness)
+=>
+blackness
+
+LABEL	0	What eats little auk?	copepods
+
+What eats little auk?
+=>
+$x: (little auk, eat, $x)
+=>
+$x: (little auk, eat, $x)
+=>
+(r.namespace: reverb, r.arg1: the little auk, r.rel: mainly eats, r.arg2: copepods)
+=>
+copepods
+
+LABEL	0	When did the rev died?	engine
+
+When did the rev died?
+=>
+$x: ($x, do, rev)
+=>
+$x: ($x, do, rev)
+=>
+(r.namespace: reverb, r.arg1: The Engine, r.rel: did, r.arg2: rev)
+=>
+The Engine; When did the rev died?
+=>
+$x: ($x, do, rev)
+=>
+$x: ($x, do, rev)
+=>
+(r.namespace: openie4, r.arg1: The Engine, r.rel: did, r.arg2: rev)
+=>
+The Engine; When did the rev died?
+=>
+$x: ($x, do, rev)
+=>
+$x: ($x, do, rev)
+=>
+(r.namespace: openie4, r.arg1: The engine, r.rel: was doing, r.arg2: 6000 revs)
+=>
+The engine; When did the rev died?
+=>
+$x: ($x, do, rev)
+=>
+$x: ($x, do, rev)
+=>
+(r.namespace: reverb, r.arg1: The engine, r.rel: was doing, r.arg2: 6000 revs)
+=>
+The engine
+
+LABEL	0	What do calvinists teach?	one?s material status
+
+What do calvinists teach?
+=>
+$x: ($x, do, calvinist)
+=>
+$x: ($x, do, calvinist)
+=>
+(r.namespace: reverb, r.arg1: one?s material status, r.rel: did, r.arg2: the later Calvinists)
+=>
+one?s material status
+
+LABEL	0	What are the parts of a globe and a map?	introduction
+
+What are the parts of a globe and a map?
+=>
+$x: (map and globe, in, $x)
+=>
+$x: (map and globe, in, $x)
+=>
+(r.namespace: reverb, r.arg1: maps and globes, r.rel: is included in, r.arg2: the introduction)
+=>
+the introduction; What are the parts of a globe and a map?
+=>
+$x: (map and globe, in, $x)
+=>
+$x: (map and globe, in, $x)
+=>
+(r.namespace: reverb, r.arg1: maps and globes, r.rel: is included in, r.arg2: the introduction)
+=>
+the introduction
+
+LABEL	0	When was Arthur Ashe born?	richmond
+
+When was Arthur Ashe born?
+=>
+$x: (arthur ashe, birth place of, $x)
+=>
+$x: (arthur ashe, birth place of, $x)
+=>
+(r.namespace: freebase, r.arg1: Arthur Ashe, r.rel: Place of birth, r.arg2: Richmond)
+=>
+Richmond; When was Arthur Ashe born?
+=>
+$x: ($x, bear, arthur ashe)
+=>
+$x: ($x, bear, arthur ashe)
+=>
+(r.namespace: freebase, r.arg1: Richmond, r.rel: People born here, r.arg2: Arthur Ashe)
+=>
+Richmond
+
+LABEL	0	When and where was baseball invented?	abner doubleday
+
+When and where was baseball invented?
+=>
+$x: (baseball, invent, $x)
+=>
+$x: (baseball, invent, $x)
+=>
+(r.namespace: openie4, r.arg1: baseball, r.rel: invented, r.arg2: Abner Doubleday)
+=>
+Abner Doubleday; When and where was baseball invented?
+=>
+$x: (baseball, invent, $x)
+=>
+$x: (baseball, invent, $x)
+=>
+(r.namespace: reverb, r.arg1: baseball, r.rel: invented, r.arg2: Abner Doubleday)
+=>
+Abner Doubleday; When and where was baseball invented?
+=>
+$x: (baseball, invent, $x)
+=>
+$x: (baseball, invent, $x)
+=>
+(r.namespace: openie4, r.arg1: baseball, r.rel: invented by, r.arg2: Abner Doubleday)
+=>
+Abner Doubleday; When and where was baseball invented?
+=>
+$x: (baseball, invent, $x)
+=>
+$x: (baseball, invent, $x)
+=>
+(r.namespace: openie4, r.arg1: baseball, r.rel: had been invented by, r.arg2: Abner Doubleday)
+=>
+Abner Doubleday; When and where was baseball invented?
+=>
+$x: (baseball, invent, $x)
+=>
+$x: (baseball, invent, $x)
+=>
+(r.namespace: reverb, r.arg1: Baseball, r.rel: was invented by, r.arg2: Abner Doubleday)
+=>
+Abner Doubleday; When and where was baseball invented?
+=>
+$x: (baseball, invent, $x)
+=>
+$x: (baseball, invent, $x)
+=>
+(r.namespace: openie4, r.arg1: Baseball, r.rel: was invented by, r.arg2: Abner Doubleday)
+=>
+Abner Doubleday; When and where was baseball invented?
+=>
+$x: (baseball, invent, $x)
+=>
+$x: (baseball, invent, $x)
+=>
+(r.namespace: reverb, r.arg1: Baseball, r.rel: was invented spontaneously by, r.arg2: Abner Doubleday)
+=>
+Abner Doubleday; When and where was baseball invented?
+=>
+$x: (baseball, invent, $x)
+=>
+$x: (baseball, invent, $x)
+=>
+(r.namespace: reverb, r.arg1: baseball, r.rel: had been invented by, r.arg2: Abner Doubleday)
+=>
+Abner Doubleday
+
+LABEL	0	What is the other name for the silver?	home
+
+What is the other name for the silver?
+=>
+$x: (peace, other name for, $x)
+=>
+$x: (peace, other name for, $x)
+=>
+(r.namespace: reverb, r.arg1: Peace, r.rel: is the other name for, r.arg2: home)
+=>
+home; What is the other name for the silver?
+=>
+$x: (peace, other name for, $x)
+=>
+$x: (peace, other name for, $x)
+=>
+(r.namespace: reverb, r.arg1: - Harriet Beecher Stowe * Peace, r.rel: was the other name for, r.arg2: home)
+=>
+home; What is the other name for the silver?
+=>
+$x: (peace, other name for, $x)
+=>
+$x: (peace, other name for, $x)
+=>
+(r.namespace: reverb, r.arg1: ~Harriet Beecher Stowe Peace, r.rel: was the other name for, r.arg2: home)
+=>
+home
+
+LABEL	0	When was the first computers developed?	students
+
+When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: Students, r.rel: will develop skills in, r.arg2: computer design)
+=>
+Students; When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: Students, r.rel: develop skills in, r.arg2: computer graphics)
+=>
+Students; When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: students, r.rel: will develop skills in, r.arg2: computer languages)
+=>
+students; When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: students, r.rel: develop skills in, r.arg2: a supervised computer lab)
+=>
+students; When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: Students, r.rel: will develop skills in, r.arg2: computer design)
+=>
+Students; When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: Students, r.rel: develop skills in, r.arg2: computer graphics)
+=>
+Students; When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: students, r.rel: will develop skills in, r.arg2: computer languages)
+=>
+students; When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: students, r.rel: develop skills in, r.arg2: a supervised computer lab)
+=>
+students; When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: Students, r.rel: will develop skills in, r.arg2: computer design)
+=>
+Students; When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: Students, r.rel: develop skills in, r.arg2: computer graphics)
+=>
+Students; When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: students, r.rel: will develop skills in, r.arg2: computer languages)
+=>
+students; When was the first computers developed?
+=>
+$x: ($x, develop in, computer)
+=>
+$x: ($x, develop in, computer)
+=>
+(r.namespace: reverb, r.arg1: students, r.rel: develop skills in, r.arg2: a supervised computer lab)
+=>
+students
+
+LABEL	0	What is the best stock?	bar
+
+What is the best stock?
+=>
+$x: ($x, stock, best)
+=>
+$x: ($x, stock, best)
+=>
+(r.namespace: reverb, r.arg1: a bar, r.rel: stocked with, r.arg2: the best tequila)
+=>
+a bar; What is the best stock?
+=>
+$x: ($x, stock, best)
+=>
+$x: ($x, stock, best)
+=>
+(r.namespace: reverb, r.arg1: The bar, r.rel: is well stocked with, r.arg2: best brands)
+=>
+The bar; What is the best stock?
+=>
+$x: ($x, stock, best)
+=>
+$x: ($x, stock, best)
+=>
+(r.namespace: reverb, r.arg1: The bar, r.rel: is ever stocked with, r.arg2: the best)
+=>
+The bar; What is the best stock?
+=>
+$x: ($x, stock, best)
+=>
+$x: ($x, stock, best)
+=>
+(r.namespace: reverb, r.arg1: The bar, r.rel: is stocked with, r.arg2: the best)
+=>
+The bar
+
+LABEL	0	What are the salaries of a science teacher?	professionals
+
+What are the salaries of a science teacher?
+=>
+$x: (teacher, profession of, $x)
+=>
+$x: (teacher, profession of, $x)
+=>
+(r.namespace: nell, r.arg1: Teachers, r.rel: is a profession that is a kind of, r.arg2: professionals)
+=>
+professionals; What are the salaries of a science teacher?
+=>
+$x: (teacher, profession of, $x)
+=>
+$x: (teacher, profession of, $x)
+=>
+(r.namespace: nell, r.arg1: classroom teachers, r.rel: is a profession that is a kind of, r.arg2: professionals)
+=>
+professionals; What are the salaries of a science teacher?
+=>
+$x: (teacher, profession of, $x)
+=>
+$x: (teacher, profession of, $x)
+=>
+(r.namespace: nell, r.arg1: School teachers, r.rel: is a profession that is a kind of, r.arg2: professionals)
+=>
+professionals; What are the salaries of a science teacher?
+=>
+$x: (teacher, profession of, $x)
+=>
+$x: (teacher, profession of, $x)
+=>
+(r.namespace: nell, r.arg1: Certified Teachers, r.rel: is a profession that is a kind of, r.arg2: professionals)
+=>
+professionals; What are the salaries of a science teacher?
+=>
+$x: (teacher, profession of, $x)
+=>
+$x: (teacher, profession of, $x)
+=>
+(r.namespace: nell, r.arg1: Teachers, r.rel: is a profession that is a kind of, r.arg2: professionals)
+=>
+professionals; What are the salaries of a science teacher?
+=>
+$x: (teacher, profession of, $x)
+=>
+$x: (teacher, profession of, $x)
+=>
+(r.namespace: nell, r.arg1: classroom teachers, r.rel: is a profession that is a kind of, r.arg2: professionals)
+=>
+professionals; What are the salaries of a science teacher?
+=>
+$x: (teacher, profession of, $x)
+=>
+$x: (teacher, profession of, $x)
+=>
+(r.namespace: nell, r.arg1: School teachers, r.rel: is a profession that is a kind of, r.arg2: professionals)
+=>
+professionals; What are the salaries of a science teacher?
+=>
+$x: (teacher, profession of, $x)
+=>
+$x: (teacher, profession of, $x)
+=>
+(r.namespace: nell, r.arg1: Certified Teachers, r.rel: is a profession that is a kind of, r.arg2: professionals)
+=>
+professionals
+
+LABEL	0	What work does princess diana do?	genevi?ve sabourdin
+
+What work does princess diana do?
+=>
+$x: ($x, do, lady diana)
+=>
+$x: ($x, do, lady diana)
+=>
+(r.namespace: reverb, r.arg1: Genevi?ve Sabourdin, r.rel: does n?t want to become, r.arg2: ?Lady Diana)
+=>
+Genevi?ve Sabourdin
+
+LABEL	0	How much does ultimate warrior weigh?	really cool tag archive
+
+How much does ultimate warrior weigh?
+=>
+$x: ($x, for, ultimate warrior)
+=>
+$x: ($x, for, ultimate warrior)
+=>
+(r.namespace: reverb, r.arg1: a really cool tag archive, r.rel: add on for, r.arg2: Ultimate Tag Warrior)
+=>
+a really cool tag archive
+
+LABEL	0	Where does the term computer come from?	united states america
+
+Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Computer Chronicles, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Computer Doctor, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Computer Warriors, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Computer Chess, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Computer Animation Festival, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Computer Animation Celebration, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Computer Animation Experience, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Inside David Mamet's Computer, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Computer Animation Extravaganza, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: A Computer Animated Hand, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Computer Animation Classics, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Computer Wore Tennis Shoes, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Animusic: A Computer Animation Video Album, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (computer, origin of, $x)
+=>
+$x: (computer, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Top Secret Rosies: The Female Computers of World War II, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mickey Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Lighthouse Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Johann Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mouse's Birthday, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mucho Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Matinee Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Penthouse Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mouse Cleaning, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Neapolitan Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mouse Menace, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mouse Wreckers, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mice Follies, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Of Mice and Men, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mighty Mouse Playhouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mouse for Sale, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: MouseHunt, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Mouse that Soared, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mickey Mouse Clubhouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Yankee Doodle Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mouse Into Space, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Flying Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Missing Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mickey's Mouse Tracks, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: House Hunting Mice, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Much Ado About Mousing, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Invisible Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Disney's House of Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Naughty but Mice, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Great Mouse Detective, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mouse in Manhattan, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mickey Mouse in Vietnam, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Tale of Two Mice, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: His Mouse Friday, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mouse on the Mayflower, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: 12 oz. Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Mickey Mouse Club, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mickey Mouse Works, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Three Blind Mice, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Biker Mice from Mars, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Fifth Column Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Country Mouse and the City Mouse Adventures, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Country Mouse and the City Mouse: A Christmas Tale, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Mouse and the Monster, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Dr. Jekyll and Mr. Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Year of the Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Courageous Cat and Minute Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Mouse that Jack Built, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mickey Mouse In Runaway Brain, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Love Me, Love My Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Mouse Comes to Dinner, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mighty Mouse: The New Adventures, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Mouse and the Motorcycle, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mickey Mouse Clubhouse: Mickey's Treat, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Lion and the Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (mouse, origin of, $x)
+=>
+$x: (mouse, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Lady and the Mouse, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Network, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Network 9, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Network Q, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: SEC Network, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Food Network Challenge, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Cartoon Network Top 5, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Stand By All Networks, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Onion News Network, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Independent Network News, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Screen Gems Network, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Social Network, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: World Wrestling Network: FIP: Unstoppable, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Network: Disease Is Punishment, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: World Wrestling Network: FIP: Heatstroke, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Battle of the Network Stars, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: MyNetworkTV telenovelas, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Next Food Network Star, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: World Wrestling Network: Shimmer: Vol. 1, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Battle of the Network Reality Stars, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: World Wrestling Network: FIP: The Usual Suspects, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: World Wrestling Network: FIP: In Full Force, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: World Wrestling Network: FIP: Sold Out, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Next Food Network Star After Party, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: World Wrestling Network: Shimmer: Vol. 5, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: World Wrestling Network: Shimmer: Vol. 3, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Ultimate Burger Bash With Food Network All-Stars!, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: World Wrestling Network: FIP: Big Year One Bash, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The S.I.N.: Special Intelligence Network, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (network, origin of, $x)
+=>
+$x: (network, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: World Wrestling Network: FIP: Violence Is the Answer, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (password, origin of, $x)
+=>
+$x: (password, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Password, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (password, origin of, $x)
+=>
+$x: (password, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Piyalir Password, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (password, origin of, $x)
+=>
+$x: (password, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Super Password, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (password, origin of, $x)
+=>
+$x: (password, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Password Plus and Super Password, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (password, origin of, $x)
+=>
+$x: (password, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Million Dollar Password, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (virus, origin of, $x)
+=>
+$x: (virus, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Virus, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (virus, origin of, $x)
+=>
+$x: (virus, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Flying Virus, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (virus, origin of, $x)
+=>
+$x: (virus, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Johnny Virus, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (virus, origin of, $x)
+=>
+$x: (virus, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Doomsday Virus, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (virus, origin of, $x)
+=>
+$x: (virus, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Virus X, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (virus, origin of, $x)
+=>
+$x: (virus, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Drone Virus, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (virus, origin of, $x)
+=>
+$x: (virus, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Paradise Virus, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (virus, origin of, $x)
+=>
+$x: (virus, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Road Virus Heads North, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Windows, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Broken Windows, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Vestigial Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Golden Windows, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Rear Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Secret Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Open Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Allegra's Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Through the Neighbor's Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Stained Glass Windows, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: By The Rear Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: HD Window: Hawaii, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Floors, Doors & Windows, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Window on Main Street, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Windows Vista for Dummies, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Plasma Window: Plasmaquarium, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Hundred Pound Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Light in the Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Paneless Window Washer, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Look in Any Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Rear End Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Fingers at the Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Windows of Heaven, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Magic Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Through an Open Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Window Water Baby Moving, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Bedroom Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Window on the Reef, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Face at the Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Shadow on the Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Woman in the Window, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: A Window on Washington Park, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Windows in Time:  Research Today for Energy Tomorrow, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (window, origin of, $x)
+=>
+$x: (window, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Black Crowes: Who Killed that Bird Out on Your Window Sill...The Movie, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Apples, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Newton's Apple, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Apple's Way, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Apple, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Apple Pie, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Apple Jack, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Big Apple, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Bitter Apples, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Bad Apple, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Bad Apples, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Mixed Apples, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Candy Apple Red, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Apple Jacks - montage, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Eve Knew Her Apples, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Rose Apple Tree Island, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: God, Sex & Apple Pie, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Righteous Apples, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Apple Dumpling Gang, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Red Apples Falling, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Bi Apple, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: How to Eat Your Apple, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Three Bites of the Apple, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Apple-Tree Girl, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Apples on a Lilac Treet, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Apple Grown in Wind Tunnel, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Strawberry Shortcake in Big Apple City, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Apple Dumpling Gang Rides Again, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Tales of the Apple Dumpling Gang, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: LarryBoy and the Bad Apple, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Golden Apple: Bellydance Stars of New York, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (apple, origin of, $x)
+=>
+$x: (apple, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Happily N'Ever After 2: Snow White Another Bite @ the Apple, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (device, origin of, $x)
+=>
+$x: (device, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Suspect Device, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (device, origin of, $x)
+=>
+$x: (device, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: Killing Device, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America; Where does the term computer come from?
+=>
+$x: (dell, origin of, $x)
+=>
+$x: (dell, origin of, $x)
+=>
+(r.namespace: freebase, r.arg1: The Dells: Live from NYC, r.rel: Country of origin, r.arg2: United States of America)
+=>
+United States of America
+
+LABEL	0	What is the most complex of animals?	vegetation
+
+What is the most complex of animals?
+=>
+$x: (rainforest, most complex of, $x)
+=>
+$x: (rainforest, most complex of, $x)
+=>
+(r.namespace: reverb, r.arg1: Rainforest, r.rel: is the most complex kind of, r.arg2: vegetation)
+=>
+vegetation
+
+LABEL	0	What are some subordinate conjunctions?	urdu
+
+What are some subordinate conjunctions?
+=>
+$x: (subordinate conjunction, in, $x)
+=>
+$x: (subordinate conjunction, in, $x)
+=>
+(r.namespace: reverb, r.arg1: The subordinating conjunction, r.rel: is in, r.arg2: Urdu)
+=>
+Urdu; What are some subordinate conjunctions?
+=>
+$x: (subordinate conjunction, be, $x)
+=>
+$x: (subordinate conjunction, be, $x)
+=>
+(r.namespace: reverb, r.arg1: The subordinating conjunction, r.rel: is in, r.arg2: Urdu)
+=>
+Urdu
+
+LABEL	1	Can you eat field corn?	cows
+
+Can you eat field corn?
+=>
+$x: (field corn, eat, $x)
+=>
+$x: (field corn, eat, $x)
+=>
+(r.namespace: reverb, r.arg1: their corn fields, r.rel: were eaten up by, r.arg2: cows)
+=>
+cows
+
+LABEL	0	What are some fast growing plants?	good idea
+
+What are some fast growing plants?
+=>
+$x: (fast grow plant, be, $x)
+=>
+$x: (fast grow plant, be, $x)
+=>
+(r.namespace: reverb, r.arg1: planting fast-growing shrubs, r.rel: is, r.arg2: a good idea)
+=>
+a good idea; What are some fast growing plants?
+=>
+$x: (fast grow plant, be, $x)
+=>
+$x: (fast grow plant, be, $x)
+=>
+(r.namespace: reverb, r.arg1: other fast-growing wild plants, r.rel: is, r.arg2: a good idea)
+=>
+a good idea
+
+LABEL	0	What is the population of Muslims?	india
+
+What is the population of Muslims?
+=>
+$x: (muslim league, in, $x)
+=>
+$x: (muslim league, in, $x)
+=>
+(r.namespace: reverb, r.arg1: Muslim League political party, r.rel: is formed in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: (muslim league, in, $x)
+=>
+$x: (muslim league, in, $x)
+=>
+(r.namespace: reverb, r.arg1: the Muslim league, r.rel: had taken in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: (muslim league, in, $x)
+=>
+$x: (muslim league, in, $x)
+=>
+(r.namespace: reverb, r.arg1: 1906 Muslim League political party, r.rel: is formed in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: (muslim girl, in, $x)
+=>
+$x: (muslim girl, in, $x)
+=>
+(r.namespace: reverb, r.arg1: Muslim girls, r.rel: are a relatively recent phenomenon in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: (muslim scholar, in, $x)
+=>
+$x: (muslim scholar, in, $x)
+=>
+(r.namespace: openie4, r.arg1: an American Muslim scholar, r.rel: was born in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: (muslims, in, $x)
+=>
+$x: (muslims, in, $x)
+=>
+(r.namespace: openie4, r.arg1: Muslims, r.rel: living in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: (muslims, in, $x)
+=>
+$x: (muslims, in, $x)
+=>
+(r.namespace: reverb, r.arg1: Muslims, r.rel: lived in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: (islam, in, $x)
+=>
+$x: (islam, in, $x)
+=>
+(r.namespace: openie4, r.arg1: Islam, r.rel: is in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: (muslim, in, $x)
+=>
+$x: (muslim, in, $x)
+=>
+(r.namespace: openie4, r.arg1: Muslims, r.rel: living in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: (muslim, in, $x)
+=>
+$x: (muslim, in, $x)
+=>
+(r.namespace: reverb, r.arg1: Muslims, r.rel: lived in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: (akon, in, $x)
+=>
+$x: (akon, in, $x)
+=>
+(r.namespace: reverb, r.arg1: Akon and Pitbull, r.rel: have performed in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have number of, muslims)
+=>
+$x: ($x, have number of, muslims)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the largest number of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have number of, muslims)
+=>
+$x: ($x, have number of, muslims)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has a large number of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have number of, muslims)
+=>
+$x: ($x, have number of, muslims)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the third largest number of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslims)
+=>
+$x: ($x, have population of, muslims)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the largest population of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslims)
+=>
+$x: ($x, have population of, muslims)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the second-highest population of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslims)
+=>
+$x: ($x, have population of, muslims)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the third-largest population of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslims)
+=>
+$x: ($x, have population of, muslims)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the third largest population of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslims)
+=>
+$x: ($x, have population of, muslims)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the second largest population of, r.arg2: Muslims ?)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslims)
+=>
+$x: ($x, have population of, muslims)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the second largest population of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslims)
+=>
+$x: ($x, have population of, muslims)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has large populations of, r.arg2: Hindus and Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslims)
+=>
+$x: ($x, have population of, muslims)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the third-largest population of, r.arg2: Muslims worldwide)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have number of, muslim)
+=>
+$x: ($x, have number of, muslim)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the largest number of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have number of, muslim)
+=>
+$x: ($x, have number of, muslim)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has a large number of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have number of, muslim)
+=>
+$x: ($x, have number of, muslim)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the third largest number of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslim)
+=>
+$x: ($x, have population of, muslim)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the largest population of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslim)
+=>
+$x: ($x, have population of, muslim)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the second-highest population of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslim)
+=>
+$x: ($x, have population of, muslim)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the third-largest population of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslim)
+=>
+$x: ($x, have population of, muslim)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the third largest population of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslim)
+=>
+$x: ($x, have population of, muslim)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the second largest population of, r.arg2: Muslims ?)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslim)
+=>
+$x: ($x, have population of, muslim)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the second largest population of, r.arg2: Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslim)
+=>
+$x: ($x, have population of, muslim)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has large populations of, r.arg2: Hindus and Muslims)
+=>
+India; What is the population of Muslims?
+=>
+$x: ($x, have population of, muslim)
+=>
+$x: ($x, have population of, muslim)
+=>
+(r.namespace: reverb, r.arg1: India, r.rel: has the third-largest population of, r.arg2: Muslims worldwide)
+=>
+India; What is the population of Muslims?
+=>
+$x: (muslim league, be, $x)
+=>
+$x: (muslim league, be, $x)
+=>
+(r.namespace: reverb, r.arg1: Muslim League political party, r.rel: is formed in, r.arg2: India)
+=>
+India; What is the population of Muslims?
+=>
+$x: (muslim girl, be, $x)
+=>
+$x: (muslim girl, be, $x)
+=>
+(r.namespace: reverb, r.arg1: Muslim girls, r.rel: are a relatively recent phenomenon in, r.arg2: India)
+=>
+India
+
+LABEL	0	What is the food source for amoebas?	water
+LABEL	0	Can blue herons fly?	house
+LABEL	0	What sound do wrens make?	life
+LABEL	1	What is the best speaker in the world?	americans
+LABEL	1	What is tantalum's origin?	congo
+LABEL	1	What is the main goal of psychoanalysis?	common unhappiness ?
+LABEL	0	Who makes seiki?	pattern shirt
+LABEL	1	Which is the urban area in africa?	cape town
+LABEL	1	What is the second book of law?	exodus
+LABEL	0	What was the first year of the 20th century?	more 1999
+LABEL	1	Where did st peter die?	rome
+LABEL	1	What is Energy transformation examples?	spring
+LABEL	0	Who make decisions in a Market Economy?	china
+LABEL	0	Was Martin Luther King born in a hospital?	memphis
+LABEL	1	What is the common plants in grassland?	tree
+LABEL	0	What are the classes for the indian caste system?	example
+LABEL	0	How much do you get pay in soccer?	any idea
+LABEL	0	Is the human body matter?	issued
+LABEL	0	Average cost nose job?	much
+LABEL	1	What are the earliest land plant?	hemp
+LABEL	0	When and where were the first forms of money made?	gold coins
+LABEL	1	What do you call a gangs leader?	razz
+LABEL	0	When did spaghetti come to the us?	girls
+LABEL	1	Which country has the best water?	united states
+LABEL	1	When was T. E. Lawrence born?	1888
+LABEL	1	Fun games for kids?	dizzywood
+LABEL	0	In baseball what is the Green Monster?	jealousy
+LABEL	1	What did paul dirac discovered?	idea antimatter
+LABEL	0	When did the rev died?	monday 26
+LABEL	0	Are snakes warm blooded or cold?	dinosaurs
+LABEL	0	What do calvinists teach?	several months
+LABEL	0	Is there matter in space?	total sum
+LABEL	0	What is the chemical composition of 14 karat gold?	ring
+LABEL	0	What county is Mesa Arizona in?	beautiful east mesa
+LABEL	1	When and where was baseball invented?	england
+LABEL	0	What is the other name for the silver?	treasure-chambers
+LABEL	0	What is the world's best video game?	game
+LABEL	1	Which island is the most popular?	santorini
+LABEL	0	What are bacterial cells classified as?	dna
+LABEL	0	When was the first computers developed?	illinois
+LABEL	1	What country developed Pizza?	italy
+LABEL	1	What is the best stock?	apple
+LABEL	0	What are the research topics in computer science?	students
+LABEL	1	What is the full meaning of utp?	unshielded twisted pair cable
+LABEL	0	What do the earth plates move over?	rate
+LABEL	0	What kind of mixture is soda?	end
+LABEL	0	What work does princess diana do?	score
+LABEL	1	Which religion has pillars?	islam
+LABEL	0	What state did eddie guerrero die in?	2005
+LABEL	0	What is the study of the body's structures?	asterix
+LABEL	0	What color is the streak of amethyst?	30 years
+LABEL	0	What law does the judicial branch makes?	law
+LABEL	0	Where does the term computer come from?	japan
+LABEL	1	What are the oldest life forms alive?	microorganisms
+LABEL	0	What is the most complex of animals?	love song
+LABEL	1	Which one is biggest animal in world?	blue whales
+LABEL	1	What countrys have geothermal?	new zealand
+LABEL	0	What are some fast growing plants?	first area
+LABEL	0	What is the population of Muslims?	jama?at-i-islami :? ?q.?
+LABEL	0	What is the root language in West Africa?	sanskrit
