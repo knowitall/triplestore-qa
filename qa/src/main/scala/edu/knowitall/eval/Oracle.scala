@@ -46,9 +46,13 @@ object Oracle {
   
   def normalize(s: String): String = {
     val tokens = tokenizer(s)
-    val tagged = tagger.postagTokens(tokens)
-    val result = tagged.map(lemmatizer.lemmatizePostaggedToken(_).lemma.toLowerCase)
-    result.mkString(" ")
+    if (tokens.size > 0) {
+      val tagged = tagger.postagTokens(tokens)
+      val result = tagged.map(lemmatizer.lemmatizePostaggedToken(_).lemma.toLowerCase)
+      result.mkString(" ")
+    } else {
+      s.toLowerCase().mkString(" ")
+    }
   }
   
   def readLine(line: String): (String, String, Boolean) = {
