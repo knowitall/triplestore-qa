@@ -9,7 +9,7 @@ class QASystemLabelGenerator(oracle: Oracle, output: QASystemOutput) extends Lab
   
   override def printLabel(in: String, out: String) = {
     println(s"LABEL\t0\t$in\t$out\n")
-    for (r <- output.records; d = r.derivation) {
+    for (r <- output.qaRecordsFor(in, out).take(1); d = r.derivation) {
       val line = d.replaceAll(" => ", "\n=>\n")
       println(line)
     }
