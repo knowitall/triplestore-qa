@@ -13044,3 +13044,11 @@ LABEL	1	What countrys have geothermal?	new zealand
 LABEL	0	What are some fast growing plants?	first area
 LABEL	0	What is the population of Muslims?	jama?at-i-islami :? ?q.?
 LABEL	0	What is the root language in West Africa?	sanskrit
+LABEL	1	What is the best speaker in the world?	trio classico
+LABEL	1	What was the first year of the 20th century?	1919
+LABEL	0	What are the earliest land plant?	old
+LABEL	0	When did the rev died?	2008
+LABEL	1	When was the first computers developed?	early 1980s
+LABEL	1	What country developed Pizza?	us-new york
+LABEL	1	Where does the term computer come from?	john brunner
+LABEL	1	What is the most complex of animals?	humans
