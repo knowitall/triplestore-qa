@@ -29,14 +29,3 @@ object AnswerDerivationFeatures extends FeatureSet[AnswerDerivation, Double] {
     SortedMap.empty[String, Feature[AnswerDerivation, Double]] ++ features.map(feature => (feature.name, feature))
 }
 
-object MyTest extends App {
-  val q = args(0)
-  val qa = QASystem.getInstance().get
-  val groups = qa.answer(q)
-  for (g <- groups; d <- g.derivations) {
-    val vec = AnswerDerivationFeatures.vectorize(d)
-    val w1 = QueryTupleSimilarity.queryWords(d.parsedQuery, d.execTuple.tuple)
-    val w2 = QueryTupleSimilarity.tupleWords(d.parsedQuery, d.execTuple.tuple)
-    println(vec.map(x => "%.2f" format x).mkString("\t") + "\t" + d.answerString + "\t" + w1.mkString(" ") + "\t" + w2.mkString(" "))
-  }
-}
