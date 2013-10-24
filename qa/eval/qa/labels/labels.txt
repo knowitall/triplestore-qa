@@ -13105,3 +13105,963 @@ LABEL	1	Fats are a type of?	nutrient.e
 LABEL	0	What is the population of Muslims?	child.e
 LABEL	0	What is the national food dish of denmark?	canoe.e
 LABEL	0	What is the root language in West Africa?	vodun.e
+LABEL	1	What is the food source for amoebas?	bacteria
+LABEL	1	What is the food source for amoebas?	fungi root pathogens
+LABEL	1	What is the food source for amoebas?	paramecium
+LABEL	1	What is the food source for amoebas?	biofilms
+LABEL	1	What is the food source for amoebas?	green ones
+LABEL	1	What is the food source for amoebas?	
+LABEL	1	What is the food source for amoebas?	food particle
+LABEL	1	What is the food source for amoebas?	green amoebas
+LABEL	1	What is the food source for amoebas?	brain
+LABEL	0	What is the food source for amoebas?	phagocytosis
+LABEL	1	What is the food source for amoebas?	bacterium
+LABEL	1	What is the food source for amoebas?	sugar-water
+LABEL	0	What is the food source for amoebas?	life
+LABEL	1	What is the food source for amoebas?	smaller organisms
+LABEL	0	What is the food source for amoebas?	picture
+LABEL	0	What is the food source for amoebas?	florida
+LABEL	0	What is the food source for amoebas?	city
+LABEL	1	What is the food source for amoebas?	fungi
+LABEL	1	What is the food source for amoebas?	mrsa
+LABEL	1	What is the food source for amoebas?	wood
+LABEL	1	What is the food source for amoebas?	ambient food
+LABEL	0	Can blue herons fly?	pond
+LABEL	0	Can blue herons fly?	fish
+LABEL	0	Can blue herons fly?	backyard
+LABEL	0	Can blue herons fly?	head
+LABEL	0	Can blue herons fly?	river
+LABEL	0	Can blue herons fly?	up
+LABEL	0	Can blue herons fly?	overhead
+LABEL	0	Can blue herons fly?	marsh
+LABEL	0	Can blue herons fly?	front
+LABEL	0	Can blue herons fly?	window
+LABEL	0	Can blue herons fly?	se
+LABEL	0	Can blue herons fly?	off
+LABEL	0	Can blue herons fly?	trees
+LABEL	0	Can blue herons fly?	over
+LABEL	0	Can blue herons fly?	park
+LABEL	0	Can blue herons fly?	air
+LABEL	0	Can blue herons fly?	highlights
+LABEL	0	Can blue herons fly?	yesterday
+LABEL	0	Can blue herons fly?	lake
+LABEL	0	Can blue herons fly?	high overhead
+LABEL	0	Can blue herons fly?	retention pond
+LABEL	0	Can blue herons fly?	queen creek canyon
+LABEL	0	Can blue herons fly?	pond right
+LABEL	0	Can blue herons fly?	past
+LABEL	0	Can blue herons fly?	spruce tree
+LABEL	0	Can blue herons fly?	north
+LABEL	0	Can blue herons fly?	next cove
+LABEL	0	Can blue herons fly?	distance
+LABEL	0	Can blue herons fly?	channel
+LABEL	0	Can blue herons fly?	away
+LABEL	0	Can blue herons fly?	nw. 1250
+LABEL	0	Can blue herons fly?	last light
+LABEL	0	Can blue herons fly?	several hours
+LABEL	0	Can blue herons fly?	down
+LABEL	0	Can blue herons fly?	brackish water
+LABEL	0	Can blue herons fly?	slough
+LABEL	0	Can blue herons fly?	circle
+LABEL	0	Can blue herons fly?	nw
+LABEL	0	Can blue herons fly?	blue hill falls
+LABEL	0	Can blue herons fly?	backyards
+LABEL	0	Can blue herons fly?	ponds edge
+LABEL	0	Can blue herons fly?	placid back eddy
+LABEL	0	Can blue herons fly?	beach
+LABEL	0	Can blue herons fly?	boat dock
+LABEL	0	Can blue herons fly?	short drive
+LABEL	0	Can blue herons fly?	fishing puget sound
+LABEL	0	Can blue herons fly?	slow wing beats
+LABEL	0	Can blue herons fly?	stream
+LABEL	0	Can blue herons fly?	back forth
+LABEL	0	What is the best speaker in the world?	steve
+LABEL	0	What is the best speaker in the world?	randy
+LABEL	0	What is the best speaker in the world?	jeff
+LABEL	0	What is the best speaker in the world?	lil wayne
+LABEL	1	What is tantalum's origin?	australia
+LABEL	0	What is tantalum's origin?	effect
+LABEL	1	What was the first year of the 20th century?	1914
+LABEL	1	What was the first year of the 20th century?	1901
+LABEL	0	What was the first year of the 20th century?	more 1995
+LABEL	0	What was the first year of the 20th century?	baltic sea
+LABEL	0	What was the first year of the 20th century?	more 1996
+LABEL	1	What was the first year of the 20th century?	b-1901
+LABEL	0	What was the first year of the 20th century?	more 1997
+LABEL	0	What was the first year of the 20th century?	more 1991
+LABEL	0	What was the first year of the 20th century?	more 1998
+LABEL	0	What was the first year of the 20th century?	ukraine
+LABEL	0	What was the first year of the 20th century?	wikia 1997
+LABEL	0	What was the first year of the 20th century?	yy
+LABEL	0	What was the first year of the 20th century?	more 1958
+LABEL	0	What was the first year of the 20th century?	1939
+LABEL	0	What was the first year of the 20th century?	poland
+LABEL	0	What was the first year of the 20th century?	image
+LABEL	0	What was the first year of the 20th century?	21st
+LABEL	0	What was the first year of the 20th century?	speech
+LABEL	1	What was the first year of the 20th century?	1932
+LABEL	0	What was the first year of the 20th century?	first
+LABEL	0	What was the first year of the 20th century?	caf?
+LABEL	0	What was the first year of the 20th century?	museum
+LABEL	0	What was the first year of the 20th century?	fields
+LABEL	0	What was the first year of the 20th century?	chapter 23
+LABEL	0	What was the first year of the 20th century?	60
+LABEL	0	What was the first year of the 20th century?	celluloid
+LABEL	0	What was the first year of the 20th century?	http://en.wikipedia.org/wiki/the%2020th%20century%20fox%20hour
+LABEL	0	What was the first year of the 20th century?	response
+LABEL	0	What was the first year of the 20th century?	union hymnal
+LABEL	0	What was the first year of the 20th century?	november 9 , 1983
+LABEL	0	What was the first year of the 20th century?	http://en.wikipedia.org/wiki/paris%20in%20the%20twentieth%20century
+LABEL	0	What was the first year of the 20th century?	bible reasons
+LABEL	0	What was the first year of the 20th century?	1700
+LABEL	0	What was the first year of the 20th century?	main street
+LABEL	0	What was the first year of the 20th century?	kaua'i hawai'i
+LABEL	1	What was the first year of the 20th century?	c.1918
+LABEL	0	What was the first year of the 20th century?	san francisco
+LABEL	0	What was the first year of the 20th century?	earnest
+LABEL	0	What was the first year of the 20th century?	tax evasion
+LABEL	0	What was the first year of the 20th century?	c.1700
+LABEL	0	What was the first year of the 20th century?	realism
+LABEL	0	What was the first year of the 20th century?	c.1870
+LABEL	0	What was the first year of the 20th century?	first half
+LABEL	0	What was the first year of the 20th century?	anthology
+LABEL	0	What was the first year of the 20th century?	newest timer
+LABEL	0	What was the first year of the 20th century?	1980
+LABEL	0	What was the first year of the 20th century?	c.1980
+LABEL	0	What was the first year of the 20th century?	?1996
+LABEL	0	Where did st peter die?	1072
+LABEL	0	Where did st peter die?	car crash
+LABEL	1	Where did st peter die?	rome?s capital city
+LABEL	0	Where did st peter die?	1654
+LABEL	0	Where did st peter die?	14 sep 1911
+LABEL	0	Where did st peter die?	december 2 , 450
+LABEL	0	Where did st peter die?	royals
+LABEL	0	Where did st peter die?	homes
+LABEL	0	Where did st peter die?	roaring trade
+LABEL	0	Where did st peter die?	food preferences
+LABEL	0	Where did st peter die?	few stages
+LABEL	0	Where did st peter die?	so
+LABEL	0	Where did st peter die?	god
+LABEL	0	Where did st peter die?	collaboration
+LABEL	0	Where did st peter die?	christmas
+LABEL	0	Where did st peter die?	last year?s maac tournament
+LABEL	0	Where did st peter die?	saturday
+LABEL	0	Where did st peter die?	fabbrica
+LABEL	0	Where did st peter die?	friday
+LABEL	0	Where did st peter die?	valley
+LABEL	0	Where did st peter die?	bishops
+LABEL	0	Where did st peter die?	active service
+LABEL	0	Where did st peter die?	acts 2
+LABEL	0	Who make decisions in a Market Economy?	united states
+LABEL	0	Who make decisions in a Market Economy?	russia
+LABEL	0	Who make decisions in a Market Economy?	hungary
+LABEL	0	Who make decisions in a Market Economy?	turkey
+LABEL	0	Who make decisions in a Market Economy?	america
+LABEL	0	Who make decisions in a Market Economy?	kenya
+LABEL	0	Who make decisions in a Market Economy?	slovakia
+LABEL	0	Who make decisions in a Market Economy?	mexico
+LABEL	0	Who make decisions in a Market Economy?	cyprus
+LABEL	0	Who make decisions in a Market Economy?	system
+LABEL	0	Who make decisions in a Market Economy?	european guy america
+LABEL	0	Who make decisions in a Market Economy?	economy
+LABEL	0	Who make decisions in a Market Economy?	u.s.
+LABEL	0	Who make decisions in a Market Economy?	bulgaria
+LABEL	0	Who make decisions in a Market Economy?	india
+LABEL	0	Who make decisions in a Market Economy?	bulgarian economy
+LABEL	0	Who make decisions in a Market Economy?	malta
+LABEL	0	Who make decisions in a Market Economy?	?china
+LABEL	0	Who make decisions in a Market Economy?	china ?s
+LABEL	0	Who make decisions in a Market Economy?	?our problem
+LABEL	0	Who make decisions in a Market Economy?	uae
+LABEL	0	Who make decisions in a Market Economy?	romania
+LABEL	0	Who make decisions in a Market Economy?	iceland
+LABEL	0	Who make decisions in a Market Economy?	thailand
+LABEL	0	Who make decisions in a Market Economy?	eu cannot
+LABEL	0	Who make decisions in a Market Economy?	czech republic
+LABEL	0	Who make decisions in a Market Economy?	economic criteria croatia
+LABEL	0	Who make decisions in a Market Economy?	very typical scenario
+LABEL	0	Who make decisions in a Market Economy?	destination
+LABEL	0	Who make decisions in a Market Economy?	today vietnam
+LABEL	0	Who make decisions in a Market Economy?	lithuania
+LABEL	0	Who make decisions in a Market Economy?	producer
+LABEL	0	Who make decisions in a Market Economy?	country
+LABEL	0	Who make decisions in a Market Economy?	internet
+LABEL	0	Who make decisions in a Market Economy?	canada
+LABEL	0	Who make decisions in a Market Economy?	estonia
+LABEL	0	Who make decisions in a Market Economy?	croatia
+LABEL	0	Who make decisions in a Market Economy?	losers
+LABEL	0	Who make decisions in a Market Economy?	poland
+LABEL	0	Who make decisions in a Market Economy?	economy mexico
+LABEL	0	Who make decisions in a Market Economy?	michael watts
+LABEL	0	Who make decisions in a Market Economy?	new zealand
+LABEL	0	Who make decisions in a Market Economy?	capitalism
+LABEL	0	Who make decisions in a Market Economy?	odense
+LABEL	0	Who make decisions in a Market Economy?	repayment
+LABEL	0	Who make decisions in a Market Economy?	capitalist economy
+LABEL	0	Who make decisions in a Market Economy?	economic criteria turkey
+LABEL	0	Who make decisions in a Market Economy?	malaysia
+LABEL	0	Who make decisions in a Market Economy?	cuba
+LABEL	0	What is the common plants in grassland?	plant
+LABEL	0	What is the common plants in grassland?	plants
+LABEL	1	What is the common plants in grassland?	flower
+LABEL	1	What is the common plants in grassland?	flowers
+LABEL	1	What is the common plants in grassland?	wild flower
+LABEL	1	What is the common plants in grassland?	wild flowers
+LABEL	1	What is the common plants in grassland?	oak_species
+LABEL	1	What is the common plants in grassland?	? grass
+LABEL	1	What is the common plants in grassland?	large leaf trees
+LABEL	1	What is the common plants in grassland?	grasses
+LABEL	1	What is the common plants in grassland?	3 flowers
+LABEL	1	What is the common plants in grassland?	large trees
+LABEL	1	What is the common plants in grassland?	large oak trees
+LABEL	1	What is the common plants in grassland?	large shade trees
+LABEL	1	What is the common plants in grassland?	large pine trees
+LABEL	1	What is the common plants in grassland?	25 flowers
+LABEL	1	What is the common plants in grassland?	zinnias
+LABEL	1	What is the common plants in grassland?	wild plants
+LABEL	1	What is the common plants in grassland?	60 flowers
+LABEL	1	What is the common plants in grassland?	2-grass
+LABEL	1	What is the common plants in grassland?	host plants
+LABEL	1	What is the common plants in grassland?	3 grass
+LABEL	1	What is the common plants in grassland?	grass
+LABEL	1	What is the common plants in grassland?	large tree
+LABEL	1	What is the common plants in grassland?	wide flower
+LABEL	1	What is the common plants in grassland?	large cat trees
+LABEL	1	What is the common plants in grassland?	large palm trees
+LABEL	1	What is the common plants in grassland?	wall flowers
+LABEL	1	What is the common plants in grassland?	large banzai trees
+LABEL	1	What is the common plants in grassland?	field flowers
+LABEL	1	What is the common plants in grassland?	1-grass
+LABEL	1	What is the common plants in grassland?	zinnia
+LABEL	0	What is the common plants in grassland?	individual plants
+LABEL	1	What is the common plants in grassland?	ray flowers
+LABEL	1	What is the common plants in grassland?	mountain mahogany
+LABEL	1	What is the common plants in grassland?	aza flowers
+LABEL	1	What is the common plants in grassland?	7 flowers
+LABEL	1	What is the common plants in grassland?	trees shrubs
+LABEL	1	What is the common plants in grassland?	tree?s
+LABEL	0	What are the classes for the indian caste system?	key points
+LABEL	0	What are the classes for the indian caste system?	illustration
+LABEL	0	Is the human body matter?	program
+LABEL	0	Is the human body matter?	buddhism
+LABEL	1	What are the earliest land plant?	liverworts
+LABEL	1	What are the earliest land plant?	clones
+LABEL	1	What are the earliest land plant?	alfalfa
+LABEL	1	What are the earliest land plant?	irises
+LABEL	1	What are the earliest land plant?	leafy spurge
+LABEL	0	What are the earliest land plant?	2012 corn crop
+LABEL	0	What are the earliest land plant?	prolific producer
+LABEL	1	What are the earliest land plant?	magnolias
+LABEL	0	What are the earliest land plant?	introduction garlic
+LABEL	1	What are the earliest land plant?	tuberose
+LABEL	1	What are the earliest land plant?	ferns
+LABEL	1	What are the earliest land plant?	bryophytes
+LABEL	1	What are the earliest land plant?	rosemary
+LABEL	1	What are the earliest land plant?	snow peas
+LABEL	1	What are the earliest land plant?	creeper
+LABEL	1	What are the earliest land plant?	camellia japonica
+LABEL	0	What are the earliest land plant?	?the highest yields
+LABEL	0	What are the earliest land plant?	origin :it
+LABEL	1	What are the earliest land plant?	edible fruits
+LABEL	1	What are the earliest land plant?	lotus
+LABEL	0	What are the earliest land plant?	yields
+LABEL	0	What are the earliest land plant?	acres
+LABEL	0	When and where were the first forms of money made?	commodity money
+LABEL	0	When and where were the first forms of money made?	banknotes
+LABEL	1	What do you call a gangs leader?	gyrus
+LABEL	0	What do you call a gangs leader?	bowen who?s steven
+LABEL	0	When did spaghetti come to the us?	favorite food
+LABEL	0	When did spaghetti come to the us?	dinner
+LABEL	0	When did spaghetti come to the us?	trance
+LABEL	0	When did spaghetti come to the us?	pastas
+LABEL	0	When did spaghetti come to the us?	simplest one
+LABEL	0	When did spaghetti come to the us?	recipe
+LABEL	0	When did spaghetti come to the us?	dinner tonight
+LABEL	0	When did spaghetti come to the us?	top family main dishes
+LABEL	0	When did spaghetti come to the us?	pasta al burro e parmigiano
+LABEL	0	When did spaghetti come to the us?	dinner choice
+LABEL	0	When did spaghetti come to the us?	lasagna
+LABEL	0	When did spaghetti come to the us?	waffles women
+LABEL	0	When did spaghetti come to the us?	wednesday night
+LABEL	0	When did spaghetti come to the us?	menu
+LABEL	0	When did spaghetti come to the us?	main dish
+LABEL	0	When did spaghetti come to the us?	hands-down winner
+LABEL	0	When did spaghetti come to the us?	special
+LABEL	0	When did spaghetti come to the us?	ballyard
+LABEL	0	When did spaghetti come to the us?	purple 8. pet food
+LABEL	0	When did spaghetti come to the us?	5-way
+LABEL	0	When did spaghetti come to the us?	10-word challenge
+LABEL	0	When did spaghetti come to the us?	worms
+LABEL	0	When did spaghetti come to the us?	adulthood
+LABEL	0	When did spaghetti come to the us?	fav food
+LABEL	0	When did spaghetti come to the us?	night
+LABEL	0	When did spaghetti come to the us?	pasta
+LABEL	0	When did spaghetti come to the us?	region
+LABEL	0	When did spaghetti come to the us?	next
+LABEL	0	When did spaghetti come to the us?	food
+LABEL	0	When did spaghetti come to the us?	wiring
+LABEL	0	When did spaghetti come to the us?	day
+LABEL	0	When did spaghetti come to the us?	hcg friendly marinara sauce
+LABEL	0	When did spaghetti come to the us?	current code
+LABEL	0	When did spaghetti come to the us?	john?s favorite meals
+LABEL	0	When did spaghetti come to the us?	supper
+LABEL	0	When did spaghetti come to the us?	lunch
+LABEL	0	When did spaghetti come to the us?	monday night
+LABEL	0	When did spaghetti come to the us?	third night
+LABEL	0	When did spaghetti come to the us?	classic italian seafood recipe
+LABEL	0	When did spaghetti come to the us?	cincinnati chili
+LABEL	0	When did spaghetti come to the us?	left side
+LABEL	0	When did spaghetti come to the us?	list
+LABEL	0	When did spaghetti come to the us?	available pasta cuts
+LABEL	0	When did spaghetti come to the us?	basic 3-way
+LABEL	0	When did spaghetti come to the us?	class
+LABEL	0	When did spaghetti come to the us?	last night
+LABEL	0	When did spaghetti come to the us?	code geass ? characters
+LABEL	0	When did spaghetti come to the us?	hand
+LABEL	0	When did spaghetti come to the us?	oldest
+LABEL	0	Which country has the best water?	home
+LABEL	1	Which country has the best water?	jamaica
+LABEL	1	Which country has the best water?	panama
+LABEL	1	Which country has the best water?	denmark
+LABEL	1	Which country has the best water?	australia
+LABEL	1	Which country has the best water?	aruba
+LABEL	1	Which country has the best water?	finland
+LABEL	1	Which country has the best water?	us-new york
+LABEL	0	Which country has the best water?	san francisco
+LABEL	0	Which country has the best water?	los angeles
+LABEL	0	Which country has the best water?	st. louis
+LABEL	0	Which country has the best water?	st. lawrence county
+LABEL	0	Which country has the best water?	denver
+LABEL	1	Which country has the best water?	us-indiana
+LABEL	1	Which country has the best water?	us-south carolina
+LABEL	0	Which country has the best water?	kinney county
+LABEL	1	Which country has the best water?	us-washington
+LABEL	0	Which country has the best water?	new york city
+LABEL	1	Which country has the best water?	uk, denmark
+LABEL	0	Which country has the best water?	kansas city
+LABEL	0	Which country has the best water?	indiana
+LABEL	0	Which country has the best water?	washington
+LABEL	0	Which country has the best water?	milk
+LABEL	0	Which country has the best water?	bc
+LABEL	0	Which country has the best water?	brooklyn
+LABEL	0	Which country has the best water?	lakes
+LABEL	0	Which country has the best water?	grayland
+LABEL	0	Which country has the best water?	st___lawrence_county
+LABEL	0	Which country has the best water?	village
+LABEL	1	Which country has the best water?	central scotland
+LABEL	0	Which country has the best water?	seattle
+LABEL	0	Which country has the best water?	old washington
+LABEL	0	Which country has the best water?	cincinnati
+LABEL	0	Which country has the best water?	new york county
+LABEL	0	Which country has the best water?	minneapolis
+LABEL	0	Which country has the best water?	washington co
+LABEL	0	Which country has the best water?	bay st. louis
+LABEL	0	Which country has the best water?	stlawrence county
+LABEL	0	Which country has the best water?	villages
+LABEL	0	Which country has the best water?	henry
+LABEL	0	Which country has the best water?	oklahoma city
+LABEL	0	Which country has the best water?	maine
+LABEL	0	Which country has the best water?	washington town
+LABEL	0	Which country has the best water?	st lawrence county
+LABEL	1	When was T. E. Lawrence born?	aug. 15 , 1888
+LABEL	1	Fun games for kids?	online kid games
+LABEL	1	Fun games for kids?	tic tac toe safari
+LABEL	1	Fun games for kids?	twister
+LABEL	1	Fun games for kids?	dragon
+LABEL	1	Fun games for kids?	birthday cake memory
+LABEL	1	Fun games for kids?	match
+LABEL	1	Fun games for kids?	melissa gastineau popmath
+LABEL	1	Fun games for kids?	20x10 multibubbles
+LABEL	1	Fun games for kids?	math critters
+LABEL	1	Fun games for kids?	emergency supply kit
+LABEL	1	Fun games for kids?	halloween pumpkin bowling bowling
+LABEL	1	Fun games for kids?	tag
+LABEL	1	Fun games for kids?	playhouse
+LABEL	1	Fun games for kids?	ben 10 games online
+LABEL	1	Fun games for kids?	balls
+LABEL	0	In baseball what is the Green Monster?	red sox
+LABEL	0	In baseball what is the Green Monster?	tall
+LABEL	1	In baseball what is the Green Monster?	left field
+LABEL	0	In baseball what is the Green Monster?	envy
+LABEL	0	In baseball what is the Green Monster?	stars stripes
+LABEL	0	In baseball what is the Green Monster?	iago
+LABEL	0	In baseball what is the Green Monster?	mark ruffalo
+LABEL	0	In baseball what is the Green Monster?	park
+LABEL	1	In baseball what is the Green Monster?	west end field
+LABEL	0	In baseball what is the Green Monster?	professional
+LABEL	0	In baseball what is the Green Monster?	othello
+LABEL	0	In baseball what is the Green Monster?	july green monster
+LABEL	0	In baseball what is the Green Monster?	high
+LABEL	0	In baseball what is the Green Monster?	american flag
+LABEL	1	In baseball what is the Green Monster?	fenway park
+LABEL	0	In baseball what is the Green Monster?	temporary advertising signs
+LABEL	0	In baseball what is the Green Monster?	lot
+LABEL	0	In baseball what is the Green Monster?	10 meters
+LABEL	0	In baseball what is the Green Monster?	jealousy !it
+LABEL	0	In baseball what is the Green Monster?	net
+LABEL	0	In baseball what is the Green Monster?	dom dimaggio
+LABEL	0	In baseball what is the Green Monster?	homer
+LABEL	1	In baseball what is the Green Monster?	any ball park
+LABEL	0	In baseball what is the Green Monster?	mal
+LABEL	1	In baseball what is the Green Monster?	fence
+LABEL	0	In baseball what is the Green Monster?	turn
+LABEL	0	In baseball what is the Green Monster?	cocktails
+LABEL	0	In baseball what is the Green Monster?	picture
+LABEL	0	In baseball what is the Green Monster?	gates
+LABEL	0	In baseball what is the Green Monster?	farmer margie
+LABEL	0	In baseball what is the Green Monster?	ted
+LABEL	0	In baseball what is the Green Monster?	back weeds
+LABEL	0	In baseball what is the Green Monster?	person
+LABEL	0	In baseball what is the Green Monster?	scar
+LABEL	0	In baseball what is the Green Monster?	boston red sox game
+LABEL	0	In baseball what is the Green Monster?	molori
+LABEL	0	In baseball what is the Green Monster?	zr uzr
+LABEL	0	In baseball what is the Green Monster?	home plate
+LABEL	0	In baseball what is the Green Monster?	dustin pedroia
+LABEL	0	In baseball what is the Green Monster?	two radar displays
+LABEL	1	In baseball what is the Green Monster?	field
+LABEL	0	In baseball what is the Green Monster?	wind
+LABEL	0	In baseball what is the Green Monster?	just 315 feet
+LABEL	0	In baseball what is the Green Monster?	book riot
+LABEL	0	In baseball what is the Green Monster?	gene
+LABEL	0	In baseball what is the Green Monster?	hit home
+LABEL	0	In baseball what is the Green Monster?	halloween tradition
+LABEL	0	In baseball what is the Green Monster?	weekend
+LABEL	0	In baseball what is the Green Monster?	left
+LABEL	1	What did paul dirac discovered?	vacuum
+LABEL	0	When did the rev died?	monday
+LABEL	1	When did the rev died?	monday 7
+LABEL	1	When did the rev died?	sunday
+LABEL	1	When did the rev died?	december 02
+LABEL	1	When did the rev died?	december '04
+LABEL	1	When did the rev died?	december 15
+LABEL	1	When did the rev died?	aug. 11
+LABEL	1	When did the rev died?	december '96
+LABEL	1	When did the rev died?	december 94
+LABEL	1	When did the rev died?	july 2-7
+LABEL	1	When did the rev died?	december 3
+LABEL	1	When did the rev died?	31 december
+LABEL	1	When did the rev died?	december 04
+LABEL	1	When did the rev died?	december 98
+LABEL	1	When did the rev died?	december 10
+LABEL	1	When did the rev died?	july 25-27
+LABEL	1	When did the rev died?	december 2.
+LABEL	1	When did the rev died?	december '01
+LABEL	1	When did the rev died?	december 06
+LABEL	1	When did the rev died?	december 17
+LABEL	1	When did the rev died?	saturday 10
+LABEL	1	When did the rev died?	december '98
+LABEL	1	When did the rev died?	december 95
+LABEL	1	When did the rev died?	december 14
+LABEL	1	When did the rev died?	december '09
+LABEL	1	When did the rev died?	may 15
+LABEL	1	When did the rev died?	july 27-27
+LABEL	1	When did the rev died?	december '95
+LABEL	1	When did the rev died?	december__06
+LABEL	1	When did the rev died?	december '05
+LABEL	1	When did the rev died?	december '93
+LABEL	1	When did the rev died?	december
+LABEL	1	When did the rev died?	december 23
+LABEL	1	When did the rev died?	december 21
+LABEL	1	When did the rev died?	december 00
+LABEL	1	When did the rev died?	december?6
+LABEL	0	When did the rev died?	england
+LABEL	1	When did the rev died?	december 99
+LABEL	1	When did the rev died?	december 05
+LABEL	1	When did the rev died?	december 24
+LABEL	1	When did the rev died?	december 7.
+LABEL	1	When did the rev died?	july 27
+LABEL	1	When did the rev died?	july 27th
+LABEL	1	When did the rev died?	december '03
+LABEL	1	When did the rev died?	december 18
+LABEL	1	When did the rev died?	december 5
+LABEL	1	When did the rev died?	december 22
+LABEL	1	When did the rev died?	1998
+LABEL	0	Are snakes warm blooded or cold?	2011
+LABEL	1	What do calvinists teach?	sovereign grace
+LABEL	1	What do calvinists teach?	bible
+LABEL	1	What do calvinists teach?	distinction
+LABEL	0	What do calvinists teach?	princeton
+LABEL	0	What do calvinists teach?	verses
+LABEL	0	What do calvinists teach?	sometimes
+LABEL	0	What do calvinists teach?	calvin
+LABEL	1	What do calvinists teach?	impassibility
+LABEL	1	What do calvinists teach?	effectual forgiveness
+LABEL	1	What do calvinists teach?	different gospel
+LABEL	1	What is the chemical composition of 14 karat gold?	gold
+LABEL	0	What is the chemical composition of 14 karat gold?	clasp
+LABEL	1	What is the chemical composition of 14 karat gold?	nickel
+LABEL	0	What is the chemical composition of 14 karat gold?	jewelry
+LABEL	0	What is the chemical composition of 14 karat gold?	pendant
+LABEL	0	What is the chemical composition of 14 karat gold?	initial posts
+LABEL	0	What is the chemical composition of 14 karat gold?	pearl earrings
+LABEL	0	What is the chemical composition of 14 karat gold?	urn jewelry
+LABEL	0	What is the chemical composition of 14 karat gold?	piece
+LABEL	0	What is the chemical composition of 14 karat gold?	bezel
+LABEL	0	What is the chemical composition of 14 karat gold?	small chai pendant
+LABEL	0	What is the chemical composition of 14 karat gold?	large chai pendant
+LABEL	0	What is the chemical composition of 14 karat gold?	much
+LABEL	0	What is the chemical composition of 14 karat gold?	pendants
+LABEL	0	What is the chemical composition of 14 karat gold?	classic jewelers
+LABEL	1	What is the chemical composition of 14 karat gold?	metal
+LABEL	0	What is the chemical composition of 14 karat gold?	evangelist bill graham
+LABEL	0	What is the chemical composition of 14 karat gold?	frame pin
+LABEL	0	What is the chemical composition of 14 karat gold?	libertad
+LABEL	0	What is the chemical composition of 14 karat gold?	genuine amethyst stud earrings
+LABEL	0	What is the chemical composition of 14 karat gold?	fork logo
+LABEL	0	What is the chemical composition of 14 karat gold?	orolatina
+LABEL	1	What is the chemical composition of 14 karat gold?	sterling silver
+LABEL	0	What is the chemical composition of 14 karat gold?	set
+LABEL	0	What is the chemical composition of 14 karat gold?	drop bezel
+LABEL	0	What is the chemical composition of 14 karat gold?	figure
+LABEL	0	What is the chemical composition of 14 karat gold?	14 karat gold filled piece
+LABEL	0	What is the chemical composition of 14 karat gold?	outer surface
+LABEL	0	What is the chemical composition of 14 karat gold?	posts
+LABEL	0	What is the chemical composition of 14 karat gold?	shank
+LABEL	0	What is the chemical composition of 14 karat gold?	lorgnette
+LABEL	0	What is the chemical composition of 14 karat gold?	offer
+LABEL	0	What is the chemical composition of 14 karat gold?	genuine peridot stud earrings
+LABEL	0	What is the chemical composition of 14 karat gold?	iconic rolex oyster case
+LABEL	0	What is the chemical composition of 14 karat gold?	cup
+LABEL	0	What is the chemical composition of 14 karat gold?	laser
+LABEL	0	What is the chemical composition of 14 karat gold?	stylish earring
+LABEL	0	What is the chemical composition of 14 karat gold?	earrings
+LABEL	1	What is the chemical composition of 14 karat gold?	58 % gold
+LABEL	0	What is the chemical composition of 14 karat gold?	rhodolite stud earrings
+LABEL	0	What is the chemical composition of 14 karat gold?	14 parts
+LABEL	0	What is the chemical composition of 14 karat gold?	cross pendant
+LABEL	0	What is the chemical composition of 14 karat gold?	fountain pen nibs
+LABEL	0	What is the chemical composition of 14 karat gold?	graduated marquis gems
+LABEL	0	What is the chemical composition of 14 karat gold?	58.3 %
+LABEL	0	What is the chemical composition of 14 karat gold?	band
+LABEL	0	What is the chemical composition of 14 karat gold?	energetic symbols
+LABEL	0	What is the chemical composition of 14 karat gold?	lever
+LABEL	0	What is the chemical composition of 14 karat gold?	product
+LABEL	1	When was Arthur Ashe born?	1943
+LABEL	0	When was Arthur Ashe born?	finals
+LABEL	0	When was Arthur Ashe born?	pat
+LABEL	1	When was Arthur Ashe born?	july 10 , 1943
+LABEL	0	When was Arthur Ashe born?	arthur ashe stadium
+LABEL	0	When was Arthur Ashe born?	virus
+LABEL	0	When was Arthur Ashe born?	american express
+LABEL	0	When was Arthur Ashe born?	tournament
+LABEL	0	When was Arthur Ashe born?	second shoes revival
+LABEL	0	When was Arthur Ashe born?	black history ...presented
+LABEL	0	When was Arthur Ashe born?	tennis
+LABEL	0	When was Arthur Ashe born?	finalist
+LABEL	0	When was Arthur Ashe born?	newest monument
+LABEL	0	When was Arthur Ashe born?	arthur ashe athletic center
+LABEL	0	When was Arthur Ashe born?	us open
+LABEL	0	When was Arthur Ashe born?	aids syndrome
+LABEL	0	When was Arthur Ashe born?	competition
+LABEL	0	When was Arthur Ashe born?	29 sybille bammer
+LABEL	0	When was Arthur Ashe born?	grace
+LABEL	0	When was Arthur Ashe born?	moutoussamy-ashe
+LABEL	0	When was Arthur Ashe born?	nation
+LABEL	0	When was Arthur Ashe born?	1990
+LABEL	0	When was Arthur Ashe born?	berhane
+LABEL	0	When was Arthur Ashe born?	wife
+LABEL	0	When was Arthur Ashe born?	mind
+LABEL	0	When was Arthur Ashe born?	most famous examples
+LABEL	0	When was Arthur Ashe born?	gabou
+LABEL	0	When was Arthur Ashe born?	awards
+LABEL	0	When was Arthur Ashe born?	omg run
+LABEL	0	When was Arthur Ashe born?	njtl
+LABEL	0	When was Arthur Ashe born?	aids
+LABEL	0	When was Arthur Ashe born?	teammate
+LABEL	0	When was Arthur Ashe born?	frank garry
+LABEL	0	When was Arthur Ashe born?	citi field
+LABEL	0	When was Arthur Ashe born?	andre
+LABEL	0	When was Arthur Ashe born?	conjunction
+LABEL	0	When was Arthur Ashe born?	quddus
+LABEL	0	When was Arthur Ashe born?	winners
+LABEL	0	When was Arthur Ashe born?	yehyawi
+LABEL	0	When was Arthur Ashe born?	harvard yard
+LABEL	0	When was Arthur Ashe born?	hotel
+LABEL	0	When was Arthur Ashe born?	one contender
+LABEL	0	When was Arthur Ashe born?	first black male champion
+LABEL	0	When was Arthur Ashe born?	espn analyst jim valvano
+LABEL	0	When was Arthur Ashe born?	property
+LABEL	0	When was Arthur Ashe born?	flight 93
+LABEL	0	When was Arthur Ashe born?	match
+LABEL	0	When was Arthur Ashe born?	ruth c. browne
+LABEL	0	When was Arthur Ashe born?	pair
+LABEL	0	What county is Mesa Arizona in?	performance amc dealer
+LABEL	0	What county is Mesa Arizona in?	america
+LABEL	0	What county is Mesa Arizona in?	hanks
+LABEL	0	What county is Mesa Arizona in?	audra
+LABEL	0	What county is Mesa Arizona in?	red mesa
+LABEL	0	What county is Mesa Arizona in?	arizona temple
+LABEL	0	What county is Mesa Arizona in?	mesa, az
+LABEL	1	When and where was baseball invented?	canada
+LABEL	1	When and where was baseball invented?	america
+LABEL	1	When and where was baseball invented?	1839
+LABEL	1	When and where was baseball invented?	cooperstown
+LABEL	1	When and where was baseball invented?	canada -
+LABEL	1	When and where was baseball invented?	canada.
+LABEL	1	When and where was baseball invented?	uk, england
+LABEL	1	When and where was baseball invented?	? america
+LABEL	1	When and where was baseball invented?	maine
+LABEL	1	When and where was baseball invented?	uk, america
+LABEL	1	When and where was baseball invented?	1883
+LABEL	1	When and where was baseball invented?	brooklyn
+LABEL	1	When and where was baseball invented?	1964
+LABEL	1	When and where was baseball invented?	quaint rural town
+LABEL	1	When and where was baseball invented?	1834 tilton
+LABEL	0	When and where was baseball invented?	men
+LABEL	0	When and where was baseball invented?	1920s
+LABEL	0	When and where was baseball invented?	1884
+LABEL	1	When and where was baseball invented?	1839 ~ contrary
+LABEL	0	When and where was baseball invented?	ryan theriot
+LABEL	1	What is the other name for the silver?	sasanian
+LABEL	0	What is the other name for the silver?	paypal
+LABEL	0	What is the other name for the silver?	film
+LABEL	0	What is the other name for the silver?	stock
+LABEL	0	What is the other name for the silver?	flames
+LABEL	0	What is the other name for the silver?	shafts
+LABEL	0	What is the other name for the silver?	treasuries
+LABEL	1	What is the world's best video game?	sims
+LABEL	1	What is the world's best video game?	wii
+LABEL	1	Which island is the most popular?	maui
+LABEL	1	Which island is the most popular?	corfu
+LABEL	1	Which island is the most popular?	rhodes
+LABEL	1	Which island is the most popular?	oahu
+LABEL	1	Which island is the most popular?	mykonos
+LABEL	1	Which island is the most popular?	jamaica
+LABEL	1	Which island is the most popular?	kauai
+LABEL	1	Which island is the most popular?	bali
+LABEL	1	Which island is the most popular?	barbados
+LABEL	1	Which island is the most popular?	big island
+LABEL	1	Which island is the most popular?	sylt
+LABEL	1	Which island is the most popular?	kefalonia
+LABEL	1	Which island is the most popular?	phuket
+LABEL	1	Which island is the most popular?	cuba
+LABEL	1	Which island is the most popular?	hamilton island
+LABEL	1	Which island is the most popular?	st . lucia
+LABEL	1	Which island is the most popular?	koh samui
+LABEL	1	Which island is the most popular?	bora bora
+LABEL	1	Which island is the most popular?	antigua
+LABEL	1	Which island is the most popular?	ionian
+LABEL	1	Which island is the most popular?	hawaii
+LABEL	1	Which island is the most popular?	mallorca
+LABEL	1	Which island is the most popular?	2011 oahu
+LABEL	0	Which island is the most popular?	largest
+LABEL	1	Which island is the most popular?	2010 gran canaria
+LABEL	1	Which island is the most popular?	crete
+LABEL	1	Which island is the most popular?	samos
+LABEL	1	Which island is the most popular?	phuket island
+LABEL	1	Which island is the most popular?	paradise tour stradbroke island
+LABEL	1	Which island is the most popular?	sal
+LABEL	1	Which island is the most popular?	grand caymen island
+LABEL	1	Which island is the most popular?	taveuni island
+LABEL	1	Which island is the most popular?	rab
+LABEL	1	Which island is the most popular?	boracay island
+LABEL	1	Which island is the most popular?	grand bahama
+LABEL	1	Which island is the most popular?	ibiza
+LABEL	1	Which island is the most popular?	mayne saturna
+LABEL	1	Which island is the most popular?	hvar
+LABEL	1	Which island is the most popular?	kauai vacations
+LABEL	1	Which island is the most popular?	santorini thira
+LABEL	1	Which island is the most popular?	zakynthos
+LABEL	1	Which island is the most popular?	paradise samui
+LABEL	1	Which island is the most popular?	mali lo?inj
+LABEL	1	Which island is the most popular?	lumut
+LABEL	1	Which island is the most popular?	paradise islands
+LABEL	1	Which island is the most popular?	tenerife
+LABEL	1	Which island is the most popular?	heavenly beaches
+LABEL	1	Which island is the most popular?	provo
+LABEL	1	Which island is the most popular?	cousin island
+LABEL	0	What are bacterial cells classified as?	protein
+LABEL	0	What are bacterial cells classified as?	virus
+LABEL	0	What are bacterial cells classified as?	molecule
+LABEL	0	What are bacterial cells classified as?	example
+LABEL	0	What are bacterial cells classified as?	tegrated viral dna
+LABEL	0	What are bacterial cells classified as?	gas vacuoles
+LABEL	0	What are bacterial cells classified as?	pim
+LABEL	0	What are bacterial cells classified as?	peptidoglycan 4
+LABEL	0	What are bacterial cells classified as?	thousands
+LABEL	0	What are bacterial cells classified as?	plasmid
+LABEL	0	What are bacterial cells classified as?	examples
+LABEL	0	What are bacterial cells classified as?	5,000 different genes
+LABEL	0	What are bacterial cells classified as?	chitin
+LABEL	0	What are bacterial cells classified as?	10,000 copies
+LABEL	0	What are bacterial cells classified as?	peptidoglycan
+LABEL	0	When was the first computers developed?	1961
+LABEL	0	When was the first computers developed?	united states
+LABEL	1	When was the first computers developed?	1951
+LABEL	0	When was the first computers developed?	1950s
+LABEL	0	When was the first computers developed?	order
+LABEL	0	When was the first computers developed?	
+LABEL	0	When was the first computers developed?	secret
+LABEL	0	When was the first computers developed?	late 1960s
+LABEL	0	When was the first computers developed?	manchester
+LABEL	0	When was the first computers developed?	india
+LABEL	0	When was the first computers developed?	collaboration
+LABEL	0	When was the first computers developed?	massachusetts
+LABEL	1	When was the first computers developed?	early 1950
+LABEL	1	When was the first computers developed?	1940s
+LABEL	0	When was the first computers developed?	ukraine
+LABEL	0	When was the first computers developed?	cooperation
+LABEL	0	When was the first computers developed?	america
+LABEL	0	When was the first computers developed?	countries
+LABEL	0	When was the first computers developed?	1970s
+LABEL	0	When was the first computers developed?	tianjin
+LABEL	0	When was the first computers developed?	record-breaking term
+LABEL	0	When was the first computers developed?	variety
+LABEL	0	When was the first computers developed?	japan
+LABEL	0	When was the first computers developed?	bielefeld
+LABEL	0	When was the first computers developed?	1972
+LABEL	0	When was the first computers developed?	1964
+LABEL	0	When was the first computers developed?	software
+LABEL	1	When was the first computers developed?	1970
+LABEL	0	When was the first computers developed?	1973
+LABEL	1	When was the first computers developed?	1981
+LABEL	0	When was the first computers developed?	england
+LABEL	1	When was the first computers developed?	1980s
+LABEL	0	When was the first computers developed?	department
+LABEL	1	When was the first computers developed?	50s
+LABEL	0	When was the first computers developed?	accordance
+LABEL	0	When was the first computers developed?	uk
+LABEL	0	When was the first computers developed?	industry
+LABEL	0	When was the first computers developed?	1984
+LABEL	0	When was the first computers developed?	chicago
+LABEL	0	When was the first computers developed?	gauss
+LABEL	0	When was the first computers developed?	1991
+LABEL	0	When was the first computers developed?	xml
+LABEL	0	When was the first computers developed?	days
+LABEL	0	When was the first computers developed?	host computer
+LABEL	0	When was the first computers developed?	theme
+LABEL	0	When was the first computers developed?	canada
+LABEL	0	When was the first computers developed?	1960s 1970s
+LABEL	0	When was the first computers developed?	context
+LABEL	1	What country developed Pizza?	pakistan
+LABEL	0	What country developed Pizza?	las vegas
+LABEL	1	What country developed Pizza?	italy(
+LABEL	1	What country developed Pizza?	pakistan.
+LABEL	1	What is the best stock?	dell computer
+LABEL	1	What is the best stock?	mcdonald?s
+LABEL	1	What is the best stock?	automaker stocks
+LABEL	0	What is the best stock?	very high position
+LABEL	1	What is the best stock?	bac
+LABEL	0	What is the best stock?	2006
+LABEL	0	What is the best stock?	june
+LABEL	0	What is the best stock?	cash
+LABEL	0	What is the best stock?	reducing taxes
+LABEL	0	What is the best stock?	group choices 2007
+LABEL	1	What is the best stock?	chrysler
+LABEL	0	What is the best stock?	electrical supply house
+LABEL	1	What is the best stock?	highland gold
+LABEL	1	What is the best stock?	reebok
+LABEL	0	What is the best stock?	hubpage
+LABEL	0	What is the best stock?	ski higher
+LABEL	0	What is the best stock?	idea
+LABEL	0	What is the best stock?	tie
+LABEL	0	What is the best stock?	t hem
+LABEL	0	What is the best stock?	mee
+LABEL	0	What is the best stock?	2008-2010
+LABEL	0	What is the best stock?	audio ports any mac
+LABEL	0	What is the best stock?	home builders
+LABEL	0	What is the best stock?	cent
+LABEL	0	What is the best stock?	raising tax rates
+LABEL	1	What is the best stock?	cyclicals
+LABEL	0	What is the best stock?	remaining 5 %
+LABEL	0	What is the best stock?	12-month period
+LABEL	0	What is the best stock?	sector
+LABEL	0	What is the best stock?	background
+LABEL	0	What is the best stock?	night
+LABEL	0	What is the best stock?	fabulous stocks
+LABEL	0	What is the best stock?	stock
+LABEL	0	What is the best stock?	storm
+LABEL	0	What is the best stock?	superior
+LABEL	0	What is the best stock?	recent years
+LABEL	0	What is the best stock?	polyvinyl chloride
+LABEL	0	What is the best stock?	corn sugar beets
+LABEL	0	What is the best stock?	adsense
+LABEL	0	What is the best stock?	tidy profit
+LABEL	0	What is the best stock?	goal
+LABEL	0	What is the best stock?	natalie
+LABEL	1	What is the best stock?	green mountain
+LABEL	1	What is the best stock?	lexg
+LABEL	0	What is the best stock?	alphaclone fund managers
+LABEL	1	What is the best stock?	capgemini
+LABEL	0	What is the best stock?	2007
+LABEL	0	What is the best stock?	fridays
+LABEL	1	What is the best stock?	precious metals
+LABEL	0	What are the research topics in computer science?	education
+LABEL	0	What are the research topics in computer science?	reader
+LABEL	0	What are the research topics in computer science?	judging criteria communication style
+LABEL	0	What are the research topics in computer science?	red tides
+LABEL	0	What are the research topics in computer science?	self-esteem
+LABEL	0	What are the research topics in computer science?	mission-unique requirements
+LABEL	0	What are the research topics in computer science?	travel
+LABEL	0	What are the research topics in computer science?	research agenda
+LABEL	0	What are the research topics in computer science?	list
+LABEL	0	What are the research topics in computer science?	hans knoell institute
+LABEL	0	What are the research topics in computer science?	nonlinear mechanics
+LABEL	0	What are the research topics in computer science?	software units
+LABEL	0	What are the research topics in computer science?	asf+sdf project
+LABEL	0	What are the research topics in computer science?	department ompl
+LABEL	0	What are the research topics in computer science?	topic
+LABEL	0	What are the research topics in computer science?	leadership
+LABEL	0	What are the research topics in computer science?	first step
+LABEL	0	What are the research topics in computer science?	comments
+LABEL	0	What are the research topics in computer science?	meditation
+LABEL	0	What are the research topics in computer science?	times
+LABEL	0	What are the research topics in computer science?	user acceptance
+LABEL	0	What are the research topics in computer science?	concrete patios
+LABEL	0	What are the research topics in computer science?	fpga physical design
+LABEL	0	What are the research topics in computer science?	nistep
+LABEL	0	What are the research topics in computer science?	price
+LABEL	0	What are the research topics in computer science?	hypothesis
+LABEL	0	What are the research topics in computer science?	stress
+LABEL	0	What are the research topics in computer science?	magnetised winds outflows
+LABEL	0	What are the research topics in computer science?	introduction
+LABEL	0	What are the research topics in computer science?	bridging knowledge gaps
+LABEL	0	What are the research topics in computer science?	class
+LABEL	0	What are the research topics in computer science?	presence
+LABEL	0	What are the research topics in computer science?	experts
+LABEL	0	What are the research topics in computer science?	gfp protein
+LABEL	0	What are the research topics in computer science?	money online
+LABEL	0	What are the research topics in computer science?	indonesia
+LABEL	0	What are the research topics in computer science?	specific research topics
+LABEL	0	What are the research topics in computer science?	poets
+LABEL	0	What are the research topics in computer science?	courses
+LABEL	0	What are the research topics in computer science?	car insurance
+LABEL	0	What are the research topics in computer science?	hyperdeformed nuclei
+LABEL	0	What are the research topics in computer science?	information systems
+LABEL	0	What are the research topics in computer science?	papers
+LABEL	0	What are the research topics in computer science?	interest denis b?langer
+LABEL	0	What are the research topics in computer science?	co2 capture
+LABEL	0	What are the research topics in computer science?	carrier transport
+LABEL	0	What are the research topics in computer science?	materials
+LABEL	0	What are the research topics in computer science?	oversea countries
+LABEL	0	What are the research topics in computer science?	wear reduction
+LABEL	0	What is the full meaning of utp?	rj45 connector
+LABEL	0	What is the full meaning of utp?	video
+LABEL	0	What is the full meaning of utp?	whats more dust
+LABEL	0	What is the full meaning of utp?	house
+LABEL	0	What is the full meaning of utp?	poe
+LABEL	1	What is the full meaning of utp?	unshielded twisted pair
+LABEL	0	What is the full meaning of utp?	rs485 connection
+LABEL	0	What is the full meaning of utp?	siemon
+LABEL	0	What is the full meaning of utp?	coax cable connections
+LABEL	0	What is the full meaning of utp?	video data
+LABEL	0	What is the full meaning of utp?	tc3300r/s
+LABEL	0	What is the full meaning of utp?	hsy
+LABEL	0	What is the full meaning of utp?	cable run
+LABEL	0	What is the full meaning of utp?	fibre optic cable
+LABEL	0	What is the full meaning of utp?	useable bandwidth
+LABEL	0	What is the full meaning of utp?	stp connection
+LABEL	0	What is the full meaning of utp?	new utorrent release
+LABEL	0	What is the full meaning of utp?	model vi2301
+LABEL	0	What is the full meaning of utp?	category 6
+LABEL	0	What is the full meaning of utp?	less data revenue
+LABEL	0	What is the full meaning of utp?	differential analog signal
+LABEL	0	What is the full meaning of utp?	extension
+LABEL	1	What is the full meaning of utp?	cable types
+LABEL	0	What is the full meaning of utp?	tax position
+LABEL	0	What is the full meaning of utp?	wire
+LABEL	0	What is the full meaning of utp?	data equipments
+LABEL	0	What is the full meaning of utp?	less than 1.5 %
+LABEL	0	What is the full meaning of utp?	model uv1-r
+LABEL	0	What is the full meaning of utp?	fast ethernet
+LABEL	0	What is the full meaning of utp?	january 10 , 2011
+LABEL	0	What is the full meaning of utp?	major cost increases
+LABEL	0	What is the full meaning of utp?	building
+LABEL	0	What is the full meaning of utp?	charger
+LABEL	1	What is the full meaning of utp?	telephone cable
+LABEL	0	What is the full meaning of utp?	10g 6?
+LABEL	0	What is the full meaning of utp?	signal boosts
+LABEL	0	What is the full meaning of utp?	following questions
+LABEL	0	What is the full meaning of utp?	even manufacturers
+LABEL	0	What is the full meaning of utp?	left
+LABEL	0	What is the full meaning of utp?	first year
+LABEL	0	What is the full meaning of utp?	f/utp cables
+LABEL	0	What is the full meaning of utp?	analog cctv cameras
+LABEL	0	What is the full meaning of utp?	fred
+LABEL	0	What is the full meaning of utp?	summary
+LABEL	0	What is the full meaning of utp?	in-home connections
+LABEL	0	What is the full meaning of utp?	eight-position modular jack
+LABEL	0	What is the full meaning of utp?	personal computer networks
+LABEL	0	What is the full meaning of utp?	utp links
+LABEL	0	What is the full meaning of utp?	31.25 mhz
+LABEL	0	What do the earth plates move over?	little
+LABEL	0	What do the earth plates move over?	always
+LABEL	0	What do the earth plates move over?	apart
+LABEL	0	What do the earth plates move over?	
+LABEL	0	What kind of mixture is soda?	soil
+LABEL	0	What work does princess diana do?	aids
+LABEL	0	What work does princess diana do?	england
+LABEL	0	What work does princess diana do?	cause
+LABEL	0	What work does princess diana do?	score!
+LABEL	0	What work does princess diana do?	7 years
+LABEL	0	What work does princess diana do?	aid
+LABEL	0	What work does princess diana do?	king
+LABEL	1	Which religion has pillars?	science
+LABEL	0	Which religion has pillars?	work
+LABEL	1	Which religion has pillars?	buddhism
+LABEL	0	Which religion has pillars?	asia
+LABEL	0	Which religion has pillars?	terrorism
+LABEL	0	Which religion has pillars?	nationalism
+LABEL	0	Which religion has pillars?	church
+LABEL	0	Which religion has pillars?	fire
+LABEL	0	Which religion has pillars?	prescribed prayer
+LABEL	0	Which religion has pillars?	prudent talking
+LABEL	0	Which religion has pillars?	prayer
+LABEL	0	Which religion has pillars?	nature
+LABEL	0	Which religion has pillars?	second pillar islam
+LABEL	0	Which religion has pillars?	namaz
+LABEL	0	Which religion has pillars?	arkaim
+LABEL	0	What state did eddie guerrero die in?	38
+LABEL	0	What is the study of the body's structures?	pni
+LABEL	0	What is the study of the body's structures?	immunologists
+LABEL	0	What is the study of the body's structures?	columbia university
+LABEL	0	What is the study of the body's structures?	nih
+LABEL	1	What is the study of the body's structures?	kinesiology
+LABEL	0	What is the study of the body's structures?	loughborough university
+LABEL	0	What is the study of the body's structures?	students
+LABEL	0	What is the study of the body's structures?	endocrinologists
+LABEL	1	What is the study of the body's structures?	yoga anatomy
+LABEL	1	What is the study of the body's structures?	anatomy ?
+LABEL	0	What is the study of the body's structures?	physiology
+LABEL	0	What is the study of the body's structures?	nutrition
+LABEL	0	What law does the judicial branch makes?	business
+LABEL	1	What law does the judicial branch makes?	policy
+LABEL	0	What law does the judicial branch makes?	public polls
+LABEL	0	What law does the judicial branch makes?	public
+LABEL	1	Where does the term computer come from?	latin meaning computercount
+LABEL	0	Where does the term computer come from?	company
+LABEL	0	Where does the term computer come from?	america
+LABEL	0	Where does the term computer come from?	participants
+LABEL	0	Where does the term computer come from?	analogy
+LABEL	1	What are the oldest life forms alive?	cyanobacteria
+LABEL	1	What countrys have geothermal?	japan
+LABEL	1	What countrys have geothermal?	indonesia
+LABEL	1	What countrys have geothermal?	iceland
+LABEL	1	What countrys have geothermal?	switzerland
+LABEL	1	What countrys have geothermal?	united states
+LABEL	1	What countrys have geothermal?	germany
+LABEL	1	What countrys have geothermal?	kenya
+LABEL	1	What countrys have geothermal?	america
+LABEL	1	What countrys have geothermal?	new-zealand
+LABEL	1	What countrys have geothermal?	mexico
+LABEL	1	What countrys have geothermal?	uk
+LABEL	1	What countrys have geothermal?	us-colorado
+LABEL	1	What countrys have geothermal?	philippines
+LABEL	0	What countrys have geothermal?	colorado
+LABEL	1	What countrys have geothermal?	tanzania
+LABEL	1	What countrys have geothermal?	uk, switzerland
+LABEL	1	What is the population of Muslims?	25,000 persons
+LABEL	0	What is the population of Muslims?	80-90 % hindus
+LABEL	0	What is the root language in West Africa?	languages english
+LABEL	0	What is the root language in West Africa?	pali
+LABEL	0	What is the root language in West Africa?	gaelic
+LABEL	0	What is the root language in West Africa?	page language
+LABEL	0	What is the root language in West Africa?	old norse
+LABEL	0	What is the root language in West Africa?	modern english
+LABEL	0	What is the root language in West Africa?	tamazight
+LABEL	0	What is the root language in West Africa?	faroese
+LABEL	0	What is the root language in West Africa?	caraguata
+LABEL	0	What is the root language in West Africa?	bruhi
+LABEL	0	What is the root language in West Africa?	barbados english
+LABEL	0	What is the root language in West Africa?	system
