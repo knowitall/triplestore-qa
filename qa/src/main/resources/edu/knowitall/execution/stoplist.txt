@@ -75,3 +75,5 @@ how
 sometimes
 sometime
 never
+much
+little
