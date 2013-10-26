@@ -10,6 +10,6 @@ class PmiLmParaphraseScorer() extends ParaphraseScorer {
   override def scoreAll(derivs: Iterable[TemplateParaphraseDerivation]): Iterable[TemplateParaphraseDerivation] = {
     val dlist = derivs.toList
     val lmScores = client.query(dlist.map(_.paraphrase.question.mkString(" "))).map(_._2)
-    for ((d, score) <- dlist.zip(lmScores)) yield d.copy(score = -score * d.templates.pmi) 
+    for ((d, lmScore) <- dlist.zip(lmScores)) yield d.copy(score = -lmScore * d.templates.pmi, lm = lmScore) 
   }
 }
