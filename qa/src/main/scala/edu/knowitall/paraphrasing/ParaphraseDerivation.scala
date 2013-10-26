@@ -1,5 +1,7 @@
 package edu.knowitall.paraphrasing
 
+import com.typesafe.config.ConfigFactory
+
 trait ParaphraseDerivation
 
 trait ScoredParaphraseDerivation extends ParaphraseDerivation {
@@ -7,5 +9,6 @@ trait ScoredParaphraseDerivation extends ParaphraseDerivation {
 }
 
 case object IdentityDerivation extends ScoredParaphraseDerivation {
-  override val score = 1.0
+  val conf = ConfigFactory.load()
+  override val score = conf.getDouble("paraphrase.identityScore")
 }
