@@ -10,8 +10,12 @@ import java.io.PrintWriter
 import java.io.File
 
 trait Oracle {
+  
+  def inputs: List[String]
 
   def getLabel(input: String, output: String): Option[Boolean]
+  
+  def getCorrectOutputs(input: String): List[String]
   
   def isCorrect(input: String, output: String): Boolean = {
     val (i, o) = Oracle.normalizePair(input, output)
@@ -83,7 +87,16 @@ class FileOracle(path: String) extends UpdateableOracle {
   } else {
     scala.collection.mutable.Map[(String, String), Boolean]()
   }
-  override def getLabel(input: String, output: String) = labels.get((input, output))
+   
+  val correctOutputs = {
+    val pairs = for ((input, output) <- labels.keys; if labels.getOrElse((input, output), false)) yield (input, output)
+    val grouped =  pairs.groupBy(_._1).map { case (k,v) => (k,v.map(_._2).toList)} 
+    grouped.toMap
+  }
+  override def inputs = labels.keys.map(_._1).toList
+  override def getLabel(input: String, output: String) = labels.get((Oracle.normalize(input), Oracle.normalize(output)))
+  override def getCorrectOutputs(input: String): List[String] = correctOutputs.getOrElse(Oracle.normalize(input), List())
+
   def save = {
     val output = new PrintWriter(path)
     for (((i, o), l) <- labels) output.println(s"LABEL\t$l\t$i\t$o")
