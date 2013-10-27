@@ -14065,3 +14065,71 @@ LABEL	0	What is the root language in West Africa?	caraguata
 LABEL	0	What is the root language in West Africa?	bruhi
 LABEL	0	What is the root language in West Africa?	barbados english
 LABEL	0	What is the root language in West Africa?	system
+LABEL	1	What is a job for a lawyer?	municipal real estate
+LABEL	1	What countries were involved in the Spanish war?	united states
+LABEL	0	What kind of music did the romans have?	language
+LABEL	1	Who wins the WWE title?	lex luger
+LABEL	1	Who was the first credit card issued to?	businesses
+LABEL	1	When was Drake born?	february 12
+LABEL	1	What are the leading producers of WHEAT?	sonora
+LABEL	1	What do scientists classify?	creatures
+LABEL	1	What color are wedding dresses?	white
+LABEL	0	How common is the bipolar disorder?	lithium
+LABEL	0	Where can you sell books?	question
+LABEL	1	What is Capitol of lansing?	michigan
+LABEL	0	What is not required of a thesis?	program
+LABEL	1	What is something that is white and orange?	colors
+LABEL	1	What countries were involved in the Spanish war?	spain
+LABEL	1	What is another word of sand hills?	ghrood
+LABEL	0	What is new south wales slogan?	place
+LABEL	0	What occurs in prokaryotic cells?	host cell
+LABEL	0	What celebrities have naked pictures?	tweety
+LABEL	0	Why was the patriot act created?	patriotic
+LABEL	0	Why does frogs burp?	yellow tadpole
+LABEL	1	What responsibilities did john jay have?	first chief justice
+LABEL	0	Is a ostrich a vertebrates?	deal ostriches
+LABEL	1	Who started the bear flag revolution?	bennett
+LABEL	0	What are the scopes and limitations of physics?	emphasis
+LABEL	0	What were the names of famous highwayman?	desk
+LABEL	1	How many diffrent types of televisions are there?	works satellite television
+LABEL	1	What kind of plants did the ancient Mayans have?	maize
+LABEL	0	Is water a raw ingredient?	good raw ingredient
+LABEL	0	How long did a gold license last for?	site
+LABEL	1	What is the major cities of romania?	bucharest
+LABEL	1	Who wins the WWE title?	miz
+LABEL	1	Who was the first credit card issued to?	new customers
+LABEL	1	What is a tortoises habitat like?	tank
+LABEL	0	What is Utah's most famous food?	dog
+LABEL	0	What do fairy tales have in common?	theme
+LABEL	1	What kind of experiments did pavlov do?	target response
+LABEL	0	Which is the highest playground in india?	first image
+LABEL	0	When was Drake born?	tavistock
+LABEL	1	What are the leading producers of WHEAT?	india
+LABEL	0	Do hotels have room service?	hotel
+LABEL	1	What do scientists classify?	life
+LABEL	1	Name the temperature measuring instrument?	thermometer
+LABEL	0	What is Heidi Montag's birthday?	beck
+LABEL	1	Where is mayans country?	guatemala
+LABEL	0	How common is the bipolar disorder?	friends
+LABEL	0	Where can you sell books?	declaration
+LABEL	0	What is Capitol of lansing?	rental cars
+LABEL	0	What is not required of a thesis?	law
+LABEL	1	What is something that is white and orange?	sandman
+LABEL	0	What is another word of sand hills?	town
+LABEL	0	What is new south wales slogan?	workshops
+LABEL	0	What occurs in prokaryotic cells?	cytoplasm
+LABEL	0	What celebrities have naked pictures?	teenagers
+LABEL	1	Why was the patriot act created?	terrorism
+LABEL	0	Why does frogs burp?	frog
+LABEL	1	What responsibilities did john jay have?	federalist papers
+LABEL	0	Is a ostrich a vertebrates?	vain
+LABEL	0	What are the scopes and limitations of physics?	public
+LABEL	0	What were the names of famous highwayman?	holloway
+LABEL	0	How many diffrent types of televisions are there?	news source
+LABEL	0	Is water a raw ingredient?	salmon
+LABEL	0	How long did a gold license last for?	vacationprofit
+LABEL	1	Who wins the WWE title?	edge
+LABEL	0	What is a tortoises habitat like?	low-growing shrubs
+LABEL	0	What is Utah's most famous food?	utah
+LABEL	1	What do fairy tales have in common?	magic
+LABEL	0	Do hotels have room service?	sol melia
