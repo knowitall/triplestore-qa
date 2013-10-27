@@ -40,6 +40,11 @@ case class Tuple(attrs: Map[String, Any]) {
     case Some(x: Float) => Some(x)
     case _ => None
   }
+  
+  def getInt(a: String): Option[Int] = attrs.get(a) match {
+    case Some(i: Int) => Some(i)
+    case _ => None
+  }
 
   /* Renames the attributes using the given function */
   def rename(f: String => String): Tuple = {
