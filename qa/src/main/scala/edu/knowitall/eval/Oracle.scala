@@ -32,6 +32,11 @@ trait Oracle {
       case _ => false
     }
   }
+  
+  def toTrainingSet: List[(String, Set[String])] = {
+    for (i <- inputs; outputs = getCorrectOutputs(i).toSet; if outputs.size > 0)
+      yield (i, outputs)
+  }
 
 }
 
