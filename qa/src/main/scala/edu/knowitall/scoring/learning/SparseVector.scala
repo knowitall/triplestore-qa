@@ -2,6 +2,7 @@ package edu.knowitall.scoring.learning
 
 import scala.io.Source
 import java.io.PrintWriter
+import scala.language.implicitConversions
 
 abstract class SparseVector {
   def activeComponents: Iterable[String]
@@ -18,6 +19,16 @@ abstract class SparseVector {
 }
 
 object SparseVector {
+  implicit def dPairToSparseVector(x: (String, Double)): SparseVector = SparseVectorImpl(Map(x._1 -> x._2))
+  implicit def bPairToSparseVector(x: (String, Boolean)): SparseVector = SparseVectorImpl(Map(x._1 -> {if (x._2) 1.0 else 0.0}))
+  implicit def iPairToSparseVector(x: (String, Int)): SparseVector = SparseVectorImpl(Map(x._1 -> x._2.toDouble))
+  implicit def pairsToSparseVector(pairs: TraversableOnce[(String, Double)]): SparseVector = SparseVectorImpl(pairs.toMap)
+  implicit def stringListToSparseVector(list: TraversableOnce[String]): SparseVector = SparseVectorImpl(list.map(s => (s, 1.0)).toMap)
+  implicit def stringToSparseVector(s: String): SparseVector = SparseVectorImpl(Map(s -> 1.0))
+  implicit def oStringToSparseVector(os: Option[String]): SparseVector = os match {
+    case Some(s) => SparseVectorImpl(Map(s -> 1.0))
+    case _ => SparseVectorImpl(Map())
+  }
   def apply: SparseVector = SparseVectorImpl(Map())
   def apply(pairs: TraversableOnce[(String, Double)]): SparseVector = SparseVectorImpl(pairs.toMap)
   def apply(pairs: (String, Double)*): SparseVector = SparseVectorImpl(pairs.toMap)

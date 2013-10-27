@@ -6,8 +6,9 @@ import edu.knowitall.apps.QASystem
 import edu.knowitall.eval.Oracle
 import edu.knowitall.scoring.features.AnswerDerivationFeatures
 import org.slf4j.LoggerFactory
+import edu.knowitall.execution.StrSim
 
-case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivation, SparseVector], weights: SparseVector) extends HiddenVariableModel[String, AnswerDerivation, Set[String]] {
+case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivation, SparseVector] = QAFeatures, weights: SparseVector = SparseVector()) extends HiddenVariableModel[String, AnswerDerivation, Set[String]] {
   
   val logger = LoggerFactory.getLogger(this.getClass)
 
@@ -56,37 +57,11 @@ case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivati
   
   override def project(deriv: Deriv) = Set(deriv.answerString)
   
-  private def normalize(s: String): String = Oracle.normalize(s)
+  def normalizeAnswer(answer: String): String = StrSim.norm(Oracle.normalize(answer))
   
   override def isCorrect(question: String, predicted: Set[String], expected: Set[String]) = predicted.toList match {
-    case List(answer) => expected.map(normalize).contains(normalize(answer))
+    case List(answer) => expected.map(normalizeAnswer).contains(normalizeAnswer(answer))
     case _ => false
   }
 
-}
-
-object MyTest extends App {
-  val qa = QASystem.getInstance().get
-  val generator = new AnswerGenerator {
-    override def generateAnswers(q: String) = qa.deriveAnswers(q)
-  }
-  val featureSet = AnswerDerivationFeatures.featureMap
-  val features = (d: AnswerDerivation) => {
-    SparseVector(featureSet.map { case (name, f) => (name, f(d)) })
-  }
-  val weights = SparseVector()
-  val model = QAModel(generator, features, weights)
-  val p = new HiddenVariblePerceptron[String, AnswerDerivation, Set[String]]()
-  val training = List(
-      "What cures a cold?" -> Set("vitamin c", "oranges", "resting"),
-      "How are lasers used?" -> Set("hair removal"),
-      "Where was JFK shot?" -> Set("dallas", "Texas"),
-      "Whats the capital of france?" -> Set("paris"),
-      "What countries border with Germany?" -> Set("poland", "france", "swizerland", "austria", "belgium"),
-      "Where was the pizza first invented?" -> Set("italy", "new york"),
-      "What ingredients are in Indian food?" -> Set("cumin", "turmeric", "lime"),
-      "Who invented radium?" -> Set("marie curie", "curie")
-  )
-  val newModel = p.train(model, training, 10)
-  println(newModel.weights)
 }
