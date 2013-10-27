@@ -15,6 +15,27 @@ import com.google.common.base.{Function => GuavaFunction}
 
 object NlpUtils {
   
+  val months = Set("january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december")
+  val days = Set("sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday")
+  val year = """^\d\d\d\d$""".r
+  def isDateWord(s: String): Boolean = {
+    months.contains(s) || days.contains(s) || { s match {
+      case year() => true
+      case _ => false
+    }}
+  }
+  def isDate(s: String): Boolean = {
+    s.split(" ").map(_.toLowerCase()).exists(isDateWord)
+  }
+  val qPrefixes = List("what year", "what month", "what day", "who", "when", "why", "what", "when", "where", "how", "be")
+  def questionPrefix(s: String): String = {
+    val x = s.toLowerCase()
+    qPrefixes.find(prefix => x.startsWith(prefix)) match {
+      case Some(prefix) => prefix
+      case _ => "UNK"
+    }
+  }
+  
   def serialize(sent: Seq[Lemmatized[ChunkedToken]]) = {
     val tokens = sent.map(l => l.token.string)
     val lemmas = sent.map(l => l.lemma)
