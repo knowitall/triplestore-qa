@@ -25,7 +25,7 @@ case class IdentityExecutor(client: TriplestoreClient) extends QueryExecutor {
   val joiner = Joiner(client)
 
   override def execute(q: ConjunctiveQuery): Iterable[ExecTuple] = {
-    for (t <- joiner.joinQueries(q.conjuncts);
-         et = ExecTuple(t, q)) yield et
+    val joined = joiner.joinQueries(q.conjuncts)
+    for (t <- joined; et = ExecTuple(t, q)) yield et
   }
 }
