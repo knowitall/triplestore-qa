@@ -33,19 +33,19 @@ import edu.knowitall.execution.DefaultFilters
 import edu.knowitall.parsing.regex.RegexQuestionParser
 import edu.knowitall.paraphrasing.template.SolrParaphraseGenerator
 import com.typesafe.config.ConfigFactory
-
 import edu.knowitall.paraphrasing.Paraphraser
 import edu.knowitall.paraphrasing.Paraphrase
 import edu.knowitall.paraphrasing.IdentityParaphraser
 import edu.knowitall.paraphrasing.template.TemplateParaphraser
 import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.execution.ExecTuple
+import edu.knowitall.scoring.AnswerDerivationScorer
 
 case class QASystem(paraphraser: Paraphraser,
 					parser: QuestionParser,
 					executor: QueryExecutor,
 					grouper: AnswerGrouper,
-					scorer: AnswerScorer) {
+					scorer: AnswerScorer) extends AnswerGenerator {
 
   val conf = ConfigFactory.load()
   val logger = LoggerFactory.getLogger(this.getClass)
@@ -63,6 +63,8 @@ case class QASystem(paraphraser: Paraphraser,
     val scored = score(groups)
     scored
   }
+  
+  def generateAnswers(question: String) = deriveAnswers(question)
   
   def deriveAnswers(question: String): List[AnswerDerivation] = {
     for (pp <- paraphrase(question).par;
@@ -172,5 +174,6 @@ case object Components {
   val scorers: Map[String, AnswerScorer] =
     Map("logistic" -> LogisticAnswerScorer(),
       "numDerivations" -> NumDerivationsScorer(),
-      "uniform" -> UniformAnswerScorer())
+      "uniform" -> UniformAnswerScorer(),
+      "derivation" -> new AnswerDerivationScorer())
 }
