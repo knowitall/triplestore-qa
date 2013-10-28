@@ -6861,3 +6861,5 @@ $x: ($x, "is an example of", government) (australium, have, $x)
 education
 
 
+LABEL	0	When was Arthur Ashe born?	richmond
+LABEL	1	What countries were involved in the Spanish war?	spain
