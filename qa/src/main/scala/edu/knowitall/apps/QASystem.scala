@@ -40,6 +40,7 @@ import edu.knowitall.paraphrasing.template.TemplateParaphraser
 import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.execution.ExecTuple
 import edu.knowitall.scoring.AnswerDerivationScorer
+import edu.knowitall.paraphrasing.joshua.JoshuaParaphraser
 
 case class QASystem(paraphraser: Paraphraser,
 					parser: QuestionParser,
@@ -147,7 +148,8 @@ case object Components {
 
   val paraphrasers: Map[String, Paraphraser] =
     Map("identity" -> IdentityParaphraser,
-        "templatesLm" -> new TemplateParaphraser())
+        "templatesLm" -> new TemplateParaphraser(),
+        "joshua" -> new JoshuaParaphraser())
 
   val parsers: Map[String, QuestionParser] =
     Map("formal" -> FormalQuestionParser(),
