@@ -66,7 +66,7 @@ class SolrParaphraseGenerator(url: String, maxHits: Int, maxArgLength: Int) exte
 
 case object SolrParaphraseGenerator {
   val conf = ConfigFactory.load()
-  val defaultUrl = conf.getString("paraphrase.url")
-  val defaultMaxHits = conf.getInt("paraphrase.maxHits")
-  val defaultMaxArgLength = conf.getInt("paraphrase.maxArgLength")
+  val defaultUrl = conf.getString("paraphrase.template.url")
+  val defaultMaxHits = conf.getInt("paraphrase.template.maxHits")
+  val defaultMaxArgLength = conf.getInt("paraphrase.template.maxArgLength")
 }

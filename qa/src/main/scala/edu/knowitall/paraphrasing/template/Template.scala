@@ -41,7 +41,7 @@ case object AbstractedQuestion {
     }
   }
   
-  val maxSize = conf.getInt("paraphrase.maxArgLength")
+  val maxSize = conf.getInt("paraphrase.template.maxArgLength")
   val valuePattern = makeRegex("^<pos='$' | pos='PRP$' | pos='CD' | pos='DT' | pos='JJ' | pos='JJS' | pos='JJR' | pos='NN' " +
       "| pos='NNS' | pos='NNP' | pos='NNPS' | pos='POS' | pos='PRP' | pos='RB' | pos='RBR' | pos='RBS' " +
       "| pos='VBN' | pos='VBG'>+$")

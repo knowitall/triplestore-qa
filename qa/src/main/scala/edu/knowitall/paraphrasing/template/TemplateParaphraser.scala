@@ -38,7 +38,7 @@ case class TemplateParaphraser(scorer: ParaphraseScorer, generator: TemplatePara
 case object TemplateParaphraser {
   
   val conf = ConfigFactory.load()
-  val scoringModel = conf.getString("paraphrase.scoringModel")
+  val scoringModel = conf.getString("paraphrase.template.scoringModel")
   val defaultScorer = scoringModel match {
     case "pmi" => new PmiParaphraseScorer()
     case "lm" => new LmParaphraseScorer()
