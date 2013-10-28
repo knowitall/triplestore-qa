@@ -16,9 +16,13 @@ object PrecisionRecall extends App {
     recs zip precs  
   }
   
-  def topCorrect(i: String, oracle: Oracle, output: SystemOutput): (Double, Boolean) = output.topOutputFor(i) match {
+  def topCorrect(i: String, oracle: Oracle, output: SystemOutput): (Double, Boolean) = {
+    println(i + " " + output.topOutputFor(i))
+    output.topOutputFor(i) match {
+  
     case Some(o) => (output.topScoreFor(i, o).get, oracle.isCorrect(i, o))
     case None => (Double.MinValue, false)
+  }
   }
   
   def computeTopPr(writer: PrintWriter, inputs: List[String], oracle: Oracle, output: SystemOutput) = {
