@@ -9,7 +9,7 @@ import com.typesafe.config.ConfigRenderOptions
 
 abstract class SystemOutput {
   
-  def inputs: List[String] = records.map(_.input)
+  def inputs: List[String] = records.map(_.input).distinct
   
   def inputOutputs: List[(String, String)] = records.map(r => (r.input, r.output)).toList.distinct
   
