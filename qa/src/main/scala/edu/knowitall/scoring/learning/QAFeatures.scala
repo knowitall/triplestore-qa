@@ -78,5 +78,5 @@ object QAFeatures extends Function[AnswerDerivation, SparseVector] {
     ("triple count" -> Math.log(min.toDouble))
   }
   
-  val features = (d: Deriv) => isParaphrased(d) + querySimilarity(d) + answerIsLinked(d) + paraphrasePmi(d) + paraphraseLm(d) + namespaces(d) + prefixAndDate(d) + numConjuncts(d) + extractionCount(d)
+  val features = (d: Deriv) => isParaphrased(d) + querySimilarity(d) + answerIsLinked(d) + paraphrasePmi(d) + paraphraseLm(d) + namespaces(d) + prefixAndDate(d) + numConjuncts(d)
 }
