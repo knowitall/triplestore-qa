@@ -35,8 +35,6 @@ case class TemplatePair(template1: String, template2: String, pmi: Double, count
 case object TemplatePair {
   
   def pmi(j: Double, m1: Double, m2: Double): Double = Math.log(j) - Math.log(m1) - Math.log(m2) 
-    
-  def parseDouble(s: String) = try { Some(s.toDouble) } catch { case e:Throwable => None }
   
   def fromString(s: String): Option[TemplatePair] = {
     s.split("\t", 5) match {
