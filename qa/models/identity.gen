@@ -1,0 +1,12 @@
+is paraphrased?	0.0
+derivation contains namespace 'openie4'	0.9568181818181818
+answer is linked to freebase	0.2954545454545454
+derivation contains namespace 'nell'	-0.9318181818181818
+paraphrase score	0.0
+paraphrase lm	0.0
+evidence similarity with query	0.08750499500499476
+paraphrase pmi	0.0
+question prefix = 'when' and isDate	0.9477272727272726
+derivation contains namespace 'reverb'	0.9340909090909091
+number of query conjuncts	0.0
+derivation contains namespace 'freebase'	-0.959090909090909
