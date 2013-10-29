@@ -24,8 +24,12 @@ abstract class SystemOutput {
     val on = normalize(output)
     inputOutputToRecords.getOrElse((in, on), List()).toList
   }
+  
 
   private val inputToRecords = records.groupBy(r => normalize(r.input))
+  
+  def recordsFor(input: String): List[OutputRecord] = inputToRecords.getOrElse(normalize(input), List())
+  
 
   private val inputOutputToRecords = records.groupBy(r => (normalize(r.input), normalize(r.output)))
   
