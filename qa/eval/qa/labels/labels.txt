@@ -15657,3 +15657,13 @@ LABEL	0	What color are wedding dresses?	strauss
 LABEL	0	What color are wedding dresses?	ages
 LABEL	0	What color are wedding dresses?	one woman
 LABEL	0	What color are wedding dresses?	rachel
+LABEL	1	Who wins the WWE title?	tony atlas
+LABEL	0	What do scientists classify?	kipunji monkey
+LABEL	1	What do scientists classify?	natural occurrences
+LABEL	1	What do scientists classify?	objects information
+LABEL	0	What do scientists classify?	brain
+LABEL	0	What do scientists classify?	golden-mantled ground squirrel
+LABEL	1	What do scientists classify?	stars
+LABEL	0	What do scientists classify?	bisphenol
+LABEL	0	What do scientists classify?	total
+LABEL	1	What do scientists classify?	soil particles
