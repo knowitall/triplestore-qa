@@ -14133,3 +14133,1001 @@ LABEL	0	What is a tortoises habitat like?	low-growing shrubs
 LABEL	0	What is Utah's most famous food?	utah
 LABEL	1	What do fairy tales have in common?	magic
 LABEL	0	Do hotels have room service?	sol melia
+LABEL	1	What are the leading producers of WHEAT?	italy
+LABEL	1	What do scientists classify?	soils
+LABEL	1	What is a job for a lawyer?	criminal
+LABEL	1	When was Drake born?	august
+LABEL	1	What are the leading producers of WHEAT?	iran
+LABEL	0	How common is the bipolar disorder?	depression
+LABEL	0	What is the worlds oldest drink after water?	foreigners
+LABEL	1	What is a job for a lawyer?	maritime matter
+LABEL	0	When did queen liliuokalani become queen?	september
+LABEL	1	What is one of italys famous landmarks?	tuscany
+LABEL	1	Use of tin and tin alloy?	pewter
+LABEL	0	When does justified season 2 comes out?	showcase
+LABEL	0	What is not required of a thesis?	philosopher
+LABEL	1	What is something that is white and orange?	texas
+LABEL	0	What is another word of sand hills?	above ground
+LABEL	0	What color al pacinos eyes?	photo
+LABEL	0	What is new south wales slogan?	nowra
+LABEL	1	What occurs in prokaryotic cells?	cellular respiration
+LABEL	1	What celebrities have naked pictures?	scarlett johansson
+LABEL	1	Who is the best dancer in the world and ever?	horses
+LABEL	0	What main features do nearly all mosques have?	cathedral
+LABEL	1	What responsibilities did john jay have?	united states secretary navy
+LABEL	0	What is the welsh word for gram?	annwfn
+LABEL	0	Is star is a source of light?	windows
+LABEL	0	Who started the bear flag revolution?	ide
+LABEL	0	What were the names of famous highwayman?	dublin
+LABEL	0	What is a bicycle that rides two people?	president
+LABEL	0	What was the name of the volcano in washington dc?	robinson cano
+LABEL	0	How many diffrent types of televisions are there?	march 3. ?
+LABEL	0	What kind of plants did the ancient Mayans have?	telescope
+LABEL	1	What bird is brown and has a crown?	cactus wren
+LABEL	0	What is the example of phylum bryophyta?	organisms
+LABEL	0	Where does a bullfrog reproduce?	water
+LABEL	1	What is located 90 degrees north at 90 degrees south?	north pole
+LABEL	1	Who wins the WWE title?	mark henry
+LABEL	0	What are the different units of capacitor?	component 10
+LABEL	0	What is a tortoises habitat like?	management
+LABEL	0	What do fairy tales have in common?	budget
+LABEL	0	What is Kristin Halvorsen's birthday?	left
+LABEL	0	What kind of experiments did pavlov do?	life
+LABEL	0	What three things the plate tectonic theory helps to explanation?	study review questions
+LABEL	0	What branch of government regulates post office?	u.s. national park service
+LABEL	0	Does the US consist of 50 states?	usa
+LABEL	0	What is kentucky best at?	gillispie
+LABEL	0	What country is most famous for the dance hip hop?	toronto
+LABEL	0	What are some fun teen fashion websites?	teenwag.com
+LABEL	0	What is related to a common jellyfish?	jellyfish
+LABEL	0	Do hotels have room service?	interstate 94
+LABEL	1	What do scientists classify?	bacteria
+LABEL	0	Does fires do any bad to a forest?	western montana
+LABEL	0	Who is the author of the graphic novel - Watchmen?	whitson?s subject
+LABEL	0	What is the average cost of a denture reline?	dentures
+LABEL	1	What plants grow in the Northern Atlantic Ocean?	sea_weed
+LABEL	0	Where is mayans country?	tulum
+LABEL	0	A base with eight equal sides?	exports
+LABEL	1	What is a job for a lawyer?	event
+LABEL	0	What is Capitol of lansing?	one kind
+LABEL	0	What is one of italys famous landmarks?	mont saint-michel
+LABEL	1	Use of tin and tin alloy?	badge
+LABEL	0	What is another word of sand hills?	nights
+LABEL	0	What color al pacinos eyes?	godfather
+LABEL	0	What is new south wales slogan?	thredbo
+LABEL	1	What occurs in prokaryotic cells?	ribosomes
+LABEL	1	What celebrities have naked pictures?	david diehl
+LABEL	0	What kind of music did the romans have?	order
+LABEL	0	What responsibilities did john jay have?	research
+LABEL	0	Who started the bear flag revolution?	glenn county
+LABEL	0	What is a bicycle that rides two people?	test
+LABEL	0	Where does a bullfrog reproduce?	common
+LABEL	1	What do fairy tales have in common?	hero?s journey plot
+LABEL	0	What branch of government regulates post office?	u.s. national park service
+LABEL	1	When was Drake born?	october 25
+LABEL	0	Does the US consist of 50 states?	usa
+LABEL	0	What is kentucky best at?	manual
+LABEL	1	What are the leading producers of WHEAT?	arizona
+LABEL	0	Do hotels have room service?	jock
+LABEL	1	What do scientists classify?	galaxies
+LABEL	1	Where is mayans country?	mexico
+LABEL	0	What color are wedding dresses?	company
+LABEL	0	How common is the bipolar disorder?	children
+LABEL	0	What is the worlds oldest drink after water?	tea
+LABEL	1	What is a job for a lawyer?	dhl
+LABEL	0	Where can you sell books?	friendship
+LABEL	0	What is not required of a thesis?	philosophy
+LABEL	0	What is new south wales slogan?	nsw
+LABEL	0	What celebrities have naked pictures?	television
+LABEL	0	What kind of music did the romans have?	europe
+LABEL	0	What is the aim and objective for asda?	wednesday
+LABEL	0	What are the pros and cons of playing basketball?	sunday
+LABEL	0	Is a ostrich a vertebrates?	boehner
+LABEL	1	How many types of silly bands are there?	relient k
+LABEL	0	What were the names of famous highwayman?	junk science
+LABEL	1	How many diffrent types of televisions are there?	matrix display
+LABEL	0	Is water a raw ingredient?	oil paint
+LABEL	0	How long does it take to complete a dental program?	successful model
+LABEL	0	How long did a gold license last for?	program
+LABEL	0	What is Bonnie Wrights age?	yts/1.19.8 2005 david
+LABEL	0	What do fairy tales have in common?	adults
+LABEL	0	When was Drake born?	new jersey
+LABEL	0	What is kentucky best at?	ted
+LABEL	0	What is related to a common jellyfish?	jellyfish
+LABEL	0	Do hotels have room service?	inn
+LABEL	0	What do scientists classify?	indian
+LABEL	0	What is Heidi Montag's birthday?	kristin cavallari
+LABEL	1	What color are wedding dresses?	red
+LABEL	0	How common is the bipolar disorder?	psychosis
+LABEL	0	What occurs in prokaryotic cells?	cyanobacteria
+LABEL	0	Why was the patriot act created?	individual liberty
+LABEL	0	What responsibilities did john jay have?	tremendous job
+LABEL	0	Is a ostrich a vertebrates?	animal
+LABEL	1	How many diffrent types of televisions are there?	lcds
+LABEL	1	Who wins the WWE title?	undertaker
+LABEL	1	What do scientists classify?	emr
+LABEL	0	What color are wedding dresses?	ecru
+LABEL	0	How common is the bipolar disorder?	bipolar-depression.e
+LABEL	0	What are the organs of the circulatory system in plants?	artery-and-vein.e
+LABEL	1	What is a job for a lawyer?	barrister.e
+LABEL	0	Where can you sell books?	firm-sale.e
+LABEL	0	What is not required of a thesis?	c-minor.e
+LABEL	0	What occurs in prokaryotic cells?	mucus.e
+LABEL	0	What is Bruce Willis favorite food?	hollywood-gossip.e
+LABEL	0	Why was the patriot act created?	usa.e
+LABEL	0	What kind of music did the romans have?	12-film.e
+LABEL	0	What is the welsh word for gram?	idiom.e
+LABEL	0	What are the scopes and limitations of physics?	engineering-science.e
+LABEL	1	What is the products of anaerobic respiration in plant cells?	lactic-acid.e
+LABEL	0	How many diffrent types of televisions are there?	moon.e
+LABEL	1	What is the major cities of romania?	bucharest.e
+LABEL	1	Who wins the WWE title?	jeff-hardy.e
+LABEL	0	What is Utah's most famous food?	hope.e
+LABEL	1	What do fairy tales have in common?	orphan.e
+LABEL	1	When was Drake born?	1839.e
+LABEL	0	Does the US consist of 50 states?	federal-republic.e
+LABEL	0	What is kentucky best at?	big-al.e
+LABEL	1	What is related to a common jellyfish?	bluebottle.e
+LABEL	0	What do scientists classify?	poet.e
+LABEL	1	What color are wedding dresses?	white.e
+LABEL	0	How common is the bipolar disorder?	anxiety
+LABEL	0	How common is the bipolar disorder?	hypomania
+LABEL	0	How common is the bipolar disorder?	kids
+LABEL	0	How common is the bipolar disorder?	mental gymnastics
+LABEL	0	How common is the bipolar disorder?	bipolar i. dual diagnosis
+LABEL	0	How common is the bipolar disorder?	bipolar bipolar disorder
+LABEL	0	How common is the bipolar disorder?	common strategy
+LABEL	0	How common is the bipolar disorder?	disorder
+LABEL	0	How common is the bipolar disorder?	genetic tendency
+LABEL	0	How common is the bipolar disorder?	55 years
+LABEL	0	How common is the bipolar disorder?	dr. frye
+LABEL	0	How common is the bipolar disorder?	dr. torrey
+LABEL	0	How common is the bipolar disorder?	mania
+LABEL	0	How common is the bipolar disorder?	flux
+LABEL	0	How common is the bipolar disorder?	decades
+LABEL	0	How common is the bipolar disorder?	to?
+LABEL	0	What is a job for a lawyer?	cases
+LABEL	0	What is a job for a lawyer?	doctors
+LABEL	1	What is a job for a lawyer?	explosion
+LABEL	0	What is a job for a lawyer?	sirius
+LABEL	0	What is a job for a lawyer?	you?ll
+LABEL	1	What is a job for a lawyer?	absence
+LABEL	1	What is a job for a lawyer?	spousal support
+LABEL	1	What is a job for a lawyer?	public
+LABEL	1	What is a job for a lawyer?	statistics
+LABEL	0	What is a job for a lawyer?	jul 12
+LABEL	0	What is a job for a lawyer?	legal profession
+LABEL	0	What is a job for a lawyer?	story
+LABEL	1	What is a job for a lawyer?	modeling
+LABEL	1	What is a job for a lawyer?	legal advice
+LABEL	0	What is a job for a lawyer?	switzerland
+LABEL	0	What is a job for a lawyer?	time
+LABEL	0	What is a job for a lawyer?	robert e. lee
+LABEL	0	What is a job for a lawyer?	clorox
+LABEL	1	What is a job for a lawyer?	subpoenas
+LABEL	0	What is a job for a lawyer?	business
+LABEL	0	What is a job for a lawyer?	universities
+LABEL	0	What is a job for a lawyer?	yorkshire
+LABEL	0	What is a job for a lawyer?	natural resources
+LABEL	0	What is a job for a lawyer?	daytime television commercial
+LABEL	0	What is a job for a lawyer?	portland
+LABEL	0	What is a job for a lawyer?	first position
+LABEL	0	What is a job for a lawyer?	best situation
+LABEL	0	What is a job for a lawyer?	cameron kate
+LABEL	1	What is a job for a lawyer?	business owner
+LABEL	1	What is a job for a lawyer?	clients
+LABEL	1	What is a job for a lawyer?	more ? ralli
+LABEL	1	What is a job for a lawyer?	11:57 ralli
+LABEL	0	What is a job for a lawyer?	former georgia state student
+LABEL	0	What is a job for a lawyer?	article
+LABEL	0	What is a job for a lawyer?	9/11
+LABEL	0	What is a job for a lawyer?	message
+LABEL	1	What is a job for a lawyer?	firm
+LABEL	0	What is a job for a lawyer?	middle
+LABEL	1	What is a job for a lawyer?	larry hope
+LABEL	0	What is a job for a lawyer?	world wide web services
+LABEL	1	What is a job for a lawyer?	children
+LABEL	0	What is a job for a lawyer?	former
+LABEL	0	What is a job for a lawyer?	position
+LABEL	0	What is a job for a lawyer?	lot
+LABEL	0	What is a job for a lawyer?	pct
+LABEL	0	What is a job for a lawyer?	14 years
+LABEL	0	What is a job for a lawyer?	communications products
+LABEL	0	Where can you sell books?	ebooks
+LABEL	0	Where can you sell books?	bible
+LABEL	0	Where can you sell books?	?the bible ?
+LABEL	0	Where can you sell books?	bible ?
+LABEL	0	Where can you sell books?	mary shelley
+LABEL	0	Where can you sell books?	daniel boone
+LABEL	0	Where can you sell books?	fitness
+LABEL	0	Where can you sell books?	annual
+LABEL	0	Where can you sell books?	club dumas
+LABEL	0	Where can you sell books?	? just minute ?
+LABEL	0	Where can you sell books?	genre fiction
+LABEL	0	Where can you sell books?	cases
+LABEL	0	Where can you sell books?	ellen hopkins
+LABEL	0	Where can you sell books?	careerists
+LABEL	0	Where can you sell books?	status
+LABEL	0	Where can you sell books?	book royalties work
+LABEL	0	Where can you sell books?	car
+LABEL	0	Where can you sell books?	columbus
+LABEL	0	Where can you sell books?	edwarda comment # 56
+LABEL	0	Where can you sell books?	special lectures seminars
+LABEL	0	Where can you sell books?	elizabeth
+LABEL	0	Where can you sell books?	king?s
+LABEL	0	Where can you sell books?	13 car
+LABEL	0	Where can you sell books?	so many issues
+LABEL	0	Where can you sell books?	value
+LABEL	0	Where can you sell books?	arnold snyder re
+LABEL	0	Where can you sell books?	moreover comment # 57
+LABEL	0	Where can you sell books?	any book worth banning
+LABEL	0	Where can you sell books?	elusive 2.
+LABEL	0	Where can you sell books?	minimum
+LABEL	0	Where can you sell books?	tour
+LABEL	0	Where can you sell books?	one ticket
+LABEL	0	Where can you sell books?	charset=utf-8
+LABEL	0	Where can you sell books?	credit
+LABEL	0	Where can you sell books?	first trick
+LABEL	0	Where can you sell books?	chris bowers
+LABEL	0	Where can you sell books?	adventure
+LABEL	0	Where can you sell books?	hugo question
+LABEL	0	Where can you sell books?	$ 64,000 question
+LABEL	0	Where can you sell books?	?drift ?
+LABEL	0	Where can you sell books?	sellers
+LABEL	0	Where can you sell books?	entire benchmarking efforts
+LABEL	0	Where can you sell books?	followup question
+LABEL	0	Where can you sell books?	charcoal foundry
+LABEL	0	Where can you sell books?	silicon snake oil
+LABEL	0	Where can you sell books?	person
+LABEL	0	Where can you sell books?	4/4/2011
+LABEL	0	What is Capitol of lansing?	first stop
+LABEL	0	What is not required of a thesis?	science
+LABEL	0	What is not required of a thesis?	statistics
+LABEL	0	What is not required of a thesis?	moral realism
+LABEL	0	What is not required of a thesis?	ms-a option
+LABEL	0	What is not required of a thesis?	academic track
+LABEL	0	What is not required of a thesis?	degree
+LABEL	0	What is not required of a thesis?	ma programs
+LABEL	0	What is not required of a thesis?	ms degree
+LABEL	0	What is not required of a thesis?	education
+LABEL	0	What is not required of a thesis?	master?s degrees
+LABEL	0	What is not required of a thesis?	m.a.
+LABEL	0	What is not required of a thesis?	elective mms degree
+LABEL	0	What is not required of a thesis?	concentration
+LABEL	0	What is not required of a thesis?	science degree
+LABEL	0	What is not required of a thesis?	honors degree
+LABEL	0	What is not required of a thesis?	illinois graduate students
+LABEL	0	What is not required of a thesis?	option
+LABEL	0	What is not required of a thesis?	thesis option
+LABEL	0	What is not required of a thesis?	msbs
+LABEL	0	What is not required of a thesis?	graduate degrees
+LABEL	0	What is not required of a thesis?	one option
+LABEL	0	What is not required of a thesis?	ma degree
+LABEL	0	What is not required of a thesis?	curriculum
+LABEL	0	What is not required of a thesis?	research paper
+LABEL	0	What is not required of a thesis?	supervisors
+LABEL	0	What is not required of a thesis?	turn
+LABEL	0	What is something that is white and orange?	saltwater
+LABEL	1	What is something that is white and orange?	prince
+LABEL	0	What is something that is white and orange?	albert heijn
+LABEL	1	What is something that is white and orange?	?florida?
+LABEL	1	What is something that is white and orange?	new york city
+LABEL	1	What is something that is white and orange?	whigs
+LABEL	1	What is something that is white and orange?	road signs
+LABEL	1	What is something that is white and orange?	rock
+LABEL	1	What is something that is white and orange?	obo 2006 model year
+LABEL	0	What is something that is white and orange?	keegan@may 10 2003 , 12:20
+LABEL	1	What is something that is white and orange?	lucky colors
+LABEL	1	What is something that is white and orange?	walter
+LABEL	1	What is something that is white and orange?	ship 's-mast light fixtures
+LABEL	0	What is something that is white and orange?	562
+LABEL	1	What is something that is white and orange?	lettering
+LABEL	1	What is something that is white and orange?	older taxis
+LABEL	1	What is something that is white and orange?	chicago bears jerseys
+LABEL	1	What is something that is white and orange?	victor
+LABEL	1	What is something that is white and orange?	wedding colours
+LABEL	0	What is something that is white and orange?	creamy
+LABEL	1	What is something that is white and orange?	bo
+LABEL	1	What is something that is white and orange?	flames
+LABEL	1	What is something that is white and orange?	dustjacket
+LABEL	1	What is something that is white and orange?	high elevations
+LABEL	0	What is something that is white and orange?	red
+LABEL	1	What is something that is white and orange?	tower
+LABEL	1	What is something that is white and orange?	originally dutch flag
+LABEL	0	What is something that is white and orange?	upright?s blue colors
+LABEL	1	What is something that is white and orange?	team colors
+LABEL	0	What is something that is white and orange?	dominating colors
+LABEL	0	What is something that is white and orange?	inside
+LABEL	1	What is something that is white and orange?	markings
+LABEL	1	What is something that is white and orange?	philadelphia flyers
+LABEL	1	What is something that is white and orange?	62 heads
+LABEL	1	What is something that is white and orange?	gazebo
+LABEL	1	What is something that is white and orange?	amazing skirt
+LABEL	1	What is something that is white and orange?	canvas blue strap
+LABEL	0	What is something that is white and orange?	wire 1
+LABEL	1	What is something that is white and orange?	wings
+LABEL	1	What is something that is white and orange?	ambient lighting
+LABEL	1	What is something that is white and orange?	fake halloween teeth
+LABEL	1	What is something that is white and orange?	chest
+LABEL	0	What is something that is white and orange?	thompson-boling arena
+LABEL	1	What is something that is white and orange?	mesh
+LABEL	1	What is something that is white and orange?	cones
+LABEL	1	What is something that is white and orange?	jewelry kit
+LABEL	1	What countries were involved in the Spanish war?	italian fascist
+LABEL	0	What countries were involved in the Spanish war?	fighter
+LABEL	0	What countries were involved in the Spanish war?	twelve
+LABEL	0	What countries were involved in the Spanish war?	orwell
+LABEL	0	What countries were involved in the Spanish war?	communist party
+LABEL	0	What countries were involved in the Spanish war?	unit
+LABEL	0	What countries were involved in the Spanish war?	prelude
+LABEL	0	What countries were involved in the Spanish war?	george orwell
+LABEL	0	What countries were involved in the Spanish war?	anarchism
+LABEL	0	What countries were involved in the Spanish war?	typhoid
+LABEL	0	What countries were involved in the Spanish war?	1898 country
+LABEL	0	What countries were involved in the Spanish war?	1936
+LABEL	0	What countries were involved in the Spanish war?	lt . col . andrew d.
+LABEL	0	What countries were involved in the Spanish war?	col . eddy
+LABEL	0	What countries were involved in the Spanish war?	jean
+LABEL	0	What countries were involved in the Spanish war?	thomas
+LABEL	0	What countries were involved in the Spanish war?	71st
+LABEL	0	What countries were involved in the Spanish war?	time period
+LABEL	0	What countries were involved in the Spanish war?	issues
+LABEL	0	What countries were involved in the Spanish war?	wills point , texas
+LABEL	0	What countries were involved in the Spanish war?	mimi
+LABEL	0	What countries were involved in the Spanish war?	ju-87
+LABEL	0	What countries were involved in the Spanish war?	descendants
+LABEL	0	What countries were involved in the Spanish war?	remaining stories
+LABEL	0	What countries were involved in the Spanish war?	oehler negrete
+LABEL	0	What countries were involved in the Spanish war?	uncle
+LABEL	0	What countries were involved in the Spanish war?	80 american women
+LABEL	0	What countries were involved in the Spanish war?	old theater
+LABEL	0	What countries were involved in the Spanish war?	julian bell
+LABEL	0	What countries were involved in the Spanish war?	10
+LABEL	0	What countries were involved in the Spanish war?	three
+LABEL	0	What countries were involved in the Spanish war?	new york jew
+LABEL	0	What countries were involved in the Spanish war?	federico garc?a lorca
+LABEL	0	What countries were involved in the Spanish war?	more than 500 000 people
+LABEL	0	What countries were involved in the Spanish war?	picasso?s friend
+LABEL	0	What countries were involved in the Spanish war?	civil war
+LABEL	0	What countries were involved in the Spanish war?	finisterre
+LABEL	0	What countries were involved in the Spanish war?	battleships
+LABEL	0	What countries were involved in the Spanish war?	state naval militias
+LABEL	1	What countries were involved in the Spanish war?	american red cross
+LABEL	0	What countries were involved in the Spanish war?	war
+LABEL	0	What countries were involved in the Spanish war?	bielsa
+LABEL	0	What countries were involved in the Spanish war?	committed socialist
+LABEL	1	What countries were involved in the Spanish war?	soviet union
+LABEL	0	What countries were involved in the Spanish war?	incendiary device
+LABEL	0	What countries were involved in the Spanish war?	valencia
+LABEL	0	What countries were involved in the Spanish war?	colonel sanford parker
+LABEL	0	What countries were involved in the Spanish war?	fort
+LABEL	0	What is another word of sand hills?	ghost crab
+LABEL	0	What is another word of sand hills?	henry
+LABEL	0	What is another word of sand hills?	hill
+LABEL	0	What is another word of sand hills?	southwest
+LABEL	0	What is another word of sand hills?	it?s terrain
+LABEL	0	What is another word of sand hills?	?there ?
+LABEL	1	What is another word of sand hills?	coastal plain
+LABEL	0	What is another word of sand hills?	mike smith
+LABEL	0	What is another word of sand hills?	anurag
+LABEL	0	What is another word of sand hills?	last respondent
+LABEL	0	What is another word of sand hills?	western shore
+LABEL	0	What is another word of sand hills?	slac
+LABEL	0	What is another word of sand hills?	life dr. medicine crow
+LABEL	0	What is another word of sand hills?	?d rounds
+LABEL	0	What is another word of sand hills?	deceased
+LABEL	0	What is another word of sand hills?	tidwell
+LABEL	0	What is another word of sand hills?	one way
+LABEL	0	What is another word of sand hills?	nolte
+LABEL	0	What is another word of sand hills?	nina
+LABEL	0	What is another word of sand hills?	main land
+LABEL	0	What is another word of sand hills?	firm
+LABEL	0	What is another word of sand hills?	rock
+LABEL	0	What is new south wales slogan?	sydney
+LABEL	0	What is new south wales slogan?	gambling
+LABEL	0	What is new south wales slogan?	sydney film festival
+LABEL	0	What is new south wales slogan?	australia
+LABEL	0	What is new south wales slogan?	wollongong
+LABEL	0	What is new south wales slogan?	wagga wagga
+LABEL	0	What is new south wales slogan?	home base
+LABEL	0	What is new south wales slogan?	legislation
+LABEL	0	What is new south wales slogan?	ointment
+LABEL	0	What is new south wales slogan?	country
+LABEL	0	What is new south wales slogan?	pbcs
+LABEL	0	What is new south wales slogan?	australia holiday
+LABEL	0	What is new south wales slogan?	?racing
+LABEL	0	What is new south wales slogan?	hotel
+LABEL	0	What is new south wales slogan?	river
+LABEL	0	What is new south wales slogan?	states
+LABEL	0	What is new south wales slogan?	australia newcastle
+LABEL	0	What is new south wales slogan?	most populous states
+LABEL	0	What is new south wales slogan?	zone
+LABEL	0	What is new south wales slogan?	interstate migration
+LABEL	0	What is new south wales slogan?	wagga wagga wagga wagga
+LABEL	0	What is new south wales slogan?	mystery
+LABEL	0	What is new south wales slogan?	material
+LABEL	0	What is new south wales slogan?	original states
+LABEL	0	What is new south wales slogan?	6 states
+LABEL	0	What is new south wales slogan?	five mainland states
+LABEL	0	What is new south wales slogan?	wollemi
+LABEL	0	What is new south wales slogan?	hunter valley
+LABEL	0	What is new south wales slogan?	largest total aboriginal population
+LABEL	0	What is new south wales slogan?	$ 1 million mark
+LABEL	0	What is new south wales slogan?	largest indian-born residents
+LABEL	0	What is new south wales slogan?	largest membership
+LABEL	0	What is new south wales slogan?	four australian states territories
+LABEL	0	What is new south wales slogan?	moment
+LABEL	0	What is new south wales slogan?	australian provinces
+LABEL	0	What is new south wales slogan?	list
+LABEL	0	What is new south wales slogan?	property players
+LABEL	0	What is new south wales slogan?	aussie pet holidays
+LABEL	0	What is new south wales slogan?	destination port
+LABEL	0	What is new south wales slogan?	hmong
+LABEL	0	What is new south wales slogan?	registrations
+LABEL	0	What is new south wales slogan?	northernmost part
+LABEL	0	What is new south wales slogan?	nearest town
+LABEL	0	What is new south wales slogan?	class 457 visa applicants
+LABEL	0	What is new south wales slogan?	biggest shortages
+LABEL	0	What is new south wales slogan?	jurisdiction
+LABEL	0	What is new south wales slogan?	occupational health safety laws
+LABEL	0	What occurs in prokaryotic cells?	cells
+LABEL	0	What occurs in prokaryotic cells?	bacteria
+LABEL	0	What occurs in prokaryotic cells?	lysosome
+LABEL	1	What occurs in prokaryotic cells?	introns
+LABEL	1	What occurs in prokaryotic cells?	aerobic respiration
+LABEL	1	What occurs in prokaryotic cells?	rna
+LABEL	0	What occurs in prokaryotic cells?	biology
+LABEL	0	What occurs in prokaryotic cells?	microbiology
+LABEL	0	What occurs in prokaryotic cells?	silver
+LABEL	0	What occurs in prokaryotic cells?	students
+LABEL	0	What occurs in prokaryotic cells?	left
+LABEL	0	What occurs in prokaryotic cells?	eukaryotic cells
+LABEL	0	What occurs in prokaryotic cells?	most complex being
+LABEL	0	What occurs in prokaryotic cells?	life
+LABEL	1	What occurs in prokaryotic cells?	labor
+LABEL	0	What occurs in prokaryotic cells?	general , eukaryotic cells
+LABEL	0	What occurs in prokaryotic cells?	pl
+LABEL	0	What occurs in prokaryotic cells?	vivo
+LABEL	1	What occurs in prokaryotic cells?	precrp
+LABEL	1	What occurs in prokaryotic cells?	eukaryotic dna
+LABEL	0	What occurs in prokaryotic cells?	mammalian cells
+LABEL	0	What occurs in prokaryotic cells?	23 chromosomes
+LABEL	0	What occurs in prokaryotic cells?	cholesterol
+LABEL	0	What occurs in prokaryotic cells?	cell
+LABEL	0	What occurs in prokaryotic cells?	eukaryotic cell
+LABEL	1	What occurs in prokaryotic cells?	polyribosomes
+LABEL	0	What celebrities have naked pictures?	up
+LABEL	0	What celebrities have naked pictures?	woman
+LABEL	0	What celebrities have naked pictures?	ebay
+LABEL	0	What celebrities have naked pictures?	boy
+LABEL	0	What celebrities have naked pictures?	20 %
+LABEL	0	What celebrities have naked pictures?	investigators
+LABEL	0	What celebrities have naked pictures?	21 percent
+LABEL	0	What celebrities have naked pictures?	trace
+LABEL	0	What celebrities have naked pictures?	endorsement
+LABEL	0	What celebrities have naked pictures?	metrolink
+LABEL	0	What celebrities have naked pictures?	ch-ai
+LABEL	0	What celebrities have naked pictures?	2009
+LABEL	0	What celebrities have naked pictures?	naked couple
+LABEL	0	What celebrities have naked pictures?	14-year old boy
+LABEL	0	What celebrities have naked pictures?	drake
+LABEL	0	What celebrities have naked pictures?	heck
+LABEL	0	What celebrities have naked pictures?	strange phone call
+LABEL	0	What celebrities have naked pictures?	king
+LABEL	0	What celebrities have naked pictures?	cache
+LABEL	0	What celebrities have naked pictures?	hearing
+LABEL	0	What celebrities have naked pictures?	teenage boy
+LABEL	0	What celebrities have naked pictures?	tsa
+LABEL	0	What celebrities have naked pictures?	facebook
+LABEL	0	What celebrities have naked pictures?	young men
+LABEL	0	Why was the patriot act created?	?fema
+LABEL	0	Why was the patriot act created?	cointelpro
+LABEL	0	Why was the patriot act created?	rights
+LABEL	0	Why was the patriot act created?	argument
+LABEL	0	Why was the patriot act created?	fema
+LABEL	0	Why was the patriot act created?	democracy
+LABEL	0	Why was the patriot act created?	authoritarianism
+LABEL	0	Why was the patriot act created?	works
+LABEL	0	Why was the patriot act created?	patriot act
+LABEL	0	Why was the patriot act created?	legislation
+LABEL	0	Why was the patriot act created?	critics
+LABEL	0	Why was the patriot act created?	source
+LABEL	0	Why was the patriot act created?	most significant
+LABEL	0	Why was the patriot act created?	same?..uh
+LABEL	0	Why was the patriot act created?	population
+LABEL	0	Why was the patriot act created?	reference
+LABEL	0	Why was the patriot act created?	american people
+LABEL	0	Why was the patriot act created?	first
+LABEL	0	Why was the patriot act created?	bush
+LABEL	0	Why was the patriot act created?	terror
+LABEL	0	Why was the patriot act created?	h.r. 811
+LABEL	0	Why was the patriot act created?	ndaa
+LABEL	0	Why was the patriot act created?	globe
+LABEL	0	Why was the patriot act created?	position
+LABEL	0	Why was the patriot act created?	9/11
+LABEL	0	Why was the patriot act created?	cheney?s trimester mirabilis
+LABEL	0	Why was the patriot act created?	least
+LABEL	0	Why was the patriot act created?	free , searchable database versions
+LABEL	0	Why was the patriot act created?	america
+LABEL	0	Why was the patriot act created?	etc. ? 5
+LABEL	0	Why was the patriot act created?	obama?s hypocrisy
+LABEL	0	Why was the patriot act created?	stool
+LABEL	0	Why was the patriot act created?	1918
+LABEL	0	Why was the patriot act created?	good current policy example
+LABEL	0	Why was the patriot act created?	financial sector
+LABEL	0	Why was the patriot act created?	past five years
+LABEL	0	Why was the patriot act created?	land
+LABEL	0	Why was the patriot act created?	third big picture issue
+LABEL	0	Why was the patriot act created?	recent years
+LABEL	0	Why was the patriot act created?	first example
+LABEL	0	Why was the patriot act created?	impediment
+LABEL	0	Why was the patriot act created?	how patriotic
+LABEL	0	Why was the patriot act created?	question
+LABEL	0	Why was the patriot act created?	much scrutiny
+LABEL	0	Why was the patriot act created?	related concern
+LABEL	0	Why was the patriot act created?	main issue
+LABEL	0	Why was the patriot act created?	recently enacted regulations
+LABEL	0	What kind of music did the romans have?	champion
+LABEL	0	What kind of music did the romans have?	past
+LABEL	0	What kind of music did the romans have?	planets
+LABEL	0	What kind of music did the romans have?	fact
+LABEL	0	What kind of music did the romans have?	latin
+LABEL	0	What kind of music did the romans have?	mod
+LABEL	0	What kind of music did the romans have?	harvest festival
+LABEL	0	What kind of music did the romans have?	faith
+LABEL	0	What kind of music did the romans have?	salvation
+LABEL	0	What kind of music did the romans have?	my head
+LABEL	0	What kind of music did the romans have?	heaven 17
+LABEL	0	What kind of music did the romans have?	rock
+LABEL	0	What kind of music did the romans have?	god
+LABEL	0	What kind of music did the romans have?	school
+LABEL	0	What kind of music did the romans have?	formula
+LABEL	0	What kind of music did the romans have?	article
+LABEL	1	What kind of music did the romans have?	gregorian chant
+LABEL	1	What kind of music did the romans have?	chant
+LABEL	1	What kind of music did the romans have?	graduale romanum
+LABEL	0	What kind of music did the romans have?	cato
+LABEL	0	What responsibilities did john jay have?	failures
+LABEL	0	What responsibilities did john jay have?	league?s velocity
+LABEL	0	What responsibilities did john jay have?	volunteers
+LABEL	0	What responsibilities did john jay have?	ball
+LABEL	0	What responsibilities did john jay have?	old laura lee show
+LABEL	0	What responsibilities did john jay have?	pbs documentary
+LABEL	0	What responsibilities did john jay have?	dude ranch
+LABEL	0	What responsibilities did john jay have?	throws
+LABEL	0	What responsibilities did john jay have?	new york
+LABEL	0	What responsibilities did john jay have?	columbia university
+LABEL	0	What responsibilities did john jay have?	obama
+LABEL	0	What responsibilities did john jay have?	southern states
+LABEL	0	What responsibilities did john jay have?	town
+LABEL	0	What responsibilities did john jay have?	prayer
+LABEL	0	What responsibilities did john jay have?	priests
+LABEL	0	What responsibilities did john jay have?	chomsky
+LABEL	0	What responsibilities did john jay have?	program
+LABEL	0	What responsibilities did john jay have?	wac
+LABEL	0	What responsibilities did john jay have?	thurgood marshall
+LABEL	0	What responsibilities did john jay have?	george clinton
+LABEL	0	What responsibilities did john jay have?	friday
+LABEL	0	What responsibilities did john jay have?	show
+LABEL	0	What responsibilities did john jay have?	conspiracies
+LABEL	0	What responsibilities did john jay have?	scholarship service award
+LABEL	0	What responsibilities did john jay have?	vikings
+LABEL	0	What responsibilities did john jay have?	szendro?s home college
+LABEL	0	What responsibilities did john jay have?	united states
+LABEL	1	What responsibilities did john jay have?	supreme court
+LABEL	0	What responsibilities did john jay have?	child
+LABEL	0	What responsibilities did john jay have?	criminologist
+LABEL	0	What responsibilities did john jay have?	work study students
+LABEL	0	What responsibilities did john jay have?	sale
+LABEL	0	What responsibilities did john jay have?	presentation
+LABEL	0	What responsibilities did john jay have?	edmonds
+LABEL	0	What responsibilities did john jay have?	rye
+LABEL	1	What responsibilities did john jay have?	treaty
+LABEL	0	What responsibilities did john jay have?	institute
+LABEL	0	What responsibilities did john jay have?	better teaching seminars
+LABEL	0	What responsibilities did john jay have?	founders
+LABEL	0	What responsibilities did john jay have?	criminal justice studies
+LABEL	0	What responsibilities did john jay have?	changing times
+LABEL	0	What responsibilities did john jay have?	emergency response studies
+LABEL	0	What responsibilities did john jay have?	america
+LABEL	0	What responsibilities did john jay have?	college
+LABEL	0	What responsibilities did john jay have?	marvelously favorable
+LABEL	0	What responsibilities did john jay have?	u.s. constitution
+LABEL	0	What responsibilities did john jay have?	abdul-aziz hassan
+LABEL	0	Is a ostrich a vertebrates?	leather boot
+LABEL	0	Is a ostrich a vertebrates?	master control series reverso
+LABEL	0	Is a ostrich a vertebrates?	tree
+LABEL	0	Is a ostrich a vertebrates?	oudtshoorn old mill lodge
+LABEL	0	Is a ostrich a vertebrates?	first kind
+LABEL	0	Is a ostrich a vertebrates?	south africa old mill lodge
+LABEL	0	Is a ostrich a vertebrates?	marcel
+LABEL	0	Is a ostrich a vertebrates?	almost 100 years
+LABEL	0	Is a ostrich a vertebrates?	foot
+LABEL	0	Is a ostrich a vertebrates?	feather
+LABEL	0	Is a ostrich a vertebrates?	?the government
+LABEL	0	Is a ostrich a vertebrates?	bird
+LABEL	0	Is a ostrich a vertebrates?	final touch
+LABEL	0	Is a ostrich a vertebrates?	sides
+LABEL	0	Is a ostrich a vertebrates?	singer
+LABEL	0	Is a ostrich a vertebrates?	round bell shade
+LABEL	0	Is a ostrich a vertebrates?	ma'at
+LABEL	0	Is a ostrich a vertebrates?	east
+LABEL	0	Is a ostrich a vertebrates?	man
+LABEL	0	Is a ostrich a vertebrates?	scarf
+LABEL	0	Is a ostrich a vertebrates?	government
+LABEL	0	Is a ostrich a vertebrates?	trim
+LABEL	0	Is a ostrich a vertebrates?	latter
+LABEL	0	Is a ostrich a vertebrates?	universe
+LABEL	0	Is a ostrich a vertebrates?	covetous man first kind
+LABEL	0	Is a ostrich a vertebrates?	savannah tails
+LABEL	0	Is a ostrich a vertebrates?	popular press
+LABEL	0	Is a ostrich a vertebrates?	fewer feathers
+LABEL	0	Is a ostrich a vertebrates?	wings
+LABEL	0	Is a ostrich a vertebrates?	inseparable pals
+LABEL	0	Is a ostrich a vertebrates?	two tails
+LABEL	0	Is a ostrich a vertebrates?	thangsgiving hoss style
+LABEL	0	Is a ostrich a vertebrates?	fewer feathers than cowboy hat
+LABEL	0	What are the scopes and limitations of physics?	scholars network email
+LABEL	0	What are the scopes and limitations of physics?	critical areas
+LABEL	0	What are the scopes and limitations of physics?	subsequent runtime errors
+LABEL	0	What are the scopes and limitations of physics?	common good
+LABEL	0	What are the scopes and limitations of physics?	ftc
+LABEL	0	What are the scopes and limitations of physics?	principle
+LABEL	0	What are the scopes and limitations of physics?	students
+LABEL	1	What were the names of famous highwayman?	dick turpin
+LABEL	1	What were the names of famous highwayman?	two riniers
+LABEL	1	What were the names of famous highwayman?	gamaliel ratsey
+LABEL	1	What were the names of famous highwayman?	dick dunsdon
+LABEL	1	What were the names of famous highwayman?	lady katherine ferrers
+LABEL	1	What were the names of famous highwayman?	willie brennan
+LABEL	0	What were the names of famous highwayman?	services
+LABEL	1	What were the names of famous highwayman?	gabriel
+LABEL	1	What were the names of famous highwayman?	erik
+LABEL	1	What were the names of famous highwayman?	william brennan
+LABEL	1	What were the names of famous highwayman?	angulimala
+LABEL	0	What were the names of famous highwayman?	tutor
+LABEL	0	What were the names of famous highwayman?	governess
+LABEL	0	What were the names of famous highwayman?	silver
+LABEL	0	What were the names of famous highwayman?	moonlight ?
+LABEL	0	What were the names of famous highwayman?	paris
+LABEL	0	What were the names of famous highwayman?	road
+LABEL	0	What were the names of famous highwayman?	?business
+LABEL	0	What were the names of famous highwayman?	jul 2008 , 22:04 wow
+LABEL	0	What were the names of famous highwayman?	small paddocks
+LABEL	1	What were the names of famous highwayman?	denis moore
+LABEL	0	What were the names of famous highwayman?	kid
+LABEL	0	What were the names of famous highwayman?	savior
+LABEL	1	What were the names of famous highwayman?	kingston
+LABEL	1	What were the names of famous highwayman?	walton
+LABEL	1	What were the names of famous highwayman?	tyburn gallows
+LABEL	0	What were the names of famous highwayman?	mountains defiles
+LABEL	0	What were the names of famous highwayman?	design
+LABEL	1	What were the names of famous highwayman?	dick
+LABEL	1	What were the names of famous highwayman?	moll cutpurse
+LABEL	0	What were the names of famous highwayman?	song
+LABEL	1	What were the names of famous highwayman?	abu dharr
+LABEL	1	What were the names of famous highwayman?	dennis
+LABEL	0	What were the names of famous highwayman?	tories
+LABEL	0	What were the names of famous highwayman?	revealer
+LABEL	0	What were the names of famous highwayman?	tall fellow next line
+LABEL	0	What were the names of famous highwayman?	audio challenge
+LABEL	0	What were the names of famous highwayman?	class
+LABEL	0	What were the names of famous highwayman?	tus
+LABEL	0	What were the names of famous highwayman?	father
+LABEL	0	What were the names of famous highwayman?	author
+LABEL	0	What were the names of famous highwayman?	lone hebrew
+LABEL	0	What were the names of famous highwayman?	knot
+LABEL	0	What were the names of famous highwayman?	messenger
+LABEL	0	What were the names of famous highwayman?	country
+LABEL	0	What were the names of famous highwayman?	charlotte
+LABEL	1	How many diffrent types of televisions are there?	lcd tvs
+LABEL	0	How many diffrent types of televisions are there?	privacy screens
+LABEL	0	How many diffrent types of televisions are there?	home furniture
+LABEL	0	How many diffrent types of televisions are there?	similar program
+LABEL	0	How many diffrent types of televisions are there?	power cell
+LABEL	0	How many diffrent types of televisions are there?	digital cable
+LABEL	0	How many diffrent types of televisions are there?	mockumentary
+LABEL	1	How many diffrent types of televisions are there?	3d ready television
+LABEL	1	How many diffrent types of televisions are there?	secam secam
+LABEL	1	How many diffrent types of televisions are there?	dlp
+LABEL	0	How many diffrent types of televisions are there?	drama
+LABEL	0	How many diffrent types of televisions are there?	high
+LABEL	1	How many diffrent types of televisions are there?	plasma television
+LABEL	1	How many diffrent types of televisions are there?	oftheworldtv
+LABEL	0	How many diffrent types of televisions are there?	game show
+LABEL	1	How many diffrent types of televisions are there?	works satellite tv
+LABEL	0	How many diffrent types of televisions are there?	reality television
+LABEL	0	How many diffrent types of televisions are there?	tivo guru guides
+LABEL	0	How many diffrent types of televisions are there?	roberts
+LABEL	0	How many diffrent types of televisions are there?	below
+LABEL	0	Is water a raw ingredient?	coconut water
+LABEL	0	Is water a raw ingredient?	china
+LABEL	0	How long did a gold license last for?	lucremaker
+LABEL	0	How long did a gold license last for?	virtualpayments
+LABEL	0	How long did a gold license last for?	imakemoneynow
+LABEL	0	How long did a gold license last for?	cfdonline
+LABEL	0	How long did a gold license last for?	dedicated server
+LABEL	0	How long did a gold license last for?	bruyetteinvestment
+LABEL	0	How long did a gold license last for?	exceptionalfunds
+LABEL	0	How long did a gold license last for?	roliteincome
+LABEL	0	How long did a gold license last for?	verifonds
+LABEL	1	What is the major cities of romania?	sibiu
+LABEL	1	What is the major cities of romania?	cluj-napoca
+LABEL	0	What is the major cities of romania?	1st century
+LABEL	1	What is the major cities of romania?	romania bucharest
+LABEL	1	What is the major cities of romania?	constan?a
+LABEL	1	What is the major cities of romania?	romania constan?a
+LABEL	0	What is the major cities of romania?	population
+LABEL	1	What is the major cities of romania?	cluj-napoca cluj-napoca
+LABEL	1	What is the major cities of romania?	constanta
+LABEL	1	What is the major cities of romania?	braila
+LABEL	1	What is the major cities of romania?	resita
+LABEL	1	What is the major cities of romania?	bacau
+LABEL	1	What is the major cities of romania?	buzau
+LABEL	1	What is the major cities of romania?	arad
+LABEL	1	What is the major cities of romania?	buscata
+LABEL	1	Who wins the WWE title?	cm punk
+LABEL	1	Who wins the WWE title?	triple h
+LABEL	1	Who wins the WWE title?	rob van dam
+LABEL	1	Who wins the WWE title?	bob backlund
+LABEL	1	Who wins the WWE title?	tony atlas
+LABEL	1	Who wins the WWE title?	beth phoenix
+LABEL	1	Who wins the WWE title?	john cena
+LABEL	1	Who wins the WWE title?	eddie guerrero
+LABEL	0	Who wins the WWE title?	monday
+LABEL	1	Who wins the WWE title?	eddie
+LABEL	1	Who wins the WWE title?	jeff
+LABEL	1	Who wins the WWE title?	wade barrett
+LABEL	1	Who wins the WWE title?	hhh
+LABEL	1	Who wins the WWE title?	sheamus
+LABEL	1	Who wins the WWE title?	batista
+LABEL	1	Who wins the WWE title?	cena
+LABEL	1	Who wins the WWE title?	orton
+LABEL	1	Who wins the WWE title?	samoan bulldozer
+LABEL	1	Who wins the WWE title?	emotional big show
+LABEL	0	Who wins the WWE title?	jan 2011
+LABEL	1	Who wins the WWE title?	punk
+LABEL	1	Who wins the WWE title?	taker
+LABEL	1	Who wins the WWE title?	barrett
+LABEL	1	Who wins the WWE title?	jericho
+LABEL	1	Who wins the WWE title?	show
+LABEL	0	Who wins the WWE title?	business
+LABEL	0	Who wins the WWE title?	entrances celebrations
+LABEL	0	Who wins the WWE title?	austin
+LABEL	0	Who wins the WWE title?	show kane
+LABEL	0	Who wins the WWE title?	flair
+LABEL	0	What is a tortoises habitat like?	mouse
+LABEL	0	What is a tortoises habitat like?	plants
+LABEL	1	What is a tortoises habitat like?	side garden
+LABEL	1	What is a tortoises habitat like?	group
+LABEL	1	What is a tortoises habitat like?	lake today
+LABEL	1	What is a tortoises habitat like?	marshes
+LABEL	1	What is a tortoises habitat like?	mountains
+LABEL	1	What is a tortoises habitat like?	galpagos islands
+LABEL	1	What is Utah's most famous food?	celery
+LABEL	0	What is Utah's most famous food?	picture
+LABEL	0	What is Utah's most famous food?	store
+LABEL	0	What is Utah's most famous food?	woman
+LABEL	0	What is Utah's most famous food?	learning
+LABEL	0	What is Utah's most famous food?	culture
+LABEL	1	What is Utah's most famous food?	egg
+LABEL	1	What do fairy tales have in common?	anthropomorphic motifs
+LABEL	1	What do fairy tales have in common?	prince
+LABEL	1	What do fairy tales have in common?	light
+LABEL	1	What do fairy tales have in common?	complete silence
+LABEL	1	What do fairy tales have in common?	melanie zimmer transformation
+LABEL	1	What do fairy tales have in common?	impossible task
+LABEL	1	What do fairy tales have in common?	born station
+LABEL	1	What do fairy tales have in common?	deathless
+LABEL	1	What do fairy tales have in common?	jack
+LABEL	0	What do fairy tales have in common?	farfaria
+LABEL	1	What do fairy tales have in common?	morals
+LABEL	0	What do fairy tales have in common?	children
+LABEL	0	What do fairy tales have in common?	common
+LABEL	1	What do fairy tales have in common?	truth
+LABEL	0	What do fairy tales have in common?	real world
+LABEL	0	What do fairy tales have in common?	common ?
+LABEL	1	What do fairy tales have in common?	marriage
+LABEL	0	What do fairy tales have in common?	origin
+LABEL	1	What do fairy tales have in common?	sacral purpose
+LABEL	1	What do fairy tales have in common?	sequel
+LABEL	0	What do fairy tales have in common?	similarity
+LABEL	1	What do fairy tales have in common?	double nature
+LABEL	0	What do fairy tales have in common?	interested kazimer
+LABEL	0	What do fairy tales have in common?	crazy little red
+LABEL	1	What do fairy tales have in common?	strange endings
+LABEL	1	What do fairy tales have in common?	clear beginnings , middles ends
+LABEL	0	What do fairy tales have in common?	404 pages
+LABEL	0	What do fairy tales have in common?	story
+LABEL	1	What do fairy tales have in common?	uncanny staying power
+LABEL	1	What do fairy tales have in common?	natural functions
+LABEL	1	What do fairy tales have in common?	3 brothers
+LABEL	1	What do fairy tales have in common?	ups downs
+LABEL	0	What do fairy tales have in common?	long history
+LABEL	0	What do fairy tales have in common?	fun
+LABEL	0	What do fairy tales have in common?	100 % cotton face cotton fill
+LABEL	0	What do fairy tales have in common?	psyche
+LABEL	0	What do fairy tales have in common?	american society
+LABEL	1	What do fairy tales have in common?	happy endings
+LABEL	1	What do fairy tales have in common?	happy ending
+LABEL	1	What do fairy tales have in common?	hero
+LABEL	1	What do fairy tales have in common?	beginnings
+LABEL	1	What do fairy tales have in common?	emotional logic
+LABEL	1	What do fairy tales have in common?	dark undertones
+LABEL	1	What do fairy tales have in common?	chance
+LABEL	1	What do fairy tales have in common?	chaste veneer
+LABEL	1	What do fairy tales have in common?	sad endings
+LABEL	1	What do fairy tales have in common?	heartbreaking moments
+LABEL	1	What do fairy tales have in common?	three sisters
+LABEL	0	When was Drake born?	toronto
+LABEL	0	When was Drake born?	marathon county
+LABEL	0	When was Drake born?	scotland
+LABEL	0	When was Drake born?	birmingham
+LABEL	0	When was Drake born?	new york city
+LABEL	0	When was Drake born?	chicago
+LABEL	0	When was Drake born?	wilkes-barre
+LABEL	0	When was Drake born?	devon
+LABEL	0	When was Drake born?	natchez
+LABEL	0	When was Drake born?	maine
+LABEL	0	When was Drake born?	socorro
+LABEL	1	When was Drake born?	1540
+LABEL	1	When was Drake born?	1948
+LABEL	1	When was Drake born?	24 october 1986
+LABEL	0	When was Drake born?	english midlands town
+LABEL	0	When was Drake born?	seneca county
+LABEL	0	When was Drake born?	pitka?s point
+LABEL	1	When was Drake born?	oct. 20 , 1785
+LABEL	1	When was Drake born?	march 29 , 1819
+LABEL	1	When was Drake born?	1961
+LABEL	1	When was Drake born?	1819
+LABEL	1	When was Drake born?	1811
+LABEL	1	When was Drake born?	december 8 , 1923
+LABEL	0	When was Drake born?	rockaway
+LABEL	0	When was Drake born?	wayne
+LABEL	0	When was Drake born?	nearby town
+LABEL	1	When was Drake born?	feb 1889
+LABEL	1	When was Drake born?	14 feb 1921
+LABEL	1	When was Drake born?	october 24 , 1986
+LABEL	1	When was Drake born?	mar 1921
+LABEL	1	When was Drake born?	1 jul 1922
+LABEL	1	When was Drake born?	june 19th
+LABEL	1	When was Drake born?	may 1879
+LABEL	0	When was Drake born?	cape breton
+LABEL	1	When was Drake born?	august 2008
+LABEL	1	When was Drake born?	22 mar 1901
+LABEL	0	When was Drake born?	pownal
+LABEL	0	When was Drake born?	yesterday
+LABEL	0	When was Drake born?	top
+LABEL	0	When was Drake born?	tecumseh
+LABEL	0	When was Drake born?	room
+LABEL	0	When was Drake born?	?my name
+LABEL	0	When was Drake born?	maiden name
+LABEL	0	When was Drake born?	sound
+LABEL	0	When was Drake born?	culture shop package
+LABEL	1	What are the leading producers of WHEAT?	china
+LABEL	0	What are the leading producers of WHEAT?	state
+LABEL	1	What are the leading producers of WHEAT?	france
+LABEL	1	What are the leading producers of WHEAT?	australia
+LABEL	1	What are the leading producers of WHEAT?	morocco
+LABEL	1	What are the leading producers of WHEAT?	canada
+LABEL	1	What are the leading producers of WHEAT?	united states
+LABEL	1	What are the leading producers of WHEAT?	 china
+LABEL	1	What are the leading producers of WHEAT?	india-2
+LABEL	1	What are the leading producers of WHEAT?	india /
+LABEL	1	What are the leading producers of WHEAT?	india 4
+LABEL	1	Do hotels have room service?	westin
+LABEL	1	Do hotels have room service?	z hotel
+LABEL	1	What do scientists classify?	hobbit
+LABEL	1	What do scientists classify?	butterflies
+LABEL	1	What do scientists classify?	bats
+LABEL	1	What do scientists classify?	birds
+LABEL	1	What do scientists classify?	fruits
+LABEL	1	What do scientists classify?	dragonflies
+LABEL	1	What do scientists classify?	dung beetles
+LABEL	1	What do scientists classify?	glaucoma
+LABEL	1	What do scientists classify?	volcanoes
+LABEL	1	What do scientists classify?	insects
+LABEL	1	What do scientists classify?	species
+LABEL	1	What do scientists classify?	dinosaurs
+LABEL	1	What do scientists classify?	plankton
+LABEL	1	What do scientists classify?	systems
+LABEL	1	What do scientists classify?	organisms
+LABEL	1	What do scientists classify?	sound
+LABEL	0	What do scientists classify?	pinnipedia
+LABEL	1	What do scientists classify?	tarsiers
+LABEL	0	What do scientists classify?	ngc 4945
+LABEL	1	What do scientists classify?	landscape
+LABEL	1	What do scientists classify?	precipitation types
+LABEL	1	What do scientists classify?	different bacteria
+LABEL	1	What do scientists classify?	human race
+LABEL	0	What do scientists classify?	variants
+LABEL	1	What do scientists classify?	activity
+LABEL	1	What do scientists classify?	animal characteristics
+LABEL	1	What do scientists classify?	living world
+LABEL	1	What do scientists classify?	nature
+LABEL	0	What do scientists classify?	groups
+LABEL	1	What do scientists classify?	crustaceans
+LABEL	1	What do scientists classify?	strong solar flares
+LABEL	1	What do scientists classify?	cats
+LABEL	0	What do scientists classify?	techniques
+LABEL	1	What do scientists classify?	horse fossils
+LABEL	1	What do scientists classify?	occupation
+LABEL	1	What do scientists classify?	matter
+LABEL	1	What do scientists classify?	specimens
+LABEL	1	What do scientists classify?	meteor storm
+LABEL	0	What do scientists classify?	system
+LABEL	1	What do scientists classify?	american robin
+LABEL	1	What do scientists classify?	pm machines
+LABEL	1	What do scientists classify?	particular species
+LABEL	1	What do scientists classify?	animals
+LABEL	0	What is Heidi Montag's birthday?	spencer pratt
+LABEL	0	What is Heidi Montag's birthday?	job security
+LABEL	0	What is Heidi Montag's birthday?	tina brown
+LABEL	0	What is Heidi Montag's birthday?	public
+LABEL	0	What is Heidi Montag's birthday?	y2k
+LABEL	0	What is Heidi Montag's birthday?	april 12th
+LABEL	0	What is Heidi Montag's birthday?	jun 23 , 2009
+LABEL	0	What is Heidi Montag's birthday?	most disastrous fashion line
+LABEL	0	What is Heidi Montag's birthday?	most important question ?
+LABEL	0	What is Heidi Montag's birthday?	bonus
+LABEL	0	What is Heidi Montag's birthday?	opening
+LABEL	0	What is Heidi Montag's birthday?	blonde
+LABEL	0	What is Heidi Montag's birthday?	audzo
+LABEL	0	What is Heidi Montag's birthday?	herve leger dress
+LABEL	0	What is Heidi Montag's birthday?	course
+LABEL	0	What is Heidi Montag's birthday?	fame
+LABEL	0	What is Heidi Montag's birthday?	mischa
+LABEL	0	What is Heidi Montag's birthday?	screen
+LABEL	0	What is Heidi Montag's birthday?	world cup
+LABEL	0	What is Heidi Montag's birthday?	anonymous
+LABEL	0	What is Heidi Montag's birthday?	same
+LABEL	1	Where is mayans country?	belize
+LABEL	0	Where is mayans country?	kent
+LABEL	0	Where is mayans country?	hotel
+LABEL	1	What color are wedding dresses?	pink
+LABEL	1	What color are wedding dresses?	black
+LABEL	0	What color are wedding dresses?	photo
+LABEL	0	What color are wedding dresses?	left
+LABEL	0	What color are wedding dresses?	materials
+LABEL	0	What color are wedding dresses?	pearl
+LABEL	1	What color are wedding dresses?	deep red
+LABEL	0	What color are wedding dresses?	win
+LABEL	1	What color are wedding dresses?	royal_blue
+LABEL	1	What color are wedding dresses?	only white
+LABEL	1	What color are wedding dresses?	blue
+LABEL	1	What color are wedding dresses?	reddish
+LABEL	0	What color are wedding dresses?	22 juin 2011 ? 04 :07
+LABEL	0	What color are wedding dresses?	modern brides
+LABEL	0	What color are wedding dresses?	wedding dress
+LABEL	1	What color are wedding dresses?	white ivory
+LABEL	1	What color are wedding dresses?	flat flower decoration
+LABEL	0	What color are wedding dresses?	bride
+LABEL	0	What color are wedding dresses?	brides
+LABEL	0	What color are wedding dresses?	most striking
+LABEL	0	What color are wedding dresses?	western eastern culture
+LABEL	0	What color are wedding dresses?	1886
+LABEL	0	What color are wedding dresses?	goddess
+LABEL	0	What color are wedding dresses?	fabric
+LABEL	0	What color are wedding dresses?	guipere lace
+LABEL	0	What color are wedding dresses?	angel
+LABEL	0	What color are wedding dresses?	lily opening
+LABEL	0	What color are wedding dresses?	cute princess
+LABEL	0	What color are wedding dresses?	pig
+LABEL	0	What color are wedding dresses?	evening gown
+LABEL	0	What color are wedding dresses?	uppercase word
+LABEL	0	What color are wedding dresses?	little tmarketing dull
+LABEL	0	What color are wedding dresses?	new
+LABEL	0	What color are wedding dresses?	pippa?s
+LABEL	0	What color are wedding dresses?	real lady
+LABEL	0	What color are wedding dresses?	wang?s dresses
+LABEL	0	What color are wedding dresses?	cupcake
+LABEL	0	What color are wedding dresses?	cost fortune
+LABEL	0	What color are wedding dresses?	fall
+LABEL	0	What color are wedding dresses?	event
+LABEL	0	What color are wedding dresses?	lost
+LABEL	0	What color are wedding dresses?	dresses
+LABEL	0	What color are wedding dresses?	situation
+LABEL	0	What color are wedding dresses?	conversation
+LABEL	0	What color are wedding dresses?	costco
+LABEL	0	What color are wedding dresses?	2011
+LABEL	0	What color are wedding dresses?	2012
