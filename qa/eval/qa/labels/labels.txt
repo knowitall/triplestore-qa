@@ -15131,3 +15131,529 @@ LABEL	0	What color are wedding dresses?	conversation
 LABEL	0	What color are wedding dresses?	costco
 LABEL	0	What color are wedding dresses?	2011
 LABEL	0	What color are wedding dresses?	2012
+LABEL	0	What is a job for a lawyer?	law school
+LABEL	1	What is a job for a lawyer?	god
+LABEL	0	What is a job for a lawyer?	high school
+LABEL	0	What is a job for a lawyer?	sentence
+LABEL	0	What is a job for a lawyer?	kfir
+LABEL	0	What is a job for a lawyer?	faith?s niece
+LABEL	0	What is a job for a lawyer?	individual
+LABEL	0	What is a job for a lawyer?	jackie
+LABEL	1	What is a job for a lawyer?	?this conference
+LABEL	0	What is a job for a lawyer?	legal term oral argument
+LABEL	0	What is a job for a lawyer?	parang
+LABEL	0	What is a job for a lawyer?	renee
+LABEL	0	What is a job for a lawyer?	first time
+LABEL	0	What is a job for a lawyer?	ms oliveira
+LABEL	0	What is a job for a lawyer?	lorne cousin
+LABEL	0	What is a job for a lawyer?	nisreen
+LABEL	0	What is a job for a lawyer?	mr fitzroy
+LABEL	0	What is a job for a lawyer?	paralegal
+LABEL	1	What is a job for a lawyer?	campaign
+LABEL	1	What is a job for a lawyer?	medicaid boot camp
+LABEL	1	What is a job for a lawyer?	divorce rates
+LABEL	0	What is a job for a lawyer?	tall , lanky heir
+LABEL	0	What is a job for a lawyer?	jesse?s goal
+LABEL	0	What is a job for a lawyer?	relative
+LABEL	0	What is a job for a lawyer?	warsh
+LABEL	0	What is a job for a lawyer?	system
+LABEL	0	What is a job for a lawyer?	nehal sanghavi
+LABEL	1	What is a job for a lawyer?	externships
+LABEL	0	What is a job for a lawyer?	3 6 years
+LABEL	0	What is a job for a lawyer?	john
+LABEL	0	What is a job for a lawyer?	valerie karasz
+LABEL	0	What is a job for a lawyer?	gaurav sood
+LABEL	0	When did queen liliuokalani become queen?	1893
+LABEL	1	When did queen liliuokalani become queen?	1868
+LABEL	0	When did queen liliuokalani become queen?	1972
+LABEL	0	When did queen liliuokalani become queen?	england
+LABEL	0	When did queen liliuokalani become queen?	verge
+LABEL	0	When did queen liliuokalani become queen?	coup
+LABEL	0	When did queen liliuokalani become queen?	iolani palace
+LABEL	0	When did queen liliuokalani become queen?	long line
+LABEL	0	When did queen liliuokalani become queen?	court
+LABEL	0	What is one of italys famous landmarks?	eiffel tower
+LABEL	0	What is one of italys famous landmarks?	castle howard
+LABEL	0	What is one of italys famous landmarks?	cornwall
+LABEL	0	What is one of italys famous landmarks?	camelback mountain
+LABEL	1	What is one of italys famous landmarks?	pisa
+LABEL	0	What is one of italys famous landmarks?	tower bridge
+LABEL	0	What is one of italys famous landmarks?	table mountain
+LABEL	0	What is one of italys famous landmarks?	mont saint michel
+LABEL	0	What is one of italys famous landmarks?	las ramblas
+LABEL	0	What is one of italys famous landmarks?	church
+LABEL	0	What is one of italys famous landmarks?	tulum
+LABEL	0	What is one of italys famous landmarks?	wrekin
+LABEL	0	What is one of italys famous landmarks?	athens
+LABEL	0	What is one of italys famous landmarks?	manchester
+LABEL	0	What is one of italys famous landmarks?	glastonbury tor
+LABEL	0	What is one of italys famous landmarks?	quebec bridge
+LABEL	1	What is one of italys famous landmarks?	trevi fountain
+LABEL	0	What is one of italys famous landmarks?	andrassy ut
+LABEL	0	What is one of italys famous landmarks?	skylon tower
+LABEL	0	What is one of italys famous landmarks?	acorn street
+LABEL	0	What is one of italys famous landmarks?	hollywood sign
+LABEL	0	What is one of italys famous landmarks?	legendary house
+LABEL	0	What is one of italys famous landmarks?	sydney town hall
+LABEL	0	What is one of italys famous landmarks?	boundaries
+LABEL	0	What is one of italys famous landmarks?	washington monument
+LABEL	0	What is one of italys famous landmarks?	least
+LABEL	1	What is one of italys famous landmarks?	duomo
+LABEL	0	What is one of italys famous landmarks?	?the hollywood sign
+LABEL	0	What is one of italys famous landmarks?	liberty
+LABEL	0	What is one of italys famous landmarks?	lubeck
+LABEL	0	What is one of italys famous landmarks?	ruins
+LABEL	0	What is one of italys famous landmarks?	paraportiani
+LABEL	0	What is one of italys famous landmarks?	innocence casa kimberley
+LABEL	0	What is one of italys famous landmarks?	ne
+LABEL	0	What is one of italys famous landmarks?	hollywood bowl
+LABEL	1	What is one of italys famous landmarks?	coliseum
+LABEL	0	What is one of italys famous landmarks?	sunnyside
+LABEL	0	What is one of italys famous landmarks?	redwoods state park
+LABEL	0	What is one of italys famous landmarks?	rawlins
+LABEL	0	What is one of italys famous landmarks?	centre stage
+LABEL	0	What is one of italys famous landmarks?	gateway
+LABEL	0	What is one of italys famous landmarks?	mountain?
+LABEL	0	What is one of italys famous landmarks?	acropolis
+LABEL	0	What is one of italys famous landmarks?	cathedral clock
+LABEL	0	What is one of italys famous landmarks?	san francisco
+LABEL	0	What is one of italys famous landmarks?	up
+LABEL	1	Use of tin and tin alloy?	bronze
+LABEL	1	Use of tin and tin alloy?	weapons
+LABEL	0	Use of tin and tin alloy?	libya
+LABEL	0	Use of tin and tin alloy?	surfaces
+LABEL	1	Use of tin and tin alloy?	brass
+LABEL	1	Use of tin and tin alloy?	pewter pewter
+LABEL	1	Use of tin and tin alloy?	bronze bronze
+LABEL	1	Use of tin and tin alloy?	comparison bronze
+LABEL	1	Use of tin and tin alloy?	packaging
+LABEL	1	Use of tin and tin alloy?	blade
+LABEL	1	Use of tin and tin alloy?	previous soldering processes
+LABEL	1	Use of tin and tin alloy?	rosin
+LABEL	1	Use of tin and tin alloy?	solder
+LABEL	1	Use of tin and tin alloy?	metal pipes
+LABEL	1	Use of tin and tin alloy?	advanced circuits
+LABEL	0	Use of tin and tin alloy?	928
+LABEL	1	Use of tin and tin alloy?	speculum metal
+LABEL	1	Use of tin and tin alloy?	copper ?speculum metal
+LABEL	1	Use of tin and tin alloy?	k100
+LABEL	1	Use of tin and tin alloy?	regular solder
+LABEL	1	Use of tin and tin alloy?	motherboard
+LABEL	1	Use of tin and tin alloy?	device
+LABEL	1	Use of tin and tin alloy?	pipes
+LABEL	1	Use of tin and tin alloy?	curogan
+LABEL	1	Use of tin and tin alloy?	sheet copper
+LABEL	1	Use of tin and tin alloy?	copper cylinder
+LABEL	1	Use of tin and tin alloy?	sn100c
+LABEL	1	Use of tin and tin alloy?	phosphor bronze
+LABEL	0	What color al pacinos eyes?	cast action comedy
+LABEL	0	What color al pacinos eyes?	very strong movie character
+LABEL	0	What color al pacinos eyes?	bacon number
+LABEL	0	What color al pacinos eyes?	zero
+LABEL	0	What color al pacinos eyes?	drawn-out fight
+LABEL	0	What color al pacinos eyes?	difficult characters
+LABEL	0	What color al pacinos eyes?	full field house
+LABEL	0	What color al pacinos eyes?	eight oscar nominations
+LABEL	0	What color al pacinos eyes?	films
+LABEL	0	What color al pacinos eyes?	less than discriminating
+LABEL	0	What color al pacinos eyes?	movie
+LABEL	0	What color al pacinos eyes?	classiest most debonair
+LABEL	0	What color al pacinos eyes?	film
+LABEL	0	What color al pacinos eyes?	any problems
+LABEL	0	What color al pacinos eyes?	custom size magic comfort mattress
+LABEL	0	What color al pacinos eyes?	part
+LABEL	0	What color al pacinos eyes?	unlikely choice
+LABEL	0	What color al pacinos eyes?	oscar
+LABEL	0	What color al pacinos eyes?	west village restaurant da silvano
+LABEL	0	What color al pacinos eyes?	two children
+LABEL	0	What color al pacinos eyes?	film history
+LABEL	0	What color al pacinos eyes?	recent years
+LABEL	0	What color al pacinos eyes?	comedy
+LABEL	0	What color al pacinos eyes?	2009 remake
+LABEL	0	What color al pacinos eyes?	?ocean thirteen?
+LABEL	0	What color al pacinos eyes?	documentary film
+LABEL	0	What color al pacinos eyes?	heart-to heart
+LABEL	0	What color al pacinos eyes?	hollywood
+LABEL	0	What color al pacinos eyes?	outstanding movies
+LABEL	0	What color al pacinos eyes?	one success
+LABEL	0	What color al pacinos eyes?	action comedy
+LABEL	0	What color al pacinos eyes?	billie jo armstrong
+LABEL	0	What color al pacinos eyes?	drunken driving charge
+LABEL	0	What color al pacinos eyes?	legend
+LABEL	0	What color al pacinos eyes?	characters
+LABEL	0	What color al pacinos eyes?	villain
+LABEL	0	What color al pacinos eyes?	tough , fearless group
+LABEL	0	What color al pacinos eyes?	flesh
+LABEL	0	What color al pacinos eyes?	heady feat
+LABEL	0	What color al pacinos eyes?	game
+LABEL	0	What is new south wales slogan?	dams
+LABEL	0	What is new south wales slogan?	grasslands
+LABEL	0	What is new south wales slogan?	sound
+LABEL	0	What is new south wales slogan?	sir joseph banks
+LABEL	0	What is new south wales slogan?	tom baker
+LABEL	0	What is new south wales slogan?	chairman
+LABEL	0	What is new south wales slogan?	car
+LABEL	0	What is new south wales slogan?	drought
+LABEL	0	What is new south wales slogan?	need
+LABEL	0	What is new south wales slogan?	london
+LABEL	0	What is new south wales slogan?	queensland
+LABEL	0	What is new south wales slogan?	service industries
+LABEL	0	What is new south wales slogan?	crown
+LABEL	0	What is new south wales slogan?	?schooners?
+LABEL	0	What is new south wales slogan?	honour
+LABEL	0	What is new south wales slogan?	kentucky
+LABEL	0	What is new south wales slogan?	bali
+LABEL	0	What is new south wales slogan?	western sydney
+LABEL	0	What is new south wales slogan?	only state australia
+LABEL	0	What is new south wales slogan?	most populous state australia
+LABEL	0	What is new south wales slogan?	exception
+LABEL	0	What is new south wales slogan?	largest state australia
+LABEL	0	What is new south wales slogan?	region
+LABEL	0	What is new south wales slogan?	fairly rural area
+LABEL	0	What is new south wales slogan?	timely significant point
+LABEL	0	What is new south wales slogan?	50 km/h
+LABEL	0	What is new south wales slogan?	australia?s most populated state
+LABEL	0	What is new south wales slogan?	bare island fort
+LABEL	0	What is new south wales slogan?	constitutional monarchy
+LABEL	0	What is new south wales slogan?	?28/7/6 ?24/0/11
+LABEL	0	What is new south wales slogan?	victoria
+LABEL	0	What is new south wales slogan?	20-30
+LABEL	0	What is new south wales slogan?	teaching research school
+LABEL	0	What is new south wales slogan?	444,000 dozen
+LABEL	0	What is new south wales slogan?	100 km/h
+LABEL	0	What is new south wales slogan?	hot , harsh horrible place
+LABEL	0	What is new south wales slogan?	10,000 pages
+LABEL	0	What is new south wales slogan?	309,500 square miles
+LABEL	0	What is new south wales slogan?	registered research service provider
+LABEL	0	What is new south wales slogan?	scenic drive
+LABEL	0	What is new south wales slogan?	specialist superior court
+LABEL	0	What is new south wales slogan?	penal colony
+LABEL	0	What is new south wales slogan?	heritage act 1977
+LABEL	0	What is new south wales slogan?	hour
+LABEL	0	What is new south wales slogan?	upper house
+LABEL	0	What is new south wales slogan?	historic town
+LABEL	1	What occurs in prokaryotic cells?	transduction
+LABEL	1	What celebrities have naked pictures?	paul pierce
+LABEL	1	What celebrities have naked pictures?	aaliyah
+LABEL	1	What celebrities have naked pictures?	mariane pearl
+LABEL	0	What celebrities have naked pictures?	playgirl
+LABEL	1	What celebrities have naked pictures?	george h. w. bush
+LABEL	1	What celebrities have naked pictures?	brad pitt
+LABEL	0	What kind of music did the romans have?	luxury
+LABEL	0	What kind of music did the romans have?	grace
+LABEL	0	What kind of music did the romans have?	church
+LABEL	0	What kind of music did the romans have?	nathan
+LABEL	0	What kind of music did the romans have?	ryan
+LABEL	0	What kind of music did the romans have?	troy
+LABEL	0	What kind of music did the romans have?	issue
+LABEL	0	What kind of music did the romans have?	society
+LABEL	0	What kind of music did the romans have?	translation
+LABEL	0	What kind of music did the romans have?	music
+LABEL	0	What kind of music did the romans have?	football
+LABEL	0	What kind of music did the romans have?	diamond cuts
+LABEL	0	What kind of music did the romans have?	war
+LABEL	0	What kind of music did the romans have?	march
+LABEL	0	What kind of music did the romans have?	crucifixion
+LABEL	0	What kind of music did the romans have?	body
+LABEL	0	What kind of music did the romans have?	minister
+LABEL	0	What kind of music did the romans have?	sandals
+LABEL	0	What kind of music did the romans have?	asia
+LABEL	0	What kind of music did the romans have?	method
+LABEL	0	What kind of music did the romans have?	universe
+LABEL	0	What kind of music did the romans have?	house
+LABEL	0	What kind of music did the romans have?	popular culture
+LABEL	0	What kind of music did the romans have?	building
+LABEL	0	What kind of music did the romans have?	work
+LABEL	0	What kind of music did the romans have?	home
+LABEL	0	What kind of music did the romans have?	shore
+LABEL	0	What kind of music did the romans have?	stock
+LABEL	0	What kind of music did the romans have?	we world
+LABEL	0	What kind of music did the romans have?	fashion
+LABEL	0	What kind of music did the romans have?	fire
+LABEL	0	What kind of music did the romans have?	women
+LABEL	0	What kind of music did the romans have?	disease
+LABEL	0	What kind of music did the romans have?	inspiration
+LABEL	0	What kind of music did the romans have?	philosophy
+LABEL	0	What kind of music did the romans have?	irish eyes music
+LABEL	0	What kind of music did the romans have?	eye
+LABEL	0	What kind of music did the romans have?	matilda
+LABEL	0	What kind of music did the romans have?	poetry
+LABEL	0	What kind of music did the romans have?	peugeot
+LABEL	0	What kind of music did the romans have?	art
+LABEL	0	What kind of music did the romans have?	process
+LABEL	0	What kind of music did the romans have?	pizza
+LABEL	0	What kind of music did the romans have?	part
+LABEL	0	What kind of music did the romans have?	costume
+LABEL	0	What responsibilities did john jay have?	london
+LABEL	0	What responsibilities did john jay have?	english
+LABEL	1	What responsibilities did john jay have?	united states secretary army
+LABEL	0	What responsibilities did john jay have?	agresearch
+LABEL	0	What responsibilities did john jay have?	spain
+LABEL	0	What responsibilities did john jay have?	target
+LABEL	1	What responsibilities did john jay have?	co-chairman
+LABEL	1	What responsibilities did john jay have?	chairman
+LABEL	0	What is the welsh word for gram?	eira
+LABEL	0	Is star is a source of light?	object
+LABEL	1	Is star is a source of light?	sun
+LABEL	0	Is star is a source of light?	georgia
+LABEL	0	Is star is a source of light?	links
+LABEL	0	Is star is a source of light?	359 georgia
+LABEL	0	Who started the bear flag revolution?	california
+LABEL	0	Who started the bear flag revolution?	mexican authorities
+LABEL	0	Who started the bear flag revolution?	general vallejo
+LABEL	0	Who started the bear flag revolution?	fr?mont
+LABEL	0	Who started the bear flag revolution?	1851
+LABEL	0	Who started the bear flag revolution?	sonoma residents
+LABEL	0	What is a bicycle that rides two people?	animals
+LABEL	1	What is the major cities of romania?	bucharest bucharest
+LABEL	0	Where does a bullfrog reproduce?	california
+LABEL	0	Where does a bullfrog reproduce?	williamsport
+LABEL	0	Where does a bullfrog reproduce?	15 years
+LABEL	0	Where does a bullfrog reproduce?	modest sized pond
+LABEL	0	Where does a bullfrog reproduce?	canada
+LABEL	0	Where does a bullfrog reproduce?	pond
+LABEL	0	Where does a bullfrog reproduce?	lakes
+LABEL	0	Where does a bullfrog reproduce?	roof
+LABEL	0	Where does a bullfrog reproduce?	state
+LABEL	0	Where does a bullfrog reproduce?	u.s. , canada ,
+LABEL	0	Where does a bullfrog reproduce?	declines
+LABEL	0	Where does a bullfrog reproduce?	8-10 years
+LABEL	0	Where does a bullfrog reproduce?	two three years
+LABEL	0	Where does a bullfrog reproduce?	africa rain forest
+LABEL	0	Where does a bullfrog reproduce?	master time
+LABEL	0	Where does a bullfrog reproduce?	permanent ponds
+LABEL	0	Where does a bullfrog reproduce?	western us
+LABEL	0	Where does a bullfrog reproduce?	website
+LABEL	0	Where does a bullfrog reproduce?	usa
+LABEL	0	Where does a bullfrog reproduce?	gardens
+LABEL	1	Who wins the WWE title?	tony atlas
+LABEL	1	Who wins the WWE title?	angle
+LABEL	1	Who wins the WWE title?	big show
+LABEL	1	Who wins the WWE title?	christian
+LABEL	1	Who wins the WWE title?	duo
+LABEL	0	Who wins the WWE title?	team
+LABEL	0	Who wins the WWE title?	pair
+LABEL	1	Who wins the WWE title?	cody
+LABEL	1	Who wins the WWE title?	mercury
+LABEL	0	Who wins the WWE title?	tna impact wrestling hits james storm
+LABEL	0	Who wins the WWE title?	philadelphia street fight
+LABEL	0	Who wins the WWE title?	bobby
+LABEL	0	Who wins the WWE title?	ink inc.
+LABEL	0	Who wins the WWE title?	british invasion
+LABEL	0	Who wins the WWE title?	samoa joe magnus
+LABEL	0	Who wins the WWE title?	face
+LABEL	0	Who wins the WWE title?	wwe
+LABEL	1	Who wins the WWE title?	? big
+LABEL	1	Who wins the WWE title?	jbl
+LABEL	1	Who wins the WWE title?	bashams
+LABEL	1	Who wins the WWE title?	kane
+LABEL	0	Who was the first credit card issued to?	sistec holding ad
+LABEL	0	Who was the first credit card issued to?	bank
+LABEL	0	What branch of government regulates post office?	u.s. national park service
+LABEL	0	Does the US consist of 50 states?	usa
+LABEL	0	Does the US consist of 50 states?	america
+LABEL	0	What is kentucky best at?	pyro
+LABEL	0	What is kentucky best at?	duke ellington
+LABEL	0	What is kentucky best at?	records
+LABEL	0	What is kentucky best at?	steve earle
+LABEL	0	What is kentucky best at?	event
+LABEL	0	What is kentucky best at?	gap analysis
+LABEL	0	What is kentucky best at?	jumping
+LABEL	0	What is kentucky best at?	military police
+LABEL	0	What is kentucky best at?	november 18
+LABEL	0	What is kentucky best at?	dogs
+LABEL	0	What is kentucky best at?	week
+LABEL	0	What is kentucky best at?	meetings
+LABEL	0	What is kentucky best at?	horseback riding
+LABEL	0	What is kentucky best at?	kentucky
+LABEL	0	What is kentucky best at?	local teams
+LABEL	0	What is kentucky best at?	hager
+LABEL	0	What is kentucky best at?	linda toy
+LABEL	0	What is kentucky best at?	rand paul
+LABEL	0	What is kentucky best at?	louisville
+LABEL	0	What is kentucky best at?	initiative
+LABEL	0	What is kentucky best at?	research
+LABEL	0	What is kentucky best at?	card
+LABEL	0	What is kentucky best at?	? name
+LABEL	0	What is kentucky best at?	race
+LABEL	0	What is kentucky best at?	data
+LABEL	0	What is kentucky best at?	more than 80,000 mint juleps
+LABEL	0	What is kentucky best at?	beth harris michael matz
+LABEL	0	What is kentucky best at?	hasseltine
+LABEL	0	What is kentucky best at?	may 2008 , eight bells
+LABEL	0	What is kentucky best at?	kathy parrish
+LABEL	0	What is kentucky best at?	nsra nats
+LABEL	0	What is kentucky best at?	victory
+LABEL	0	What is kentucky best at?	mcconnell springs
+LABEL	0	What is kentucky best at?	day today
+LABEL	0	What is kentucky best at?	nerve agent
+LABEL	0	What is kentucky best at?	tennis clinic
+LABEL	0	What is kentucky best at?	several projects
+LABEL	0	What is kentucky best at?	barney
+LABEL	0	What is kentucky best at?	hunters
+LABEL	0	What is kentucky best at?	commission meetings
+LABEL	0	What is kentucky best at?	two performances
+LABEL	0	What is kentucky best at?	award
+LABEL	0	What is kentucky best at?	tickets
+LABEL	0	What is kentucky best at?	fame
+LABEL	0	What is kentucky best at?	meeting
+LABEL	0	What is kentucky best at?	games
+LABEL	0	What is kentucky best at?	work
+LABEL	0	What is kentucky best at?	2010 history
+LABEL	1	What are the leading producers of WHEAT?	kazakhstan
+LABEL	1	What are the leading producers of WHEAT?	alberta
+LABEL	1	What are the leading producers of WHEAT?	egypt
+LABEL	1	What are the leading producers of WHEAT?	algiers
+LABEL	1	What are the leading producers of WHEAT?	puglia
+LABEL	1	What are the leading producers of WHEAT?	oklahoma
+LABEL	1	What are the leading producers of WHEAT?	california
+LABEL	0	What are the leading producers of WHEAT?	food
+LABEL	1	What are the leading producers of WHEAT?	western madhya pradesh
+LABEL	0	What are the leading producers of WHEAT?	region
+LABEL	1	What are the leading producers of WHEAT?	today kansas
+LABEL	1	What are the leading producers of WHEAT?	?green springs
+LABEL	1	What are the leading producers of WHEAT?	eu
+LABEL	0	What are the leading producers of WHEAT?	frustration
+LABEL	1	What are the leading producers of WHEAT?	kansas
+LABEL	1	What are the leading producers of WHEAT?	russia
+LABEL	1	What are the leading producers of WHEAT?	pakistan
+LABEL	1	What are the leading producers of WHEAT?	illinois
+LABEL	1	What are the leading producers of WHEAT?	north dakota
+LABEL	1	What are the leading producers of WHEAT?	u.s.
+LABEL	0	What are the leading producers of WHEAT?	country
+LABEL	1	What are the leading producers of WHEAT?	john linton
+LABEL	1	What are the leading producers of WHEAT?	washington
+LABEL	1	What are the leading producers of WHEAT?	u.s
+LABEL	1	What are the leading producers of WHEAT?	ukraine
+LABEL	1	What are the leading producers of WHEAT?	ojsc pava
+LABEL	0	What are the leading producers of WHEAT?	research
+LABEL	0	What are the leading producers of WHEAT?	2010
+LABEL	1	What are the leading producers of WHEAT?	erdinger
+LABEL	1	What are the leading producers of WHEAT?	saskatchewan
+LABEL	1	What are the leading producers of WHEAT?	irrigated districts
+LABEL	0	Do hotels have room service?	peppy
+LABEL	0	Do hotels have room service?	corner
+LABEL	0	Do hotels have room service?	prices
+LABEL	0	Do hotels have room service?	wi-fi
+LABEL	0	Do hotels have room service?	hospitals
+LABEL	0	Do hotels have room service?	camping
+LABEL	0	Do hotels have room service?	food
+LABEL	1	Do hotels have room service?	edison hotel
+LABEL	1	Do hotels have room service?	ramada plaza abbotsford
+LABEL	1	Do hotels have room service?	comfort inn
+LABEL	1	Do hotels have room service?	janesville
+LABEL	0	Do hotels have room service?	dutch fried meatball
+LABEL	0	Do hotels have room service?	gay couple
+LABEL	1	Do hotels have room service?	ramada plaza jfk
+LABEL	0	Do hotels have room service?	wifi access
+LABEL	1	Do hotels have room service?	executive inn
+LABEL	1	Do hotels have room service?	hotel selkirk
+LABEL	0	Do hotels have room service?	jiao zhou road
+LABEL	0	Do hotels have room service?	avert express
+LABEL	1	Do hotels have room service?	jewel hotel
+LABEL	1	Do hotels have room service?	w hotel
+LABEL	0	Do hotels have room service?	table
+LABEL	0	Do hotels have room service?	largest loan
+LABEL	0	Do hotels have room service?	hotel room service
+LABEL	1	What do scientists classify?	sediments
+LABEL	1	What do scientists classify?	vegetation
+LABEL	1	What do scientists classify?	color
+LABEL	0	What do scientists classify?	2002 aa29
+LABEL	1	What do scientists classify?	celestial objects
+LABEL	1	What do scientists classify?	white dwarfs
+LABEL	1	What do scientists classify?	asteroids
+LABEL	0	What do scientists classify?	ceres
+LABEL	0	What do scientists classify?	chiron
+LABEL	0	What do scientists classify?	vesta
+LABEL	0	What do scientists classify?	least 200 years
+LABEL	0	What do scientists classify?	pluto
+LABEL	1	What do scientists classify?	living organisms
+LABEL	1	What do scientists classify?	solar flares
+LABEL	1	What do scientists classify?	clouds
+LABEL	1	What do scientists classify?	photon
+LABEL	1	What do scientists classify?	plant life
+LABEL	1	What do scientists classify?	island
+LABEL	1	What do scientists classify?	hypersonic speeds
+LABEL	0	Where is mayans country?	common
+LABEL	0	Where is mayans country?	mind
+LABEL	1	Where is mayans country?	honduras
+LABEL	0	Where is mayans country?	anthropology
+LABEL	0	Where is mayans country?	harmony
+LABEL	0	Where is mayans country?	prominence
+LABEL	0	Where is mayans country?	creation
+LABEL	0	Where is mayans country?	acts
+LABEL	1	Where is mayans country?	yaxha
+LABEL	1	Where is mayans country?	palenque
+LABEL	0	Where is mayans country?	satellite images
+LABEL	0	Where is mayans country?	streets
+LABEL	1	Where is mayans country?	chichen itza
+LABEL	1	Where is mayans country?	becan
+LABEL	1	Where is mayans country?	toledo
+LABEL	1	Where is mayans country?	playa del carmen
+LABEL	1	Where is mayans country?	tikal
+LABEL	1	Where is mayans country?	comalcalco
+LABEL	1	Where is mayans country?	coba
+LABEL	1	Where is mayans country?	yaxuna
+LABEL	1	Where is mayans country?	lamanai
+LABEL	1	Where is mayans country?	central america
+LABEL	0	Where is mayans country?	recent years
+LABEL	0	Where is mayans country?	last day
+LABEL	1	Where is mayans country?	rainforest
+LABEL	0	Where is mayans country?	headlines
+LABEL	0	Where is mayans country?	constant war
+LABEL	0	Where is mayans country?	mouth
+LABEL	1	Where is mayans country?	merida
+LABEL	1	Where is mayans country?	valleys
+LABEL	0	Where is mayans country?	rebellion
+LABEL	0	Where is mayans country?	place
+LABEL	0	Where is mayans country?	neck
+LABEL	0	Where is mayans country?	store
+LABEL	1	Where is mayans country?	el cedral
+LABEL	0	Where is mayans country?	past
+LABEL	0	Where is mayans country?	refrigerator
+LABEL	0	Where is mayans country?	cyclical time flow
+LABEL	0	Where is mayans country?	endings
+LABEL	0	Where is mayans country?	espinosa?s birthplace
+LABEL	1	Where is mayans country?	small florida town
+LABEL	0	Where is mayans country?	basement
+LABEL	1	Where is mayans country?	yucatan
+LABEL	1	Where is mayans country?	san lucas
+LABEL	0	Where is mayans country?	ruins
+LABEL	0	Where is mayans country?	third place
+LABEL	0	What color are wedding dresses?	vertical force
+LABEL	0	What color are wedding dresses?	more high street stores
+LABEL	0	What color are wedding dresses?	gold
+LABEL	0	What color are wedding dresses?	firm
+LABEL	0	What color are wedding dresses?	envy
+LABEL	0	What color are wedding dresses?	marie osmond
+LABEL	0	What color are wedding dresses?	lavinia
+LABEL	0	What color are wedding dresses?	nadine schiff
+LABEL	0	What color are wedding dresses?	sarah black
+LABEL	0	What color are wedding dresses?	amaya
+LABEL	0	What color are wedding dresses?	hs
+LABEL	0	What color are wedding dresses?	jacqueline kennedy
+LABEL	0	What color are wedding dresses?	beverly hills
+LABEL	0	What color are wedding dresses?	david manson
+LABEL	0	What color are wedding dresses?	arla sorkin manson
+LABEL	0	What color are wedding dresses?	frank zappa
+LABEL	0	What color are wedding dresses?	apache
+LABEL	0	What color are wedding dresses?	kristen
+LABEL	0	What color are wedding dresses?	princess
+LABEL	0	What color are wedding dresses?	queen victoria
+LABEL	0	What color are wedding dresses?	british queen victoria
+LABEL	0	What color are wedding dresses?	english bridesmaids
+LABEL	0	What color are wedding dresses?	girls
+LABEL	0	What color are wedding dresses?	keeley
+LABEL	0	What color are wedding dresses?	fashion evening
+LABEL	0	What color are wedding dresses?	vietnam brides
+LABEL	0	What color are wedding dresses?	karin
+LABEL	0	What color are wedding dresses?	reason women
+LABEL	0	What color are wedding dresses?	jimmy choo female cat
+LABEL	0	What color are wedding dresses?	kisho
+LABEL	0	What color are wedding dresses?	sixth bride
+LABEL	0	What color are wedding dresses?	xd agito
+LABEL	0	What color are wedding dresses?	groomsmen
+LABEL	0	What color are wedding dresses?	strauss
+LABEL	0	What color are wedding dresses?	ages
+LABEL	0	What color are wedding dresses?	one woman
+LABEL	0	What color are wedding dresses?	rachel
