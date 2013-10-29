@@ -28,10 +28,10 @@ object PrecisionRecall extends App {
   }
   
   def computePr(writer: PrintWriter, inputs: List[String], oracle: Oracle, output: SystemOutput) = {
-    val scoredPreds = for (r <- output.records; i = r.input; o = r.output; score = r.score; corr = oracle.isCorrect(i, o)) yield (score, corr)
+    val recallDenom = inputs.map(input => oracle.getCorrectOutputs(input).size).sum.toDouble
+    val scoredPreds = for (i <- inputs; r = output.recordsFor(i); grouped = r.groupBy(_.output); top = grouped.keys.map(o => (o, grouped(o).maxBy(_.score))); (o, s) <- top) yield (s.score, oracle.isCorrect(i, o))
     val preds = scoredPreds.sortBy(-_._1).map(x => bool2int(x._2))
-    val denom = preds.sum
-    for ((r, p) <- precisionRecall(preds, denom)) writer.println(s"$r\t$p")
+    for ((r, p) <- precisionRecall(preds, recallDenom)) writer.println(s"$r\t$p")
   }
   
   val mode = args(0)
@@ -43,7 +43,7 @@ object PrecisionRecall extends App {
   val inputs = Source.fromFile(inputsPath, "UTF8").getLines.toList
   val oracle = new FileOracle(labelsPath)
   val output = SystemOutput.fromPath(outputPath)
-  val writer = new PrintWriter(new File(outputPath, conf.getString("eval.pr.file")))
+  val writer = new PrintWriter(new File(outputPath, conf.getString("eval.pr.file") + s"-$mode.txt"))
   mode match {
     case "top" => computeTopPr(writer, inputs, oracle, output)
     case "all" => computePr(writer, inputs, oracle, output)
