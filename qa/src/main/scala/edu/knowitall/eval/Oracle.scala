@@ -18,8 +18,7 @@ trait Oracle {
   def getCorrectOutputs(input: String): List[String]
   
   def isCorrect(input: String, output: String): Boolean = {
-    val (i, o) = Oracle.normalizePair(input, output)
-    getLabel(i, o) match {
+    getLabel(input, output) match {
     	case Some(label) => label
     	case _ => throw new IllegalStateException(s"No label for ($input, $output)")
     }
