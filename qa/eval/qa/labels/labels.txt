@@ -15667,3 +15667,124 @@ LABEL	1	What do scientists classify?	stars
 LABEL	0	What do scientists classify?	bisphenol
 LABEL	0	What do scientists classify?	total
 LABEL	1	What do scientists classify?	soil particles
+LABEL	0	How common is the bipolar disorder?	cyclothymia.e
+LABEL	0	How common is the bipolar disorder?	depression.e
+LABEL	0	How common is the bipolar disorder?	mood-disorder.e
+LABEL	0	What are the organs of the circulatory system in plants?	business.e
+LABEL	0	What are the organs of the circulatory system in plants?	2.1-everything.e
+LABEL	0	What are the organs of the circulatory system in plants?	charity.e
+LABEL	0	What are the organs of the circulatory system in plants?	education.e
+LABEL	0	What are the organs of the circulatory system in plants?	electric-car.e
+LABEL	0	What are the organs of the circulatory system in plants?	employee.e
+LABEL	0	What are the organs of the circulatory system in plants?	furnace.e
+LABEL	0	What are the organs of the circulatory system in plants?	illness.e
+LABEL	0	What are the organs of the circulatory system in plants?	manager.e
+LABEL	0	What are the organs of the circulatory system in plants?	mechanic.e
+LABEL	0	What are the organs of the circulatory system in plants?	memory.e
+LABEL	0	What are the organs of the circulatory system in plants?	moisture-management.e
+LABEL	0	What are the organs of the circulatory system in plants?	p.e
+LABEL	0	What are the organs of the circulatory system in plants?	people.e
+LABEL	0	What are the organs of the circulatory system in plants?	poverty.e
+LABEL	0	What are the organs of the circulatory system in plants?	racism.e
+LABEL	0	What are the organs of the circulatory system in plants?	radiant-barrier.e
+LABEL	0	What are the organs of the circulatory system in plants?	savage.e
+LABEL	0	What are the organs of the circulatory system in plants?	starvation.e
+LABEL	0	What are the organs of the circulatory system in plants?	strategy.e
+LABEL	0	What are the organs of the circulatory system in plants?	target.e
+LABEL	0	What are the organs of the circulatory system in plants?	tuner.e
+LABEL	0	What are the organs of the circulatory system in plants?	voisec.e
+LABEL	0	What are the organs of the circulatory system in plants?	xo.e
+LABEL	0	What are the organs of the circulatory system in plants?	empowerment.e
+LABEL	0	What are the organs of the circulatory system in plants?	job-performance.e
+LABEL	1	What is a job for a lawyer?	solicitor.e
+LABEL	0	What is a job for a lawyer?	prisoner.e
+LABEL	0	What is a job for a lawyer?	richard-lugar.e
+LABEL	0	What is a job for a lawyer?	student.e
+LABEL	1	Where can you sell books?	mail-order-company.e
+LABEL	0	Where can you sell books?	member.e
+LABEL	0	Where can you sell books?	whole-culture.e
+LABEL	0	What is not required of a thesis?	master-of-science-degree.e
+LABEL	1	What occurs in prokaryotic cells?	protein-synthesis.e
+LABEL	0	What occurs in prokaryotic cells?	umbilical-cord-blood.e
+LABEL	0	What occurs in prokaryotic cells?	similar-thing.e
+LABEL	0	What is Bruce Willis favorite food?	hollywood-gossip.e
+LABEL	0	What are the scopes and limitations of physics?	aesthetics.e
+LABEL	0	What are the scopes and limitations of physics?	aikido.e
+LABEL	0	What are the scopes and limitations of physics?	american-kenpo.e
+LABEL	0	What are the scopes and limitations of physics?	ballistics.e
+LABEL	0	What are the scopes and limitations of physics?	calculus.e
+LABEL	0	What are the scopes and limitations of physics?	dynamics.e
+LABEL	0	What are the scopes and limitations of physics?	kinematic.e
+LABEL	0	What are the scopes and limitations of physics?	kinesiology.e
+LABEL	0	What are the scopes and limitations of physics?	mechanic.e
+LABEL	0	What are the scopes and limitations of physics?	physics.e
+LABEL	0	What are the scopes and limitations of physics?	relation.e
+LABEL	0	What are the scopes and limitations of physics?	rhythm.e
+LABEL	1	What is the products of anaerobic respiration in plant cells?	methane.e
+LABEL	0	What is the major cities of romania?	moldavia.e
+LABEL	0	What is the major cities of romania?	moldova.e
+LABEL	0	What is the major cities of romania?	transylvania.e
+LABEL	1	What is the major cities of romania?	alexandria.e
+LABEL	0	What is the major cities of romania?	olt.e
+LABEL	0	What is the major cities of romania?	kaufland.e
+LABEL	1	What is the major cities of romania?	brasov.e
+LABEL	1	What is the major cities of romania?	cluj-napoca.e
+LABEL	1	What is the major cities of romania?	constanta.e
+LABEL	1	What is the major cities of romania?	iasi.e
+LABEL	0	What do fairy tales have in common?	italian-fashion.e
+LABEL	1	When was Drake born?	1893.e
+LABEL	0	When was Drake born?	augusta.e
+LABEL	0	When was Drake born?	chicago.e
+LABEL	0	When was Drake born?	devonshire.e
+LABEL	0	When was Drake born?	ga..e
+LABEL	0	When was Drake born?	herne-bay.e
+LABEL	0	When was Drake born?	lebanon.e
+LABEL	0	When was Drake born?	london.e
+LABEL	0	When was Drake born?	los-angeles.e
+LABEL	0	When was Drake born?	monroe.e
+LABEL	0	When was Drake born?	new-york-city.e
+LABEL	0	When was Drake born?	pittsfield.e
+LABEL	0	When was Drake born?	pontefract.e
+LABEL	0	When was Drake born?	rangoon.e
+LABEL	0	When was Drake born?	rushville.e
+LABEL	0	When was Drake born?	scipio.e
+LABEL	0	When was Drake born?	suffolk.e
+LABEL	0	When was Drake born?	tavistock.e
+LABEL	0	When was Drake born?	tulsa.e
+LABEL	0	When was Drake born?	denver.e
+LABEL	0	When was Drake born?	eastman.e
+LABEL	0	When was Drake born?	michigan.e
+LABEL	1	When was Drake born?	11-dec-1979.e
+LABEL	1	When was Drake born?	5-mar-1983.e
+LABEL	1	When was Drake born?	6-may-1981.e
+LABEL	1	When was Drake born?	december-11-,-1923.e
+LABEL	1	When was Drake born?	march-1-,-1924.e
+LABEL	1	When was Drake born?	october-23-,-2008.e
+LABEL	1	When was Drake born?	28-january-1596.e
+LABEL	0	When was Drake born?	3-june-1973.e
+LABEL	0	When was Drake born?	30.e
+LABEL	0	When was Drake born?	december-27-,-1595.e
+LABEL	0	When was Drake born?	october-18-,-1959.e
+LABEL	0	When was Drake born?	massive-coronary.e
+LABEL	0	When was Drake born?	1690.e
+LABEL	0	When was Drake born?	1968.e
+LABEL	0	When was Drake born?	2007.e
+LABEL	0	When was Drake born?	berlin.e
+LABEL	0	When was Drake born?	poverty.e
+LABEL	0	When was Drake born?	devon.e
+LABEL	1	When was Drake born?	june-27-,-1986.e
+LABEL	1	When was Drake born?	1596.e
+LABEL	0	When was Drake born?	portobelo.e
+LABEL	0	When was Drake born?	infancy.e
+LABEL	0	Does the US consist of 50 states?	federal-republic.e
+LABEL	0	Does the US consist of 50 states?	itrc.e
+LABEL	0	Does the US consist of 50 states?	united-states-of-america.e
+LABEL	0	Does the US consist of 50 states?	united-states.e
+LABEL	0	Does the US consist of 50 states?	us.e
+LABEL	0	Does the US consist of 50 states?	usa.e
+LABEL	0	What is kentucky best at?	robocop.e
+LABEL	1	What is related to a common jellyfish?	bluebottle.e
+LABEL	1	What is related to a common jellyfish?	hydroids.e
+LABEL	0	What is related to a common jellyfish?	snake.e
+LABEL	0	What is related to a common jellyfish?	blind-individual.e
+LABEL	0	What color are wedding dresses?	mr.-richardson.e
