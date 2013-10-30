@@ -25,8 +25,7 @@ trait Oracle {
   }
   
   def hasLabel(input: String, output: String): Boolean = {
-    val (i, o) = Oracle.normalizePair(input, output)
-    getLabel(i, o) match {
+    getLabel(input, output) match {
       case Some(label) => true
       case _ => false
     }
