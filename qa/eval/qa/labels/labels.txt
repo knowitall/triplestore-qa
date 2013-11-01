@@ -14246,7 +14246,7 @@ LABEL	0	Is a ostrich a vertebrates?	animal
 LABEL	1	How many diffrent types of televisions are there?	lcds
 LABEL	1	Who wins the WWE title?	undertaker
 LABEL	1	What do scientists classify?	emr
-LABEL	0	What color are wedding dresses?	ecru
+LABEL	1	What color are wedding dresses?	ecru
 LABEL	0	How common is the bipolar disorder?	bipolar-depression.e
 LABEL	0	What are the organs of the circulatory system in plants?	artery-and-vein.e
 LABEL	1	What is a job for a lawyer?	barrister.e
@@ -15788,3 +15788,866 @@ LABEL	1	What is related to a common jellyfish?	hydroids.e
 LABEL	0	What is related to a common jellyfish?	snake.e
 LABEL	0	What is related to a common jellyfish?	blind-individual.e
 LABEL	0	What color are wedding dresses?	mr.-richardson.e
+LABEL	0	how large is kony army?	uganda
+LABEL	0	how large is kony army?	been captured
+LABEL	0	how large is kony army?	communities
+LABEL	0	how large is kony army?	children
+LABEL	1	how many languages do they speak in spain?	chinese language
+LABEL	1	how many languages do they speak in spain?	spanish
+LABEL	0	how many languages do they speak in spain?	romani, welsh language
+LABEL	1	how many languages do they speak in spain?	erromintxela language
+LABEL	0	how many languages do they speak in spain?	chinese, wu language
+LABEL	1	how many languages do they speak in spain?	aragonese language
+LABEL	1	how many languages do they speak in spain?	romani language
+LABEL	0	how many languages do they speak in spain?	chinese, hakka language
+LABEL	0	how many languages do they speak in spain?	chinese, jinyu language
+LABEL	0	how many languages do they speak in spain?	romani, sinte language
+LABEL	0	how many languages do they speak in spain?	old chinese language
+LABEL	0	how many languages do they speak in spain?	old spanish language
+LABEL	1	how many languages do they speak in spain?	spanish language
+LABEL	1	how many languages do they speak in spain?	japanese languages
+LABEL	0	how many languages do they speak in spain?	chinese, gan language
+LABEL	0	how many languages do they speak in spain?	chinese, xiang language
+LABEL	0	how many languages do they speak in spain?	romani, baltic language
+LABEL	0	how many languages do they speak in spain?	chinese, huizhou language
+LABEL	1	how many languages do they speak in spain?	asturian language
+LABEL	0	how many languages do they speak in spain?	romani, vlax language
+LABEL	1	how many languages do they speak in spain?	spanish sign language
+LABEL	1	how many languages do they speak in spain?	japanese language
+LABEL	0	how many languages do they speak in spain?	japanese sign language
+LABEL	1	how many languages do they speak in spain?	cal? language
+LABEL	0	how many languages do they speak in spain?	chinese sign language
+LABEL	0	how many languages do they speak in spain?	old japanese language
+LABEL	1	how many languages do they speak in spain?	catalan sign language
+LABEL	1	how many languages do they speak in spain?	japaneses language
+LABEL	0	how many languages do they speak in spain?	chinese tai - language
+LABEL	0	how many languages do they speak in spain?	spanish modern language
+LABEL	1	how many languages do they speak in spain?	catalan
+LABEL	1	how many languages do they speak in spain?	?castilian?
+LABEL	1	how many languages do they speak in spain?	castillian spanish
+LABEL	1	how many languages do they speak in switzerland?	german
+LABEL	1	how many languages do they speak in switzerland?	english
+LABEL	1	how many languages do they speak in switzerland?	french
+LABEL	0	how many languages do they speak in switzerland?	french, cajun language
+LABEL	0	how many languages do they speak in switzerland?	german sign language
+LABEL	0	how many languages do they speak in switzerland?	judeo-italian language
+LABEL	0	how many languages do they speak in switzerland?	italian sign language
+LABEL	0	how many languages do they speak in switzerland?	french sign language
+LABEL	0	how many languages do they speak in switzerland?	old turkish language
+LABEL	1	how many languages do they speak in switzerland?	kurdish language
+LABEL	0	how many languages do they speak in switzerland?	proto-kurdish language
+LABEL	0	how many languages do they speak in switzerland?	turkish sign language
+LABEL	1	how many languages do they speak in switzerland?	urdu language
+LABEL	1	how many languages do they speak in switzerland?	swiss french
+LABEL	1	how many languages do they speak in switzerland?	turkish language
+LABEL	0	how many languages do they speak in switzerland?	english sign language
+LABEL	1	how many languages do they speak in switzerland?	english languages
+LABEL	1	how many languages do they speak in switzerland?	punjabi language
+LABEL	1	how many languages do they speak in switzerland?	english language
+LABEL	0	how many languages do they speak in switzerland?	old tamil language
+LABEL	1	how many languages do they speak in switzerland?	tamil language
+LABEL	0	how many languages do they speak in switzerland?	swiss-german sign language
+LABEL	1	how many languages do they speak in switzerland?	tamil languages
+LABEL	1	how many languages do they speak in switzerland?	sicilian language
+LABEL	1	how many languages do they speak in switzerland?	swiss german language
+LABEL	1	how many languages do they speak in switzerland?	napoletano-calabrese language
+LABEL	1	how many languages do they speak in switzerland?	swiss italian
+LABEL	1	how many languages do they speak in switzerland?	sinhala language
+LABEL	1	how many languages do they speak in switzerland?	serbo-croatian
+LABEL	0	how many languages do they speak in switzerland?	albanian, tosk language
+LABEL	1	how many languages do they speak in switzerland?	albanian sign language
+LABEL	1	how many languages do they speak in switzerland?	macedonian language
+LABEL	0	how many languages do they speak in switzerland?	albanian, gheg language
+LABEL	1	how many languages do they speak in switzerland?	albanian language
+LABEL	0	how many languages do they speak in switzerland?	several languages
+LABEL	1	how many languages do they speak in switzerland?	romansch language
+LABEL	0	how many languages do they speak in switzerland?	uk english language
+LABEL	0	how many languages do they speak in switzerland?	old english language
+LABEL	0	how many languages do they speak in switzerland?	english british language
+LABEL	0	how many languages do they speak in switzerland?	us english language
+LABEL	1	how many languages do they speak in switzerland?	english - language
+LABEL	1	how many languages do they speak in switzerland?	en:english language
+LABEL	0	how many languages do they speak in switzerland?	proto-albanian language
+LABEL	0	how many mary mary sisters?	payments
+LABEL	0	how many mary mary sisters?	new zealand
+LABEL	0	how many mary mary sisters?	religion
+LABEL	0	how many mary mary sisters?	god
+LABEL	0	how many mary mary sisters?	payment
+LABEL	0	how many mary mary sisters?	edward
+LABEL	0	how many mary mary sisters?	john
+LABEL	0	how many mary mary sisters?	one
+LABEL	0	how many mary mary sisters?	commons
+LABEL	1	what activities are there to do in greece?	sports
+LABEL	1	what activities are there to do in greece?	sailing
+LABEL	1	what activities are there to do in greece?	cooking
+LABEL	0	what activities are there to do in greece?	running
+LABEL	1	what activities are there to do in greece?	thinking
+LABEL	0	what activities are there to do in greece?	best
+LABEL	0	what activities are there to do in greece?	work
+LABEL	0	what activities are there to do in greece?	formation
+LABEL	0	what activities are there to do in greece?	production
+LABEL	0	what activities are there to do in greece?	technocrats
+LABEL	0	what activities are there to do in greece?	translation
+LABEL	0	what activities are there to do in greece?	family
+LABEL	1	what all did ben franklin invent?	armonica
+LABEL	1	what all did ben franklin invent?	electricity
+LABEL	1	what all did ben franklin invent?	bifocals
+LABEL	1	what all did ben franklin invent?	dst
+LABEL	1	what all did ben franklin invent?	pizza
+LABEL	1	what all did ben franklin invent?	magic squares
+LABEL	1	what all did ben franklin invent?	daylight savings time
+LABEL	1	what all did ben franklin invent?	enterprise search
+LABEL	1	what all did ben franklin invent?	wood stove 200 years
+LABEL	1	what all did ben franklin invent?	one-liner
+LABEL	1	what all did ben franklin invent?	bifocal glasses
+LABEL	1	what all did ben franklin invent?	biofocal
+LABEL	1	what all did ben franklin invent?	?free library
+LABEL	1	what all did ben franklin invent?	carriage odometer
+LABEL	1	what all did ben franklin invent?	musical instrument
+LABEL	1	what all did ben franklin invent?	bifocal lenses
+LABEL	1	what all did ben franklin invent?	3 wheel clock
+LABEL	1	what all did ben franklin invent?	one hundred dollar bills
+LABEL	1	what all did ben franklin invent?	world first bifocals
+LABEL	1	what all did ben franklin invent?	bifocal
+LABEL	0	what all does google now do?	facebook
+LABEL	0	what all does google now do?	web sites
+LABEL	0	what all does google now do?	flash
+LABEL	0	what all does google now do?	mozilla
+LABEL	0	what all does google now do?	zillow
+LABEL	0	what all does google now do?	different way
+LABEL	1	what all does google now do?	evil
+LABEL	0	what all does google now do?	flash?
+LABEL	0	what all does google now do?	opposite
+LABEL	1	what all does google now do?	marketing
+LABEL	0	what all does google now do?	microsoft
+LABEL	1	what all does google now do?	cloud
+LABEL	1	what all does google now do?	speech recognition
+LABEL	0	what all does google now do?	google
+LABEL	1	what all does google now do?	more searches
+LABEL	0	what all does google now do?	flash google
+LABEL	0	what all does google now do?	same
+LABEL	1	what all does google now do?	better job
+LABEL	1	what all does google now do?	nexus line
+LABEL	1	what all does google now do?	3d graphing
+LABEL	1	what all does google now do?	adsense ads
+LABEL	1	what all does google now do?	grander scale
+LABEL	0	what all does google now do?	unimportant
+LABEL	1	what all does google now do?	?search customization ?
+LABEL	1	what all does google now do?	money integration
+LABEL	1	what all does google now do?	graphs
+LABEL	0	what all does google now do?	crack addict
+LABEL	0	what all does google now do?	yahoo
+LABEL	1	what all does google now do?	buzz wave
+LABEL	0	what all does google now do?	bunch
+LABEL	1	what all does google now do?	directions
+LABEL	1	what all does google now do?	batch suggestions
+LABEL	1	what all does google now do?	?real-time searches?
+LABEL	1	what all does google now do?	ad distribution deal
+LABEL	1	what all does google now do?	video-logs vlogs
+LABEL	1	what all does google now do?	mobile
+LABEL	1	what all does google now do?	image searching
+LABEL	1	what all does google now do?	hangouts
+LABEL	1	what all does google now do?	buzz
+LABEL	1	what all does google now do?	wave
+LABEL	1	what all does google now do?	bus routes
+LABEL	1	what all does google now do?	custom icons
+LABEL	0	what all does google now do?	killer iphone
+LABEL	1	what all does google now do?	searches
+LABEL	0	what all does google now do?	display media space
+LABEL	1	what all does google now do?	search
+LABEL	1	what all does google now do?	group chats
+LABEL	1	what all does google now do?	video content
+LABEL	0	what all does google now do?	vp marketing
+LABEL	1	what all does google now do?	display advertising
+LABEL	0	what animal represents california?	roger
+LABEL	0	what animal represents california?	woman
+LABEL	0	what animal represents california?	john f. kidder
+LABEL	1	what animal represents california?	grizzly bear
+LABEL	0	what animal represents california?	animals
+LABEL	0	what animal represents california?	samples
+LABEL	0	what animal represents california?	kuba
+LABEL	0	what animal represents california?	san diego zoo
+LABEL	1	what animal represents california?	grizzlies
+LABEL	0	what animal represents california?	lisa
+LABEL	0	what animal represents california?	blog
+LABEL	0	what animal represents california?	link
+LABEL	0	what animal represents california?	fish
+LABEL	0	what animal represents california?	hedgehog
+LABEL	0	what animal represents california?	horse
+LABEL	1	what animal represents california?	bear
+LABEL	0	what animal represents california?	wolverine
+LABEL	0	what animal represents california?	reindeer
+LABEL	0	what animal represents california?	kitten
+LABEL	0	what animal represents california?	sheep
+LABEL	0	what animal represents california?	great white shark
+LABEL	0	what animal represents california?	reptile
+LABEL	0	what animal represents california?	sea lion
+LABEL	0	what animal represents california?	lobster
+LABEL	0	what animal represents california?	elk
+LABEL	0	what animal represents california?	dog
+LABEL	0	what animal represents california?	africa
+LABEL	0	what animal represents california?	human
+LABEL	0	what animal represents california?	?puppy mill?
+LABEL	0	what animal represents california?	trinity
+LABEL	0	what animal represents california?	cattle
+LABEL	0	what animal represents california?	cows
+LABEL	0	what animal represents california?	squirrels
+LABEL	0	what animal represents california?	horses
+LABEL	0	what animal represents california?	dogs
+LABEL	0	what animal represents california?	elephants
+LABEL	0	what animal represents california?	cobras
+LABEL	0	what animal represents california?	coyotes
+LABEL	0	what animal represents california?	mosquitoes
+LABEL	0	what animal represents california?	gulls
+LABEL	0	what animal represents california?	pets
+LABEL	0	what animal represents california?	predators
+LABEL	0	what animal represents california?	coyote
+LABEL	0	what animal represents california?	bass
+LABEL	0	what animal represents california?	government
+LABEL	0	what animal represents california?	rabbits
+LABEL	0	what animal represents california?	frogs
+LABEL	0	what animal represents california?	bats
+LABEL	0	what animal represents california?	snakes
+LABEL	0	what animal represents california?	reptiles
+LABEL	1	what are all the countries in north africa?	algeria
+LABEL	1	what are all the countries in north africa?	sudan
+LABEL	1	what are all the countries in north africa?	libya
+LABEL	1	what are all the countries in north africa?	morocco
+LABEL	1	what are all the countries in north africa?	tunisia
+LABEL	1	what are all the countries in north africa?	energy-exporting algeria
+LABEL	0	what are all the countries in north africa?	market
+LABEL	1	what are all the countries in north africa?	western sahara
+LABEL	0	what are all the countries in north africa?	syrian arab republic
+LABEL	0	what are all the countries in north africa?	bahrain
+LABEL	1	what are all the countries in north africa?	mauritania
+LABEL	0	what are all the countries in north africa?	kuwait-
+LABEL	0	what are all the countries in north africa?	yemen
+LABEL	0	what are all the countries in north africa?	oman
+LABEL	0	what are all the countries in north africa?	jordan
+LABEL	0	what are all the countries in north africa?	turkey
+LABEL	0	what are all the countries in north africa?	iran
+LABEL	0	what are all the countries in north africa?	syria
+LABEL	0	what are all the countries in north africa?	united arab emirates
+LABEL	1	what are all the countries in north africa?	egypt
+LABEL	0	what are all the countries in north africa?	palestine
+LABEL	0	what are all the countries in north africa?	saudia arabia
+LABEL	0	what are all the countries in north africa?	iraq"
+LABEL	0	what are all the countries in north africa?	lebanon(
+LABEL	0	what are all the countries in north africa?	pakistan.
+LABEL	0	what are all the countries in north africa?	qatar
+LABEL	0	what are all the countries in north africa?	?israel
+LABEL	0	what are all the countries in north africa?	kuwait
+LABEL	0	what are all the countries in north africa?	pakistan
+LABEL	0	what are all the countries in north africa?	israel
+LABEL	0	what are all the countries in north africa?	lebanon
+LABEL	0	what are all the countries in north africa?	iraq
+LABEL	0	what are all the countries in north africa?	democratic people republic
+LABEL	1	what are all the countries in north africa?	uk, morocco
+LABEL	0	what are all the countries in north africa?	uk, bahrain
+LABEL	0	what are all the countries in north africa?	new zealand
+LABEL	0	what are all the countries in north africa?	france
+LABEL	1	what are all the countries in north africa?	ethiopia
+LABEL	0	what are all the countries in north africa?	spain
+LABEL	0	what are all the countries in north africa?	russia
+LABEL	1	what are all the countries in north africa?	?ethiopia
+LABEL	0	what are all the countries in north africa?	britain
+LABEL	0	what are all the countries in north africa?	carthage
+LABEL	0	what are all the countries in north africa?	uk, new zealand
+LABEL	0	what are all the countries in north africa?	new-zealand
+LABEL	0	what are all the countries in north africa?	s-africa
+LABEL	0	what are all the countries in north africa?	republic
+LABEL	0	what are all the countries in north africa?	arabic
+LABEL	1	what are all the countries in north africa?	may 27th 2011 02:55 libya
+LABEL	1	what are all the countries in north africa?	morocco morocco
+LABEL	0	what are all the movies taylor swift has been in?	news
+LABEL	1	what are all the movies taylor swift has been in?	twilight
+LABEL	0	what are all the movies taylor swift has been in?	movie
+LABEL	0	what are all the movies taylor swift has been in?	billboard dad
+LABEL	0	what are all the movies taylor swift has been in?	2007
+LABEL	0	what are all the movies taylor swift has been in?	april
+LABEL	0	what are all the movies taylor swift has been in?	mix
+LABEL	0	what are all the movies taylor swift has been in?	london
+LABEL	0	what are all the movies taylor swift has been in?	town
+LABEL	0	what are all the movies taylor swift has been in?	charlotte cum
+LABEL	0	what are all the movies taylor swift has been in?	melbourne
+LABEL	0	what are all the movies taylor swift has been in?	third person
+LABEL	0	what are all the movies taylor swift has been in?	los angeles
+LABEL	0	what are all the movies taylor swift has been in?	spotlight
+LABEL	0	what are all the movies taylor swift has been in?	dough
+LABEL	0	what are all the movies taylor swift has been in?	charlotte
+LABEL	0	what are all the movies taylor swift has been in?	concert
+LABEL	0	what are all the movies taylor swift has been in?	reds
+LABEL	0	what are all the movies taylor swift has been in?	new york city
+LABEL	0	what are all the movies taylor swift has been in?	red
+LABEL	0	what are all the movies taylor swift has been in?	support
+LABEL	0	what are all the movies taylor swift has been in?	one: movie
+LABEL	0	what are all the movies taylor swift has been in?	arm
+LABEL	0	what are all the movies taylor swift has been in?	emperor
+LABEL	0	what are all the movies taylor swift has been in?	arms
+LABEL	0	what are all the movies taylor swift has been in?	park
+LABEL	0	what are all the movies taylor swift has been in?	alessandra ambrosio
+LABEL	0	what are all the movies taylor swift has been in?	singapore sue
+LABEL	0	what are all the movies taylor swift has been in?	singapore
+LABEL	0	what are all the movies taylor swift has been in?	terms
+LABEL	0	what are all the movies taylor swift has been in?	lines
+LABEL	0	what are all the movies taylor swift has been in?	line
+LABEL	0	what are all the movies taylor swift has been in?	line 1
+LABEL	0	what are all the movies taylor swift has been in?	last night
+LABEL	0	what are all the movies taylor swift has been in?	always
+LABEL	0	what are all the movies taylor swift has been in?	film
+LABEL	1	what are all the names of the harry potter books?	ps
+LABEL	0	what are all the names of the harry potter books?	october 5
+LABEL	0	what are all the names of the harry potter books?	pope benedict xvi
+LABEL	0	what are all the names of the harry potter books?	diner dash
+LABEL	0	what are all the names of the harry potter books?	ronald reagan
+LABEL	0	what are all the names of the harry potter books?	god
+LABEL	0	what are all the names of the harry potter books?	parents
+LABEL	0	what are all the names of the harry potter books?	witches
+LABEL	0	what are all the names of the harry potter books?	good evil
+LABEL	0	what are all the names of the harry potter books?	children
+LABEL	0	what are all the names of the harry potter books?	torture
+LABEL	0	what are all the names of the harry potter books?	wizard
+LABEL	0	what are all the names of the harry potter books?	j.k. rowling
+LABEL	0	what are all the names of the harry potter books?	j. k. rowling
+LABEL	0	what are all the names of the harry potter books?	graham taylor
+LABEL	0	what are all the names of the harry potter books?	teachers
+LABEL	0	what are all the names of the harry potter books?	bloomsbury
+LABEL	0	what are all the names of the harry potter books?	months
+LABEL	0	what are all the names of the harry potter books?	television
+LABEL	0	what are all the names of the harry potter books?	hermione
+LABEL	0	what are all the names of the harry potter books?	christ
+LABEL	0	what are all the names of the harry potter books?	2005 hermione
+LABEL	0	what are all the names of the harry potter books?	vp nominee
+LABEL	0	what are all the names of the harry potter books?	topic
+LABEL	0	what are all the names of the harry potter books?	list
+LABEL	0	what are all the names of the harry potter books?	definitely my favourite books
+LABEL	0	what are all the names of the harry potter books?	young man
+LABEL	0	what are all the names of the harry potter books?	books 2.1
+LABEL	0	what are all the names of the harry potter books?	new bus book
+LABEL	0	what are all the names of the harry potter books?	genre
+LABEL	0	what are all the names of the harry potter books?	apparently jk rowking
+LABEL	0	what are all the names of the harry potter books?	publishing world
+LABEL	0	what are all the names of the harry potter books?	issue
+LABEL	0	what are all the names of the harry potter books?	arithmancy
+LABEL	0	what are all the names of the harry potter books?	occult
+LABEL	0	what are all the names of the harry potter books?	occult practices
+LABEL	0	what are all the names of the harry potter books?	lady
+LABEL	0	what are all the names of the harry potter books?	title
+LABEL	0	what are all the names of the harry potter books?	domtar fsc-certified paper
+LABEL	0	what are all the names of the harry potter books?	pair
+LABEL	0	what are all the names of the harry potter books?	georgia
+LABEL	0	what are all the names of the harry potter books?	life
+LABEL	0	what are all the names of the harry potter books?	first one
+LABEL	0	what are all the names of the harry potter books?	pa
+LABEL	0	what are all the names of the harry potter books?	same
+LABEL	0	what are all the names of the harry potter books?	plants
+LABEL	0	what are all the names of the harry potter books?	only
+LABEL	0	what are all the names of the harry potter books?	'ablefont '
+LABEL	0	what are all the names of the harry potter books?	magic
+LABEL	0	what are all the names of the harry potter books?	snow spider
+LABEL	0	what are dallas cowboys colors?	photo
+LABEL	1	what are dallas cowboys colors?	brown
+LABEL	0	what are dallas cowboys colors?	win
+LABEL	0	what are dallas cowboys colors?	solid shape
+LABEL	0	what are dallas cowboys colors?	criminals
+LABEL	1	what are dallas cowboys colors?	blue
+LABEL	0	what are dallas cowboys colors?	dallas
+LABEL	0	what are dallas cowboys colors?	2011 favorite team
+LABEL	0	what are dallas cowboys colors?	arlington
+LABEL	0	what are egyptian money called?	saudi arabia
+LABEL	0	what are egyptian money called?	hong kong
+LABEL	0	what are egyptian money called?	verdict
+LABEL	0	what are egyptian money called?	public universities
+LABEL	0	what are egyptian money called?	citycenter
+LABEL	0	what are egyptian money called?	maldives
+LABEL	0	what are egyptian money called?	?damages
+LABEL	0	what are egyptian money called?	puerto rico
+LABEL	0	what are egyptian money called?	mammon
+LABEL	0	what are egyptian money called?	el salvador
+LABEL	0	what are egyptian money called?	christmas island
+LABEL	0	what are egyptian money called?	dissent
+LABEL	0	what are egyptian money called?	philippines
+LABEL	0	what are egyptian money called?	bahamas
+LABEL	0	what are egyptian money called?	?swamps
+LABEL	0	what are egyptian money called?	?funds?
+LABEL	0	what are egyptian money called?	ghana
+LABEL	0	what are egyptian money called?	damages
+LABEL	0	what are egyptian money called?	usury
+LABEL	0	what are egyptian money called?	sierra leone
+LABEL	0	what are egyptian money called?	air conditioning
+LABEL	0	what are egyptian money called?	indulgences
+LABEL	0	what are egyptian money called?	burkina faso
+LABEL	0	what are egyptian money called?	money aggregates
+LABEL	0	what are egyptian money called?	iomega data recovery expert today
+LABEL	0	what are egyptian money called?	?eidee
+LABEL	0	what are egyptian money called?	down payment
+LABEL	0	what are egyptian money called?	equity
+LABEL	0	what are egyptian money called?	tune
+LABEL	0	what are egyptian money called?	website
+LABEL	0	what are egyptian money called?	phone number
+LABEL	0	what are egyptian money called?	6/5 blackjack pay less
+LABEL	0	what are egyptian money called?	peshgi
+LABEL	0	what are egyptian money called?	alec
+LABEL	0	what are egyptian money called?	poor tithe
+LABEL	0	what are egyptian money called?	friend
+LABEL	0	what are egyptian money called?	eidi
+LABEL	0	what are egyptian money called?	multiple streams
+LABEL	0	what are egyptian money called?	minimum balance
+LABEL	0	what are egyptian money called?	medical community
+LABEL	0	what are egyptian money called?	margin trading
+LABEL	0	what are egyptian money called?	principal
+LABEL	0	what are egyptian money called?	amount
+LABEL	0	what are egyptian money called?	shots
+LABEL	0	what are egyptian money called?	fatkat
+LABEL	0	what are egyptian money called?	carry trade
+LABEL	0	what are egyptian money called?	canyon-johnson urban fund ii
+LABEL	0	what are egyptian money called?	local grocery store liquor store
+LABEL	0	what are egyptian money called?	inmarsat pacific ocean
+LABEL	0	what are egyptian money called?	kata
+LABEL	1	what are italians classified as?	urban
+LABEL	1	what are italians classified as?	low risk
+LABEL	1	what are italians classified as?	?white?
+LABEL	0	what are italians classified as?	a2 feminine
+LABEL	0	what are physical features of egypt?	color
+LABEL	1	what are physical features of egypt?	pyramid
+LABEL	0	what are physical features of egypt?	else
+LABEL	0	what are physical features of egypt?	priest
+LABEL	0	what are physical features of egypt?	diplomatic pressure
+LABEL	0	what are physical features of egypt?	care , gossip blame
+LABEL	0	what are physical features of egypt?	fraudulent elections
+LABEL	0	what are physical features of egypt?	military courts
+LABEL	0	what are serena williams achievements?	2008 wimbledon
+LABEL	0	what are serena williams achievements?	wimbledon 1976
+LABEL	0	what are serena williams achievements?	2010 wimbledon
+LABEL	0	what are serena williams achievements?	2012 wimbledon
+LABEL	0	what are serena williams achievements?	wimbledon f.c.
+LABEL	0	what are serena williams achievements?	wimbledon '78
+LABEL	0	what are serena williams achievements?	match
+LABEL	0	what are serena williams achievements?	tennis
+LABEL	0	what are serena williams achievements?	1999
+LABEL	0	what are serena williams achievements?	gymnastics ? double front serena williams
+LABEL	0	what are serena williams achievements?	vicious outburst
+LABEL	0	what are serena williams achievements?	court
+LABEL	0	what are some ancient egypt names?	word
+LABEL	1	what are some ancient egypt names?	khem
+LABEL	0	what are some ancient egypt names?	origin
+LABEL	0	what are some ancient egypt names?	?kingdom?
+LABEL	0	what are some ancient egypt names?	country
+LABEL	0	what are some ancient egypt names?	expo
+LABEL	0	what are some ancient egypt names?	twitter blockages-full tweets
+LABEL	1	what are some ancient egypt names?	mizraim
+LABEL	0	what are some major events in venezuela?	references
+LABEL	0	what are some major events in venezuela?	sc people
+LABEL	0	what are some major events in venezuela?	sc example
+LABEL	0	what are some major events in venezuela?	god
+LABEL	0	what are some major events in venezuela?	program
+LABEL	0	what are some major events in venezuela?	nokia
+LABEL	0	what are some major events in venezuela?	abraham
+LABEL	0	what are some major events in venezuela?	helsinki
+LABEL	0	what are some major events in venezuela?	summer
+LABEL	0	what are some major events in venezuela?	culture 2010
+LABEL	0	what are some major events in venezuela?	database
+LABEL	0	what are some major events in venezuela?	memories today
+LABEL	0	what are some major events in venezuela?	boston
+LABEL	0	what are some major events in venezuela?	san francisco
+LABEL	0	what are some major events in venezuela?	moment
+LABEL	0	what are some major events in venezuela?	any timeline
+LABEL	0	what are some major events in venezuela?	3 days
+LABEL	0	what are some major events in venezuela?	market
+LABEL	0	what are some major events in venezuela?	trey
+LABEL	0	what are some major events in venezuela?	story
+LABEL	1	what are some of the traditions of islam?	scripture
+LABEL	1	what are some of the traditions of islam?	sufism
+LABEL	1	what are some of the traditions of islam?	dialogue
+LABEL	0	what are some of the traditions of islam?	fact
+LABEL	1	what are some of the traditions of islam?	volunteerism
+LABEL	1	what are some of the traditions of islam?	charity
+LABEL	1	what are some of the traditions of islam?	growing beard
+LABEL	1	what are some of the traditions of islam?	tolerance
+LABEL	1	what are some of the traditions of islam?	modest dress
+LABEL	1	what are some of the traditions of islam?	deep rooted hatred
+LABEL	1	what are some of the traditions of islam?	tolerance openness
+LABEL	1	what are some of the traditions of islam?	conditional toleration
+LABEL	1	what are some of the traditions of islam?	military conquest
+LABEL	1	what are some of the traditions of islam?	critical evaluation
+LABEL	1	what are some of the traditions of islam?	prophets
+LABEL	1	what are some of the traditions of islam?	art
+LABEL	1	what are some of the traditions of islam?	jihad
+LABEL	0	what are some of the traditions of islam?	marxism
+LABEL	0	what are some of the traditions of islam?	western culture
+LABEL	0	what are some of the traditions of islam?	duties
+LABEL	0	what are some of the traditions of islam?	alcohol
+LABEL	0	what are some of the traditions of islam?	firecrackers
+LABEL	0	what are some of the traditions of islam?	social media
+LABEL	0	what are some of the traditions of islam?	food
+LABEL	0	what are some of the traditions of islam?	day 6 day 7
+LABEL	0	what are some of the traditions of islam?	aaron elson
+LABEL	0	what are some of the traditions of islam?	stadium traditions
+LABEL	0	what are some of the traditions of islam?	scotland ireland
+LABEL	0	what are some of the traditions of islam?	list
+LABEL	0	what are some of the traditions of islam?	new stadium
+LABEL	0	what are some of the traditions of islam?	traditions
+LABEL	0	what are some of the traditions of islam?	mugham ashik
+LABEL	0	what are some of the traditions of islam?	lucy
+LABEL	0	what are some of the traditions of islam?	celtic paths
+LABEL	0	what are some of the traditions of islam?	summer cooking trends
+LABEL	0	what are some of the traditions of islam?	campus
+LABEL	0	what are some of the traditions of islam?	simbang gabi
+LABEL	1	what are the 7 sacraments of the catholic church?	marriage
+LABEL	1	what are the 7 sacraments of the catholic church?	salvation
+LABEL	1	what are the 7 sacraments of the catholic church?	eucharist
+LABEL	0	what are the beliefs of the roman catholic?	halloween
+LABEL	0	what are the beliefs of the roman catholic?	church?s attitude
+LABEL	0	what are the beliefs of the roman catholic?	syrians
+LABEL	0	what are the beliefs of the roman catholic?	brussels
+LABEL	0	what are the beliefs of the roman catholic?	malta
+LABEL	0	what are the beliefs of the roman catholic?	chile
+LABEL	0	what are the beliefs of the roman catholic?	california
+LABEL	0	what are the beliefs of the roman catholic?	demons
+LABEL	0	what are the beliefs of the roman catholic?	dedham , yaxley diss
+LABEL	0	what are the beliefs of the roman catholic?	seventy two percent
+LABEL	0	what are the beliefs of the roman catholic?	certain spirit
+LABEL	0	what are the beliefs of the roman catholic?	first thought
+LABEL	0	what are the beliefs of the roman catholic?	religion rome
+LABEL	0	what are the beliefs of the roman catholic?	csangos
+LABEL	0	what are the beliefs of the roman catholic?	indians
+LABEL	0	what are the beliefs of the roman catholic?	casey
+LABEL	0	what are the beliefs of the roman catholic?	tithe
+LABEL	0	what are the beliefs of the roman catholic?	new renaissance
+LABEL	0	what are the beliefs of the roman catholic?	russian communism
+LABEL	0	what are the beliefs of the roman catholic?	peter
+LABEL	0	what are the beliefs of the roman catholic?	rome
+LABEL	0	what are the beliefs of the roman catholic?	majorca
+LABEL	0	what are the beliefs of the roman catholic?	spain
+LABEL	0	what are the beliefs of the roman catholic?	1517
+LABEL	0	what are the beliefs of the roman catholic?	1293
+LABEL	0	what are the beliefs of the roman catholic?	1929
+LABEL	0	what are the beliefs of the roman catholic?	1680
+LABEL	0	what are the beliefs of the roman catholic?	1882
+LABEL	0	what are the beliefs of the roman catholic?	1957
+LABEL	0	what are the beliefs of the roman catholic?	2002
+LABEL	0	what are the beliefs of the roman catholic?	china
+LABEL	0	what are the beliefs of the roman catholic?	oubangui-chari
+LABEL	0	what are the beliefs of the roman catholic?	1948
+LABEL	0	what are the beliefs of the roman catholic?	fat tuesday
+LABEL	0	what are the beliefs of the roman catholic?	norway
+LABEL	0	what are the beliefs of the roman catholic?	town
+LABEL	0	what are the beliefs of the roman catholic?	internet
+LABEL	0	what are the beliefs of the roman catholic?	christianity
+LABEL	0	what are the beliefs of the roman catholic?	babylon
+LABEL	0	what are the beliefs of the roman catholic?	guatemala
+LABEL	0	what are the beliefs of the roman catholic?	ferdinand magellan
+LABEL	0	what are the beliefs of the roman catholic?	abstinence
+LABEL	0	what are the beliefs of the roman catholic?	freemasonry
+LABEL	0	what are the beliefs of the roman catholic?	argentina
+LABEL	0	what are the beliefs of the roman catholic?	?the church ?
+LABEL	0	what are the beliefs of the roman catholic?	salvation
+LABEL	0	what are the beliefs of the roman catholic?	canada
+LABEL	0	what are the beliefs of the roman catholic?	infant baptism
+LABEL	0	what are the beliefs of the roman catholic?	italy
+LABEL	1	what are the catholic holy days?	ash wednesday
+LABEL	1	what are the catholic holy days?	?good friday
+LABEL	0	what are the catholic holy days?	2009
+LABEL	1	what are the catholic holy days?	st . patrick?s day
+LABEL	1	what are the catholic holy days?	december
+LABEL	1	what are the catholic holy days?	sunday
+LABEL	0	what are the catholic holy days?	church
+LABEL	0	what are the catholic holy days?	christians
+LABEL	0	what are the catholic holy days?	ceremonies
+LABEL	0	what are the catholic holy days?	funerals
+LABEL	0	what are the catholic holy days?	week
+LABEL	0	what are the catholic holy days?	saints
+LABEL	1	what are the catholic holy days?	easter
+LABEL	0	what are the catholic holy days?	icons
+LABEL	0	what are the catholic holy days?	mankind
+LABEL	0	what are the catholic holy days?	bible
+LABEL	1	what are the catholic holy days?	only friday saturday
+LABEL	1	what are the catholic holy days?	2010 easter
+LABEL	1	what are the catholic holy days?	transfiguration sunday
+LABEL	1	what are the catholic holy days?	trumpets atonement
+LABEL	0	what are the catholic holy days?	calendar
+LABEL	0	what are the catholic holy days?	puritans
+LABEL	0	what are the catholic holy days?	certain calendar days
+LABEL	0	what are the catholic holy days?	significance
+LABEL	0	what are the catholic holy days?	tomorrow
+LABEL	0	what are the catholic holy days?	period
+LABEL	0	what are the catholic holy days?	first last days
+LABEL	0	what are the catholic holy days?	last day
+LABEL	0	what are the catholic holy days?	first eighth days
+LABEL	0	what are the catholic holy days?	church law
+LABEL	1	what are the catholic holy days?	half moons
+LABEL	0	what are the catholic holy days?	new church members
+LABEL	0	what are the catholic holy days?	word holidays
+LABEL	0	what are the catholic holy days?	10 gurus
+LABEL	0	what are the catholic holy days?	8:00
+LABEL	0	what are the catholic holy days?	yomim tovim
+LABEL	0	what are the catholic holy days?	effect
+LABEL	0	what are the catholic holy days?	various kinds
+LABEL	0	what are the catholic holy days?	word holiday
+LABEL	0	what are the catholic holy days?	churches
+LABEL	0	what are the catholic holy days?	hand forehead
+LABEL	0	what are the catholic holy days?	first , ninth 12th days
+LABEL	0	what are the catholic holy days?	dresses skirts
+LABEL	0	what are the catholic holy days?	four masses
+LABEL	0	what are the catholic holy days?	?holidays ?
+LABEL	0	what are the catholic holy days?	proper lessons
+LABEL	0	what are the catholic holy days?	p?rnim? am?vasy?
+LABEL	0	what are the catholic holy days?	services
+LABEL	0	what are the catholic holy days?	ten gurus
+LABEL	0	what are the catholic holy days?	sex
+LABEL	1	what are the colonies of great britain?	india
+LABEL	0	what are the colonies of great britain?	texas
+LABEL	0	what are the colonies of great britain?	order
+LABEL	0	what are the colonies of great britain?	london
+LABEL	0	what are the colonies of great britain?	americas
+LABEL	0	what are the colonies of great britain?	royal ballet
+LABEL	0	what are the colonies of great britain?	europe
+LABEL	0	what are the colonies of great britain?	logo
+LABEL	0	what are the colonies of great britain?	israel
+LABEL	0	what are the colonies of great britain?	california
+LABEL	0	what are the colonies of great britain?	1895
+LABEL	0	what are the colonies of great britain?	v/ 1500
+LABEL	0	what are the colonies of great britain?	1812
+LABEL	0	what are the colonies of great britain?	more than 4,000 spectators
+LABEL	0	what are the colonies of great britain?	foreign country
+LABEL	0	what are the colonies of great britain?	second place
+LABEL	0	what are the colonies of great britain?	england where
+LABEL	0	what are the colonies of great britain?	three additional cranes
+LABEL	0	what are the colonies of great britain?	only important exceptions
+LABEL	0	what are the colonies of great britain?	ground
+LABEL	0	what are the colonies of great britain?	instance
+LABEL	0	what are the colonies of great britain?	theme
+LABEL	0	what are the colonies of great britain?	ninth tenth places
+LABEL	0	what are the colonies of great britain?	rationing health care
+LABEL	0	what are the colonies of great britain?	controlling country
+LABEL	0	what are the colonies of great britain?	line
+LABEL	0	what are the colonies of great britain?	happy
+LABEL	0	what are the colonies of great britain?	most optimistic european country
+LABEL	0	what are the colonies of great britain?	uk
+LABEL	0	what are the colonies of great britain?	224 vps
+LABEL	0	what are the colonies of great britain?	mini cooper
+LABEL	0	what are the colonies of great britain?	highest mountain
+LABEL	0	what are the colonies of great britain?	gbr
+LABEL	0	what are the colonies of great britain?	right
+LABEL	0	what are the colonies of great britain?	conqueror
+LABEL	0	what are the colonies of great britain?	yeah gb
+LABEL	0	what are the colonies of great britain?	hegemonic power
+LABEL	0	what are the colonies of great britain?	uae
+LABEL	0	what are the colonies of great britain?	modern democracy
+LABEL	0	what are the colonies of great britain?	united states
+LABEL	0	what are the colonies of great britain?	asa
+LABEL	0	what are the colonies of great britain?	economy transportation london
+LABEL	0	what are the colonies of great britain?	one company
+LABEL	0	what are the colonies of great britain?	19th century
+LABEL	0	what are the colonies of great britain?	third
+LABEL	0	what are the colonies of great britain?	macro-economic situation
+LABEL	0	what are the colonies of great britain?	zionists
+LABEL	0	what are the colonies of great britain?	amber shop
+LABEL	0	what are the colonies of great britain?	most medals
+LABEL	0	what are the colonies of great britain?	next most unequal country
+LABEL	0	what are the important holidays of islam?	friday
+LABEL	0	what are the important holidays of islam?	easter sunday
+LABEL	0	what are the important holidays of islam?	good friday
+LABEL	0	what are the important holidays of islam?	november
+LABEL	0	what are the important holidays of islam?	monday
+LABEL	0	what are the important holidays of islam?	july
+LABEL	0	what are the important holidays of islam?	hanukkah
+LABEL	0	what are the important holidays of islam?	easter
+LABEL	0	what are the important holidays of islam?	christmas
+LABEL	0	what are the important holidays of islam?	chinese new year
+LABEL	0	what are the important holidays of islam?	samhain
+LABEL	0	what are the important holidays of islam?	ww ii
+LABEL	0	what are the important holidays of islam?	halloween
+LABEL	0	what are the important holidays of islam?	chiclayo
+LABEL	0	what are the important holidays of islam?	new year?s
+LABEL	0	what are the important holidays of islam?	mahavir jayanti
+LABEL	0	what are the important holidays of islam?	diwali
+LABEL	0	what are the important holidays of islam?	ouarzazate
+LABEL	0	what are the important holidays of islam?	carnival
+LABEL	0	what are the important holidays of islam?	s unday
+LABEL	0	what are the important holidays of islam?	eid al adha
+LABEL	0	what are the important holidays of islam?	yom kippur
+LABEL	0	what are the important holidays of islam?	peru
+LABEL	0	what are the important holidays of islam?	bodrum
+LABEL	0	what are the important holidays of islam?	lent
+LABEL	0	what are the important holidays of islam?	spring festival
+LABEL	0	what are the important holidays of islam?	passover
+LABEL	0	what are the important holidays of islam?	christmas eve
+LABEL	0	what are the important holidays of islam?	france
+LABEL	0	what are the important holidays of islam?	fourth thursday
+LABEL	0	what are the important holidays of islam?	1810
+LABEL	0	what are the important holidays of islam?	2011 09:45 thanksgiving
+LABEL	0	what are the important holidays of islam?	lunar year
+LABEL	0	what are the important holidays of islam?	valentine?s day
+LABEL	0	what are the important holidays of islam?	shogatsu
+LABEL	0	what are the important holidays of islam?	europeans christmas
+LABEL	0	what are the important holidays of islam?	mahavir janma kalyanak
+LABEL	0	what are the important holidays of islam?	latter
+LABEL	0	what are the important holidays of islam?	new year
+LABEL	0	what are the important holidays of islam?	year
+LABEL	0	what are the important holidays of islam?	days
+LABEL	0	what are the important holidays of islam?	new year?s day
+LABEL	0	what are the important holidays of islam?	john
+LABEL	0	what are the important holidays of islam?	guozu festival
+LABEL	0	what are the important holidays of islam?	no.
+LABEL	0	what are the important holidays of islam?	autumn moon festival
+LABEL	0	what are the important holidays of islam?	mcm
+LABEL	0	what are the important holidays of islam?	mother?s day
+LABEL	0	what are the important holidays of islam?	holiday
+LABEL	0	what are the important holidays of islam?	israelites
+LABEL	0	what are the landlocked countries in latin america?	tea
+LABEL	0	what are the landlocked countries in latin america?	kazakhstan
+LABEL	0	what are the landlocked countries in latin america?	uzbekistan
+LABEL	0	what are the landlocked countries in latin america?	mongolia
+LABEL	0	what are the landlocked countries in latin america?	lesotho
+LABEL	0	what are the landlocked countries in latin america?	republic
+LABEL	0	what are the landlocked countries in latin america?	goods
+LABEL	0	what are the landlocked countries in latin america?	togo
+LABEL	0	what are the landlocked countries in latin america?	tajikistan
+LABEL	0	what are the landlocked countries in latin america?	nepal
+LABEL	0	what are the landlocked countries in latin america?	laos
+LABEL	1	what are the landlocked countries in latin america?	paraguay
+LABEL	0	what are the landlocked countries in latin america?	niger
+LABEL	0	what are the landlocked countries in latin america?	xenophobic organisations
+LABEL	1	what are the landlocked countries in latin america?	bolivia bolivia
+LABEL	0	what are the landlocked countries in latin america?	country
+LABEL	0	what are the landlocked countries in latin america?	captain stejskal
+LABEL	1	what are the landlocked countries in latin america?	bolivia
+LABEL	0	what are the landlocked countries in latin america?	guaran?
+LABEL	0	what are the landlocked countries in latin america?	zimbabwe
+LABEL	0	what are the landlocked countries in latin america?	armenia
+LABEL	0	what are the landlocked countries in latin america?	ethiopia
+LABEL	0	what are the landlocked countries in latin america?	southern oil
+LABEL	0	what are the major languages spoken in greece?	alphabet
+LABEL	1	what are the major languages spoken in greece?	greek
+LABEL	1	what are the major languages spoken in greece?	albanian
+LABEL	0	what are the major languages spoken in greece?	language
+LABEL	1	what are the major languages spoken in greece?	greek sign language
+LABEL	1	what are the major languages spoken in greece?	proto-greek language
+LABEL	0	what are the major languages spoken in greece?	albanian sign language
+LABEL	0	what are the major languages spoken in greece?	albanian, tosk language
+LABEL	0	what are the major languages spoken in greece?	albanian, gheg language
+LABEL	1	what are the major languages spoken in greece?	modern greek
+LABEL	0	what are the major languages spoken in greece?	va people
+LABEL	0	what are the major languages spoken in greece?	proto-albanian language
+LABEL	0	what are the major languages spoken in greece?	bel languages
+LABEL	0	what are the major languages spoken in greece?	system ?
+LABEL	0	what are the major languages spoken in greece?	references
+LABEL	0	what are the major languages spoken in greece?	music
+LABEL	0	what are the major languages spoken in greece?	art
+LABEL	0	what are the major languages spoken in greece?	culture
+LABEL	1	what are the major languages spoken in greece?	turkish
+LABEL	0	what are the major languages spoken in greece?	sun
+LABEL	0	what are the major languages spoken in greece?	chinese
+LABEL	0	what are the major languages spoken in greece?	former
+LABEL	0	what are the major languages spoken in greece?	german
+LABEL	0	what are the major languages spoken in greece?	holocaust
+LABEL	1	what are the major languages spoken in greece?	gnosis
+LABEL	1	what are the major languages spoken in greece?	koin?
+LABEL	1	what are the major languages spoken in greece?	latin
+LABEL	0	what are the major languages spoken in greece?	1976
+LABEL	1	what are the major languages spoken in greece?	language greek
+LABEL	0	what are the major languages spoken in greece?	reading booklet greek
+LABEL	1	what are the major languages spoken in greece?	cyprus greek
+LABEL	0	what are the major languages spoken in greece?	greek language greek
+LABEL	1	what are the major languages spoken in greece?	thasos greek
+LABEL	0	what are the major languages spoken in greece?	official status greek
+LABEL	1	what are the major languages spoken in greece?	english
+LABEL	1	what are the major languages spoken in greece?	ladino
+LABEL	1	what are the major languages spoken in greece?	macedonian
+LABEL	1	what are the major languages spoken in greece?	old turkish
+LABEL	1	what are the major languages spoken in greece?	sanskrit
+LABEL	1	what are the major languages spoken in greece?	arabic language
+LABEL	1	what are the major languages spoken in greece?	english language
+LABEL	1	what are the major languages spoken in greece?	kurdish language
+LABEL	1	what are the major languages spoken in greece?	arabic languages
+LABEL	1	what are the major languages spoken in greece?	mesopotamian arabic
+LABEL	0	what are the major languages spoken in greece?	english sign language
+LABEL	0	what are the major languages spoken in greece?	judeo-arabic language
+LABEL	1	what are the major languages spoken in greece?	hebrew languages
+LABEL	1	what are the major languages spoken in greece?	hebrew language
+LABEL	1	what are the major trading partners of germany?	poland
+LABEL	1	what are the major trading partners of germany?	georgia
+LABEL	1	what are the major trading partners of germany?	england
+LABEL	1	what are the major trading partners of germany?	sweden
+LABEL	0	what are the major trading partners of germany?	kingdom
+LABEL	1	what are the major trading partners of germany?	china
+LABEL	0	what are the names of michael jackson's 3 children?	estate
+LABEL	0	what are the names of michael jackson's kids?	diana ross
+LABEL	0	what are the names of michael jackson's kids?	estate
+LABEL	1	what are the official languages of argentina?	spanish
+LABEL	1	what are the official languages of argentina?	ba ? spanish
+LABEL	1	what are the official languages of argentina?	language spanish
+LABEL	0	what are the official languages of argentina?	english
+LABEL	0	what are the official languages of argentina?	spanish english
+LABEL	0	what are the official languages of argentina?	english, spanish
+LABEL	0	what are the official languages of argentina?	spanish sign language
+LABEL	0	what are the official languages of argentina?	yiddish sign language
+LABEL	0	what are the official languages of argentina?	judeo-italian language
+LABEL	0	what are the official languages of argentina?	old spanish language
+LABEL	0	what are the official languages of argentina?	italian sign language
+LABEL	0	what are the official languages of argentina?	yiddish, eastern language
+LABEL	0	what are the official languages of argentina?	rioplatense spanish
+LABEL	0	what are the official languages of argentina?	old turkish language
+LABEL	0	what are the official languages of argentina?	serbo-croatian language
+LABEL	0	what are the official languages of argentina?	korean sign language
+LABEL	0	what are the official languages of argentina?	czech language
+LABEL	0	what are the official languages of argentina?	korean language
+LABEL	0	what are the official languages of argentina?	croatian language
+LABEL	0	what are the official languages of argentina?	turkish language
+LABEL	0	what are the official languages of argentina?	turkish sign language
+LABEL	0	what are the official languages of argentina?	czech sign language
+LABEL	0	what are the official languages of argentina?	screen
+LABEL	1	what are the official languages of argentina?	spanish modern language
+LABEL	0	what are the official languages of argentina?	croatian sign language
+LABEL	0	what are the official languages of argentina?	koreans language
+LABEL	1	what are the official languages of argentina?	3. spanish
+LABEL	0	what are the official languages of argentina?	pei language
+LABEL	0	what are the official languages of argentina?	language
+LABEL	0	what are the official languages of argentina?	ok languages
+LABEL	0	what are the official languages of argentina?	pahi language
+LABEL	0	what are the official languages of argentina?	paliyan language
+LABEL	1	what are the official languages of argentina?	official spanish language
+LABEL	0	what are the official languages of argentina?	soccer
+LABEL	0	what are the official languages of argentina?	system ?
+LABEL	0	what are the official languages of argentina?	java
+LABEL	0	what are the official languages of argentina?	art
+LABEL	0	what are the official languages of argentina?	music
+LABEL	0	what are the official languages of argentina?	sun
+LABEL	0	what are the official languages of argentina?	dance
+LABEL	0	what are the official languages of argentina?	technology
+LABEL	1	what are the official languages of the eu?	english
+LABEL	1	what are the official languages of the eu?	greek
+LABEL	1	what are the official languages of the eu?	hungarian
+LABEL	1	what are the official languages of the eu?	nb 20 197 english
+LABEL	1	what are the official languages of the eu?	german
+LABEL	0	what are the official languages of the eu?	better regulation
+LABEL	0	what are the official languages of the eu?	microsoft
+LABEL	0	what are the official languages of the eu?	system ?
+LABEL	0	what are the official languages of the eu?	music
+LABEL	0	what are the official languages of the eu?	language
+LABEL	0	what are the official languages of the eu?	irish
+LABEL	1	what are the predominant religions in russia?	russian orthodoxy
+LABEL	1	what are the predominant religions in russia?	russian orthodox
+LABEL	1	what are the predominant religions in russia?	islam
+LABEL	1	what are the predominant religions in russia?	orthodoxy
+LABEL	1	what are the predominant religions in russia?	orthodox christians ,which
+LABEL	0	what are the predominant religions in russia?	fire
+LABEL	0	what are the predominant religions in russia?	asia
+LABEL	0	what are the predominant religions in russia?	science
+LABEL	0	what are the predominant religions in russia?	communism
+LABEL	0	what are the predominant religions in russia?	terrorism
+LABEL	0	what are the predominant religions in russia?	fishing
+LABEL	0	what are the predominant religions in russia?	theatre
+LABEL	0	what are the predominant religions in russia?	reality
+LABEL	0	what are the predominant religions in russia?	chance
+LABEL	0	what are the predominant religions in russia?	hope
+LABEL	0	what are the predominant religions in russia?	work
+LABEL	0	what are the predominant religions in russia?	evolution
+LABEL	1	what are the predominant religions in russia?	atheism
+LABEL	0	what are the predominant religions in russia?	green
+LABEL	0	what are the predominant religions in russia?	latter
+LABEL	0	what are the predominant religions in russia?	nature
+LABEL	1	what are the predominant religions in russia?	christianity
+LABEL	1	what are the predominant religions in russia?	judaism
+LABEL	1	what are the predominant religions in russia?	buddhism judaism
