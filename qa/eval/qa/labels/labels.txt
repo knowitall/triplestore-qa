@@ -17438,7 +17438,7 @@ LABEL	0	what continent does canada belong to?	united states
 LABEL	0	what countries are in the uk yahoo?	india
 LABEL	1	what countries are involved in the nafta?	mexico
 LABEL	1	what countries are located near egypt?	cyprus
-LABEL	0	what countries are members of the security council?	algeria
+LABEL	1	what countries are members of the security council?	algeria
 LABEL	0	what countries are part of the uk?	mining
 LABEL	0	what countries constitute the eu?	forum
 LABEL	0	what countries do the united nations help?	mind
@@ -18001,3 +18001,108 @@ LABEL	1	who won the league cup in 2002?	csu
 LABEL	0	who won the presidential election in egypt 2012?	republicans
 LABEL	0	who won utah attorney general?	center
 LABEL	0	who wrote st trinians?	prestwick
+LABEL	0	what are the supreme court cases?	gwinnett
+LABEL	0	what book did benjamin franklin published?	america
+LABEL	0	what books are written by suzanne collins?	book q
+LABEL	0	what books did agatha christie wrote?	books
+LABEL	1	what countries are members of the security council?	mexico
+LABEL	0	what countries are part of the uk?	ireland
+LABEL	1	what countries do the united nations help?	cambodia
+LABEL	1	what countries does canada have trade agreements with?	chile
+LABEL	1	what countries does nafta include?	united states
+LABEL	0	what countries included in the uk?	uk
+LABEL	1	what countries speak french as a first language?	canada.
+LABEL	1	what countries were part of the spanish empire?	united states
+LABEL	0	what county is kansas city kansas?	leavenworth city
+LABEL	0	what county is san francisco?	kent
+LABEL	0	what currency does singapore use?	currency
+LABEL	1	what did george washington carver made?	plastic
+LABEL	1	what did gloria steinem founded?	ms. magazine
+LABEL	0	what did hayes do?	existence
+LABEL	0	what did jesse owens won?	berlin
+LABEL	0	what did romo do?	redskins
+LABEL	1	what did scott joplin play?	piano
+LABEL	1	what did shannon hoon die from?	drug
+LABEL	1	what did warren buffett invest in?	goldman sachs
+LABEL	1	what disease does robin roberts have?	breast cancer 2
+LABEL	1	what does monsanto own?	seeds
+LABEL	0	what films has daniel craig been in?	film
+LABEL	0	what government did the roman empire have?	thousands
+LABEL	1	what guitar did joe walsh play?	steel guitar
+LABEL	1	what happened at chernobyl?	radiation
+LABEL	0	what has ashley greene been in?	jacksonville
+LABEL	1	what has kristen stewart acted in?	twilight
+LABEL	1	what is berkshire hathaway invested in?	government bonds
+LABEL	0	what is colorado technical university?	full time
+LABEL	1	what is new france?	louisiana
+LABEL	0	what is newcastle metro?	current show
+LABEL	0	what is ryan seacrest radio show?	he?ll
+LABEL	1	what is the islamic belief?	suicide
+LABEL	1	what is the stanley cup named after?	frederick arthur stanley
+LABEL	0	what language do brazilians use?	system ?
+LABEL	1	what language do russians speak?	english
+LABEL	1	what language do serbs speak?	english
+LABEL	0	what language does australians speak?	slang
+LABEL	0	what language does colombia?	com business
+LABEL	1	what language is spoken in switzerland?	english
+LABEL	0	what movies has liam hemsworth played in?	movie o
+LABEL	1	what movies has spike lee made?	movie_malcolm_x
+LABEL	1	what offices did theodore roosevelt hold?	tax commissioner
+LABEL	0	what places are in the west midlands?	university
+LABEL	0	what position did lebron james play?	goalie
+LABEL	0	what products does the united states export?	products
+LABEL	0	what region is turkey considered?	austria
+LABEL	1	what sports are popular in germany?	basketball
+LABEL	1	what teams has manny ramirez played for?	cleveland
+LABEL	0	what type of government did mexico have?	law
+LABEL	0	what type of government did soviet union have?	thousands
+LABEL	0	what type of government does australia have?	social security
+LABEL	0	what type of government does germany have now?	public
+LABEL	0	what type of government does iraq have now?	public
+LABEL	0	what type of religions are in the united states?	reality
+LABEL	1	what university did obama graduated from?	harvard law school
+LABEL	0	what was john tyler?	hopeless
+LABEL	0	what was lucille ball?	julia child
+LABEL	0	what was van halen first album?	truth ?
+LABEL	0	what year was first world series?	1915
+LABEL	0	what year was george w bush elected?	1994
+LABEL	0	when did annie open?	august
+LABEL	0	where are the new orleans hornets moving to?	center chris kaman
+LABEL	0	where did alex chilton die?	2010
+LABEL	0	where did richard nixon die?	1994
+LABEL	1	where did russians originate?	asia
+LABEL	0	where did the anasazi indians live?	7th century
+LABEL	0	where did thomas paine die?	february
+LABEL	0	where do florida panthers play?	ottawa
+LABEL	0	where do the blackhawks play?	st . louis
+LABEL	1	where do the seattle seahawks play?	kingdome
+LABEL	0	where does bronx begin?	fall
+LABEL	0	where does the columbia river start?	march
+LABEL	0	where has the english language evolved from?	context
+LABEL	0	where is harley davidson made?	york
+LABEL	0	where is the un based?	rome
+LABEL	0	where was anne boleyn executed?	1542
+LABEL	1	which countries share a border with russia?	norway
+LABEL	1	which countries speak arabic language?	iraq"
+LABEL	1	which countries speak germanic languages?	russia
+LABEL	0	who created arthur?	portraits
+LABEL	1	who did richard nixon run against?	george mcgovern
+LABEL	0	who does david beckham play for?	ac milan
+LABEL	1	who does jeremy lin play for?	eric musselman
+LABEL	0	who fought the battle of gettysburg?	mass
+LABEL	0	who founded the afl?	center
+LABEL	0	who has ray allen dated?	1957-09-29
+LABEL	0	who inspired obama?	color
+LABEL	0	who is louisiana state senator?	attendance
+LABEL	0	who is president of israel?	gold
+LABEL	0	who is thor heyerdahl?	ship
+LABEL	1	who played jeannie?	kristen bell
+LABEL	0	who plays john connor?	ironside
+LABEL	1	who plays spike spiegel?	stephen dorff
+LABEL	0	who was anakin skywalker?	jaina solo~
+LABEL	0	who was frida kahlo influenced by?	striking contrast
+LABEL	0	who was in the israeli palestinian conflict?	peace
+LABEL	0	who was queen victoria's husband?	castle
+LABEL	0	who was wesley snipes?	interest
+LABEL	0	who were wright brothers?	eeg
+LABEL	0	who won the battle of gettysburg?	northern virginia
