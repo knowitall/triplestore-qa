@@ -16,7 +16,6 @@ def load_pr(input):
         except:
             break
 
-    d = dict()
     updated_p = []
     prev_r = 0
     for i in range(len(r)):
@@ -24,12 +23,9 @@ def load_pr(input):
         for j in range(i+1, len(r)):
             if p[j] >= p2:
                 p2 = p[j]
-                d[r[i]] = p[j]
         updated_p.append(p2)
 
-    r = sorted(d)
-    updated_p = [d[x] for x in r]
-    return r, updated_p
+    return r, p#updated_p
 
 if __name__ == '__main__':
 
