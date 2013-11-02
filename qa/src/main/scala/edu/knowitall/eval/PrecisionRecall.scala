@@ -10,7 +10,8 @@ object PrecisionRecall extends App {
   def bool2int(b:Boolean) = if (b) 1 else 0
   
   def precisionRecall(predictions: List[Int], recallDenom: Double): List[(Double, Double)] = {
-    val numCorrect = predictions.scanLeft(0.0)(_ + _).tail
+    val list = predictions.reverse.dropWhile(_ == 0).reverse
+    val numCorrect = list.scanLeft(0.0)(_ + _).tail
     val precs = numCorrect.zipWithIndex.map(x => x._1 / (x._2 + 1))
     val recs = numCorrect.zipWithIndex.map(x => x._1 / recallDenom)
     recs zip precs  
