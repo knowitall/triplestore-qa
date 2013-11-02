@@ -122,18 +122,34 @@ case object SolrClient {
     
   def escape(s: String): String = ClientUtils.escapeQueryChars(s)
   
+  private val parenPat = """AND \s*\(+\s*\)+\s*$""".r
+  def removeEmptyParens(s: String): String = {
+    val result = parenPat.replaceAllIn(s, " ")
+    result
+  }
+  
+  val emptyPat = """^\s*$""".r
+  def replaceEmptyQuery(s: String): String = s match {
+    case emptyPat() => "*:*"
+    case _ => s
+  } 
+  
+  def fixQuery(s: String) = {
+    replaceEmptyQuery(removeEmptyParens(s))
+  }
+  
   /**
    * Takes a Search.Query object and maps it to a SolrQuery object.
    */
   def buildQuery(q: TSQuery): SolrQuery =
-    new SolrQuery(q.toQueryString)
+    new SolrQuery(fixQuery(q.toQueryString))
   
   /**
    * Builds a SolrQuery object used to count the number of hits returned
    * by the given Search.Query object. Returns 0 rows.
    */
   def buildCountQuery(q: TSQuery): SolrQuery = 
-    new SolrQuery(q.toQueryString).setRows(0)
+    new SolrQuery(fixQuery(q.toQueryString)).setRows(0)
   
   /**
    * The string field names of the given solr document.
