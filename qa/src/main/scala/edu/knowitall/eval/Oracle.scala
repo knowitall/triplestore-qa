@@ -50,7 +50,7 @@ object Oracle {
   val lemmatizer = new MorphaStemmer()
   
   def normalizePair(input: String, output: String) = (normalize(input), normalize(output))
-  
+
   def normalize(s: String): String = {
     val tokens = tokenizer(s)
     if (tokens.size > 0) {
@@ -77,7 +77,7 @@ object Oracle {
   
   def labelsFromInputStream(is: InputStream) = {
     val triples = Source.fromInputStream(is, "UTF8").getLines.filter(_.startsWith("LABEL\t")).map(readLine)
-    triples.map(triple => (triple._1, triple._2) -> triple._3).toMap
+    triples.map(triple => (normalize(triple._1), normalize(triple._2)) -> triple._3).toMap
   }
   
   def fromFile(fn: String) = labelsFromInputStream(new FileInputStream(fn))
@@ -97,7 +97,16 @@ class FileOracle(path: String) extends UpdateableOracle {
     grouped.toMap
   }
   override def inputs = labels.keys.map(_._1).toList
-  override def getLabel(input: String, output: String) = labels.get((Oracle.normalize(input), Oracle.normalize(output)))
+  def normalize = Oracle.normalize _
+  override def getLabel(input: String, output: String) = {
+    val i = normalize(input)
+    val o = normalize(output)
+    val attempt = labels.get((i, o))
+    attempt match {
+      case Some(value) => Some(value)
+      case None => labels.get(normalize(i), normalize(o))
+    }
+  }
   override def getCorrectOutputs(input: String): List[String] = correctOutputs.getOrElse(Oracle.normalize(input), List())
 
   def save = {
