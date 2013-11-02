@@ -18,8 +18,18 @@ object ExtractData extends ScoobiApp {
   
   def getParaphrases(line: String): List[(String, String)] = {
     WikiAnswersDoc.lineToDoc(line) match {
-      case Some(doc) => for ((q1, q2) <- WikiAnswersDoc.getQuestionParaphrases(doc)) yield (s"$q1", s"$q2")
+      case Some(doc) => for ((q1, q2) <- WikiAnswersDoc.getQuestionParaphrases(doc)) yield (s"q:$q1", s"q:$q2")
       case None => List.empty
+    }
+  }
+  
+  def getAnswers(line: String): List[(String, String)] = {
+    WikiAnswersDoc.lineToDoc(line) match {
+      case Some(doc) => {
+        val qas = WikiAnswersDoc.getQuestionAnswers(doc)
+        qas.map(qa => (s"q:${qa.question}", s"a:${qa.answer}"))
+      }
+      case _ => List()
     }
   }
   
@@ -32,7 +42,8 @@ object ExtractData extends ScoobiApp {
   def run() {
     val lines = textFromLzo(args(0))
     val paras = lines.mapFlatten(getParaphrases)
-    val plainClusters = paras.groupByKey.map(distinctSorted).distinct.map(_.mkString("\t"))
+    val qas = lines.mapFlatten(getAnswers)
+    val plainClusters = (paras ++ qas).groupByKey.map(distinctSorted).distinct.map(_.mkString("\t"))
     persist(plainClusters.toTextFile(args(1), true))
   }
 
