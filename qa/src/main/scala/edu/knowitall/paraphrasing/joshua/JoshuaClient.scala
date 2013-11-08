@@ -11,6 +11,7 @@ import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.io.OutputStreamWriter
 import edu.knowitall.paraphrasing.ScoredParaphraseDerivation
+import edu.knowitall.util.MathUtils
 
 case class JoshuaOutput(output: String, score: Double) extends ScoredParaphraseDerivation
 
@@ -52,6 +53,10 @@ case class JoshuaClient(host: String, port: Int, maxHits: Int) {
     socket.close()
     result
   }
+  
+  private def scale(x: Double): Double = 
+    if (JoshuaClient.scale) MathUtils.clipScale(x, JoshuaClient.minScore, JoshuaClient.maxScore)
+    else x
 
 }
 
@@ -60,4 +65,7 @@ case object JoshuaClient {
   val defaultHost = conf.getString("paraphrase.joshua.host")
   val defaultPort = conf.getInt("paraphrase.joshua.port")
   val defaultMaxHits = conf.getInt("paraphrase.joshua.maxHits")
+  val minScore = conf.getDouble("paraphrase.joshua.minScore")
+  val maxScore = conf.getDouble("paraphrase.joshua.maxScore")
+  val scale = conf.getBoolean("paraphrase.joshua.scale")
 }
