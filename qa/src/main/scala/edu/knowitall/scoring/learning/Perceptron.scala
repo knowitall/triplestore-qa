@@ -31,7 +31,7 @@ class HiddenVariblePerceptron[Input, Hidden, Output] {
       // incorrect hidden layer and the (inferred) correct hidden layer.
       yield model.update(input, hiddenPrediction, hiddenCorrect)
       
-  private def trainOnce(model: SummedModel, data: List[Example]): SummedModel = data match {
+  private def trainEpoch(model: SummedModel, data: List[Example]): SummedModel = data match {
 
       // Base case: if data is just an empty list, return the given model
       case Nil => model
@@ -43,13 +43,13 @@ class HiddenVariblePerceptron[Input, Hidden, Output] {
         // Run on a single training example. This returns an optional new 
         // model, so default to the previous one if None is returned.
         val newModel = trainIter(model.current, input, output).getOrElse(model.current)
-        trainOnce(model.sum(newModel), rest)
+        trainEpoch(model.sum(newModel), rest)
         
       }
     }
   
   private def train(model: SummedModel, data: List[Example], numIters: Int): SummedModel = numIters match {
-    case i if i > 0 => train(trainOnce(model, data), data, numIters - 1)
+    case i if i > 0 => train(trainEpoch(model, data), data, numIters - 1)
     case _ => model
   }
   
