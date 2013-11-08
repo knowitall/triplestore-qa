@@ -87,8 +87,7 @@ object QAFeatures extends Function[AnswerDerivation, SparseVector] {
 		  					   paraphraseScore(d) +
 		  					   namespaces(d) +
 		  					   prefixAndDate(d) +
-		  					   numConjuncts(d) +
-		  					   paraphraseScore(d)
+		  					   numConjuncts(d)
 }
 
 
