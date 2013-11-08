@@ -23,7 +23,8 @@ case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivati
     val newWeights = weights + delta
     logger.debug(s"Updating for ($q, ${predicted.answerString}, ${expected.answerString})")
     logger.debug(s"Update delta = $delta")
-    logger.debug(s"Updated weights = $newWeights")
+    logger.debug(s"Old weights =\n$weights")
+    logger.debug(s"Updated weights =\n$newWeights")
     this.copy(weights = newWeights)
   }
     
