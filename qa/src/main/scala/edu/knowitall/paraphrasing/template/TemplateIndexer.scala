@@ -10,8 +10,10 @@ import org.apache.solr.client.solrj.impl.HttpSolrServer
 import org.apache.solr.client.solrj.SolrQuery
 import org.apache.solr.client.solrj.SolrQuery.SortClause
 import scala.Option.option2Iterable
+import com.typesafe.config.ConfigFactory
+import edu.knowitall.util.MathUtils
 
-case class ParaphraseTemplateClient(solrUrl: String, hitLimit: Int = 500) {
+case class ParaphraseTemplateClient(solrUrl: String, hitLimit: Int = 500, scale: Boolean = ParaphraseTemplateClient.scale) {
   val logger = LoggerFactory.getLogger(this.getClass)
   val server = new HttpSolrServer(solrUrl)
   val searchField = "template1_exact"
@@ -23,8 +25,19 @@ case class ParaphraseTemplateClient(solrUrl: String, hitLimit: Int = 500) {
     val resp = server.query(query)
     logger.info(s"Found ${resp.getResults().getNumFound()} hits")
     val pairs = resp.getResults().toList.flatMap(TemplatePair.fromDocument)
-    pairs
+    pairs.map(pair => pair.copy(pmi = scalePmi(pair.pmi)))
   }
+    
+  private def scalePmi(x: Double): Double = 
+    if (scale) MathUtils.clipScale(x, ParaphraseTemplateClient.minPmi, ParaphraseTemplateClient.maxPmi)
+    else x
+}
+
+case object ParaphraseTemplateClient {
+  val conf = ConfigFactory.load()
+  val minPmi = conf.getDouble("paraphrase.template.minPmi")
+  val maxPmi = conf.getDouble("paraphrase.template.maxPmi")
+  val scale = conf.getBoolean("paraphrase.template.scale")
 }
 
 case class TemplatePair(template1: String, template2: String, pmi: Double, count1: Double, count2: Double, jointCount: Double) {
