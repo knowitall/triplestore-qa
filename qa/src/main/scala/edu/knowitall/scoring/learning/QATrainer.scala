@@ -22,8 +22,8 @@ object QATrainer extends App {
   
   val generator = QASystem.getInstance().get
   val model = QAModel(generator)
-  val learner = new HiddenVariblePerceptron[String, AnswerDerivation, Set[String]]
-  val learnedModel = learner.trainAverage(model, training, numIters)
+  val learner = new HiddenVariblePerceptron[String, AnswerDerivation, Set[String]](model)
+  val learnedModel = learner.trainAverage(training, numIters)
   SparseVector.toFile(learnedModel.weights, modelOutput)
 
 }
