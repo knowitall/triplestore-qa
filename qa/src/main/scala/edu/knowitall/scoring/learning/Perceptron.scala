@@ -1,68 +1,99 @@
 package edu.knowitall.scoring.learning
 
-class HiddenVariblePerceptron[Input, Hidden, Output] {
+import scala.annotation.tailrec
+import scala.util.Random
+import edu.knowitall.util.Counter
+import org.slf4j.LoggerFactory
 
-  
-  type Model = HiddenVariableModel[Input, Hidden, Output]
-  type Example = (Input, Output)
-  
-  private case class SummedModel(current: Model, summed: Model) {
-    def this(model: Model) = this(model, model)
-    def sum(next: Model): SummedModel = SummedModel(next, summed.sum(next))
-  }
-  
-  private def trainIter(model: Model, input: Input, output: Output): Option[Model] =
-    for (
-    	 // Predict the hidden layer according to the given model
-         hiddenPrediction <- model.predict(input);
-         
-         // Project the hidden layer down to make an output prediction
-    	 outputPrediction = model.project(hiddenPrediction);
-    	 
-    	 // Check to see whether the predicted output is correct
-    	 if !model.isCorrect(input, outputPrediction, output);
-    	 
-    	 // If the predicted output is incorrect, infer the best hidden layer
-    	 // for the correct expected output.
-    	 hiddenCorrect <- model.predictConstrained(input, output)
-    	 )
-      
-      // Return an updated model, correcting for the difference between the
-      // incorrect hidden layer and the (inferred) correct hidden layer.
-      yield model.update(input, hiddenPrediction, hiddenCorrect)
-      
-  private def trainEpoch(model: SummedModel, data: List[Example]): SummedModel = data match {
+class HiddenVariblePerceptron[Input, Hidden, Output](model: HiddenVariableModel[Input, Hidden, Output]) {
+val logger = LoggerFactory.getLogger(this.getClass)
 
-      // Base case: if data is just an empty list, return the given model
-      case Nil => model
-      
-      // Otherwise, run one training iteration, then train on the rest of the
-      // data. 
-      case (input, output) :: rest => {
-        
-        // Run on a single training example. This returns an optional new 
-        // model, so default to the previous one if None is returned.
-        val newModel = trainIter(model.current, input, output).getOrElse(model.current)
-        trainEpoch(model.sum(newModel), rest)
-        
+  private type Model = HiddenVariableModel[Input, Hidden, Output]
+  private case class Example(input: Input, output: Output)
+  
+  private var currentModel = model
+  private var currentSummedModel = model
+  private var currentEpochCounts = new Counter()
+  private var epochCounts = IndexedSeq.empty[Counter]
+  
+  private def updateModel(ex: Example, pred: Hidden) =  
+    currentModel.predictConstrained(ex.input, ex.output) match {
+      case Some(hidden) => {
+        currentEpochCounts.increment("numUpdates")
+        currentModel.update(ex.input, pred, hidden)
+      }
+      case None => {
+        currentEpochCounts.increment("numMissedConstrained")
+        currentModel
       }
     }
   
-  private def train(model: SummedModel, data: List[Example], numIters: Int): SummedModel = numIters match {
-    case i if i > 0 => train(trainEpoch(model, data), data, numIters - 1)
-    case _ => model
-  }
-  
-  def trainAverage(model: Model, data: List[Example], numIters: Int): Model = (data.size * numIters) match {
-    case 0 => model
-    case _ => {
-      val summedModel = new SummedModel(model)
-      val result = train(summedModel, data, numIters)
-      val denom = (data.size * numIters).toDouble
-      result.summed.scale(1/denom)
+  private def evalPrediction(ex: Example, pred: Hidden) = {
+    val proj = currentModel.project(pred)
+    if (!currentModel.isCorrect(ex.input, proj, ex.output)) {
+      updateModel(ex, pred)
+    } else {
+      currentEpochCounts.increment("numCorrect")
+      currentModel
     }
   }
   
-  def train(model: Model, data: List[Example], numIters: Int): Model = train(new SummedModel(model), data, numIters).current
+  private def trainIter(ex: Example) = {
+    currentEpochCounts.increment("numInputs")
+    currentModel.predict(ex.input) match {
+      case None => currentModel
+      case Some(pred) => {
+        currentEpochCounts.increment("numPredicted")
+        evalPrediction(ex, pred) 
+      }
+    }
+  }
+  
+  private def trainEpoch(data: List[Example]): Unit = {
+    data foreach {
+      ex: Example => {
+        currentModel = trainIter(ex)
+        currentSummedModel = currentSummedModel.sum(currentModel)
+      }
+    }
+  }
+  
+  private def computeEpochStats = {
+    val numInputs = currentEpochCounts("numInputs")
+    val numPreds = currentEpochCounts("numPredicted")
+    val numCorrect = currentEpochCounts("numCorrect")
+    val prec = if (numPreds > 0) numCorrect/numPreds else 0.0
+    val rec = if (numInputs > 0) numCorrect/numInputs else 0.0
+    val f1 = if (prec + rec > 0) 2 * prec * rec / (prec + rec) else 0.0
+    currentEpochCounts.set("precision", prec)
+    currentEpochCounts.set("recall", rec)
+    currentEpochCounts.set("f1", f1)
+  }
+  
+  private def trainHelper(data: List[(Input, Output)], numIters: Int) = {
+    val examples = data map { case (in, out) => Example(in, out) }
+    for (i <- 1 to numIters) {
+      
+      logger.debug(s"Starting epoch $i")
+      trainEpoch(Random.shuffle(examples))
+      computeEpochStats
+      
+      logger.debug(s"Epoch $i statistics: \n$currentEpochCounts")
+      epochCounts = epochCounts :+ currentEpochCounts
+      currentEpochCounts = new Counter()
+    }
+  }
+  
+  def getEpochCounts: IndexedSeq[Counter] = epochCounts
+  
+  def train(data: List[(Input, Output)], numIters: Int) = {
+    trainHelper(data, numIters)
+    currentModel
+  }
+  
+  def trainAverage(data: List[(Input, Output)], numIters: Int) = {
+    trainHelper(data, numIters)
+    currentSummedModel.scale(1.0 / (numIters * data.size))
+  }
   
 }
