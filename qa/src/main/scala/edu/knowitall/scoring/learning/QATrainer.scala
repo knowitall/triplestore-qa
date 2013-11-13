@@ -29,14 +29,16 @@ object QATrainer extends App {
   
   val numIters = conf.getInt("perceptron.numIters")
   
-  val oracle = new MemoryInteractiveOracle(labelsPath) //new LabeledDataOracle(labelsPath)
+  val oracle = new LabeledDataOracle(labelsPath) //new MemoryInteractiveOracle(labelsPath) //new LabeledDataOracle(labelsPath)
   val inputs = Source.fromFile(inputsPath, "UTF8").getLines.map(Oracle.normalize).toList
   
   val generator = QASystem.getInstance().get
   val model = QAModel(generator)
   
-  val learner = new NewPerceptron(model, oracle)
+  val learner = new Perceptron(model, oracle)
+  println("Learning...")
   val learnedModel = learner.learn(inputs)
+  println("Done learning")
   
   SparseVector.toFile(model.weights, modelOutput.toString())
 

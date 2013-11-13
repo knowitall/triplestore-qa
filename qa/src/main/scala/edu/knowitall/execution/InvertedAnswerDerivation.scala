@@ -1,7 +1,6 @@
 package edu.knowitall.execution
 
 import edu.knowitall.paraphrasing.Paraphrase
-import edu.knowitall.scoring.ScoredAnswerGroup
 import edu.knowitall.apps.AnswerDerivation
 
 case class InvertedAnswerDerivation(execQuery: ConjunctiveQuery, 

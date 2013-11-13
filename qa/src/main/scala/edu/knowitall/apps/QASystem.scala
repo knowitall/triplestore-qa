@@ -24,7 +24,6 @@ import edu.knowitall.scoring.NumDerivationsScorer
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.parsing.StringMatchingParser
 import edu.knowitall.scoring.UniformAnswerScorer
-import edu.knowitall.scoring.LogisticAnswerScorer
 import edu.knowitall.scoring.AnswerScorer
 import edu.knowitall.parsing.OldParalexParser
 import edu.knowitall.execution.synonyms.RelationSynonymExecutor
@@ -39,8 +38,8 @@ import edu.knowitall.paraphrasing.IdentityParaphraser
 import edu.knowitall.paraphrasing.template.TemplateParaphraser
 import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.execution.ExecTuple
-import edu.knowitall.scoring.AnswerDerivationScorer
 import edu.knowitall.paraphrasing.joshua.JoshuaParaphraser
+import edu.knowitall.scoring.AnswerDerivationScorer
 
 case class QASystem(paraphraser: Paraphraser,
 					parser: QuestionParser,
@@ -174,8 +173,7 @@ case object Components {
       "postag" -> PostagAnswerGrouper())
 
   val scorers: Map[String, AnswerScorer] =
-    Map("logistic" -> LogisticAnswerScorer(),
-      "numDerivations" -> NumDerivationsScorer(),
+    Map("numDerivations" -> NumDerivationsScorer(),
       "uniform" -> UniformAnswerScorer(),
       "derivation" -> new AnswerDerivationScorer())
 }

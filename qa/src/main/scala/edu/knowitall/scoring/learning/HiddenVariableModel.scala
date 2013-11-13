@@ -6,6 +6,6 @@ trait HiddenVariableModel[Input, Output] {
   def candidatePredictions(input: Input): Seq[Output]
   def update(input: Input, predicted: Output, expected: Output): Unit
   def weights: SparseVector
-  def sum(that: Model): Model
-  def scale(c: Double): Model
+  def sum(that: Model): Unit
+  def scale(c: Double): Unit
 }

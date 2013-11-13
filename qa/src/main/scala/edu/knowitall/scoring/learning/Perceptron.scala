@@ -2,7 +2,7 @@ package edu.knowitall.scoring.learning
 import scalaz._
 import Scalaz._
 
-class NewPerceptron[Input, Output](model: HiddenVariableModel[Input, Output], 
+class Perceptron[Input, Output](model: HiddenVariableModel[Input, Output], 
     oracle: CorrectnessModel[Input, Output]) {
   
   def learnIter(input: Input) = for {

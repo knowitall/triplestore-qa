@@ -1,7 +1,6 @@
 package edu.knowitall.scoring.learning
 
 import edu.knowitall.apps.AnswerDerivation
-import edu.knowitall.scoring.features.QueryTupleSimilarity
 import edu.knowitall.paraphrasing.template.TemplateParaphraseDerivation
 import com.typesafe.config.ConfigFactory
 import edu.knowitall.util.NlpUtils

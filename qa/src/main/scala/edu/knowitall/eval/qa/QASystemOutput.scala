@@ -5,7 +5,6 @@ import java.io.File
 import java.io.PrintWriter
 import scala.collection.JavaConverters._
 import scala.io.Source
-import edu.knowitall.scoring.ScoredAnswerGroup
 import edu.knowitall.apps.AnswerDerivation
 import com.typesafe.config.ConfigRenderOptions
 import edu.knowitall.execution.Tuple

@@ -4,11 +4,12 @@ import edu.knowitall.apps.AnswerDerivation
 import edu.knowitall.apps.AnswerGenerator
 import edu.knowitall.apps.QASystem
 import edu.knowitall.eval.Oracle
-import edu.knowitall.scoring.features.AnswerDerivationFeatures
 import org.slf4j.LoggerFactory
 import edu.knowitall.execution.StrSim
 
-case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivation, SparseVector] = QAFeatures, weights: SparseVector = SparseVector()) extends HiddenVariableModel[String, AnswerDerivation] {
+case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivation, SparseVector] = QAFeatures) extends HiddenVariableModel[String, AnswerDerivation] {
+  
+  var weights = SparseVector() 
   
   val logger = LoggerFactory.getLogger(this.getClass)
 
@@ -25,12 +26,12 @@ case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivati
     logger.debug(s"Update delta = $delta")
     logger.debug(s"Old weights =\n$weights")
     logger.debug(s"Updated weights =\n$newWeights")
-    this.copy(weights = newWeights)
+    weights = newWeights
   }
     
-  override def sum(that: Model) = this.copy(weights = weights + that.weights)
+  override def sum(that: Model) = weights = weights + that.weights
   
-  override def scale(c: Double) = this.copy(weights = weights * c)
+  override def scale(c: Double) = weights = weights * c
   
   override def predict(q: String) = generator(q).toList match {
     case derivs if derivs.size > 0 => {
