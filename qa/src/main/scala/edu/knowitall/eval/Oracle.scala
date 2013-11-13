@@ -8,6 +8,7 @@ import scala.io.Source
 import java.io.FileInputStream
 import java.io.PrintWriter
 import java.io.File
+import org.slf4j.LoggerFactory
 
 trait Oracle {
   
@@ -51,7 +52,10 @@ object Oracle {
   
   def normalizePair(input: String, output: String) = (normalize(input), normalize(output))
 
-  def normalize(s: String): String = {
+  def decompose(s: String): String = java.text.Normalizer.normalize(s, java.text.Normalizer.Form.NFD).replaceAll("[\\p{InCombiningDiacriticalMarks}\\p{IsLm}\\p{IsSk}]+", "")
+  
+  def normalize(t: String): String = {
+    val s = decompose(t)
     val tokens = tokenizer(s)
     if (tokens.size > 0) {
       val tagged = tagger.postagTokens(tokens)
@@ -84,6 +88,10 @@ object Oracle {
 } 
 
 class FileOracle(path: String) extends UpdateableOracle {
+  
+  val logger = LoggerFactory.getLogger(this.getClass)
+
+  
   val file = new File(path)
   val labels = if (file.exists()) {
     scala.collection.mutable.Map(Oracle.fromFile(path).toSeq: _*)
@@ -110,7 +118,8 @@ class FileOracle(path: String) extends UpdateableOracle {
   override def getCorrectOutputs(input: String): List[String] = correctOutputs.getOrElse(Oracle.normalize(input), List())
 
   def save = {
-    val output = new PrintWriter(path)
+    logger.debug(s"Saving labels to $path")
+    val output = new PrintWriter(path, "UTF8")
     for (((i, o), l) <- labels) output.println(s"LABEL\t$l\t$i\t$o")
     output.close()
   }
