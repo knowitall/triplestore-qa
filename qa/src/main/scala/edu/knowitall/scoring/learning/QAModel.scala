@@ -8,7 +8,7 @@ import edu.knowitall.scoring.features.AnswerDerivationFeatures
 import org.slf4j.LoggerFactory
 import edu.knowitall.execution.StrSim
 
-case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivation, SparseVector] = QAFeatures, weights: SparseVector = SparseVector()) extends HiddenVariableModel[String, AnswerDerivation, Set[String]] {
+case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivation, SparseVector] = QAFeatures, weights: SparseVector = SparseVector()) extends HiddenVariableModel[String, AnswerDerivation] {
   
   val logger = LoggerFactory.getLogger(this.getClass)
 
@@ -16,7 +16,7 @@ case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivati
   
   def scoreDerivation(d: Deriv) = features(d) * weights
   
-  override def score(q: String, d: Deriv) = scoreDerivation(d)
+  def score(q: String, d: Deriv) = scoreDerivation(d)
   
   override def update(q: String, predicted: Deriv, expected: Deriv) = {
     val delta = features(expected) - features(predicted)
@@ -44,25 +44,9 @@ case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivati
     }
   }
   
-  override def predictConstrained(q: String, expected: Set[String]) = generator(q).filter(deriv => isCorrect(q, project(deriv), expected)) match {
-    case derivs if derivs.size > 0 => {
-      val d = derivs.maxBy(scoreDerivation)
-      logger.debug(s"Constrained prediction: ($q, $expected) => ${d.answerString}")
-      Some(d)
-    }
-    case _ => {
-      logger.debug(s"Could not make constrained predict for ($q, $expected)")
-      None
-    }
-  }
-  
-  override def project(deriv: Deriv) = Set(deriv.answerString)
+  override def candidatePredictions(q: String) = generator(q).toSeq
   
   def normalizeAnswer(answer: String): String = StrSim.norm(Oracle.normalize(answer))
-  
-  override def isCorrect(question: String, predicted: Set[String], expected: Set[String]) = predicted.toList match {
-    case List(answer) => expected.map(normalizeAnswer).contains(normalizeAnswer(answer))
-    case _ => false
-  }
+
 
 }
