@@ -11,5 +11,6 @@
   <root level="DEBUG">
     <appender-ref ref="STDOUT"/>
   </root>
-  <logger name="edu.knowitall" level="DEBUG" />
+  <logger name="edu.knowitall" level="WARN" />
+  <logger name="edu.knowitall.search" level="DEBUG" /> 
 </configuration>

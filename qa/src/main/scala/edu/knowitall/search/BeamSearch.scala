@@ -2,55 +2,68 @@ package edu.knowitall.search
 
 import scala.collection.mutable.{SortedSet => MutableSortedSet}
 import scala.collection.mutable.{Set => MutableSet}
+import scala.collection.mutable.{Map => MutableMap}
 import org.slf4j.LoggerFactory
 import scala.math.Ordering.Implicits._
 
 class BeamSearch[State, Action](
     override val problem: SearchProblem[State, Action],
     beamSize: Int,
-    goalSize: Int,
-    numParallel: Int = 1) extends SearchAlgorithm[State, Action] {
+    goalSize: Int) extends SearchAlgorithm[State, Action] {
   
   assert(goalSize >= 1)
   assert(beamSize >= 1)
-  assert(numParallel >= 1)
   
-  val logger = LoggerFactory.getLogger(this.getClass)
+  override val logger = LoggerFactory.getLogger(this.getClass)
   private val costOrdering = Ordering.by {n: Node[State, Action] => (n.pathCost, n.state.hashCode)}
-  private val frontier = MutableSortedSet()(costOrdering)
-  private val visited = MutableSet.empty[State]
+  private var frontier = List(rootNode)//MutableSortedSet()(costOrdering)
+  private val expanded = MutableSet.empty[State]
   private val goals = MutableSet.empty[Node[State, Action]]
-  frontier += rootNode
-  
-  private def takeFromFrontier(n: Int) = {
-    val taken = frontier.take(n)
-    frontier --= taken
-    taken
-  }
-  
-  private def resizeFrontier =
-    while (frontier.size > beamSize) frontier -= frontier.last
+  //frontier += rootNode
       
-  private def addToFrontier(nodes: Iterable[Node[State, Action]]) = {
-    nodes foreach frontier.add
-    if (frontier.size > beamSize) resizeFrontier
+  private def setFrontier(nodes: Iterable[Node[State, Action]]) = {
+    val distinctNodes = nodes.groupBy(_.state) map {
+      case (state, group) => group.minBy(_.pathCost)
+    }
+    frontier = distinctNodes.toList.sortBy(_.pathCost).take(beamSize)
   }
   
   private def addGoalNode(node: Node[State, Action]) = {
     assert(isGoal(node))
     goals.add(node)
-    logger.debug(s"Added new goal state: ${node.state}")
   }
+  
+  private def haveExpanded(n: Node[State, Action]) = expanded.contains(n.state)
   
   private def continueSearch = (goals.size < goalSize) && (frontier.size > 0)
   
   private def searchLoop: Set[Node[State, Action]] = {
+    var iter = 1
     do {
-      val toExpand = takeFromFrontier(numParallel)
-      val expanded = toExpand.par.flatMap(expand).toList
-      toExpand.foreach(n => visited.add(n.state))
-      expanded.filter(isGoal).foreach(addGoalNode)
-      addToFrontier(expanded.filter(n => !isGoal(n) && !visited.contains(n.state)))
+      val initialSize = frontier.size 
+        
+      logger.debug("Expanding frontier")
+      val newNodes = frontier.par.flatMap(expand).toList
+      logger.debug(s"Expanded to ${newNodes.size} new nodes")
+      
+      logger.debug("Marking nodes as expanded")
+      frontier.foreach(n => expanded.add(n.state))
+      
+      logger.debug("Adding goal nodes")
+      newNodes.filter(isGoal).foreach(addGoalNode)
+      
+      logger.debug("Updating new frontier")
+      setFrontier(newNodes.filter(n => !isGoal(n) && !haveExpanded(n)))
+      
+      val numGoals = newNodes.count(isGoal(_))
+      logger.debug(s"Done with search iteration $iter")
+      logger.debug(s"Initial frontier size = $initialSize")
+      logger.debug(s"Final frontier size = ${frontier.size}")
+      logger.debug(s"Expanded to ${newNodes.size} new nodes")
+      logger.debug(s"Found $numGoals new goal nodes")
+      
+      iter += 1
+      
     } while (continueSearch)
     goals.toSet
   }
