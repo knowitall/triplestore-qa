@@ -38,25 +38,7 @@ case class QaSearchProblem(
 
 object QaSearchProblem {
   
-  lazy val tagger = new StanfordPostagger
-  lazy val stemmer = new MorphaStemmer
-  lazy val tokenizer = new ClearTokenizer
-  
-  lazy val abstractArgs = new AbstractArgTransition(tagger = tagger,
-      stemmer = stemmer, tokenizer = tokenizer)
-  
-  lazy val templates = new TemplateTransition
-  
-  lazy val chunker = new OpenNlpChunker
-  lazy val parser = new RegexQuestionParser(chunker = chunker,
-      postagger = tagger)
-  lazy val parse = new RegexParseTransition(parser)
-  
-  lazy val baseClient = new SolrClient()
-  lazy val client = CachedTriplestoreClient(baseClient)
-  lazy val execution = new ExecutionTransition(client)
-  
-  val transitionModel = abstractArgs + templates + parse + execution
+  val transitionModel = new QaTransitionModel
   
   val costModel = new Cost[QaState, QaAction] {
     override def apply(s1: QaState, a: QaAction, s2: QaState) = 0.0
