@@ -25,7 +25,7 @@ case class KenLmServer(url: String, timeOut: Int, scale: Boolean = KenLmServer.s
   def this() = this(KenLmServer.defaultUrl, KenLmServer.defaultTimeout)
   val root = s"${url}/score"
   override def query(s: String): Double = {
-    Http(root).params("q" -> s).asString.toDouble
+    scaleValue(Http(root).params("q" -> s).asString.toDouble)
   }
   def queryBatch(s: Iterable[String]) = {
     val lst = s.toList
