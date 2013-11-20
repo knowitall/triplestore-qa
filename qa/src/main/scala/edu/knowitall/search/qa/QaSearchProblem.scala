@@ -13,6 +13,7 @@ import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.tool.tokenize.ClearTokenizer
 import edu.knowitall.tool.chunk.OpenNlpChunker
 import edu.knowitall.parsing.regex.RegexQuestionPatterns
+import edu.knowitall.triplestore.CachedTriplestoreClient
 
 case class QaSearchProblem(
     question: String,
@@ -51,7 +52,11 @@ object QaSearchProblem {
       postagger = tagger)
   lazy val parse = new RegexParseTransition(parser)
   
-  val transitionModel = abstractArgs + templates + parse
+  lazy val baseClient = new SolrClient()
+  lazy val client = CachedTriplestoreClient(baseClient)
+  lazy val execution = new ExecutionTransition(client)
+  
+  val transitionModel = abstractArgs + templates + parse + execution
   
   val costModel = new Cost[QaState, QaAction] {
     override def apply(s1: QaState, a: QaAction, s2: QaState) = 0.0
@@ -69,6 +74,7 @@ object MyTest extends App {
     (action1, state1) <- f(state0)
     (action2, state2) <- f(state1)
     (action3, state3) <- f(state2)
+    (action4, state4) <- f(state3)
   } yield {
     println(state0)
     println(action1)
@@ -77,6 +83,8 @@ object MyTest extends App {
     println(state2)
     println(action3)
     println(state3)
+    println(action4)
+    println(state4)
     println
   }
   
