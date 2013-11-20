@@ -61,4 +61,5 @@ object SparseVector {
     }
     override def toString = this.map.toString.replaceFirst("Map", "SparseVector")
   }
+  final val zero = SparseVector()
 }
