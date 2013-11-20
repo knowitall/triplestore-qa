@@ -21,7 +21,7 @@ class SolrParaphraseGenerator(url: String, maxHits: Int, maxArgLength: Int) exte
   def this() = this(SolrParaphraseGenerator.defaultUrl, 
       SolrParaphraseGenerator.defaultMaxHits,
       SolrParaphraseGenerator.defaultMaxArgLength)
-  val client = new ParaphraseTemplateClient(url)
+  val client = new ParaphraseTemplateClient()
   def intervals(size: Int) =
     for (i <- Range(0, size); j <- Range(i, size); if j+1-i <= maxArgLength) yield Interval.open(i, j+1)
   
