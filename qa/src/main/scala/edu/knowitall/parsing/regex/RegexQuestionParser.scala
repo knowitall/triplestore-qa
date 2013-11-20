@@ -44,32 +44,3 @@ case class RegexQuestionParser() extends QuestionParser {
 
   def parse(question: Seq[Lemmatized[ChunkedToken]]) = patterns.flatMap(p => p.parse(question))
 }
-
-object RegexQuestionParserRepl extends App {
-
-  lazy val parser = new RegexQuestionParser
-
-  io.Source.stdin.getLines.foreach { q =>
-    val lemmasQ: Seq[Lemmatized[ChunkedToken]] = parser.lemmatize(q)
-//    val strs = Seq("What", "studies", "all", "forms", "of", "life", "?")
-//    val lems = Seq("What", "study", "all", "form", "of", "life", "?")
-//    val postags = Seq("WDT", "VBZ", "DT", "NNS", "IN", "NN", ".")
-//    val chunks = Seq("B-NP", "B-VP", "B-NP", "I-NP", "B-PP", "B-NP", "O")
-//    val offsets = Seq(0, 4, 12, 16, 22, 25, 29)
-//    val lemmas = strs.zip(postags).zip(chunks).zip(offsets).zip(lems).map {
-//      case ((((str, postag), chunk), offset), lemma) =>
-//        val chunkToken = new ChunkedToken(chunk=chunk, string = str, postag = postag, offset = offset)
-//        Lemmatized(chunkToken, lemma)
-//    }
-//
-//    println(lemmas)
-    println(lemmasQ.map(_.lemma))
-    println(lemmasQ.map(_.string))
-    println(lemmasQ.map(_.postag))
-    println(lemmasQ.map(_.chunk))
-    val queries = RegexQuestionPatterns.patterns.map(_.parse(lemmasQ)).zipWithIndex
-    queries.foreach { query =>
-      println(query)
-    }
-  }
-}
