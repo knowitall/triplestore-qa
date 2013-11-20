@@ -21,6 +21,7 @@ import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.tool.chunk.OpenNlpChunker
 import scala.collection.JavaConversions._
 import edu.knowitall.execution.ConjunctiveQuery
+import edu.knowitall.search.qa.QaAction
 
 /**
  * A Regex-based question pattern. Capture groups in pattern
@@ -35,7 +36,7 @@ import edu.knowitall.execution.ConjunctiveQuery
  *
  * Unused variables (e.g. $x) will be left in their literal form.
  */
-case class RegexQuestionPattern(val groups: Seq[String], pattern: String, templates: Seq[String]) {
+case class RegexQuestionPattern(val groups: Seq[String], pattern: String, templates: Seq[String]) extends QaAction {
 
   def this(groups: Seq[String], pattern: String, template: String) = this(groups, pattern, Seq(template))
 

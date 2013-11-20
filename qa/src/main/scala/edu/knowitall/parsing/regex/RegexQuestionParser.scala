@@ -20,13 +20,14 @@ import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.tool.chunk.OpenNlpChunker
 import scala.collection.JavaConversions._
 import edu.knowitall.tool.postag.StanfordPostagger
+import edu.knowitall.tool.chunk.Chunker
+import edu.knowitall.tool.postag.Postagger
 
-case class RegexQuestionParser() extends QuestionParser {
-
-  import RegexQuestionPatterns.patterns
-
-  private val chunker = new OpenNlpChunker()
-  private val postagger = new StanfordPostagger()
+case class RegexQuestionParser(
+    chunker: Chunker = RegexQuestionParser.defaultChunker,
+    postagger: Postagger = RegexQuestionParser.defaultPostagger,
+    patterns: Seq[RegexQuestionPattern] = RegexQuestionParser.defaultPatterns
+    ) extends QuestionParser {
 
   def lemmatize(string: String): Seq[Lemmatized[ChunkedToken]] = chunker.synchronized {
     // use stanford postags if possible because they are less noisy...
@@ -43,4 +44,19 @@ case class RegexQuestionParser() extends QuestionParser {
   def parse(question: String) = parse(lemmatize(question))
 
   def parse(question: Seq[Lemmatized[ChunkedToken]]) = patterns.flatMap(p => p.parse(question))
+  
+  def parseWithPattern(question: String) = {
+    val lemmas = lemmatize(question)
+    for {
+      p <- patterns
+      q <- p.parse(lemmas)
+    } yield (p, q)
+  }
+  
+}
+
+case object RegexQuestionParser {
+  lazy val defaultChunker = new OpenNlpChunker
+  lazy val defaultPostagger = new StanfordPostagger
+  lazy val defaultPatterns = RegexQuestionPatterns.patterns
 }
