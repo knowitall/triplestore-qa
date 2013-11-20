@@ -12,14 +12,18 @@ import org.apache.solr.client.solrj.SolrQuery.SortClause
 import scala.Option.option2Iterable
 import com.typesafe.config.ConfigFactory
 import edu.knowitall.util.MathUtils
+import edu.knowitall.search.qa.QaAction
 
-case class ParaphraseTemplateClient(solrUrl: String, hitLimit: Int = 500, scale: Boolean = ParaphraseTemplateClient.scale) {
+case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolean = ParaphraseTemplateClient.scale) {
+  
+  def this() = this(ParaphraseTemplateClient.defaultUrl, ParaphraseTemplateClient.defaultMaxHits, ParaphraseTemplateClient.scale)
+  
   val logger = LoggerFactory.getLogger(this.getClass)
   val server = new HttpSolrServer(solrUrl)
   val searchField = "template1_exact"
-  def paraphrases(s: String, limit: Int = hitLimit) = {
+  def paraphrases(s: String, limit: Int = maxHits) = {
     val query = new SolrQuery(s"""${searchField}:"${s}"""")
-    query.setRows(hitLimit)
+    query.setRows(maxHits)
     query.addSort(new SortClause("pmi", SolrQuery.ORDER.desc))
     logger.info(s"Sending query: ${query.toString()}")
     val resp = server.query(query)
@@ -38,9 +42,11 @@ case object ParaphraseTemplateClient {
   val minPmi = conf.getDouble("paraphrase.template.minPmi")
   val maxPmi = conf.getDouble("paraphrase.template.maxPmi")
   val scale = conf.getBoolean("paraphrase.template.scale")
+  val defaultUrl = conf.getString("paraphrase.template.url")
+  val defaultMaxHits = conf.getInt("paraphrase.template.maxHits")
 }
 
-case class TemplatePair(template1: String, template2: String, pmi: Double, count1: Double, count2: Double, jointCount: Double) {
+case class TemplatePair(template1: String, template2: String, pmi: Double, count1: Double, count2: Double, jointCount: Double) extends QaAction {
   def this(t1: String, t2: String, j: Double, c1: Double, c2: Double) = this(t1, t2, TemplatePair.pmi(j, c1, c2), c1, c2, j)
   def this(t1: String, t2: String, j: String, c1: String, c2: String) = this(t1, t2, j.toDouble, c1.toDouble, c2.toDouble)
 }
