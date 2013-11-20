@@ -18,6 +18,8 @@ class AbstractArgTransition(
     multipleParaphrases: Boolean = AbstractArgTransition.multipleParaphrases)
     extends Transition[QaState, QaAction] {
   
+  private final val action = AbstractArgAction() 
+  
   override def apply(s: QaState) = s match {
     case s: QuestionState => abstractArgs(s)
     case _ => Nil
@@ -41,13 +43,15 @@ class AbstractArgTransition(
       for {
         interval <- intervals(toks.size)
         newState = AbstractedArgState(s.question, toks, interval)
-      } yield (AbstractArgTransition.Action, newState)
+      } yield (action, newState)
     } else {
       Nil
     }
   
       
 }
+
+case class AbstractArgAction() extends QaAction
 
 case object AbstractArgTransition {
   val conf = ConfigFactory.load()
@@ -56,7 +60,4 @@ case object AbstractArgTransition {
   lazy val defaultTokenizer = new ClearTokenizer
   lazy val defaultPostagger = new StanfordPostagger
   lazy val defaultStemmer = new MorphaStemmer
-  val Action = new QaAction {
-    override def toString = "AbstractArg"
-  }
 }
