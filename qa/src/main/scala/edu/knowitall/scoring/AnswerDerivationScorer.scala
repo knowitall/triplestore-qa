@@ -5,7 +5,6 @@ import edu.knowitall.apps.AnswerDerivation
 import edu.knowitall.learning.SparseVector
 import edu.knowitall.execution.AnswerGroup
 import com.typesafe.config.ConfigFactory
-import edu.knowitall.learning.QAFeatures
 
 
 class AnswerDerivationScorer(features: FeatureFunction[AnswerDerivation] = AnswerDerivationScorer.defaultFeatures,
@@ -24,5 +23,5 @@ object AnswerDerivationScorer {
   val conf = ConfigFactory.load()
   val weightsPath = conf.getString("scoring.weights")
   val defaultWeights = SparseVector.fromFile(weightsPath)
-  val defaultFeatures = QAFeatures
+  val defaultFeatures = null
 }

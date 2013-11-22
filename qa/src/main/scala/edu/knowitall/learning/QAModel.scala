@@ -7,7 +7,7 @@ import edu.knowitall.eval.Oracle
 import org.slf4j.LoggerFactory
 import edu.knowitall.execution.StrSim
 
-case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivation, SparseVector] = QAFeatures) extends HiddenVariableModel[String, AnswerDerivation] {
+case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivation, SparseVector] = null) extends HiddenVariableModel[String, AnswerDerivation] {
   
   var weights = SparseVector() 
   
