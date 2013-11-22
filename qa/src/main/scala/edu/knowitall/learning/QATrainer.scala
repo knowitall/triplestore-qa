@@ -10,6 +10,7 @@ import edu.knowitall.apps.AnswerDerivation
 import java.io.File
 import java.io.PrintWriter
 import edu.knowitall.util.Counter
+import edu.knowitall.model.QaModel
 
 object QATrainer extends App {
 
@@ -29,17 +30,16 @@ object QATrainer extends App {
   
   val numIters = conf.getInt("perceptron.numIters")
   
-  val oracle = new LabeledDataOracle(labelsPath) //new MemoryInteractiveOracle(labelsPath) //new LabeledDataOracle(labelsPath)
+  val oracle = new MemoryInteractiveOracle(labelsPath)
   val inputs = Source.fromFile(inputsPath, "UTF8").getLines.map(Oracle.normalize).toList
   
-  val generator = QASystem.getInstance().get
-  val model = QAModel(generator)
+  val model = QaModel()
   
   val learner = new Perceptron(model, oracle)
   println("Learning...")
   val learnedModel = learner.learn(inputs)
   println("Done learning")
   
-  SparseVector.toFile(model.weights, modelOutput.toString())
+  SparseVector.toFile(model.costModel.weights, modelOutput.toString())
 
 }

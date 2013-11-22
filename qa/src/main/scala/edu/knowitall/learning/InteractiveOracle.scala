@@ -1,10 +1,10 @@
 package edu.knowitall.learning
 
-import edu.knowitall.apps.AnswerDerivation
 import edu.knowitall.util.TuplePrinter.printTuple
 import edu.knowitall.execution.Tabulator.{format => toTable}
+import edu.knowitall.model.Derivation
 
-class InteractiveOracle extends CorrectnessModel[String, AnswerDerivation] {
+class InteractiveOracle extends CorrectnessModel[String, Derivation] {
   
   private def parseInt(s: String) = 
     try Some(s.toInt)
@@ -18,11 +18,11 @@ class InteractiveOracle extends CorrectnessModel[String, AnswerDerivation] {
       case e: Throwable => Nil
     }
   
-  private def derivString(deriv: AnswerDerivation) = 
-    printTuple(deriv.execTuple.tuple)
+  private def derivString(deriv: Derivation) = 
+    printTuple(deriv.answerState.execTuple.tuple)
     
-  private def derivsToTable(derivs: Seq[AnswerDerivation]) = {
-    val paired = derivs.zipWithIndex map { case (a, b) => List(b, a.answerString, derivString(a)) }
+  private def derivsToTable(derivs: Seq[Derivation]) = {
+    val paired = derivs.zipWithIndex map { case (a, b) => List(b, a.answer, derivString(a)) }
     toTable(List("#", "answer", "evidence") +: paired)
   }
   
@@ -73,7 +73,7 @@ class InteractiveOracle extends CorrectnessModel[String, AnswerDerivation] {
     }
   }
   
-  def pickCorrectMultiple(question: String, derivs: Seq[AnswerDerivation]) = 
+  def pickCorrectMultiple(question: String, derivs: Seq[Derivation]) = 
     if (derivs.size > 0) {
       val iderivs = derivs.toIndexedSeq 
       println(s"Question = $question\n")
@@ -87,15 +87,15 @@ class InteractiveOracle extends CorrectnessModel[String, AnswerDerivation] {
       Nil
     }
   
-  override def isCorrect(question: String, deriv: AnswerDerivation) = {
+  override def isCorrect(question: String, deriv: Derivation) = {
     println(s"Question = $question")
-    println(s"Answer = ${deriv.answerString}")
+    println(s"Answer = ${deriv.answer}")
     println(s"Derivation = ${derivString(deriv)}")
     println()
     getBoolean
   }
   
-  override def pickCorrect(question: String, derivs: Seq[AnswerDerivation]) = 
+  override def pickCorrect(question: String, derivs: Seq[Derivation]) = 
    if (derivs.size > 0) {
     val iderivs = derivs.toIndexedSeq 
     println(s"Question = $question\n")

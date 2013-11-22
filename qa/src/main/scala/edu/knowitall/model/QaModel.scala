@@ -13,12 +13,15 @@ import com.typesafe.config.ConfigFactory
 import edu.knowitall.search.Edge
 import edu.knowitall.search.Node
 import edu.knowitall.search.qa.AnswerState
+import org.slf4j.LoggerFactory
 
 case class QaModel(transitionModel: QaTransitionModel = QaModel.defaultTransitionModel, 
 				   costModel: QaCostModel = QaModel.defaultCostModel,
 				   beamSize: Int = QaModel.defaultBeamSize,
 				   goalSize: Int = QaModel.defaultGoalSize) 
 				   extends HiddenVariableModel[String, Derivation] {
+  
+  val logger = LoggerFactory.getLogger(this.getClass)
   
   private def createSearchProblem(question: String) =
     new QaSearchProblem(question, transitionModel, costModel)
@@ -43,8 +46,14 @@ case class QaModel(transitionModel: QaTransitionModel = QaModel.defaultTransitio
   override def predict(question: String) = {
     val preds = candidatePredictions(question)
     preds.sortBy(-1 * _.score) match {
-      case d :: rest => Some(d)
-      case _ => None
+      case d :: rest => {
+        logger.debug(s"Prediction: $question => ${d.answer}")
+        Some(d)
+      }
+      case _ => {
+        logger.debug(s"Prediction: $question => None")
+        None
+      }
     }
   }
   
@@ -56,10 +65,12 @@ case class QaModel(transitionModel: QaTransitionModel = QaModel.defaultTransitio
   }
   
   override def update(q: String, output: Derivation, expected: Derivation) = {
+    logger.debug(s"Updating model with ${expected.answer} - ${output.answer}")
     val delta = expected.features - output.features
     val oldWeights = costModel.weights
     val newWeights = oldWeights + delta
     costModel.weights = newWeights
+    logger.debug(s"Updated model = $newWeights")
   }
 
 }

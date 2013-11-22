@@ -1,10 +1,10 @@
 package edu.knowitall.learning
 
-import edu.knowitall.apps.AnswerDerivation
 import edu.knowitall.eval.FileOracle
 import org.slf4j.LoggerFactory
+import edu.knowitall.model.Derivation
 
-class MemoryInteractiveOracle(oracle: FileOracle) extends CorrectnessModel[String, AnswerDerivation] {
+class MemoryInteractiveOracle(oracle: FileOracle) extends CorrectnessModel[String, Derivation] {
   
   val logger = LoggerFactory.getLogger(this.getClass)
   
@@ -13,8 +13,8 @@ class MemoryInteractiveOracle(oracle: FileOracle) extends CorrectnessModel[Strin
   val labeled = new LabeledDataOracle(oracle)
   val interactive = new InteractiveOracle()
   
-  override def isCorrect(question: String, deriv: AnswerDerivation) = {
-    val answer = deriv.answerString
+  override def isCorrect(question: String, deriv: Derivation) = {
+    val answer = deriv.answer
     if (oracle.hasLabel(question, answer)) {
       logger.debug(s"Using saved labels for $question")
       labeled.isCorrect(question, deriv)
@@ -26,30 +26,33 @@ class MemoryInteractiveOracle(oracle: FileOracle) extends CorrectnessModel[Strin
     }
   }
   
-  private def haveLabelFor(question: String, deriv: AnswerDerivation) = 
-    oracle.hasLabel(question, deriv.answerString)
+  private def haveLabelFor(question: String, deriv: Derivation) = 
+    oracle.hasLabel(question, deriv.answer)
   
-  override def pickCorrect(question: String, derivs: Seq[AnswerDerivation]) = {
+  override def pickCorrect(question: String, derivs: Seq[Derivation]) = {
     labeled.pickCorrect(question, derivs) match {
       case Some(deriv) => {
         logger.debug(s"Using saved labels for $question")
+        logger.debug(s"Found '${deriv.answer}' as answer for '$question'")
         Some(deriv)
       }
       case None => {
         val unlabeled = derivs.filter(d => !haveLabelFor(question, d))
         interactive.pickCorrectMultiple(question, unlabeled) match {
-          case seq: Seq[AnswerDerivation] if seq.size > 0 => {
+          case seq: Seq[Derivation] if seq.size > 0 => {
             for (d <- seq) {
-              oracle.update(question, d.answerString, true)
+              oracle.update(question, d.answer, true)
             }
             oracle.save
+            logger.debug(s"Found '${seq(0)}' as answer for '$question'")
             Some(seq(0))
           }
           case Nil => {
             for (d <- unlabeled) {
-              oracle.update(question, d.answerString, false)
+              oracle.update(question, d.answer, false)
             }
             oracle.save
+            logger.debug(s"Correct answer for '$question' is unreachable")
             None
           }
         }
