@@ -1,10 +1,7 @@
 package edu.knowitall.search
 
-import scala.collection.mutable.{SortedSet => MutableSortedSet}
 import scala.collection.mutable.{Set => MutableSet}
-import scala.collection.mutable.{Map => MutableMap}
 import org.slf4j.LoggerFactory
-import scala.math.Ordering.Implicits._
 
 class BeamSearch[State, Action](
     override val problem: SearchProblem[State, Action],
@@ -16,10 +13,9 @@ class BeamSearch[State, Action](
   
   override val logger = LoggerFactory.getLogger(this.getClass)
   private val costOrdering = Ordering.by {n: Node[State, Action] => (n.pathCost, n.state.hashCode)}
-  private var frontier = List(rootNode)//MutableSortedSet()(costOrdering)
+  private var frontier = List(rootNode)
   private val expanded = MutableSet.empty[State]
   private val goals = MutableSet.empty[Node[State, Action]]
-  //frontier += rootNode
       
   private def setFrontier(nodes: Iterable[Node[State, Action]]) = {
     val distinctNodes = nodes.groupBy(_.state) map {
