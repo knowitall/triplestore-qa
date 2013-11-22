@@ -12,7 +12,7 @@ import java.io.PrintWriter
 import edu.knowitall.util.Counter
 import edu.knowitall.model.QaModel
 
-object QATrainer extends App {
+object QaTrainer extends App {
 
   val conf = ConfigFactory.load()
 
