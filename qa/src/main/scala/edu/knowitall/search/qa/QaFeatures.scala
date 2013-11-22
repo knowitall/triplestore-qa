@@ -2,8 +2,8 @@ package edu.knowitall.search.qa
 import edu.knowitall.paraphrasing.template.TemplatePair
 import edu.knowitall.execution.ExecTuple
 import edu.knowitall.execution.ConjunctiveQuery
-import edu.knowitall.scoring.learning.SparseVector
-import edu.knowitall.scoring.learning.QueryTupleSimilarity
+import edu.knowitall.learning.SparseVector
+import edu.knowitall.learning.QueryTupleSimilarity
 import com.typesafe.config.ConfigFactory
 import edu.knowitall.lm.KenLmServer
 import edu.knowitall.util.NlpUtils

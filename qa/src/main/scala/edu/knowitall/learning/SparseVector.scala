@@ -1,4 +1,4 @@
-package edu.knowitall.scoring.learning
+package edu.knowitall.learning
 
 import scala.io.Source
 import java.io.PrintWriter

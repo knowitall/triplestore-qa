@@ -1,6 +1,6 @@
 package edu.knowitall.search.qa
 
-import edu.knowitall.scoring.learning.SparseVector
+import edu.knowitall.learning.SparseVector
 
 
 class QaCostModel(

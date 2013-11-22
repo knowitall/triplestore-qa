@@ -1,4 +1,4 @@
-package edu.knowitall.scoring.learning
+package edu.knowitall.learning
 
 import edu.knowitall.apps.AnswerDerivation
 import edu.knowitall.paraphrasing.template.TemplateParaphraseDerivation

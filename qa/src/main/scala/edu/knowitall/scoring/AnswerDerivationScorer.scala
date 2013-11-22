@@ -1,11 +1,11 @@
 package edu.knowitall.scoring
 
-import edu.knowitall.scoring.learning.FeatureFunction
+import edu.knowitall.learning.FeatureFunction
 import edu.knowitall.apps.AnswerDerivation
-import edu.knowitall.scoring.learning.SparseVector
+import edu.knowitall.learning.SparseVector
 import edu.knowitall.execution.AnswerGroup
 import com.typesafe.config.ConfigFactory
-import edu.knowitall.scoring.learning.QAFeatures
+import edu.knowitall.learning.QAFeatures
 
 
 class AnswerDerivationScorer(features: FeatureFunction[AnswerDerivation] = AnswerDerivationScorer.defaultFeatures,

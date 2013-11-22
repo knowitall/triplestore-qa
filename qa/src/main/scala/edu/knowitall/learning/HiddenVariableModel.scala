@@ -1,4 +1,4 @@
-package edu.knowitall.scoring.learning
+package edu.knowitall.learning
 
 trait HiddenVariableModel[Input, Output] {
   type Model = HiddenVariableModel[Input, Output]

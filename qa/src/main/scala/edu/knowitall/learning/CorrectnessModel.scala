@@ -1,4 +1,4 @@
-package edu.knowitall.scoring.learning
+package edu.knowitall.learning
 
 trait CorrectnessModel[Input, Output] {
   def isCorrect(input: Input, output: Output): Boolean

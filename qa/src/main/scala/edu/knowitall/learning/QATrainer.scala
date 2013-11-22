@@ -1,4 +1,4 @@
-package edu.knowitall.scoring.learning
+package edu.knowitall.learning
 
 import com.typesafe.config.ConfigFactory
 import edu.knowitall.eval.FileOracle

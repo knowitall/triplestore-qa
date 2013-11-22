@@ -1,4 +1,4 @@
-package edu.knowitall.scoring.learning
+package edu.knowitall.learning
 import scala.language.implicitConversions
 
 abstract class FeatureFunction[T] extends Function[T, SparseVector] {

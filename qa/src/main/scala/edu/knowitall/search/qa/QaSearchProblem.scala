@@ -13,7 +13,6 @@ import edu.knowitall.tool.tokenize.ClearTokenizer
 import edu.knowitall.tool.chunk.OpenNlpChunker
 import edu.knowitall.parsing.regex.RegexQuestionPatterns
 import edu.knowitall.triplestore.CachedTriplestoreClient
-import edu.knowitall.search.Cost
 
 case class QaSearchProblem(
     question: String,

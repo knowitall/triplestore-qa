@@ -1,4 +1,4 @@
-package edu.knowitall.scoring.learning
+package edu.knowitall.learning
 
 import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.execution.Tuple
