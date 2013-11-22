@@ -6,10 +6,12 @@ case class Node[State, Action](
     state: State, 
     parent: Option[Edge[State, Action]],
     pathCost: Double) {
-  def path: List[Edge[State, Action]] = parent match {
-    case None => Nil
-    case Some(e) => e :: e.node.path
+  
+  def path(rest: List[(State, Action, State)] = Nil): List[(State, Action, State)] = parent match {
+    case None => rest
+    case Some(e) => e.node.path((e.node.state, e.action, state) :: rest)
   }
+  
 }
 
 case class Edge[State, Action](action: Action, node: Node[State, Action])

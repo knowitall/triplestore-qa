@@ -28,11 +28,7 @@ case class QAModel(generator: AnswerGenerator, features: Function[AnswerDerivati
     logger.debug(s"Updated weights =\n$newWeights")
     weights = newWeights
   }
-    
-  override def sum(that: Model) = weights = weights + that.weights
-  
-  override def scale(c: Double) = weights = weights * c
-  
+      
   override def predict(q: String) = generator(q).toList match {
     case derivs if derivs.size > 0 => {
       val d = derivs.maxBy(scoreDerivation)
