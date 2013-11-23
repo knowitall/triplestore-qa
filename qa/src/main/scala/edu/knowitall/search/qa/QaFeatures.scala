@@ -7,6 +7,7 @@ import edu.knowitall.learning.QueryTupleSimilarity
 import com.typesafe.config.ConfigFactory
 import edu.knowitall.lm.KenLmServer
 import edu.knowitall.util.NlpUtils
+import edu.knowitall.execution.Search
 
 object QaFeatures extends Function[QaStep, SparseVector] {
   
@@ -69,6 +70,20 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     }
   }
   
+  val lightVerbRel = QueryFeature { (q: String, query: ConjunctiveQuery) =>
+    val values = for {
+      c <- query.conjuncts
+      (field, literal) <- c.literalFields
+      value = literal.value
+      if field == Search.rel && NlpUtils.isLightVerb(value)
+    } yield value
+    if (values.isEmpty) {
+      None
+    } else {
+      Some(s"query relation is light verb")
+    }
+  }
+  
   def apply(s: QaStep) = actionType(s) +
 		  				 answerIsLinked(s) +
 		  				 tupleNamespace(s) +
@@ -76,7 +91,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 templatePairPmi(s) +
 		  				 paraphraseLm(s) +
 		  				 numConjuncts(s) +
-		  				 prefixAndDate(s)
+		  				 prefixAndDate(s) +
+		  				 lightVerbRel(s)
   
 }
 
