@@ -51,13 +51,14 @@ object Dumper {
   
   
   def normalize(s: String) = {
+    val noTab = s.replaceAll("\t", " ")
     try {
-      val toks = tokenizer.tokenize(s)
+      val toks = tokenizer.tokenize(noTab)
       val tags = tagger.postagTokenized(toks)
       val stems = tags.map(t => stemmer.lemmatizePostaggedToken(t).lemma.toLowerCase())
       stems.mkString(" ")
     } catch {
-      case e: Throwable => s.toLowerCase()
+      case e: Throwable => noTab.toLowerCase()
     }
   }
   
