@@ -65,7 +65,7 @@ object Dumper {
     val arg1n = normalize(arg1)
     val reln = normalize(rel)
     val arg2n = normalize(arg2)
-    override def toString = s"$id\t$arg1n\t$reln\t$arg2n"
+    override def toString = s"$arg1n\t$reln\t$arg2n"
   }
   
   def getField(doc: SolrInputDocument, n: String) = field2str(doc.getField(n))
