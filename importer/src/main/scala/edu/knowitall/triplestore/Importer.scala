@@ -53,6 +53,7 @@ object Importer {
 
     val format = config.format match {
       case "plain" =>   PlainTextFormat(config.namespace, idFactory)
+      case "triples" =>   PlainTextTripleFormat(config.namespace, idFactory)
       case "reverb" =>  GroupedReVerbFormat(config.namespace, idFactory)
       case "openie4" => ClusteredOpenIE4Format(config.namespace, idFactory)
       case "probase" => ProbaseFormat(config.namespace, idFactory)

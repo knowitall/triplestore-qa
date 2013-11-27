@@ -102,6 +102,28 @@ case class PlainTextFormat(namespace: String, idFactory: () => String) extends T
         case Array(a, b) => (a, b)
       }.toList
     }
+    Some(kvPairs)
+  }
+}
+
+case class PlainTextTripleFormat(namespace: String, idFactory: () => String) extends TupleFormat {
+
+  case class Triple(arg1: String, rel: String, arg2: String)
+
+  def groupIterator() = {
+    io.Source.fromInputStream(System.in, "UTF8").getLines flatMap lineToPairs
+  }
+
+  def close() {}
+
+  private var last: Option[Triple] = None
+
+  def lineToPairs(line: String): Option[List[(String, String)]] = {
+    val kvPairs = {
+      line.split("\t").grouped(2).map {
+        case Array(a, b) => (a, b)
+      }.toList
+    }
     val kvMap = kvPairs.toMap
     require(kvMap.contains("arg1") && kvMap.contains("arg2") && kvMap.contains("rel"))
 
