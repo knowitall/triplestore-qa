@@ -2,4 +2,5 @@ package edu.knowitall.search.qa
 
 import edu.knowitall.execution.ConjunctiveQuery
 
-case class QueryState(query: ConjunctiveQuery) extends QaState
+case class QueryState(query: ConjunctiveQuery, reformulated: Boolean = false) 
+extends QaState
