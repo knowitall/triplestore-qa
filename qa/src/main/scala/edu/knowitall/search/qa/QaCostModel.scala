@@ -13,6 +13,10 @@ class QaCostModel(
 object QaCostModel {
   
   val defaultFeatures = QaFeatures
-  val defaultWeights = SparseVector.zero
+  lazy val defaultWeights = {
+    val in = getClass.getResourceAsStream("/edu/knowitall/search/qa/defaultWeights.txt")
+    SparseVector.fromInputStream(in)
+    //SparseVector.zero
+  }
   
 }
