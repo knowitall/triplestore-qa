@@ -8,6 +8,7 @@ import com.typesafe.config.ConfigFactory
 import edu.knowitall.lm.KenLmServer
 import edu.knowitall.util.NlpUtils
 import edu.knowitall.execution.Search
+import edu.knowitall.relsyn.RelSynRule
 
 object QaFeatures extends Function[QaStep, SparseVector] {
   
@@ -38,9 +39,11 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     nss.map(ns => s"answer from namespace '$ns'")
   }
   
-  val numConjuncts = QueryFeature { (q: String, query: ConjunctiveQuery) =>
-    ("num conjuncts" -> query.conjuncts.size)
+  val numConjuncts = AnswerFeature { (q: String, etup: ExecTuple) =>
+    ("num conjuncts" -> etup.query.conjuncts.size)
   }
+  
+  val numSteps = (step: QaStep) => SparseVector("steps" -> 0.25)
   
   val querySimilarity = AnswerFeature { (q: String, etuple: ExecTuple) =>
     val query = etuple.query
@@ -84,6 +87,11 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     }
   }
   
+  val relSynFeatures = (step: QaStep) => step.action match {
+    case rule: RelSynRule => SparseVector("relSynRule pmi" -> rule.pmi)
+    case _ => SparseVector.zero
+  }
+  
   def apply(s: QaStep) = actionType(s) +
 		  				 answerIsLinked(s) +
 		  				 tupleNamespace(s) +
@@ -92,7 +100,9 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 paraphraseLm(s) +
 		  				 numConjuncts(s) +
 		  				 prefixAndDate(s) +
-		  				 lightVerbRel(s)
+		  				 lightVerbRel(s) +
+		  				 relSynFeatures(s) +
+		  				 numSteps(s)
   
 }
 
