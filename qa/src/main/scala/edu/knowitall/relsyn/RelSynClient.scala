@@ -13,12 +13,24 @@ import edu.knowitall.execution.TLiteral
 import edu.knowitall.execution.UnquotedTLiteral
 import edu.knowitall.execution.QuotedTLiteral
 import edu.knowitall.execution.ConjunctiveQuery
+import edu.knowitall.tool.tokenize.ClearTokenizer
+import edu.knowitall.tool.postag.StanfordPostagger
+import edu.knowitall.tool.stem.MorphaStemmer
+import edu.knowitall.tool.stem.Stemmer
+import edu.knowitall.tool.tokenize.Tokenizer
+import edu.knowitall.tool.postag.Postagger
+import org.slf4j.LoggerFactory
 
 case class RelSynClient(url: String = RelSynClient.defaultUrl, 
+    					stemmer: Stemmer = RelSynClient.defaultStemmer,
+    					tokenizer: Tokenizer = RelSynClient.defaultTokenizer,
+    					tagger: Postagger = RelSynClient.defaultPostagger,
     					maxHits: Int = RelSynClient.defaultMaxHits,
     					scale: Boolean = RelSynClient.defaultScale) {
   
   private val client = new HttpSolrServer(url)
+  val logger = LoggerFactory.getLogger(this.getClass)
+
   
   private def getValue(n: String, d: SolrDocument): Option[Any] = {
     val value = d.getFieldValue(n)
@@ -60,13 +72,25 @@ case class RelSynClient(url: String = RelSynClient.defaultUrl,
     pmi <- getDouble("pmi", d)
   } yield RelSynRule(rel1, rel2, inverted, count1, count2, joint, pmi)
   
+  private def stemString(s: String) = {
+    val tokens = tokenizer(s)
+    val tagged = tagger.postagTokens(tokens)
+    val result = tagged.map {
+      t => MorphaStemmer.lemmatizePostaggedToken(t).lemma.toLowerCase() 
+    }
+    result.mkString(" ")
+  }
+  
   def relSyns(s: String, limit: Int = maxHits) = {
-    val query = new SolrQuery(s"""${RelSynClient.searchField}:"${s}"""")
+    val stems = stemString(s)
+    val query = new SolrQuery(s"""${RelSynClient.searchField}:"${stems}"""")
+    logger.debug(s"Getting relSyns for ${stems}")
     query.setRows(maxHits)
     query.addSort(new SortClause("pmi", SolrQuery.ORDER.desc))
     val resp = client.query(query)
     val pairs = resp.getResults().toList.flatMap(fromDoc)
     pairs.map(pair => pair.copy(pmi = scalePmi(pair.pmi)))
+    
   }
   
   def relSyns(c: TConjunct): List[RelSynRule] = c.values.get(Search.rel) match {
@@ -88,5 +112,8 @@ case object RelSynClient {
   val defaultScale = conf.getBoolean("relsyn.scale")
   val minPmi = conf.getDouble("relsyn.minPmi")
   val maxPmi = conf.getDouble("relsyn.maxPmi")
+  lazy val defaultTokenizer = new ClearTokenizer
+  lazy val defaultPostagger = new StanfordPostagger
+  lazy val defaultStemmer = new MorphaStemmer
   val searchField = "rel1_exact"
 }
