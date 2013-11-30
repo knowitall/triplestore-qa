@@ -25,7 +25,8 @@ class QaTransitionModel extends Transition[QaState, QaAction] {
   lazy val templateClient = new ParaphraseTemplateClient
   lazy val baseTriplestoreClient = new SolrClient()
   lazy val triplestoreClient = CachedTriplestoreClient(baseTriplestoreClient)
-  lazy val relSynClient = RelSynClient()
+  lazy val relSynClient = RelSynClient(stemmer = stemmer, tagger = tagger, 
+      tokenizer = tokenizer)
   
   // Individual transition functions
   lazy val absArgTransition = new AbstractArgTransition(tagger = tagger,
