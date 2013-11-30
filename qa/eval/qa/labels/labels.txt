@@ -181,6 +181,7 @@ LABEL	true	what be the name of the san francisco newspaper ?	sing tao daily
 LABEL	true	what be some of the award taylor swift have win ?	academy of country music entertainer of the year
 LABEL	false	what be taylor swift s album ?	the web
 LABEL	false	what be the scope and limitation of physics ?	dynamics . e
+LABEL	false	what be all the name of harry potter ?	your-sym_nn - sym - nn - sym - nn - sym - nn - sym - nn - nn - nn chara
 LABEL	true	what country do canada have trade agreement with ?	united state of america
 LABEL	false	where do the celtic practice ?	effigy
 LABEL	true	what movie do zac efron star in ?	17 again
@@ -857,6 +858,7 @@ LABEL	true	who do matt damon have kid with ?	luciana barroso
 LABEL	true	where be mayan country ?	playa del carmen
 LABEL	false	who be michael j fox s wife ?	abc
 LABEL	true	what to do washington dc december ?	national museum of the american indian
+LABEL	false	what be the name of manmohan singh s spouse ?	the third
 LABEL	true	what year do baltimore raven win super bowl ?	super bowl xlvius
 LABEL	true	what language be there in japan ?	english
 LABEL	true	what movie have selena gomez star in ?	arthur and the vengeance of maltazard
@@ -1081,6 +1083,7 @@ LABEL	true	what type of government do fijus have ?	parliamentary republic
 LABEL	false	where do they get the name stanley cup ?	californium
 LABEL	true	where do bronx begin ?	midtown manhattan
 LABEL	true	when do the jew stop make animal sacrifice ?	yiddish language
+LABEL	false	what be the food source for amoeba ?	the wild
 LABEL	true	what movie gerard butler have be in ?	dear frankie
 LABEL	true	what to do downtown sacramento ?	adp
 LABEL	true	where do al capone go to jail ?	united state penitentiary , alcatraz island
@@ -1888,6 +1891,7 @@ LABEL	false	who write st trinian ?	prestwick
 LABEL	true	what language speak in brazil ?	english
 LABEL	false	what be the catholic holy day ?	hand forehead
 LABEL	true	what to do with kid in summer in dubaus ?	jumeirah beach
+LABEL	false	can blue heron fly ?	their sausage bit
 LABEL	true	what team do adrian peterson play for in college ?	university of oklahoma
 LABEL	true	be star be a source of light ?	sun
 LABEL	true	what to do in nadus fijus ?	koroyanitu national park
@@ -2024,7 +2028,6 @@ LABEL	true	what be the supreme court case ?	hollingsworth v virginium
 LABEL	true	what country be involve in the nafta ?	mexico
 LABEL	true	what time zone in the uk ?	greenwich mean time
 LABEL	true	what to do with kid in asheville nc ?	asheville ace
-LABEL	false	what be merce postal code ?	Applicants
 LABEL	true	what do the dominican republic speak ?	saman ? english
 LABEL	true	what language do pakistani people talk ?	urdu language
 LABEL	true	what be my timezone in californium ?	pacific time zone
@@ -2254,6 +2257,7 @@ LABEL	true	what be the holy book of the buddhist religion ?	amitabha sutra
 LABEL	false	what be the research topic in computer science ?	specific research topic
 LABEL	true	what do see in parus ?	? le de la cit ?
 LABEL	true	what movie gerard butler have be in ?	beowulf & grendel
+LABEL	true	what be the best selling product now ?	ginkgo biliboa
 LABEL	true	when be drake bear ?	march 29 , 1819
 LABEL	true	where people speak welsh ?	unite kingdom
 LABEL	false	what be the full meaning of utp ?	cable run
@@ -2788,7 +2792,6 @@ LABEL	true	what be the lead producer of wheat ?	californium
 LABEL	true	what be something that be white and orange ?	canvas blue strap
 LABEL	true	what be the catholic holy day ?	saint joseph s day
 LABEL	true	what be all the song nickus minaj be in ?	ym salute
-LABEL	false	what be all the name of harry potter ?	your-sym_nn - sym - nn - sym - nn - nn - nn chara
 LABEL	true	what city should i visit in californium ?	el dorado county
 LABEL	false	how do the southern ocean get it s name ?	the asteroid
 LABEL	true	what be some of the tradition of islam ?	critical evaluation
@@ -2958,7 +2961,6 @@ LABEL	false	be a ostrich a vertebrate ?	savannah tail
 LABEL	false	what be some of the tradition of islam ?	mugham ashik
 LABEL	false	which country have the best water ?	kinney county
 LABEL	true	when be venus brightest ?	western astrology
-LABEL	false	what be the five question word ?	These People
 LABEL	false	what all do google now do ?	unimportant
 LABEL	true	what can you do in palm spring can ?	palm spring air museum
 LABEL	true	what type of government do germany have now ?	multi-party system
@@ -3154,8 +3156,8 @@ LABEL	true	what be speak in czech republic ?	greek language
 LABEL	true	what do isaac newton contribute to science ?	newton s law of motion
 LABEL	false	what be the colony of great britain ?	one company
 LABEL	true	who be play bilbo in the hobbit movie ?	ian holm
-LABEL	false	can blue heron fly ?	my head
 LABEL	true	what hotel should i stay in san francisco ?	palace hotel , san francisco
+LABEL	false	can blue heron fly ?	my head
 LABEL	true	what do scientist classify ?	fruit
 LABEL	false	what be the organ of the circulatory system in plant ?	savage . e
 LABEL	true	what movie do logan lerman play in ?	the number 23
@@ -4880,7 +4882,6 @@ LABEL	true	what to visit in atlanta ?	castleberry hill
 LABEL	true	who do the cleveland brown draft ?	joe thoma
 LABEL	true	what do elus whitney invent ?	interchangeable part
 LABEL	true	what be there fun to do in san diego ?	old point loma lighthouse
-LABEL	true	what be tantalum s origin ?	Africa
 LABEL	false	can blue heron fly ?	noon today
 LABEL	false	how many language do they speak in switzerland ?	old tamil language
 LABEL	true	what do the missourus river bisect ?	south dakota
@@ -6030,7 +6031,6 @@ LABEL	true	who be in the american league in baseball ?	new york yankee
 LABEL	true	what character do seth macfarlane play in family guy ?	brian griffin
 LABEL	true	what land do henry hudson discover ?	we - delaware
 LABEL	true	who play darth vader in the first movie ?	david prowse
-LABEL	false	can blue heron fly ?	our heads
 LABEL	true	where do the seattle seahawk play ?	usfl
 LABEL	true	what type of book do agatha christie write ?	death !
 LABEL	true	where be spain exactly locate ?	iberian peninsula
@@ -6578,11 +6578,11 @@ LABEL	true	what form of government do australium use ?	constitutional monarchy
 LABEL	true	who play nba last night ?	lo angele laker
 LABEL	false	what kind of government do the united state have currently ?	thousand
 LABEL	false	when do spaghetti come to the we ?	simplest one
+LABEL	false	can blue heron fly ?	our head
 LABEL	true	what do they speak in iran ?	farsus
 LABEL	false	what do haye do ?	tide
 LABEL	true	who kill vincent chin film ?	michael nitz
 LABEL	true	who find the new democratic party ?	jame madison
-LABEL	true	what be the best speaker in the world ?	Jim Rohn
 LABEL	true	what do wagner compose ?	die feen
 LABEL	false	what be the salary of a science teacher ?	steve davee steve davee
 LABEL	true	what style of music do john mayer play ?	soul music
@@ -7762,6 +7762,7 @@ LABEL	false	what be all the country in north africa ?	s - africa
 LABEL	true	when do roth ira originate ?	william v roth , jr .
 LABEL	true	what other movie have ryan gosling be in ?	the notebook
 LABEL	false	what sound do wren make ?	what’s not
+LABEL	false	what be the five question word ?	such
 LABEL	false	what responsibility do john jay have ?	conspiracy
 LABEL	true	what be jack london s education ?	university of californium , berkeley
 LABEL	false	how many red fox leave ?	the park
@@ -7962,7 +7963,6 @@ LABEL	true	what language do they speak in malta ?	italian
 LABEL	true	what form of government do we have in the usa ?	constitutional republic
 LABEL	false	how common be the bipolar disorder ?	disorder
 LABEL	false	what school do sir isaac newton go to ?	school
-LABEL	true	what be the best selling product now ?	Ginkgo Biliboa
 LABEL	true	what date be john adam elect president ?	john adam presidential campaign , 1796
 LABEL	false	where be kansas city ?	wichita
 LABEL	true	what airport do you fly into for destin ?	northwest florida regional airport
@@ -8178,8 +8178,8 @@ LABEL	true	what do canada grow for food ?	mt . begbie brewing company high count
 LABEL	false	what be a job for a lawyer ?	3 6 year
 LABEL	true	where to go in downtown nashville tn ?	tennessee agricultural museum
 LABEL	true	when do ny giant win the superbowl ?	1927 new york giant season
-LABEL	true	what kind of government do brazil have ?	federal republic
 LABEL	true	where be denmark situate ?	northern europe
+LABEL	true	what kind of government do brazil have ?	federal republic
 LABEL	false	who make decision in a market economy ?	the system
 LABEL	true	what college do brett favre ?	the university of southern mississippus
 LABEL	true	what do bruce jenner win gold medal for ?	decathlon
@@ -8686,7 +8686,6 @@ LABEL	true	what style of music do john mayer play ?	rock music
 LABEL	true	what type of government japan have ?	parliamentary system
 LABEL	true	where do tony gonzalez play college basketball ?	university of californium , berkeley
 LABEL	true	what vegetable can i plant in november in southern californium ?	phoenix dactylifera
-LABEL	false	can blue heron fly ?	their sausage bits
 LABEL	false	what political party do julium gillard belong to ?	government
 LABEL	false	what color al pacino eye ?	one success
 LABEL	true	what part do jeff conaway play in grease ?	kenickie murdoch
@@ -9142,8 +9141,8 @@ LABEL	false	how do the southern ocean get it s name ?	cape town
 LABEL	false	who make seikus ?	no pattern shirt
 LABEL	true	where john tyler be bear ?	charle city county
 LABEL	false	what be egyptian money call ?	fatkat
-LABEL	true	where do nick diaz fight ?	ufc : the ultimate 100 greatest fight : vol . 2
 LABEL	true	who play spike spiegel ?	koichus yamadera
+LABEL	true	where do nick diaz fight ?	ufc : the ultimate 100 greatest fight : vol . 2
 LABEL	false	what job do john adam have before he be president ?	president , qct
 LABEL	true	who do terrell owen play for in 2010 ?	cincinnatus bengal
 LABEL	true	what be the language use in indonesium ?	dutch language
@@ -9212,6 +9211,7 @@ LABEL	true	what be hitler s parent name ?	alous hitler
 LABEL	true	which country share a border with russium ?	ukraine
 LABEL	false	who be in the israeli palestinian conflict ?	peace
 LABEL	true	who be martin luther king jr wife ?	coretta scott king
+LABEL	false	what be merce postal code ?	applicant
 LABEL	true	what movie do matt bomer play in ?	the normal heart
 LABEL	false	what be bacterial cell classify as ?	tegrate viral dna
 LABEL	false	what be the lead producer of wheat ?	country
@@ -10766,6 +10766,7 @@ LABEL	true	what language do iraqi people speak ?	turkmen language
 LABEL	false	on which continent be the usa locate ?	saddam hussein
 LABEL	true	what be molly ringwald in ?	betsy s wedding
 LABEL	false	what kind of money do egypt have ?	write
+LABEL	false	what be merce postal code ?	service
 LABEL	true	what movie do natalie portman play in ?	star war episode iius : revenge of the sith
 LABEL	false	what be one of italy famous landmark ?	lubeck
 LABEL	true	who be the senator of hawaius 2012 ?	spark matsunaga
@@ -10880,8 +10881,8 @@ LABEL	true	how many diffrent type of television be there ?	work satellite tv
 LABEL	false	what movie do nick cannon star in ?	colette
 LABEL	true	what be the major city of romanium ?	bacau
 LABEL	false	what be the earliest land plant ?	prolific producer
-LABEL	true	what language do lakota indian speak ?	lakota language
 LABEL	false	what be the research topic in computer science ?	topic
+LABEL	true	what language do lakota indian speak ?	lakota language
 LABEL	true	what activity be there to do in greece ?	think
 LABEL	true	who be robin robert father ?	lawrence e robert
 LABEL	true	when do venus william win wimbledon ?	2009 wimbledon championship
@@ -11151,8 +11152,8 @@ LABEL	true	who be the first president of the afl ?	bud adam
 LABEL	true	what be erik erikson s theory ?	developmental psychology
 LABEL	true	what to see in chicago downtown ?	willus tower
 LABEL	false	what color al pacino eye ?	part
-LABEL	false	when be drake bear ?	wayne
 LABEL	false	on which continent be the usa locate ?	australium
+LABEL	false	when be drake bear ?	wayne
 LABEL	true	what be a job for a lawyer ?	? this conference
 LABEL	true	who play john connor ?	nick stahl
 LABEL	true	where do france colonise ?	new caledonium
@@ -11286,8 +11287,8 @@ LABEL	true	what be the political system in libya ?	provisional government
 LABEL	true	when be arthur ashe bear ?	1943 . e
 LABEL	false	what do the symbol on the nevada flag mean ?	sagebrush
 LABEL	true	what atom do jj thomson discover ?	element of the mathematical theory of electricity and magnetism
-LABEL	true	what language do east timor speak ?	tetun language
 LABEL	false	where be benjamin franklin educate ?	common
+LABEL	true	what language do east timor speak ?	tetun language
 LABEL	false	what state have the most homosexual man ?	a mysterious epidemic
 LABEL	true	what be a job for a lawyer ?	explosion
 LABEL	true	what be african american literature ?	manchild in the promised land
@@ -11653,6 +11654,7 @@ LABEL	true	what team do robert horry win ring with ?	houston rocket
 LABEL	true	what be the official language in china ?	nepali language
 LABEL	true	what be the soviet union ?	soviet democracy
 LABEL	true	what be the sight to see in madrid ?	plaza de cibele
+LABEL	false	what be the five question word ?	new york
 LABEL	false	what be all the name of harry potter ?	the venue
 LABEL	false	when be drake bear ?	? my name
 LABEL	true	who do david carr play for ?	houston texan
@@ -12549,7 +12551,6 @@ LABEL	false	who make decision in a market economy ?	slovenia
 LABEL	false	who start the bear flag revolution ?	fr ? mont
 LABEL	true	what year do detroit piston win the championship ?	1990 nba final
 LABEL	true	what do wh smith stand for ?	william henry smith
-LABEL	false	what be the five question word ?	New York
 LABEL	true	what to do in daytona ?	halifax historical museum
 LABEL	true	what political experience do abraham lincoln have ?	member of illinoi house of representative
 LABEL	true	what language do most people speak in afghanistan ?	pashto
@@ -13658,6 +13659,7 @@ LABEL	true	what song do franz liszt compose ?	lus marinarus
 LABEL	true	who be kobe bryant wife bio ?	vanessa laine
 LABEL	true	what national team do cristiano ronaldo play for ?	portugal national football team
 LABEL	true	what other movie be liam hemsworth in ?	the last song
+LABEL	true	what be the best speaker in the world ?	jim rohn
 LABEL	false	what team do josh hamilton play for ?	center - field
 LABEL	true	what famous people be from barbado ?	gregory goodridge
 LABEL	true	where do otto frank go to college ?	heidelberg college
@@ -14193,7 +14195,6 @@ LABEL	true	what language do the speak in pakistan ?	urdu language
 LABEL	true	who play lois en superman ?	amy adam
 LABEL	true	what country speak german as a first language ?	vatican city
 LABEL	true	what country include in oceanium ?	we - hawaius
-LABEL	false	what be the five question word ?	Such
 LABEL	true	what language do they speak in indonesium ?	batak language
 LABEL	true	what kind of political system be canada ?	constitutional monarchy
 LABEL	false	what animal represent californium ?	squirrel
@@ -14233,8 +14234,8 @@ LABEL	true	what movie be direct by steven spielberg ?	et the extra-terrestrial
 LABEL	true	who find the pittsburgh steeler in 1933 ?	rooney family
 LABEL	true	what movie do johnny depp play in ?	benny & joon
 LABEL	false	who play john connor ?	10 year
-LABEL	false	what be the five question word ?	some people
 LABEL	true	what movie do howard shore write the music for ?	the silence of the lamb
+LABEL	false	what be the five question word ?	some people
 LABEL	true	what film do michael clarke duncan star in ?	brother bear 2
 LABEL	true	what to visit in atlanta ?	zoo atlanta
 LABEL	false	what be the largest state park in oklahoma ?	oleta river state park
@@ -14406,6 +14407,7 @@ LABEL	true	who play on the jefferson ?	marlum gibb
 LABEL	false	what kind of mixture be soda ?	end
 LABEL	false	what sound do wren make ?	gold leaf
 LABEL	true	who do juan ponce de leon marry ?	leonor de le ? n
+LABEL	true	what be tantalum s origin ?	africa
 LABEL	false	what political party do barack obama represent ?	new hope
 LABEL	true	what state be barack obama senator for ?	illinoi state senator
 LABEL	true	who be richard pryor son ?	renee pryor
@@ -15372,6 +15374,7 @@ LABEL	true	what kill whitney houston ?	coronary artery disease
 LABEL	true	what be historical place in new york ?	the brooklyn bridge
 LABEL	true	where be john jay bear ?	new york city
 LABEL	false	what celebrity have naked picture ?	facebook
+LABEL	false	what be the five question word ?	these people
 LABEL	true	what be the state symbol of colorado ?	picea pungen
 LABEL	false	what be the official language of argentina ?	old turkish language
 LABEL	false	what be the belief of the roman catholic ?	1882
@@ -15966,7 +15969,6 @@ LABEL	true	what be lil wayne s first hit song ?	shorty bounce
 LABEL	true	what club do cristiano ronaldo play for in 2010 ?	real madrid cf
 LABEL	false	what be newcastle metro ?	direct link
 LABEL	true	what do fairy tale have in common ?	melanie zimmer transformation
-LABEL	false	what be merce postal code ?	services
 LABEL	true	what country be locate in the netherland ?	kingdom of the netherland
 LABEL	true	which airport to fly into rome ?	leonardo da vincus ? fiumicino airport
 LABEL	true	what currency do mexico use ?	mexican peso
