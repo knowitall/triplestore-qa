@@ -3,6 +3,9 @@ package edu.knowitall.learning
 import scala.io.Source
 import java.io.PrintWriter
 import scala.language.implicitConversions
+import java.io.InputStream
+import java.io.File
+import java.io.FileInputStream
 
 abstract class SparseVector {
   def activeComponents: Iterable[String]
@@ -32,8 +35,11 @@ object SparseVector {
   def apply: SparseVector = SparseVectorImpl(Map())
   def apply(pairs: TraversableOnce[(String, Double)]): SparseVector = SparseVectorImpl(pairs.toMap)
   def apply(pairs: (String, Double)*): SparseVector = SparseVectorImpl(pairs.toMap)
-  def fromFile(path: String): SparseVector = { 
-    val lines = Source.fromFile(path, "UTF8").getLines
+  def fromFile(path: String): SparseVector = {
+    fromInputStream(new FileInputStream(new File(path)))
+  }
+  def fromInputStream(in: InputStream): SparseVector = {
+    val lines = Source.fromInputStream(in, "UTF8").getLines
     val pairs = lines.map { line => line.split("\t") match {
       case Array(k, v) => (k, v.toDouble)
       case _ => throw new IllegalStateException(s"Could not parse line: '$line'")
