@@ -5,12 +5,14 @@ import edu.knowitall.triplestore.TriplestoreClient
 import edu.knowitall.execution.Joiner
 import edu.knowitall.execution.ExecTuple
 import edu.knowitall.triplestore.SolrClient
+import edu.knowitall.execution.DefaultFilters
+import edu.knowitall.execution.IdentityExecutor
 
 class ExecutionTransition(
     client: TriplestoreClient = ExecutionTransition.defaultClient) 
     extends Transition[QaState, QaAction] {
   
-  private val joiner = Joiner(client)
+  private val executor = DefaultFilters.wrap(IdentityExecutor(client))
   
   private final val action = ExecutionAction()
   
@@ -20,8 +22,7 @@ class ExecutionTransition(
   }
   
   private def executeQuery(state: QueryState) = for {
-    tuple <- joiner.joinQueries(state.query.conjuncts)
-    etuple = ExecTuple(tuple, state.query)
+    etuple <- executor.execute(state.query)
     newState = AnswerState(etuple.answerString, etuple)
   } yield (action, newState)
 
