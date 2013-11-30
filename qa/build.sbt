@@ -54,6 +54,8 @@ libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-stem-
 
 libraryDependencies += "org.scalaj" %% "scalaj-http" % "0.3.10"
 
+libraryDependencies += "edu.berkeley.nlp" % "berkeleylm" % "1.1.2"
+
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-clear" % "2.4.2" exclude("com.github.scopt","scopt")
 
 libraryDependencies += "com.twitter" %% "util-collection" % "6.3.6"
