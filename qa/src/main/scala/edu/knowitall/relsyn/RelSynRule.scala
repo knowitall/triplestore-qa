@@ -5,6 +5,7 @@ import edu.knowitall.execution.Search
 import edu.knowitall.execution.TLiteral
 import edu.knowitall.execution.QuotedTLiteral
 import edu.knowitall.search.qa.QaAction
+import edu.knowitall.execution.UnquotedTLiteral
 
 case class RelSynRule(rel1: String, rel2: String, inverted: Boolean, 
     count1: Double, count2: Double, jointCount: Double, pmi: Double) 
@@ -19,7 +20,7 @@ case class RelSynRule(rel1: String, rel2: String, inverted: Boolean,
   private def adjustSwap(c: TConjunct) = if (inverted) swapArgs(c) else Some(c)
   
   private def replaceRel(c: TConjunct) = {
-    val newr = QuotedTLiteral(rel2)
+    val newr = UnquotedTLiteral(rel2)
     Some(c.copy(values = c.values + (Search.rel -> newr)))
   }
   
