@@ -7,6 +7,7 @@ import Scalaz._
 import edu.knowitall.execution.TConjunct
 import edu.knowitall.execution.ListConjunctiveQuery
 import org.slf4j.LoggerFactory
+import edu.knowitall.execution.Search
 
 class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient) 
   extends Transition[QaState, QaAction] {
@@ -23,8 +24,9 @@ class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient)
     for {
       i <- 0 until conjs.size
       c = conjs(i)
-      rule <- client.relSyns(c)
-      newc <- rule(c)
+      cx <- TConjunct.expandSetTLiteralsField(c, Search.rel)
+      rule <- client.relSyns(cx)
+      newc <- rule(cx)
       newconjs = conjs.updated(i, newc)
       newq = ListConjunctiveQuery(s.query.qVars, newconjs)
       newstate = s.copy(query = newq, reformulated = true)
