@@ -52,7 +52,7 @@ object Oracle {
   
   def normalizePair(input: String, output: String) = (normalize(input), normalize(output))
 
-  def decompose(s: String): String = java.text.Normalizer.normalize(s, java.text.Normalizer.Form.NFD).replaceAll("[\\p{InCombiningDiacriticalMarks}\\p{IsLm}\\p{IsSk}]+", "")
+  def decompose(s: String): String = java.text.Normalizer.normalize(s, java.text.Normalizer.Form.NFD).replaceAll("[\\p{InCombiningDiacriticalMarks}\\p{IsLm}\\p{IsSk}]+", "").replaceAll("\\P{Print}", "");
   
   def normalize(t: String): String = {
     val s = decompose(t)
