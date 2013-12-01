@@ -7,3 +7,4 @@ query relation is light verb	-1
 steps	-1
 question prefix = 'what year' and isDate	1
 question prefix = 'when' and isDate	1
+question prefix = 'where' and isDate	-1
