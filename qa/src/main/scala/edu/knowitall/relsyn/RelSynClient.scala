@@ -74,7 +74,7 @@ case class RelSynClient(url: String = RelSynClient.defaultUrl,
   
   private def stemString(s: String) = {
     val tokens = tokenizer(s)
-    val tagged = tagger.postagTokens(tokens)
+    val tagged = tagger.postagTokenized(tokens)
     val result = tagged.map {
       t => MorphaStemmer.lemmatizePostaggedToken(t).lemma.toLowerCase() 
     }

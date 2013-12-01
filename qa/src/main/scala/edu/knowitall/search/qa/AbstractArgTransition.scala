@@ -31,7 +31,7 @@ class AbstractArgTransition(
       
   private def stemString(s: String): Seq[String] = {
     val tokens = tokenizer(s)
-    val tagged = tagger.postagTokens(tokens)
+    val tagged = tagger.postagTokenized(tokens)
     tagged.map {
       t => MorphaStemmer.lemmatizePostaggedToken(t).lemma.toLowerCase() 
     }

@@ -17,7 +17,7 @@ case class JoshuaParaphraser(client: JoshuaClient) extends Paraphraser {
   
   def stemString(s: String): String = {
     val tokens = tokenizer(s)
-    val tagged = tagger.postagTokens(tokens)
+    val tagged = tagger.postagTokenized(tokens)
     val lemmas = tagged.map(t => MorphaStemmer.lemmatizePostaggedToken(t).lemma.toLowerCase()) 
     lemmas.mkString(" ")
   }

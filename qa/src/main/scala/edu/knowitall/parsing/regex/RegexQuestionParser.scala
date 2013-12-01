@@ -35,7 +35,7 @@ case class RegexQuestionParser(
     val postags = postagger(string)
     val repostagged = if (chunks.length != postags.length) chunks else {
       chunks.zip(postags).map { case (chunk, postag) =>
-        new ChunkedToken(chunk=chunk.chunk, postag=postag.postag, string=postag.string, offset = postag.offset)}
+        new ChunkedToken(chunkSymbol=chunk.chunkSymbol, postagSymbol=postag.postagSymbol, string=postag.string, offset = postag.offset)}
     }
     val lemmas = repostagged map MorphaStemmer.stemPostaggedToken
     lemmas

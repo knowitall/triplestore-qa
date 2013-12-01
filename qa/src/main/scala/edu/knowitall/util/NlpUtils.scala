@@ -59,21 +59,6 @@ object NlpUtils {
     }
   }
   
-  def sentFromFields(fields: Seq[String]): Option[Seq[Lemmatized[ChunkedToken]]] = {
-    fields match {
-      case stokens :: slemmas :: stags :: Nil => {
-        val tokens = stokens.split("\t").toSeq.map(t => new Token(t, 0))
-        val lemmas = slemmas.split("\t").toSeq
-        val tags = stags.split("\t").toSeq
-        val taggedTokens = (tokens zip tags) map { case (token, tag) => new PostaggedToken(token, tag) }
-        val chunkedTokens = taggedTokens.map(t => new ChunkedToken(t, ""))
-        val res = (chunkedTokens zip lemmas) map { case (tt, lem) => new Lemmatized(tt, lem) }
-        Some(res)
-      } 
-      case _ => None
-    }
-  }
-  
   type TokenType = Lemmatized[ChunkedToken]
   def makeRegex(expr: String): RegularExpression[TokenType] = {
     val factory = new ExpressionFactory[TokenType]() {

@@ -58,7 +58,7 @@ object Oracle {
     val s = decompose(t)
     val tokens = tokenizer(s)
     if (tokens.size > 0) {
-      val tagged = tagger.postagTokens(tokens)
+      val tagged = tagger.postagTokenized(tokens)
       val result = tagged.map(lemmatizer.lemmatizePostaggedToken(_).lemma.toLowerCase)
       result.mkString(" ")
     } else {

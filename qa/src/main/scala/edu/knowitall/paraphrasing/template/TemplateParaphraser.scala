@@ -18,7 +18,7 @@ case class TemplateParaphraser(scorer: ParaphraseScorer, generator: TemplatePara
   
   def stemString(s: String): Seq[String] = {
     val tokens = tokenizer(s)
-    val tagged = tagger.postagTokens(tokens)
+    val tagged = tagger.postagTokenized(tokens)
     val lemmas = tagged.map(t => MorphaStemmer.lemmatizePostaggedToken(t).lemma.toLowerCase()) 
     lemmas
   }

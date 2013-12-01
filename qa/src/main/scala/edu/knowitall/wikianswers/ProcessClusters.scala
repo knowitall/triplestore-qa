@@ -14,7 +14,7 @@ object ProcessClusters extends ScoobiApp {
     lazy val tokenizer = new ClearTokenizer()
     def processQuestion(q: String): Option[String] = try {
       val tokens = tokenizer(q)
-      val tagged = tagger.postagTokens(tokens)
+      val tagged = tagger.postagTokenized(tokens)
       val lemmatized = tagged.map(MorphaStemmer.lemmatizePostaggedToken)
       val strTokens = tokens.map(_.string).mkString(" ")
       val strTags = tagged.map(_.postag).mkString(" ")
