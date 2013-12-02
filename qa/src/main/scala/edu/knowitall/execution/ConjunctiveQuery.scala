@@ -120,6 +120,13 @@ case class TConjunct(name: String, values: Map[Field, TVal]) {
   
   def vars: Iterable[TVariable] = varsToFields.keys.toSet
   
+  def subs(tvar: TVariable, tval: TVal) = {
+    val newValues = values map {
+      case (field, value) => if (value == tvar) (field, tval) else (field, value) 
+    }
+    copy(values = newValues)
+  }
+  
   val xs = values.getOrElse(arg1, "")
   val rs = values.getOrElse(rel, "")
   val ys = values.getOrElse(arg2, "")
@@ -203,6 +210,7 @@ trait ConjunctiveQuery {
   def qVars: List[TVariable]
   def qAttrs: List[String]
   def conjuncts: List[TConjunct]
+  def subs(tvar: TVariable, tval: TVal): ConjunctiveQuery
   
   override def toString(): String = {
     val varString = qVars.map(_.toString).mkString(",")
@@ -223,6 +231,12 @@ case class ListConjunctiveQuery(qVars: List[TVariable], conjuncts: List[TConjunc
   
   val qas = {for (v <- qVars; c <- conjuncts; a <- c.attrName(v)) yield (v, a)}.groupBy(_._1)
   val qAttrs = for (v <- qVars; group <- qas.get(v); (v, a) <- group.find(x => true)) yield a
+  
+  override def subs(tvar: TVariable, tval: TVal) = {
+    val newConjs = conjuncts.map(_.subs(tvar, tval))
+    val newQVars = newConjs.flatMap(_.vars)
+    ListConjunctiveQuery(newQVars, newConjs)
+  }
   
 }
 case object ListConjunctiveQuery {
@@ -274,6 +288,10 @@ case class SimpleQuery(question: String, name: String, map: Map[Field, TVal])
           + s"got: $vars")
   }
   val qAttrs = List(conjunct.joinKeys(qVars(0)))
+  override def subs(tvar: TVariable, tval: TVal) = {
+    val newConj = conjunct.subs(tvar, tval)
+    copy(map = newConj.values)
+  }
 }
 case object SimpleQuery {
   def fromString(s: String) = TConjunct.fromString("r", s) match {
