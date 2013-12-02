@@ -127,6 +127,8 @@ case class TConjunct(name: String, values: Map[Field, TVal]) {
     copy(values = newValues)
   }
   
+  def rename(n: String) = copy(name = n)
+  
   val xs = values.getOrElse(arg1, "")
   val rs = values.getOrElse(rel, "")
   val ys = values.getOrElse(arg2, "")
@@ -212,6 +214,7 @@ trait ConjunctiveQuery {
   def conjuncts: List[TConjunct]
   def subs(tvar: TVariable, tval: TVal): ConjunctiveQuery
   def combine(cq: ConjunctiveQuery): ConjunctiveQuery
+  def renameConjuncts(prefix: String): ConjunctiveQuery
   
   override def toString(): String = {
     val varString = qVars.map(_.toString).mkString(",")
@@ -239,8 +242,17 @@ case class ListConjunctiveQuery(qVars: List[TVariable], conjuncts: List[TConjunc
     ListConjunctiveQuery(newQVars, newConjs)
   }
   
+  def renameConjuncts(prefix: String) = {
+    val newConjs = conjuncts.zipWithIndex map {
+      case (c, i) => c.rename(s"${prefix}.$i")
+    }
+    copy(conjuncts = newConjs)
+  }
+  
   override def combine(cq: ConjunctiveQuery) = {
-    val newConjs = (this.conjuncts ++ cq.conjuncts).distinct
+    val conjs1 = this.renameConjuncts("r").conjuncts
+    val conjs2 = cq.renameConjuncts("s").conjuncts
+    val newConjs = conjs1 ++ conjs2
     val newVars = (this.qVars ++ cq.qVars).distinct
     ListConjunctiveQuery(newVars, newConjs)
   }
@@ -298,6 +310,9 @@ case class SimpleQuery(question: String, name: String, map: Map[Field, TVal])
   override def subs(tvar: TVariable, tval: TVal) = {
     val newConj = conjunct.subs(tvar, tval)
     copy(map = newConj.values)
+  }
+  override def renameConjuncts(prefix: String) = {
+    copy(map = conjunct.rename(s"${prefix}0").values)
   }
   override def combine(cq: ConjunctiveQuery) = {
     val newConjs = (this.conjuncts ++ cq.conjuncts).distinct
