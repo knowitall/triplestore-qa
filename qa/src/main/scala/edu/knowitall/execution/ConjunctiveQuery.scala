@@ -211,6 +211,7 @@ trait ConjunctiveQuery {
   def qAttrs: List[String]
   def conjuncts: List[TConjunct]
   def subs(tvar: TVariable, tval: TVal): ConjunctiveQuery
+  def combine(cq: ConjunctiveQuery): ConjunctiveQuery
   
   override def toString(): String = {
     val varString = qVars.map(_.toString).mkString(",")
@@ -236,6 +237,12 @@ case class ListConjunctiveQuery(qVars: List[TVariable], conjuncts: List[TConjunc
     val newConjs = conjuncts.map(_.subs(tvar, tval))
     val newQVars = newConjs.flatMap(_.vars)
     ListConjunctiveQuery(newQVars, newConjs)
+  }
+  
+  override def combine(cq: ConjunctiveQuery) = {
+    val newConjs = (this.conjuncts ++ cq.conjuncts).distinct
+    val newVars = (this.qVars ++ cq.qVars).distinct
+    ListConjunctiveQuery(newVars, newConjs)
   }
   
 }
@@ -291,6 +298,11 @@ case class SimpleQuery(question: String, name: String, map: Map[Field, TVal])
   override def subs(tvar: TVariable, tval: TVal) = {
     val newConj = conjunct.subs(tvar, tval)
     copy(map = newConj.values)
+  }
+  override def combine(cq: ConjunctiveQuery) = {
+    val newConjs = (this.conjuncts ++ cq.conjuncts).distinct
+    val newVars = (this.qVars ++ cq.qVars).distinct
+    ListConjunctiveQuery(newVars, newConjs)
   }
 }
 case object SimpleQuery {
