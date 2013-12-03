@@ -52,32 +52,3 @@ object UnaryIdentity extends Combinator {
     case _ => None
   }
 }
-
-object MyTest extends App {
-  
-  val q = ListConjunctiveQuery.fromString("($x, capital of, $y").get
-  val t = ListConjunctiveQuery.fromString("($x, is a, city)").get
-  val a = UnquotedTLiteral("france")
-  
-  val binary = Binary(TVariable("x"), TVariable("y"), q)
-  val unary = Unary(TVariable("x"), t)
-  val arg = Arg(a)
-  
-  println(RightApply(binary, arg))
-  println(LeftApply(arg, binary))
-  
-  println(RightApply(arg, binary))
-  
-  val thing = for {
-    u <- RightApply(binary, arg)
-    z <- UnaryIntersect(unary, u)
-  } yield z
-  println(thing)
-  
-  val thing2 = for {
-    u <- RightApply(binary, arg)
-    z <- UnaryIntersect(u, unary)
-  } yield z
-  println(thing2)
-  
-}
