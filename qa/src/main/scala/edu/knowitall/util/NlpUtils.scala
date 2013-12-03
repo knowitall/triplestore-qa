@@ -1,6 +1,7 @@
 package edu.knowitall.util
 
 import edu.knowitall.tool.stem.Lemmatized
+import edu.knowitall.repr.sentence.{Lemmatized => RepLemmatized}
 import edu.knowitall.tool.chunk.ChunkedToken
 import edu.knowitall.tool.tokenize.Token
 import edu.knowitall.tool.postag.PostaggedToken
@@ -12,6 +13,8 @@ import edu.washington.cs.knowitall.logic.Expression.{Arg => LogicArg}
 import edu.washington.cs.knowitall.regex.Expression.BaseExpression
 import edu.washington.cs.knowitall.logic.LogicExpression
 import com.google.common.base.{Function => GuavaFunction}
+import edu.knowitall.repr.sentence.Sentence
+import edu.knowitall.repr.sentence.Chunked
 
 object NlpUtils {
   
@@ -57,6 +60,13 @@ object NlpUtils {
       }
       case _ => throw new IllegalArgumentException(s"Could not deserialize: '$s'")
     }
+  }
+  
+  def split(s: Sentence with Chunked with RepLemmatized, i: Int, j: Int) = new
+  Sentence(s.text) with Chunked with RepLemmatized {
+    override val chunks = s.chunks.slice(i, j)
+    val lemmatizedTokens = s.lemmatizedTokens.slice(i, j)
+    override val tokens = s.tokens.slice(i, j)
   }
   
   type TokenType = Lemmatized[ChunkedToken]
