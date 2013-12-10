@@ -1,5 +1,9 @@
 import AssemblyKeys._
 
+import com.typesafe.sbt.SbtStartScript
+
+seq(SbtStartScript.startScriptForClassesSettings: _*)
+
 scalaVersion := "2.10.2"
 
 resolvers += "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository"
@@ -53,6 +57,8 @@ libraryDependencies += "org.scalaj" %% "scalaj-http" % "0.3.10"
 libraryDependencies += "edu.berkeley.nlp" % "berkeleylm" % "1.1.2"
 
 libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-clear" % "2.4.5-SNAPSHOT" exclude("com.github.scopt","scopt")
+
+libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-tokenize-breeze" % "2.4.5-SNAPSHOT" exclude("com.github.scopt","scopt")
 
 libraryDependencies += "com.twitter" %% "util-collection" % "6.3.6"
 
