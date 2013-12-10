@@ -28,18 +28,18 @@ case class KenLmServer(url: String, timeOut: Int, scale: Boolean = KenLmServer.s
   val root = s"${url}/score"
   val retries = KenLmServer.retries
   
-  override def query(s: String): Double = query(s, 1)
+  override def query(s: String): Double = queryHelper(s)
   
-  private def query(s: String, attempt: Int = 1): Double = {
+  private def queryHelper(s: String, attempt: Int = 0): Double = {
     if (attempt > retries) {
-      throw new IllegalStateException("Unable to query KenLM for '$s'")
+      throw new IllegalStateException(s"Unable to query KenLM for '$s'")
     } else {
       try {
-        logger.debug(s"Querying for one string (attempt $attempt/$retries): $s")
+        logger.debug(s"Querying for one string (attempt ${attempt+1}/$retries): $s")
         scaleValue(Http(root).params("q" -> s).asString.toDouble)
       } catch {
         case e: Throwable => {
-          query(s, attempt + 1)
+          queryHelper(s, attempt + 1)
         }
       }
     }
