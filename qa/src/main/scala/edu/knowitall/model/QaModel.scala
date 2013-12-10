@@ -22,7 +22,7 @@ case class QaModel(transitionModel: QaTransitionModel = QaModel.defaultTransitio
 				   extends HiddenVariableModel[String, Derivation] {
   
   val logger = LoggerFactory.getLogger(this.getClass)
-  
+
   private def createSearchProblem(question: String) =
     new QaSearchProblem(question, transitionModel, costModel)
   
@@ -81,4 +81,9 @@ case object QaModel {
   val defaultGoalSize = conf.getInt("search.goalSize")
   lazy val defaultTransitionModel = new QaTransitionModel
   lazy val defaultCostModel = new QaCostModel
+}
+
+object MyTest extends App {
+  val model = QaModel()
+  model.candidatePredictions(args(0)) foreach {d => println(s"${d.score} ${d.answer} ${d.answerState.execTuple.query}")}
 }

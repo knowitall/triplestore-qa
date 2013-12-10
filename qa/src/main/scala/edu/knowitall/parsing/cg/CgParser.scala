@@ -14,6 +14,7 @@ import edu.knowitall.execution.ListConjunctiveQuery
 import edu.knowitall.repr.sentence.Postagger
 import edu.knowitall.tool.postag.StanfordPostagger
 import edu.knowitall.tool.chunk.{Chunker => ToolChunker}
+import edu.knowitall.util.DummyChunker
 
 
 case class CgParser() {

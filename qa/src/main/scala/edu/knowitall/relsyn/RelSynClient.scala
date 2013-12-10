@@ -20,11 +20,12 @@ import edu.knowitall.tool.stem.Stemmer
 import edu.knowitall.tool.tokenize.Tokenizer
 import edu.knowitall.tool.postag.Postagger
 import org.slf4j.LoggerFactory
+import edu.knowitall.util.NlpTools
 
 case class RelSynClient(url: String = RelSynClient.defaultUrl, 
-    					stemmer: Stemmer = RelSynClient.defaultStemmer,
-    					tokenizer: Tokenizer = RelSynClient.defaultTokenizer,
-    					tagger: Postagger = RelSynClient.defaultPostagger,
+    					stemmer: Stemmer = NlpTools.stemmer,
+    					tokenizer: Tokenizer = NlpTools.tokenizer,
+    					tagger: Postagger = NlpTools.tagger,
     					maxHits: Int = RelSynClient.defaultMaxHits,
     					scale: Boolean = RelSynClient.defaultScale) {
   
@@ -112,8 +113,5 @@ case object RelSynClient {
   val defaultScale = conf.getBoolean("relsyn.scale")
   val minPmi = conf.getDouble("relsyn.minPmi")
   val maxPmi = conf.getDouble("relsyn.maxPmi")
-  lazy val defaultTokenizer = new ClearTokenizer
-  lazy val defaultPostagger = new StanfordPostagger
-  lazy val defaultStemmer = new MorphaStemmer
   val searchField = "rel1_exact"
 }

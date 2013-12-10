@@ -9,11 +9,12 @@ import edu.knowitall.tool.stem.Stemmer
 import edu.knowitall.tool.postag.Postagger
 import edu.knowitall.tool.postag.StanfordPostagger
 import edu.knowitall.tool.stem.MorphaStemmer
+import edu.knowitall.util.NlpTools
 
 class AbstractArgTransition(
-    tokenizer: Tokenizer = AbstractArgTransition.defaultTokenizer,
-    stemmer: Stemmer = AbstractArgTransition.defaultStemmer,
-    tagger: Postagger = AbstractArgTransition.defaultPostagger,
+    tokenizer: Tokenizer = NlpTools.tokenizer,
+    stemmer: Stemmer = NlpTools.stemmer,
+    tagger: Postagger = NlpTools.tagger,
     maxArgLength: Int = AbstractArgTransition.defaultMaxArgLength, 
     multipleParaphrases: Boolean = AbstractArgTransition.multipleParaphrases)
     extends Transition[QaState, QaAction] {
@@ -39,10 +40,10 @@ class AbstractArgTransition(
   
   private def abstractArgs(s: QuestionState) = 
     if (multipleParaphrases || !s.isParaphrased) {
-      val toks = stemString(s.question).toIndexedSeq
+      val toks = s.processed.lemmatizedTokens.map(_.lemma.toLowerCase).toIndexedSeq
       for {
         interval <- intervals(toks.size)
-        newState = AbstractedArgState(s.question, toks, interval)
+        newState = AbstractedArgState(s.question, s.processed, interval)
       } yield (action, newState)
     } else {
       Nil
@@ -57,7 +58,4 @@ case object AbstractArgTransition {
   val conf = ConfigFactory.load()
   val defaultMaxArgLength = conf.getInt("paraphrase.template.maxArgLength")
   val multipleParaphrases = conf.getBoolean("paraphrase.template.multipleParaphrases")
-  lazy val defaultTokenizer = new ClearTokenizer
-  lazy val defaultPostagger = new StanfordPostagger
-  lazy val defaultStemmer = new MorphaStemmer
 }

@@ -22,6 +22,7 @@ case class QaSearchProblem(
     extends SearchProblem[QaState, QaAction] {
 
   val initialState = QuestionState(question)
+  println(initialState.processed)
   
   override def successors(s: QaState) = transitionModel(s)
     
@@ -40,39 +41,5 @@ object QaSearchProblem {
   val transitionModel = new QaTransitionModel
   
   val costModel = new QaCostModel
-  
-}
-
-object MyTest extends App {
-  
-  val question = "What is the capital city of France?"
-  val state0 = QuestionState(question)
-  val trans = QaSearchProblem.transitionModel
-  val cost = new QaCostModel
-  val f = QaFeatures
-  
-  for {
-    (action1, state1) <- trans(state0)
-    feat1 = f(QaStep(question, state0, action1, state1))
-    (action2, state2) <- trans(state1)
-    feat2 = f(QaStep(question, state1, action2, state2))
-    (action3, state3) <- trans(state2)
-    feat3 = f(QaStep(question, state2, action3, state3))
-    (action4, state4) <- trans(state3)
-    feat4 = f(QaStep(question, state3, action4, state4))
-  } yield {
-    println(state0)
-    println(action1)
-    println(state1)
-    println(action2)
-    println(state2)
-    println(action3)
-    println(state3)
-    println(action4)
-    println(state4)
-    println((feat1 + feat2 + feat3 + feat4))
-    println
-  }
-  
   
 }

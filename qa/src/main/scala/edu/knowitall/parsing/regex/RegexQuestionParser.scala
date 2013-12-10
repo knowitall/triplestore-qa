@@ -16,16 +16,14 @@ import edu.knowitall.execution.TVariable
 import edu.knowitall.execution.Search.Field
 import edu.knowitall.execution.TVal
 import edu.knowitall.execution.TConjunct
-import edu.knowitall.tool.stem.MorphaStemmer
-import edu.knowitall.tool.chunk.OpenNlpChunker
 import scala.collection.JavaConversions._
-import edu.knowitall.tool.postag.StanfordPostagger
 import edu.knowitall.tool.chunk.Chunker
 import edu.knowitall.tool.postag.Postagger
+import edu.knowitall.util.NlpTools
 
 case class RegexQuestionParser(
-    chunker: Chunker = RegexQuestionParser.defaultChunker,
-    postagger: Postagger = RegexQuestionParser.defaultPostagger,
+    chunker: Chunker = NlpTools.chunker,
+    postagger: Postagger = NlpTools.tagger,
     patterns: Seq[RegexQuestionPattern] = RegexQuestionParser.defaultPatterns
     ) extends QuestionParser {
 
@@ -37,7 +35,7 @@ case class RegexQuestionParser(
       chunks.zip(postags).map { case (chunk, postag) =>
         new ChunkedToken(chunkSymbol=chunk.chunkSymbol, postagSymbol=postag.postagSymbol, string=postag.string, offset = postag.offset)}
     }
-    val lemmas = repostagged map MorphaStemmer.stemPostaggedToken
+    val lemmas = repostagged map NlpTools.stemmer.stemPostaggedToken
     lemmas
   }
 
@@ -56,7 +54,5 @@ case class RegexQuestionParser(
 }
 
 case object RegexQuestionParser {
-  lazy val defaultChunker = new OpenNlpChunker
-  lazy val defaultPostagger = new StanfordPostagger
   lazy val defaultPatterns = RegexQuestionPatterns.patterns
 }
