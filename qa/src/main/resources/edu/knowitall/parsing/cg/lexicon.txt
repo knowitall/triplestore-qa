@@ -1,60 +1,37 @@
 Verb := PatternTagger {
-        // Optional adverb
-        <pos="RB">
-        // Modal or other verbs
-        <pos="MD" | pos=/VB[DPZGN]?/>
-        // Optional particle/adverb
-        <pos="RP">? <pos="RB">?
-
+<pos="RB"> <pos="MD" | pos=/VB[DPZGN]?/> <pos="RP">? <pos="RB">?
 }
 
-Verb := PatternTagger {
-    // postaggers accidentally tag final verbs as nouns
-    <pos="NN">$
+Modifier := PatternTagger {
+<pos='$' | pos='PRP$' | pos='DT' | pos='JJ' | pos='JJS' | pos='JJR' | pos='POS' | pos='PRP' | pos='RB' | pos='RBR' | pos='RBS' | pos='VBN' | pos='VBG' | pos='CC'>
 }
 
 Word := PatternTagger {
-  <pos="$" | pos="PRP$" | pos="CD" | pos="DT" | pos=/JJS?R?/ | pos=/NNP?S?/ | pos="POS" | pos="PRP" | pos="RB" | pos=/RB[RS]/ | pos=/VB[NG]/>
+<pos='CD' | pos='DT' | pos='NN' | pos='NNS' | pos='NNP' | pos='NNPS' | pos='POS' | pos='VBN' | pos='VBG'>
 }
+
 Prep := PatternTagger {
   <pos="RB">? <pos="IN" | pos="TO" | pos="RP"> <pos="RB">?
 }
+
 ShortRelation := TypePatternTagger {
   // (VP?)+
   (?:@Verb (?:@Prep)?)+
 }
+
 LongRelation := TypePatternTagger {
   // (V(W*P)?)+
   (?:@Verb (?:(?:@Word)* (?:@Prep)+))+
 }
+
 Relation := TypePatternTagger {
   @ShortRelation | @LongRelation
 }
 
-IsaRule1 := TypePatternTagger {
-  @Word+
+Aux := PatternTagger {
+  <lemma='be' | lemma='have' | lemma='do'>
 }
 
-IsaRule2 := TypePatternTagger {
-    (?: <pos=/N.*/> | <pos=/J.*/> )+
-}
-
-BinaryRule1 := TypePatternTagger(@LongRelation)
-
-BinaryRule2 := TypePatternTagger(@ShortRelation)
-
-ArgRule1 := TypePatternTagger {
-  @Word 
-}
-
-ArgRule2 := TypePatternTagger {
-  @Word+
-}
-
-IdentityRule1 := TypePatternTagger {
-   <lemma=/who|what|which/>
-}
-
-IdentityRule1 := TypePatternTagger {
-   <lemma=/be|have|do/>
+ArgRule1 := {
+  (?:@Modifier* @Word+)+
 }
