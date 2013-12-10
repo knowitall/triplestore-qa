@@ -63,6 +63,17 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     }
   }
   
+  def templateArgFeatures(step: QaStep): SparseVector = step.toState match {
+    case s: AbstractedArgState => {
+      val sent = s.processed
+      val span = s.argInterval
+      val tags = sent.postags.slice(span.start, span.end)
+      val tagPat = tags.mkString(" ")
+      Some(s"template arg pos tags = $tagPat")
+    }
+    case _ => SparseVector.zero
+  }
+  
   val prefixAndDate = AnswerFeature { (q: String, etuple: ExecTuple) =>
     val prefix = NlpUtils.questionPrefix(q)
     val isDate = NlpUtils.isDate(etuple.answerString)
@@ -107,7 +118,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 prefixAndDate(s) +
 		  				 lightVerbRel(s) +
 		  				 relSynFeatures(s) +
-		  				 numSteps(s)
+		  				 numSteps(s) + 
+		  				 templateArgFeatures(s)
   
 }
 
