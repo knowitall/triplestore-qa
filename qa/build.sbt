@@ -1,10 +1,4 @@
-import AssemblyKeys._ 
-
-import com.typesafe.sbt.SbtStartScript
-
-seq(SbtStartScript.startScriptForClassesSettings: _*)
-
-net.virtualvoid.sbt.graph.Plugin.graphSettings
+import AssemblyKeys._
 
 scalaVersion := "2.10.2"
 
@@ -88,7 +82,7 @@ libraryDependencies += "com.typesafe" % "config" % "1.0.2"
 
 //libraryDependencies += "edu.washington.cs.knowitall" % "openregex-scala_2.10" % "1.0.4"
 
-libraryDependencies += "edu.washington.cs.knowitall.taggers" % "taggers-core_2.10" % "0.4" 
+libraryDependencies += "edu.washington.cs.knowitall.taggers" % "taggers-core_2.10" % "0.4"
 
 assemblySettings
 
@@ -99,7 +93,7 @@ mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
   }
 }
 
-ivyXML := 
+ivyXML :=
 <dependency org="org.eclipse.jetty.orbit" name="javax.servlet" rev="3.0.0.v201112011016">
 <artifact name="javax.servlet" type="orbit" ext="jar"/>
 </dependency>
@@ -118,18 +112,18 @@ resolvers ++= Seq("snapshots" at "http://oss.sonatype.org/content/repositories/s
 
 EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Resource
 
-assemblySettings                                                                
-                                                                                
-mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>            
-  {                                                                             
-    case x => {                                                                 
-      val oldstrat = old(x)                                                     
-      if (oldstrat == MergeStrategy.deduplicate) MergeStrategy.first            
-      else oldstrat                                                             
-    }                                                                           
-  }                                                                             
-} 
+assemblySettings
 
-excludedJars in assembly <<= (fullClasspath in assembly) map { cp => 
+mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
+  {
+    case x => {
+      val oldstrat = old(x)
+      if (oldstrat == MergeStrategy.deduplicate) MergeStrategy.first
+      else oldstrat
+    }
+  }
+}
+
+excludedJars in assembly <<= (fullClasspath in assembly) map { cp =>
   cp filter {c=> List("scalatest", "lucene", "shapeless", "solr") exists {c.data.getName contains _} }
 }
