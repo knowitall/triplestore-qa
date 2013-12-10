@@ -37,7 +37,11 @@ object QaTrainer extends App {
   
   val learner = new Perceptron(model, oracle)
   println("Learning...")
-  for (i <- 1 to numIters) learner.learn(inputs)
+  for (i <- 1 to numIters) {
+    learner.learn(inputs)
+    val file = new File(dir, s"model.$i.txt")
+    SparseVector.toFile(model.costModel.weights, file.toString())
+  }
   println("Done learning")
   
   SparseVector.toFile(model.costModel.weights, modelOutput.toString())
