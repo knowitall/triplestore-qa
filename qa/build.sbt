@@ -2,6 +2,8 @@ import AssemblyKeys._
 
 scalaVersion := "2.10.2"
 
+resolvers += "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository"
+
 resolvers += "KnowItAll" at "http://knowitall.cs.washington.edu/maven2"
 
 resolvers += "ClouderaRepo" at "https://repository.cloudera.com/content/repositories/releases"
@@ -44,13 +46,13 @@ libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0.M6-SNAP26"
 
 libraryDependencies += "net.liftweb" %% "lift-json" % "2.5"
 
-libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-stem-morpha" % "2.4.4" exclude("com.github.scopt","scopt")
+libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-stem-morpha" % "2.4.5-SNAPSHOT" exclude("com.github.scopt","scopt")
 
 libraryDependencies += "org.scalaj" %% "scalaj-http" % "0.3.10"
 
 libraryDependencies += "edu.berkeley.nlp" % "berkeleylm" % "1.1.2"
 
-libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-clear" % "2.4.4" exclude("com.github.scopt","scopt")
+libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-clear" % "2.4.5-SNAPSHOT" exclude("com.github.scopt","scopt")
 
 libraryDependencies += "com.twitter" %% "util-collection" % "6.3.6"
 
@@ -66,13 +68,13 @@ libraryDependencies ++= Seq(
 
 libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
-libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-conf-breeze" % "2.4.4"
+libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-conf-breeze" % "2.4.5-SNAPSHOT"
 
 libraryDependencies += "nz.ac.waikato.cms.weka" % "weka-dev" % "3.7.9"
 
-libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-chunk-opennlp" % "2.4.4"
+libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-chunk-opennlp" % "2.4.5-SNAPSHOT"
 
-libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-stanford" % "2.4.4"
+libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-postag-stanford" % "2.4.5-SNAPSHOT"
 
 libraryDependencies += "com.nicta" % "scoobi_2.10" % "0.7.0-RC2-cdh3"
 

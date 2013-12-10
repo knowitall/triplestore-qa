@@ -67,7 +67,7 @@ case class CgParser() {
     val n = sent.tokens.size
     val cky = new CKY(sent, n, tagger.getRules(sent), combinators)
     cky.parse
-    cky.cats
+    cky.nodes
   }
 
 }
@@ -75,7 +75,7 @@ case class CgParser() {
 object MyTest extends App {
 
   val p = CgParser()
-  val foo = p.parse("what is illegal in mexico and legal in the usa")
-  foo foreach println
+  val foo = p.parse(args(0))
+  println( foo.keys.maxBy(_.span.size))
   
 }
