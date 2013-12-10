@@ -85,5 +85,9 @@ case object QaModel {
 
 object MyTest extends App {
   val model = QaModel()
-  model.candidatePredictions(args(0)) foreach {d => println(s"${d.score} ${d.answer} ${d.answerState.execTuple.query}")}
+  model.candidatePredictions(args(0)) foreach {d => 
+    println(s"${d.score} ${d.answer} ${d.answerState.execTuple.query}")
+    println(d.features)
+    println
+  }
 }
