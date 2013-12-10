@@ -88,7 +88,12 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   }
   
   val relSynFeatures = (step: QaStep) => step.action match {
-    case rule: RelSynRule => SparseVector("relSynRule pmi" -> rule.pmi)
+    case rule: RelSynRule => {
+      val passivized = rule.rel2 == rule.rel1 + " by" && rule.inverted
+      val unpassivized = rule.rel1 == rule.rel2 + " by" && rule.inverted
+      val result = if (passivized | unpassivized) 1.0 else 0.0
+      SparseVector("relSynRule pmi" -> rule.pmi, "relSynRule passivized" -> result)
+    }
     case _ => SparseVector.zero
   }
   
