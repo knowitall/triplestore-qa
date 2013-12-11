@@ -8,12 +8,12 @@ import edu.knowitall.repr.sentence.Chunked
 import edu.knowitall.repr.sentence.Sentence
 import edu.knowitall.repr.sentence.Lemmatizer
 import edu.knowitall.repr.sentence.Chunker
-import edu.knowitall.tool.tokenize.ClearTokenizer
+import edu.knowitall.tool.tokenize.PTBTokenizer
 
 object NlpTools {
   lazy val tagger = new StanfordPostagger
   lazy val stemmer = new MorphaStemmer
-  lazy val tokenizer = new ClearTokenizer
+  lazy val tokenizer = new PTBTokenizer
   lazy val chunker = new OpenNlpChunker
   lazy val dummyChunker = DummyChunker(tagger)
   
