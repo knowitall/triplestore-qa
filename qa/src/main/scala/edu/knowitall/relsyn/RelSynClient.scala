@@ -21,18 +21,26 @@ import edu.knowitall.tool.tokenize.Tokenizer
 import edu.knowitall.tool.postag.Postagger
 import org.slf4j.LoggerFactory
 import edu.knowitall.util.NlpTools
+import com.twitter.util.LruMap
+import scala.collection.mutable.SynchronizedMap
 
 case class RelSynClient(url: String = RelSynClient.defaultUrl, 
     					stemmer: Stemmer = NlpTools.stemmer,
     					tokenizer: Tokenizer = NlpTools.tokenizer,
     					tagger: Postagger = NlpTools.tagger,
     					maxHits: Int = RelSynClient.defaultMaxHits,
-    					scale: Boolean = RelSynClient.defaultScale) {
+    					scale: Boolean = RelSynClient.defaultScale,
+    					cacheSize: Int = RelSynClient.defaultCacheSize,
+    					timeout: Int = RelSynClient.defaultTimeout) {
   
   private val client = new HttpSolrServer(url)
+  client.setConnectionTimeout(timeout)
+  client.setSoTimeout(timeout)
+  client.setMaxRetries(1)
   val logger = LoggerFactory.getLogger(this.getClass)
-
   
+  private val cache = new LruMap[(String, Int), List[RelSynRule]](cacheSize) with SynchronizedMap[(String, Int), List[RelSynRule]]
+
   private def getValue(n: String, d: SolrDocument): Option[Any] = {
     val value = d.getFieldValue(n)
     if (value == null) None else Some(value)
@@ -82,16 +90,25 @@ case class RelSynClient(url: String = RelSynClient.defaultUrl,
     result.mkString(" ")
   }
   
-  def relSyns(s: String, limit: Int = maxHits) = {
+  private def fetchRelSyns(s: String, limit: Int = maxHits) = {
     val stems = stemString(s)
     val query = new SolrQuery(s"""${RelSynClient.searchField}:"${stems}"""")
     logger.debug(s"Getting relSyns for ${stems}")
     query.setRows(maxHits)
     query.addSort(new SortClause("pmi", SolrQuery.ORDER.desc))
+    query.setParam("shards.tolerant", true)
     val resp = client.query(query)
     val pairs = resp.getResults().toList.flatMap(fromDoc)
     pairs.map(pair => pair.copy(pmi = scalePmi(pair.pmi)))
-    
+  }
+  
+  def relSyns(s: String, limit: Int = maxHits) = cache.get((s, limit)) match {
+    case Some(x) => x
+    case None => {
+      val results = fetchRelSyns(s, limit)
+      cache.put((s, limit), results)
+      results
+    }
   }
   
   def relSyns(c: TConjunct): List[RelSynRule] = c.values.get(Search.rel) match {
@@ -111,6 +128,8 @@ case object RelSynClient {
   val defaultUrl = conf.getString("relsyn.url")
   val defaultMaxHits = conf.getInt("relsyn.maxHits")
   val defaultScale = conf.getBoolean("relsyn.scale")
+  val defaultCacheSize = conf.getInt("relsyn.cacheSize")
+  val defaultTimeout = conf.getInt("relsyn.timeout")
   val minPmi = conf.getDouble("relsyn.minPmi")
   val maxPmi = conf.getDouble("relsyn.maxPmi")
   val searchField = "rel1_exact"
