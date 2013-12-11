@@ -32,7 +32,7 @@ class BeamSearch[State, Action](
   private def haveExpanded(n: Node[State, Action]) = expanded.contains(n.state)
   
   private def continueSearch = (goals.size < goalSize) && (frontier.size > 0)
-  
+
   private def searchLoop: Set[Node[State, Action]] = {
     var iter = 1
     do {
