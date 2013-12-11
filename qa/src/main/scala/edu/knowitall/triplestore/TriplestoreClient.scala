@@ -79,13 +79,17 @@ case class CachedTriplestoreClient(client: TriplestoreClient, size: Int = 1000)
  * URL should point to the Solr instance. "hits" is the default number of hits
  * that is returned by the search.
  */
-case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
+case class SolrClient(url: String, hits: Int = 10, timeout: Int = SolrClient.defaultTimeout) extends TriplestoreClient {
 
   def this() = this(SolrClient.defaultUrl, SolrClient.defaultMaxHits)
   
   val logger = LoggerFactory.getLogger(this.getClass) 
   
   val server = new HttpSolrServer(url)
+  
+  server.setConnectionTimeout(timeout)
+  server.setSoTimeout(timeout)
+  server.setMaxRetries(1)
   
   val defaultMaxHits = hits
 
@@ -94,6 +98,7 @@ case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
    */
   def count(q: TSQuery): Long = {
     val query = SolrClient.buildCountQuery(q)
+    query.setParam("shards.tolerant", true)
     val resp = server.query(query)
     val c = resp.getResults().getNumFound()
     logger.info(s"Found $c hits for query: ${q.toQueryString}")
@@ -107,6 +112,7 @@ case class SolrClient(url: String, hits: Int = 10) extends TriplestoreClient {
     logger.info(s"Searching for query: ${q.toQueryString}")
     val query = SolrClient.buildQuery(q)
     query.setRows(hits)
+    query.setParam("shards.tolerant", true)
     val resp = server.query(query)
     val results = resp.getResults().toList.map(SolrClient.docToTuple)
     val n = results.size
@@ -119,6 +125,7 @@ case object SolrClient {
   val conf = ConfigFactory.load()
   val defaultUrl = conf.getString("triplestore.url")
   val defaultMaxHits = conf.getInt("triplestore.maxHits")
+  val defaultTimeout = conf.getInt("triplestore.timeout")
     
   def escape(s: String): String = ClientUtils.escapeQueryChars(s)
   
