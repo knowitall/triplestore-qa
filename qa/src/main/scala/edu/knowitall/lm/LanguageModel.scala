@@ -9,6 +9,8 @@ import scalaj.http.HttpOptions
 import com.typesafe.config.ConfigFactory
 import edu.knowitall.util.MathUtils
 import org.slf4j.LoggerFactory
+import com.twitter.util.LruMap
+import scala.collection.mutable.SynchronizedMap
 
 trait LanguageModel {
   /**
@@ -22,13 +24,22 @@ trait LanguageModel {
   def query(s: Iterable[String]): List[(String, Double)]
 }
 
-case class KenLmServer(url: String, timeOut: Int, scale: Boolean = KenLmServer.scale) extends LanguageModel {
+case class KenLmServer(url: String, timeOut: Int, scale: Boolean = KenLmServer.scale, cacheSize: Int = KenLmServer.defaultCacheSize) extends LanguageModel {
   def this() = this(KenLmServer.defaultUrl, KenLmServer.defaultTimeout)
   val logger = LoggerFactory.getLogger(this.getClass)
   val root = s"${url}/score"
   val retries = KenLmServer.retries
   
-  override def query(s: String): Double = queryHelper(s)
+  private val cache = new LruMap[String, Double](cacheSize) with SynchronizedMap[String, Double]
+  
+  override def query(s: String): Double = cache.get(s) match {
+    case Some(x) => x
+    case None => {
+      val result = queryHelper(s)
+      cache.put(s, result)
+      result
+    }
+  }
   
   private def queryHelper(s: String, attempt: Int = 0): Double = {
     if (attempt > retries) {
@@ -36,7 +47,7 @@ case class KenLmServer(url: String, timeOut: Int, scale: Boolean = KenLmServer.s
     } else {
       try {
         logger.debug(s"Querying for one string (attempt ${attempt+1}/$retries): $s")
-        scaleValue(Http(root).params("q" -> s).asString.toDouble)
+        scaleValue(Http(root).option(HttpOptions.connTimeout(timeOut)).params("q" -> s).asString.toDouble)
       } catch {
         case e: Throwable => {
           queryHelper(s, attempt + 1)
@@ -74,4 +85,5 @@ case object KenLmServer {
   val minValue = conf.getDouble("lm.minValue")
   val maxValue = conf.getDouble("lm.maxValue")
   val scale = conf.getBoolean("lm.scale")
+  val defaultCacheSize = conf.getInt("lm.cacheSize")
 }
