@@ -8,8 +8,12 @@ import edu.knowitall.execution.TConjunct
 import edu.knowitall.execution.ListConjunctiveQuery
 import org.slf4j.LoggerFactory
 import edu.knowitall.execution.Search
+import com.typesafe.config.ConfigFactory
+import org.apache.solr.client.solrj.SolrServerException
+import java.io.StringWriter
+import java.io.PrintWriter
 
-class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient) 
+class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient, skipTimeouts: Boolean = RelSynTransition.defaultSkipTimeouts) 
   extends Transition[QaState, QaAction] {
   
   val logger = LoggerFactory.getLogger(this.getClass)
@@ -25,7 +29,7 @@ class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient)
       i <- 0 until conjs.size
       c = conjs(i)
       cx <- TConjunct.expandSetTLiteralsField(c, Search.rel)
-      rule <- client.relSyns(cx)
+      rule <- relSyns(c)//client.relSyns(cx)
       newc <- rule(cx)
       newconjs = conjs.updated(i, newc)
       newq = ListConjunctiveQuery(s.query.qVars, newconjs)
@@ -35,9 +39,25 @@ class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient)
       (rule, newstate)
     }
   }
+  
+  private def relSyns(c: TConjunct) = try {
+    client.relSyns(c)
+  } catch {
+    case e: SolrServerException => if (skipTimeouts) {
+      val sw = new StringWriter()
+      val pw = new PrintWriter(sw)
+      e.printStackTrace(pw)
+      logger.warn(s"Could not reformulate query: $c, got ${sw.toString}")
+      List.empty
+    } else {
+      throw e
+    }
+  }
 
 }
 
 object RelSynTransition {
+  val conf = ConfigFactory.load()
+  val defaultSkipTimeouts = conf.getBoolean("relsyn.skipTimeouts")
   lazy val defaultClient = new RelSynClient() 
 }
