@@ -18,6 +18,7 @@ abstract class SparseVector {
   def -(that: SparseVector): SparseVector = this.subtract(that)
   def *(x: Double): SparseVector = this.scalarMult(x)
   def *(that: SparseVector): Double = this.dot(that)
+  def /(x: Double): SparseVector = this.scalarMult(1/x)
   def activeComponents(that: SparseVector): Iterable[String] = (this.activeComponents ++ that.activeComponents).toList.distinct
 }
 
