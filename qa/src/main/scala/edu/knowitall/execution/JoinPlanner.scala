@@ -231,7 +231,9 @@ case class Joiner(client: TriplestoreClient) {
   def queryToTuples(q: QueryNode): TuplesNode = {
     logger.debug(s"Making TuplesNode from $q")
     val tuples = SearchFor(q.conj.name, q.conj.partialQuery)
-    TuplesNode(tuples, q.joinAttrs)
+    val result = TuplesNode(tuples, q.joinAttrs)
+    logger.debug(s"Done making TuplesNode from $q")
+    result
   }
 
 }
