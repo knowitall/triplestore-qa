@@ -14,17 +14,21 @@ import com.typesafe.config.ConfigFactory
 import edu.knowitall.util.MathUtils
 import edu.knowitall.search.qa.QaAction
 
-case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolean = ParaphraseTemplateClient.scale) {
+case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolean = ParaphraseTemplateClient.scale, timeout: Int = ParaphraseTemplateClient.defaultTimeout) {
   
   def this() = this(ParaphraseTemplateClient.defaultUrl, ParaphraseTemplateClient.defaultMaxHits, ParaphraseTemplateClient.scale)
   
   val logger = LoggerFactory.getLogger(this.getClass)
   val server = new HttpSolrServer(solrUrl)
+  server.setConnectionTimeout(timeout)
+  server.setSoTimeout(timeout)
+  server.setMaxRetries(1)
   val searchField = "template1_exact"
   def paraphrases(s: String, limit: Int = maxHits) = {
     val query = new SolrQuery(s"""${searchField}:"${s}"""")
     query.setRows(maxHits)
     query.addSort(new SortClause("pmi", SolrQuery.ORDER.desc))
+    query.setParam("shards.tolerant", true)
     logger.info(s"Sending query: ${query.toString()}")
     val resp = server.query(query)
     logger.info(s"Found ${resp.getResults().getNumFound()} hits")
@@ -44,6 +48,7 @@ case object ParaphraseTemplateClient {
   val scale = conf.getBoolean("paraphrase.template.scale")
   val defaultUrl = conf.getString("paraphrase.template.url")
   val defaultMaxHits = conf.getInt("paraphrase.template.maxHits")
+  val defaultTimeout = conf.getInt("paraphrase.template.timeout")
 }
 
 case class TemplatePair(template1: String, template2: String, pmi: Double, count1: Double, count2: Double, jointCount: Double) extends QaAction {
