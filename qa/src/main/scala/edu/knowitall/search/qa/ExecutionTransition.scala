@@ -23,8 +23,6 @@ class ExecutionTransition(
   
   private val executor = DefaultFilters.wrap(IdentityExecutor(client))
   
-  private final val action = ExecutionAction()
-  
   override def apply(s: QaState) = s match {
     case s: QueryState => executeQuery(s) 
     case _ => Nil
@@ -32,8 +30,8 @@ class ExecutionTransition(
   
   private def executeQuery(state: QueryState) = for {
     etuple <- execute(state.query)
-    newState = AnswerState(etuple.answerString, etuple)
-  } yield (action, newState)
+    newState = AnswerState(etuple.answerString)
+  } yield (ExecutionAction(etuple), newState)
   
   private def execute(query: ConjunctiveQuery) = try {
     executor.execute(query)
@@ -51,7 +49,7 @@ class ExecutionTransition(
 
 }
 
-case class ExecutionAction() extends QaAction
+case class ExecutionAction(execTuple: ExecTuple) extends QaAction
 
 object ExecutionTransition {
   val conf = ConfigFactory.load()

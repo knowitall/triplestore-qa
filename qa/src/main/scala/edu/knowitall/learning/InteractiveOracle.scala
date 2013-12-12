@@ -19,7 +19,7 @@ class InteractiveOracle extends CorrectnessModel[String, Derivation] {
     }
   
   private def derivString(deriv: Derivation) = 
-    printTuple(deriv.answerState.execTuple.tuple)
+    printTuple(deriv.execTuple.tuple)
     
   private def derivsToTable(derivs: Seq[Derivation]) = {
     val paired = derivs.zipWithIndex map { case (a, b) => List(b, a.answer, derivString(a)) }

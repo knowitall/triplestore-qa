@@ -131,8 +131,8 @@ case class TemplatePairFeature(f: Function2[String, TemplatePair, SparseVector])
 }
 
 case class AnswerFeature(f: Function2[String, ExecTuple, SparseVector]) extends Function[QaStep, SparseVector] {
-  override def apply(step: QaStep) = step.toState match {
-    case as: AnswerState => f(step.question, as.execTuple)
+  override def apply(step: QaStep) = (step.action, step.toState) match {
+    case (a: ExecutionAction, as: AnswerState) => f(step.question, a.execTuple)
     case _ => SparseVector.zero
   }
 }
