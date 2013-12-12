@@ -1,6 +1,7 @@
 package edu.knowitall.search
 
 import scala.collection.mutable.{Set => MutableSet}
+import scala.collection.mutable.{Map => MutableMap}
 import org.slf4j.LoggerFactory
 
 class BeamSearch[State, Action](
@@ -15,7 +16,7 @@ class BeamSearch[State, Action](
   private val costOrdering = Ordering.by {n: Node[State, Action] => (n.pathCost, n.state.hashCode)}
   private var frontier = List(rootNode)
   private val expanded = MutableSet.empty[State]
-  private val goals = MutableSet.empty[Node[State, Action]]
+  private val goals = MutableMap.empty[State, Node[State, Action]]
       
   private def setFrontier(nodes: Iterable[Node[State, Action]]) = {
     val distinctNodes = nodes.groupBy(_.state) map {
@@ -26,7 +27,10 @@ class BeamSearch[State, Action](
   
   private def addGoalNode(node: Node[State, Action]) = {
     assert(isGoal(node))
-    goals.add(node)
+    val state = node.state
+    val otherNode = goals.getOrElse(state, node)
+    val bestNode = List(node, otherNode).minBy(_.pathCost)
+    goals.put(state, bestNode)
   }
   
   private def haveExpanded(n: Node[State, Action]) = expanded.contains(n.state)
@@ -61,7 +65,7 @@ class BeamSearch[State, Action](
       iter += 1
       
     } while (continueSearch)
-    goals.toSet
+    goals.values.toSet
   }
   
   def search = searchLoop.toList.sortBy(_.pathCost).take(goalSize)
