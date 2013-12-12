@@ -4,14 +4,16 @@ import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.execution.Tuple
 import edu.knowitall.tool.stem.MorphaStemmer
 import scala.Option.option2Iterable
+import edu.knowitall.execution.TLiteral
+import edu.knowitall.execution.Search
 
 object QueryTupleSimilarity {
   
   def normalize(ss: List[String]): List[String] = ss.map(_.toLowerCase()).map(MorphaStemmer.stem)
   
-  def tokenize(s: String) = s.split(" ")
+  def tokenize(s: String) = s.split(" ").toList
   
-  def queryWords(q: ConjunctiveQuery, t: Tuple): List[String] = {
+  def queryWords(q: ConjunctiveQuery): List[String] = {
     val literalFields = for (c <- q.conjuncts; (field, literal) <- c.literalFields) yield literal.value
     normalize(literalFields.flatMap(tokenize))
   }
@@ -35,9 +37,48 @@ object QueryTupleSimilarity {
   }
   
   def similarity(q: ConjunctiveQuery, t: Tuple): Double = {
-    val qws = queryWords(q, t)
+    val qws = queryWords(q)
     val tws = tupleWords(q, t)
     jaccard(qws, tws)
   }
+  
+  def tupleFieldWords(q: ConjunctiveQuery, t: Tuple, fields: Set[Search.Field]) = {
+    val values = for {
+      c <- q.conjuncts
+      (field, literal) <- c.literalFields
+      if fields.contains(field)
+      value <- t.getString(s"${c.name}.${field}")
+    } yield value
+    normalize(values.flatMap(tokenize))
+  }
+  
+  def queryFieldWords(q: ConjunctiveQuery, fields: Set[Search.Field]) = {
+    val values = for {
+      c <- q.conjuncts
+      (field, literal) <- c.literalFields
+      if fields.contains(field)
+      value = literal.value
+    } yield value
+    normalize(values.flatMap(tokenize))
+  }
+  
+  def argSimilarity(q: ConjunctiveQuery, t: Tuple) = {
+    val qws = queryFieldWords(q, Set(Search.arg1, Search.arg2))
+    val tws = tupleFieldWords(q, t, Set(Search.arg1, Search.arg2))
+    jaccard(qws, tws)
+  }
+  
+  def relSimilarity(q: ConjunctiveQuery, t: Tuple) = {
+    val qws = queryFieldWords(q, Set(Search.rel))
+    val tws = tupleFieldWords(q, t, Set(Search.rel))
+    jaccard(qws, tws)
+  }
+
+  def questionQuerySimilarity(query: ConjunctiveQuery, ques: String) = {
+    val queryws = queryWords(query)
+    val quesws = normalize(tokenize(ques))
+    jaccard(queryws, quesws)
+  }
+
 
 }
