@@ -65,7 +65,7 @@ case object QASystemOutput {
   val configFile = conf.getString("eval.config.file")
   val nameFile = conf.getString("eval.name.file")
   def loadRecords(path: String): List[QAOutputRecord] = {
-    val lines = Source.fromFile(new File(path, outputFile)).getLines
+    val lines = Source.fromFile(new File(path, outputFile), "UTF8").getLines
     lines.map(QAOutputRecord.fromLine).toList
   }
   
