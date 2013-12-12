@@ -48,8 +48,12 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   val querySimilarity = AnswerFeature { (q: String, etuple: ExecTuple) =>
     val query = etuple.query
     val tuple = etuple.tuple
-    val sim = QueryTupleSimilarity.similarity(query, tuple)
-    ("evidence similarity with query", sim)
+    val relSim = QueryTupleSimilarity.relSimilarity(query, tuple)
+    val argSim = QueryTupleSimilarity.argSimilarity(query, tuple)
+    val quesSim = QueryTupleSimilarity.questionQuerySimilarity(query, q)
+    SparseVector("evidence similarity with query (rels only)" -> relSim,
+    			 "evidence similarity with query (args only)" -> argSim,
+    			 "query similarity with question" -> quesSim)
   }
   
   val templatePairPmi = TemplatePairFeature { (q: String, pair: TemplatePair) =>
@@ -82,6 +86,12 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     } else {
       None
     }
+  }
+  
+  val prefixAndShape = AnswerFeature { (q: String, etuple: ExecTuple) =>
+    val prefix = NlpUtils.questionPrefix(q)
+    val shape = NlpUtils.stringShape(etuple.answerString, 4)
+    s"question prefix = '$prefix' and answer shape = $shape"
   }
   
   val lightVerbRel = QueryFeature { (q: String, query: ConjunctiveQuery) =>
@@ -119,7 +129,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 lightVerbRel(s) +
 		  				 relSynFeatures(s) +
 		  				 numSteps(s) + 
-		  				 templateArgFeatures(s)
+		  				 templateArgFeatures(s) +
+		  				 prefixAndShape(s)
   
 }
 
