@@ -1,10 +1,73 @@
-relSynRule pmi	1
-template pair pmi	1
-answer is linked to freebase	1
-paraphrase lm	1
-evidence similarity with query	1
-query relation is light verb	-1
-steps	-1
-question prefix = 'what year' and isDate	1
-question prefix = 'when' and isDate	1
-question prefix = 'where' and isDate	-1
+question prefix = 'what' and isDate	-0.8160735705717713
+template arg pos tags = FW	0.0
+action type = RelSynRule	-0.6613354658136745
+template arg pos tags = NN NN NN VB	-1.1651339464214314
+template arg pos tags = VBP JJ NN	0.0
+relSynRule pmi	0.24177052445861635
+template arg pos tags = VBN	0.0
+template arg pos tags = WDT VB NN NNS	-0.3706517393042783
+template arg pos tags = NN JJ	-0.46981207516993206
+template arg pos tags = NN VBP NNS	-0.9168332666933227
+template pair pmi	2.3402769450157574
+template arg pos tags = NN NN VB	-1.0975609756097562
+template arg pos tags = NN NNS LS	0.0
+template arg pos tags = CD NN	-0.1451419432227109
+template arg pos tags = NN JJ NN	0.0
+template arg pos tags = NN CC NN	-0.35585765693722515
+answer is linked to freebase	0.12155137944822071
+template arg pos tags = IN JJ NN	0.0
+template arg pos tags = VBP NN NN	0.5061975209916034
+template arg pos tags = JJ JJ NN	1.1643342662934826
+template arg pos tags = DT CD JJ NN	-0.35945621751299484
+template arg pos tags = NN NN NN	0.6477409036385446
+answer from namespace 'reverb'	0.05597760895641746
+template arg pos tags = RB JJ	0.0
+template arg pos tags = JJ NN	1.661735305877649
+template arg pos tags = DT JJ	-0.9644142343062775
+template arg pos tags = NNP	0.4778088764494203
+template arg pos tags = JJ NN VB TO	0.0
+template arg pos tags = VB DT JJ NN	0.9644142343062775
+template arg pos tags = VBN NN VB	0.0
+paraphrase lm	0.2670223190723714
+template arg pos tags = NN NN IN NN	0.6885245901639344
+template arg pos tags = DT NN	1.1067572970811674
+template arg pos tags = IN NN	-1.0771691323470611
+num conjuncts	-1.5245901639344264
+answer from namespace 'nell'	0.7832866853258696
+template arg pos tags = NN NN NN NN	0.6341463414634146
+answer from namespace 'freebase'	1.8612554978008797
+evidence similarity with query	0.22223491106095916
+template arg pos tags = NN IN JJ NN	0.572171131547381
+question prefix = 'when' and isDate	0.9996001599360256
+query relation is light verb	0.035185925629748205
+question prefix = 'where' and isDate	-0.9996001599360256
+template arg pos tags = JJ NNP	-0.4778088764494203
+template arg pos tags = VB NN JJ IN	0.46981207516993206
+template arg pos tags = NN NN JJ	-0.8856457417033187
+template arg pos tags = DT IN NN NN	-0.5781687325069972
+template arg pos tags = NN NN LS	0.0
+template arg pos tags = NN NN	-2.2878848460615755
+template arg pos tags = VB	0.0
+template arg pos tags = NN IN DT NN	2.29828068772491
+template arg pos tags = RB	0.0
+template arg pos tags = DT JJ NN	-1.7385045981607357
+template arg pos tags = DT CD NN	0.08476609356257492
+steps	-1.7391043582566974
+action type = AbstractArgAction	-1.1483406637345062
+answer from namespace 'openie4'	-0.6153538584566174
+template arg pos tags = VB NNP VB	0.0
+template arg pos tags = JJ JJ	0.0
+template arg pos tags = VB DT NN	-0.9576169532187125
+template arg pos tags = NN NN VBP NN	0.0
+template arg pos tags = JJ	0.0
+question prefix = 'what year' and isDate	0.9996001599360256
+action type = TemplatePair	-1.1483406637345062
+template arg pos tags = RB RB	0.463014794082367
+action type = RegexQuestionPattern	0.0
+template arg pos tags = WP VBP NNS	-0.6489404238304678
+template arg pos tags = NN VB	0.0
+relSynRule passivized	0.0
+template arg pos tags = NN	1.3122750899640145
+template arg pos tags = DT NN NN	-0.5893642542982807
+template arg pos tags = NN NN JJ JJ	0.8856457417033187
+action type = ExecutionAction	0.0
