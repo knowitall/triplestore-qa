@@ -20740,14 +20740,14 @@ LABEL	0	after how many years are the olympic games held?	1022 Olympiada
 LABEL	0	how large is kony army?	Entertainment Weekly annotation index
 LABEL	0	under what political system does the united states government operate?	William P. Fessenden
 LABEL	0	what activities are there to do in greece?	To Vima
-LABEL	1	what airport is nearest to rome?	Leonardo da Vinci???Fiumicino Airport
+LABEL	1	what airport is nearest to rome?	Leonardo da Vinci���Fiumicino Airport
 LABEL	1	what all movies has taylor lautner been in?	Valentine's Day
-LABEL	0	what animal represents california?	California???s 32nd Assembly District
+LABEL	0	what animal represents california?	California���s 32nd Assembly District
 LABEL	0	what are all the countries in north africa?	South Africa
 LABEL	0	what are all the songs justin bieber wrote?	Mario Strack
 LABEL	0	what are john terry's children called?	Sue Terry
 LABEL	0	what are physical features of egypt?	Akhbar el-Yom
-LABEL	0	what are some famous people from el salvador?	Hurricane Cesar???Douglas
+LABEL	0	what are some famous people from el salvador?	Hurricane Cesar���Douglas
 LABEL	1	what are some major events in venezuela?	Venezuelan War of Independence
 LABEL	1	what are the four main languages spoken in spain?	Spanish Language
 LABEL	0	what are the four nations of the united kingdom?	Kingdom of Great Britain
@@ -20789,7 +20789,7 @@ LABEL	1	what countries does tomtom western europe include?	United Kingdom, with 
 LABEL	1	what countries have german as the official language?	South Africa
 LABEL	0	what countries share a land border with indonesia?	Paniai Lakes
 LABEL	0	what countries share borders with spain?	Antigua and Barbuda
-LABEL	1	what countries speak french as a first language?	C??te d???Ivoire
+LABEL	1	what countries speak french as a first language?	C��te d���Ivoire
 LABEL	0	what countries were part of the spanish empire?	United Kingdom
 LABEL	0	what country borders slovakia?	Embassy of Slovakia in Ottawa
 LABEL	0	what county is brentwood tennessee in?	North Carolina
@@ -20838,7 +20838,7 @@ LABEL	0	what did queen victoria say about the suffragettes?	Nicholas and Alexand
 LABEL	0	what did the ancient mayans predict?	Jevgenij Mironov
 LABEL	0	what did the ancient romans speak?	Rosie Malek-Yonan
 LABEL	0	what did whoopi goldberg won a grammy for?	21st People's Choice Awards
-LABEL	1	what district does nancy pelosi represent?	California???s 8th congressional district
+LABEL	1	what district does nancy pelosi represent?	California���s 8th congressional district
 LABEL	0	what do people in australia speak?	Jeannie Lewis
 LABEL	0	what do people in czech republic speak?	Michal Prokop
 LABEL	0	what do people in jamaica speak?	Clinton Fearon
@@ -20854,7 +20854,7 @@ LABEL	0	what does australia use for currency?	United States dollar
 LABEL	1	what does barbara bush do for work?	Millie's book
 LABEL	0	what does lauren conrad major in?	Red River Canyon Affair
 LABEL	0	what does matt damon play in?	Entertainment Weekly annotation index
-LABEL	1	what does monsanto own?	Roundup Ready??
+LABEL	1	what does monsanto own?	Roundup Ready�� 
 LABEL	1	what famous people are from barbados?	Dennis Bovell
 LABEL	1	what famous people are from el salvador?	Wilfredo Iraheta
 LABEL	0	what famous people came from delaware?	Public Defender
@@ -20904,7 +20904,7 @@ LABEL	0	what is the currency in turkey called?	United States dollar
 LABEL	0	what is the currency of brazil now?	United States dollar
 LABEL	0	what is the currency of sweden in 2010?	United States dollar
 LABEL	0	what is the currency of the czech republic?	United States dollar
-LABEL	1	what is the current time in kauai hawaii?	Hawaii???Aleutian Time Zone
+LABEL	1	what is the current time in kauai hawaii?	Hawaii���Aleutian Time Zone
 LABEL	1	what is the main language used in china?	Standard Mandarin
 LABEL	0	what is the money of switzerland called?	United States of America
 LABEL	0	what is the name of the currency used in peru?	United States dollar
@@ -20977,7 +20977,7 @@ LABEL	0	what places are in the west midlands?	Foundry Trade Journal
 LABEL	0	what places in japan were bombed?	United States of America
 LABEL	0	what political party did andrew johnson belong to?	United States House of Representatives
 LABEL	0	what political party does barack obama represent?	United States Department of State
-LABEL	0	what political party was hitler in?	1991 Soviet coup d'??tat attempt
+LABEL	0	what political party was hitler in?	1991 Soviet coup d'��tat attempt
 LABEL	0	what position did stanley matthews play?	United States of America
 LABEL	0	what position did vince lombardi play in college?	Head coach
 LABEL	1	what position did vince lombardi play?	Head coach
@@ -21021,7 +21021,7 @@ LABEL	1	what there to do in salt lake city utah?	Solitude Mountain Resort
 LABEL	0	what things did martin luther king do?	Martin Luther King Bridge
 LABEL	0	what time does american horror story air?	The Birds
 LABEL	0	what time does registration open portland state?	Pacific Time Zone
-LABEL	1	what time in hilo hawaii?	Hawaii???Aleutian Time Zone
+LABEL	1	what time in hilo hawaii?	Hawaii���Aleutian Time Zone
 LABEL	1	what time zone is greensburg indiana?	Central Time Zone
 LABEL	1	what time zone is in the bahamas?	Eastern Time Zone
 LABEL	1	what time zone is pennsylvania in right now?	Eastern Time Zone
@@ -21033,13 +21033,13 @@ LABEL	1	what to do in richardson dallas?	FC Dallas Stadium
 LABEL	0	what to do today in atlanta with kids?	United States Department of Housing and Urban Development
 LABEL	0	what to do with kids in asheville nc?	United States Department of Housing and Urban Development
 LABEL	0	what to see in christchurch new zealand?	The Tricksters
-LABEL	1	what to see in montreal downtown?	Mus??e d'art contemporain de Montr??al
+LABEL	1	what to see in montreal downtown?	Mus��e d'art contemporain de Montr��al
 LABEL	0	what to see in phoenix arizona?	The last gunfighter.
 LABEL	0	what to see in toronto top 10?	Cities I've visited
 LABEL	1	what to visit in atlanta?	Margaret Mitchell House & Museum
 LABEL	1	what to visit in denver?	Westin Westminster
 LABEL	1	what to visit in london city?	2012 Summer Olympics
-LABEL	1	what type of art did pablo picasso paint?	Autoportrait ?? la palette
+LABEL	1	what type of art did pablo picasso paint?	Autoportrait �� la palette
 LABEL	0	what type of books did agatha christie wrote?	The Complete Christie: An Agatha Christie Encyclopedia
 LABEL	0	what type of cancer did eva peron die from?	Pablove Foundation
 LABEL	0	what type of cancer did eva peron have?	Pablove Foundation
@@ -21066,7 +21066,7 @@ LABEL	0	what type of music did vivaldi compose?	Creative Thinkers International
 LABEL	0	what type of sports do japanese play?	The Griphouse
 LABEL	1	what types of art did andy warhol do?	Camouflage Self-Portrait
 LABEL	0	what university did gordon brown attend?	University of Manitoba
-LABEL	0	what university did obama graduated from?	Ad??o Pretto
+LABEL	0	what university did obama graduated from?	Ad��o Pretto
 LABEL	0	what vegetables can i plant in november in southern california?	Blissful Master Index
 LABEL	0	what victory was andrew jackson most famous for?	United States Army
 LABEL	0	what war did the us lose the most soldiers?	The Face of War
@@ -21095,13 +21095,13 @@ LABEL	0	what year did adam morrison get drafted?	Charlotte Bobcats
 LABEL	0	what year did houston rockets win their first championship?	1995 NBA Finals
 LABEL	0	what year was george w bush elected?	Alameda County
 LABEL	0	what year was kenya moore crowned miss usa?	George Hutchings
-LABEL	0	what year was lebron james rookie season?	2005???06 NBA season
+LABEL	0	what year was lebron james rookie season?	2005���06 NBA season
 LABEL	1	what's there to see in atlanta?	Margaret Mitchell House & Museum
 LABEL	0	when did arsenal won the league?	Tom Strong
 LABEL	0	when did bill clinton go to college?	Spin Cycle: Inside the Clinton Propaganda Machine
 LABEL	0	when did charles goodyear invented rubber?	Improvement in the Art of Preparing Caoutchouc
 LABEL	0	when did chipper jones get drafted?	Atlanta Braves
-LABEL	0	when did liverpool fc last win the champions league?	1991???92 FA Cup
+LABEL	0	when did liverpool fc last win the champions league?	1991���92 FA Cup
 LABEL	0	when did the big earthquake hit san francisco?	Earthquake: The Big One
 LABEL	0	when did the detroit pistons last win the championship?	1990 NBA Finals
 LABEL	0	when did the jews stop making animal sacrifices?	Two Monkeys Stealing Fruit from a Basket
@@ -21136,7 +21136,7 @@ LABEL	0	where did john mayer go to college?	New York City
 LABEL	0	where did jovan belcher kill himself?	United Kingdom
 LABEL	0	where did kevin james go to college?	Los Angeles
 LABEL	0	where did kevin love go to college?	Lake Oswego
-LABEL	1	where did kobe earthquake happen?	Hy??go Prefecture
+LABEL	1	where did kobe earthquake happen?	Hy��go Prefecture
 LABEL	1	where did louis sachar grow up?	New York
 LABEL	1	where did madonna grew up?	New York City
 LABEL	0	where did morgan freeman graduate?	New York City
@@ -21174,7 +21174,7 @@ LABEL	0	where is kansas city?	Neosho Falls
 LABEL	1	where is mali located?	Senegal River
 LABEL	0	where is midlothian scotland?	United States of America
 LABEL	0	where is mount st helens volcano?	Kanlaon Volcano
-LABEL	0	where is olympic national park wa?	??erdap national park
+LABEL	0	where is olympic national park wa?	��erdap national park
 LABEL	0	where is president kennedy buried?	Architectural Association School of Architecture
 LABEL	0	where is south portland?	Portland Golf Club
 LABEL	1	where is staten island ferry?	Perth Amboy
@@ -21183,7 +21183,7 @@ LABEL	0	where is the ellen degenerous show filmed?	Entertainment Weekly annotati
 LABEL	0	where is the seat of the african union?	Monroe County
 LABEL	0	where is the thames river source?	Lake Saint Clair
 LABEL	0	where is the university of maryland medical school?	University of Texas of the Permian Basin
-LABEL	0	where is tunis on a map?	Tunis???Carthage International Airport
+LABEL	0	where is tunis on a map?	Tunis���Carthage International Airport
 LABEL	0	where is walton indiana?	Ohio River
 LABEL	0	where obama went to school?	United Kingdom
 LABEL	0	where should a family stay in paris?	Charles de Gaulle Airport
@@ -21201,7 +21201,7 @@ LABEL	1	where was the boston tea party 1773?	Greater Boston
 LABEL	1	where was the ottoman empire based?	Near East
 LABEL	0	where was the vietnam war location?	Tiger Airways Australia
 LABEL	0	where were the great pyramids of giza built?	Great Pyramid of Giza
-LABEL	1	which airport to fly into rome?	Leonardo da Vinci???Fiumicino Airport
+LABEL	1	which airport to fly into rome?	Leonardo da Vinci���Fiumicino Airport
 LABEL	0	which barcelona airport is closest to the port?	USS Chain, Cruise CN7-08, 1959-07-15 to 1959-07-23
 LABEL	1	which countries have spanish as their main language?	United States of America
 LABEL	0	which countries in africa were slaves taken from?	South Africa
@@ -21283,7 +21283,7 @@ LABEL	1	who is in charge of libya now?	Muammar al-Gaddafi
 LABEL	0	who is in paul ryan's family?	Blissful Master Index
 LABEL	1	who is in the american league in baseball?	Bill McKinley
 LABEL	0	who is keyshia cole dad?	Yvonne Cole
-LABEL	0	who is martin luther king jr facts?	S??ren Kierkegaard
+LABEL	0	who is martin luther king jr facts?	S��ren Kierkegaard
 LABEL	0	who is moira in x men?	(For each individual x (it is possible that  (x obtains personal development)
 LABEL	1	who is my representative in illinois house?	Lyman Trumbull
 LABEL	0	who is nicolas cage married too?	Nicolas Cage (Jimmy Fallon)
