@@ -18,6 +18,27 @@ import edu.knowitall.repr.sentence.Chunked
 
 object NlpUtils {
   
+  /**
+   * Taken from Factorie: https://github.com/factorie/factorie/blob/master/src/main/scala/cc/factorie/app/strings/package.scala
+   */
+  def stringShape(word:String, maxRepetitions:Int): String = {
+    val sb = new StringBuffer
+    var i = 0; var c = 'x'; var prevc = 'x'; var repetitions = 0
+    while (i < word.length) {
+      val char = word(i)
+      if (Character.isUpperCase(char)) c = 'A'
+      else if (Character.isLowerCase(char)) c = 'a'
+      else if (Character.isDigit(char)) c = '1'
+      else if (Character.isWhitespace(char)) c = ' '
+      else c = char
+      if (c == prevc) repetitions += 1
+      else { prevc = c; repetitions = 0 }
+      if (repetitions < maxRepetitions) sb.append(c)
+      i += 1
+    }
+    sb.toString
+  }
+  
   val months = Set("january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december")
   val days = Set("sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday")
   val year = """^\d\d\d\d$""".r
