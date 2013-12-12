@@ -13,8 +13,9 @@ case class QAOutputRecord(question: String, answer: String, ascore: Double, deri
   override def score = ascore
 }
 case object QAOutputRecord {
-  def fromLine(line: String) = line.split("\t") match {
+  def fromLine(line: String) = line.trim.split("\t") match {
     case Array(q, a, s, d) => QAOutputRecord(q, a, s.toDouble, d)
+    case Array(q, a, s) => QAOutputRecord(q, a, s.toDouble, "")
     case _ => throw new IllegalArgumentException(s"Could not parse line: $line")
   }
   def fromScoredAnswerGroup(question: String, group: ScoredAnswerGroup) = {
