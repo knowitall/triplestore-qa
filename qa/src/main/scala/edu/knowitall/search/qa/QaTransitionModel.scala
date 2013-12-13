@@ -11,10 +11,11 @@ import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.search.Transition
 import edu.knowitall.relsyn.RelSynClient
 import edu.knowitall.util.NlpTools
+import com.typesafe.config.ConfigFactory
 
 class QaTransitionModel extends Transition[QaState, QaAction] {
   
-  lazy val parser = new RegexQuestionParser()
+  lazy val regexParser = new RegexQuestionParser()
   
   // Remote services
   lazy val templateClient = new ParaphraseTemplateClient
@@ -25,15 +26,27 @@ class QaTransitionModel extends Transition[QaState, QaAction] {
   // Individual transition functions
   lazy val absArgTransition = new AbstractArgTransition()
   lazy val templateTransition = new TemplateTransition(templateClient)
-  lazy val parseTransition = new RegexParseTransition(parser)
+  lazy val regexParseTransition = new RegexParseTransition(regexParser)
   lazy val executeTransition = new ExecutionTransition(triplestoreClient)
   lazy val relSynTransition = new RelSynTransition(relSynClient)
   
-  val model = absArgTransition + 
-  			  templateTransition +
-  			  parseTransition +
-  			  relSynTransition +
-  			  executeTransition
+  val conf = ConfigFactory.load()
+  
+  lazy val components = Map(
+    "regexParse" -> regexParseTransition,
+    "templateParaphrase" -> (absArgTransition + templateTransition),
+    "relSyn" -> relSynTransition,
+    "execute" -> executeTransition
+  )
+  
+  lazy val activeComponents = for {
+    name <- components.keys
+    active = conf.getBoolean(s"search.transitions.$name")
+    if active
+    component = components(name)
+  } yield component
+  
+  lazy val model = activeComponents.reduce(_ + _)
   			  
   override def apply(s: QaState) = model(s)
 
