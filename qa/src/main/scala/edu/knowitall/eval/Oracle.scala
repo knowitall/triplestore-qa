@@ -99,12 +99,14 @@ class FileOracle(path: String) extends UpdateableOracle {
     scala.collection.mutable.Map[(String, String), Boolean]()
   }
    
-  val correctOutputs = {
+  def correctOutputs = {
     val pairs = for ((input, output) <- labels.keys; if labels.getOrElse((input, output), false)) yield (input, output)
     val grouped =  pairs.groupBy(_._1).map { case (k,v) => (k,v.map(_._2).toList)} 
     grouped.toMap
   }
-  override def inputs = labels.keys.map(_._1).toList
+  override def inputs = { 
+    labels.keys.map(_._1).toList
+  }
   def normalize = Oracle.normalize _
   override def getLabel(input: String, output: String) = {
     val i = normalize(input)
@@ -123,5 +125,7 @@ class FileOracle(path: String) extends UpdateableOracle {
     for (((i, o), l) <- labels) output.println(s"LABEL\t$l\t$i\t$o")
     output.close()
   }
-  def update(i: String, o: String, label: Boolean) = labels += ((i, o) -> label)
+  def update(i: String, o: String, label: Boolean) = {
+    labels += ((normalize(i), normalize(o)) -> label)
+  }
 }
