@@ -12,6 +12,8 @@ import java.io.PrintWriter
 import edu.knowitall.util.Counter
 import edu.knowitall.model.QaModel
 import edu.knowitall.model.Derivation
+import java.text.SimpleDateFormat
+import java.util.Calendar
 
 class QaTrainer(model: QaModel, oracle: CorrectnessModel[String, Derivation]) extends HiddenVariableModel[String, Derivation] {
   
@@ -40,12 +42,24 @@ class QaTrainer(model: QaModel, oracle: CorrectnessModel[String, Derivation]) ex
 }
 
 object QaTrainer extends App {
+  
+  def timestamp = {
+    val fmt = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss")
+    val today = Calendar.getInstance.getTime
+    fmt.format(today)
+  }
 
   val conf = ConfigFactory.load()
+  
+  val oracleMode = conf.getString("learning.oracleMode")
+  val labelsPath = conf.getString("learning.labelsPath")
+  val inputsPath = conf.getString("learning.inputsPath")
+  val outputsPath = conf.getString("learning.outputsPath")
+  val numIters = conf.getInt("learning.numIters")
+  val runName = if (conf.hasPath("learning.runName")) conf.getString("learning.runName") else "unnamed"
 
-  val labelsPath = args(0)
-  val inputsPath = args(1)  
-  val dir = new File(args(2))
+      
+  val dir = new File(outputsPath, s"${runName}-${timestamp}")
   if (dir.exists() && !dir.isDirectory()) 
     throw new IllegalStateException(s"$dir exists but is not a directory")
   if (!dir.exists()) dir.mkdirs()
@@ -55,9 +69,14 @@ object QaTrainer extends App {
   configOutput.write(conf.root().render)
   configOutput.close()
   
-  val numIters = conf.getInt("perceptron.numIters")
   
-  val oracle = new MemoryInteractiveOracle(labelsPath)
+  
+  val oracle = oracleMode match {
+    case "interactive" => new MemoryInteractiveOracle(labelsPath)
+    case "file" => new LabeledDataOracle(labelsPath)
+    case _ => throw new IllegalStateException(s"Invalid oracle mode: $oracleMode")
+  }
+  
   val inputs = Source.fromFile(inputsPath, "UTF8").getLines.map(Oracle.normalize).toList
   
   val model = QaModel()
@@ -68,6 +87,8 @@ object QaTrainer extends App {
     trainer.learn(inputs)
     val file = new File(dir, s"model.$i.txt")
     SparseVector.toFile(model.costModel.weights, file.toString())
+    val avgFile = new File(dir, s"model.$i.avg.txt")
+    SparseVector.toFile(trainer.averagedWeights, avgFile.toString())
   }
   println("Done learning")
   
