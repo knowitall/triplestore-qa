@@ -9,6 +9,8 @@ import edu.knowitall.lm.KenLmServer
 import edu.knowitall.util.NlpUtils
 import edu.knowitall.execution.Search
 import edu.knowitall.relsyn.RelSynRule
+import com.rockymadden.stringmetric.StringMetric
+import edu.knowitall.execution.Tuple
 
 object QaFeatures extends Function[QaStep, SparseVector] {
   
@@ -54,6 +56,32 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     SparseVector("evidence similarity with query (rels only)" -> relSim,
     			 "evidence similarity with query (args only)" -> argSim,
     			 "query similarity with question" -> quesSim)
+  }
+  
+  def freebaseLink(key: String, tuple: Tuple) = tuple.getString(key + "_fbid_s")
+  
+  val joinSimilarity = AnswerFeature { (q: String, etuple: ExecTuple) =>
+    val query = etuple.query
+    val tuple = etuple.tuple
+    val sims = for {
+      (key1, key2) <- query.joinPairs
+      val1 <- tuple.getString(key1)
+      val2 <- tuple.getString(key2)
+      s <- StringMetric.compareWithDiceSorensen(val1, val2)(1)
+    } yield s
+    val minJoinSim = if (sims.isEmpty) 0.0 else sims.min
+    
+    val fbidPairs = for {
+      (key1, key2) <- query.joinPairs
+      fbid1 <- freebaseLink(key1, tuple)
+      fbid2 <- freebaseLink(key2, tuple)
+    } yield (fbid1, fbid2)
+    
+    val fbidViolation = if (fbidPairs.exists(pair => pair._1 != pair._2)) 1.0 else 0.0
+    
+    SparseVector(
+        "minimum join key similarity" -> minJoinSim,
+        "fbid join key violation" -> fbidViolation)
   }
   
   val templatePairPmi = TemplatePairFeature { (q: String, pair: TemplatePair) =>
@@ -130,7 +158,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 relSynFeatures(s) +
 		  				 numSteps(s) + 
 		  				 templateArgFeatures(s) +
-		  				 prefixAndShape(s)
+		  				 prefixAndShape(s) +
+		  				 joinSimilarity(s)
   
 }
 
