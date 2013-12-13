@@ -205,7 +205,7 @@ case object TConjunct {
  * of conjuncts. A conjunctive query represents a select-join-project type
  * operation. The list of conjuncts represents the data to be selected.
  * The shared variables among the conjuncts encodes the join predicates. 
- * The qvar encodes the projection variable. qAttr is the tuple-attribute
+ * The qVars encodes the projection variables. qAttr is the tuple-attribute
  * to project onto. 
  */
 trait ConjunctiveQuery {
@@ -221,6 +221,17 @@ trait ConjunctiveQuery {
     val conjString = conjuncts.mkString(" ")
     varString + ": " + conjString 
   }
+  
+  def joinPairs = {
+    val grouped = conjuncts.flatMap(_.joinKeys.toList).groupBy(_._1)
+    for {
+      variable <- grouped.keys
+      (variable1, fieldName1) <- grouped(variable)
+      (variable2, fieldName2) <- grouped(variable)
+      if fieldName1 < fieldName2
+    } yield (fieldName1, fieldName2)
+  }
+  
 }
 
 /**
