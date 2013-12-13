@@ -29,7 +29,7 @@ class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient, sk
       i <- 0 until conjs.size
       c = conjs(i)
       cx <- TConjunct.expandSetTLiteralsField(c, Search.rel)
-      rule <- relSyns(c)//client.relSyns(cx)
+      rule <- relSyns(c)
       newc <- rule(cx)
       newconjs = conjs.updated(i, newc)
       newq = ListConjunctiveQuery(s.query.qVars, newconjs)
