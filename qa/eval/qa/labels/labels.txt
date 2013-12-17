@@ -35741,3 +35741,431 @@ LABEL	0	who was the secretary of state when andrew jackson was president?	John C
 LABEL	1	who does myles kennedy sing for?	Myles Kennedy and The Conspirators
 LABEL	0	what episode of how i met your mother is carrie underwood on?	Russell Crowe, Jenna Bush, Carrie Underwood
 LABEL	1	where does airtran airways fly?	Hartsfield Jackson Atlanta International Airport
+LABEL	0	what does jamaican people speak?	Chinese Jamaicans
+LABEL	0	what did james k polk do before he was president?	George M. Dallas
+LABEL	0	who plays ken barlow in coronation street?	Power forward
+LABEL	0	what country did germany invade first in ww1?	United States of America
+LABEL	0	who is the minority leader of the house of representatives now?	Kerry Knott
+LABEL	0	who is keyshia cole dad?	Entertainment Weekly annotation index
+LABEL	1	what are some of the traditions of islam?	Eid al-Adha
+LABEL	0	what year did president william henry harrison take office?	John Tyler
+LABEL	0	who will play mr gray in the film?	Better Or Worse?
+LABEL	0	who won the battle of gettysburg union or confederate?	Kate Carin
+LABEL	1	what county is kansas city kansas?	Platte County
+LABEL	0	what was john quincy adams famous for?	Cerebral hemorrhage
+LABEL	0	when did annie open?	No More I Love You's
+LABEL	0	what other books did charles dickens write?	Drood: A Novel
+LABEL	0	what county is brentwood tennessee in?	Contra Costa County
+LABEL	0	who is moira en x men?	(For each individual x (it is possible that  (x obtains personal development)
+LABEL	0	what county is greeley colorado in?	United States of America
+LABEL	0	where is the ellen degenerous show filmed?	The Ellen DeGeneres Show
+LABEL	1	what did peter tchaikovsky do?	Symphony No. 5
+LABEL	1	what do you call the chinese writing system?	'Phags-pa script
+LABEL	0	what made the soviet union fall?	The Color of Pomegranates
+LABEL	0	what was the title of the book charles darwin wrote?	Charles Darwin: Voyaging
+LABEL	0	where did richard nixon die?	Cerebral edema
+LABEL	1	who played barbara gordon batgirl?	Melissa Gilbert
+LABEL	0	what basketball teams has shaq played for?	Tony Gwynn
+LABEL	0	where is jay leno from?	Judd Apatow
+LABEL	1	who did armie hammer play in the social network?	Tyler Winklevoss
+LABEL	0	what was thomas jefferson role in the declaration of independence?	Associate Justice of the Supreme Court of the United States
+LABEL	0	what was robert burns?	Myocardial infarction
+LABEL	0	what did anton van leeuwenhoek contribute to our knowledge of cells?	Leeuwenhoek Medal
+LABEL	0	what super bowl did peyton manning win?	Kids' Choice Award for Favorite Male Athlete
+LABEL	1	who fought in the gulf war 1991?	Colin Powell
+LABEL	1	what was the ancient chinese writing system?	'Phags-pa script
+LABEL	1	what language does egyptian people speak?	Egyptian language
+LABEL	0	what are abraham sons names?	Abrahamic religions
+LABEL	1	what was lucille ball?	Lucy Barker
+LABEL	0	who inspired obama?	Adam Frankel
+LABEL	0	what is jimi hendrix purple haze about?	Bass guitar
+LABEL	0	what is the song anna kendrick sings in pitch perfect?	High Society
+LABEL	0	who developed the tcp ip reference model?	Books and Writers
+LABEL	0	who founded the pittsburgh steelers in 1933?	Kevin Colbert
+LABEL	0	what team does jordan own?	Anadolu Efes S.K.
+LABEL	1	what do portuguese people speak?	Portuguese Language
+LABEL	0	what year was george w bush elected?	Contra Costa County
+LABEL	0	who was the italian leader in ww1?	Entertainment Weekly annotation index
+LABEL	0	what year did the seahawks win the superbowl?	Super Bowl XL
+LABEL	0	what do you call members of the senate?	Andrew Pulkrabek
+LABEL	0	where the missouri river ends?	Glacier National Park
+LABEL	0	what type of government does france use?	CFP franc
+LABEL	1	who rules denmark right now?	Christian X of Denmark
+LABEL	0	what region of the world is egypt associated with?	Minya Governorate
+LABEL	0	what did dr. seuss do?	Geisel Library
+LABEL	0	who did gerald ford select as his vice president when he became president?	Richard Nixon
+LABEL	1	what does janelle brown work?	Becoming Sister Wives: The Story of an Unconventional Marriage
+LABEL	1	where is tyrese gibson from?	Los Angeles
+LABEL	0	which states does the colorado river run through?	Yule Marble
+LABEL	0	when did the wright brothers created their first plane?	Wilbur Wright
+LABEL	0	where is the seychelles on world map?	Internet users as percentage of population, World Development Indicators and Global Development Finance, World Bank
+LABEL	0	who is jimmy savile?	Entertainment Weekly annotation index
+LABEL	0	what state is washington d.c. located?	Wood Thrush
+LABEL	0	where to exchange euros in new york city?	American Museum of Natural History
+LABEL	0	when did florida marlins join mlb?	Lebanese American
+LABEL	0	what countries does the panama canal go through?	Costa Rica
+LABEL	0	who did the chargers draft in 2011?	Antonio Cromartie
+LABEL	0	what make of bike did steve mcqueen ride in the great escape?	Film Producer
+LABEL	0	where did george w bush live as a child?	Washington, D.C.
+LABEL	0	what state new york city belong to?	New Jersey
+LABEL	0	where was the city of david?	Los Angeles
+LABEL	0	what kind of monarchy does japan have?	House of Representatives
+LABEL	0	when did michael jordan return to the nba?	Birmingham Barons
+LABEL	0	where was mission san rafael located?	San Rafael City Elementary School District
+LABEL	1	who was esther's husband?	Benjamin Hoar
+LABEL	0	who's dating claire danes?	Carla Danes
+LABEL	0	what county is st paul va in?	Collin County
+LABEL	0	what produce does florida export?	Peter and the Wolf
+LABEL	0	what type of sports do japanese play?	Creative Work
+LABEL	0	what did drita find out?	The Forgiveness of Blood
+LABEL	1	where did the latin language originate from?	Roman Republic
+LABEL	1	when do world war ii end?	20th century
+LABEL	0	what do christians believe about heaven hell and purgatory?	Sirhan Sirhan
+LABEL	0	who did queen elizabeth 1 executed?	Elizabeth of York
+LABEL	0	what would ap xin zhao do?	State of Zhao(bronzeware script, ca. 800 BC)
+LABEL	0	what is jamie oliver children names?	Sally Oliver
+LABEL	1	where does bradley walsh live?	Los Angeles
+LABEL	1	who is the head coach of inter milan?	Giuseppe Baresi
+LABEL	1	where does the shannon river start and end?	Shannon Estuary
+LABEL	0	where did dutch language come from?	Union of South Africa
+LABEL	0	what kind of money should i take to costa rica?	Inflation, World Development Indicators, World Bank
+LABEL	1	where was country singer george jones born?	United States of America
+LABEL	1	what to see near grand canyon?	Grand Canyon National Park
+LABEL	0	when did the jews stop making animal sacrifices?	Indie rock
+LABEL	0	what movies did ron howard director?	Arrested Development
+LABEL	0	what role did alexander hamilton play in the constitution?	Bishop of Jarrow
+LABEL	1	who is the senior senator of louisiana?	Alexandre Mouton
+LABEL	1	who did john kennedy have affairs with?	Judith Exner
+LABEL	0	what type of money to take to cuba?	Unitary state
+LABEL	0	what do they call money in japan?	Internet users as percentage of population, World Development Indicators, World Bank
+LABEL	0	what did baron de montesquie influence?	Zygmunt Bauman
+LABEL	1	who did carlos boozer play for?	Chicago Bulls
+LABEL	0	what time does american horror story air?	Samoa Time Zone
+LABEL	0	what airport is near arlington tx?	Ronald Reagan Washington National Airport
+LABEL	0	who did vasco de gama explore for?	Dubai International Airport
+LABEL	0	where did emperor hirohito live?	?miya Palace
+LABEL	0	who is washington redskins backup qb?	Entertainment Weekly annotation index
+LABEL	0	what type of artist is henri matisse?	Blue Nudes Series
+LABEL	0	what was the first book charles dickens wrote?	Drood: A Novel
+LABEL	1	where is mount st helens volcano?	Crater Glacier
+LABEL	1	who is the next governor of indiana?	Isaac P. Gray
+LABEL	0	who is hammurabi and what did he do?	Milkau Oberer Teil der Stele mit dem Text von Hammurapis Gesetzescode 369-2
+LABEL	0	what state is the steelers from?	Entertainment Weekly annotation index
+LABEL	0	where is the university of the rockies located?	Gallatin County
+LABEL	0	what was lebron james first team?	Miami Heat
+LABEL	1	who fought the battle of gettysburg?	American Civil War
+LABEL	0	who is the coach of the sf giants?	Tom Coughlin
+LABEL	0	what did queen victoria say about the suffragettes?	Statue of Queen Victoria
+LABEL	0	what is st anthony patron saint of?	Patron of Prisoners.jpg
+LABEL	0	what movies did tupac star in?	California Love (album version)
+LABEL	1	who plays kenneth?	Malcolm Barrett
+LABEL	0	where is giza pyramids located?	Danny Hillis on top of the Great Pyramid
+LABEL	1	where does the zambezi river start?	Indian Ocean
+LABEL	0	where will tebow go in 2013?	Puerto Rico
+LABEL	0	where did they find jenni rivera's body?	United States of America
+LABEL	0	what county is texarkana arkansas in?	United States of America
+LABEL	0	what did alice paul accomplish?	Iron Jawed Angels
+LABEL	0	what part did winona ryder play in star trek?	Alien Resurrection
+LABEL	0	what did president carter do in office?	Walter Mondale
+LABEL	1	what war did hitler lose?	Western Front
+LABEL	0	what is the political structure of china?	Sun Yat-sen Mausoleum
+LABEL	0	who played obi wan in episode 2?	Kevin Walsh
+LABEL	0	when was president john adams elected?	Thomas Jefferson
+LABEL	0	where to get a marriage license in long island?	Long Island Rail Road
+LABEL	0	what team did adrian peterson play for in college?	Minnesota Vikings
+LABEL	0	where does name pennsylvania come from?	USS Pennsylvania (SSBN-735)
+LABEL	0	who plays blaine in batman?	Will Friedle
+LABEL	0	what position did vince lombardi play in college?	Fordham University
+LABEL	0	who did veronica lake mary?	Renal failure
+LABEL	1	what does ringo sing?	Rock music
+LABEL	0	where did salvador dali study art?	New York City
+LABEL	0	who was philip in acts chapter 8?	The Secrets of the Golden Compass
+LABEL	0	what islands did darwin study finches on?	Skycity Darwin
+LABEL	0	what does egfr african american mean on a blood test?	Entertainment Weekly annotation index
+LABEL	0	where did holly madison get her breast implants?	Las Vegas
+LABEL	0	who were mary shelley?	Mary Wollstonecraft
+LABEL	0	where was teddy roosevelt's house?	James Wilson
+LABEL	0	what timezone is nashville tn?	Entertainment Weekly annotation index
+LABEL	0	what is the largest nation in europe?	Kingdom of the Netherlands
+LABEL	1	who are the senators of virginia 2013?	Tim Kaine
+LABEL	1	what was james garfield most known for?	Myocardial infarction
+LABEL	1	what does david beckham play?	Real Madrid C.F.
+LABEL	0	what does julian lennon do?	Domestic partnership
+LABEL	0	what is the second biggest state in the united states?	Matagorda County
+LABEL	0	what has charlie hunnam been in?	WSJ Speakeasy Index
+LABEL	0	what is ryan seacrest radio show?	Entertainment Weekly annotation index
+LABEL	0	what broncos are in the pro bowl?	Entertainment Weekly annotation index
+LABEL	0	what is the best tour to egypt?	Internet users as percentage of population, World Development Indicators and Global Development Finance, World Bank
+LABEL	0	when did michael vick start playing for the eagles?	Philadelphia Eagles
+LABEL	0	where do kfc get their chicken from?	United Kingdom
+LABEL	0	how large is kony army?	Joseph Kony (296444792)
+LABEL	1	who is louisiana state senator?	Alexandre Mouton
+LABEL	0	who was kobe bryant drafted by?	1996 NBA Draft
+LABEL	0	where are the new orleans hornets moving to?	French Quarter
+LABEL	0	what language does algerian people speak?	Rachid Bouchareb
+LABEL	1	what wars did robert e lee served in?	Battle of Darbytown and New Market Roads
+LABEL	0	who is in charge of libya now?	Abdul Hafiz Ghoga
+LABEL	0	where did kansas city royals come from?	University of North Carolina at Chapel Hill
+LABEL	0	who is the arizona cardinals backup quarterback?	Entertainment Weekly annotation index
+LABEL	0	when tupac was shot?	Respiratory failure
+LABEL	1	who played jeannie?	Helen Hunt
+LABEL	0	what kind of shoes do french people wear?	Bachelor's degree
+LABEL	0	who does jeremy shockey play for in 2012?	New Orleans Saints
+LABEL	0	what were the names of henry viii's three children?	Henry VIII and His Chopping Block
+LABEL	0	what was queen elizabeth ii childhood nickname?	United Kingdom
+LABEL	1	who played victoria barkley?	Jessica Lange
+LABEL	0	where did the taliban began?	Operation Accius
+LABEL	1	what kind of government system did ancient egypt have?	Unitary state
+LABEL	0	what does the missouri river bisect?	River Scene
+LABEL	0	what animal represents california?	Frank Putnam Flint
+LABEL	1	what company does nike own?	Nike Golf
+LABEL	0	what year did ray allen join the nba?	Miami Heat
+LABEL	0	what is claire danes famous for?	WSJ Topic Index
+LABEL	1	what characters does matt stone do?	Kyle Broflovski
+LABEL	0	what timezone is the state of michigan and?	Painted turtle
+LABEL	0	who was saint paul the apostle?	Mr. White's Confession: A Novel
+LABEL	0	what hemisphere is africa located in?	World War I
+LABEL	0	what famous people are from el salvador?	Embassy of El Salvador in Ottawa
+LABEL	0	what are egyptian money called?	Egyptian Armed Forces
+LABEL	0	what form of government is the uk?	Celtic Pharma
+LABEL	0	what age did william penn get married?	Gulielma Maria Springett
+LABEL	1	what happened at chernobyl?	Chernobyl disaster
+LABEL	0	what county is st james city fl in?	Craven County
+LABEL	0	after how many years are the olympic games held?	2006 Winter Olympics
+LABEL	0	when was the last time the ny knicks won a playoff game?	News magazine
+LABEL	0	what is lamar odom doing now july 2012?	Les Tr??s Riches Heures du duc de Berry juillet
+LABEL	1	which hemingway book to read?	A Moveable Feast
+LABEL	0	who is the prime minister of jamaica west indies?	Inflation, World Development Indicators, World Bank
+LABEL	0	where is french spoken most?	French Language
+LABEL	0	where did troy aikman play football?	West Covina
+LABEL	0	who won fa cup 1976?	Chelsea F.C.
+LABEL	0	when does parliament sit in canberra?	Territory of New Guinea
+LABEL	0	when was lucy lawless born?	Mount Albert, New Zealand
+LABEL	1	where is the empire of ghana?	Ho East
+LABEL	0	where was marilyn monroe found dead?	White Plains
+LABEL	0	what kind of money do i need in costa rica?	Internet users as percentage of population, World Development Indicators, World Bank
+LABEL	1	what caused the embargo against cuba?	Fidel Castro
+LABEL	0	what pieces of music did claude debussy compose?	Classical music
+LABEL	0	who was selena gomez in barney and friends?	Jeremy Sumpter
+LABEL	1	who plays caesar flickerman in the hunger games?	Stanley Tucci
+LABEL	0	where did the gettysburg address?	300 N Washington Street Box 2458
+LABEL	0	who owns google 2012?	Google Trends
+LABEL	1	what drink did john pemberton create?	The Coca-Cola Company
+LABEL	0	what position did stanley matthews play?	Associate Justice of the Supreme Court of the United States
+LABEL	1	what type of government does brazil have 2011?	Federal republic
+LABEL	0	who is angelina jolie mom and dad?	WSJ Topic Index
+LABEL	0	who is the governor of indiana 2009?	Greg Zoeller
+LABEL	0	who brad pitt has dated?	Jane Etta Pitt
+LABEL	0	what do people in france like to do for fun?	Government of France
+LABEL	0	who owns volkswagen car company?	Chicago Cubs
+LABEL	0	who is the newly elected governor of california?	Jean Fuller
+LABEL	0	who plays roxanne in ghost rider?	Rita Joanne Simons
+LABEL	1	what sport is popular in italy?	Water polo
+LABEL	0	what is the new movie john carter about?	The Doll Squad
+LABEL	0	who does michael keaton play in cars?	Rabbit Test
+LABEL	1	what is the best zelda game to start with?	Zelda II: The Adventure of Link
+LABEL	0	who is james madison and what did he do?	James Monroe
+LABEL	0	what did obama do before he was elected president?	Energy development
+LABEL	0	what games will be on nfl network this year?	Madden NFL 08
+LABEL	0	where is the phillies spring training stadium?	Citizens Bank Park
+LABEL	0	when was john paul ii?	Myocardial infarction
+LABEL	0	where was bin laden found and killed?	Maktab al-Khidamat
+LABEL	0	what is the head judge of the supreme court called?	Ricky Polston
+LABEL	0	what spain brought to the new world?	The Sun Also Rises
+LABEL	1	what year did the baltimore ravens win superbowl?	Super Bowl XLVII
+LABEL	0	what is money called in italy?	Triple Entente
+LABEL	0	what is the government of france for 2010?	Government of France
+LABEL	0	how old is bruno mars and where is he from?	Blissful Master Index
+LABEL	0	who are the virginia senators 2013?	Comcast SportsNet Mid-Atlantic
+LABEL	1	where are the nordic countries?	Faroe Islands
+LABEL	1	what did vera ellen die from?	Lung cancer
+LABEL	0	who does mike marry at the end of season 5 desperate housewives?	2005 Major League Baseball season
+LABEL	0	what countries were part of the spanish empire?	United States of America
+LABEL	1	what activities are there to do in greece?	Road running
+LABEL	0	what to do for fun in houston?	Ryan Hamilton
+LABEL	1	who is the governor of pennsylvania state now?	John W. Geary
+LABEL	0	where does the celtics practice?	University of Kansas
+LABEL	0	what did george washington do as a teenager?	Associate Justice of the Supreme Court of the United States
+LABEL	0	where bin laden got killed?	Saudi Arabia
+LABEL	0	where does toronto get its water from?	Exhibition Stadium
+LABEL	0	where did charles darwin die?	Heart failure
+LABEL	0	when did the big earthquake hit san francisco?	Piper Halliwell
+LABEL	0	where did mubarak get his wealth?	Al Minufiyah
+LABEL	0	who was the leader of the first communist party of china?	Li Zhaoxing
+LABEL	0	who is number 22 for the dallas cowboys?	Gerald Sensabaugh
+LABEL	0	what county is st paul nc in?	Collin County
+LABEL	0	where is olympic national park wa?	National park
+LABEL	1	where did nat turner 1831 rebellion occur?	Southampton County
+LABEL	0	who won the presidential election in egypt 2012?	Hesham Kandil
+LABEL	0	what state is barack obama from?	Barack Obama (Fred Armisen)
+LABEL	0	what years did joe montana win super bowl?	Super Bowl XXXVII
+LABEL	1	who should the minnesota vikings draft?	Erasmus James
+LABEL	0	where did alexander graham bell die?	Diabetes mellitus
+LABEL	1	what time zone is greensburg indiana?	Eastern Time Zone
+LABEL	0	what fma stands for?	Basic training aircraft
+LABEL	0	what is the university of georgia known for?	United States of America
+LABEL	0	where was osama bin laden killed?	Saudi Arabia
+LABEL	0	who was queen elizabeth ii mom?	United Kingdom
+LABEL	1	what type of art did pablo picasso paint?	Ceramic art
+LABEL	0	who did ricky martin started his career with?	Ricky Martin
+LABEL	0	what led to the split of the republican party in 1912?	2008 Republican Primary, California?s 32nd Assembly District
+LABEL	1	what are the supreme court cases?	Edwards v. Canada
+LABEL	0	when is the rainy season in bangkok thailand?	Entertainment Weekly annotation index
+LABEL	0	where did the israel palestine conflict start?	Yom Kippur War
+LABEL	0	where is kansas city?	Arrowhead Stadium
+LABEL	0	what was pink floyd's first album?	A Momentary Lapse of Reason
+LABEL	0	what type of government did thomas jefferson prefer?	Vice President
+LABEL	0	what are some famous people from el salvador?	Embassy of El Salvador in Ottawa
+LABEL	0	who plays dwight in the office?	Power forward
+LABEL	0	who is the miami dolphins quarterback?	Entertainment Weekly annotation index
+LABEL	0	where was caesar when he was stabbed?	Delaware's at-large congressional district
+LABEL	0	what two countries make up the dominican republic?	Embassy of the Dominican Republic in Ottawa
+LABEL	0	what part did jeff conaway play in grease?	Do You Wanna Know a Secret?
+LABEL	0	who played donna on west wing?	LeBron James/Kanye West
+LABEL	0	what did napoleon bonaparte do as emperor?	House of Bonaparte
+LABEL	0	where do ireland play rugby union?	Irish Sea
+LABEL	0	who played harry potter dumbledore actor?	Daniel Larner
+LABEL	1	what movies is omar epps in?	Love & Basketball
+LABEL	0	where do they speak tibetan?	Chinese language
+LABEL	0	what is michael kors best known for?	Entertainment Weekly annotation index
+LABEL	0	who plays charlie in the santa clause movies?	Bruce Kirby
+LABEL	0	what is the percentage of youth in uganda?	English Language
+LABEL	0	what are italians classified as?	Giuseppe Squillaci
+LABEL	0	what was f. scott fitzgerald?	Myocardial infarction
+LABEL	0	who was wesley snipes?	Marian Snipes
+LABEL	0	who was the original voice of meg griffin on family guy?	Mila Kunis
+LABEL	0	what is jacksonville fl timezone?	Jacksonville Jaguars Helmet
+LABEL	0	who does amy stiller play in dodgeball?	That's Adequate
+LABEL	0	what athlete am i olympics?	Mette Halvorsen
+LABEL	0	when did gordon brown resigns?	Commission for Africa
+LABEL	0	where does greek language come from?	Roman Republic
+LABEL	0	where did the australian floods take place?	Australian Catholic University Faculty of Arts and Sciences
+LABEL	0	when is nrl grand final day?	PBB GE NRL 206596 s at tn
+LABEL	0	what famous people are from barbados?	High Commission of Barbados, Ottawa
+LABEL	0	who is the current governor of arizona 2010?	Kyrsten Sinema
+LABEL	0	who was demi lovato dating?	Sonny Munroe
+LABEL	0	who did viggo mortensen play in lord of the rings?	Entertainment Weekly annotation index
+LABEL	0	what lands did henry hudson discover?	United Kingdom
+LABEL	0	who was isaac newton and what did he do?	8000 Isaac Newton
+LABEL	1	where is victoria british columbia?	Cascade Range
+LABEL	0	how many mary mary sisters?	Manny Marroquin
+LABEL	1	what do we call the currency of france?	CFP franc
+LABEL	1	where was john jay born?	United States of America
+LABEL	0	when is venus brightest?	Entertainment Weekly annotation index
+LABEL	0	when did mark mcgwire retired?	Oakland Athletics
+LABEL	0	what is colorado technical university?	United States of America
+LABEL	1	what was the currency used in france before the euro?	CFP franc
+LABEL	1	who played samantha stephens in bewitched?	Patricia Kalember
+LABEL	0	which country in north america is divided into provinces?	United States of America
+LABEL	0	when does daylight saving end in new zealand 2012?	Landing at Anzac Cove
+LABEL	0	what is real name of santa claus?	The Polar Express
+LABEL	0	when did kelly slater go pro?	Jimmy Slade
+LABEL	0	who was vp for nixon?	Farewell address
+LABEL	1	where honduras in the world?	El Salvador
+LABEL	0	who owns mazda canada?	United Kingdom
+LABEL	1	what are the major trading partners of germany?	Czech Republic
+LABEL	0	who did johnny depp play in corpse bride?	Corpse Bride
+LABEL	0	when was taylor swift fearless tour?	Harry Styles
+LABEL	0	what is eminem's real full name?	Hailie Jade Scott
+LABEL	0	what is jamie spears baby name?	Emma Forbes
+LABEL	0	which of the following was a contribution thomas hunt morgan made to genetics?	\
+LABEL	0	when did we start war with iraq?	Six-Day War
+LABEL	0	who is the governor of virginia 2011?	Ed Schrock
+LABEL	1	where is walton county ga?	Walton County, FL HUD Section 8 Area
+LABEL	0	what cancer did jackie kennedy die of?	Dan Tur?ll
+LABEL	0	where is tupac from originally?	Las Vegas
+LABEL	0	what role did george lucas play in star wars?	Chief Executive Officer
+LABEL	1	what sarah dessen books are movies?	That Summer
+LABEL	0	what are the colonies of great britain?	Workers' Weekly
+LABEL	0	where are english speakers distributed?	Michigan State University
+LABEL	0	who was dan white?	Carbon monoxide poisoning
+LABEL	0	what does kim kardashian work as?	Disaster Movie
+LABEL	0	where did the mississippi river end?	U.S. Route 30 in Illinois
+LABEL	0	who is president of israel?	Uri Orbach
+LABEL	0	what percent of people are overweight in the uk?	John Gleeson
+LABEL	0	when does ziva start on ncis?	Cote de Pablo
+LABEL	0	what countries require travel visas for us citizens?	United States of America
+LABEL	0	what country was stalin in charge of?	United States of America
+LABEL	0	what is monta ellis career high points?	Golden State Warriors
+LABEL	0	when was the last time the red sox won 100 games?	2004 World Series
+LABEL	0	what kourtney kardashian boyfriends name?	Robert Kardashian
+LABEL	0	what to see in christchurch new zealand?	Internet users as percentage of population, World Development Indicators and Global Development Finance, World Bank
+LABEL	1	where is chris paul from?	Los Angeles
+LABEL	1	what business did andrew carnegie dominate?	Homestead Steel Works
+LABEL	0	who did shaq first play for?	Shaquille O'Neal
+LABEL	1	what football team is michael vick on?	Virginia Tech Hokies football
+LABEL	0	where does the columbia river start?	Columbia River Gorge
+LABEL	0	what banjo does scott avett play?	Lead vocalist
+LABEL	0	who was sir walter raleigh and what did he do?	Elizabeth Raleigh
+LABEL	0	who is angelina jolie?	WSJ Topic Index
+LABEL	1	which countries speak germanic languages?	Kingdom of the Netherlands
+LABEL	0	who plays eowyn in lord of the rings?	Ralph Fiennes
+LABEL	1	where is augusta masters 2012?	United States of America
+LABEL	0	what type of cancer did eva peron die from?	Dan Tur?ll
+LABEL	0	when did carolina panthers go to superbowl?	2006 Stanley Cup Finals
+LABEL	1	what does helen flanagan do?	Coronation Street
+LABEL	1	where is tennessee river?	Watts Bar Lake
+LABEL	1	where did jennifer arnold go to medical school?	University of California, Los Angeles
+LABEL	0	what is the state motto of ohio?	West Virginia
+LABEL	1	what stones albums did mick taylor play on?	Swinging London
+LABEL	0	how many kids were there in the kennedy family?	Kennedy family
+LABEL	0	where has the english language evolved from?	United Kingdom
+LABEL	0	what does matt damon play in?	WSJ Topic Index
+LABEL	1	what was hitler the leader of?	Nazi Party
+LABEL	0	who won the league cup in 2002?	Venus Williams
+LABEL	0	where should a family stay in paris?	Daphne Millbrook
+LABEL	1	what type of government was utilized in ancient egypt?	Unitary state
+LABEL	0	what other movies has tom hardy played in?	The Firm
+LABEL	0	what language do maltese speak?	Maltese people
+LABEL	1	where is shakira from?	Los Angeles
+LABEL	0	what is the most populated state in united states?	South Carolina
+LABEL	1	where does the tennessee river go?	Ohio River
+LABEL	0	who did tom hanks play in apollo 13?	Apollo 13
+LABEL	0	what is utah's state capitol?	Bonneville cutthroat trout
+LABEL	0	who are the u s senators of pennsylvania?	State tree
+LABEL	0	what does sarabi?	The Lion King
+LABEL	0	who were wright brothers?	Myocardial infarction
+LABEL	0	what school did john henry thompson go to?	University of Oxford
+LABEL	1	what did jesse owens won?	Track and field
+LABEL	0	who is on the board of facebook?	Kristen Cornett: Facebook!
+LABEL	1	what do they speak in scotland?	English Language
+LABEL	0	what did john dalton study?	Sedgley Park School, Wolverhampton
+LABEL	0	what do unitarian universalist believe?	Christopher Reeve
+LABEL	0	what province is montreal canada located?	United States of America
+LABEL	1	where does bronx begin?	East River
+LABEL	0	who does kellan lutz play in prom night?	Prom Night
+LABEL	0	what are the eight stages of erikson's theory?	Developmental psychology
+LABEL	0	who is the leader of libya 2011?	Abdul Hafiz Ghoga
+LABEL	1	when was herbert hoover born and died?	West Branch
+LABEL	1	what movies did joan crawford play in?	What Ever Happened to Baby Jane?
+LABEL	0	what products does the united states export?	Enzo the Dog
+LABEL	0	what did james polk do before he was president?	George M. Dallas
+LABEL	0	what there to do in salt lake city utah?	Salt Lake City
+LABEL	0	what is the state of montana known for?	North Dakota
+LABEL	1	who will be the red sox next coach?	DeMarlo Hale
+LABEL	1	who is the current ohio state senator?	Thomas Worthington
+LABEL	0	what percentage of cases does the us supreme court take?	Edwards v. Canada
+LABEL	0	who was ulysses s. grant?	Jim Walsh
+LABEL	0	who is meredith gray married to in real life?	Entertainment Weekly annotation index
+LABEL	0	who did woody harrelson play on cheers?	Bullet For Adolf
+LABEL	1	what to do with kids in asheville nc?	Carl Sandburg Home National Historic Site
+LABEL	1	where is spanish spoken most?	United States of America
+LABEL	1	what currency shall i take to croatia?	Croatian kuna
+LABEL	0	what team is raul ibanez on?	Ibanez RG220
+LABEL	0	who plays anakin skywalker in star wars 1?	Zac Efron
+LABEL	0	what was laura ingalls wilder famous for?	Diabetes mellitus
+LABEL	1	what kind of currency does mexico use?	Mexican peso
+LABEL	0	who owns chrysler corporation 2011?	Robert S. Miller
+LABEL	0	who has ray allen dated?	Flora Allen
+LABEL	0	what language do people from the uk speak?	United States of America
+LABEL	0	who did ben franklin marry?	Emma Franklin
+LABEL	0	what famous people came from delaware?	State Senator
+LABEL	0	who was with president lincoln when he was assassinated?	Andrew Johnson
+LABEL	0	what type of guitar does johnny depp play?	Engaged to
+LABEL	1	where to stay in singapore blog?	Universal Studios Singapore
+LABEL	1	who are the 9 justices of the supreme court 2011?	Ricky Polston
+LABEL	0	who did cher have a son with?	Chaz Bono
+LABEL	0	what is the political system in germany?	United States of America
+LABEL	0	who won the american league east in 2012?	Rafael Nadal
+LABEL	0	what did isaac newton explain?	Ralph Waldo Emerson
+LABEL	1	where does airtran airways fly?	Hartsfield?Jackson Atlanta International Airport
