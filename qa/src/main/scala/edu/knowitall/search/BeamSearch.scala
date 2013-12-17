@@ -3,11 +3,13 @@ package edu.knowitall.search
 import scala.collection.mutable.{Set => MutableSet}
 import scala.collection.mutable.{Map => MutableMap}
 import org.slf4j.LoggerFactory
+import com.typesafe.config.ConfigFactory
 
 class BeamSearch[State, Action](
     override val problem: SearchProblem[State, Action],
     beamSize: Int,
-    goalSize: Int) extends SearchAlgorithm[State, Action] {
+    goalSize: Int,
+    maxIters: Int = BeamSearch.defaultMaxIters) extends SearchAlgorithm[State, Action] {
   
   assert(goalSize >= 1)
   assert(beamSize >= 1)
@@ -17,6 +19,7 @@ class BeamSearch[State, Action](
   private var frontier = List(rootNode)
   private val expanded = MutableSet.empty[State]
   private val goals = MutableMap.empty[State, Node[State, Action]]
+  private var iter = 0
       
   private def setFrontier(nodes: Iterable[Node[State, Action]]) = {
     val distinctNodes = nodes.groupBy(_.state) map {
@@ -35,10 +38,9 @@ class BeamSearch[State, Action](
   
   private def haveExpanded(n: Node[State, Action]) = expanded.contains(n.state)
   
-  private def continueSearch = (goals.size < goalSize) && (frontier.size > 0)
+  private def continueSearch = (goals.size < goalSize) && (frontier.size > 0) && (iter < maxIters)
 
   private def searchLoop: Set[Node[State, Action]] = {
-    var iter = 1
     do {
       val initialSize = frontier.size 
         
@@ -70,4 +72,9 @@ class BeamSearch[State, Action](
   
   def search = searchLoop.toList.sortBy(_.pathCost).take(goalSize)
 
+}
+
+object BeamSearch {
+  val conf = ConfigFactory.load()
+  val defaultMaxIters = conf.getInt("search.maxIters")
 }
