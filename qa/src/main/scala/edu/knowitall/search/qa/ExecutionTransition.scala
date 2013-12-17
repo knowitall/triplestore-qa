@@ -13,6 +13,7 @@ import org.apache.solr.client.solrj.SolrServerException
 import java.io.StringWriter
 import java.io.PrintWriter
 import org.slf4j.LoggerFactory
+import scala.collection.parallel.CompositeThrowable
 
 class ExecutionTransition(
     client: TriplestoreClient = ExecutionTransition.defaultClient,
@@ -36,7 +37,7 @@ class ExecutionTransition(
   private def execute(query: ConjunctiveQuery) = try {
     executor.execute(query)
   } catch {
-    case e: SolrServerException => if (skipTimeouts) {
+    case e @ (_ : SolrServerException | _ : CompositeThrowable) => if (skipTimeouts) {
       val sw = new StringWriter()
       val pw = new PrintWriter(sw)
       e.printStackTrace(pw)
