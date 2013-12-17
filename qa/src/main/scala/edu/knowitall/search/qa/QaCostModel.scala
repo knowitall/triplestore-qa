@@ -1,6 +1,9 @@
 package edu.knowitall.search.qa
 
 import edu.knowitall.learning.SparseVector
+import com.typesafe.config.ConfigFactory
+import scala.io.Source
+import java.io.File
 
 
 class QaCostModel(
@@ -11,9 +14,11 @@ class QaCostModel(
 }
 
 object QaCostModel {
-  
+  val conf = ConfigFactory.load()
   val defaultFeatures = QaFeatures
-  lazy val defaultWeights = {
+  lazy val defaultWeights = if (conf.hasPath("scoring.weights")) { 
+    SparseVector.fromFile(conf.getString("scoring.weights"))
+  } else {
     val in = getClass.getResourceAsStream("/edu/knowitall/search/qa/defaultWeights.txt")
     SparseVector.fromInputStream(in)
     //SparseVector.zero
