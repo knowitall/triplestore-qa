@@ -29,9 +29,9 @@ case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolea
     query.setRows(maxHits)
     query.addSort(new SortClause("pmi", SolrQuery.ORDER.desc))
     query.setParam("shards.tolerant", true)
-    logger.info(s"Sending query: ${query.toString()}")
+    logger.debug(s"Sending query: ${query.toString()}")
     val resp = server.query(query)
-    logger.info(s"Found ${resp.getResults().getNumFound()} hits")
+    logger.debug(s"Found ${resp.getResults().getNumFound()} hits")
     val pairs = resp.getResults().toList.flatMap(TemplatePair.fromDocument)
     pairs.map(pair => pair.copy(pmi = scalePmi(pair.pmi)))
   }

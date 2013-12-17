@@ -101,7 +101,7 @@ case class SolrClient(url: String, hits: Int = 10, timeout: Int = SolrClient.def
     query.setParam("shards.tolerant", true)
     val resp = server.query(query)
     val c = resp.getResults().getNumFound()
-    logger.info(s"Found $c hits for query: ${q.toQueryString}")
+    logger.debug(s"Found $c hits for query: ${q.toQueryString}")
     return c
   }
   
@@ -109,14 +109,14 @@ case class SolrClient(url: String, hits: Int = 10, timeout: Int = SolrClient.def
    * Searches Solr and returns Tuple objects.
    */
   def search(q: TSQuery, maxHits: Int = defaultMaxHits): List[Tuple] ={
-    logger.info(s"Searching for query: ${q.toQueryString}")
+    logger.debug(s"Searching for query: ${q.toQueryString}")
     val query = SolrClient.buildQuery(q)
     query.setRows(hits)
     query.setParam("shards.tolerant", true)
     val resp = server.query(query)
     val results = resp.getResults().toList.map(SolrClient.docToTuple)
     val n = results.size
-    logger.info(s"Loaded $n tuples into memory for query: ${q.toQueryString}")
+    logger.debug(s"Loaded $n tuples into memory for query: ${q.toQueryString}")
     return results
   }
   
