@@ -1663,7 +1663,7 @@ LABEL	false	what be all the country in north africa ?	syrian arab republic
 LABEL	false	what currency do jamaica accept ?	the other one
 LABEL	true	what political party be jerry brown ?	californium democratic party
 LABEL	false	what time be nebraska now ?	hour
-LABEL	true	what be the landlocked country in latin america ?	el salvador
+LABEL	false	what be the landlocked country in latin america ?	el salvador
 LABEL	true	who make the voice of stewie griffin ?	seth macfarlane
 LABEL	false	what country be the name natalie from ?	front
 LABEL	false	what do do in new york ?	a western congressman
@@ -2374,7 +2374,7 @@ LABEL	true	where do alexander graham bell die ?	beinn bhreagh , nova scotium
 LABEL	false	how many language do they speak in switzerland ?	french sign language
 LABEL	true	what college do steve job attend ?	reed college
 LABEL	true	what be the hawaius time zone ?	hawaius ? aleutian time zone
-LABEL	true	what be the landlocked country in latin america ?	costa rica
+LABEL	false	what be the landlocked country in latin america ?	costa rica
 LABEL	false	on what continent be canada find ?	africa
 LABEL	false	which party do lincoln belong to ?	the union
 LABEL	false	what kind of music do the roman have ?	eye
@@ -4611,7 +4611,7 @@ LABEL	true	where be dwight d eisenhower from ?	united state of america
 LABEL	false	what country be barack obama from ?	south korea
 LABEL	true	what film have gerard butler star in ?	butterfly on a wheel
 LABEL	false	what currency do south africa have ?	history
-LABEL	true	what be the landlocked country in latin america ?	cuauht ? moc , df
+LABEL	false	what be the landlocked country in latin america ?	cuauht ? moc , df
 LABEL	true	what be the catholic holy day ?	easter
 LABEL	true	what city in australium should i live in quiz ?	australian city
 LABEL	true	what tv show do shawnee smith play in ?	scream queen
@@ -20852,7 +20852,7 @@ LABEL	false	what do obama do before he be elect president ?	william henry harris
 LABEL	false	where do rick santorum attend high school ?	pennsylvanium state university
 LABEL	false	what be the official language of argentina ?	korean sign language
 LABEL	true	what be the 7 sacrament of the catholic church ?	anoint of the sick
-LABEL	true	what be the landlocked country in latin america ?	great pyramid of tenochtitl ? n
+LABEL	false	what be the landlocked country in latin america ?	great pyramid of tenochtitl ? n
 LABEL	true	who be my representative in illinois house ?	lyman trumbull
 LABEL	true	what be the dominant language speak in jamaica ?	jamaican english
 LABEL	true	what be michael buble s style of music ?	the fine relax swing number
@@ -32487,10 +32487,10 @@ LABEL	1	what kind of guitar did george harrison use?	Rickenbacker 360/12
 LABEL	1	what language do navajo people speak?	Spanish Language
 LABEL	1	what language do navajo people speak?	Navajo Language
 LABEL	1	what language do navajo people speak?	English Language
-LABEL	1	what are the landlocked countries in latin america?	El Salvador
-LABEL	1	what are the landlocked countries in latin america?	Costa Rica
-LABEL	1	what are the landlocked countries in latin america?	Cuauhtémoc, D.F.
-LABEL	1	what are the landlocked countries in latin america?	Great Pyramid of Tenochtitlán
+LABEL	0	what are the landlocked countries in latin america?	El Salvador
+LABEL	0	what are the landlocked countries in latin america?	Costa Rica
+LABEL	0	what are the landlocked countries in latin america?	Cuauhtémoc, D.F.
+LABEL	0	what are the landlocked countries in latin america?	Great Pyramid of Tenochtitlán
 LABEL	1	what type of government does iraq have now?	Parliamentary system
 LABEL	1	what type of government does iraq have now?	Federal republic
 LABEL	1	what type of government does iraq have now?	Parliamentary republic
@@ -34188,7 +34188,7 @@ LABEL	1	what was francis bacon contributions?	Scientific method
 LABEL	1	who is ruling libya?	Mohammed Magariaf
 LABEL	1	when does ziva start on ncis?	NCIS - Season 3
 LABEL	1	what is the name of the national anthem of canada ( 2 words )?	O Canada
-LABEL	1	what did mark zuckerberg study?	Harvard University
+LABEL	0	what did mark zuckerberg study?	Harvard University
 LABEL	1	which country was michael jackson born?	United States of America
 LABEL	1	who was stephen r covey?	Motivational speaking
 LABEL	1	what country was stalin in charge of?	Soviet Union
@@ -34285,7 +34285,7 @@ LABEL	1	what year did baltimore ravens win super bowl?	Super Bowl XXXV
 LABEL	1	what year did baltimore ravens win super bowl?	Super Bowl XLVII
 LABEL	1	what part of the country is ohio considered?	Midwestern United States
 LABEL	1	what team is cristiano ronaldo play for?	Real Madrid C.F.
-LABEL	1	what standard time is michigan?	Central Time Zone
+LABEL	0	what standard time is michigan?	Central Time Zone
 LABEL	1	what standard time is michigan?	North American Eastern Time Zone
 LABEL	1	what was john tyler?	President of the United States
 LABEL	1	what did romo do?	Baseball player
@@ -35679,7 +35679,7 @@ LABEL	1	what languages are there in japan?	English Language
 LABEL	0	who did nasri play for before arsenal?	Manchester City F.C.
 LABEL	1	what has kristen stewart acted in?	The Thirteenth Year
 LABEL	1	what form of government does north korea have?	Family dictatorship
-LABEL	0	who is the president of the european union 2012?	M?rio Soares
+LABEL	0	who is the president of the european union 2012?	Mario Soares
 LABEL	0	what is the name of the book hitler wrote in jail?	Rede an die Welt
 LABEL	0	who are china's neighbors?	Sierra Leone
 LABEL	1	what was jesse owens education?	East Technical High School
@@ -35719,7 +35719,7 @@ LABEL	1	who does ronaldinho play for now 2011?	Brazil national football team
 LABEL	0	who did darth vaders voice?	David Prowse
 LABEL	1	what club does cristiano ronaldo play for in 2010?	Portugal national football team
 LABEL	0	who is ruling libya?	Abdul Hafiz Ghoga
-LABEL	1	what do the symbols on the nevada flag mean?	Mountain Bluebird
+LABEL	0	what do the symbols on the nevada flag mean?	Mountain Bluebird
 LABEL	0	what is the state flower of new mexico?	Greater Roadrunner
 LABEL	1	what team is cristiano ronaldo play for?	Portugal national football team
 LABEL	0	what is michael kors real name?	Joan Hamburger
@@ -35740,4 +35740,4 @@ LABEL	0	when was the last time the boston bruins went to the stanley cup?	1939 S
 LABEL	0	who was the secretary of state when andrew jackson was president?	John C. Calhoun
 LABEL	1	who does myles kennedy sing for?	Myles Kennedy and The Conspirators
 LABEL	0	what episode of how i met your mother is carrie underwood on?	Russell Crowe, Jenna Bush, Carrie Underwood
-LABEL	1	where does airtran airways fly?	Hartsfield?Jackson Atlanta International Airport
+LABEL	1	where does airtran airways fly?	Hartsfield Jackson Atlanta International Airport
