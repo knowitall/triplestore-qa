@@ -24,7 +24,10 @@ trait LanguageModel {
   def query(s: Iterable[String]): List[(String, Double)]
 }
 
-case class KenLmServer(url: String, timeOut: Int, scale: Boolean = KenLmServer.scale, cacheSize: Int = KenLmServer.defaultCacheSize) extends LanguageModel {
+case class KenLmServer(url: String, timeOut: Int, 
+					   scale: Boolean = KenLmServer.scale,
+					   cacheSize: Int = KenLmServer.defaultCacheSize,
+					   skipTimeouts: Boolean = KenLmServer.defaultSkipTimeouts) extends LanguageModel {
   def this() = this(KenLmServer.defaultUrl, KenLmServer.defaultTimeout)
   val logger = LoggerFactory.getLogger(this.getClass)
   val root = s"${url}/score"
@@ -34,10 +37,17 @@ case class KenLmServer(url: String, timeOut: Int, scale: Boolean = KenLmServer.s
   
   override def query(s: String): Double = cache.get(s) match {
     case Some(x) => x
-    case None => {
+    case None => try {
       val result = queryHelper(s)
       cache.put(s, result)
       result
+    } catch {
+      case e: IllegalStateException => if (skipTimeouts) {
+        logger.warn(s"Could not compute LM score for '$s': $e")
+        scaleValue(Double.MinValue)
+      } else {
+        throw e
+      }
     }
   }
   
@@ -85,5 +95,6 @@ case object KenLmServer {
   val minValue = conf.getDouble("lm.minValue")
   val maxValue = conf.getDouble("lm.maxValue")
   val scale = conf.getBoolean("lm.scale")
+  val defaultSkipTimeouts = conf.getBoolean("lm.skipTimeouts")
   val defaultCacheSize = conf.getInt("lm.cacheSize")
 }
