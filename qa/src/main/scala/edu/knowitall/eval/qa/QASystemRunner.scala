@@ -1,12 +1,12 @@
 package edu.knowitall.eval.qa
 
-import edu.knowitall.apps.QASystem
 import java.io.File
 import java.io.IOException
 import scala.io.Source
 import org.slf4j.LoggerFactory
+import edu.knowitall.model.QaModel
 
-class QASystemRunner(qa: QASystem, path: String) {
+class QASystemRunner(qa: QaModel, path: String) {
   
   val logger = LoggerFactory.getLogger(this.getClass)
 
@@ -28,11 +28,11 @@ class QASystemRunner(qa: QASystem, path: String) {
   def run(name: String, questions: List[String]) = {
     val n = questions.size
     val records = for ((q, i) <- questions.zipWithIndex;
-    				   group <- {
+    				   deriv <- {
     				     logger.info(s"Question ${i+1} of ${n}")
-    				     qa.answer(q)
+    				     qa.candidatePredictions(q)
     				   };
-    				   r = QAOutputRecord.fromScoredAnswerGroup(q, group))
+    				   r = QAOutputRecord(q, deriv.answer, deriv.score, deriv.toString))
     				yield r
     val output = new QASystemOutput(path, records.toList, name)
     output.save
@@ -43,7 +43,7 @@ class QASystemRunner(qa: QASystem, path: String) {
 object QASystemRunner extends App {
   val input = args(0)
   val output = args(1)
-  val qa = QASystem.getInstance().get
-  val runner = new QASystemRunner(qa, output)
+  val model = new QaModel()
+  val runner = new QASystemRunner(model, output)
   runner.runFile(input)
 }
