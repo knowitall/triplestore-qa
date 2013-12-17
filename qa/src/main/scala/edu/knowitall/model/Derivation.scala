@@ -9,6 +9,7 @@ import edu.knowitall.learning.SparseVector
 import edu.knowitall.search.qa.QaStep
 import edu.knowitall.execution.ExecTuple
 import edu.knowitall.search.qa.ExecutionAction
+import edu.knowitall.execution.Tabulator
 
 case class Derivation(question: String,
 					  answer: String,
@@ -31,6 +32,17 @@ case class Derivation(question: String,
     case a: ExecutionAction => a.execTuple
     case _ => 
       throw new IllegalStateException(s"Expected last action to be ExecutionAction. Found: ${steps.last.action}")
+  }
+  def explainScore(weights: SparseVector) = {
+    val rows = for {
+      fname <- features.activeComponents.toList.sortBy(f => -1*features(f)*weights(f))
+      fvalue = features(fname)
+      weight = weights(fname)
+      product = fvalue * weight  
+    } yield Seq(product, weight, fvalue, fname)
+    
+    val allRows: Seq[Seq[Any]] = Seq(Seq("prod", "weight", "value", "feature")) ++ rows.toSeq
+    Tabulator.format(allRows)
   }
   
 }

@@ -86,7 +86,12 @@ object MyTest extends App {
     println(d.score)
     println(d.execTuple.query)
     println(d.execTuple.tuple)
-    println(d.features)
+    d.steps foreach {step => 
+      println(s"From: ${step.fromState}")
+      println(s"Action: ${step.action}")
+      println(s"To: ${step.toState}")
+    }
+    println(d.explainScore(model.costModel.weights))
     println
   }
 }
