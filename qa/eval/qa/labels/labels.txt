@@ -35628,3 +35628,116 @@ LABEL	1	what are the 7 sacraments of the catholic church?	Sacrament of Penance
 LABEL	1	what are the 7 sacraments of the catholic church?	Eucharist in the Catholic Church
 LABEL	1	what team did david beckham play for before la galaxy?	Preston North End F.C.
 LABEL	1	who is the current leader of france 2010?	Nicolas Sarkozy
+LABEL	0	who is governor of ohio 2011?	Kris Jordan
+LABEL	1	who did cam newton sign with?	Florida Gators football
+LABEL	0	what highschool did harper lee go to?	University of Oxford
+LABEL	0	who is niall ferguson's wife?	Susan Douglas
+LABEL	0	what is the state flower of arizona?	Ditat Deus
+LABEL	1	which countries speak german officially?	Nazi Germany
+LABEL	0	who are the colorado representatives?	Henry M. Teller
+LABEL	0	who is willow smith mom name?	Will Smith
+LABEL	1	who played on the jeffersons?	Paul Benedict
+LABEL	1	what is the name of the san francisco newspaper?	San Francisco Daily
+LABEL	0	what are the names of the city states in ancient greece?	Makry Gialos
+LABEL	1	what was the book written by charles darwin?	The Correspondence of Charles Darwin, Volume 1: 1821-1836
+LABEL	1	who does peyton manning play football for?	Indianapolis Colts
+LABEL	0	who did the voice of darth vader in episode 3?	David Prowse
+LABEL	0	what team did david beckham play for in 2011?	Real Madrid C.F.
+LABEL	0	who is the state governor of tennessee?	Robert E. Cooper, Jr.
+LABEL	0	where did aaron rodgers go to high school?	University of California, Berkeley
+LABEL	1	what are the sights to see in madrid?	Museo del Prado
+LABEL	0	who is emma stone father?	Krista Stone
+LABEL	1	where did drew brees go to college wikianswers?	Stanford Graduate School of Business
+LABEL	1	what countries are near italy?	Vatican City
+LABEL	1	which dawkins book to read first?	River out of Eden
+LABEL	0	where did flemish people come from?	United States of America
+LABEL	0	what countries included in the uk?	United Kingdom
+LABEL	1	what countries in the world speak chinese?	Hong Kong
+LABEL	1	what type of economy exists in china?	Communist state
+LABEL	1	what movies has carmen electra been in?	Starsky & Hutch
+LABEL	1	where is arabic most spoken?	South Africa
+LABEL	1	what has ian somerhalder acted in?	National Lampoon's TV: The Movie
+LABEL	1	where did kevin love go to college?	Lake Oswego High School
+LABEL	1	what movies did morgan freeman star in?	Driving Miss Daisy
+LABEL	1	who does jordan palmer play for?	Arizona Rattlers
+LABEL	1	what team does heskey play for?	Wigan Athletic F.C.
+LABEL	0	what high school did lil wayne graduate from?	University of Houston
+LABEL	1	what country did magellan represent?	Kingdom of Portugal
+LABEL	1	when's the last time the steelers won the superbowl?	Super Bowl XIII
+LABEL	1	what did john irving wrote?	Simon Birch
+LABEL	0	what is the national flower of hawaii?	Reef triggerfish
+LABEL	1	what countries do the united nations help?	United States of America
+LABEL	0	what team did ronaldo play for in 2003?	A.C. Milan
+LABEL	0	where does robin williams live 2011?	Bloomfield Hills
+LABEL	0	what flower is on the oklahoma quarter?	Papilio polyxenes
+LABEL	1	what style of music does michael jackson perform?	Rock music
+LABEL	0	what are all the movies taylor swift has been in?	I Knew You Were Trouble
+LABEL	1	what college did martin luther king jr go to?	Crozer Theological Seminary
+LABEL	0	who voiced darth vader?	David Prowse
+LABEL	0	what school did martin luther king jr received his doctorate degree from?	Crozer Theological Seminary
+LABEL	1	what languages are there in japan?	English Language
+LABEL	0	who did nasri play for before arsenal?	Manchester City F.C.
+LABEL	1	what has kristen stewart acted in?	The Thirteenth Year
+LABEL	1	what form of government does north korea have?	Family dictatorship
+LABEL	0	who is the president of the european union 2012?	M?rio Soares
+LABEL	0	what is the name of the book hitler wrote in jail?	Rede an die Welt
+LABEL	0	who are china's neighbors?	Sierra Leone
+LABEL	1	what was jesse owens education?	East Technical High School
+LABEL	1	where does carlos santana live?	San Francisco
+LABEL	1	what are the mountains in northern spain?	Pic del Port Vell
+LABEL	0	who does the voice for darth vader?	David Prowse
+LABEL	1	what states share a border with tennessee?	North Carolina
+LABEL	1	what is the current time in bangalore india?	Indian Standard Time
+LABEL	1	when is the last time the giants won the world series?	2010 World Series
+LABEL	1	what team does cristiano ronaldo play for 2011?	Portugal national football team
+LABEL	1	what country sponsored ferdinand magellan?	Kingdom of Portugal
+LABEL	0	what is the name of sonia gandhi daughter?	Rahul Gandhi
+LABEL	0	what movies does nick cannon play in?	All That
+LABEL	0	who voiced darth vader in the original star wars movies?	David Prowse
+LABEL	0	what countries are in the uk yahoo?	United Kingdom
+LABEL	1	who is the king of cambodia now?	Hun Sen
+LABEL	1	what team did messi play for in 2010?	FC Barcelona C
+LABEL	1	what to see in toronto top 10?	Toronto Eaton Centre
+LABEL	0	who played meg in season 1 of family guy?	Seth MacFarlane
+LABEL	1	when was the last time the dallas cowboys won the superbowl?	Super Bowl XXVII
+LABEL	1	what country is nicki minaj from?	United States of America
+LABEL	0	where did george herbert walker bush go to college?	Harvard Business School
+LABEL	0	who was the first governor of colonial south carolina?	Strom Thurmond
+LABEL	1	what is the dominant language spoken in jamaica?	Jamaican Creole English Language
+LABEL	1	who did cristiano ronaldo play for in 2010?	Portugal national football team
+LABEL	0	who plays mary jane in the spiderman movies?	Shailene Woodley
+LABEL	0	when did the san francisco earthquake occur?	1960 NCAA Men's Division I Basketball Tournament
+LABEL	0	who does darth vaders voice?	David Prowse
+LABEL	1	what films has scarlett johansson been in?	Home Alone 3
+LABEL	1	what document did thomas jefferson wrote?	The Works of Thomas Jefferson
+LABEL	0	what team does david beckham play for in 2012?	Real Madrid C.F.
+LABEL	0	what movies did nick cannon star in?	All That
+LABEL	0	what countries makes up the uk?	United Kingdom
+LABEL	1	where do they speak german?	Nazi Germany
+LABEL	0	what is kentucky state slogan?	Spotted bass
+LABEL	1	who does ronaldinho play for now 2011?	Brazil national football team
+LABEL	0	who did darth vaders voice?	David Prowse
+LABEL	1	what club does cristiano ronaldo play for in 2010?	Portugal national football team
+LABEL	0	who is ruling libya?	Abdul Hafiz Ghoga
+LABEL	1	what do the symbols on the nevada flag mean?	Mountain Bluebird
+LABEL	0	what is the state flower of new mexico?	Greater Roadrunner
+LABEL	1	what team is cristiano ronaldo play for?	Portugal national football team
+LABEL	0	what is michael kors real name?	Joan Hamburger
+LABEL	1	who won the governor election in texas?	Elisha M. Pease
+LABEL	1	what awards did marilyn monroe won?	Playboy Playmate
+LABEL	0	where did harper lee attend high school?	University of Oxford
+LABEL	1	what college did jrr tolkien go to?	University of Oxford
+LABEL	1	in what country do people speak danish?	Faroe Islands
+LABEL	1	who is my state senator arizona?	Barry Goldwater
+LABEL	1	when does the vietnam war end?	20th century
+LABEL	0	what school did robert f kennedy go to?	London School of Economics
+LABEL	1	what drug killed marilyn monroe?	Drug overdose
+LABEL	1	what songs do zac brown band sing?	Knee Deep
+LABEL	1	who won utah attorney general?	John Swallow
+LABEL	0	who played darth vader at the end of return of the jedi?	David Prowse
+LABEL	0	what is the kentucky state bird?	Spotted bass
+LABEL	0	when was the last time the boston bruins went to the stanley cup?	1939 Stanley Cup Finals
+LABEL	0	who was the secretary of state when andrew jackson was president?	John C. Calhoun
+LABEL	1	who does myles kennedy sing for?	Myles Kennedy and The Conspirators
+LABEL	0	what episode of how i met your mother is carrie underwood on?	Russell Crowe, Jenna Bush, Carrie Underwood
+LABEL	1	where does airtran airways fly?	Hartsfield?Jackson Atlanta International Airport
