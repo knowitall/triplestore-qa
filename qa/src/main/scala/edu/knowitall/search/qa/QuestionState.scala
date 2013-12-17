@@ -9,6 +9,7 @@ trait QuestionState extends QaState {
   def question: String
   def processed: Sentence with Lemmatized with Chunked
   def isParaphrased: Boolean
+  override def stateType = "QuestionState"
 }
 
 case object QuestionState {

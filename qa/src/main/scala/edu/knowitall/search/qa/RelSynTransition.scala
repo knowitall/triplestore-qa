@@ -13,13 +13,13 @@ import org.apache.solr.client.solrj.SolrServerException
 import java.io.StringWriter
 import java.io.PrintWriter
 
-class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient, skipTimeouts: Boolean = RelSynTransition.defaultSkipTimeouts) 
+class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient, skipTimeouts: Boolean = RelSynTransition.defaultSkipTimeouts, multipleSyns: Boolean = RelSynTransition.defaultMultipleSyns) 
   extends Transition[QaState, QaAction] {
   
   val logger = LoggerFactory.getLogger(this.getClass)
 
   override def apply(s: QaState) = s match {
-    case qs: QueryState if !qs.reformulated => reformulate(qs)
+    case qs: QueryState if (!qs.reformulated || multipleSyns) => reformulate(qs)
     case _ => Nil
   }
   
@@ -59,5 +59,6 @@ class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient, sk
 object RelSynTransition {
   val conf = ConfigFactory.load()
   val defaultSkipTimeouts = conf.getBoolean("relsyn.skipTimeouts")
+  val defaultMultipleSyns = conf.getBoolean("relsyn.multipleSyns")
   lazy val defaultClient = new RelSynClient() 
 }

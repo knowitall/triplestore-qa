@@ -1,3 +1,5 @@
 package edu.knowitall.search.qa
 
-trait QaState
+trait QaState {
+  def stateType: String
+}

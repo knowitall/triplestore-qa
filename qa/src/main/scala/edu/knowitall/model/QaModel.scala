@@ -14,11 +14,10 @@ import edu.knowitall.search.Edge
 import edu.knowitall.search.Node
 import edu.knowitall.search.qa.AnswerState
 import org.slf4j.LoggerFactory
+import edu.knowitall.search.qa.QaBeamSearch
 
 case class QaModel(transitionModel: QaTransitionModel = QaModel.defaultTransitionModel, 
-				   costModel: QaCostModel = QaModel.defaultCostModel,
-				   beamSize: Int = QaModel.defaultBeamSize,
-				   goalSize: Int = QaModel.defaultGoalSize) 
+				   costModel: QaCostModel = QaModel.defaultCostModel) 
 				   extends HiddenVariableModel[String, Derivation] {
   
   val logger = LoggerFactory.getLogger(this.getClass)
@@ -59,7 +58,7 @@ case class QaModel(transitionModel: QaTransitionModel = QaModel.defaultTransitio
   
   override def candidatePredictions(question: String) = {
     val problem = createSearchProblem(question)
-    val searcher = new BeamSearch(problem, beamSize, goalSize)
+    val searcher = new QaBeamSearch(problem)
     val goals = searcher.search
     goals.flatMap(makeDerivation(question, _))
   }
@@ -76,9 +75,6 @@ case class QaModel(transitionModel: QaTransitionModel = QaModel.defaultTransitio
 }
 
 case object QaModel {
-  val conf = ConfigFactory.load()
-  val defaultBeamSize = conf.getInt("search.beamSize")
-  val defaultGoalSize = conf.getInt("search.goalSize")
   lazy val defaultTransitionModel = new QaTransitionModel
   lazy val defaultCostModel = new QaCostModel
 }

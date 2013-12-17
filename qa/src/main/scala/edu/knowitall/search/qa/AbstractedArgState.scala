@@ -21,4 +21,5 @@ case class AbstractedArgState(question: String, processed: Sentence with Chunked
     (left ++ Seq("$y") ++ right).mkString(" ")
   }
   def arg = tokens.slice(argInterval.start, argInterval.end).mkString(" ")
+  override def stateType = "AbstractedArgState"
 }
