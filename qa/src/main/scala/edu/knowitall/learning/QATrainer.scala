@@ -44,7 +44,7 @@ class QaTrainer(model: QaModel, oracle: CorrectnessModel[String, Derivation]) ex
 object QaTrainer extends App {
   
   def timestamp = {
-    val fmt = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss")
+    val fmt = new SimpleDateFormat("yyyy-MM-dd-HHmmss")
     val today = Calendar.getInstance.getTime
     fmt.format(today)
   }
