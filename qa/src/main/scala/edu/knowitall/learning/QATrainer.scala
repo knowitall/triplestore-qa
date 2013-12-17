@@ -14,12 +14,17 @@ import edu.knowitall.model.QaModel
 import edu.knowitall.model.Derivation
 import java.text.SimpleDateFormat
 import java.util.Calendar
+import org.slf4j.LoggerFactory
+import java.io.StringWriter
 
 class QaTrainer(model: QaModel, oracle: CorrectnessModel[String, Derivation]) extends HiddenVariableModel[String, Derivation] {
   
   private var avgWeights = model.costModel.weights
   private var iter = 1.0
+  var numUpdates = 0
+  var numExamples = 0
   private val perceptron = new Perceptron(this, oracle)
+  private val logger = LoggerFactory.getLogger(this.getClass)
   
   override def predict(question: String) = model.predict(question)
   
@@ -27,12 +32,25 @@ class QaTrainer(model: QaModel, oracle: CorrectnessModel[String, Derivation]) ex
   
   override def update(question: String, predicted: Derivation, expected: Derivation) = {
     model.update(question, predicted, expected)
+    numUpdates += 1
     avgWeights = avgWeights + (expected.features - predicted.features) * iter
   }
   
   def learnIter(question: String) = {
-    perceptron.learnIter(question)
-    iter += 1
+    try {
+      perceptron.learnIter(question)
+      iter += 1
+      numExamples += 1
+    } catch {
+      case e: Throwable => {
+        logger.warn(s"Encountered problem with example: $question")
+        logger.warn(s"Supressing error.")
+        val sw = new StringWriter()
+        val pw = new PrintWriter(sw)
+        e.printStackTrace(pw)
+        logger.warn(sw.toString())
+      }
+    }
   }
   
   def learn(inputs: Traversable[String]) = inputs foreach learnIter
@@ -84,13 +102,17 @@ object QaTrainer extends App {
   val trainer = new QaTrainer(model, oracle)
   println("Learning...")
   for (i <- 1 to numIters) {
+    val start = System.currentTimeMillis
     trainer.learn(inputs)
     val file = new File(dir, s"model.$i.txt")
     SparseVector.toFile(model.costModel.weights, file.toString())
     val avgFile = new File(dir, s"model.$i.avg.txt")
     SparseVector.toFile(trainer.averagedWeights, avgFile.toString())
+    val delta = System.currentTimeMillis - start
+    println(s"Done with iteration $i (${delta/1000} seconds, ${trainer.numUpdates} updates so far)")
   }
   println("Done learning")
+  
   
   SparseVector.toFile(model.costModel.weights, modelOutput.toString())
   SparseVector.toFile(trainer.averagedWeights, (new File(dir, s"model.avg.txt")).toString())
