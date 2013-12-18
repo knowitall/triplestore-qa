@@ -36621,3 +36621,32 @@ LABEL	0	where did president eisenhower go to college?	1954
 LABEL	0	who is tony romo engaged to?	Shaun Hill
 LABEL	0	what type of political system does iran have?	studies
 LABEL	0	what is the government structure of germany?	Berlin
+LABEL	0	what money system does australia use?	system
+LABEL	1	what wild animals live in colorado?	FOXES
+LABEL	0	what currency does brazil use?	Twitter
+LABEL	0	who played as barney?	The successful applicant
+LABEL	1	what movies has halle berry starred in?	Movie-Gothika
+LABEL	0	where does hudson river start?	1975
+LABEL	0	what university did tony romo go to?	Sunday
+LABEL	0	what type of government does the bahamas have?	Government
+LABEL	0	what type of currency does brazil use?	Twitter
+LABEL	0	what other books did jules verne wrote?	Paris
+LABEL	0	what movies has renee zellweger been in?	the lead
+LABEL	0	what money is used in mozambique?	the models
+LABEL	0	what college did kris humphries play for?	millions
+LABEL	0	which continent is costa rica located?	mountain ranges
+LABEL	0	what year was the new york blackout?	the light
+LABEL	1	what inventions did da vinci made?	Helicopter
+LABEL	1	who was dr seuss?	Theodor Geisel
+LABEL	1	what three countries does mexico border?	The U.S.
+LABEL	0	who did mike tomlin play for?	a week
+LABEL	1	what is the language spoken in brazil?	Portuguese
+LABEL	0	who's kobe bryant?	a common thread
+LABEL	0	what kind of government system does canada have?	New Zealand
+LABEL	1	where did the navajo tribe live?	the reservation
+LABEL	0	where was princess leia raised?	peaceful lands
+LABEL	0	where does the jordan river begin?	the remote area
+LABEL	0	what time zone is it in california?	new york
+LABEL	1	where do tasmanian devils live?	Maria Island
+LABEL	0	where did the columbia river begin?	1926
+LABEL	0	what has mario lopez been in?	a workout
