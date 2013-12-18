@@ -36551,3 +36551,35 @@ LABEL	0	what is vanderbilt university known for?	State University
 LABEL	1	what does the dominican republic speak?	Japanese Language
 LABEL	1	what does latin america consist of?	South America
 LABEL	0	what kind of voting system does japan have?	a set
+LABEL	1	what illness does michael j fox have?	Parkinson?s disease
+LABEL	0	what type of government is the us government?	Customs Service
+LABEL	0	what sort of government does brazil have?	Minister of the Sea
+LABEL	0	what university did tony romo go to?	Terrell Owens
+LABEL	1	what does bill gates own?	Corbis
+LABEL	1	what language do the speak in pakistan?	Seraiki Language
+LABEL	0	what region is manchester england?	Mike
+LABEL	0	where was abraham buried?	Lakeview Cemetery
+LABEL	0	where did american troops fight in ww1?	the Pacific
+LABEL	0	what is the official language in mexico?	Mazahua Central
+LABEL	0	what other books did jules verne wrote?	Julio Verne
+LABEL	1	what is british columbia?	Victoria Victoria
+LABEL	0	what kind of currency do they use in thailand?	A book
+LABEL	1	what did einstein invent?	the Photon Experimental physics
+LABEL	0	what inventions did da vinci made?	Leonardo da Vinci : Experience, Experiment and Design
+LABEL	0	who wrote the book of st. john?	Serendipity House
+LABEL	1	what sports do they have in china?	Table tennis
+LABEL	0	what mark zuckerberg?	Andrew Bosworth
+LABEL	0	who is the governor of colorado 2009?	Dick Lamm
+LABEL	0	when was the chinese flag designed?	the rooftop
+LABEL	1	what did ron howard direct?	Presidential Reunion
+LABEL	0	what time is the grand prix starting?	Yesterday
+LABEL	1	what language did jewish people speak?	Hulaul? Language
+LABEL	0	where president nixon was born?	the first American President
+LABEL	0	what kind of government system does canada have?	Houston
+LABEL	1	what is the president of france's name?	Sarko
+LABEL	1	what sports do they do in canada?	Horse racing
+LABEL	0	what timezone are the bahamas?	the site
+LABEL	1	what films did charlie chaplin direct?	Modern Times
+LABEL	0	who is the political leader of japan?	Hiroshima and Nagasaki
+LABEL	0	what is vanderbilt university known for?	VU
+LABEL	0	what are the two houses in congress?	Frames These
