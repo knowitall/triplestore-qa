@@ -36518,3 +36518,36 @@ LABEL	0	who is the present president of china?	Hong Kong
 LABEL	0	what is the government structure of germany?	The Church
 LABEL	0	what does latin america consist of?	public interest actions
 LABEL	0	what date was abraham lincoln inaugurated?	North Carolina
+LABEL	1	what illness does michael j fox have?	Parkinson?s
+LABEL	0	where is napoleon buried?	Vilnius
+LABEL	0	who played as barney?	Barbara Barrie
+LABEL	0	what sort of government does brazil have?	?This development
+LABEL	1	what language does people in france speak?	French
+LABEL	1	what is there to do in palm springs?	year-round sunshine
+LABEL	1	what language do the speak in pakistan?	Brahui Language
+LABEL	0	what city uses gmt?	the Guardian website
+LABEL	0	where did dmitri mendeleev teach?	the 19th century
+LABEL	0	where did american troops fight in ww1?	Vietnam
+LABEL	1	what style of music did jimi hendrix play?	Woodstock
+LABEL	0	what other books did jules verne wrote?	Michel Strogoff
+LABEL	0	what is british columbia?	Oceanfront Vancouver
+LABEL	0	where are the nuclear plants in uk?	Southern Catalonia
+LABEL	0	what education does jeff corwin have?	mammals
+LABEL	0	who has britney spears married?	Jason Alexander
+LABEL	1	where does the shannon river flow?	Lough Ree
+LABEL	0	what inventions did da vinci made?	Leonardo da Vinci Drawings of Horses from the Royal Library at Windsor Castle
+LABEL	0	what kind of political system does iran have?	studies
+LABEL	0	what did michelle obama do?	iVillage
+LABEL	0	what songs has madonna written?	Madonna Music
+LABEL	0	what time is the grand prix starting?	20 minutes
+LABEL	0	what are popular sports in spain?	Charles Dickens
+LABEL	0	who was the 2nd prime minister of pakistan?	Benazir Bhutto
+LABEL	1	where are the netherlands on a world map?	North West Europe
+LABEL	1	what are countries in south asia?	Airports Pakistan
+LABEL	1	what did copernicus invented?	a new reality
+LABEL	1	where does the shannon river end?	Lough Ree
+LABEL	0	what year did pete rose play?	more major league baseball games
+LABEL	0	what is vanderbilt university known for?	State University
+LABEL	1	what does the dominican republic speak?	Japanese Language
+LABEL	1	what does latin america consist of?	South America
+LABEL	0	what kind of voting system does japan have?	a set
