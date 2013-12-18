@@ -36650,3 +36650,39 @@ LABEL	0	what time zone is it in california?	new york
 LABEL	1	where do tasmanian devils live?	Maria Island
 LABEL	0	where did the columbia river begin?	1926
 LABEL	0	what has mario lopez been in?	a workout
+LABEL	0	what is the name of money in brazil?	art
+LABEL	0	what state did woodrow wilson represent?	STATES
+LABEL	0	what music did beethoven composed?	Ludwig van Beethoven
+LABEL	0	who is married to garth brooks?	Yearwood
+LABEL	0	what does the letters eu stand for?	the WTO
+LABEL	0	what time is right now in texas?	the jobs
+LABEL	0	what school did sir isaac newton go to?	a school
+LABEL	0	what was richard wright known for?	the good and bad points
+LABEL	1	what kind of money in aruba?	gold
+LABEL	0	where did bashar al assad study?	Damascus
+LABEL	1	where did the name rome come from?	Romulus
+LABEL	1	what are two countries in south america?	Along with Ecuador
+LABEL	0	what kind of money does the philippines use?	a bit
+LABEL	0	what does amanda seyfried play in?	Amanda Seyfried
+LABEL	0	what movies has scarlett johansson in?	movie this is it
+LABEL	0	what is the political system in england?	studies
+LABEL	1	what is the main language spoken in italy?	Languages Italian
+LABEL	0	where did president eisenhower go to college?	president
+LABEL	0	where does the jordan river begin?	a decline
+LABEL	1	what type of political system does iran have?	a real democracy
+LABEL	1	what cancer did audrey hepburn died of?	cancer
+LABEL	0	where did harrison ford get his start?	the public eye
+LABEL	0	what university did donald trump graduate from?	head
+LABEL	0	what did jordyn wieber win gold for?	the American Cup?for
+LABEL	0	what are the names of all the countries in africa?	Great Britain
+LABEL	0	what music did beethoven composed?	Music
+LABEL	0	what is the time zone in uk now?	ART
+LABEL	1	what was james madison's job?	Politician
+LABEL	1	what movies did miley cyrus play in?	Hannah Montana
+LABEL	0	when is portland marathon?	?Today
+LABEL	0	which states does the connecticut river flow through?	the center
+LABEL	0	what time zone is it in london england?	UTC
+LABEL	0	where was san gabriel arcangel located?	the 4th mission
+LABEL	0	what form of government does czech republic have?	last year
+LABEL	1	who is keyshia cole married too?	Dating Daniel ?Boobie? Gibson
+LABEL	0	what is the currency in the dominican republic called?	New York
