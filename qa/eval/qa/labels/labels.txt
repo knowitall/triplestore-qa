@@ -35933,7 +35933,7 @@ LABEL	1	what happened at chernobyl?	Chernobyl disaster
 LABEL	0	what county is st james city fl in?	Craven County
 LABEL	0	after how many years are the olympic games held?	2006 Winter Olympics
 LABEL	0	when was the last time the ny knicks won a playoff game?	News magazine
-LABEL	0	what is lamar odom doing now july 2012?	Les Tr??s Riches Heures du duc de Berry juillet
+LABEL	0	what is lamar odom doing now july 2012?	Les Tres Riches Heures du duc de Berry juillet
 LABEL	1	which hemingway book to read?	A Moveable Feast
 LABEL	0	who is the prime minister of jamaica west indies?	Inflation, World Development Indicators, World Bank
 LABEL	0	where is french spoken most?	French Language
@@ -36008,7 +36008,7 @@ LABEL	0	where was osama bin laden killed?	Saudi Arabia
 LABEL	0	who was queen elizabeth ii mom?	United Kingdom
 LABEL	1	what type of art did pablo picasso paint?	Ceramic art
 LABEL	0	who did ricky martin started his career with?	Ricky Martin
-LABEL	0	what led to the split of the republican party in 1912?	2008 Republican Primary, California?s 32nd Assembly District
+LABEL	0	what led to the split of the republican party in 1912?	2008 Republican Primary, California's 32nd Assembly District
 LABEL	1	what are the supreme court cases?	Edwards v. Canada
 LABEL	0	when is the rainy season in bangkok thailand?	Entertainment Weekly annotation index
 LABEL	0	where did the israel palestine conflict start?	Yom Kippur War
@@ -36072,7 +36072,7 @@ LABEL	0	which of the following was a contribution thomas hunt morgan made to gen
 LABEL	0	when did we start war with iraq?	Six-Day War
 LABEL	0	who is the governor of virginia 2011?	Ed Schrock
 LABEL	1	where is walton county ga?	Walton County, FL HUD Section 8 Area
-LABEL	0	what cancer did jackie kennedy die of?	Dan Tur?ll
+LABEL	0	what cancer did jackie kennedy die of?	Dan Turell
 LABEL	0	where is tupac from originally?	Las Vegas
 LABEL	0	what role did george lucas play in star wars?	Chief Executive Officer
 LABEL	1	what sarah dessen books are movies?	That Summer
@@ -36101,7 +36101,7 @@ LABEL	0	who is angelina jolie?	WSJ Topic Index
 LABEL	1	which countries speak germanic languages?	Kingdom of the Netherlands
 LABEL	0	who plays eowyn in lord of the rings?	Ralph Fiennes
 LABEL	1	where is augusta masters 2012?	United States of America
-LABEL	0	what type of cancer did eva peron die from?	Dan Tur?ll
+LABEL	0	what type of cancer did eva peron die from?	Dan Turell
 LABEL	0	when did carolina panthers go to superbowl?	2006 Stanley Cup Finals
 LABEL	1	what does helen flanagan do?	Coronation Street
 LABEL	1	where is tennessee river?	Watts Bar Lake
@@ -36168,4 +36168,4 @@ LABEL	0	who did cher have a son with?	Chaz Bono
 LABEL	0	what is the political system in germany?	United States of America
 LABEL	0	who won the american league east in 2012?	Rafael Nadal
 LABEL	0	what did isaac newton explain?	Ralph Waldo Emerson
-LABEL	1	where does airtran airways fly?	Hartsfield?Jackson Atlanta International Airport
+LABEL	1	where does airtran airways fly?	Hartsfield Jackson Atlanta International Airport
