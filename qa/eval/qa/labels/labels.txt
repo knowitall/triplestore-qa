@@ -36457,3 +36457,64 @@ LABEL	0	what kind of voting system does japan have?	the first one
 LABEL	0	what date was abraham lincoln inaugurated?	the Gettysburg address
 LABEL	1	who is the owner of the philadelphia eagles?	Bert Bell
 LABEL	0	what university did donald trump graduate from?	President
+LABEL	1	what do people from spain speak?	Galician Language
+LABEL	0	what government did japan have?	Nazi Germany
+LABEL	0	what type of government does australia currently have?	India
+LABEL	0	what sort of government does brazil have?	The Church
+LABEL	0	who have the lakers signed?	the West
+LABEL	0	where does hudson river start?	August
+LABEL	0	what is there to do in palm springs?	One very popular destination
+LABEL	1	who was the owner of kfc?	Restaurant Brands
+LABEL	1	what books did frances hodgson burnett wrote?	Prinzessin Sarah
+LABEL	0	where is washington dc located what state?	Capitol Hills
+LABEL	1	what team did ronaldo play for?	Inter Milan
+LABEL	0	what city uses gmt?	The most common format
+LABEL	0	what kind of money is used in israel?	art
+LABEL	1	where did bob barker grow up?	Darrington
+LABEL	1	who does the uk trade with?	the EU
+LABEL	0	where did american troops fight in ww1?	Korea
+LABEL	0	what is tibetan language?	Buddhist texts
+LABEL	0	what was richard wright known for?	Rick Wright
+LABEL	1	what form of government does afghanistan have?	Al Qaeda
+LABEL	1	what style of music did jimi hendrix play?	Piano
+LABEL	1	what language do denmark?	German Language
+LABEL	1	what other books did jules verne wrote?	Claudius Bombarnac
+LABEL	0	what is british columbia?	The Flathead
+LABEL	0	what happened at fukushima daiichi nuclear plant?	lives
+LABEL	1	who do nate robinson play for?	NBA
+LABEL	1	where is portuguese language spoken?	Equatorial Guinea
+LABEL	0	what jobs did ben franklin do?	Art
+LABEL	0	who is married to garry trudeau?	New York City
+LABEL	0	what education does jeff corwin have?	Venture Labs
+LABEL	0	what does russian people speak?	anguish and pain
+LABEL	0	who is the current leader of china today?	Sidetrack HU
+LABEL	0	what country did truman lead?	Clark Clifford
+LABEL	1	what language they speak in the philippines?	Nepali Language
+LABEL	0	what language do they speak in egyptian?	W.W. II
+LABEL	1	who was emperor diocletian?	The first Tetrarchy
+LABEL	0	what inventions did da vinci made?	Ten Drawings by Leonardo da Vinci from the Royal Collection
+LABEL	1	who played darth vader in the original star wars movies?	Prowse
+LABEL	0	what kind of political system does iran have?	law
+LABEL	0	who is the governor of colorado 2009?	Wayne Allard
+LABEL	0	when was the chinese flag designed?	U.S. soil
+LABEL	0	where donald trump went to college?	president
+LABEL	0	who is carl edwards racing for?	gas
+LABEL	1	what is the language spoken in brazil?	Portuguese Language
+LABEL	0	what is the political system in england?	law
+LABEL	1	where is oceania on a map?	French Polynesia
+LABEL	1	what were erik erikson's theories?	adolescence
+LABEL	0	what was malcolm x trying to accomplish?	the public
+LABEL	0	who was the 2nd prime minister of pakistan?	Mubarak Ali Khan
+LABEL	0	what did julia roberts won an oscar for?	Jesus Henry Christ
+LABEL	1	what type of government germany have?	Vichy France
+LABEL	0	what type of political system does iran have?	Pakistan
+LABEL	1	what are countries in south asia?	India India
+LABEL	1	who was cleopatra married too?	Julius Caesar
+LABEL	1	who was leonardo da vinci teacher?	The eponymous Luca
+LABEL	0	where did the columbia river begin?	dire straits
+LABEL	0	what position does ray allen?	the boston
+LABEL	0	what year did pete rose play?	a regular basis
+LABEL	0	who is the present president of china?	Hong Kong
+LABEL	0	what is the government structure of germany?	The Church
+LABEL	0	what does latin america consist of?	public interest actions
+LABEL	0	what date was abraham lincoln inaugurated?	North Carolina
