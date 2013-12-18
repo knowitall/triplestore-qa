@@ -36603,3 +36603,21 @@ LABEL	1	what films did charlie chaplin direct?	Getting Acquainted
 LABEL	0	where did the columbia river begin?	1999
 LABEL	0	what is vanderbilt university known for?	Vanderbilt University, main campus
 LABEL	1	where did harrison ford get his start?	Rick Deckard
+LABEL	1	what government did japan have?	The Genro
+LABEL	0	what is the name of money in brazil?	social security
+LABEL	0	who won the nobel peace prize in 2007?	Climate Change
+LABEL	0	what movies star adam sandler?	movies The
+LABEL	1	what is the official language in mexico?	Religion Spanish
+LABEL	0	where north dakota located?	Bismarck
+LABEL	0	who was reese witherspoon married too?	an abusive animal trainer
+LABEL	0	who is the governor of colorado 2009?	Tom Tancredo
+LABEL	0	when was the chinese flag designed?	the crowd
+LABEL	0	who is carl edwards racing for?	the fifth time
+LABEL	0	what time is the grand prix starting?	the public
+LABEL	1	what language is spoken in singapore?	English
+LABEL	1	what is the dominant language of jamaica?	Jamaican Patois
+LABEL	0	what did julia roberts won an oscar for?	the role
+LABEL	0	where did president eisenhower go to college?	1954
+LABEL	0	who is tony romo engaged to?	Shaun Hill
+LABEL	0	what type of political system does iran have?	studies
+LABEL	0	what is the government structure of germany?	Berlin
