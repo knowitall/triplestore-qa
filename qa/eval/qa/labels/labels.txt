@@ -36583,3 +36583,23 @@ LABEL	1	what films did charlie chaplin direct?	Modern Times
 LABEL	0	who is the political leader of japan?	Hiroshima and Nagasaki
 LABEL	0	what is vanderbilt university known for?	VU
 LABEL	0	what are the two houses in congress?	Frames These
+LABEL	1	what illness does michael j fox have?	a terrible disease
+LABEL	1	what products are made in the usa?	Door
+LABEL	0	what type of government does australia currently have?	?This development
+LABEL	1	who does the uk trade with?	Saudi Arabia
+LABEL	1	what other books did jules verne wrote?	Michael Strogoff
+LABEL	0	what is british columbia?	Vince Ready
+LABEL	0	what did einstein invent?	The Albert Einstein Quiz
+LABEL	0	what inventions did da vinci made?	Leonardo da Vinci and the Art of Sculpture: Inspiration and Invention
+LABEL	1	what sports do they have in china?	water-polo
+LABEL	0	who was sam houston answers?	Santa Anna
+LABEL	1	what language did jewish people speak?	Ladino Language
+LABEL	0	where president nixon was born?	the goddamn Justice Department
+LABEL	0	what do israeli people speak?	Bassem Tamimi
+LABEL	1	what represents ghana?	King David
+LABEL	1	what inspired monet?	Giverny
+LABEL	0	where is singapore on a world map?	Countries
+LABEL	1	what films did charlie chaplin direct?	Getting Acquainted
+LABEL	0	where did the columbia river begin?	1999
+LABEL	0	what is vanderbilt university known for?	Vanderbilt University, main campus
+LABEL	1	where did harrison ford get his start?	Rick Deckard
