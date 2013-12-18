@@ -14,6 +14,7 @@ import com.twitter.util.LruMap
 import scala.collection.mutable.SynchronizedMap
 import java.util.ArrayList
 import com.typesafe.config.ConfigFactory
+import org.apache.solr.common.SolrException
 
 /**
  * The interface to a Triplestore.
@@ -79,7 +80,7 @@ case class CachedTriplestoreClient(client: TriplestoreClient, size: Int = 1000)
  * URL should point to the Solr instance. "hits" is the default number of hits
  * that is returned by the search.
  */
-case class SolrClient(url: String, hits: Int = 10, timeout: Int = SolrClient.defaultTimeout) extends TriplestoreClient {
+case class SolrClient(url: String, hits: Int = 10, timeout: Int = SolrClient.defaultTimeout, skipTimeouts: Boolean = SolrClient.defaultSkipTimeouts) extends TriplestoreClient {
 
   def this() = this(SolrClient.defaultUrl, SolrClient.defaultMaxHits)
   
@@ -92,6 +93,16 @@ case class SolrClient(url: String, hits: Int = 10, timeout: Int = SolrClient.def
   server.setMaxRetries(1)
   
   val defaultMaxHits = hits
+  
+  private def execQuery(q: SolrQuery) = try {
+    Some(server.query(q))
+  } catch {
+    case e: SolrException => if (skipTimeouts) {
+      None
+    } else {
+      throw e
+    }
+  }
 
   /**
    * Returns the number of documents in Solr that match the given query.
@@ -99,10 +110,11 @@ case class SolrClient(url: String, hits: Int = 10, timeout: Int = SolrClient.def
   def count(q: TSQuery): Long = {
     val query = SolrClient.buildCountQuery(q)
     query.setParam("shards.tolerant", true)
-    val resp = server.query(query)
-    val c = resp.getResults().getNumFound()
-    logger.debug(s"Found $c hits for query: ${q.toQueryString}")
-    return c
+    val c = for {
+      resp <- execQuery(query)
+      c = resp.getResults().getNumFound()
+    } yield c
+    c.getOrElse(0)
   }
   
   /**
@@ -113,11 +125,11 @@ case class SolrClient(url: String, hits: Int = 10, timeout: Int = SolrClient.def
     val query = SolrClient.buildQuery(q)
     query.setRows(hits)
     query.setParam("shards.tolerant", true)
-    val resp = server.query(query)
-    val results = resp.getResults().toList.map(SolrClient.docToTuple)
-    val n = results.size
-    logger.debug(s"Loaded $n tuples into memory for query: ${q.toQueryString}")
-    return results
+    val tuples = for {
+      resp <- execQuery(query)
+      results = resp.getResults().toList.map(SolrClient.docToTuple)
+    } yield results
+    tuples.getOrElse(List.empty[Tuple])
   }
   
 }
@@ -126,6 +138,7 @@ case object SolrClient {
   val defaultUrl = conf.getString("triplestore.url")
   val defaultMaxHits = conf.getInt("triplestore.maxHits")
   val defaultTimeout = conf.getInt("triplestore.timeout")
+  val defaultSkipTimeouts = conf.getBoolean("triplestore.skipTimeouts")
     
   def escape(s: String): String = ClientUtils.escapeQueryChars(s)
   
