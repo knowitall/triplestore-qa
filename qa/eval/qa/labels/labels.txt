@@ -30105,3 +30105,51 @@ LABEL	0	What is an earthquake?	the 11th
 LABEL	1	When was JFK born?	1917
 LABEL	0	What year did Hitler die?	b 1960
 LABEL	0	What is its popular name?	Fort Pilar
+LABEL	0	What is a group of frogs called?	toads
+LABEL	1	Who is a German philosopher?	Immanuel Kant
+LABEL	1	What gasses are in the troposphere?	Water vapor
+LABEL	0	What are cigarettes made of?	cigarette smoking
+LABEL	0	What company did Harley-Davidson buy out?	ArtPeople
+LABEL	1	What is the lowest point on earth?	The Dead Sea
+LABEL	1	What year did Padre Pio die?	1968
+LABEL	0	Who were victims of the disaster?	the BGPMUS
+LABEL	0	What year was his first book written?	1939
+LABEL	1	What is strep throat?	Scarlet fever
+LABEL	0	When was Prince Charles born?	1981
+LABEL	0	Who helped the candidates prepare?	presentations
+LABEL	1	When is Boxing Day?	December 26
+LABEL	1	What year was the Fulbright Program established?	1949
+LABEL	1	Where do hyenas live?	Africa
+LABEL	0	Where was George Foreman born?	Entrepreneur
+LABEL	1	What continent is India on?	Eurasia
+LABEL	1	Where is the Mason/Dixon line?	Maryland
+LABEL	0	What is a golden parachute?	Large corporations
+LABEL	0	Where was the trial held?	Kanawha County
+LABEL	1	What are triglycerides?	fatty acids
+LABEL	0	What is the population of Mexico?	Native Americans today
+LABEL	1	What city is Massachusetts General Hospital located in?	Boston
+LABEL	1	Who was president in 1913?	Yuan Shikai
+LABEL	0	Who was the prosecutor?	Roger Goodell
+LABEL	1	Where did the ukulele originate?	Hawaii
+LABEL	0	On what date was the first debate?	National Security
+LABEL	0	Where is Kings Canyon?	Grant Grove
+LABEL	0	The Orange Bowl is located in what city?	Dolphin Stadium
+LABEL	0	What is the Moulin Rouge?	Moulin Rouge
+LABEL	0	How many people were on board?	Software developers
+LABEL	0	What other products does Harley-Davidson produce?	Star Motorcycles
+LABEL	0	What is the fear of lightning called?	bitter food
+LABEL	0	What is a nickname for Mississippi?	Community colleges
+LABEL	1	What is the meaning of thalassemia?	Blood disorder
+LABEL	1	What are the names of the Dixie Chicks?	Natalie Maines
+LABEL	1	How many states have a lottery?	North Carolina
+LABEL	0	How many miles long is the Iditarod?	The race
+LABEL	0	What are the names of the three Great Pyramids?	Atlantis
+LABEL	0	Who invented the Rubik's Cube?	the guy
+LABEL	0	What year did Ayn Rand die?	2004
+LABEL	0	What kind of plant is kudzu?	unintended consequences
+LABEL	0	What are the names of the space shuttles?	space exploration
+LABEL	1	What is naproxen?	PAIN RELIEF
+LABEL	1	What monarch signed the Magna Carta?	John I
+LABEL	0	What is an earthquake?	Clean Elections
+LABEL	1	What year did Hitler die?	1964
+LABEL	0	What is its popular name?	Raja Yoga
