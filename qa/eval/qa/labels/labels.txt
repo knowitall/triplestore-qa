@@ -30015,3 +30015,93 @@ LABEL	0	What year did the Titanic start on its journey?	The Movie List: the firs
 LABEL	1	What is naproxen?	Naproxen 250 tablet
 LABEL	0	What Little League teams have won the World Series?	Major League Baseball
 LABEL	1	What award was won by Sammy Sosa in 1998?	Sportsman of the Year
+LABEL	0	What country did Marco Polo come from?	CHina
+LABEL	1	In what year was the FISA court established?	1978
+LABEL	0	What is a group of frogs called?	The Ranidae family
+LABEL	0	What is the average age of a Harley-Davidson rider?	Saul Anuzis
+LABEL	1	Who is a German philosopher?	Eugen Herrigel
+LABEL	0	What was the previous world record time?	29 years
+LABEL	1	What gasses are in the troposphere?	OZone
+LABEL	0	Which high school did she go to?	Candy Yang Xiao Bing
+LABEL	0	What are cigarettes made of?	a 10 % legislated increase
+LABEL	0	Hazmat stands for what?	ready 24-7-365
+LABEL	0	What company did Harley-Davidson buy out?	the merger
+LABEL	1	When was penicillin first used?	1943
+LABEL	1	When was the first flush toilet invented?	1596
+LABEL	0	What does EKG stand for?	empathy
+LABEL	1	What is the lowest point on earth?	394 meters
+LABEL	1	What is the name of the inventor of silly putty?	James Wright
+LABEL	1	What year did Padre Pio die?	September 1968
+LABEL	1	Where is the Shawnee National Forest?	Illinois
+LABEL	0	Who were victims of the disaster?	close associates
+LABEL	0	What year was his first book written?	1893
+LABEL	0	What is strep throat?	The most common exception
+LABEL	0	What pope followed Pius XII?	the pope
+LABEL	1	When was Prince Charles born?	1948
+LABEL	0	Who helped the candidates prepare?	a written dissertation
+LABEL	1	When is Boxing Day?	the Monday
+LABEL	0	What is the most expensive car in the world?	Kansas City Star
+LABEL	1	What are xerophytes?	the common wild plants
+LABEL	1	What year was the Fulbright Program established?	c.1946
+LABEL	1	Where do hyenas live?	social groups
+LABEL	1	What does NASDAQ stand for?	National Association
+LABEL	1	What does the acronym FISA stand for?	Federazione Italiana Scuderie Automobilistiche
+LABEL	0	Where was George Foreman born?	Liston
+LABEL	1	When was John D. Rockefeller born?	1839
+LABEL	1	What is the effect of acid rain?	The principal destructive element
+LABEL	1	When was the NFL established?	1920
+LABEL	1	What continent is India on?	asia
+LABEL	1	What year was the U.S. Mint established?	1792
+LABEL	0	Who was the coach of the French team?	the French League
+LABEL	0	Where is the Mason/Dixon line?	Robert Birnbaum
+LABEL	0	What is a golden parachute?	the Heck
+LABEL	0	Where was the trial held?	Ancaster
+LABEL	0	What is a film starring Jude Law?	the links
+LABEL	0	What are triglycerides?	The other outer limits
+LABEL	0	What are the names of Jacques Cousteau's two sons?	a non-profit organization
+LABEL	0	When did the battle of Iwo Jima take place?	Boys
+LABEL	1	What is the population of Mexico?	95 million
+LABEL	0	What kind of animal was Winnie the Pooh?	PB
+LABEL	1	When was George Foreman born?	January 10th
+LABEL	1	What city is Massachusetts General Hospital located in?	CHARLESTOWN
+LABEL	1	Who was president in 1913?	Woodrow Wilson
+LABEL	0	Who is the CEO of UPS?	France Julien
+LABEL	1	What does LPGA stand for?	ladies professional golf association
+LABEL	0	Who was the prosecutor?	Patrick Dinkelacker
+LABEL	1	Where did the ukulele originate?	Portugal
+LABEL	0	On what date was the first debate?	Sept.30
+LABEL	1	What is nanotechnology?	One particularly exciting emerging area
+LABEL	1	What does NASA stand for?	National Aeronautics and Space Administration
+LABEL	1	When did Rachel Carson die?	1964
+LABEL	0	Where is Kings Canyon?	TripAdvisor ? Yelp Cedar Grove Lodge
+LABEL	0	Where is Tornado Alley?	The property
+LABEL	0	The Orange Bowl is located in what city?	LandShark Stadium
+LABEL	0	What is the Moulin Rouge?	The other one
+LABEL	0	How many people were on board?	Budhoe
+LABEL	1	What other products does Harley-Davidson produce?	18 products
+LABEL	0	Who is Angela Davis?	Dorothy Dandridge
+LABEL	1	What is the oldest national park in the U.S.?	Yellowstone
+LABEL	0	What is the fear of lightning called?	Claus
+LABEL	1	What is a nickname for Mississippi?	MS
+LABEL	0	What is the meaning of thalassemia?	3-6 %
+LABEL	0	When was the first hair dryer made?	Alexandre Godefoy
+LABEL	0	What are the names of the Dixie Chicks?	The big winners
+LABEL	1	What is the Jewish alphabet called?	the Hebrew alphabet
+LABEL	1	How many states have a lottery?	Tennessee
+LABEL	0	How many miles long is the Iditarod?	a pep rally
+LABEL	0	What are the names of the three Great Pyramids?	El Castillo
+LABEL	1	Who invented the Rubik's Cube?	Hungarian Ern? Rubik
+LABEL	1	What year did Ayn Rand die?	1982
+LABEL	1	What does DEA stand for?	Drug Enforcement Administration
+LABEL	0	What kind of plant is kudzu?	tree?s
+LABEL	1	What year was Wal-Mart founded?	1962
+LABEL	1	In what city was Frank Sinatra born?	hoboken
+LABEL	0	What are the names of the space shuttles?	the only actual data point
+LABEL	0	What is naproxen?	RA
+LABEL	1	What monarch signed the Magna Carta?	John X
+LABEL	0	Who supervised the transplant?	Dr. Good
+LABEL	1	Who painted the ceiling of the Sistine Chapel?	Michael Angelo
+LABEL	0	What is an earthquake?	the 11th
+LABEL	1	When was JFK born?	1917
+LABEL	0	What year did Hitler die?	b 1960
+LABEL	0	What is its popular name?	Fort Pilar
