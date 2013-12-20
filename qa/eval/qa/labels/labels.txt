@@ -30153,3 +30153,10 @@ LABEL	1	What monarch signed the Magna Carta?	John I
 LABEL	0	What is an earthquake?	Clean Elections
 LABEL	1	What year did Hitler die?	1964
 LABEL	0	What is its popular name?	Raja Yoga
+LABEL	1	What other products does Harley-Davidson produce?	Motorcycles
+LABEL	1	When was penicillin first used?	1929
+LABEL	0	Who is the CEO of UPS?	a sophomore
+LABEL	1	What does NASA stand for?	National Aeronautical Space Administration
+LABEL	0	What is the fear of lightning called?	War / yuan sign skills
+LABEL	0	What is the meaning of thalassemia?	the most important genetic factors
+LABEL	1	What does DEA stand for?	the Dumb Enforcement Administration
