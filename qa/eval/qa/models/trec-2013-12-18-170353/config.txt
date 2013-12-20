@@ -1,0 +1,429 @@
+{
+    # application.conf: 49-57
+    "lm" : {
+        # application.conf: 54
+        "scale" : true,
+        # application.conf: 57
+        "skipTimeouts" : true,
+        # application.conf: 52
+        "minValue" : -35,
+        # application.conf: 55
+        "retries" : 2,
+        # application.conf: 51
+        "batchSize" : 100,
+        # application.conf: 50
+        "timeout" : 10000,
+        # application.conf: 49
+        "url" : "http://rv-n15.cs.washington.edu:8888",
+        # application.conf: 56
+        "cacheSize" : 100000,
+        # application.conf: 53
+        "maxValue" : -5
+    },
+    # system properties
+    "line" : {
+        # system properties
+        "separator" : "\n"
+    },
+    # system properties
+    "sun" : {
+        # system properties
+        "os" : {
+            # system properties
+            "patch" : {
+                # system properties
+                "level" : "unknown"
+            }
+        },
+        # system properties
+        "boot" : {
+            # system properties
+            "library" : {
+                # system properties
+                "path" : "/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib"
+            },
+            # system properties
+            "class" : {
+                # system properties
+                "path" : "/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/classes"
+            }
+        },
+        # system properties
+        "arch" : {
+            # system properties
+            "data" : {
+                # system properties
+                "model" : "64"
+            }
+        },
+        # system properties
+        "jnu" : {
+            # system properties
+            "encoding" : "UTF-8"
+        },
+        # system properties
+        "cpu" : {
+            # system properties
+            "endian" : "little",
+            # system properties
+            "isalist" : ""
+        },
+        # system properties
+        "java" : {
+            # system properties
+            "launcher" : "SUN_STANDARD",
+            # system properties
+            "command" : "edu.knowitall.learning.QaTrainer"
+        },
+        # system properties
+        "management" : {
+            # system properties
+            "compiler" : "HotSpot 64-Bit Tiered Compilers"
+        },
+        # system properties
+        "io" : {
+            # system properties
+            "unicode" : {
+                # system properties
+                "encoding" : "UnicodeBig"
+            }
+        }
+    },
+    # application.conf: 60
+    "python" : "/home/afader/local/bin/python",
+    # application.conf: 76-84
+    "search" : {
+        # application.conf: 81-84
+        "transitions" : {
+            # application.conf: 81
+            "regexParse" : true,
+            # application.conf: 84
+            "execute" : true,
+            # application.conf: 82
+            "templateParaphrase" : true,
+            # application.conf: 83
+            "relSyn" : true
+        },
+        # application.conf: 77
+        "beamSize" : 1000,
+        # application.conf: 76
+        "beamType" : "typed",
+        # application.conf: 79
+        "maxIters" : 12,
+        # application.conf: 78
+        "goalSize" : 100
+    },
+    # system properties
+    "file" : {
+        # system properties
+        "encoding" : {
+            # system properties
+            "pkg" : "sun.io"
+        },
+        # system properties
+        "separator" : "/"
+    },
+    # system properties
+    "path" : {
+        # system properties
+        "separator" : ":"
+    },
+    # application.conf: 17-47
+    "paraphrase" : {
+        # application.conf: 21-30
+        "template" : {
+            # application.conf: 28
+            "multipleParaphrases" : false,
+            # application.conf: 27
+            "scale" : true,
+            # application.conf: 30
+            "skipTimeouts" : true,
+            # application.conf: 25
+            "minPmi" : -25,
+            # application.conf: 23
+            "maxArgLength" : 4,
+            # application.conf: 24
+            "scoringModel" : "pmiLm",
+            # application.conf: 21
+            "maxHits" : 100,
+            # application.conf: 26
+            "maxPmi" : 0,
+            # application.conf: 29
+            "timeout" : 10000,
+            # application.conf: 22
+            "url" : "http://rv-n12.cs.washington.edu:28983/solr/paraphrase"
+        },
+        # application.conf: 17
+        "identityScore" : 1,
+        # application.conf: 18
+        "defaultLm" : 1,
+        # application.conf: 42-47
+        "joshua" : {
+            # application.conf: 43
+            "port" : 10101,
+            # application.conf: 47
+            "scale" : true,
+            # application.conf: 45
+            "minScore" : -20,
+            # application.conf: 42
+            "host" : "rv-n08",
+            # application.conf: 46
+            "maxScore" : 0,
+            # application.conf: 44
+            "maxHits" : 100
+        },
+        # application.conf: 19
+        "defaultPmi" : 1
+    },
+    # system properties
+    "os" : {
+        # system properties
+        "arch" : "x86_64",
+        # system properties
+        "name" : "Mac OS X",
+        # system properties
+        "version" : "10.9"
+    },
+    # application.conf: 62-63
+    "templates" : {
+        # application.conf: 63
+        "minfreq" : 10,
+        # application.conf: 62
+        "reducers" : 16
+    },
+    # application.conf: 65-69
+    "eval" : {
+        # application.conf: 67
+        "name" : {
+            # application.conf: 67
+            "file" : "name.txt"
+        },
+        # application.conf: 68
+        "score" : {
+            # application.conf: 68
+            "file" : "scores.txt"
+        },
+        # application.conf: 66
+        "config" : {
+            # application.conf: 66
+            "file" : "config.txt"
+        },
+        # application.conf: 65
+        "output" : {
+            # application.conf: 65
+            "file" : "output.txt"
+        },
+        # application.conf: 69
+        "pr" : {
+            # application.conf: 69
+            "file" : "pr"
+        }
+    },
+    # application.conf: 74
+    "random" : {
+        # application.conf: 74
+        "seed" : 123
+    },
+    # merge of system properties,application.conf: 86-89
+    "learning" : {
+        # system properties
+        "runName" : "trec",
+        # application.conf: 87
+        "labelsPath" : "eval/qa/labels/labels.txt",
+        # system properties
+        "oracleMode" : "interactive",
+        # system properties
+        "numIters" : "10",
+        # application.conf: 88
+        "outputsPath" : "eval/qa/models",
+        # system properties
+        "inputsPath" : "eval/qa/questions/trec-train.txt"
+    },
+    # application.conf: 11-15
+    "triplestore" : {
+        # application.conf: 15
+        "skipTimeouts" : true,
+        # application.conf: 12
+        "maxHits" : 100,
+        # application.conf: 14
+        "timeout" : 10000,
+        # application.conf: 11
+        "url" : "http://rv-n12.cs.washington.edu:10893/solr/triplestore",
+        # application.conf: 13
+        "cacheSize" : 100000
+    },
+    # application.conf: 1-9
+    "qa" : {
+        # application.conf: 6
+        "defaultParser" : "regex",
+        # application.conf: 7
+        "defaultExecutor" : "identity",
+        # application.conf: 5
+        "defaultParaphraser" : "templatesLm",
+        # application.conf: 9
+        "defaultScorer" : "numDerivations",
+        # application.conf: 3
+        "maxParaphrases" : 100,
+        # application.conf: 4
+        "maxAnswerGroups" : 50,
+        # application.conf: 8
+        "defaultGrouper" : "basic",
+        # application.conf: 2
+        "maxUQueries" : 100,
+        # application.conf: 1
+        "maxDerivs" : 100
+    },
+    # application.conf: 32-40
+    "relsyn" : {
+        # application.conf: 40
+        "multipleSyns" : false,
+        # application.conf: 33
+        "scale" : true,
+        # application.conf: 39
+        "skipTimeouts" : true,
+        # application.conf: 35
+        "minPmi" : -32,
+        # application.conf: 36
+        "maxHits" : 100,
+        # application.conf: 34
+        "maxPmi" : 0,
+        # application.conf: 38
+        "timeout" : 10000,
+        # application.conf: 32
+        "url" : "http://rv-n12.cs.washington.edu:28983/solr/relsyn",
+        # application.conf: 37
+        "cacheSize" : 100000
+    },
+    # application.conf: 72
+    "scoring" : {
+        # application.conf: 72
+        "weights" : "eval/qa/output/overnight-nofulllabels-2013-12-12-23:34:13/model.1.avg.txt"
+    },
+    # application.conf: 59
+    "hadoop" : {
+        # application.conf: 59
+        "streaming" : {
+            # application.conf: 59
+            "jar" : "/home/afader/local/lib/hadoop/contrib/streaming/hadoop-0.20.2-streaming.jar"
+        }
+    },
+    # system properties
+    "awt" : {
+        # system properties
+        "toolkit" : "sun.lwawt.macosx.LWCToolkit"
+    },
+    # system properties
+    "http" : {
+        # system properties
+        "nonProxyHosts" : "local|*.local|169.254/16|*.169.254/16"
+    },
+    # system properties
+    "ftp" : {
+        # system properties
+        "nonProxyHosts" : "local|*.local|169.254/16|*.169.254/16"
+    },
+    # system properties
+    "socksNonProxyHosts" : "local|*.local|169.254/16|*.169.254/16",
+    # system properties
+    "gopherProxySet" : "false",
+    # system properties
+    "java" : {
+        # system properties
+        "vm" : {
+            # system properties
+            "vendor" : "Oracle Corporation",
+            # system properties
+            "name" : "Java HotSpot(TM) 64-Bit Server VM",
+            # system properties
+            "specification" : {
+                # system properties
+                "vendor" : "Oracle Corporation",
+                # system properties
+                "name" : "Java Virtual Machine Specification",
+                # system properties
+                "version" : "1.7"
+            },
+            # system properties
+            "version" : "24.0-b56",
+            # system properties
+            "info" : "mixed mode"
+        },
+        # system properties
+        "home" : "/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre",
+        # system properties
+        "awt" : {
+            # system properties
+            "graphicsenv" : "sun.awt.CGraphicsEnvironment",
+            # system properties
+            "printerjob" : "sun.lwawt.macosx.CPrinterJob"
+        },
+        # system properties
+        "vendor" : {
+            # system properties
+            "url" : {
+                # system properties
+                "bug" : "http://bugreport.sun.com/bugreport/"
+            }
+        },
+        # system properties
+        "endorsed" : {
+            # system properties
+            "dirs" : "/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/endorsed"
+        },
+        # system properties
+        "library" : {
+            # system properties
+            "path" : "/Users/afader/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."
+        },
+        # system properties
+        "specification" : {
+            # system properties
+            "vendor" : "Oracle Corporation",
+            # system properties
+            "name" : "Java Platform API Specification",
+            # system properties
+            "version" : "1.7"
+        },
+        # system properties
+        "class" : {
+            # system properties
+            "path" : "/Users/afader/Projects/triplestore-qa/qa/target/../target/scala-2.10/classes:/Users/afader/.ivy2/cache/org.eclipse.jetty.orbit/javax.servlet/orbits/javax.servlet-3.0.0.v201112011016.jar:/Users/afader/.ivy2/cache/org.apache.zookeeper/zookeeper/jars/zookeeper-3.4.5.jar:/Users/afader/.ivy2/cache/commons-io/commons-io/jars/commons-io-2.1.jar:/Users/afader/.ivy2/cache/org.noggit/noggit/jars/noggit-0.5.jar:/Users/afader/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.2.3.jar:/Users/afader/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.2.2.jar:/Users/afader/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.7.jar:/Users/afader/.ivy2/cache/org.apache.httpcomponents/httpmime/jars/httpmime-4.2.3.jar:/Users/afader/.ivy2/cache/org.codehaus.woodstox/wstx-asl/jars/wstx-asl-3.2.7.jar:/Users/afader/.ivy2/cache/org.apache.solr/solr-core/jars/solr-core-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.solr/solr-solrj/jars/solr-solrj-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-core/jars/lucene-core-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-codecs/jars/lucene-codecs-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-analyzers-common/jars/lucene-analyzers-common-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-analyzers-kuromoji/jars/lucene-analyzers-kuromoji-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-analyzers-phonetic/jars/lucene-analyzers-phonetic-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-highlighter/jars/lucene-highlighter-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-memory/jars/lucene-memory-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-queries/jars/lucene-queries-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-misc/jars/lucene-misc-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-queryparser/jars/lucene-queryparser-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-spatial/jars/lucene-spatial-4.3.1.jar:/Users/afader/.ivy2/cache/com.spatial4j/spatial4j/jars/spatial4j-0.3.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-suggest/jars/lucene-suggest-4.3.1.jar:/Users/afader/.ivy2/cache/org.apache.lucene/lucene-grouping/jars/lucene-grouping-4.3.1.jar:/Users/afader/.ivy2/cache/commons-cli/commons-cli/jars/commons-cli-1.2.jar:/Users/afader/.ivy2/cache/commons-fileupload/commons-fileupload/jars/commons-fileupload-1.2.1.jar:/Users/afader/.ivy2/cache/org.restlet.jee/org.restlet/jars/org.restlet-2.1.1.jar:/Users/afader/.ivy2/cache/org.restlet.jee/org.restlet.ext.servlet/jars/org.restlet.ext.servlet-2.1.1.jar:/Users/afader/.ivy2/cache/commons-lang/commons-lang/jars/commons-lang-2.6.jar:/Users/afader/.ivy2/cache/com.google.guava/guava/jars/guava-13.0.1.jar:/Users/afader/.ivy2/cache/com.github.scopt/scopt_2.10/jars/scopt_2.10-3.0.0.jar:/Users/afader/.ivy2/cache/com.rockymadden.stringmetric/stringmetric-core/jars/stringmetric-core-0.25.3.jar:/Users/afader/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.10.1.jar:/Users/afader/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.1.jar:/Users/afader/.ivy2/cache/jline/jline/jars/jline-2.11.jar:/Users/afader/.ivy2/cache/org.scalatest/scalatest_2.10/jars/scalatest_2.10-2.0.M6-SNAP26.jar:/Users/afader/.ivy2/cache/net.liftweb/lift-json_2.10/jars/lift-json_2.10-2.5.jar:/Users/afader/.ivy2/cache/org.scala-lang/scalap/jars/scalap-2.10.0.jar:/Users/afader/.ivy2/cache/com.thoughtworks.paranamer/paranamer/jars/paranamer-2.4.1.jar:/Users/afader/.ivy2/local/edu.washington.cs.knowitall.nlptools/nlptools-stem-morpha_2.10/2.4.5-SNAPSHOT/jars/nlptools-stem-morpha_2.10.jar:/Users/afader/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.3.jar:/Users/afader/.ivy2/local/edu.washington.cs.knowitall.nlptools/nlptools-core_2.10/2.4.5-SNAPSHOT/jars/nlptools-core_2.10.jar:/Users/afader/.ivy2/cache/net.databinder.dispatch/dispatch-core_2.10/jars/dispatch-core_2.10-0.11.0.jar:/Users/afader/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.7.16.jar:/Users/afader/.ivy2/cache/io.netty/netty/bundles/netty-3.6.3.Final.jar:/Users/afader/.ivy2/cache/net.databinder/unfiltered-filter_2.10/jars/unfiltered-filter_2.10-0.7.0.jar:/Users/afader/.ivy2/cache/net.databinder/unfiltered_2.10/jars/unfiltered_2.10-0.7.0.jar:/Users/afader/.ivy2/cache/net.databinder/unfiltered-util_2.10/jars/unfiltered-util_2.10-0.7.0.jar:/Users/afader/.ivy2/cache/net.databinder/unfiltered-jetty_2.10/jars/unfiltered-jetty_2.10-0.7.0.jar:/Users/afader/.ivy2/cache/org.eclipse.jetty/jetty-webapp/jars/jetty-webapp-7.6.9.v20130131.jar:/Users/afader/.ivy2/cache/org.eclipse.jetty/jetty-xml/jars/jetty-xml-7.6.9.v20130131.jar:/Users/afader/.ivy2/cache/org.eclipse.jetty/jetty-util/jars/jetty-util-7.6.9.v20130131.jar:/Users/afader/.ivy2/cache/org.eclipse.jetty/jetty-servlet/jars/jetty-servlet-7.6.9.v20130131.jar:/Users/afader/.ivy2/cache/org.eclipse.jetty/jetty-security/jars/jetty-security-7.6.9.v20130131.jar:/Users/afader/.ivy2/cache/org.eclipse.jetty/jetty-server/jars/jetty-server-7.6.9.v20130131.jar:/Users/afader/.ivy2/cache/org.eclipse.jetty/jetty-continuation/jars/jetty-continuation-7.6.9.v20130131.jar:/Users/afader/.ivy2/cache/org.eclipse.jetty/jetty-http/jars/jetty-http-7.6.9.v20130131.jar:/Users/afader/.ivy2/cache/org.eclipse.jetty/jetty-io/jars/jetty-io-7.6.9.v20130131.jar:/Users/afader/.ivy2/cache/edu.washington.cs.knowitall.common-scala/common-scala_2.10/jars/common-scala_2.10-1.1.2.jar:/Users/afader/.ivy2/cache/com.googlecode.clearnlp/clearnlp/jars/clearnlp-1.3.0.jar:/Users/afader/.ivy2/cache/args4j/args4j/jars/args4j-2.0.16.jar:/Users/afader/.ivy2/cache/org.apache.commons/commons-compress/jars/commons-compress-1.4.1.jar:/Users/afader/.ivy2/cache/org.tukaani/xz/jars/xz-1.0.jar:/Users/afader/.ivy2/cache/com.carrotsearch/hppc/jars/hppc-0.4.1.jar:/Users/afader/.ivy2/cache/net.sourceforge.jregex/jregex/jars/jregex-1.2_01.jar:/Users/afader/.ivy2/cache/edu.washington.cs.knowitall/morpha-stemmer/jars/morpha-stemmer-1.0.5.jar:/Users/afader/.ivy2/cache/org.scalaj/scalaj-http_2.10/jars/scalaj-http_2.10-0.3.10.jar:/Users/afader/.ivy2/cache/edu.berkeley.nlp/berkeleylm/jars/berkeleylm-1.1.2.jar:/Users/afader/.ivy2/local/edu.washington.cs.knowitall.nlptools/nlptools-postag-clear_2.10/2.4.5-SNAPSHOT/jars/nlptools-postag-clear_2.10.jar:/Users/afader/.ivy2/local/edu.washington.cs.knowitall.nlptools/nlptools-tokenize-clear_2.10/2.4.5-SNAPSHOT/jars/nlptools-tokenize-clear_2.10.jar:/Users/afader/.ivy2/cache/edu.washington.cs.knowitall.clearnlp/clear-postag-models/jars/clear-postag-models-1.3.0.jar:/Users/afader/.ivy2/local/edu.washington.cs.knowitall.nlptools/nlptools-tokenize-breeze_2.10/2.4.5-SNAPSHOT/jars/nlptools-tokenize-breeze_2.10.jar:/Users/afader/.ivy2/cache/org.scalanlp/breeze-process_2.10/jars/breeze-process_2.10-0.2.jar:/Users/afader/.ivy2/cache/org.scalanlp/breeze-math_2.10/jars/breeze-math_2.10-0.2.jar:/Users/afader/.ivy2/cache/org.scalanlp/breeze-core_2.10/jars/breeze-core_2.10-0.2.jar:/Users/afader/.ivy2/cache/com.googlecode.netlib-java/netlib-java/jars/netlib-java-0.9.3.jar:/Users/afader/.ivy2/cache/net.sourceforge.f2j/arpack_combined_all/jars/arpack_combined_all-0.1.jar:/Users/afader/.ivy2/cache/org.scalanlp/jblas/jars/jblas-1.2.1.jar:/Users/afader/.ivy2/cache/com.twitter/util-collection_2.10/jars/util-collection_2.10-6.3.6.jar:/Users/afader/.ivy2/cache/com.twitter/util-core_2.10/jars/util-core_2.10-6.3.6.jar:/Users/afader/.ivy2/cache/commons-collections/commons-collections/jars/commons-collections-3.2.1.jar:/Users/afader/.ivy2/cache/com.jsuereth/scala-arm_2.10/jars/scala-arm_2.10-1.3.jar:/Users/afader/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.0.11.jar:/Users/afader/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.0.11.jar:/Users/afader/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.4.jar:/Users/afader/.ivy2/local/edu.washington.cs.knowitall.nlptools/nlptools-conf-breeze_2.10/2.4.5-SNAPSHOT/jars/nlptools-conf-breeze_2.10.jar:/Users/afader/.ivy2/cache/org.scalanlp/breeze-learn_2.10/jars/breeze-learn_2.10-0.2.jar:/Users/afader/.ivy2/cache/de.bwaldvogel/liblinear/jars/liblinear-1.8.jar:/Users/afader/.ivy2/cache/nz.ac.waikato.cms.weka/weka-dev/jars/weka-dev-3.7.9.jar:/Users/afader/.ivy2/cache/net.sf.squirrel-sql.thirdparty-non-maven/java-cup/jars/java-cup-0.11a.jar:/Users/afader/.ivy2/cache/org.pentaho.pentaho-commons/pentaho-package-manager/jars/pentaho-package-manager-1.0.6.jar:/Users/afader/.ivy2/local/edu.washington.cs.knowitall.nlptools/nlptools-chunk-opennlp_2.10/2.4.5-SNAPSHOT/jars/nlptools-chunk-opennlp_2.10.jar:/Users/afader/.ivy2/local/edu.washington.cs.knowitall.nlptools/nlptools-postag-opennlp_2.10/2.4.5-SNAPSHOT/jars/nlptools-postag-opennlp_2.10.jar:/Users/afader/.ivy2/local/edu.washington.cs.knowitall.nlptools/nlptools-tokenize-opennlp_2.10/2.4.5-SNAPSHOT/jars/nlptools-tokenize-opennlp_2.10.jar:/Users/afader/.ivy2/cache/org.apache.opennlp/opennlp-tools/bundles/opennlp-tools-1.5.3.jar:/Users/afader/.ivy2/cache/org.apache.opennlp/opennlp-maxent/bundles/opennlp-maxent-3.0.3.jar:/Users/afader/.ivy2/cache/edu.washington.cs.knowitall/opennlp-tokenize-models/jars/opennlp-tokenize-models-1.5.jar:/Users/afader/.ivy2/cache/edu.washington.cs.knowitall/opennlp-postag-models/jars/opennlp-postag-models-1.5.jar:/Users/afader/.ivy2/cache/edu.washington.cs.knowitall/opennlp-chunk-models/jars/opennlp-chunk-models-1.5.jar:/Users/afader/.ivy2/local/edu.washington.cs.knowitall.nlptools/nlptools-postag-stanford_2.10/2.4.5-SNAPSHOT/jars/nlptools-postag-stanford_2.10.jar:/Users/afader/.ivy2/local/edu.washington.cs.knowitall.nlptools/nlptools-tokenize-stanford_2.10/2.4.5-SNAPSHOT/jars/nlptools-tokenize-stanford_2.10.jar:/Users/afader/.ivy2/cache/edu.stanford.nlp/stanford-corenlp/jars/stanford-corenlp-1.3.5.jar:/Users/afader/.ivy2/cache/xom/xom/jars/xom-1.2.5.jar:/Users/afader/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.3.03.jar:/Users/afader/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.8.0.jar:/Users/afader/.ivy2/cache/xalan/xalan/jars/xalan-2.7.0.jar:/Users/afader/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.1.jar:/Users/afader/.ivy2/cache/de.jollyday/jollyday/jars/jollyday-0.4.7.jar:/Users/afader/.ivy2/cache/javax.xml.bind/jaxb-api/jars/jaxb-api-2.2.7.jar:/Users/afader/.ivy2/cache/edu.washington.cs.knowitall.stanford-corenlp/stanford-postag-models/jars/stanford-postag-models-1.3.5.jar:/Users/afader/.ivy2/cache/com.nicta/scoobi_2.10/jars/scoobi_2.10-0.7.0-RC2-cdh3.jar:/Users/afader/.ivy2/cache/javassist/javassist/jars/javassist-3.12.1.GA.jar:/Users/afader/.ivy2/cache/org.apache.avro/avro/jars/avro-1.7.4.jar:/Users/afader/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.8.8.jar:/Users/afader/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.8.8.jar:/Users/afader/.ivy2/cache/org.xerial.snappy/snappy-java/bundles/snappy-java-1.0.4.1.jar:/Users/afader/.ivy2/cache/com.thoughtworks.xstream/xstream/jars/xstream-1.4.4.jar:/Users/afader/.ivy2/cache/xmlpull/xmlpull/jars/xmlpull-1.1.3.1.jar:/Users/afader/.ivy2/cache/xpp3/xpp3_min/jars/xpp3_min-1.1.4c.jar:/Users/afader/.ivy2/cache/com.googlecode.kiama/kiama_2.10/jars/kiama_2.10-1.5.0.jar:/Users/afader/.ivy2/cache/org.bitbucket.inkytonik.dsinfo/dsinfo_2.10/jars/dsinfo_2.10-0.2.0.jar:/Users/afader/.ivy2/cache/org.bitbucket.inkytonik.dsprofile/dsprofile_2.10/jars/dsprofile_2.10-0.2.0.jar:/Users/afader/.ivy2/cache/com.github.mdr/ascii-graphs_2.10/jars/ascii-graphs_2.10-0.0.3.jar:/Users/afader/.ivy2/cache/com.chuusai/shapeless_2.10/jars/shapeless_2.10-1.2.4.jar:/Users/afader/.ivy2/cache/org.scalaz/scalaz-core_2.10/bundles/scalaz-core_2.10-7.0.0.jar:/Users/afader/.ivy2/cache/org.scalaz/scalaz-concurrent_2.10/bundles/scalaz-concurrent_2.10-7.0.0.jar:/Users/afader/.ivy2/cache/org.scalaz/scalaz-effect_2.10/bundles/scalaz-effect_2.10-7.0.0.jar:/Users/afader/.ivy2/cache/org.scalaz/scalaz-scalacheck-binding_2.10/bundles/scalaz-scalacheck-binding_2.10-7.0.0.jar:/Users/afader/.ivy2/cache/org.scalaz/scalaz-typelevel_2.10/bundles/scalaz-typelevel_2.10-7.0.0.jar:/Users/afader/.ivy2/cache/org.scalaz/scalaz-xml_2.10/bundles/scalaz-xml_2.10-7.0.0.jar:/Users/afader/.ivy2/cache/org.scalacheck/scalacheck_2.10/jars/scalacheck_2.10-1.10.0.jar:/Users/afader/.ivy2/cache/org.scala-tools.testing/test-interface/jars/test-interface-0.5.jar:/Users/afader/.ivy2/cache/org.scala-lang/scala-actors/jars/scala-actors-2.10.1.jar:/Users/afader/.ivy2/cache/org.apache.hadoop/hadoop-core/jars/hadoop-core-0.20.2-cdh3u1.jar:/Users/afader/.ivy2/cache/xmlenc/xmlenc/jars/xmlenc-0.52.jar:/Users/afader/.ivy2/cache/commons-httpclient/commons-httpclient/jars/commons-httpclient-3.1.jar:/Users/afader/.ivy2/cache/commons-net/commons-net/jars/commons-net-1.4.1.jar:/Users/afader/.ivy2/cache/oro/oro/jars/oro-2.0.8.jar:/Users/afader/.ivy2/cache/org.mortbay.jetty/jetty/jars/jetty-6.1.26.jar:/Users/afader/.ivy2/cache/org.mortbay.jetty/jetty-util/jars/jetty-util-6.1.26.jar:/Users/afader/.ivy2/cache/org.mortbay.jetty/servlet-api/jars/servlet-api-2.5-20081211.jar:/Users/afader/.ivy2/cache/tomcat/jasper-runtime/jars/jasper-runtime-5.5.23.jar:/Users/afader/.ivy2/cache/javax.servlet/servlet-api/jars/servlet-api-2.5.jar:/Users/afader/.ivy2/cache/commons-el/commons-el/jars/commons-el-1.0.jar:/Users/afader/.ivy2/cache/tomcat/jasper-compiler/jars/jasper-compiler-5.5.23.jar:/Users/afader/.ivy2/cache/javax.servlet/jsp-api/jars/jsp-api-2.0.jar:/Users/afader/.ivy2/cache/ant/ant/jars/ant-1.6.5.jar:/Users/afader/.ivy2/cache/javax.servlet.jsp/jsp-api/jars/jsp-api-2.1.jar:/Users/afader/.ivy2/cache/net.java.dev.jets3t/jets3t/jars/jets3t-0.6.1.jar:/Users/afader/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar:/Users/afader/.ivy2/cache/hsqldb/hsqldb/jars/hsqldb-1.8.0.7.jar:/Users/afader/.ivy2/cache/org.eclipse.jdt/core/jars/core-3.1.1.jar:/Users/afader/.ivy2/cache/org.apache.avro/avro-mapred/jars/avro-mapred-1.7.4.jar:/Users/afader/.ivy2/cache/org.apache.avro/avro-ipc/jars/avro-ipc-1.7.4.jar:/Users/afader/.ivy2/cache/org.apache.avro/avro-ipc/jars/avro-ipc-1.7.4-tests.jar:/Users/afader/.ivy2/cache/org.apache.velocity/velocity/jars/velocity-1.7.jar:/Users/afader/.ivy2/cache/org.apache.hadoop/hadoop-lzo/jars/hadoop-lzo-0.4.13.jar:/Users/afader/.ivy2/cache/com.typesafe/config/bundles/config-1.0.2.jar:/Users/afader/.ivy2/cache/edu.washington.cs.knowitall.taggers/taggers-core_2.10/jars/taggers-core_2.10-0.4.jar:/Users/afader/.ivy2/cache/edu.washington.cs.knowitall/openregex-scala_2.10/jars/openregex-scala_2.10-1.1.2.jar:/Users/afader/.ivy2/cache/edu.washington.cs.knowitall/openregex/jars/openregex-1.1.1.jar:/Users/afader/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-2.0.1.jar:/Users/afader/.ivy2/cache/junit/junit/jars/junit-4.11.jar:/Users/afader/.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar:/Users/afader/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.1.jar",
+            # system properties
+            "version" : "51.0"
+        },
+        # system properties
+        "runtime" : {
+            # system properties
+            "name" : "Java(TM) SE Runtime Environment",
+            # system properties
+            "version" : "1.7.0_40-b43"
+        },
+        # system properties
+        "ext" : {
+            # system properties
+            "dirs" : "/Users/afader/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"
+        },
+        # system properties
+        "io" : {
+            # system properties
+            "tmpdir" : "/var/folders/b6/7cqbbkmx1_q48br_8vj7m7w40000gn/T/"
+        },
+        # system properties
+        "version" : "1.7.0_40"
+    },
+    # system properties
+    "user" : {
+        # system properties
+        "home" : "/Users/afader",
+        # system properties
+        "timezone" : "",
+        # system properties
+        "dir" : "/Users/afader/Projects/triplestore-qa/qa",
+        # system properties
+        "name" : "afader",
+        # system properties
+        "language" : "en",
+        # system properties
+        "country" : "US"
+    }
+}

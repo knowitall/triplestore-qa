@@ -1,0 +1,357 @@
+question prefix = 'where' and answer shape = aaaa	-0.618921308576481
+question prefix = 'how' and answer shape = 11,111 aaaa	1.2483130904183537
+question prefix = 'where' and answer shape = Aaaa	-0.08934803853134164
+question prefix = 'what' and isDate	-1.6368271249832236
+question prefix = 'how' and answer shape = 11 aa 11 aaaa aa aaaa	0.10796221322537114
+question prefix = 'UNK' and answer shape = Aaa Aaaaa	0.4402252315137978
+question prefix = 'who' and answer shape = aaaa aaaa	-0.09079063707012891
+question prefix = 'what' and answer shape = Aaaaa aa Aaa	-0.48536460514681934
+question prefix = 'how' and answer shape = aaa Aaaaa	-0.5978407557354926
+question prefix = 'what' and answer shape = Aaaaa aa Aaaa: Aaaaa aaa Aaaaa aa aaa Aaaaa aa Aaaa	-0.8916189678440132
+template arg pos tags = FW	0.0
+question prefix = 'what' and answer shape = a aaa-aaa aaaa	-0.9642142491507283
+question prefix = 'how' and answer shape = 1111	-0.9622132253711201
+question prefix = 'who' and answer shape = aaa Aaaaa Aaaaa	0.4932756293917819
+question prefix = 'UNK' and answer shape = aaaa-1	0.8604402252315138
+action type = RelSynRule	-1.7956929471684728
+question prefix = 'when' and answer shape = 11 Aaaa	0.6245055609846898
+question prefix = 'what' and answer shape = Aaaaa Aaaa	0.06840709200055842
+question prefix = 'who' and answer shape = Aaa Aaaaa	0.5940713853599514
+template arg pos tags = NN NN NN VB	-1.1630193657564196
+question prefix = 'what' and answer shape = aaa aaaa aaaa aaaa aaaa	0.44534412955465585
+template arg pos tags = VBP JJ NN	0.0
+template arg pos tags = DT NN IN FW	0.0
+question prefix = 'who' and answer shape = Aaaaa Aaa Aaaa	0.5156126390246172
+template arg pos tags = DT JJ NN NN	0.5677323281678998
+relSynRule pmi	0.6057245020595877
+template arg pos tags = VBN	0.0
+template arg pos tags = NN IN NNP	0.0
+question prefix = 'what' and answer shape = aaa aaaa aa Aaaaa	-0.5956535902089442
+question prefix = 'what' and answer shape = Aaaaa A	-0.7878449439247988
+question prefix = 'what' and answer shape = aaaa aaa aaaa aaaa	0.41928428498301457
+template arg pos tags = WDT VB NN NNS	-0.36997905012223786
+template arg pos tags = VBG NN	0.07557354925775983
+template arg pos tags = NN NN VB TO	0.618921308576481
+template arg pos tags = NN JJ	-0.38612634428754433
+question prefix = 'what' and answer shape = Aaaa aa Aaaaa	0.3927125506072875
+minimum join key similarity	0.5075546211539487
+question prefix = 'when' and answer shape = aaaa aaaa	-0.6268323328214436
+question prefix = 'what' and answer shape = aaaa aaaa aaaa	0.012099213551119177
+question prefix = 'what' and answer shape = aaa AAA	0.3992740471869328
+template arg pos tags = NN VBP NNS	-0.9151693224706487
+question prefix = 'what' and answer shape = Aaaaa aaa	-0.16892363534831778
+question prefix = 'what' and answer shape = aa.aaaa	-0.037786774628879916
+question prefix = 'what' and answer shape = aaa aaaa	-0.6370701289031598
+template pair pmi	2.103541523830196
+fbid join key violation	-0.8548559728233049
+question prefix = 'what' and answer shape = ? Aaaaa	-0.5523756340453254
+question prefix = 'what' and answer shape = Aaaaa aa Aa	-0.9176788124156545
+question prefix = 'where' and answer shape = AA&A Aaaa	0.5221276001675277
+question prefix = 'what' and answer shape = Aaa Aaaa Aaaaa Aaaa	0.872539438782633
+question prefix = 'what' and answer shape = a aaaa aaaa	0.06654567453115548
+template arg pos tags = NN NN VB	-1.0955690319153646
+template arg pos tags = NN NNS LS	0.0
+template arg pos tags = CD NN	-0.1448785277177695
+template arg pos tags = NN JJ NN	0.0
+question prefix = 'where' and answer shape = Aaaaa Aaa	0.12238819861324403
+template arg pos tags = NN NN VBP	0.0
+template arg pos tags = NN CC NN	-0.3552118172694625
+question prefix = 'what' and answer shape = Aaa Aaaaa	-0.6693657219973009
+template arg pos tags = RB VBN	0.0
+answer is linked to freebase	-0.5142502168940235
+question prefix = 'what' and answer shape = Aaa aaaa	-0.6896551724137931
+question prefix = 'what' and answer shape = aa aaaa	0.05211968914328261
+template arg pos tags = VB NN	0.0
+template arg pos tags = DT NN NN NN	0.5775047698822653
+template arg pos tags = IN JJ NN	0.0
+template arg pos tags = CD JJ CD	-0.6449811531481222
+question prefix = 'UNK' and answer shape = Aaaaa Aaaaa	0.6502396574991856
+question prefix = 'where' and answer shape = Aaaaa Aaaaa	0.7380520266182697
+question prefix = 'how' and answer shape = a aaaa	-0.6923076923076923
+question prefix = 'who' and answer shape = Aa. Aaaaa Aaaa	0.14007166457257209
+question prefix = 'where' and answer shape = AAAA	0.33063427800269907
+question prefix = 'what' and answer shape = Aaa Aaaaa 1	0.5039787798408488
+question prefix = 'where' and answer shape = Aaa Aaaaa Aaaaa	0.44348271208525286
+question prefix = 'when' and answer shape = Aaaaa Aaaa AA	-0.03350551444925311
+question prefix = 'when' and answer shape = Aaaaa Aaaa AAA	0.03350551444925311
+question prefix = 'what' and answer shape = aaaa-aaaa	-0.28712364465540513
+template arg pos tags = VBP NN NN	0.5052788322057747
+question prefix = 'when' and answer shape = aaaa 1111 A.A.	0.6887244636790917
+question prefix = 'where' and answer shape = a Aaaaa Aaaaa aaaa	-0.9279166084973707
+template arg pos tags = JJ JJ NN	1.1622211369535669
+template arg pos tags = NN NNS	0.0
+question prefix = 'what' and answer shape = aaa aaa	-1.1247615058867328
+question prefix = 'what' and answer shape = Aaa aaaa aaaa aaaa	0.5972823304946716
+question prefix = 'what' and answer shape = aaaa Aaa	-0.9595607054772209
+question prefix = 'where' and answer shape = aaa aaaa Aaaaa Aaaaa	0.9791055889059518
+template arg pos tags = JJ CD	-0.9083717250686397
+question prefix = 'what' and answer shape = AAaaaa	-0.16659686351156408
+question prefix = 'what' and answer shape = Aaa Aaa Aaa	-0.9023221182930802
+question prefix = 'how' and answer shape = aaa 11	0.22807017543859653
+question prefix = 'where' and answer shape = 111-aaaa Aaaaa A111-111 aaaa	-0.4816417702080134
+template arg pos tags = JJ IN JJ NN	-0.9581646423751686
+question prefix = 'how' and answer shape = Aaaaa	0.0
+question prefix = 'UNK' and answer shape = aaa Aaaaa Aaaaa	-0.8567173902927079
+template arg pos tags = DT CD JJ NN	-0.35880384688229977
+question prefix = 'who' and answer shape = AAAA AAAA	0.1121504025315278
+question prefix = 'how' and answer shape = a aaaa aaaa	-0.23481781376518218
+question prefix = 'what' and answer shape = AA, Aaaaa	0.6691795802503606
+question prefix = 'what' and answer shape = Aaaaa Aaaaa	0.11903764716831874
+question prefix = 'what' and answer shape = Aaaaa AA 1111	-0.44534412955465585
+template arg pos tags = VBP JJ NNS	-0.8129740797617386
+question prefix = 'what' and answer shape = aaaa(	0.5007212992693936
+question prefix = 'UNK' and answer shape = aaa aa aaa	-0.6994276141281586
+template arg pos tags = PRP IN NN	0.0
+question prefix = 'what' and answer shape = Aaa	-0.8111126622923356
+question prefix = 'when' and answer shape = aaa Aaa Aaaaa	-0.6887244636790917
+question prefix = 'what' and answer shape = Aaaaa aa aaa Aaa	0.1265763879194006
+template arg pos tags = NN NN NN	-1.0305718096213514
+template arg pos tags = DT JJS NN	0.6531713900134952
+question prefix = 'what' and answer shape = Aaaaa	-0.6161291823723767
+answer from namespace 'reverb'	-0.557042221037966
+template arg pos tags = VB NN NN	0.040485829959514164
+template arg pos tags = RB JJ	0.0
+question prefix = 'where' and answer shape = Aaa Aaaa	0.4183535762483131
+question prefix = 'who' and answer shape = Aaaaa Aaaa Aaaaa & Aaaaa	0.2480338777979432
+template arg pos tags = JJ NN	1.43060274145263
+question prefix = 'what' and answer shape = Aaaaa aaa Aaaaa	0.10191260644981154
+question prefix = 'what' and answer shape = Aaaaa Aaaaa Aaaaa Aaaaa aaa Aaa	0.13216064032760955
+question prefix = 'what' and answer shape =   aaaa	-0.21457489878542513
+template arg pos tags = DT JJ	-1.6495269824500745
+template arg pos tags = NNP	0.476941709704503
+question prefix = 'what' and answer shape = Aaaaa A Aaaa	-0.4039275908604402
+question prefix = 'what' and answer shape = 11aa aaaa	0.7757457303736797
+question prefix = 'what' and answer shape = 1111 aaaa Aaaaa	0.8488529014844804
+question prefix = 'how' and answer shape = aaaa	-0.25641025641025644
+template arg pos tags = JJ NN VB TO	0.0
+template arg pos tags = DT NN IN NN	0.0
+question prefix = 'what' and answer shape = aaaaAAA aaaa	0.7548047838428963
+question prefix = 'what' and answer shape = aaa aaaa-aaa aaa	-0.0716645725720136
+template arg pos tags = VB DT JJ NN	0.9626639362403858
+template arg pos tags = VBN NN VB	0.0
+question prefix = 'what' and answer shape = 1111	-1.6710875331564987
+question prefix = 'what' and answer shape = Aaaa Aaa Aaaa Aaaa	0.7219973009446694
+paraphrase lm	0.2202930339911421
+question prefix = 'what' and answer shape = Aa. Aaaaa Aaaaa	0.8111126622923356
+question prefix = 'where' and answer shape = aaaa Aaaaa	0.08283307738843126
+question prefix = 'who' and answer shape = Aaaaa ?	0.45074224021592446
+question prefix = 'what' and answer shape = Aaaaa 1	-0.11726930057238592
+question prefix = 'who' and answer shape = Aa. Aaaaa	-0.14007166457257209
+question prefix = 'who' and answer shape = aaaa-aaaa	-0.06701102889850621
+question prefix = 'what' and answer shape = Aaaaa?a aa-aaaa	0.2880543533901066
+template arg pos tags = NN NN IN NN	0.687274999256196
+template arg pos tags = IN NN NN	-0.25775978407557354
+template arg pos tags = DT NN	-0.12518292975982873
+template arg pos tags = DT	0.02885197077574571
+template arg pos tags = IN NN	-1.158047274831051
+question prefix = 'what' and answer shape = Aaa Aaaaa Aaaaa	0.23314253804271953
+question prefix = 'who' and answer shape = AAA	-0.6673181627809578
+template arg pos tags = NN VB JJ NN	0.037786774628879916
+template arg pos tags = NN CD CD	0.0
+question prefix = 'what year' and answer shape = aaa 1111 aaaa	0.9511843268649077
+question prefix = 'who' and answer shape = Aaaa	-0.7171110800874866
+question prefix = 'what' and answer shape = 1,111a	-0.3873144399460189
+num conjuncts	-1.817881661147259
+template arg pos tags = VB JJ NNS VBP	0.0
+template arg pos tags = CD	0.0
+question prefix = 'how' and answer shape = aaaa aaaa	0.1592442645074224
+question prefix = 'what' and answer shape = Aaa AA Aaaa	-0.9037181813951324
+answer from namespace 'nell'	1.9202615012443531
+template arg pos tags = NN NN NN NN	0.6329954406622106
+question prefix = 'who' and answer shape = Aaa Aaaaa & Aaaaa	0.1335567034296617
+question prefix = 'who' and answer shape = aaa aaaa	-0.49415980268974824
+question prefix = 'what' and answer shape = aaaa_aaaa	0.5793661873516683
+question prefix = 'where' and answer shape = aaa Aaaa	-0.0065149611429103785
+question prefix = 'what' and answer shape = aaaa aaa aaaa	-0.07129228907813295
+question prefix = 'what' and answer shape = Aaaaa aaa aaa Aaaaa Aaaaa	0.23221182930801804
+answer from namespace 'freebase'	0.6654069723034512
+question prefix = 'when' and answer shape = Aaaaa	-0.7161803713527851
+evidence similarity with query	0.22183158091384308
+question prefix = 'who' and answer shape = Aaaa Aaaaa	0.005677323281678914
+question prefix = 'what' and answer shape = Aaa Aaa Aaaaa	0.00977244171436549
+question prefix = 'what' and answer shape = Aaa-aaa aaaa	-0.8804504630275956
+question prefix = 'who' and answer shape = Aaaaa AA	0.6826748569035321
+question prefix = 'what' and answer shape = AA-Aaaaa	0.5309227977104566
+template arg pos tags = NN IN JJ NN	0.5711327084411244
+question prefix = 'UNK' and answer shape = Aaaaa	-0.76969612359812
+question prefix = 'who' and answer shape = Aaa Aaaaa aaaa	-0.08190236865372984
+template arg pos tags = DT NN NN JJ	0.0
+question prefix = 'when' and isDate	1.6865104672449973
+query relation is light verb	-1.0168580155075573
+question prefix = 'where' and answer shape = Aaaaa Aaaa	-0.9791055889059518
+question prefix = 'what' and answer shape = aaa A.A.	-0.5519102796779747
+template arg pos tags = TO VB	0.0
+question prefix = 'what' and answer shape = Aaa Aaaa aa Aaa	-0.33970868816603844
+evidence similarity with query (rels only)	1.9911845632353795
+question prefix = 'what' and answer shape = Aaaaa aaaa	-0.29568616501465866
+question prefix = 'UNK' and answer shape = Aaa Aaaaa Aaaaa	0.6994276141281586
+template arg pos tags = JJ NN NN	-0.3048071106147332
+question prefix = 'what' and answer shape = a aaaa aaaa aaa aaaa	-0.5762483130904184
+question prefix = 'who' and answer shape = aaa AAA'a	-0.07259528130671504
+question prefix = 'what' and answer shape = ?Aaaaa	1.7031969845036996
+question prefix = 'when' and answer shape = 1aa aaa 1aa Aaaa	-0.6245055609846898
+question prefix = 'who' and answer shape = ?AAA AAA... AAAA	-0.6450742240215925
+question prefix = 'who' and answer shape = aaa Aaaa	0.5547024058820793
+template arg pos tags = VB DT NN NN	-0.02885197077574571
+question prefix = 'where' and answer shape = AAaaaa	-0.08283307738843126
+template arg pos tags = NN NNS VBP	0.06701102889850621
+question prefix = 'who' and answer shape = aaaa AAA	0.9381544045790869
+question prefix = 'who' and answer shape = Aaaaa Aaa-aa Aaa	0.9530457443343106
+question prefix = 'what' and answer shape = aaa aaa-aaaa-aaaa	0.6621992647400997
+question prefix = 'who' and answer shape = Aaaa aaaa	0.09958583461305788
+question prefix = 'what' and answer shape = Aaa Aaaaa aa Aaaaa	0.900926055191028
+template arg pos tags = VBP NN	0.3513425473498069
+question prefix = 'what' and answer shape = AAAA	0.6889106054260319
+question prefix = 'where' and answer shape = aaa aaaa	-1.075108194890409
+question prefix = 'how' and answer shape = Aaaaa Aaaaa	-0.5560053981106613
+question prefix = 'who' and answer shape = 1aa aaaa	-0.3187677416352553
+question prefix = 'what' and answer shape = Aaaa	-0.8413606961701335
+question prefix = 'what year' and answer shape = Aaaaa 1 , 1111	-0.012145748987854255
+question prefix = 'who' and answer shape = Aaaaa Aaaaa Aaaaa	-0.2675787612266741
+question prefix = 'where' and isDate	-0.9740529308310182
+evidence similarity with query (args only)	1.6920809925696192
+question prefix = 'what' and answer shape = Aaa Aaaaa Aaaaa Aaaa	0.5202661826981246
+template arg pos tags = JJ NNP	-0.476941709704503
+question prefix = 'what' and answer shape = Aaaa Aaaaa	0.1774396202708362
+question prefix = 'when' and answer shape = aaa Aaaaa	0.6268323328214436
+question prefix = 'what year' and answer shape = 1111	0.012145748987854255
+template arg pos tags = VB NN VB	0.0
+question prefix = 'what' and answer shape = aaa aaaa aaaa	-0.9656103122527805
+question prefix = 'who' and answer shape = Aaaaa A.A.	0.5225929545348783
+template arg pos tags = VB NN JJ IN	0.4689594216759757
+question prefix = 'where' and answer shape = AA-Aaaaa	0.6756945413932709
+question prefix = 'what' and answer shape = a aaaa Aaaaa aaaa	0.48536460514681934
+question prefix = 'who' and answer shape = Aaaaa	-1.1778119037647168
+question prefix = 'what' and answer shape = A aaaa aaaa aaaa	-0.25775978407557354
+template arg pos tags = NN NN JJ	-0.8840383991593925
+template arg pos tags = DT NN VB	-0.03304016008190239
+question prefix = 'what' and answer shape = aaaa aaaa	-0.6287868211643166
+question prefix = 'where' and answer shape = aaa aaa	0.6032388663967612
+template arg pos tags = JJ NN VBN	0.6198520173111824
+question prefix = 'what' and answer shape = Aaaa aaa Aaaa	0.16938898971566851
+question prefix = 'who' and answer shape = Aaaaa Aaaaa	-0.038717483363581495
+question prefix = 'what' and answer shape = aaaa aaaa aa aa	-0.5989110707803993
+question prefix = 'what' and answer shape = Aaa aaaa aaa	0.027455907673693516
+question prefix = 'what' and answer shape = Aaaaa Aaaa Aaaa	0.5086323235143563
+question prefix = 'where' and answer shape = 1111	-0.5439992554330123
+question prefix = 'what' and answer shape = Aaa aaaa aaaa aaaa aaaa	1.7212527339569084
+question prefix = 'what' and answer shape = aaa Aaaaa aaaa	0.3343105775047699
+question prefix = 'where' and answer shape = Aaa Aaaaa	0.29387128298199083
+question prefix = 'where' and answer shape = Aaaa Aaaaa	0.5984457164130484
+template arg pos tags = DT IN NN NN	-0.5771194244625198
+template arg pos tags = NN NN LS	0.0
+question prefix = 'what' and answer shape = aaaa	-0.3649774303131835
+template arg pos tags = VBP NN NN NN	0.0
+question prefix = 'what' and answer shape = AAAA AAAA	0.698962259760808
+template arg pos tags = NN NN	-0.544749869608674
+question prefix = 'what' and answer shape = Aaa aaa aaaa	0.3601842803294709
+question prefix = 'what' and answer shape = aaa Aaaa ?	0.6393969007399134
+question prefix = 'what' and answer shape = Aaaa aaaa	0.7242775373446878
+question prefix = 'what' and answer shape = Aaaaa Aaa	-0.9977197635999814
+template arg pos tags = NNS	0.0
+question prefix = 'who' and answer shape = a aaaa aaaa aaaa	-0.904648890129834
+question prefix = 'when' and answer shape = Aaa aaaa aaa	0.7068732840057703
+question prefix = 'what' and answer shape = Aaa Aaaa	-0.15775513053190005
+question prefix = 'what' and answer shape = aaa 11aa	0.9257759784075573
+question prefix = 'what' and answer shape = AAA	-0.5012331890734796
+question prefix = 'what' and answer shape = aaa aaaa Aaaaa	0.21187584345479082
+template arg pos tags = JJ NN IN JJ	0.9083717250686397
+question prefix = 'what' and answer shape = aaa Aaaaa Aaaaa	-0.6531713900134952
+template arg pos tags = VBN NN	0.0
+question prefix = 'where' and answer shape = aaa Aaaa Aaa	-0.5677323281678998
+question prefix = 'where' and answer shape = Aaa aaaa Aaaaa aaaa	-0.6077528037600632
+question prefix = 'what' and answer shape = aaaa a	-0.5309693331471915
+template arg pos tags = VB	0.44348271208525286
+question prefix = 'what' and answer shape = AaaAaaaa	-0.5770394155149146
+template arg pos tags = VB JJ NN	0.0
+template arg pos tags = VBD NNS	0.0
+template arg pos tags = NN IN DT NN	2.2941095793987305
+question prefix = 'what' and answer shape = Aaaaa ?	-0.10191260644981158
+template arg pos tags = RB	0.0
+question prefix = 'what' and answer shape = Aaa Aaaa Aaaa	-0.4862953138815208
+template arg pos tags = NN IN NN	0.0
+question prefix = 'what' and answer shape = 1,111 aa	0.27665317139001355
+question prefix = 'what' and answer shape = ?Aaaaa	0.8394062078272605
+template arg pos tags = DT NNP NN	0.0
+question prefix = 'who' and answer shape = a ?aaaa?	0.20377867746288802
+question prefix = 'what' and answer shape = ?Aaaa Aaaaa	0.3932244404113733
+question prefix = 'what' and answer shape = Aaaaa AA	-0.6179905998417795
+question prefix = 'what' and answer shape = a.a	-0.4197496393503653
+template arg pos tags = VBP NN NN VB	-0.946996137558751
+template arg pos tags = DT JJ NN	-0.9540194346199349
+question prefix = 'what' and answer shape = aaa Aaaa aaaa aaa	0.9269858997626692
+question prefix = 'what' and answer shape = aaa aaaa aaa	-0.7240913955977477
+template arg pos tags = DT CD NN	0.08461225310238875
+steps	-2.3129875045188775
+action type = AbstractArgAction	-1.7325565283217068
+question prefix = 'what' and answer shape = 111 aaaa	0.1120107962213226
+answer from namespace 'openie4'	-1.3437731054909232
+question prefix = 'what' and answer shape = aaaa`	0.6963562753036437
+question prefix = 'UNK' and answer shape = Aaaaa /	-0.8604402252315138
+question prefix = 'how' and answer shape = Aaaaa Aaaa	0.854251012145749
+question prefix = 'when' and answer shape = a aaaa aaa aaa	-0.7068732840057703
+template arg pos tags = VB NNP VB	0.0
+question prefix = 'how' and answer shape = 111,111 aaaa	0.23481781376518218
+question prefix = 'who' and isDate	-0.8967378658848713
+question prefix = 'what' and answer shape = Aaa Aaaaa Aaaa	0.49979059053469216
+question prefix = 'what' and answer shape = Aaaaa & Aa	0.11308111126622925
+question prefix = 'what' and answer shape = Aaaaa - Aaaaa	-0.45651263437107364
+template arg pos tags = JJ JJ	0.0
+template arg pos tags = VBP NNS	0.0
+query similarity with question	0.7257428324334653
+template arg pos tags = VB DT NN	-0.9558789914161377
+question prefix = 'what year' and answer shape = aaaa	-0.9511843268649077
+template arg pos tags = NN NN VBP NN	0.0
+question prefix = 'what' and answer shape = AA	0.28744939271255066
+template arg pos tags = JJ	-1.223370096328354
+question prefix = 'what' and answer shape = aaa aaaa aaaa aaaa	-0.2885197077574573
+question prefix = 'what' and answer shape = aaa Aaaaa	0.07259528130671504
+question prefix = 'where' and answer shape = Aaa Aaaa Aaaa	0.0065149611429103785
+template arg pos tags = IN DT JJ NN	0.0
+question prefix = 'what year' and isDate	1.9489703304308132
+question prefix = 'when' and answer shape = 1111	0.7161803713527851
+question prefix = 'how' and answer shape = 1 aaaa 11^1	0.5641025641025641
+question prefix = 'what' and answer shape = Aa aaa Aaaa aa Aaaaa aaa Aaaaa	0.33970868816603844
+question prefix = 'where' and answer shape = aaa aaaa 1111?a	-0.19568151147098523
+question prefix = 'what' and answer shape = AA Aaaaa A	0.7208339150262925
+question prefix = 'UNK' and answer shape = AA, Aaaaa	0.5359486248778446
+action type = TemplatePair	-1.7325565283217068
+template arg pos tags = RB RB	0.46217447685172747
+question prefix = 'what' and answer shape = aaa aaaa aaaa aaa aaaa aaaa	0.7240913955977477
+question prefix = 'how' and answer shape = a aaa aaaa	0.9622132253711201
+action type = RegexQuestionPattern	0.0
+question prefix = 'what' and answer shape = Aaaaa, aaa Aaaaa aaa Aaaaa	0.28991577085950954
+template arg pos tags = WP VBP NNS	-0.6477626735149861
+template arg pos tags = NN VB	-1.0966541020987481
+template arg pos tags = DT CD NN NN	0.0
+question prefix = 'who' and answer shape = Aaaaa Aaaaa AAA	0.08190236865372984
+question prefix = 'who' and answer shape = Aaaaa Aaaa	0.8757969193540881
+question prefix = 'what' and answer shape = aaa Aaaaa Aaaaa aaaa	0.5658709106984969
+question prefix = 'what' and answer shape = 11	-0.06375354832705107
+question prefix = 'where' and answer shape = Aaaaa	0.36181302061519827
+question prefix = 'who' and answer shape = aaa aa aaa aaaa	-0.9083717250686397
+relSynRule passivized	0.0
+template arg pos tags = NN NN VB IN	1.86746707617851
+question prefix = 'what' and answer shape = ? Aaaaa aaaa aaaa	0.062078272604588425
+question prefix = 'what' and answer shape = Aaaaa!	-0.3513425473498069
+template arg pos tags = NN	2.6194471906430317
+template arg pos tags = VBG NN NNS	-0.07557354925775983
+question prefix = 'who' and answer shape = 11 aaaa	-0.9283819628647215
+question prefix = 'how' and answer shape = aaaa aaaa aaaa	-0.02429149797570851
+question prefix = 'how' and answer shape = Aaaa Aaaaa	-0.5641025641025641
+template arg pos tags = DT NN NN	-0.7484230655078468
+question prefix = 'what' and answer shape = aaa Aaaa	-0.6342780026990553
+template arg pos tags = NN NN JJ JJ	0.8840383991593925
+question prefix = 'who' and answer shape = a aaaa aaaa	0.6734143049932524
+question prefix = 'what' and answer shape = aAaaaa	0.6179905998417795
+question prefix = 'what' and answer shape = Aaa Aaa	0.1289031597561543
+question prefix = 'what' and answer shape = a aaaa	-0.14007166457257203
+action type = ExecutionAction	0.0
+question prefix = 'how' and answer shape = aaa aaaa	-0.4709851551956815
+question prefix = 'who' and answer shape = AAAA	-0.2480338777979432
+question prefix = 'what' and answer shape = Aaaa Aaaaa Aaaaa	0.11726930057238587
+question prefix = 'who' and answer shape = aaaa	-0.5104937409837591
+question prefix = 'what' and answer shape = Aaa aaaa aaaa	-0.4034157010563547
+question prefix = 'what' and answer shape = Aaaaa ? ? Aaaaa AA	0.5614035087719298
+question prefix = 'how' and isDate	-0.9622132253711201
+question prefix = 'what' and answer shape = A&A	-0.1120107962213226
