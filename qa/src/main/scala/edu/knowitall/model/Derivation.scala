@@ -44,5 +44,9 @@ case class Derivation(question: String,
     val allRows: Seq[Seq[Any]] = Seq(Seq("prod", "weight", "value", "feature")) ++ rows.toSeq
     Tabulator.format(allRows)
   }
+  override def toString = {
+    val l = List(questionState) ++ steps.map(_.toState)
+    l.map(_.toString).mkString(" -> ")
+  }
   
 }
