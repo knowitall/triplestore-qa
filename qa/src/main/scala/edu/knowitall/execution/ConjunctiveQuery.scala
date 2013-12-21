@@ -306,7 +306,7 @@ case object ListConjunctiveQuery {
 /**
  * A simple query is a conjunctive query that has a single conjunct.
  */
-case class SimpleQuery(question: String, name: String, map: Map[Field, TVal])
+case class SimpleQuery(name: String, map: Map[Field, TVal])
   extends ConjunctiveQuery { 
   val conjunct = TConjunct(name, map)
   val conjuncts = List(conjunct)
@@ -333,7 +333,7 @@ case class SimpleQuery(question: String, name: String, map: Map[Field, TVal])
 }
 case object SimpleQuery {
   def fromString(s: String) = TConjunct.fromString("r", s) match {
-    case Some(TConjunct(name, map)) => Some(SimpleQuery(s, name, map))
+    case Some(TConjunct(name, map)) => Some(SimpleQuery(name, map))
     case _ => None
   }
 }
