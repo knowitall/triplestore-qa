@@ -22,7 +22,6 @@ case class QaSearchProblem(
     extends SearchProblem[QaState, QaAction] {
 
   val initialState = QuestionState(question)
-  println(initialState.processed)
   
   override def successors(s: QaState) = transitionModel(s)
     

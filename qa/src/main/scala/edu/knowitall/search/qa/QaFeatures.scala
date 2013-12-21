@@ -19,7 +19,7 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   val defaultLm = conf.getDouble("paraphrase.defaultLm")
   val lmClient = new KenLmServer()
   
-  val answerIsLinked = AnswerFeature { (question: String, etuple: ExecTuple) =>
+  val answerIsLinked = ExecutionFeature { (question: String, etuple: ExecTuple) =>
     val tuple = etuple.tuple
     val qAttrs = etuple.query.qAttrs
     val isLinked = qAttrs.exists(attr => {
@@ -35,19 +35,19 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     (s"action type = ${a.getClass.getSimpleName}", 1.0)
   }
   
-  val tupleNamespace = AnswerFeature { (q: String, etuple: ExecTuple) => 
+  val tupleNamespace = ExecutionFeature { (q: String, etuple: ExecTuple) => 
     val tuple = etuple.tuple
     val nss = tuple.attrs.keys.filter(_.endsWith(".namespace")).flatMap(tuple.getString(_))
     nss.map(ns => s"answer from namespace '$ns'")
   }
   
-  val numConjuncts = AnswerFeature { (q: String, etup: ExecTuple) =>
+  val numConjuncts = ExecutionFeature { (q: String, etup: ExecTuple) =>
     ("num conjuncts" -> etup.query.conjuncts.size)
   }
   
   val numSteps = (step: QaStep) => SparseVector("steps" -> 0.25)
   
-  val querySimilarity = AnswerFeature { (q: String, etuple: ExecTuple) =>
+  val querySimilarity = ExecutionFeature { (q: String, etuple: ExecTuple) =>
     val query = etuple.query
     val tuple = etuple.tuple
     val relSim = QueryTupleSimilarity.relSimilarity(query, tuple)
@@ -60,7 +60,7 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   
   def freebaseLink(key: String, tuple: Tuple) = tuple.getString(key + "_fbid_s")
   
-  val joinSimilarity = AnswerFeature { (q: String, etuple: ExecTuple) =>
+  val joinSimilarity = ExecutionFeature { (q: String, etuple: ExecTuple) =>
     val query = etuple.query
     val tuple = etuple.tuple
     val sims = for {
@@ -106,7 +106,7 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     case _ => SparseVector.zero
   }
   
-  val prefixAndDate = AnswerFeature { (q: String, etuple: ExecTuple) =>
+  val prefixAndDate = ExecutionFeature { (q: String, etuple: ExecTuple) =>
     val prefix = NlpUtils.questionPrefix(q)
     val isDate = NlpUtils.isDate(etuple.answerString)
     if (isDate) {
@@ -116,7 +116,7 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     }
   }
   
-  val prefixAndShape = AnswerFeature { (q: String, etuple: ExecTuple) =>
+  val prefixAndShape = ExecutionFeature { (q: String, etuple: ExecTuple) =>
     val prefix = NlpUtils.questionPrefix(q)
     val shape = NlpUtils.stringShape(etuple.answerString, 4)
     s"question prefix = '$prefix' and answer shape = $shape"
@@ -170,9 +170,9 @@ case class TemplatePairFeature(f: Function2[String, TemplatePair, SparseVector])
   }
 }
 
-case class AnswerFeature(f: Function2[String, ExecTuple, SparseVector]) extends Function[QaStep, SparseVector] {
-  override def apply(step: QaStep) = (step.action, step.toState) match {
-    case (a: ExecutionAction, as: AnswerState) => f(step.question, a.execTuple)
+case class ExecutionFeature(f: Function2[String, ExecTuple, SparseVector]) extends Function[QaStep, SparseVector] {
+  override def apply(step: QaStep) = step.toState match {
+    case ts: TupleState => f(step.question, ts.execTuple)
     case _ => SparseVector.zero
   }
 }

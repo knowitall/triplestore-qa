@@ -12,6 +12,16 @@ case class ExecTuple(tuple: Tuple, query: ConjunctiveQuery) {
     case List(a) => a
     case _ => "(" + answer.mkString(", ") + ")"
   }
+  val toTripleString = {
+    val tstrs = for {
+      c <- query.conjuncts
+      n = c.name
+      x = tuple.attrs.getOrElse(s"$n.arg1", "")
+      r = tuple.attrs.getOrElse(s"$n.rel", "")
+      y = tuple.attrs.getOrElse(s"$n.arg2", "")
+    } yield s"($x, $r, $y)"
+    tstrs.mkString(" ")
+  }
 }
 
 trait QueryExecutor {

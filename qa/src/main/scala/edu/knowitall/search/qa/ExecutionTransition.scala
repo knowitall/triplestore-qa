@@ -31,8 +31,8 @@ class ExecutionTransition(
   
   private def executeQuery(state: QueryState) = for {
     etuple <- execute(state.query)
-    newState = AnswerState(etuple.answerString)
-  } yield (ExecutionAction(etuple), newState)
+    newState = TupleState(etuple)
+  } yield (ExecutionAction, newState)
   
   private def execute(query: ConjunctiveQuery) = try {
     executor.execute(query)
@@ -50,7 +50,7 @@ class ExecutionTransition(
 
 }
 
-case class ExecutionAction(execTuple: ExecTuple) extends QaAction
+object ExecutionAction extends QaAction
 
 object ExecutionTransition {
   val conf = ConfigFactory.load()
