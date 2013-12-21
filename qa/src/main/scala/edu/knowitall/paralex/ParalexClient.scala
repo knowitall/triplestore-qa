@@ -6,7 +6,9 @@ import scalaj.http.HttpOptions
 
 case class ParalexClient(url: String = ParalexClient.defaultUrl, timeout: Int = ParalexClient.defaultTimeout) {
   def parse(s: String) = {
-    val resp = Http(url).option(HttpOptions.readTimeout(timeout)).param("sent", s).asString
+    val resp = Http(url).option(HttpOptions.readTimeout(timeout))
+    					.option(HttpOptions.connTimeout(timeout))
+    					.param("sent", s).asString
     ParalexRecord.fromJson(resp)
   }
 }
