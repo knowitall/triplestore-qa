@@ -1,0 +1,1 @@
+paralex score	1.0
