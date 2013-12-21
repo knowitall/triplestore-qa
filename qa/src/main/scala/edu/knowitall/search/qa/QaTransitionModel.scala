@@ -30,6 +30,7 @@ class QaTransitionModel extends Transition[QaState, QaAction] {
   lazy val executeTransition = new ExecutionTransition(triplestoreClient)
   lazy val relSynTransition = new RelSynTransition(relSynClient)
   lazy val projTransition = new ProjectionTransition
+  lazy val paralexTransition = new ParalexTransition
   
   val conf = ConfigFactory.load()
   
@@ -38,7 +39,8 @@ class QaTransitionModel extends Transition[QaState, QaAction] {
     "templateParaphrase" -> (absArgTransition + templateTransition),
     "relSyn" -> relSynTransition,
     "execute" -> executeTransition,
-    "project" -> projTransition
+    "project" -> projTransition,
+    "paralex" -> paralexTransition
   )
   
   lazy val activeComponents = for {

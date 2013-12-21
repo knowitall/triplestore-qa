@@ -13,8 +13,9 @@ import edu.knowitall.execution.TVariable
 import edu.knowitall.execution.SimpleQuery
 import edu.knowitall.execution.Search.Field
 import edu.knowitall.execution.TVal
+import edu.knowitall.search.qa.QaAction
 
-case class ParalexRecord(query: ConjunctiveQuery, score: Double)
+case class ParalexRecord(query: ConjunctiveQuery, score: Double) extends QaAction
 
 object ParalexRecord extends App  {
   

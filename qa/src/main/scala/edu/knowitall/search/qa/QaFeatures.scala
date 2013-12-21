@@ -11,6 +11,7 @@ import edu.knowitall.execution.Search
 import edu.knowitall.relsyn.RelSynRule
 import com.rockymadden.stringmetric.StringMetric
 import edu.knowitall.execution.Tuple
+import edu.knowitall.paralex.ParalexRecord
 
 object QaFeatures extends Function[QaStep, SparseVector] {
   
@@ -146,6 +147,11 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     case _ => SparseVector.zero
   }
   
+  val paralexScore = (step: QaStep) => step.action match {
+    case r: ParalexRecord => SparseVector("paralex score" -> r.score)
+    case _ => SparseVector.zero
+  }
+  
   def apply(s: QaStep) = actionType(s) +
 		  				 answerIsLinked(s) +
 		  				 tupleNamespace(s) +
@@ -159,7 +165,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 numSteps(s) + 
 		  				 templateArgFeatures(s) +
 		  				 prefixAndShape(s) +
-		  				 joinSimilarity(s)
+		  				 joinSimilarity(s) +
+		  				 paralexScore(s)
   
 }
 
