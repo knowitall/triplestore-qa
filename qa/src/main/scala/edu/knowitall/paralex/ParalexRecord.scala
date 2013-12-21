@@ -17,7 +17,7 @@ import edu.knowitall.search.qa.QaAction
 
 case class ParalexRecord(query: ConjunctiveQuery, score: Double) extends QaAction
 
-object ParalexRecord extends App  {
+object ParalexRecord {
   
   def getFieldNamed(v: JValue, n: String) = v match {
     case f: JField if f.name == n => Some(f.value)
@@ -56,9 +56,9 @@ object ParalexRecord extends App  {
           whereField2 -> whereConst2)
     } yield SimpleQuery("r0", fields)
   
-  val selectPattern = """SELECT (arg[12]) FROM tuples WHERE ([a-z0-9]+)="([^"]*)" AND ([a-z0-9]+)="([^"]*)"""".r
+  val selectPattern = """SELECT (arg[12]) FROM tuples WHERE ([a-z0-9]+)="([^"]+)" AND ([a-z0-9]+)="([^"]+)"""".r
   def parseQuery(s: String) = s match {
-    case selectPattern(s, f1, v1, f2, v2) => makeQuery(s, f1, v1, f2, v2)
+    case selectPattern(sf, f1, v1, f2, v2) => makeQuery(sf, f1, v1, f2, v2)
     case _ => None
   }
   
