@@ -22,7 +22,7 @@ class AbstractArgTransition(
   private final val action = AbstractArgAction() 
   
   override def apply(s: QaState) = s match {
-    case s: QuestionState => abstractArgs(s)
+    case s: QuestionState if s.question.trim() != "" => abstractArgs(s)
     case _ => Nil
   }
   

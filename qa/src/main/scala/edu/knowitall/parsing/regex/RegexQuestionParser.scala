@@ -30,7 +30,7 @@ case class RegexQuestionParser(
   def lemmatize(string: String): Seq[Lemmatized[ChunkedToken]] = chunker.synchronized {
     // use stanford postags if possible because they are less noisy...
     val chunks = chunker(string).toList
-    val postags = postagger(string)
+    val postags = if (string == "") Seq.empty else postagger(string)
     val repostagged = if (chunks.length != postags.length) chunks else {
       chunks.zip(postags).map { case (chunk, postag) =>
         new ChunkedToken(chunkSymbol=chunk.chunkSymbol, postagSymbol=postag.postagSymbol, string=postag.string, offset = postag.offset)}
@@ -39,7 +39,11 @@ case class RegexQuestionParser(
     lemmas
   }
 
-  def parse(question: String) = parse(lemmatize(question))
+  def parse(question: String) = if (question.trim() == "") {
+    Seq.empty
+  } else {
+    parse(lemmatize(question))
+  }
 
   def parse(question: Seq[Lemmatized[ChunkedToken]]) = patterns.flatMap(p => p.parse(question))
   
