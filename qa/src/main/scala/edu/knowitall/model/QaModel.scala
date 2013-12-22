@@ -78,20 +78,3 @@ case object QaModel {
   lazy val defaultTransitionModel = new QaTransitionModel
   lazy val defaultCostModel = new QaCostModel
 }
-
-object MyTest extends App {
-  val model = QaModel()
-  model.candidatePredictions(args(0)) foreach {d =>
-    println(d.answer)
-    println(d.score)
-    println(d.execTuple.query)
-    println(d.execTuple.tuple)
-    d.steps foreach {step => 
-      println(s"From: ${step.fromState}")
-      println(s"Action: ${step.action}")
-      println(s"To: ${step.toState}")
-    }
-    println(d.explainScore(model.costModel.weights))
-    println
-  }
-}

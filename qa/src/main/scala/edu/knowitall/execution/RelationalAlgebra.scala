@@ -58,6 +58,7 @@ case class Tuple(attrs: Map[String, Any]) {
     val pairs = attrs map { case (k, v) => k + ": " + v }
     return "(" + pairs.mkString(", ") + ")"
   }
+  
 }
 
 /**

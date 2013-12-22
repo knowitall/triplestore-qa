@@ -13,7 +13,7 @@ case class AbstractedArgState(question: String, processed: Sentence with Chunked
     val middle = "[" +: tokens.slice(argInterval.start, argInterval.end) :+ "]"
     val right = tokens.slice(argInterval.end, tokens.size)
     val s = (left ++ middle ++ right).mkString(" ")
-    s"AbstractedArgState($s)"
+    s
   } 
   def queryString = {
     val left = tokens.slice(0, argInterval.start)

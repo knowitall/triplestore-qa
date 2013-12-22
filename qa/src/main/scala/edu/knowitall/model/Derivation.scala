@@ -28,11 +28,6 @@ case class Derivation(question: String,
     case x =>
       throw new IllegalStateException(s"Expected AnswerState, got $x, steps = $steps")
   }
-  def execTuple: ExecTuple = steps.last.action match {
-    case a: ExecutionAction => a.execTuple
-    case _ => 
-      throw new IllegalStateException(s"Expected last action to be ExecutionAction. Found: ${steps.last.action}")
-  }
   def explainScore(weights: SparseVector) = {
     val rows = for {
       fname <- features.activeComponents.toList.sortBy(f => -1*features(f)*weights(f))
@@ -43,6 +38,10 @@ case class Derivation(question: String,
     
     val allRows: Seq[Seq[Any]] = Seq(Seq("prod", "weight", "value", "feature")) ++ rows.toSeq
     Tabulator.format(allRows)
+  }
+  override def toString = {
+    val l = List(questionState) ++ steps.map(_.toState)
+    l.map(_.toString).mkString(" -> ")
   }
   
 }
