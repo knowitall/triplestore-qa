@@ -30473,3 +30473,79 @@ LABEL	0	what kind of voting system does japan have?	the IWC
 LABEL	0	what do barack obama do as a president?	large measure
 LABEL	0	what date was abraham lincoln inaugurated?	16th President
 LABEL	0	who is the owner of the philadelphia eagles?	Senator Elliott
+LABEL	0	What country did Marco Polo come from?	classic style
+LABEL	0	When did France win the World Cup?	soccer
+LABEL	1	In what year was the FISA court established?	the '70s
+LABEL	0	Who is a German philosopher?	Nomic
+LABEL	0	In what year was the Church of Jesus Christ of Latter-day Saints founded?	Strangites
+LABEL	0	Who was Blake accused of murdering?	The Gilligan?s castaways
+LABEL	0	What are cigarettes made of?	three basic components
+LABEL	1	When was penicillin first used?	the 1940 's
+LABEL	0	When was the first flush toilet invented?	the Indus Valley Civilization
+LABEL	0	What books did Franz Kafka author?	Richard H. Lawson
+LABEL	0	What does EKG stand for?	the Greek word
+LABEL	0	What is the name of the inventor of silly putty?	Croak
+LABEL	0	What year did Padre Pio die?	a Franciscan Monastery
+LABEL	1	Where is the Shawnee National Forest?	Hardin County
+LABEL	0	Who were victims of the disaster?	Japan
+LABEL	1	What is strep throat?	adolescent sore throats
+LABEL	0	When was Prince Charles born?	February
+LABEL	0	Who helped the candidates prepare?	utility
+LABEL	0	What was the result of the contempt charges?	The imprudent attack
+LABEL	0	When is Boxing Day?	next Monday
+LABEL	0	How old is Darrell Hammond?	2001-08-08
+LABEL	0	What is the most expensive car in the world?	the battery pack
+LABEL	0	What year was the Fulbright Program established?	the USSR.?
+LABEL	1	Where do hyenas live?	the savannas and deserts
+LABEL	0	In what state was the Sago mine?	12 miners
+LABEL	0	Where was George Foreman born?	Belarus
+LABEL	0	When was John D. Rockefeller born?	central New York
+LABEL	1	What is the effect of acid rain?	the ozone layer
+LABEL	0	When was the NFL established?	1960
+LABEL	0	What continent is India on?	the Kremlin
+LABEL	1	What year was the U.S. Mint established?	1837
+LABEL	0	Who was the coach of the French team?	1987-88 Sanderson
+LABEL	0	What is a golden parachute?	the government
+LABEL	0	Where was the trial held?	Dayton
+LABEL	0	What are triglycerides?	tissue lipase
+LABEL	0	What kind of animal was Winnie the Pooh?	Kanga
+LABEL	0	When was George Foreman born?	Picton Co.
+LABEL	0	What's the tallest building in New York City?	the building
+LABEL	0	What city is Massachusetts General Hospital located in?	the Lobby
+LABEL	0	What's the easiest way to remove wallpaper?	The best contractors
+LABEL	0	Who is the CEO of UPS?	the establishment
+LABEL	0	How high is the Tower of Pisa?	What city
+LABEL	0	What is the fat content of an avocado?	any fruit
+LABEL	0	Who was the prosecutor?	the law
+LABEL	0	Where did the ukulele originate?	the 19th Century
+LABEL	0	What is nanotechnology?	Seeman
+LABEL	1	Name the ships of the NCL	Epic
+LABEL	0	What does NASA stand for?	A Straight Answer
+LABEL	1	When did Rachel Carson die?	1965
+LABEL	0	Where is Kings Canyon?	the southwest border
+LABEL	1	Where is Tornado Alley?	the Great Plains
+LABEL	0	Where did he live?	Finland
+LABEL	0	What is the Moulin Rouge?	a courtesan
+LABEL	0	How many people were on board?	private Username Password
+LABEL	0	What other products does Harley-Davidson produce?	the other one
+LABEL	0	Who is Angela Davis?	a responsibility
+LABEL	0	What is the fear of lightning called?	children
+LABEL	1	What is a nickname for Mississippi?	the Magnolia State
+LABEL	0	What is the meaning of thalassemia?	the genes
+LABEL	0	When did he die?	the technology
+LABEL	0	How big does a pig get?	the tip
+LABEL	0	When was the first hair dryer made?	Italy
+LABEL	0	What are the names of the Dixie Chicks?	traitors
+LABEL	0	Where did he die?	Brantford
+LABEL	0	How many states have a lottery?	The Wizards
+LABEL	0	How many miles long is the Iditarod?	the other medium
+LABEL	0	What is the scientific name for leech?	modern applications
+LABEL	0	What kind of plant is kudzu?	Plant
+LABEL	0	What year was Wal-Mart founded?	transfer paper
+LABEL	0	In what city was Frank Sinatra born?	1915
+LABEL	1	What are the names of the space shuttles?	Spaceship Micah
+LABEL	0	What is naproxen?	stomach bleeding
+LABEL	0	Who supervised the transplant?	Coach Woody Hayes
+LABEL	0	What is an earthquake?	treasure
+LABEL	0	When was JFK born?	Brookline
+LABEL	0	What is its popular name?	expectations
