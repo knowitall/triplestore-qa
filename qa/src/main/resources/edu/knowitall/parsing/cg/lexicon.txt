@@ -1,9 +1,9 @@
 Verb := PatternTagger {
-<pos="RB"> <pos="MD" | pos=/VB[DPZGN]?/> <pos="RP">? <pos="RB">?
+<pos="RB">? <pos="MD" | pos=/VB[DPZGN]?/> <pos="RP">? <pos="RB">?
 }
 
 Modifier := PatternTagger {
-<pos='$' | pos='PRP$' | pos='DT' | pos='JJ' | pos='JJS' | pos='JJR' | pos='POS' | pos='PRP' | pos='RB' | pos='RBR' | pos='RBS' | pos='VBN' | pos='VBG' | pos='CC'>
+<pos='$' | pos='PRP$' | pos='DT' | pos='JJ' | pos='JJS' | pos='JJR' | pos='POS' | pos='PRP' | pos='RB' | pos='RBR' | pos='RBS' | pos='VBN' | pos='VBG' >
 }
 
 Word := PatternTagger {
@@ -24,6 +24,10 @@ LongRelation := TypePatternTagger {
   (?:@Verb (?:(?:@Word)* (?:@Prep)+))+
 }
 
+Noun := TypePatternTagger {
+  <pos=/JJS*/>* <pos=/NNS?/>+
+}
+
 Relation := TypePatternTagger {
   @ShortRelation | @LongRelation
 }
@@ -32,6 +36,50 @@ Aux := PatternTagger {
   <lemma='be' | lemma='have' | lemma='do'>
 }
 
-ArgRule1 := {
-  (?:@Modifier* @Word+)+
+WhatWhich := PatternTagger {
+    <lemma="what"|lemma="which">
+}
+
+RelMarker := PatternTagger {
+    <lemma="that"|lemma="who"|lemma="whom"|lemma="which">
+}
+
+TypeKind := PatternTagger {
+    <lemma="type"|lemma="kind">
+}
+
+ArgRuleBasic := TypePatternTagger {
+    ^(<val>:@Modifier* <pos=/N.*/|pos="CD">+ @Modifier*)$
+}
+
+ArgRuleWithTitle := TypePatternTagger {
+  ^ <lemma="the"> @Modifier* <pos=/NNS?/> (<val>:@Modifier* <pos=/N.*/|pos="CD">+ @Modifier*) $
+}
+
+BinaryRuleReVerb := TypePatternTagger {
+  ^ (<val>:@Relation) $
+}
+
+IsaRuleBasic := TypePatternTagger {
+    ^ <lemma="be">? <lemma="some">? (@TypeKind <lemma="of">)? (<val>:@Noun) $
+}
+
+IsaRuleWh := TypePatternTagger {
+
+}
+
+IdentityRuleWh := TypePatternTagger {
+    ^ (<val>:@WhatWhich) $
+}
+
+IdentityRuleRelMarker := TypePatternTagger {
+    ^ (<val>:@RelMarker) $
+}
+
+IdentityRuleConj := TypePatternTagger {
+    ^ (<val>:<lemma=",">? <pos="CC">) $
+}
+
+IdentityRuleNameOf := TypePatternTagger {
+    ^ (<val>:<lemma=/an?/> <lemma="name"> <lemma="of"|lemma="for">) $
 }
