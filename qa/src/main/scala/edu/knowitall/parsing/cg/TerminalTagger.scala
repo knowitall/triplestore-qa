@@ -16,6 +16,7 @@ import java.io.FileInputStream
 import java.io.File
 import edu.knowitall.util.MathUtils
 import edu.knowitall.util.NlpUtils
+import edu.knowitall.taggers.NamedGroupType
 
 case class TaggerRule(name: String, interval: Interval, category: Category)
 extends TerminalRule[Sentence with Chunked with Lemmatized] {
@@ -33,6 +34,8 @@ case class TerminalTagger(tc: TaggerCollection[Sentence with Chunked with Lemmat
   private val isaPrefix = "IsaRule"
   private val argPrefix = "ArgRule"
   private val idPrefix = "IdentityRule"
+  private val prefixPat = ("^(" + List(binaryPrefix, isaPrefix, argPrefix, idPrefix).mkString("|") + ").*\\.val$").r
+  println(prefixPat)
   private val isaRel = "be a" 
     
   private def makeBinary(s: String) = {
@@ -50,20 +53,26 @@ case class TerminalTagger(tc: TaggerCollection[Sentence with Chunked with Lemmat
   
   private def makeIdentity(s: String) = Identity()
   
-  private def makeCategory(t: Type) = t.name match {
-    case n if n.startsWith(binaryPrefix) => Some(makeBinary(t.text))
-    case n if n.startsWith(isaPrefix) => Some(makeIsa(t.text))
-    case n if n.startsWith(idPrefix) => Some(makeIdentity(t.text))
-    case n if n.startsWith(argPrefix) => Some(makeArg(t.text))
+  private val makeMap = Map(binaryPrefix -> makeBinary _,
+		  					isaPrefix -> makeIsa _,
+		  					idPrefix -> makeIdentity _,
+		  					argPrefix -> makeArg _)
+  
+  private def getPrefix(t: Type) = t.name match {
+    case prefixPat(prefix) => Some(prefix)
     case _ => None
   }
+  
+  private def makeCategory(t: Type) = for {
+    prefix <- getPrefix(t)
+    function <- makeMap.get(prefix)
+  } yield function(t.text)
   
   private def tag(s: Sentence with Chunked with Lemmatized) = for {
     t <- tc.tag(s)
     cat <- makeCategory(t)
     ruleName = t.name
     interval = t.tokenInterval
-    if interval.size == s.tokens.size
   } yield TaggerRule(ruleName, interval, cat)
   
   def getRules(s: Sentence with Chunked with Lemmatized) = for {
