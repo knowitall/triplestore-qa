@@ -20,7 +20,6 @@ case class TaggerExtractor(tagger: PatternTagger) {
   def extract(s: Sentence with Chunked with Lemmatized): Map[TVariable, String] = {
     val bindings = for {
       t <- tagger(s)
-      _ = println(t)
       variable <- nameToVar(t)
       value = t.text
     } yield (variable -> value)

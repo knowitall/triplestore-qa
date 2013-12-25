@@ -5,35 +5,55 @@ import edu.knowitall.execution.ListConjunctiveQuery
 import edu.knowitall.execution.UnquotedTLiteral
 
 trait CategoryPattern {
-  def apply(bindings: Map[TVariable, String]): Category
+  def apply(bindings: Map[TVariable, String]): Option[Category]
+}
+
+object CategoryPattern {
+  def fromString(s: String) = s.trim().split("\\s+", 2) match {
+    case Array(".") => IdentityPattern
+    case Array("unary", pattern) => UnaryPattern(pattern)
+    case Array("binary", pattern) => BinaryPattern(pattern)
+    case Array("argument", pattern) => ArgumentPattern(pattern)
+    case Array("relmod", pattern) => RelModPattern(pattern)
+    case _ => throw new IllegalArgumentException(s"Invalid pattern string: $s")
+  }
 }
 
 case class UnaryPattern(pattern: String) extends CategoryPattern {
   private val cqp = ConjunctiveQueryPattern(pattern)
   assume(cqp.boundVars.size == 1, s"UnaryPattern $pattern must have 1 bound variable")
-  override def apply(bindings: Map[TVariable, String]) = 
-    Unary(freeVar = cqp.query.qVars(0), cqp(bindings))
+  val freeVar = cqp.query.qVars(0)
+  override def apply(bindings: Map[TVariable, String]) = for {
+    query <- cqp(bindings)
+  } yield Unary(freeVar, query)
 }
 
 case class BinaryPattern(pattern: String) extends CategoryPattern {
   private val cqp = ConjunctiveQueryPattern(pattern)
   assume(cqp.boundVars.size == 2, s"BinaryPattern $pattern must have 2 bound variables")
-  override def apply(bindings: Map[TVariable, String]) = 
-    Binary(leftVar = cqp.query.qVars(0), rightVar = cqp.query.qVars(1), cqp(bindings))
+  val leftVar = cqp.query.qVars(0)
+  val rightVar = cqp.query.qVars(1)
+  override def apply(bindings: Map[TVariable, String]) = for {
+    query <- cqp(bindings)
+  } yield Binary(leftVar, rightVar, query)
 }
 
 case class ArgumentPattern(pattern: String) extends CategoryPattern {
   private val sp = StringPattern(pattern)
-  override def apply(bindings: Map[TVariable, String]) = Arg(UnquotedTLiteral(sp(bindings)))
+  override def apply(bindings: Map[TVariable, String]) = for {
+    argString <- sp(bindings)
+  } yield Arg(UnquotedTLiteral(argString))
 }
 
 case class RelModPattern(pattern: String) extends CategoryPattern {
   private val sp = StringPattern(pattern)
-  override def apply(bindings: Map[TVariable, String]) = RelMod(sp(bindings))
+  override def apply(bindings: Map[TVariable, String]) = for {
+    relModString <- sp(bindings)
+  } yield RelMod(relModString)
 }
 
 object IdentityPattern extends CategoryPattern {
-  override def apply(bindings: Map[TVariable, String]) = Identity
+  override def apply(bindings: Map[TVariable, String]) = Some(Identity)
 }
 
 case class ConjunctiveQueryPattern(pattern: String) {
@@ -48,8 +68,12 @@ case class ConjunctiveQueryPattern(pattern: String) {
   val freeVars = query.conjuncts.flatMap(_.vars).toSet -- boundVars
   
   def apply(bindings: Map[TVariable, String]) = {
-    assume(freeVars.subsetOf(bindings.keys.toSet), s"Binding $bindings does not cover free variables in $query")
-    query.subs(bindings map { case (tvar, s) => (tvar, UnquotedTLiteral(s)) })
+    if (freeVars.subsetOf(bindings.keys.toSet)) {
+      val literals = bindings map { case (tvar, s) => (tvar, UnquotedTLiteral(s)) }
+      Some(query.subs(literals))
+    } else {
+      None
+    }
   }
   
 }
@@ -57,21 +81,18 @@ case class ConjunctiveQueryPattern(pattern: String) {
 case class StringPattern(pattern: String) {
   private val varPat = "\\$[A-Za-z0-9]+".r
   private val parts = varPat.split(s" $pattern ").toList
-  private val variables = varPat.findAllIn(pattern).toList map {
+  private val variables = { varPat.findAllIn(pattern).toList map {
     case x => TVariable(x.slice(1, x.size))
-  }
+  } }.toSet
   def apply(bindings: Map[TVariable, String]) = {
-    assume(variables.toSet.subsetOf(bindings.keys.toSet), s"Binding $bindings does not cover free variables in $pattern")
-    val pieces = for {
-      (string, variable) <- parts zip variables
-      value = bindings(variable)
-    } yield s"${string}${value}"
-    pieces.mkString("").trim()
+    if (variables.subsetOf(bindings.keys.toSet)) {
+      val pieces = for {
+        (string, variable) <- parts zip variables
+        value = bindings(variable)
+      } yield s"${string}${value}"
+      Some(pieces.mkString("").trim())
+    } else {
+      None
+    }
   }
-}
-
-object Foo extends App {
-  val cat = BinaryPattern("$x, $y : ($x, $1, $y)")
-  val result = cat(Map(TVariable("1") -> "was born in"))
-  println(result)
 }
