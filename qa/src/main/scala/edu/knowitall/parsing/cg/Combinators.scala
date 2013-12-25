@@ -47,8 +47,8 @@ object UnaryIntersect extends Combinator {
 
 object UnaryIdentity extends Combinator {
   override def apply(left: Category, right: Category) = (left, right) match {
-    case (id: Identity, u: Unary) => Some(u)
-    case (u: Unary, id: Identity) => Some(u)
+    case (Identity, u: Unary) => Some(u)
+    case (u: Unary, Identity) => Some(u)
     case _ => None
   }
 }

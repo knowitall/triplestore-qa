@@ -51,7 +51,7 @@ case class TerminalTagger(tc: TaggerCollection[Sentence with Chunked with Lemmat
   private def makeIsa(s: String) =
     RightApply(makeBinary(isaRel), makeArg(s)).get
   
-  private def makeIdentity(s: String) = Identity()
+  private def makeIdentity(s: String) = Identity
   
   private val makeMap = Map(binaryPrefix -> makeBinary _,
 		  					isaPrefix -> makeIsa _,

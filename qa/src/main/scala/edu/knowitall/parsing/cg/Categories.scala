@@ -15,4 +15,4 @@ case class Binary(leftVar: TVariable, rightVar: TVariable,
 
 case class RelMod(value: String) extends Category
     
-case class Identity() extends Category
+object Identity extends Category

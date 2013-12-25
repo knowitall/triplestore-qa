@@ -42,7 +42,7 @@ case class CgParser() {
         val q = ListConjunctiveQuery.fromString("($x, cappy, $y)").get
         Some(Binary(lv, rv, q))
       } else if (txt == "which" || txt == "what") {
-        Some(Identity())
+        Some(Identity)
       } else if (txt == "city") {
         val v = TVariable("x")
         val q = ListConjunctiveQuery.fromString("($x, type, city)").get

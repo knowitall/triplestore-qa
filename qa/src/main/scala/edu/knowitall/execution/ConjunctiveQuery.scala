@@ -120,12 +120,15 @@ case class TConjunct(name: String, values: Map[Field, TVal]) {
   
   def vars: Iterable[TVariable] = varsToFields.keys.toSet
   
-  def subs(tvar: TVariable, tval: TVal) = {
+  def subs(bindings: Map[TVariable, TVal]) = {
     val newValues = values map {
-      case (field, value) => if (value == tvar) (field, tval) else (field, value) 
+      case (field, value: TVariable) if bindings.contains(value) => (field, bindings(value))
+      case (field, value) => (field, value)
     }
     copy(values = newValues)
   }
+  
+  def subs(tvar: TVariable, tval: TVal): TConjunct = subs(Map(tvar -> tval))
   
   def rename(n: String) = copy(name = n)
   
@@ -212,7 +215,8 @@ trait ConjunctiveQuery {
   def qVars: List[TVariable]
   def qAttrs: List[String]
   def conjuncts: List[TConjunct]
-  def subs(tvar: TVariable, tval: TVal): ConjunctiveQuery
+  def subs(bindings: Map[TVariable, TVal]): ConjunctiveQuery
+  def subs(tvar: TVariable, tval: TVal): ConjunctiveQuery = subs(Map(tvar -> tval))
   def combine(cq: ConjunctiveQuery): ConjunctiveQuery
   def renameConjuncts(prefix: String): ConjunctiveQuery
   
@@ -247,8 +251,8 @@ case class ListConjunctiveQuery(qVars: List[TVariable], conjuncts: List[TConjunc
   val qas = {for (v <- qVars; c <- conjuncts; a <- c.attrName(v)) yield (v, a)}.groupBy(_._1)
   val qAttrs = for (v <- qVars; group <- qas.get(v); (v, a) <- group.find(x => true)) yield a
   
-  override def subs(tvar: TVariable, tval: TVal) = {
-    val newConjs = conjuncts.map(_.subs(tvar, tval))
+  override def subs(bindings: Map[TVariable, TVal]) = {
+    val newConjs = conjuncts.map(_.subs(bindings))
     val newQVars = newConjs.flatMap(_.vars)
     ListConjunctiveQuery(newQVars, newConjs)
   }
@@ -318,8 +322,8 @@ case class SimpleQuery(name: String, map: Map[Field, TVal])
           + s"got: $vars")
   }
   val qAttrs = List(conjunct.joinKeys(qVars(0)))
-  override def subs(tvar: TVariable, tval: TVal) = {
-    val newConj = conjunct.subs(tvar, tval)
+  override def subs(bindings: Map[TVariable, TVal]) = {
+    val newConj = conjunct.subs(bindings)
     copy(map = newConj.values)
   }
   override def renameConjuncts(prefix: String) = {
