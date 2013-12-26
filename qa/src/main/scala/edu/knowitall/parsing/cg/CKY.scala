@@ -7,7 +7,7 @@ import edu.knowitall.collection.immutable.Interval
 import scala.collection.mutable.{Map => MutableMap}
 import edu.knowitall.util.MathUtils
 
-trait Node {
+sealed trait Node {
   def span: Interval
   def category: Category
 }
@@ -25,6 +25,16 @@ case class NonTerminal(catspan: CatSpan, left: CatSpan, right: CatSpan,
   override val span = catspan.span
   override val category = catspan.category
 }
+
+sealed trait Derivation {
+  def catspan: CatSpan
+  def category = catspan.category
+  def interval = catspan.span
+}
+
+case class CombinatorStep(catspan: CatSpan, rule: Combinator, left: Derivation, right: Derivation) extends Derivation
+
+case class LexicalStep[T](catspan: CatSpan, rule: TerminalRule[T]) extends Derivation
 
 case class CKY[T](input: T, size: Int, 
 				  terminalRules: IndexedSeq[TerminalRule[T]],
@@ -65,6 +75,22 @@ case class CKY[T](input: T, size: Int,
   private val fullSpan = Interval.open(0, size)
   
   def rootCategories = cats.getOrElse(fullSpan, Set())
-
+  
+  def derivations(catspan: CatSpan): Iterable[Derivation] = nodes.get(catspan) match {
+    case None => Iterable.empty
+    case Some(node) => node match {
+      case Terminal(cs, rule) => Iterable(LexicalStep(catspan, rule))
+      case NonTerminal(cs, left, right, rule) => for {
+        leftd <- derivations(left)
+        rightd <- derivations(right)
+      } yield CombinatorStep(catspan, rule, leftd, rightd)
+    }
+  }
+  
+  def rootDerivations = for {
+    c <- cats.getOrElse(fullSpan, Set.empty)
+    cs = CatSpan(c, fullSpan)
+    d <- derivations(cs)
+  } yield d
   
 }

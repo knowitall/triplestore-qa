@@ -14,6 +14,7 @@ case class LexicalRule(syntax: TaggerExtractor, semantics: CategoryPattern) exte
     val span = NlpUtils.split(sent, interval.start, interval.end)
     semantics(syntax(span))
   }
+  override def toString = syntax.patternName
 }
 
 object LexicalRule {

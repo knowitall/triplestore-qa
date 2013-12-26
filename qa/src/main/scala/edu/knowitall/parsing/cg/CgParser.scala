@@ -26,7 +26,12 @@ case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon,
     val n = sent.tokens.size
     val cky = new CKY(sent, n, lexicon, combinators)
     cky.parse
-    cky.rootCategories flatMap getQuery
+    cky.rootDerivations filter { d =>
+      d.category match {
+        case u: Unary => true
+        case _ => false
+      }
+    }
   }
 
 }

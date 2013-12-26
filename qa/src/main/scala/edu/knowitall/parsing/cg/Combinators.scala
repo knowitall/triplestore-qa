@@ -21,6 +21,7 @@ object RightApply extends Combinator {
     }
     case _ => None 
   }
+  override def toString = "RightApply"
 }
 
 object LeftApply extends Combinator {
@@ -31,6 +32,7 @@ object LeftApply extends Combinator {
     }
     case _ => None 
   }
+  override def toString = "LeftApply"
 }
 
 object UnaryIntersect extends Combinator {
@@ -43,6 +45,7 @@ object UnaryIntersect extends Combinator {
     }
     case _ => None
   }
+  override def toString = "UnaryIntersect"
 }
 
 object UnaryIdentity extends Combinator {
@@ -51,4 +54,5 @@ object UnaryIdentity extends Combinator {
     case (u: Unary, Identity) => Some(u)
     case _ => None
   }
+  override def toString = "UnaryIdentity"
 }
