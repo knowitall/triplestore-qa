@@ -6,9 +6,12 @@ import edu.knowitall.tool.chunk.OpenNlpChunker
 import edu.knowitall.repr.sentence.Lemmatized
 import edu.knowitall.repr.sentence.Chunked
 import edu.knowitall.repr.sentence.Sentence
-import edu.knowitall.repr.sentence.Lemmatizer
-import edu.knowitall.repr.sentence.Chunker
+import edu.knowitall.repr.sentence.{Lemmatizer => RepLemmatizer}
+import edu.knowitall.repr.sentence.{Chunker => RepChunker}
 import edu.knowitall.tool.tokenize.PTBTokenizer
+import edu.knowitall.tool.chunk.Chunker
+import edu.knowitall.repr.sentence.Lemmatizer
+import edu.knowitall.tool.stem.Stemmer
 
 object NlpTools {
   lazy val tagger = new StanfordPostagger
@@ -17,10 +20,11 @@ object NlpTools {
   lazy val chunker = new OpenNlpChunker
   lazy val dummyChunker = DummyChunker(tagger)
   
-  def process(sentence: String): Sentence with Chunked with Lemmatized = {
-    new Sentence(sentence) with Chunker with Lemmatizer {
-      val chunker = NlpTools.dummyChunker
-      val lemmatizer = NlpTools.stemmer
+  def process(sentence: String, ch: Chunker = dummyChunker, lm: Stemmer = stemmer): Sentence with Chunked with Lemmatized = {
+    new Sentence(sentence) with RepChunker with RepLemmatizer {
+      val chunker = ch
+      val lemmatizer = lm
     }
   }
+  
 }
