@@ -14,8 +14,8 @@ sealed trait Node {
 
 case class CatSpan(category: Category, span: Interval)
 
-case class Terminal[T](catspan: CatSpan,
-					   rule: TerminalRule[T]) extends Node {
+case class Terminal(catspan: CatSpan,
+					   rule: TerminalRule) extends Node {
   override val span = catspan.span
   override val category = catspan.category
 }
@@ -30,14 +30,22 @@ sealed trait Derivation {
   def catspan: CatSpan
   def category = catspan.category
   def interval = catspan.span
+  def terminalRules: List[TerminalRule]
+  def combinators: List[Combinator]
 }
 
-case class CombinatorStep(catspan: CatSpan, rule: Combinator, left: Derivation, right: Derivation) extends Derivation
+case class CombinatorStep(catspan: CatSpan, rule: Combinator, left: Derivation, right: Derivation) extends Derivation {
+  override def combinators = rule :: (left.combinators ++ right.combinators)
+  override def terminalRules = left.terminalRules ++ right.terminalRules
+}
 
-case class LexicalStep[T](catspan: CatSpan, rule: TerminalRule[T]) extends Derivation
+case class LexicalStep[T](catspan: CatSpan, rule: TerminalRule) extends Derivation {
+  override def combinators = Nil
+  override def terminalRules = List(rule)
+}
 
-case class CKY[T](input: T, size: Int, 
-				  terminalRules: IndexedSeq[TerminalRule[T]],
+case class CKY(input: Sentence with Chunked with Lemmatized, size: Int, 
+				  terminalRules: IndexedSeq[TerminalRule],
 				  combinators: IndexedSeq[Combinator]) {
   
   val cats = MutableMap.empty[Interval, Set[Category]]

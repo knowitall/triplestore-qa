@@ -9,7 +9,7 @@ import java.io.InputStream
 import scala.io.Source
 import edu.knowitall.util.ResourceUtils
 
-case class LexicalRule(syntax: TaggerExtractor, semantics: CategoryPattern) extends TerminalRule[Sentence with Chunked with Lemmatized] {
+case class LexicalRule(syntax: TaggerExtractor, semantics: CategoryPattern) extends TerminalRule {
   override def apply(interval: Interval, sent: Sentence with Chunked with Lemmatized) = {
     val span = NlpUtils.split(sent, interval.start, interval.end)
     semantics(syntax(span))

@@ -7,7 +7,9 @@ import edu.knowitall.util.ResourceUtils
 import edu.knowitall.util.NlpTools
 import edu.knowitall.tool.chunk.Chunker
 import edu.knowitall.tool.stem.Stemmer
+import edu.knowitall.execution.ConjunctiveQuery
 
+case class ParsedQuestion(query: ConjunctiveQuery, derivation: Derivation)
 
 case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon, 
 					combinators: IndexedSeq[Combinator] = CgParser.defaultCombinators,
@@ -26,12 +28,13 @@ case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon,
     val n = sent.tokens.size
     val cky = new CKY(sent, n, lexicon, combinators)
     cky.parse
-    cky.rootDerivations filter { d =>
-      d.category match {
-        case u: Unary => true
-        case _ => false
+    for {
+      derivation <- cky.rootDerivations
+      query <- derivation.category match {
+        case u: Unary => Some(u.query)
+        case _ => None
       }
-    }
+    } yield ParsedQuestion(query, derivation)
   }
 
 }
@@ -52,5 +55,9 @@ case object CgParser {
 object MyTest extends App {
   val parser = CgParser()
   val results = parser.parse(args(0))
-  results foreach println
+  for (deriv <- results) {
+    println(deriv.query)
+    deriv.derivation.terminalRules foreach println
+    println
+  }
 }

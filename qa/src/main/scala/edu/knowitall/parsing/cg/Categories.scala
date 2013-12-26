@@ -15,4 +15,6 @@ case class Binary(leftVar: TVariable, rightVar: TVariable,
 
 case class RelMod(value: String) extends Category
     
-object Identity extends Category
+object Identity extends Category {
+  override def toString = "Identity"
+}

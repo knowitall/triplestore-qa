@@ -4,13 +4,16 @@ import edu.knowitall.execution.ListConjunctiveQuery
 import edu.knowitall.execution.UnquotedTLiteral
 import edu.knowitall.execution.TVariable
 import edu.knowitall.collection.immutable.Interval
+import edu.knowitall.repr.sentence.Lemmatized
+import edu.knowitall.repr.sentence.Chunked
+import edu.knowitall.repr.sentence.Sentence
 
 trait Combinator {
   def apply(left: Category, right: Category): Option[Category]
 }
 
-trait TerminalRule[T] {
-  def apply(interval: Interval, t: T): Option[Category]
+trait TerminalRule {
+  def apply(interval: Interval, sent: Sentence with Chunked with Lemmatized): Option[Category]
 }
 
 object RightApply extends Combinator {
