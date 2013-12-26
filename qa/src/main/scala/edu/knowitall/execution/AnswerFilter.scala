@@ -6,6 +6,7 @@ import scala.io.Source
 import java.io.InputStream
 import org.slf4j.LoggerFactory
 import scala.util.matching.Regex
+import edu.knowitall.util.ResourceUtils
 
 trait AnswerFilter {
   def filter(exec: QueryExecutor): QueryExecutor
@@ -65,23 +66,14 @@ case class StopRegexFilter(patStrs: Iterable[String]) extends AnswerFilter {
 object DefaultFilters {
   val logger = LoggerFactory.getLogger(this.getClass)
   
-  def resource(path: String): InputStream = {
-    val stream = getClass.getResourceAsStream(path)
-    if (stream != null) {
-      stream
-    } else {
-      throw new IllegalStateException(s"could not load resource $path")
-    }
-  }
-  
   val idFilter = new AnswerFilter {
     override def filter(exec: QueryExecutor) = exec
   }
   
   def wrap(executor: QueryExecutor) = {
     val filters: List[AnswerFilter] = List(
-      new StopListFilter(resource("/edu/knowitall/execution/stoplist.txt")),
-      new StopRegexFilter(resource("/edu/knowitall/execution/stopregex.txt")))
+      new StopListFilter(ResourceUtils.resource("/edu/knowitall/execution/stoplist.txt")),
+      new StopRegexFilter(ResourceUtils.resource("/edu/knowitall/execution/stopregex.txt")))
   
     val composed = filters.foldLeft(idFilter)(AnswerFilter.compose _)
     composed.filter(executor)
