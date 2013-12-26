@@ -5,6 +5,9 @@ import edu.knowitall.repr.sentence.Chunked
 import edu.knowitall.repr.sentence.Sentence
 import edu.knowitall.collection.immutable.Interval
 import edu.knowitall.util.NlpUtils
+import java.io.InputStream
+import scala.io.Source
+import edu.knowitall.util.ResourceUtils
 
 case class LexicalRule(syntax: TaggerExtractor, semantics: CategoryPattern) extends TerminalRule[Sentence with Chunked with Lemmatized] {
   override def apply(interval: Interval, sent: Sentence with Chunked with Lemmatized) = {
@@ -24,4 +27,11 @@ object LexicalRule {
       case _ => throw new IllegalArgumentException(s"Invalid lexical rule string: $s")
     }
   }
+  def fromStrings(strings: IndexedSeq[String]) = for {
+    line <- strings
+    if !line.trim.startsWith("#") && line.trim != ""
+  } yield LexicalRule.fromString(line.trim())
+  def fromInputStream(is: InputStream) = fromStrings(Source.fromInputStream(is).getLines.toIndexedSeq)
+  def fromFile(path: String) = fromStrings(Source.fromFile(path).getLines.toIndexedSeq)
+  def fromResource(path: String) = fromInputStream(ResourceUtils.resource(path))
 }

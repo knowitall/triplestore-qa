@@ -1,82 +1,51 @@
 package edu.knowitall.parsing.cg
 
-import edu.knowitall.repr.sentence.Chunked
-import edu.knowitall.repr.sentence.Sentence
-import edu.knowitall.repr.sentence.Lemmatized
-import edu.knowitall.tool.stem.MorphaStemmer
-import edu.knowitall.repr.sentence.Lemmatizer
-import edu.knowitall.repr.sentence.Chunker
-import edu.knowitall.tool.chunk.OpenNlpChunker
-import edu.knowitall.collection.immutable.Interval
-import edu.knowitall.execution.UnquotedTLiteral
-import edu.knowitall.execution.TVariable
-import edu.knowitall.execution.ListConjunctiveQuery
-import edu.knowitall.repr.sentence.Postagger
-import edu.knowitall.tool.postag.StanfordPostagger
-import edu.knowitall.tool.chunk.{Chunker => ToolChunker}
-import edu.knowitall.util.DummyChunker
+import com.typesafe.config.ConfigFactory
+import java.io.FileInputStream
+import java.io.File
+import edu.knowitall.util.ResourceUtils
+import edu.knowitall.util.NlpTools
+import edu.knowitall.tool.chunk.Chunker
+import edu.knowitall.tool.stem.Stemmer
 
 
-case class CgParser() {
-  
-  
-  private val postagger = new StanfordPostagger
-  private val chunker = DummyChunker(postagger)
-  
-  private def process(text: String): Sentence with Chunked with Lemmatized = {
-    new Sentence(text) with Chunker with Lemmatizer {
-      val chunker = CgParser.this.chunker
-      val lemmatizer = MorphaStemmer
-    }
+case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon, 
+					combinators: IndexedSeq[Combinator] = CgParser.defaultCombinators,
+					chunker: Chunker = NlpTools.dummyChunker,
+					lemmatizer: Stemmer = NlpTools.stemmer) {
+ 
+  private def process(s: String) = NlpTools.process(s, chunker, lemmatizer)
+ 
+  private def getQuery(cat: Category) = cat match {
+    case Unary(freeVar, query) => Some(query)
+    case _ => None
   }
-  
-  
-  val stupidTerminal = new TerminalRule[Sentence with Chunked with Lemmatized] {
-    override def apply(interval: Interval, s: Sentence with Chunked with Lemmatized) = {
-      val txt = s.tokens.map(_.string).slice(interval.head, interval.end).mkString(" ")
-      if (txt == "france") {
-        Some(Arg(UnquotedTLiteral("franny")))
-      } else if (txt == "is the capital of") {
-        val lv = TVariable("x")
-        val rv = TVariable("y")
-        val q = ListConjunctiveQuery.fromString("($x, cappy, $y)").get
-        Some(Binary(lv, rv, q))
-      } else if (txt == "which" || txt == "what") {
-        Some(Identity)
-      } else if (txt == "city") {
-        val v = TVariable("x")
-        val q = ListConjunctiveQuery.fromString("($x, type, city)").get
-        Some(Unary(v, q))
-      } else {
-        None
-      }
-    }
-  }
-  
-  val terminals = IndexedSeq(stupidTerminal)
-  val combinators = IndexedSeq(RightApply, LeftApply, UnaryIntersect, UnaryIdentity)
-  
-  val tagger = TerminalTagger.fromFile("src/main/resources/edu/knowitall/parsing/cg/lexicon.txt")
   
   def parse(s: String) = {
     val sent = process(s)
-    println(sent.tokens.map(_.toString).mkString(" "))
-    println
-    tagger.getRules(sent) foreach println
-    println
-    
     val n = sent.tokens.size
-    val cky = new CKY(sent, n, tagger.getRules(sent), combinators)
+    val cky = new CKY(sent, n, lexicon, combinators)
     cky.parse
-    cky.nodes
+    cky.rootCategories flatMap getQuery
   }
 
 }
 
-object MyTest extends App {
-
-  val p = CgParser()
-  val foo = p.parse(args(0))
-  println( foo.keys.maxBy(_.span.size))
+case object CgParser {
+  val conf = ConfigFactory.load()
+  val defaultCombinators = IndexedSeq(RightApply, LeftApply, UnaryIntersect,
+		  							  UnaryIdentity)
+  lazy val lexiconIn = if (conf.hasPath("parsing.cg.lexiconPath")) {
+    new FileInputStream(new File(conf.getString("parsing.cg.lexiconPath")))
+  } else {
+    ResourceUtils.resource(conf.getString("parsing.cg.lexiconClasspath"))
+  }
+  lazy val defaultLexicon = LexicalRule.fromInputStream(lexiconIn)
   
+}
+
+object MyTest extends App {
+  val parser = CgParser()
+  val results = parser.parse(args(0))
+  results foreach println
 }

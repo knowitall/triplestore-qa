@@ -62,4 +62,9 @@ case class CKY[T](input: T, size: Int,
     for (length <- 2 to size) applyCombinators(length)
   }
   
+  private val fullSpan = Interval.open(0, size)
+  
+  def rootCategories = cats.getOrElse(fullSpan, Set())
+
+  
 }
