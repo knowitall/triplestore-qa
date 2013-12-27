@@ -10,7 +10,6 @@ import edu.knowitall.execution.AnswerGroup
 import edu.knowitall.parsing.FormalQuestionParser
 import edu.knowitall.parsing.regex.RegexQuestionParser
 import edu.knowitall.execution.IdentityExecutor
-import edu.knowitall.execution.ClassInstanceExecutor
 import edu.knowitall.execution.StopwordExecutor
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.execution.BasicAnswerGrouper
@@ -155,8 +154,7 @@ case object Components {
 
   val executors: Map[String, QueryExecutor] =
     Map("identity" -> IdentityExecutor(client),
-        "stopword" -> StopwordExecutor(IdentityExecutor(client)),
-      "classInstance" -> ClassInstanceExecutor(IdentityExecutor(client)))
+        "stopword" -> StopwordExecutor(IdentityExecutor(client)))
 
   val groupers: Map[String, AnswerGrouper] =
     Map("basic" -> BasicAnswerGrouper(),
