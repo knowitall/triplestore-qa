@@ -12,34 +12,37 @@ case class LexiconPreprocessor(macros: Map[String, String] = LexiconPreprocessor
     case (name, replacement) :: rest => applyMacros(rest, applyMacro(name, replacement, s))
   }
   private def applyMacro(name: String, replacement: String, s: String) = {
-    s.replaceAll(s"@${name}", replacement)
+    s.replaceAllLiterally(s"@${name}", replacement)
+  }
+  def update(line: String) = line.split(" ", 2) match {
+    case Array(name, value) => copy(macros = macros.updated(name, "(?:" + this(value) + ")"))
+    case _ => throw new IllegalArgumentException(s"Invalid macro instruction: $line")
   }
 }
 
 object LexiconPreprocessor {
   val conf = ConfigFactory.load()
   
-  def fromLines(lines: Iterable[String]) = {
-    val pairs = for {
-      line <- lines
-      linet = line.trim
-      if !linet.startsWith("#") && !line.startsWith("//")
-      (name, value) <- linet.split(" ", 2) match {
-        case Array(n, v) => Some((n, v))
-        case _ => None
-      }
-    } yield (name, value)
-    pairs.toMap
+  private def isInstr(line: String) = {
+    val linet = line.trim
+    linet != "" && !linet.startsWith("#") && !linet.startsWith("//")
   }
   
-  lazy val defaultMacros = if (conf.hasPath("parsing.cg.macroPath")) {
+  def fromLines(lines: List[String], prep: LexiconPreprocessor = LexiconPreprocessor(Map.empty)): LexiconPreprocessor = lines match {
+    case Nil => prep
+    case line :: rest if isInstr(line) => fromLines(rest, prep.update(line)) 
+    case line :: rest => fromLines(rest, prep)
+  }
+  
+  lazy val defaultPreprocessor = if (conf.hasPath("parsing.cg.macroPath")) {
     val lines = Source.fromFile(conf.getString("parsing.cg.macroPath"), "UTF-8").getLines
-    fromLines(lines.toIterable)
+    fromLines(lines.toList)
   } else if (conf.hasPath("parsing.cg.macroClasspath")) {
     val p = conf.getString("parsing.cg.macroClasspath")
     val lines = Source.fromInputStream(ResourceUtils.resource(p), "UTF-8").getLines
-    fromLines(lines.toIterable)
+    fromLines(lines.toList)
   } else {
-    Map.empty[String, String]
+    LexiconPreprocessor(Map.empty[String, String])
   }
+  lazy val defaultMacros = defaultPreprocessor.macros
 }

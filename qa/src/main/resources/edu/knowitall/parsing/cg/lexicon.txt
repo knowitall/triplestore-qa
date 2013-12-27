@@ -1,5 +1,6 @@
-nounArg (@noun+) := argument $1
-relNoun <pos='DT'>? (@noun+ <lemma='of'>) := binary $x, $y : ($x, $1, $y)
-nothin1 <lemma='who'> <lemma='be'> := .
-nothin2 <lemma='?'> := .
-posNoun (@noun+) <pos="POS"> (@noun+) := unary $x : ($x, $2, $1)
+npArg (<arg>:@np) := argument $arg
+unarySubj @wh (<rel>:@reverb) (<arg>:@np) := unary $x : ($x, $rel, $arg)
+unaryDobj @wh @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel, $x)
+type (<type>:@nounMod* @noun+) := unary $x : ($x, is a, $type)
+reverbBinary (<rel>:@reverb) := binary $x, $y : ($x, $rel, $y)
+whIdentity @wh := .

@@ -1,3 +1,17 @@
 noun <pos=/N.*/>
+commonNoun <pos=/NNS?/>
+propNoun <pos=/NNPS?/>
 adj <pos=/J.*/>
+adv <pos=/R.*/>
 verb <pos=/V.*/>
+det <pos='DT'|pos='PRP$'>
+num <pos='CD'>
+wh <lemma='who'|lemma='what'|lemma='where'|lemma='when'|lemma='why'|lemma='how'>
+aux <lemma='be'|lemma='have'|lemma='do'>
+pos <pos='POS'|lemma='s'|lemma="'s">
+nounMod <pos='$'|pos='PRP$'|pos='DT'|pos='JJ'|pos='JJS'|pos='JJR'|pos='POS'|pos='PRP'|pos='RB'|pos='RBR'|pos='RBS'|pos='VBN'|pos='VBG'|pos='CC'>
+np (@nounMod* @noun+ @nounMod*)+
+vp (@aux? @adv* @verb+ @adv*)+
+prep <pos='RB'>* <pos='IN' | pos='TO' | pos='RP'> <pos='RB'>*
+reverb (@vp) | (@vp @prep) | (@vp @np @prep)
+punct <pos=".">

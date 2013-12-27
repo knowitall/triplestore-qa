@@ -9,10 +9,14 @@ import java.io.InputStream
 import scala.io.Source
 import edu.knowitall.util.ResourceUtils
 
-case class LexicalRule(syntax: TaggerExtractor, semantics: CategoryPattern) extends TerminalRule {
+case class LexicalRule(syntax: PatternExtractor, semantics: CategoryPattern) extends TerminalRule {
   override def apply(interval: Interval, sent: Sentence with Chunked with Lemmatized) = {
     val span = NlpUtils.split(sent, interval.start, interval.end)
-    semantics(syntax(span))
+    if (syntax.matches(span)) {
+      semantics(syntax(span))
+    } else {
+      None
+    }
   }
   override def toString = syntax.patternName
 }
@@ -22,7 +26,7 @@ object LexicalRule {
   def fromString(s: String, preprocessor: LexiconPreprocessor = preprocessor) = {
     s.split(":=", 2) match {
       case Array(synStr, semStr) => {
-        val syntax = TaggerExtractor.fromString(preprocessor(synStr))
+        val syntax = PatternExtractor.fromString(preprocessor(synStr))
         val semantics = CategoryPattern.fromString(semStr)
         LexicalRule(syntax, semantics)
       }

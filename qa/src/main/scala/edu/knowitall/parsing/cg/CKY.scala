@@ -30,18 +30,19 @@ sealed trait Derivation {
   def catspan: CatSpan
   def category = catspan.category
   def interval = catspan.span
-  def terminalRules: List[TerminalRule]
+  def terminals: List[LexicalStep]
   def combinators: List[Combinator]
 }
 
 case class CombinatorStep(catspan: CatSpan, rule: Combinator, left: Derivation, right: Derivation) extends Derivation {
   override def combinators = rule :: (left.combinators ++ right.combinators)
-  override def terminalRules = left.terminalRules ++ right.terminalRules
+  override def terminals = left.terminals ++ right.terminals
 }
 
-case class LexicalStep[T](catspan: CatSpan, rule: TerminalRule) extends Derivation {
+case class LexicalStep(catspan: CatSpan, rule: TerminalRule) extends Derivation {
   override def combinators = Nil
-  override def terminalRules = List(rule)
+  override def terminals = List(this)
+  override def toString = s"$rule => $interval $category"
 }
 
 case class CKY(input: Sentence with Chunked with Lemmatized, size: Int, 

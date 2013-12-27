@@ -25,6 +25,7 @@ case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon,
   
   def parse(s: String) = {
     val sent = process(s)
+    println(sent.tokens.mkString(" "))
     val n = sent.tokens.size
     val cky = new CKY(sent, n, lexicon, combinators)
     cky.parse
@@ -54,10 +55,18 @@ case object CgParser {
 
 object MyTest extends App {
   val parser = CgParser()
+  
+  for (lex <- parser.lexicon) {
+    println(lex)
+    println(lex.syntax.pattern.patternString)
+    println(lex.semantics)
+    println
+  }
+  
   val results = parser.parse(args(0))
   for (deriv <- results) {
     println(deriv.query)
-    deriv.derivation.terminalRules foreach println
+    deriv.derivation.terminals foreach println
     println
   }
 }
