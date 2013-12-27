@@ -3,6 +3,7 @@ package edu.knowitall.parsing.cg
 import com.typesafe.config.ConfigFactory
 import scala.io.Source
 import edu.knowitall.util.ResourceUtils
+import java.util.regex.Matcher
 
 case class LexiconPreprocessor(macros: Map[String, String] = LexiconPreprocessor.defaultMacros) {
   val mlist = macros.toList
@@ -12,7 +13,7 @@ case class LexiconPreprocessor(macros: Map[String, String] = LexiconPreprocessor
     case (name, replacement) :: rest => applyMacros(rest, applyMacro(name, replacement, s))
   }
   private def applyMacro(name: String, replacement: String, s: String) = {
-    s.replaceAllLiterally(s"@${name}", replacement)
+    s.replaceAll(s"@${name}\\b", Matcher.quoteReplacement(replacement))
   }
   def update(line: String) = line.split(" ", 2) match {
     case Array(name, value) => copy(macros = macros.updated(name, "(?:" + this(value) + ")"))
