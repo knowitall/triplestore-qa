@@ -26,7 +26,7 @@ trait QuestionParser {
 
 case class FormalQuestionParser() extends QuestionParser {
   override def parse(q: String): List[ListConjunctiveQuery] = ListConjunctiveQuery.fromString(q) match {
-    case Some(cq: ListConjunctiveQuery) => ListConjunctiveQuery.expandSetTLiterals(cq)
+    case Some(cq: ListConjunctiveQuery) => List(cq)
     case _ => List()
   }
 }
