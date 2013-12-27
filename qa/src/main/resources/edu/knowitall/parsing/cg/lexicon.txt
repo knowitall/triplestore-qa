@@ -1,6 +1,10 @@
+# ruleName syntactic-pattern := semantic-type semantic-pattern
+fullPatternSubj @whowhat (<rel>:@reverb) (<arg>:@np)      := unary $x : ($x, $rel, $arg)
+fullPatternDobj @whowhat @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel, $x)
+fullPatternWhereIn @where (<aux>:@aux) (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $aux $rel in, $x)
+fullPatternWhenIn @when (<aux>:@aux) (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $aux $rel in, $x)
+fullPatternWhenOn @when (<aux>:@aux) (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $aux $rel on, $x)
 npArg (<arg>:@np) := argument $arg
-unarySubj @wh (<rel>:@reverb) (<arg>:@np) := unary $x : ($x, $rel, $arg)
-unaryDobj @wh @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel, $x)
 type (<type>:@nounMod* @noun+) := unary $x : ($x, is a, $type)
 reverbBinary (<rel>:@reverb) := binary $x, $y : ($x, $rel, $y)
 whIdentity @wh := .

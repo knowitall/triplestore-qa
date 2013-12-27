@@ -7,6 +7,9 @@ verb <pos=/V.*/>
 det <pos='DT'|pos='PRP$'>
 num <pos='CD'>
 wh <lemma='who'|lemma='what'|lemma='where'|lemma='when'|lemma='why'|lemma='how'>
+whowhat <lemma='what'|lemma='who'>
+where <lemma='where'>
+when <lemma='when'>
 aux <lemma='be'|lemma='have'|lemma='do'>
 pos <pos='POS'|lemma='s'|lemma="'s">
 nounMod <pos='$'|pos='PRP$'|pos='DT'|pos='JJ'|pos='JJS'|pos='JJR'|pos='POS'|pos='PRP'|pos='RB'|pos='RBR'|pos='RBS'|pos='VBN'|pos='VBG'|pos='CC'>
