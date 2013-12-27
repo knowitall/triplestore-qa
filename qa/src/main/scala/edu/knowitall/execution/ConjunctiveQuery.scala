@@ -65,7 +65,7 @@ case class TVariable(name: String) extends TVal {
   override def toString = "$" + name
 }
 case object TVariable {
-  val vpat = """\$(.*)""".r
+  val vpat = """\$([A-Za-z0-9_]+)""".r
   def fromString(s: String): Option[TVariable] = s.trim() match {
     case vpat(v) => Some(TVariable(v))
     case "?" => Some(TVariable("?"))
