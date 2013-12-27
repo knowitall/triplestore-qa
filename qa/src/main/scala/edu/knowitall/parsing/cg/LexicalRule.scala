@@ -26,8 +26,8 @@ object LexicalRule {
   def fromString(s: String, preprocessor: LexiconPreprocessor = preprocessor) = {
     s.split(":=", 2) match {
       case Array(synStr, semStr) => {
-        val syntax = PatternExtractor.fromString(preprocessor(synStr))
-        val semantics = CategoryPattern.fromString(semStr)
+        val syntax = PatternExtractor.fromString(preprocessor(synStr.trim))
+        val semantics = CategoryPattern.fromString(semStr.trim)
         LexicalRule(syntax, semantics)
       }
       case _ => throw new IllegalArgumentException(s"Invalid lexical rule string: $s")

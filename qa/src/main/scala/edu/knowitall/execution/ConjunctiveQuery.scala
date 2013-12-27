@@ -7,6 +7,7 @@ import Search.Conjunction
 import org.slf4j.LoggerFactory
 import Search._
 import scala.Option.option2Iterable
+import edu.knowitall.util.StringUtils
 
 /**
  * Base trait for triple values.
@@ -19,6 +20,7 @@ trait TVal
 trait TLiteral extends TVal {
   def value: String
   def toConjunct(field: Field): TSQuery
+  def subs(binding: Map[TVariable, TVal]): TLiteral
 }
 
 /**
@@ -28,6 +30,11 @@ trait TLiteral extends TVal {
 case class UnquotedTLiteral(value: String) extends TVal with TLiteral {
   override def toString = value
   override def toConjunct(field: Field) = FieldKeywords(field, value)
+  override def subs(binding: Map[TVariable, TVal]) = {
+    val map = binding map { case (k, v) => (k.name, v.toString) }
+    val newVal = StringUtils.interpolate(value, map)
+    copy(value = newVal)
+  }
 }
 
 /**
@@ -37,6 +44,11 @@ case class UnquotedTLiteral(value: String) extends TVal with TLiteral {
 case class QuotedTLiteral(value: String) extends TVal with TLiteral {
   override def toString = s""""$value""""
   override def toConjunct(field: Field) = FieldPhrase(field, value)
+  override def subs(binding: Map[TVariable, TVal]) = {
+    val map = binding map { case (k, v) => (k.name, v.toString) }
+    val newVal = StringUtils.interpolate(value, map)
+    copy(value = newVal)
+  }
 }
 case object QuotedTLiteral {
   val quoted = """^"(.*)"$""".r
@@ -67,16 +79,6 @@ case object TVariable {
         IllegalArgumentException(s"Could not parse variables in: $s")
     }
   }
-}
-
-/**
- * Triple values can also be the disjunction of a set of literals. 
- */
-case class SetTLiteral(values: List[TLiteral]) extends TVal with TLiteral {
-  override def value = values.mkString(" | ")
-  override def toString = values.mkString(" | ") 
-  override def toConjunct(field: Field) =
-    Disjunction(values.map(_.toConjunct(field)):_*)
 }
 
 /**
@@ -123,6 +125,7 @@ case class TConjunct(name: String, values: Map[Field, TVal]) {
   def subs(bindings: Map[TVariable, TVal]) = {
     val newValues = values map {
       case (field, value: TVariable) if bindings.contains(value) => (field, bindings(value))
+      case (field, value: TLiteral) => (field, value.subs(bindings))
       case (field, value) => (field, value)
     }
     copy(values = newValues)
@@ -148,17 +151,11 @@ case object TConjunct {
     case _ => None
   }
   
-  def getTLiteral(s: String): TLiteral = {
-    val pieces = s.split("\\|").toList.map(_.trim())
-    pieces match {
-      case x :: Nil => QuotedTLiteral.fromString(x) match {
-        case Some(QuotedTLiteral(y)) => QuotedTLiteral(y)
-        case _ => UnquotedTLiteral(s)
-      }
-      case _ => SetTLiteral(pieces.map(getTLiteral(_)))
-    }
+  def getTLiteral(s: String): TLiteral = QuotedTLiteral.fromString(s) match {
+    case Some(QuotedTLiteral(y)) => QuotedTLiteral(y)
+    case _ => UnquotedTLiteral(s)
   }
-  
+
   def getTVal(s: String): TVal = {
     val v = TVariable.fromString(s)
     v match {
@@ -185,22 +182,7 @@ case object TConjunct {
   def replaceField(c: TConjunct, f: Field, vs: List[TVal]): List[TConjunct] = {
     for (v <- vs) yield TConjunct(c.name, c.values + (f -> v))
   }
-  
-  def expandSetTLiteralsField(c: TConjunct, f: Field): List[TConjunct] = {
-    c.values.get(f) match {
-      case Some(v: SetTLiteral) => replaceField(c, f, v.values)
-      case _ => List(c)
-    }
-  }
-  
-  def getSetTLiteral(c: TConjunct): Option[Field] = c.values.keys.find(c.values(_).isInstanceOf[SetTLiteral])
-  
-  def expandSetTLiterals(c: TConjunct): List[TConjunct] = {
-    getSetTLiteral(c) match {
-      case Some(f: Field) => expandSetTLiteralsField(c, f).flatMap(expandSetTLiterals)
-      case _ => List(c)
-    }
-  }
+
 } 
 
 /**
@@ -296,13 +278,6 @@ case object ListConjunctiveQuery {
     } else {
       None
     }
-  }
-
-
-  def expandSetTLiterals(cq: ConjunctiveQuery): List[ListConjunctiveQuery] = {
-    val css = for (c <- cq.conjuncts; cs = TConjunct.expandSetTLiterals(c)) yield cs
-    val product = Utils.cartesian[TConjunct](css).toList
-    for (cs <- product) yield ListConjunctiveQuery(cq.qVars, cs.toList)
   }
 
 }
