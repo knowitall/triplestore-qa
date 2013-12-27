@@ -17,15 +17,15 @@ case class TaggerExtractor(tagger: PatternTagger) {
     case variablePattern(v) => Some(TVariable(v))
     case _ => None
   }
-  def extract(s: Sentence with Chunked with Lemmatized): Map[TVariable, String] = {
+  def extract(s: Sentence with Chunked with Lemmatized, types: Seq[Type]): Map[TVariable, String] = {
     val bindings = for {
-      t <- tagger(s)
+      t <- tagger(s, types)
       variable <- nameToVar(t)
       value = t.text
     } yield (variable -> value)
     bindings.toMap
   }
-  def apply(s: Sentence with Chunked with Lemmatized) = extract(s)
+  def apply(s: Sentence with Chunked with Lemmatized, types: Seq[Type] = Seq.empty) = extract(s, types)
 }
 
 case object TaggerExtractor {

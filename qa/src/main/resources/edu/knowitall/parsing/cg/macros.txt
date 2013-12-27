@@ -1,0 +1,3 @@
+noun <pos=/N.*/>
+adj <pos=/J.*/>
+verb <pos=/V.*/>

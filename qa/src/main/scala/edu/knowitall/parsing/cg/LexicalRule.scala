@@ -18,10 +18,11 @@ case class LexicalRule(syntax: TaggerExtractor, semantics: CategoryPattern) exte
 }
 
 object LexicalRule {
-  def fromString(s: String) = {
+  lazy val preprocessor = LexiconPreprocessor() 
+  def fromString(s: String, preprocessor: LexiconPreprocessor = preprocessor) = {
     s.split(":=", 2) match {
       case Array(synStr, semStr) => {
-        val syntax = TaggerExtractor.fromString(synStr)
+        val syntax = TaggerExtractor.fromString(preprocessor(synStr))
         val semantics = CategoryPattern.fromString(semStr)
         LexicalRule(syntax, semantics)
       }

@@ -7,6 +7,7 @@ import edu.knowitall.collection.immutable.Interval
 import edu.knowitall.repr.sentence.Lemmatized
 import edu.knowitall.repr.sentence.Chunked
 import edu.knowitall.repr.sentence.Sentence
+import edu.knowitall.tool.typer.Type
 
 trait Combinator {
   def apply(left: Category, right: Category): Option[Category]

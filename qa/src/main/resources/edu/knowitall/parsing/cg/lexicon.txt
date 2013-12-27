@@ -1,4 +1,5 @@
-nounArg (<pos=/N.*/>+) := argument $1
-relNoun <pos='DT'>? (<pos=/N.*/>+ <lemma='of'>) := binary $x, $y : ($x, $1, $y)
+nounArg (@noun+) := argument $1
+relNoun <pos='DT'>? (@noun+ <lemma='of'>) := binary $x, $y : ($x, $1, $y)
 nothin1 <lemma='who'> <lemma='be'> := .
 nothin2 <lemma='?'> := .
+posNoun (@noun+) <pos="POS"> (@noun+) := unary $x : ($x, $2, $1)
