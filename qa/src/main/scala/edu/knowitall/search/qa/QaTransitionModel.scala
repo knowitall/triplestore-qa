@@ -26,7 +26,7 @@ class QaTransitionModel extends Transition[QaState, QaAction] {
   // Individual transition functions
   lazy val absArgTransition = new AbstractArgTransition()
   lazy val templateTransition = new TemplateTransition(templateClient)
-  lazy val regexParseTransition = new CgParseTransition(cgParser)
+  lazy val parseTransition = new CgParseTransition(cgParser)
   lazy val executeTransition = new ExecutionTransition(triplestoreClient)
   lazy val relSynTransition = new RelSynTransition(relSynClient)
   lazy val projTransition = new ProjectionTransition
@@ -35,7 +35,7 @@ class QaTransitionModel extends Transition[QaState, QaAction] {
   val conf = ConfigFactory.load()
   
   lazy val components = Map(
-    "regexParse" -> regexParseTransition,
+    "parse" -> parseTransition,
     "templateParaphrase" -> (absArgTransition + templateTransition),
     "relSyn" -> relSynTransition,
     "execute" -> executeTransition,
