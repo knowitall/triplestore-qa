@@ -12,7 +12,7 @@ trait CategoryPattern {
 
 object CategoryPattern {
   def fromString(s: String) = s.trim().split("\\s+", 2) match {
-    case Array(".") => IdentityPattern
+    case Array("identity") => IdentityPattern
     case Array("unary", pattern) => UnaryPattern(pattern)
     case Array("binary", pattern) => BinaryPattern(pattern)
     case Array("argument", pattern) => ArgumentPattern(pattern)
