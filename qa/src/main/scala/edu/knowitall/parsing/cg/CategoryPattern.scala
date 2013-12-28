@@ -3,6 +3,8 @@ package edu.knowitall.parsing.cg
 import edu.knowitall.execution.TVariable
 import edu.knowitall.execution.ListConjunctiveQuery
 import edu.knowitall.execution.UnquotedTLiteral
+import edu.knowitall.execution.Search.rel
+import edu.knowitall.execution.FieldIndex
 
 trait CategoryPattern {
   def apply(bindings: Map[TVariable, String]): Option[Category]
@@ -35,7 +37,12 @@ case class BinaryPattern(pattern: String) extends CategoryPattern {
   val rightVar = cqp.query.qVars(1)
   override def apply(bindings: Map[TVariable, String]) = for {
     query <- cqp(bindings)
-  } yield Binary(leftVar, rightVar, query)
+    relFields = for {
+      c <- query.conjuncts
+      (field, value) <- c.values
+      if field == rel
+    } yield FieldIndex(c.name, field)
+  } yield Binary(leftVar, rightVar, query, relFields.toSet)
 }
 
 case class ArgumentPattern(pattern: String) extends CategoryPattern {

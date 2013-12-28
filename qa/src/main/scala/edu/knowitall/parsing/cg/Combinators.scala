@@ -19,10 +19,7 @@ trait TerminalRule {
 
 object RightApply extends Combinator {
   override def apply(left: Category, right: Category) = (left, right) match {
-    case (b: Binary, a: Arg) => {
-      val newQuery = b.query.subs(b.rightVar, a.value)
-      Some(Unary(b.leftVar, newQuery))
-    }
+    case (b: Binary, a: Arg) => Some(b.rightApply(a))
     case _ => None 
   }
   override def toString = "RightApply"
@@ -30,10 +27,7 @@ object RightApply extends Combinator {
 
 object LeftApply extends Combinator {
   override def apply(left: Category, right: Category) = (left, right) match {
-    case (a: Arg, b: Binary) => {
-      val newQuery = b.query.subs(b.leftVar, a.value)
-      Some(Unary(b.rightVar, newQuery))
-    }
+    case (a: Arg, b: Binary) => Some(b.leftApply(a))
     case _ => None 
   }
   override def toString = "LeftApply"

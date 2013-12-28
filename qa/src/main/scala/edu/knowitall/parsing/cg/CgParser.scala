@@ -32,7 +32,7 @@ case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon,
   private def process(s: String) = NlpTools.process(s, chunker, lemmatizer)
  
   private def getQuery(cat: Category) = cat match {
-    case Unary(freeVar, query) => Some(query)
+    case Unary(freeVar, query, _) => Some(query)
     case _ => None
   }
   

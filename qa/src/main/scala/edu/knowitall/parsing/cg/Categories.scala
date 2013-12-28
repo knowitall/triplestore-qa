@@ -3,20 +3,36 @@ package edu.knowitall.parsing.cg
 import edu.knowitall.execution.TLiteral
 import edu.knowitall.execution.TVariable
 import edu.knowitall.execution.ConjunctiveQuery
+import edu.knowitall.execution.FieldIndex
 
 trait Category
 
 case class Arg(value: TLiteral) extends Category
 
-case class Unary(freeVar: TVariable, query: ConjunctiveQuery) extends Category {
+case class Unary(freeVar: TVariable, query: ConjunctiveQuery, modFields: Set[FieldIndex] = Set.empty) extends Category {
+  
+  private def renameFieldIndex(prefix: String, index: FieldIndex) = {
+    val i = query.conjuncts.indexWhere(c => c.name == index.conjunctName)
+    assume(i >= 0, s"field index $index not in query $query")
+    index.copy(conjunctName = s"${prefix}.$i")
+  }
+  
+  def renameConjuncts(prefix: String): Unary = {
+    val newFields = modFields.map(renameFieldIndex(prefix, _))
+    val newQuery = query.renameConjuncts(prefix)
+    Unary(freeVar, newQuery, newFields)
+  }
+  
   def intersect(that: Unary): Unary = {
-    val newVar = TVariable(this.freeVar.name + that.freeVar.name)
-    val oldVar1 = this.freeVar
-    val oldVar2 = that.freeVar
-    val query1 = this.query.subs(oldVar1, newVar)
-    val query2 = that.query.subs(oldVar2, newVar)
+    val u1 = this.renameConjuncts("r")
+    val u2 = that.renameConjuncts("s")
+    val newVar = TVariable(u1.freeVar.name + u2.freeVar.name)
+    val oldVar1 = u1.freeVar
+    val oldVar2 = u2.freeVar
+    val query1 = u1.query.subs(oldVar1, newVar)
+    val query2 = u2.query.subs(oldVar2, newVar)
     val newQuery = query1.combine(query2).subs(newVar, Unary.finalVar)
-    Unary(newVar, newQuery)
+    Unary(newVar, newQuery, u1.modFields ++ u2.modFields)
   }
 }
 case object Unary {
@@ -24,9 +40,23 @@ case object Unary {
 }
 
 case class Binary(leftVar: TVariable, rightVar: TVariable, 
-    query: ConjunctiveQuery) extends Category
+    query: ConjunctiveQuery, modFields: Set[FieldIndex] = Set.empty) extends Category {
+  
+  def leftApply(a: Arg): Unary = {
+    val newQuery = query.subs(leftVar, a.value)
+    Unary(rightVar, newQuery, modFields)
+  }
+  
+  def rightApply(a: Arg): Unary = {
+    val newQuery = query.subs(rightVar, a.value)
+    Unary(leftVar, newQuery, modFields)
+  }
+  
+}
 
-case class RelMod(value: String) extends Category
+case class RelMod(value: String) extends Category {
+
+}
     
 object Identity extends Category {
   override def toString = "Identity"

@@ -220,12 +220,15 @@ trait ConjunctiveQuery {
   
 }
 
+case class FieldIndex(conjunctName: String, field: Field)
+
 /**
  * A conjunctive query backed by a list of conjuncts.
  */
 case class ListConjunctiveQuery(qVars: List[TVariable], conjuncts: List[TConjunct])
   extends ConjunctiveQuery {
   
+  private val logger = LoggerFactory.getLogger(this.getClass) 
   val conjunctNames = conjuncts.map(_.name)
   if (conjunctNames.distinct.size != conjunctNames.size) throw new 
     IllegalArgumentException(s"Conjuncts must have distinct names: $conjuncts")
@@ -247,8 +250,20 @@ case class ListConjunctiveQuery(qVars: List[TVariable], conjuncts: List[TConjunc
   }
   
   override def combine(cq: ConjunctiveQuery) = {
-    val conjs1 = this.renameConjuncts("r").conjuncts
-    val conjs2 = cq.renameConjuncts("s").conjuncts
+    val conjNames1 = this.conjunctNames.toSet
+    val conjNames2 = cq.conjuncts.map(_.name).toSet
+    val namesIntersect = !conjNames1.intersect(conjNames2).isEmpty
+    val conjs1 = if (namesIntersect) {
+      logger.warn(s"Conjunction field names in ${this} and $cq intersect, renaming 'r' and 's': $conjNames1 vs. $conjNames2")
+      this.renameConjuncts("r").conjuncts
+    } else {
+      this.conjuncts
+    }
+    val conjs2 = if (namesIntersect) {
+      cq.renameConjuncts("s").conjuncts
+    } else {
+      cq.conjuncts
+    }
     val newConjs = conjs1 ++ conjs2
     val newVars = (this.qVars ++ cq.qVars).distinct
     ListConjunctiveQuery(newVars, newConjs)
