@@ -26,3 +26,4 @@ reverb (@vp) | (@vp @prep) | (@vp @np @prep)
 type <lemma='kind'|lemma='type'|lemma='sort'|lemma='example'>
 of <lemma='of'>
 punct <pos=".">
+there <lemma='there'>

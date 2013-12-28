@@ -8,13 +8,17 @@ fullPatternWhenOn @when (<aux>:@aux) (<arg>:@np) (<rel>:@reverb) := unary $x : (
 fullPatternTypeDobj @whatwhich (<type>:@np) @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($x, is a, $type) ($arg, $rel, $x)
 fullPatternTypeSubj @whatwhich (<type>:@np) (<rel>:@reverb) (<arg>:@np) := unary $x : ($x, is a, $type) ($x, $rel, $arg)
 fullPatternProperty @what @be @det (<rel>:@np) @of (<arg>:@np) := unary $x : ($arg, $rel, $x) 
+fullPatternDefn @whowhat @be (<arg>:@np) := unary $x : ($arg, is a, $x)
+fullPatternDefn @whatwhich (<type>:@np) @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel $type, $x)
 
 npArg (<arg>:@np) := argument $arg
 type (@be (?:@det|@some))? (@type @of)? (<type>:@nounMod* @noun+) := unary $x : ($x, is a, $type)
 reverbBinary (<rel>:@reverb) := binary $x, $y : ($x, $rel, $y)
 adjPrepBinary @be? (<rel>:@adj @prep) := binary $x, $y : ($x, $rel, $y)
+possessiveUnary (<arg>:@np) @pos (<rel>:@np) := unary $x : ($x, $rel, $arg)
 whIdentity @wh := .
 auxIdentity @aux := .
 punctIdentity @punct := .
 relMarkerIdentity @relMarker := .
 conjIdentity @conj := .
+isThere @be @there := .
