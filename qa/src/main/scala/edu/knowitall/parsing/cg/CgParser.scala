@@ -52,6 +52,13 @@ case object CgParser {
   } else {
     ResourceUtils.resource(conf.getString("parsing.cg.lexiconClasspath"))
   }
-  lazy val defaultLexicon = LexicalRule.fromInputStream(lexiconIn)
+  
+  lazy val ruleKeep = conf.getString("parsing.cg.lexicalRuleKeep").r
+  lazy val ruleSkip = conf.getString("parsing.cg.lexicalRuleSkip").r
+  
+  lazy val defaultLexicon = LexicalRule.fromInputStream(lexiconIn).filter {
+    rule => ruleKeep.findPrefixMatchOf(rule.name).isDefined &&
+    	   !ruleSkip.findPrefixMatchOf(rule.name).isDefined
+  }
   
 }
