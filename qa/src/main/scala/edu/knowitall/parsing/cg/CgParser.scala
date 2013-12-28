@@ -26,7 +26,6 @@ case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon,
   
   def parse(s: String) = {
     val sent = process(s)
-    println(sent.tokens.mkString(" "))
     val n = sent.tokens.size
     val cky = new CKY(sent, n, lexicon, combinators)
     cky.parse
