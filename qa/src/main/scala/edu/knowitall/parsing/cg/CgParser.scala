@@ -9,8 +9,20 @@ import edu.knowitall.tool.chunk.Chunker
 import edu.knowitall.tool.stem.Stemmer
 import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.search.qa.QaAction
+import edu.knowitall.repr.sentence.Lemmatized
+import edu.knowitall.repr.sentence.Chunked
+import edu.knowitall.repr.sentence.Sentence
+import edu.knowitall.collection.immutable.Interval
 
-case class ParsedQuestion(query: ConjunctiveQuery, derivation: Derivation) extends QaAction
+case class ParsedQuestion(question: Sentence with Chunked with Lemmatized,
+    query: ConjunctiveQuery, derivation: Derivation) extends QaAction {
+  
+  private def sliceString[A](seq: Traversable[A], i: Interval) = 
+    seq.slice(i.start, i.end).mkString(" ")
+  
+  def postags(i: Interval) = sliceString(question.postags, i)
+  
+}
 
 case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon, 
 					combinators: IndexedSeq[Combinator] = CgParser.defaultCombinators,
@@ -35,7 +47,7 @@ case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon,
         case u: Unary => Some(u.query)
         case _ => None
       }
-    } yield ParsedQuestion(query, derivation)
+    } yield ParsedQuestion(sent, query, derivation)
   }
   
   def apply(s: String) = parse(s)
