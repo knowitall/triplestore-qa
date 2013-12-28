@@ -12,6 +12,7 @@ fullPatternDefn @whowhat @be (<arg>:@np) := unary $x : ($arg, is a, $x)
 fullPatternDefn @whatwhich (<type>:@np) @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel $type, $x)
 
 npArg (<arg>:@np) := argument $arg
+adjArg (<arg>:@adj+) := argument $arg
 type (@be (?:@det|@some))? (@type @of)? (<type>:@nounMod* @noun+) := unary $x : ($x, is a, $type)
 reverbBinary (<rel>:@reverb) := binary $x, $y : ($x, $rel, $y)
 adjPrepBinary @be? (<rel>:@adj @prep) := binary $x, $y : ($x, $rel, $y)
