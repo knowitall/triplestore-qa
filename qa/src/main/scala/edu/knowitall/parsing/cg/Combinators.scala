@@ -42,9 +42,12 @@ object LeftApply extends Combinator {
 object UnaryIntersect extends Combinator {
   override def apply(left: Category, right: Category) = (left, right) match {
     case (u1: Unary, u2: Unary) => {
-      val newVar = u1.freeVar
-      val oldVar = u2.freeVar
-      val newQuery = u1.query.combine(u2.query.subs(oldVar, newVar))
+      val newVar = TVariable(u1.freeVar.name + u2.freeVar.name + "x")
+      val oldVar1 = u1.freeVar
+      val oldVar2 = u2.freeVar
+      val query1 = u1.query.subs(oldVar1, newVar)
+      val query2 = u2.query.subs(oldVar2, newVar)
+      val newQuery = query1.combine(query2).subs(newVar, TVariable("x"))
       Some(Unary(newVar, newQuery))
     }
     case _ => None

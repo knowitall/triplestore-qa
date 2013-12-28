@@ -235,7 +235,7 @@ case class ListConjunctiveQuery(qVars: List[TVariable], conjuncts: List[TConjunc
   
   override def subs(bindings: Map[TVariable, TVal]) = {
     val newConjs = conjuncts.map(_.subs(bindings))
-    val newQVars = newConjs.flatMap(_.vars)
+    val newQVars = newConjs.flatMap(_.vars).distinct
     ListConjunctiveQuery(newQVars, newConjs)
   }
   

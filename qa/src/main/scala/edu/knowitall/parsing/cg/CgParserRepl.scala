@@ -8,7 +8,10 @@ object CgParserRepl extends App {
   while (true) {
 	val line = reader.readLine("> ")
 	val parses = parser(line)
-	val result = parses map { p => p.query.toString } mkString("\n")
-   println(result)
+	for (parse <- parses) {
+	  println(parse.query)
+	  parse.derivation.terminals foreach println
+	  println
+	}
   }
 }
