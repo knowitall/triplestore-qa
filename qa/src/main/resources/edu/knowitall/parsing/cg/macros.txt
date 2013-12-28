@@ -6,15 +6,23 @@ adv <pos=/R.*/>
 verb <pos=/V.*/>
 det <pos='DT'|pos='PRP$'>
 num <pos='CD'>
+conj <pos='CC'|lemma='and'|lemma='but'>
 wh <lemma='who'|lemma='what'|lemma='where'|lemma='when'|lemma='why'|lemma='how'>
 whowhat <lemma='what'|lemma='who'>
+whatwhich <lemma='what'|lemma='which'>
+what <lemma='what'>
+some <lemma='some'>
 where <lemma='where'>
 when <lemma='when'>
 aux <lemma='be'|lemma='have'|lemma='do'>
+be <lemma='be'|lemma='s'|lemma="'s">
 pos <pos='POS'|lemma='s'|lemma="'s">
-nounMod <pos='$'|pos='PRP$'|pos='DT'|pos='JJ'|pos='JJS'|pos='JJR'|pos='POS'|pos='PRP'|pos='RB'|pos='RBR'|pos='RBS'|pos='VBN'|pos='VBG'|pos='CC'>
+nounMod <pos='$'|pos='PRP$'|pos='DT'|pos='JJ'|pos='JJS'|pos='JJR'|pos='POS'|pos='PRP'|pos='RB'|pos='RBR'|pos='RBS'|pos='VBN'|pos='VBG'>
 np (@nounMod* @noun+ @nounMod*)+
 vp (@aux? @adv* @verb+ @adv*)+
+relMarker <lemma='who'|lemma='that'|lemma='which'>
 prep <pos='RB'>* <pos='IN' | pos='TO' | pos='RP'> <pos='RB'>*
 reverb (@vp) | (@vp @prep) | (@vp @np @prep)
+type <lemma='kind'|lemma='type'|lemma='sort'|lemma='example'>
+of <lemma='of'>
 punct <pos=".">
