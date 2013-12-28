@@ -5,6 +5,7 @@ adj <pos=/J.*/>
 adv <pos=/R.*/>
 verb <pos=/V.*/>
 det <pos='DT'|pos='PRP$'>
+the <lemma='the'>
 num <pos='CD'>
 conj <pos='CC'|lemma='and'|lemma='but'>
 wh <lemma='who'|lemma='what'|lemma='where'|lemma='when'|lemma='why'|lemma='how'>
