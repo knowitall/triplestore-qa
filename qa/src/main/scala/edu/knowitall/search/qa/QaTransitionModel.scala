@@ -5,17 +5,17 @@ import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.tool.tokenize.ClearTokenizer
 import edu.knowitall.tool.chunk.OpenNlpChunker
 import edu.knowitall.paraphrasing.template.ParaphraseTemplateClient
-import edu.knowitall.parsing.regex.RegexQuestionParser
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.search.Transition
 import edu.knowitall.relsyn.RelSynClient
 import edu.knowitall.util.NlpTools
 import com.typesafe.config.ConfigFactory
+import edu.knowitall.parsing.cg.CgParser
 
 class QaTransitionModel extends Transition[QaState, QaAction] {
   
-  lazy val regexParser = new RegexQuestionParser()
+  lazy val cgParser = new CgParser()
   
   // Remote services
   lazy val templateClient = new ParaphraseTemplateClient
@@ -26,7 +26,7 @@ class QaTransitionModel extends Transition[QaState, QaAction] {
   // Individual transition functions
   lazy val absArgTransition = new AbstractArgTransition()
   lazy val templateTransition = new TemplateTransition(templateClient)
-  lazy val regexParseTransition = new RegexParseTransition(regexParser)
+  lazy val regexParseTransition = new CgParseTransition(cgParser)
   lazy val executeTransition = new ExecutionTransition(triplestoreClient)
   lazy val relSynTransition = new RelSynTransition(relSynClient)
   lazy val projTransition = new ProjectionTransition

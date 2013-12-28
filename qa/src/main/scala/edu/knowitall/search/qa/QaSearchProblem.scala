@@ -1,6 +1,5 @@
 package edu.knowitall.search.qa
 
-import edu.knowitall.parsing.regex.RegexQuestionParser
 import edu.knowitall.paraphrasing.template.TemplateParaphraser
 import edu.knowitall.execution.IdentityExecutor
 import edu.knowitall.triplestore.SolrClient
@@ -11,7 +10,6 @@ import edu.knowitall.tool.postag.StanfordPostagger
 import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.tool.tokenize.ClearTokenizer
 import edu.knowitall.tool.chunk.OpenNlpChunker
-import edu.knowitall.parsing.regex.RegexQuestionPatterns
 import edu.knowitall.triplestore.CachedTriplestoreClient
 
 case class QaSearchProblem(

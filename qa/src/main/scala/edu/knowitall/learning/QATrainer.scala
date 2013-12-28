@@ -5,8 +5,6 @@ import edu.knowitall.eval.FileOracle
 import edu.knowitall.eval.Oracle
 import scala.io.Source
 import edu.knowitall.eval.FileOracle
-import edu.knowitall.apps.QASystem
-import edu.knowitall.apps.AnswerDerivation
 import java.io.File
 import java.io.PrintWriter
 import edu.knowitall.util.Counter

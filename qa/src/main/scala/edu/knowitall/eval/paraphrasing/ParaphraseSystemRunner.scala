@@ -1,6 +1,5 @@
 package edu.knowitall.eval.paraphrasing
 
-import edu.knowitall.apps.QASystem
 import edu.knowitall.paraphrasing.Paraphraser
 import scala.io.Source
 import org.slf4j.LoggerFactory
@@ -30,12 +29,4 @@ class ParaphraseSystemRunner(paraphraser: Paraphraser, path: String) {
     output.save
   }
 
-}
-
-object ParaphraseSystemRunner extends App {
-  val input = args(0)
-  val output = args(1)
-  val pp = QASystem.getInstance().get.paraphraser
-  val runner = new ParaphraseSystemRunner(pp, output)
-  runner.runFile(input)
 }
