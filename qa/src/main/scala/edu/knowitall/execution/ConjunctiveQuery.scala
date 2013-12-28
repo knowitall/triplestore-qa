@@ -19,6 +19,7 @@ trait TVal
  */
 trait TLiteral extends TVal {
   def value: String
+  def update(v: String): TLiteral
   def toConjunct(field: Field): TSQuery
   def subs(binding: Map[TVariable, TVal]): TLiteral
 }
@@ -35,6 +36,7 @@ case class UnquotedTLiteral(value: String) extends TVal with TLiteral {
     val newVal = StringUtils.interpolate(value, map)
     copy(value = newVal)
   }
+  override def update(v: String) = UnquotedTLiteral(v)
 }
 
 /**
@@ -49,6 +51,7 @@ case class QuotedTLiteral(value: String) extends TVal with TLiteral {
     val newVal = StringUtils.interpolate(value, map)
     copy(value = newVal)
   }
+  override def update(v: String) = QuotedTLiteral(v)
 }
 case object QuotedTLiteral {
   val quoted = """^"(.*)"$""".r
@@ -220,7 +223,19 @@ trait ConjunctiveQuery {
   
 }
 
-case class FieldIndex(conjunctName: String, field: Field)
+case class FieldIndex(conjunctName: String, field: Field) {
+  private def updateConjunct(c: TConjunct, fn: TVal => TVal): TConjunct = {
+    val newVals = for {
+      (f, v) <- c.values
+      newv = if (c.name == conjunctName && f == field) fn(v) else v
+    } yield (f, newv)
+    TConjunct(c.name, newVals)
+  }
+  def updateQuery(q: ConjunctiveQuery, fn: TVal => TVal): ConjunctiveQuery = {
+    val newConjs = q.conjuncts.map(updateConjunct(_, fn))
+    ListConjunctiveQuery(q.qVars, newConjs)
+  }
+}
 
 /**
  * A conjunctive query backed by a list of conjuncts.

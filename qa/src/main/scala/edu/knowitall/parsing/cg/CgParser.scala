@@ -57,7 +57,7 @@ case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon,
 case object CgParser {
   val conf = ConfigFactory.load()
   val defaultCombinators = IndexedSeq(RightApply, LeftApply, UnaryIntersect,
-		  							  UnaryIdentity)
+		  							  UnaryIdentity, ApplyRelMod)
   lazy val lexiconIn = if (conf.hasPath("parsing.cg.lexiconPath")) {
     new FileInputStream(new File(conf.getString("parsing.cg.lexiconPath")))
   } else {

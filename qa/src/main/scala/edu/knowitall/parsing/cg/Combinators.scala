@@ -51,3 +51,10 @@ object UnaryIdentity extends Combinator {
   }
   override def toString = "UnaryIdentity"
 }
+
+object ApplyRelMod extends Combinator {
+  override def apply(left: Category, right: Category) = (left, right) match {
+    case (rm: RelMod, u: Unary) => rm.modify(u)
+    case _ => None
+  }
+} 

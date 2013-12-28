@@ -4,6 +4,8 @@ import edu.knowitall.execution.TLiteral
 import edu.knowitall.execution.TVariable
 import edu.knowitall.execution.ConjunctiveQuery
 import edu.knowitall.execution.FieldIndex
+import edu.knowitall.execution.TVal
+import edu.knowitall.execution.UnquotedTLiteral
 
 trait Category
 
@@ -55,7 +57,25 @@ case class Binary(leftVar: TVariable, rightVar: TVariable,
 }
 
 case class RelMod(value: String) extends Category {
-
+  
+  private def updateValue(v: TVal) = v match {
+    case l: TLiteral => l.update(s"${l.value} $value")
+    case _ => v
+  }
+  
+  private def modifyFields(is: List[FieldIndex], q: ConjunctiveQuery): ConjunctiveQuery = is match {
+    case Nil => q
+    case i :: rest => modifyFields(rest, i.updateQuery(q, updateValue))
+  } 
+  
+  def modify(u: Unary): Option[Unary] = {
+    val newQuery = modifyFields(u.modFields.toList, u.query)
+    if (newQuery == u.query) {
+      None
+    } else {
+      Some(u.copy(query = newQuery))
+    }
+  }
 }
     
 object Identity extends Category {
