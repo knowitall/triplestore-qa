@@ -9,7 +9,8 @@ fullPatternTypeDobj @whatwhich (<type>:@np) @aux (<arg>:@np) (<rel>:@reverb) := 
 fullPatternTypeSubj @whatwhich (<type>:@np) (<rel>:@reverb) (<arg>:@np) := unary $x : ($x, is a, $type) ($x, $rel, $arg)
 fullPatternProperty @what @be @det (<rel>:@np) @of (<arg>:@np) := unary $x : ($arg, $rel, $x) 
 fullPatternDefn @whowhat @be (<arg>:@np) := unary $x : ($arg, is a, $x)
-fullPatternDefn @whatwhich (<type>:@np) @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel $type, $x)
+fullPatternRelType @whatwhich (<type>:@np) @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel $type, $x)
+fullPatternCop @whatwhich (<rel>:@np) @be (<arg>:@np) := unary $x : ($arg, $rel, $x)
 
 npArg (<arg>:@np) := argument $arg
 adjArg (<arg>:@adj+) := argument $arg
