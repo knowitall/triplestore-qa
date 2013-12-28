@@ -39,17 +39,19 @@ case class BinaryPattern(pattern: String) extends CategoryPattern {
 }
 
 case class ArgumentPattern(pattern: String) extends CategoryPattern {
-  private val sp = StringPattern(pattern)
-  override def apply(bindings: Map[TVariable, String]) = for {
-    argString <- sp(bindings)
-  } yield Arg(UnquotedTLiteral(argString))
+  private val sp = UnquotedTLiteral(pattern)
+  override def apply(bindings: Map[TVariable, String]) = {
+    val valBindings = bindings map { case (k, v) => (k, UnquotedTLiteral(v)) }
+    Some(Arg(sp.subs(valBindings)))
+  }
 }
 
 case class RelModPattern(pattern: String) extends CategoryPattern {
-  private val sp = StringPattern(pattern)
-  override def apply(bindings: Map[TVariable, String]) = for {
-    relModString <- sp(bindings)
-  } yield RelMod(relModString)
+  private val sp = UnquotedTLiteral(pattern)
+  override def apply(bindings: Map[TVariable, String]) = {
+    val valBindings = bindings map { case (k, v) => (k, UnquotedTLiteral(v)) }
+    Some(RelMod(sp.subs(valBindings).toString))
+  }
 }
 
 object IdentityPattern extends CategoryPattern {
@@ -76,23 +78,4 @@ case class ConjunctiveQueryPattern(pattern: String) {
     }
   }
   
-}
-
-case class StringPattern(pattern: String) {
-  private val varPat = "\\$[A-Za-z0-9]+".r
-  private val parts = varPat.split(s" $pattern ").toList
-  private val variables = { varPat.findAllIn(pattern).toList map {
-    case x => TVariable(x.slice(1, x.size))
-  } }.toSet
-  def apply(bindings: Map[TVariable, String]) = {
-    if (variables.subsetOf(bindings.keys.toSet)) {
-      val pieces = for {
-        (string, variable) <- parts zip variables
-        value = bindings(variable)
-      } yield s"${string}${value}"
-      Some(pieces.mkString("").trim())
-    } else {
-      None
-    }
-  }
 }
