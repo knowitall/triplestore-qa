@@ -92,6 +92,8 @@ libraryDependencies += "com.typesafe" % "config" % "1.0.2"
 
 libraryDependencies += "edu.washington.cs.knowitall.taggers" % "taggers-core_2.10" % "0.4"
 
+libraryDependencies += "com.github.nikita-volkov" % "sext" % "0.2.3"
+
 assemblySettings
 
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
