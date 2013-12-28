@@ -12,6 +12,7 @@ import edu.knowitall.relsyn.RelSynRule
 import com.rockymadden.stringmetric.StringMetric
 import edu.knowitall.execution.Tuple
 import edu.knowitall.paralex.ParalexRecord
+import edu.knowitall.parsing.cg.ParsedQuestion
 
 object QaFeatures extends Function[QaStep, SparseVector] {
   
@@ -152,6 +153,24 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     case _ => SparseVector.zero
   }
   
+  val parserFeatures = (step: QaStep) => step.action match {
+    case parse: ParsedQuestion => {
+      val deriv = parse.derivation
+      val lexRules = deriv.terminals.map(t => s"parser lexical rule = ${t.rule}")
+      val combRules = deriv.combinators.map(c => s"parser combinator rule = $c")
+      val posLexRules = deriv.terminals.map { t =>
+        val i = t.catspan.span
+        val tags = parse.postags(i)
+        s"parser lexical rule (postags) = ${t.rule}($tags)"
+      }
+      val counts = (lexRules ++ combRules ++ posLexRules).groupBy(x => x).map {
+        case (name, names) => (name -> names.size.toDouble)
+      }
+      SparseVector(counts) + ("num lexical rules" -> lexRules.size)
+    }
+    case _ => SparseVector.zero
+  }
+  
   def apply(s: QaStep) = actionType(s) +
 		  				 answerIsLinked(s) +
 		  				 tupleNamespace(s) +
@@ -166,7 +185,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 templateArgFeatures(s) +
 		  				 prefixAndShape(s) +
 		  				 joinSimilarity(s) +
-		  				 paralexScore(s)
+		  				 paralexScore(s) +
+		  				 parserFeatures(s)
   
 }
 
