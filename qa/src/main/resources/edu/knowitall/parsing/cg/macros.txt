@@ -12,6 +12,7 @@ whowhat <lemma='what'|lemma='who'>
 whatwhich <lemma='what'|lemma='which'>
 what <lemma='what'>
 some <lemma='some'>
+quant <lemma='some'|lemma='all'|lemma='any'|lemma='enough'|lemma='most'|lemma='both'|lemma='each'|lemma='either'|lemma='other'|pos='CD'> <lemma='of'>?
 where <lemma='where'>
 when <lemma='when'>
 aux <lemma='be'|lemma='have'|lemma='do'>
@@ -23,7 +24,8 @@ vp (@aux? @adv* @verb+ @adv*)+
 relMarker <lemma='who'|lemma='that'|lemma='which'>
 prep <pos='RB'>* <pos='IN' | pos='TO' | pos='RP'> <pos='RB'>*
 reverb (@vp) | (@vp @prep) | (@vp @np @prep)
-type <lemma='kind'|lemma='type'|lemma='sort'|lemma='example'>
+reverbNoPrep @vp @np
+type <lemma='kind'|lemma='type'|lemma='sort'|lemma='example'|lemma='form'>
 of <lemma='of'>
 punct <pos=".">
 there <lemma='there'>
