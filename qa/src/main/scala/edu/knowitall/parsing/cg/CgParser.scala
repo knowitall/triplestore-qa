@@ -8,8 +8,9 @@ import edu.knowitall.util.NlpTools
 import edu.knowitall.tool.chunk.Chunker
 import edu.knowitall.tool.stem.Stemmer
 import edu.knowitall.execution.ConjunctiveQuery
+import edu.knowitall.search.qa.QaAction
 
-case class ParsedQuestion(query: ConjunctiveQuery, derivation: Derivation)
+case class ParsedQuestion(query: ConjunctiveQuery, derivation: Derivation) extends QaAction
 
 case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon, 
 					combinators: IndexedSeq[Combinator] = CgParser.defaultCombinators,
@@ -37,6 +38,8 @@ case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon,
       }
     } yield ParsedQuestion(query, derivation)
   }
+  
+  def apply(s: String) = parse(s)
 
 }
 
