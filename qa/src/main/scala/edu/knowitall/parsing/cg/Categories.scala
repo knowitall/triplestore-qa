@@ -56,7 +56,7 @@ case class Binary(leftVar: TVariable, rightVar: TVariable,
   
 }
 
-case class RelMod(value: String) extends Category {
+case class Mod(value: String) extends Category {
   
   private def updateValue(v: TVal) = v match {
     case l: TLiteral => l.update(s"${l.value} $value")
@@ -76,6 +76,8 @@ case class RelMod(value: String) extends Category {
       Some(u.copy(query = newQuery))
     }
   }
+  
+  override def toString = s"Mod($value)"
 }
     
 object Identity extends Category {

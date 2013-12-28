@@ -16,7 +16,7 @@ object CategoryPattern {
     case Array("unary", pattern) => UnaryPattern(pattern)
     case Array("binary", pattern) => BinaryPattern(pattern)
     case Array("argument", pattern) => ArgumentPattern(pattern)
-    case Array("relmod", pattern) => RelModPattern(pattern)
+    case Array("mod", pattern) => ModPattern(pattern)
     case _ => throw new IllegalArgumentException(s"Invalid pattern string: $s")
   }
 }
@@ -53,11 +53,11 @@ case class ArgumentPattern(pattern: String) extends CategoryPattern {
   }
 }
 
-case class RelModPattern(pattern: String) extends CategoryPattern {
+case class ModPattern(pattern: String) extends CategoryPattern {
   private val sp = UnquotedTLiteral(pattern)
   override def apply(bindings: Map[TVariable, String]) = {
     val valBindings = bindings map { case (k, v) => (k, UnquotedTLiteral(v)) }
-    Some(RelMod(sp.subs(valBindings).toString))
+    Some(Mod(sp.subs(valBindings).toString))
   }
 }
 
