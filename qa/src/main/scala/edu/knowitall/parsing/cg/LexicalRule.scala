@@ -10,6 +10,7 @@ import scala.io.Source
 import edu.knowitall.util.ResourceUtils
 
 case class LexicalRule(syntax: PatternExtractor, semantics: CategoryPattern) extends TerminalRule {
+  val name = syntax.patternName
   override def apply(interval: Interval, sent: Sentence with Chunked with Lemmatized) = {
     val span = NlpUtils.split(sent, interval.start, interval.end)
     if (syntax.matches(span)) {
@@ -18,7 +19,7 @@ case class LexicalRule(syntax: PatternExtractor, semantics: CategoryPattern) ext
       None
     }
   }
-  override def toString = syntax.patternName
+  override def toString = name
 }
 
 object LexicalRule {
