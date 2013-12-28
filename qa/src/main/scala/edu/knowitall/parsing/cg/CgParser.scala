@@ -55,21 +55,3 @@ case object CgParser {
   lazy val defaultLexicon = LexicalRule.fromInputStream(lexiconIn)
   
 }
-
-object MyTest extends App {
-  val parser = CgParser()
-  
-  for (lex <- parser.lexicon) {
-    println(lex)
-    println(lex.syntax.pattern.patternString)
-    println(lex.semantics)
-    println
-  }
-  
-  val results = parser.parse(args(0))
-  for (deriv <- results) {
-    println(deriv.query)
-    deriv.derivation.terminals foreach println
-    println
-  }
-}
