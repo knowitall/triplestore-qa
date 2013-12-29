@@ -1,4 +1,4 @@
-noun <pos=/N.*/>
+noun <pos=/N.*/|pos='CD'>
 commonNoun <pos=/NNS?/>
 propNoun <pos=/NNPS?/>
 adj <pos=/J.*/>
@@ -12,10 +12,12 @@ wh <lemma='who'|lemma='what'|lemma='where'|lemma='when'|lemma='why'|lemma='how'>
 whowhat <lemma='what'|lemma='who'>
 whatwhich <lemma='what'|lemma='which'>
 what <lemma='what'>
+how <lemma='how'>
 some <lemma='some'>
 quant <lemma='some'|lemma='all'|lemma='any'|lemma='enough'|lemma='most'|lemma='both'|lemma='each'|lemma='either'|lemma='other'|pos='CD'> <lemma='of'>?
 where <lemma='where'>
 when <lemma='when'>
+ignoreTypes <lemma='thing'|lemma='stuff'|lemma='person'|lemma='people'>
 aux <lemma='be'|lemma='have'|lemma='do'>
 be <lemma='be'|lemma='s'|lemma="'s">
 pos <pos='POS'|lemma='s'|lemma="'s">
