@@ -8,5 +8,5 @@ steps	-1
 question prefix = 'what year' and isDate	1
 question prefix = 'when' and isDate	1
 question prefix = 'where' and isDate	-1
-num lexical rules -1
-parser combinator rule = UnaryIdentity -1
+num lexical rules	-1
+parser combinator rule = UnaryIdentity	-1
