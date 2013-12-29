@@ -3,6 +3,7 @@ package edu.knowitall.learning
 import edu.knowitall.util.TuplePrinter.printTuple
 import edu.knowitall.execution.Tabulator.{format => toTable}
 import edu.knowitall.model.Derivation
+import edu.knowitall.search.qa.QueryState
 
 class InteractiveOracle extends CorrectnessModel[String, Derivation] {
   
@@ -18,8 +19,15 @@ class InteractiveOracle extends CorrectnessModel[String, Derivation] {
       case e: Throwable => Nil
     }
   
-  private def derivString(deriv: Derivation) = 
-    deriv.toString
+  private def derivString(deriv: Derivation) = { 
+    val queries = deriv.steps.map(_.fromState) collect { case qs: QueryState =>
+      qs.toString
+    }
+    queries.toList match {
+      case q :: Nil => q
+      case _ => "no query"
+    }
+  }
     
   private def derivsToTable(derivs: Seq[Derivation]) = {
     val paired = derivs.zipWithIndex map { case (a, b) => List(b, a.answer, derivString(a)) }
