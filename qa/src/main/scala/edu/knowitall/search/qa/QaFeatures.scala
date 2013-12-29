@@ -166,7 +166,7 @@ object QaFeatures extends Function[QaStep, SparseVector] {
       val counts = (lexRules ++ combRules ++ posLexRules).groupBy(x => x).map {
         case (name, names) => (name -> names.size.toDouble)
       }
-      SparseVector(counts) + ("num lexical rules" -> lexRules.size)
+      SparseVector(counts) + ("num lexical rules" -> lexRules.size / 5.0)
     }
     case _ => SparseVector.zero
   }
