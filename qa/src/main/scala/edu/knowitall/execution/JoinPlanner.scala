@@ -59,7 +59,7 @@ case class Joiner(client: TriplestoreClient) {
   }
  
   /* Any table T joined with the emptyTuples set will return T. */ 
-  val emptyTuples = List(Tuple(Map()))
+  val emptyTuples = List(Tuple(Map.empty))
   
   /* Takes the cartesian product of two tuple sets. */
   val prod = (ts1: Iterable[Tuple], ts2: Iterable[Tuple]) => 
