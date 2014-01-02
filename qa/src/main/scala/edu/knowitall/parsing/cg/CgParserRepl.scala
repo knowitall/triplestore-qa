@@ -1,7 +1,6 @@
 package edu.knowitall.parsing.cg
 
 object CgParserRepl extends App {
-  import sext._
   import jline.console.ConsoleReader
   val reader = new ConsoleReader()
   val parser = new CgParser()
