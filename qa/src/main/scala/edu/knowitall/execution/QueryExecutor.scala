@@ -1,6 +1,5 @@
 package edu.knowitall.execution
 import edu.knowitall.execution.Search.Field
-import edu.knowitall.execution.Search.{arg1, rel, arg2, namespace}
 import edu.knowitall.triplestore.TriplestoreClient
 import org.slf4j.LoggerFactory
 import edu.knowitall.tool.stem.MorphaStemmer
@@ -22,17 +21,6 @@ case class ExecTuple(tuple: Tuple, query: ConjunctiveQuery) {
       y = tuple.attrs.getOrElse(s"$n.arg2", "")
     } yield s"($x, $r, $y)"
     tstrs.mkString(" ")
-  }
-  val toTripleTuple = {
-    val triples = for {
-      c <- query.conjuncts
-      n = c.name
-      x = tuple.attrs.getOrElse(s"$n.arg1", "")
-      r = tuple.attrs.getOrElse(s"$n.rel", "")
-      y = tuple.attrs.getOrElse(s"$n.arg2", "")
-      ns = tuple.attrs.getOrElse(s"$n.namespace", "")
-    } yield List((s"${n}.arg1", x), (s"${n}.rel", r), (s"${n}.arg2", y), (s"${n}.namespace", ns))
-    Tuple(triples.flatten.toMap)
   }
 }
 

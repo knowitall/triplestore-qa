@@ -434,6 +434,22 @@ object Tabulator {
     val lst = ts.toList
     format(cols :: lst.map(t => tupleToList(t, cols)))
   }
+  
+  private val namePat = "^(.*)\\.(arg1|arg2|rel|namespace)$".r
+  def triplesToTable(ts: List[Tuple]): String = ts match {
+    case t :: rest => {
+      val conjNames = for {
+        a <- t.attrs.keys
+        (conj, field) <- a match {
+          case namePat(conj, field) => Some((conj, field))
+          case _ => None
+        }
+      } yield conj
+      val columns = conjNames.toList.distinct.flatMap(n => List(s"${n}.arg1", s"${n}.rel", s"${n}.arg2", s"${n}.namespace"))
+      tuplesToTable(columns, ts)
+    }
+    case _ => ""
+  }
 
   def tuplesToTable(ts: Iterable[Tuple]): String = {
     val lst = ts.toList

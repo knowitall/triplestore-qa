@@ -36,10 +36,10 @@ class SimpleRepl {
     val tuples = for {
       (action, newState) <- exec(state)
       tuple = newState match {
-        case ts: TupleState => ts.execTuple.toTripleTuple
+        case ts: TupleState => ts.execTuple.tuple
       }
     } yield tuple
-    Tabulator.tuplesToTable(tuples)
+    Tabulator.triplesToTable(tuples.toList)
   }
   
   private def modeEval(input: String) = {
