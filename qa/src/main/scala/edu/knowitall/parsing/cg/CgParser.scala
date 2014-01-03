@@ -27,7 +27,8 @@ case class ParsedQuestion(question: Sentence with Chunked with Lemmatized,
 case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon, 
 					combinators: IndexedSeq[Combinator] = CgParser.defaultCombinators,
 					chunker: Chunker = NlpTools.dummyChunker,
-					lemmatizer: Stemmer = NlpTools.stemmer) {
+					lemmatizer: Stemmer = NlpTools.stemmer,
+					maxConjuncts: Int = CgParser.defaultMaxConjuncts) {
  
   private def process(s: String) = NlpTools.process(s, chunker, lemmatizer)
  
@@ -47,6 +48,7 @@ case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon,
         case u: Unary => Some(u.query)
         case _ => None
       }
+      if query.conjuncts.size <= maxConjuncts
     } yield ParsedQuestion(sent, query, derivation)
   }
   
@@ -71,5 +73,7 @@ case object CgParser {
     rule => ruleKeep.findPrefixMatchOf(rule.name).isDefined &&
     	   !ruleSkip.findPrefixMatchOf(rule.name).isDefined
   }
+  
+  lazy val defaultMaxConjuncts = conf.getInt("parsing.cg.maxConjuncts")
   
 }
