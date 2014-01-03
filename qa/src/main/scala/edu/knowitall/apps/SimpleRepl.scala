@@ -9,6 +9,8 @@ import edu.knowitall.search.qa.QueryState
 import edu.knowitall.search.qa.TupleState
 import edu.knowitall.execution.Tabulator
 import edu.knowitall.execution.Search
+import edu.knowitall.search.qa.QuestionState
+import edu.knowitall.search.qa.QaStep
 
 class SimpleRepl {
   val model = QaModel()
@@ -16,23 +18,41 @@ class SimpleRepl {
   val evalFns = Map(
     "qa" -> qaEval _,
     "parser" -> parserEval _,
-    "query" -> queryEval _
+    "query" -> queryEval _,
+    "paraphrase" -> paraphraseEval _,
+    "relsyn" -> relSynEval _
   )
   val parserRepl = new CgParserRepl
   val exec = model.transitionModel.executeTransition
+  val absArg = model.transitionModel.absArgTransition
+  val templ = model.transitionModel.templateTransition
+  val relSyn = model.transitionModel.relSynTransition
+  val cost = model.costModel
   
   private def qaEval(input: String) = {
     val candidates = model.candidatePredictions(input)
     candidates map result mkString("\n")
   }
   
-  private def parserEval(input: String) = parserRepl.eval(input)
-  
-  private def queryEval(input: String) = {
-    val state = ListConjunctiveQuery.fromString(input) match {
+  private def queryState(input: String) = ListConjunctiveQuery.fromString(input) match {
       case Some(x) => QueryState(x)
       case None => throw new IllegalArgumentException(s"Could not parse '$input'")
     }
+  
+  private def relSynEval(input: String) = {
+    val fromState = queryState(input)
+    val steps = for ((action, toState) <- relSyn(fromState)) 
+      yield QaStep(input, fromState, action, toState)
+    val lines = steps.toList.sortBy(cost(_)) map {
+      step => s"${step.toState} ${-cost(step)}"
+    }
+    lines.mkString("\n")
+  }
+  
+  private def parserEval(input: String) = parserRepl.eval(input)
+  
+  private def queryEval(input: String) = {
+    val state = queryState(input)
     val tuples = for {
       (action, newState) <- exec(state)
       tuple = newState match {
@@ -40,6 +60,20 @@ class SimpleRepl {
       }
     } yield tuple
     Tabulator.triplesToTable(tuples.toList)
+  }
+  
+  
+  private def paraphraseEval(input: String) = {
+    val qState = QuestionState(input)
+    val scores = { for {
+      (absAction, absState) <- absArg(qState)
+      (tempAction, tempState) <- templ(absState)
+      step1 = QaStep(input, qState, absAction, absState)
+      step2 = QaStep(input, absState, tempAction, tempState)
+      score = -(cost(step1) + cost(step2))
+    } yield (s"$absState -> $tempState" -> score) }.toMap
+    val lines = for (key <- scores.keys.toList.sortBy(-scores(_))) yield s"$key\t${scores(key)}"
+    lines.mkString("\n")
   }
   
   private def modeEval(input: String) = {
