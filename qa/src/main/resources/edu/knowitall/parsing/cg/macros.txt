@@ -13,6 +13,7 @@ whowhat <lemma='what'|lemma='who'>
 whatwhich <lemma='what'|lemma='which'>
 what <lemma='what'>
 how <lemma='how'>
+howmany <lemma='how'> <lemma='much'|lemma='many'>
 some <lemma='some'>
 quant <lemma='some'|lemma='all'|lemma='any'|lemma='enough'|lemma='most'|lemma='both'|lemma='each'|lemma='either'|lemma='other'|pos='CD'> <lemma='of'>?
 where <lemma='where'>
