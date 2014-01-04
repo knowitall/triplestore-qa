@@ -62,6 +62,8 @@ libraryDependencies += "edu.washington.cs.knowitall.nlptools" %% "nlptools-token
 
 libraryDependencies += "com.twitter" %% "util-collection" % "6.3.6"
 
+libraryDependencies += "com.clearspring.analytics" % "stream" % "2.5.1"
+
 libraryDependencies ++= Seq(
     "net.databinder" %% "unfiltered-filter" % "0.6.8",
     "net.databinder" %% "unfiltered-jetty" % "0.6.8",
