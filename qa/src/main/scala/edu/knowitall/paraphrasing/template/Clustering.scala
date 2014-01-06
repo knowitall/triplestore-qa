@@ -96,13 +96,15 @@ case object TypeTemplate extends App {
     }
   } yield (arg, templates) }.toMap
   
+  val iterator = Source.fromInputStream(System.in, "UTF-8").getLines.grouped(128*1024)
   for {
-    line <- Source.fromInputStream(System.in, "UTF-8").getLines
+    lines <- iterator
+    line <- lines.par
     (arg1, rel, arg2) <- line.trim.split("\t").toList match {
       case x :: r :: y :: Nil => Some((x.replaceAll(" ", "_"), r, y.replaceAll(" ", "_")))
       case _ => None
     }
     if isIsa(rel)
     t <- argTemplates.getOrElse(arg1, Set.empty)
-  } println(s"$t\t$arg2\t$arg1")
+  } println(s"$t\t$arg2")
 }
