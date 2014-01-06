@@ -83,3 +83,26 @@ case object EnumeratePatterns extends App {
     } println(s"${t.replaceAll(" ", "_")}\t${a.replaceAll(" ", "_")}\t$ct\t$ca")
   }
 }
+
+case object TypeTemplate extends App {
+  
+  def isIsa(s: String) = s.toLowerCase == "instance of"
+  
+  val argTemplates = { for {
+    line <- Source.fromFile(args(0), "UTF-8").getLines
+    (arg, templates) <- line.split("\t").toList match {
+      case arg :: rest => Some((arg, rest.toSet))
+      case _ => None
+    }
+  } yield (arg, templates) }.toMap
+  
+  for {
+    line <- Source.fromInputStream(System.in, "UTF-8").getLines
+    (arg1, rel, arg2) <- line.trim.split("\t").toList match {
+      case x :: r :: y :: Nil => Some((x.replaceAll(" ", "_"), r, y.replaceAll(" ", "_")))
+      case _ => None
+    }
+    if isIsa(rel)
+    t <- argTemplates.getOrElse(arg1, Set.empty)
+  } println(s"$t\t$arg2\t$arg1")
+}
