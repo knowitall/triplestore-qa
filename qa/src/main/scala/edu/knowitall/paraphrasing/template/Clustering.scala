@@ -9,6 +9,7 @@ import java.io.InputStream
 import java.io.FileOutputStream
 import java.nio.file.Files
 import java.nio.file.Paths
+import edu.knowitall.wikianswers.QuestionCluster
 
 case class StemmedQuestion(tokens: Seq[String]) {
   def this(s: String) = this(s.trim.split(" +"))
@@ -91,20 +92,43 @@ case object TypeTemplate extends App {
   val argTemplates = { for {
     line <- Source.fromFile(args(0), "UTF-8").getLines
     (arg, templates) <- line.split("\t").toList match {
-      case arg :: rest => Some((arg, rest.toSet))
+      case arg :: rest => Some((arg, rest))
       case _ => None
     }
   } yield (arg, templates) }.toMap
   
+  def lineToTriple(line: String) = line.trim.split("\t").toList match {
+    case x :: r :: y :: Nil => Some((x.replaceAll(" ", "_"), r, y.replaceAll(" ", "_")))
+    case _ => None
+  }
+  
   val iterator = Source.fromInputStream(System.in, "UTF-8").getLines.grouped(128*1024)
-  for {
+  val pairs = for {
     lines <- iterator
     line <- lines.par
-    (arg1, rel, arg2) <- line.trim.split("\t").toList match {
-      case x :: r :: y :: Nil => Some((x.replaceAll(" ", "_"), r, y.replaceAll(" ", "_")))
-      case _ => None
+    pairs = lineToTriple(line) match {
+      case Some((arg1, rel, arg2)) if isIsa(rel) => for (t <- argTemplates.getOrElse(arg1, Set.empty)) yield s"$t\t$arg2"
+      case _ => List.empty
     }
-    if isIsa(rel)
-    t <- argTemplates.getOrElse(arg1, Set.empty)
-  } println(s"$t\t$arg2")
+  } yield pairs
+  pairs.flatten foreach println
+}
+
+case object TemplatePairExtractor extends App {
+  def us2sp(s: String) = s.replaceAll("_", " ")
+  def sp2us(s: String) = s.replaceAll(" ", "_")
+  def loadSet(path: String) = Source.fromFile(path, "UTF-8").getLines.map(us2sp).toSet
+  val arguments = loadSet(args(0))
+  val templates = loadSet(args(1))
+  val output = for {
+    line <- Source.fromInputStream(System.in, "UTF-8").getLines
+    cluster = QuestionCluster.fromString(line)
+    counter = TemplateCounter(cluster)
+    (tx1, tx2, a) <- counter.templatePairs
+    (t1, t2) = if (tx1 < tx2) (tx1, tx2) else (tx2, tx1)
+    if arguments contains a
+    if templates contains t1
+    if templates contains t2
+  } yield s"${sp2us(t1)}\t${sp2us(t2)}\t${sp2us(a)}"
+  output foreach println
 }

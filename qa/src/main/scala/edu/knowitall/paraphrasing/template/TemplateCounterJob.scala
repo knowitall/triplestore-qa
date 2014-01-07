@@ -13,7 +13,7 @@ object TemplateCounterJob extends ScoobiApp {
   def getCounts(line: String): List[(String, Int)] = {
     val cluster = lineToCluster(line)
     val counter = new TemplateCounter(cluster)
-    val pairs = for ((q1, q2) <- counter.templatePairs; List(qa, qb) = List(q1, q2).sortBy(x => x.toString())) yield (s"$qa|$qb", 1)
+    val pairs = for ((q1, q2, a) <- counter.templatePairs; List(qa, qb) = List(q1, q2).sortBy(x => x.toString())) yield (s"$qa|$qb", 1)
     val marginals = for (q <- counter.templateStrings) yield (s"$q", 1)
     val result = (pairs.toList ++ marginals.toList).distinct
     result
