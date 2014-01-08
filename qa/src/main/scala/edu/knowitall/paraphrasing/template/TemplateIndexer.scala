@@ -94,7 +94,7 @@ class TemplateIndexer(server: SolrServer) {
     doc.addField("count12", pair.count12)
     doc.addField("typPmi", pair.typPmi)
     doc.addField("pmi", pair.pmi)
-    doc.addField("id", (pair.template1 + pair.template2).hashCode.toString)
+    doc.addField("id", (pair.template1 + pair.template2 + pair.typ).hashCode.toString)
     doc
   }
   
