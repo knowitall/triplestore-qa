@@ -123,7 +123,7 @@ case class SolrClient(url: String, hits: Int = 10, timeout: Int = SolrClient.def
   def search(q: TSQuery, maxHits: Int = defaultMaxHits): List[Tuple] ={
     logger.debug(s"Searching for query: ${q.toQueryString}")
     val query = SolrClient.buildQuery(q)
-    query.setRows(hits)
+    query.setRows(maxHits)
     query.setParam("shards.tolerant", true)
     val tuples = for {
       resp <- execQuery(query)
