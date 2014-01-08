@@ -8,7 +8,7 @@ import edu.knowitall.paraphrasing.template.ParaphraseTemplateClient
 import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.search.Transition
-import edu.knowitall.relsyn.RelSynClient
+import edu.knowitall.relsyn.SolrRelSynClient
 import edu.knowitall.util.NlpTools
 import com.typesafe.config.ConfigFactory
 import edu.knowitall.parsing.cg.CgParser
@@ -21,7 +21,7 @@ class QaTransitionModel extends Transition[QaState, QaAction] {
   lazy val templateClient = new ParaphraseTemplateClient
   lazy val baseTriplestoreClient = new SolrClient()
   lazy val triplestoreClient = CachedTriplestoreClient(baseTriplestoreClient)
-  lazy val relSynClient = RelSynClient()
+  lazy val relSynClient = SolrRelSynClient()
   
   // Individual transition functions
   lazy val absArgTransition = new AbstractArgTransition()

@@ -1,6 +1,6 @@
 package edu.knowitall.search.qa
 
-import edu.knowitall.relsyn.RelSynClient
+import edu.knowitall.relsyn.SolrRelSynClient
 import edu.knowitall.search.Transition
 import scalaz._
 import Scalaz._
@@ -13,7 +13,7 @@ import org.apache.solr.client.solrj.SolrServerException
 import java.io.StringWriter
 import java.io.PrintWriter
 
-class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient, skipTimeouts: Boolean = RelSynTransition.defaultSkipTimeouts, multipleSyns: Boolean = RelSynTransition.defaultMultipleSyns) 
+class RelSynTransition(client: SolrRelSynClient = RelSynTransition.defaultClient, skipTimeouts: Boolean = RelSynTransition.defaultSkipTimeouts, multipleSyns: Boolean = RelSynTransition.defaultMultipleSyns) 
   extends Transition[QaState, QaAction] {
   
   val logger = LoggerFactory.getLogger(this.getClass)
@@ -59,5 +59,5 @@ object RelSynTransition {
   val conf = ConfigFactory.load()
   val defaultSkipTimeouts = conf.getBoolean("relsyn.skipTimeouts")
   val defaultMultipleSyns = conf.getBoolean("relsyn.multipleSyns")
-  lazy val defaultClient = new RelSynClient() 
+  lazy val defaultClient = new SolrRelSynClient() 
 }
