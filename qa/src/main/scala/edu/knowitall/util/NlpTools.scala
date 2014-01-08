@@ -27,4 +27,6 @@ object NlpTools {
     }
   }
   
+  def normalize(text: String, ch: Chunker = dummyChunker, lm: Stemmer = stemmer) = process(text, ch, lm).lemmatizedTokens.map(_.lemma.toLowerCase).mkString(" ")
+  
 }
