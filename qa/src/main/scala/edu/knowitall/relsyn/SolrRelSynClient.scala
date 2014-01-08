@@ -31,7 +31,7 @@ case class SolrRelSynClient(url: String = SolrRelSynClient.defaultUrl,
     					    maxHits: Int = SolrRelSynClient.defaultMaxHits,
     					    scale: Boolean = SolrRelSynClient.defaultScale,
     					    cacheSize: Int = SolrRelSynClient.defaultCacheSize,
-    					    timeout: Int = SolrRelSynClient.defaultTimeout) {
+    					    timeout: Int = SolrRelSynClient.defaultTimeout) extends RelSynClient {
   
   private val client = new HttpSolrServer(url)
   client.setConnectionTimeout(timeout)
@@ -102,7 +102,7 @@ case class SolrRelSynClient(url: String = SolrRelSynClient.defaultUrl,
     pairs.map(pair => pair.copy(pmi = scalePmi(pair.pmi)))
   }
   
-  def relSyns(s: String, limit: Int = maxHits) = cache.get((s, limit)) match {
+  override def relSyns(s: String, limit: Int = maxHits) = cache.get((s, limit)) match {
     case Some(x) => x
     case None => {
       val results = fetchRelSyns(s, limit)
@@ -111,7 +111,7 @@ case class SolrRelSynClient(url: String = SolrRelSynClient.defaultUrl,
     }
   }
   
-  def relSyns(c: TConjunct): List[RelSynRule] = c.values.get(Search.rel) match {
+  override def relSyns(c: TConjunct): List[RelSynRule] = c.values.get(Search.rel) match {
     case Some(UnquotedTLiteral(l)) => relSyns(l)
     case Some(QuotedTLiteral(l)) => relSyns(l)
     case _ => Nil
