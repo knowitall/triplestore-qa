@@ -19,5 +19,5 @@ case class ListRelSynClient(rules: List[RelSynRule]) extends RelSynClient {
 }
 
 case object ListRelSynClient {
-  private def fromInputStream(is: InputStream) = ListRelSynClient(Source.fromInputStream(is).getLines.map(RelSynRule.deserialize).toList)
+  def fromInputStream(is: InputStream) = ListRelSynClient(Source.fromInputStream(is).getLines.map(RelSynRule.deserialize).toList)
 }
