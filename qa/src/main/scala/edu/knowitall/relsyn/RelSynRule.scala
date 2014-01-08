@@ -38,4 +38,15 @@ case class RelSynRule(rel1: String, rel2: String, inverted: Boolean,
     newc <- adjustSwap(withNewRel)
   } yield newc
   
+  def serialize = List(rel1, rel2, inverted, count1, count2, jointCount, pmi).mkString("\t")
+  
+}
+
+case object RelSynRule {
+  def deserialize(line: String) = line.trim.split("\t").toList match {
+    case rel1 :: rel2 :: inverteds :: count1s :: count2s :: jointCounts :: pmis :: Nil =>
+      RelSynRule(rel1, rel2, inverteds.toBoolean, count1s.toDouble,
+        count2s.toDouble, jointCounts.toDouble, pmis.toDouble)
+    case _ => throw new IllegalArgumentException(s"Invalid RelSynRule: $line")
+  }
 }
