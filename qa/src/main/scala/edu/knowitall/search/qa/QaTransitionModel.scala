@@ -9,6 +9,7 @@ import edu.knowitall.triplestore.SolrClient
 import edu.knowitall.triplestore.CachedTriplestoreClient
 import edu.knowitall.search.Transition
 import edu.knowitall.relsyn.SolrRelSynClient
+import edu.knowitall.relsyn.IsaRelSynClient
 import edu.knowitall.util.NlpTools
 import com.typesafe.config.ConfigFactory
 import edu.knowitall.parsing.cg.CgParser
@@ -28,6 +29,7 @@ class QaTransitionModel extends Transition[QaState, QaAction] {
   lazy val templateTransition = new TemplateTransition(templateClient)
   lazy val parseTransition = new CgParseTransition(cgParser)
   lazy val executeTransition = new ExecutionTransition(triplestoreClient)
+  lazy val isaSynTransition = new RelSynTransition(IsaRelSynClient)
   lazy val relSynTransition = new RelSynTransition(relSynClient)
   lazy val projTransition = new ProjectionTransition
   lazy val paralexTransition = new ParalexTransition
@@ -38,6 +40,7 @@ class QaTransitionModel extends Transition[QaState, QaAction] {
     "parse" -> parseTransition,
     "templateParaphrase" -> (absArgTransition + templateTransition),
     "relSyn" -> relSynTransition,
+    "isaRelSyn" -> isaSynTransition,
     "execute" -> executeTransition,
     "project" -> projTransition,
     "paralex" -> paralexTransition

@@ -27,6 +27,7 @@ class SimpleRepl {
   val absArg = model.transitionModel.absArgTransition
   val templ = model.transitionModel.templateTransition
   val relSyn = model.transitionModel.relSynTransition
+  val isaRelSyn = model.transitionModel.isaSynTransition
   val cost = model.costModel
   
   private def qaEval(input: String) = {
@@ -41,7 +42,7 @@ class SimpleRepl {
   
   private def relSynEval(input: String) = {
     val fromState = queryState(input)
-    val steps = for ((action, toState) <- relSyn(fromState)) 
+    val steps = for ((action, toState) <- relSyn(fromState) ++ isaRelSyn(fromState)) 
       yield QaStep(input, fromState, action, toState)
     val lines = steps.toList.sortBy(cost(_)) map {
       step => s"${step.toState} ${-cost(step)}"
