@@ -12,8 +12,9 @@ import com.typesafe.config.ConfigFactory
 import org.apache.solr.client.solrj.SolrServerException
 import java.io.StringWriter
 import java.io.PrintWriter
+import edu.knowitall.relsyn.RelSynClient
 
-class RelSynTransition(client: SolrRelSynClient = RelSynTransition.defaultClient, skipTimeouts: Boolean = RelSynTransition.defaultSkipTimeouts, multipleSyns: Boolean = RelSynTransition.defaultMultipleSyns) 
+class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient, skipTimeouts: Boolean = RelSynTransition.defaultSkipTimeouts, multipleSyns: Boolean = RelSynTransition.defaultMultipleSyns) 
   extends Transition[QaState, QaAction] {
   
   val logger = LoggerFactory.getLogger(this.getClass)

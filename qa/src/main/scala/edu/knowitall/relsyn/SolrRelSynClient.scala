@@ -102,7 +102,7 @@ case class SolrRelSynClient(url: String = SolrRelSynClient.defaultUrl,
     pairs.map(pair => pair.copy(pmi = scalePmi(pair.pmi)))
   }
   
-  override def relSyns(s: String, limit: Int = maxHits) = cache.get((s, limit)) match {
+  private def relSyns(s: String, limit: Int = maxHits) = cache.get((s, limit)) match {
     case Some(x) => x
     case None => {
       val results = fetchRelSyns(s, limit)
