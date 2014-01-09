@@ -20,8 +20,8 @@ class TemplateTransition(client: ParaphraseTemplateClient, skipTimeouts: Boolean
     case _ => Nil
   }
   
-  private def paraphrases(s: String) = try {
-    client.paraphrases(s)
+  private def paraphrases(s: String, argTypes: List[String]) = try {
+    client.paraphrases(s, argTypes)
   } catch {
     case e: SolrServerException => if (skipTimeouts) {
       val sw = new StringWriter()
@@ -36,7 +36,7 @@ class TemplateTransition(client: ParaphraseTemplateClient, skipTimeouts: Boolean
   
   private def paraphrase(state: AbstractedArgState) = 
     for {
-      templatePair <- paraphrases(state.queryString)
+      templatePair <- paraphrases(state.queryString, state.argTypes)
       arg = state.arg
       newQuestion = applyTemplate(arg, templatePair)
       action = templatePair
