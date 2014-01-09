@@ -7,7 +7,7 @@ import edu.knowitall.util.NlpTools
 import edu.knowitall.execution.Search.TSQuery
 import edu.knowitall.model.QaModel
 
-case class IsaClient(client: TriplestoreClient, maxHits: Int = 500) {
+case class IsaClient(client: TriplestoreClient = IsaClient.defaultTriplestoreClient, maxHits: Int = 500) {
   
   private val internalClient = new TriplestoreClient {
     override def search(q: TSQuery, h: Int) = client.search(q, maxHits)
@@ -31,15 +31,10 @@ case class IsaClient(client: TriplestoreClient, maxHits: Int = 500) {
   def getTypes(a: String) = {
     val queries = getQueries(a)
     val results = queries flatMap { q => exec.execute(q) }
-    results.map(a => norm(a.answerString)).distinct
+    "anything" :: results.map(a => norm(a.answerString)).distinct
   }
 }
 
-case object IsaClient extends App {
-  val m = QaModel()
-  val c = m.transitionModel.triplestoreClient
-  val isa = IsaClient(c)
-  val l = isa.getTypes(args.mkString(" "))
-  println(l.mkString("\n"))
-  println(l.size)
+case object IsaClient {
+  lazy val defaultTriplestoreClient = new SolrClient()
 }

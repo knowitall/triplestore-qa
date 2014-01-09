@@ -10,11 +10,13 @@ import edu.knowitall.tool.postag.Postagger
 import edu.knowitall.tool.postag.StanfordPostagger
 import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.util.NlpTools
+import edu.knowitall.triplestore.IsaClient
 
 class AbstractArgTransition(
     tokenizer: Tokenizer = NlpTools.tokenizer,
     stemmer: Stemmer = NlpTools.stemmer,
     tagger: Postagger = NlpTools.tagger,
+    isaClient: IsaClient = AbstractArgTransition.defaultIsaClient,
     maxArgLength: Int = AbstractArgTransition.defaultMaxArgLength, 
     multipleParaphrases: Boolean = AbstractArgTransition.multipleParaphrases)
     extends Transition[QaState, QaAction] {
@@ -43,7 +45,9 @@ class AbstractArgTransition(
       val toks = s.processed.lemmatizedTokens.map(_.lemma.toLowerCase).toIndexedSeq
       for {
         interval <- intervals(toks.size)
-        newState = AbstractedArgState(s.question, s.processed, interval)
+        arg = s.processed.strings.slice(interval.start, interval.end).mkString(" ")
+        types = isaClient.getTypes(arg)
+        newState = AbstractedArgState(s.question, types, s.processed, interval)
       } yield (action, newState)
     } else {
       Nil
@@ -58,4 +62,5 @@ case object AbstractArgTransition {
   val conf = ConfigFactory.load()
   val defaultMaxArgLength = conf.getInt("paraphrase.template.maxArgLength")
   val multipleParaphrases = conf.getBoolean("paraphrase.template.multipleParaphrases")
+  lazy val defaultIsaClient = IsaClient()
 }

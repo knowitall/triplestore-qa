@@ -24,8 +24,12 @@ case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolea
   server.setSoTimeout(timeout)
   server.setMaxRetries(1)
   val searchField = "template1_exact"
-  def paraphrases(s: String, limit: Int = maxHits) = {
-    val query = new SolrQuery(s"""${searchField}:"${s} AND typ_exact:anything"""")
+  
+  def paraphrases(s: String, argTypes: List[String] = List("anything"), limit: Int = maxHits): List[TemplatePair] = argTypes.flatMap(paraphraseOne(s, _, limit))
+   
+  def paraphraseOne(s: String, argType: String = "anything", limit: Int = maxHits) = {
+    val typePred = s"""typ:"$argType""""
+    val query = new SolrQuery(s"""${searchField}:"${s}" AND $typePred""")
     query.setRows(maxHits)
     query.addSort(new SortClause("typPmi", SolrQuery.ORDER.desc))
     query.setParam("shards.tolerant", true)

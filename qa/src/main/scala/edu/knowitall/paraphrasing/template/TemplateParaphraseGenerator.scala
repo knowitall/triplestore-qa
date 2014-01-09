@@ -32,7 +32,7 @@ class SolrParaphraseGenerator(url: String, maxHits: Int, maxArgLength: Int) exte
     val left = q.question.slice(0, i).mkString(" ")
     val right = q.question.slice(j, n).mkString(" ")
     val query = left + " $y " + right
-    client.paraphrases(query, maxHits)
+    client.paraphrases(query, limit = maxHits)
   }
   
   def abstractQuestion(q: Seq[String]): Iterable[ArgQuestion] = {
