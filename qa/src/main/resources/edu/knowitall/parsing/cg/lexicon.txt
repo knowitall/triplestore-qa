@@ -3,6 +3,7 @@
 fullPatternSubj @whowhat (<rel>:@reverb) (<arg>:@np)      := unary $x : ($x, $rel, $arg)
 fullPatternDobj @whowhat @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel, $x)
 fullPatternWhereIn @where (<aux>:@aux) (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $aux $rel in, $x)
+fullPatternWhereIs @where (<aux>:@aux) (<arg>:@np) := unary $x : ($arg, $aux in, $x)
 fullPatternWhenIn @when (<aux>:@aux) (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $aux $rel in, $x)
 fullPatternWhenOn @when (<aux>:@aux) (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $aux $rel on, $x)
 fullPatternTypeDobj (@whatwhich|@howmany) (<type>:@np) @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($x, is a, $type) ($arg, $rel, $x)
