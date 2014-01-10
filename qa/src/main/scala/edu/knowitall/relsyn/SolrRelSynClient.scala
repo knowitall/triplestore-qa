@@ -81,14 +81,7 @@ case class SolrRelSynClient(url: String = SolrRelSynClient.defaultUrl,
     pmi <- getDouble("pmi", d)
   } yield RelSynRule(rel1, rel2, inverted, count1, count2, joint, pmi)
   
-  private def stemString(s: String) = {
-    val tokens = tokenizer(s)
-    val tagged = tagger.postagTokenized(tokens)
-    val result = tagged.map {
-      t => MorphaStemmer.lemmatizePostaggedToken(t).lemma.toLowerCase() 
-    }
-    result.mkString(" ")
-  }
+  private def stemString(s: String) = NlpTools.normalize(s)
   
   private def fetchRelSyns(s: String, limit: Int = maxHits) = {
     val stems = stemString(s)
