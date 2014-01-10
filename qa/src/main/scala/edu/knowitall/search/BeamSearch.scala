@@ -14,19 +14,7 @@ class BeamSearch[State, Action](
   assert(goalSize >= 1)
   
   override val logger = LoggerFactory.getLogger(this.getClass)
-  private val expanded = MutableSet.empty[State]
-  private val goals = MutableMap.empty[State, Node[State, Action]]
   private var iter = 0
-  
-  private def addGoalNode(node: Node[State, Action]) = {
-    assert(isGoal(node))
-    val state = node.state
-    val otherNode = goals.getOrElse(state, node)
-    val bestNode = List(node, otherNode).minBy(_.pathCost)
-    goals.put(state, bestNode)
-  }
-  
-  private def haveExpanded(n: Node[State, Action]) = expanded.contains(n.state)
   
   private def continueSearch = (goals.size < goalSize) && (!beam.isEmpty) && (iter < maxIters)
 
