@@ -61,7 +61,7 @@ class BeamSearch[State, Action](
     goals.values.toSet
   }
   
-  def search = searchLoop.toList.sortBy(_.pathCost).take(goalSize)
+  override def search = searchLoop.toList.sortBy(_.pathCost).take(goalSize)
 
 }
 

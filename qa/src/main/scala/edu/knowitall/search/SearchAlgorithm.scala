@@ -35,4 +35,6 @@ abstract class SearchAlgorithm[State, Action] {
       Node(nextState, Some(edge), cost)
     }
   }
+  
+  def search: List[Node[State, Action]]
 }
