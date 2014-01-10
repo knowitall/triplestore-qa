@@ -163,7 +163,17 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     case parse: ParsedQuestion => {
       val deriv = parse.derivation
       val lexRules = deriv.terminals.map(t => s"parser lexical rule = ${t.rule}")
+      val lexRuleContexts = deriv.terminals.flatMap { t =>
+        val i = t.interval.start
+        val j = t.interval.end
+        val n = parse.question.postags.size
+        val r = t.category.categoryString
+        val leftTag = if (i > 0) parse.question.postags(i-1) else "<s>"
+        val rightTag = if (j < n - 2) parse.question.postags(j+1) else "</s>"
+        Map(s"lex type = $r ^ leftTag = $leftTag" -> 1.0, s"lex type = $r ^ rightTag = $rightTag" -> 1.0)
+      }
       val combRules = deriv.combinators.map(c => s"parser combinator rule = $c")
+      val usesFull = if (deriv.terminals.exists(t => t.rule.toString.startsWith("fullPattern"))) 1.0 else 0.0
       val posLexRules = deriv.terminals.map { t =>
         val i = t.catspan.span
         val tags = parse.postags(i)
@@ -172,7 +182,7 @@ object QaFeatures extends Function[QaStep, SparseVector] {
       val counts = (lexRules ++ combRules ++ posLexRules).groupBy(x => x).map {
         case (name, names) => (name -> names.size.toDouble)
       }
-      SparseVector(counts) + ("num lexical rules" -> lexRules.size / 5.0)
+      SparseVector(counts) + lexRuleContexts + ("num lexical rules" -> lexRules.size / 5.0) + ("uses full parser pattern" -> 1.0)
     }
     case _ => SparseVector.zero
   }
