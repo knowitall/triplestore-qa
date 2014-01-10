@@ -7,11 +7,17 @@ import edu.knowitall.execution.FieldIndex
 import edu.knowitall.execution.TVal
 import edu.knowitall.execution.UnquotedTLiteral
 
-trait Category
+trait Category {
+  def categoryString: String
+}
 
-case class Arg(value: TLiteral) extends Category
+case class Arg(value: TLiteral) extends Category {
+  override val categoryString = "Arg"
+}
 
 case class Unary(freeVar: TVariable, query: ConjunctiveQuery, modFields: Set[FieldIndex] = Set.empty) extends Category {
+  
+  override val categoryString = "Unary"
   
   private def renameFieldIndex(prefix: String, index: FieldIndex) = {
     val i = query.conjuncts.indexWhere(c => c.name == index.conjunctName)
@@ -44,6 +50,8 @@ case object Unary {
 case class Binary(leftVar: TVariable, rightVar: TVariable, 
     query: ConjunctiveQuery, modFields: Set[FieldIndex] = Set.empty) extends Category {
   
+  override val categoryString = "Binary"
+  
   def leftApply(a: Arg): Unary = {
     val newQuery = query.subs(leftVar, a.value)
     Unary(rightVar, newQuery, modFields)
@@ -57,6 +65,8 @@ case class Binary(leftVar: TVariable, rightVar: TVariable,
 }
 
 case class Mod(value: String) extends Category {
+  
+  override val categoryString = "Mod"
   
   private def updateValue(v: TVal) = v match {
     case l: TLiteral => l.update(s"${l.value} $value")
@@ -81,5 +91,6 @@ case class Mod(value: String) extends Category {
 }
     
 object Identity extends Category {
+  override val categoryString = "Identity"
   override def toString = "Identity"
 }
