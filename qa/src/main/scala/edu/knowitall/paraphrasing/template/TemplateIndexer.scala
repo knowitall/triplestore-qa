@@ -13,6 +13,7 @@ import scala.Option.option2Iterable
 import com.typesafe.config.ConfigFactory
 import edu.knowitall.util.MathUtils
 import edu.knowitall.search.qa.QaAction
+import edu.knowitall.triplestore.SolrClient
 
 case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolean = ParaphraseTemplateClient.scale, timeout: Int = ParaphraseTemplateClient.defaultTimeout) {
   
@@ -29,7 +30,8 @@ case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolea
    
   def paraphraseOne(s: String, argType: String = "anything", limit: Int = maxHits) = {
     val typePred = s"""typ:"$argType""""
-    val query = new SolrQuery(s"""${searchField}:"${s}" AND $typePred""")
+    val qStr = s"""${searchField}:"${s}" AND $typePred"""
+    val query = new SolrQuery(SolrClient.fixQuery(qStr))
     query.setRows(maxHits)
     query.addSort(new SortClause("typPmi", SolrQuery.ORDER.desc))
     query.setParam("shards.tolerant", true)
