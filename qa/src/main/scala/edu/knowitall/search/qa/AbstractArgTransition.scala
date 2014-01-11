@@ -11,6 +11,9 @@ import edu.knowitall.tool.postag.StanfordPostagger
 import edu.knowitall.tool.stem.MorphaStemmer
 import edu.knowitall.util.NlpTools
 import edu.knowitall.triplestore.IsaClient
+import java.io.StringWriter
+import java.io.PrintWriter
+import org.slf4j.LoggerFactory
 
 class AbstractArgTransition(
     tokenizer: Tokenizer = NlpTools.tokenizer,
@@ -21,10 +24,22 @@ class AbstractArgTransition(
     multipleParaphrases: Boolean = AbstractArgTransition.multipleParaphrases)
     extends Transition[QaState, QaAction] {
   
-  private final val action = AbstractArgAction() 
+  private final val action = AbstractArgAction()
+  
+  val logger = LoggerFactory.getLogger(this.getClass)
   
   override def apply(s: QaState) = s match {
-    case s: QuestionState if s.question.trim() != "" => abstractArgs(s)
+    case s: QuestionState if s.question.trim() != "" => try {
+      abstractArgs(s)
+    } catch {
+      case e: Throwable => {
+    	val sw = new StringWriter()
+        val pw = new PrintWriter(sw)
+        e.printStackTrace(pw)
+        logger.warn(s"Could not abstract args: $s, got ${sw.toString}")
+        List.empty
+      }
+    }
     case _ => Nil
   }
   

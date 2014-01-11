@@ -15,6 +15,7 @@ import edu.knowitall.search.Node
 import edu.knowitall.search.qa.AnswerState
 import org.slf4j.LoggerFactory
 import edu.knowitall.search.qa.QaBeamSearch
+import edu.knowitall.search.SearchAlgorithm
 
 case class QaModel(transitionModel: QaTransitionModel = QaModel.defaultTransitionModel, 
 				   costModel: QaCostModel = QaModel.defaultCostModel) 

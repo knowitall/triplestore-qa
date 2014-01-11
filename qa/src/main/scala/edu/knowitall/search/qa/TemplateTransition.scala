@@ -23,7 +23,7 @@ class TemplateTransition(client: ParaphraseTemplateClient, skipTimeouts: Boolean
   private def paraphrases(s: String, argTypes: List[String]) = try {
     client.paraphrases(s, argTypes)
   } catch {
-    case e: SolrServerException => if (skipTimeouts) {
+    case e: Throwable => if (skipTimeouts) {
       val sw = new StringWriter()
       val pw = new PrintWriter(sw)
       e.printStackTrace(pw)
