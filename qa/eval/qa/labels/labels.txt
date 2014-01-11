@@ -32378,3 +32378,94 @@ LABEL	false	what be brazil s national color ?	the move
 LABEL	true	when do the laker win the championship ?	1985 nba final
 LABEL	true	what movie do nicole kidman star in ?	dead calm
 LABEL	true	what movie queen latifah be in ?	jungle fever
+LABEL	0	What country did Marco Polo come from?	Next ship
+LABEL	0	In what city is the Millennium Wheel located?	the London Eye
+LABEL	0	What was the date of the 1999 Chicago Marathon?	The village
+LABEL	1	When did France win the World Cup?	1998
+LABEL	0	In what year was the FISA court established?	Androscoggin County
+LABEL	0	How many candidates ran for president?	Green Party
+LABEL	1	What is a group of frogs called?	an 'army
+LABEL	0	What is the average age of a Harley-Davidson rider?	each year
+LABEL	1	What is Jon Bon Jovi's profession?	Composer
+LABEL	0	What was the previous world record time?	Taiwan?s
+LABEL	0	What gasses are in the troposphere?	80 percent
+LABEL	0	How many home runs did Babe Ruth hit?	Toronto
+LABEL	0	Who was Blake accused of murdering?	person
+LABEL	0	When was the Tet offensive in Vietnam?	Any seasoned reporter
+LABEL	0	In what city is Cunard Cruise Lines based?	world
+LABEL	1	What are cigarettes made of?	linen or flax
+LABEL	0	Hazmat stands for what?	time
+LABEL	1	When was penicillin first used?	World War II 1942
+LABEL	0	How fast is alcohol absorbed?	water
+LABEL	0	What does EKG stand for?	the ER or
+LABEL	1	What is the lowest point on earth?	407 meters
+LABEL	1	What year did Padre Pio die?	September 23 , 1968
+LABEL	1	What is strep throat?	Sore Throat
+LABEL	0	What time of year does the peregrine falcon breed?	events
+LABEL	0	Who helped the candidates prepare?	special reports
+LABEL	0	How many girls have played in the Little League World Series?	baseball
+LABEL	0	How old was the youngest president of the United States?	the WHO
+LABEL	0	What was the result of the contempt charges?	a punch
+LABEL	1	What was the species of Winnie the Pooh?	Bear
+LABEL	1	When is Boxing Day?	Boxing Day December
+LABEL	0	How old is Darrell Hammond?	impressions
+LABEL	0	Name people who have won the Iditarod.	the King
+LABEL	1	What are xerophytes?	The predominating vegetation
+LABEL	0	What year was the Fulbright Program established?	2009
+LABEL	0	In what state was the Sago mine?	the Ateneo de Davao University
+LABEL	0	What does NASDAQ stand for?	Black Diamond own full rights
+LABEL	1	What does the acronym FISA stand for?	the Foreign Intelligence Surveillance Act
+LABEL	0	Where was George Foreman born?	Nancy
+LABEL	1	What is the effect of acid rain?	the trees and wildlife
+LABEL	0	In what country is the Bushehr Nuclear Facility located?	a nightmare
+LABEL	0	In what city is the Lebanese Parliament located?	Syria
+LABEL	0	How tall is Tom Cruise?	a good job
+LABEL	0	What continent is India on?	now
+LABEL	0	Who was the coach of the French team?	the semi-finals
+LABEL	0	List Michael Weiss's competitors	Question
+LABEL	0	Where is the Mason/Dixon line?	a lower altitude
+LABEL	0	Who was Mrs. McDougal's lawyer?	course
+LABEL	0	Where was the trial held?	Miami
+LABEL	1	What is a film starring Jude Law?	Repo Men
+LABEL	0	Where was the 8th summit of the OIC held?	Dushanbe
+LABEL	1	What are triglycerides?	a lipid panel
+LABEL	0	How old are the three Great Pyramids?	Atlantis
+LABEL	0	How far away from the sun is Saturn?	the Earth
+LABEL	0	What are the names of Jacques Cousteau's two sons?	a child
+LABEL	1	When did the battle of Iwo Jima take place?	February 1945
+LABEL	0	Name 6 comets.	Bid
+LABEL	0	What year was Sinatra's first performance?	1987
+LABEL	0	What kind of animal was Winnie the Pooh?	The little characters
+LABEL	0	What's the easiest way to remove wallpaper?	problems
+LABEL	0	Who is the CEO of UPS?	Serial entrepreneur Bill Gross
+LABEL	0	What was Meg Ryan's name at birth?	Quaid
+LABEL	0	How high is the Tower of Pisa?	Italy
+LABEL	1	What does LPGA stand for?	the Ladies Professional Golf Association
+LABEL	0	Who was the prosecutor?	The Irish
+LABEL	0	On what date was the first debate?	Hollywood
+LABEL	1	What does NASA stand for?	the North American Squirrel Association
+LABEL	1	Where is Kings Canyon?	Uluru
+LABEL	1	Where is Tornado Alley?	Lubbock
+LABEL	0	Where did he live?	No matter
+LABEL	0	How many people were on board?	Animals
+LABEL	0	What is the fear of lightning called?	Kryptronic Managed Hosting
+LABEL	0	What is a nickname for Mississippi?	the Ojibway name
+LABEL	0	What is the meaning of thalassemia?	three classes
+LABEL	0	What did Alfred Noble invent?	Division Engineer
+LABEL	0	When did he die?	1990
+LABEL	0	How big does a pig get?	constant pain
+LABEL	0	When was the first hair dryer made?	plastic
+LABEL	0	What are the names of the Dixie Chicks?	Vincent
+LABEL	0	Where did he die?	the same day
+LABEL	0	How many states have a lottery?	the Union
+LABEL	0	How many miles long is the Iditarod?	the 2000 race
+LABEL	1	What is the scientific name for leech?	Hirudinea
+LABEL	0	What are the names of the three Great Pyramids?	G. E. Hincaid
+LABEL	1	What year did Ayn Rand die?	March 6 , 1982
+LABEL	1	What does DEA stand for?	Dog Erythrocyte Antigen
+LABEL	0	What kind of plant is kudzu?	Only books
+LABEL	0	What year was Wal-Mart founded?	a February 2004 report
+LABEL	0	In what city was Frank Sinatra born?	New Jersey
+LABEL	0	What are the names of the space shuttles?	a star ship
+LABEL	0	What is naproxen?	The key product
+LABEL	0	What Little League teams have won the World Series?	The Mets
