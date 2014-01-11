@@ -32469,3 +32469,40 @@ LABEL	0	In what city was Frank Sinatra born?	New Jersey
 LABEL	0	What are the names of the space shuttles?	a star ship
 LABEL	0	What is naproxen?	The key product
 LABEL	0	What Little League teams have won the World Series?	The Mets
+LABEL	1	In what city is the Millennium Wheel located?	the South Bank
+LABEL	0	What was the date of the 1999 Chicago Marathon?	Mark
+LABEL	0	In what year was the FISA court established?	Committees
+LABEL	0	What is Jon Bon Jovi's profession?	a quite a few different people
+LABEL	0	What was the previous world record time?	The aim
+LABEL	1	What gasses are in the troposphere?	METHANE
+LABEL	0	In what city is Cunard Cruise Lines based?	the United States
+LABEL	1	Hazmat stands for what?	?hazardous material?
+LABEL	1	When was penicillin first used?	1928
+LABEL	0	How many girls have played in the Little League World Series?	History
+LABEL	1	What was the result of the contempt charges?	a 10-day sentence
+LABEL	0	What was the species of Winnie the Pooh?	Winnie-the-Pooh
+LABEL	0	How old is Darrell Hammond?	No list
+LABEL	0	In what state was the Sago mine?	Dipolog
+LABEL	1	What does NASDAQ stand for?	?National Association
+LABEL	0	How tall is Tom Cruise?	Kevin
+LABEL	0	What continent is India on?	The only majority viewpoint
+LABEL	0	Who was the coach of the French team?	22.15
+LABEL	0	Where is the Mason/Dixon line?	China
+LABEL	0	Where was the trial held?	French
+LABEL	0	What are the names of Jacques Cousteau's two sons?	france
+LABEL	0	What is the population of Mexico?	Ok
+LABEL	0	What was Meg Ryan's name at birth?	The $ 23 dish
+LABEL	1	When did Rachel Carson die?	1861
+LABEL	0	Where did he live?	Christ
+LABEL	0	What is the fear of lightning called?	Scientists
+LABEL	0	What is a nickname for Mississippi?	John Bull
+LABEL	0	What is the meaning of thalassemia?	5-year-old Yasir Shah
+LABEL	0	What did Alfred Noble invent?	the dead
+LABEL	0	How big does a pig get?	Squeeler
+LABEL	1	When was the first hair dryer made?	1920
+LABEL	0	What are the names of the Dixie Chicks?	the highest selling female band
+LABEL	0	Where did he die?	Shakespeare
+LABEL	1	How many states have a lottery?	iowa
+LABEL	0	What kind of plant is kudzu?	half the country
+LABEL	0	What is an earthquake?	More likely
+LABEL	1	What year did Hitler die?	April 1945
