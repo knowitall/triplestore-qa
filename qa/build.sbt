@@ -42,6 +42,8 @@ libraryDependencies += "com.rockymadden.stringmetric" % "stringmetric-core" % "0
 
 libraryDependencies += "org.apache.lucene" % "lucene-analyzers-common" % "4.3.1"
 
+libraryDependencies += "com.google.guava" % "guava" % "16.0-rc1"
+
 libraryDependencies += "jline" % "jline" % "2.11"
 
 libraryDependencies += "edu.washington.cs.knowitall.common-scala" % "common-scala_2.10" % "1.1.1"
