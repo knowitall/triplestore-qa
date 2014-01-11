@@ -11,6 +11,7 @@ trait QuestionState extends QaState {
   def isParaphrased: Boolean
   override def stateType = "QuestionState"
   override def toString = question
+  override def order = 0.0
 }
 
 case object QuestionState {

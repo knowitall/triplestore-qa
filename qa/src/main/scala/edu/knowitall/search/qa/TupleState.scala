@@ -5,4 +5,5 @@ import edu.knowitall.execution.ExecTuple
 case class TupleState(execTuple: ExecTuple) extends QaState {
   override def stateType = "TupleState"
   override def toString = execTuple.toTripleString
+  override def order = 2.0
 }
