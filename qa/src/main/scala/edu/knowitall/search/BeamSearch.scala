@@ -14,42 +14,32 @@ class BeamSearch[State, Action](
   assert(goalSize >= 1)
   
   override val logger = LoggerFactory.getLogger(this.getClass)
-  private var iter = 0
   
-  private def continueSearch = (goals.size < goalSize) && (!beam.isEmpty) && (iter < maxIters)
-
-  private def searchLoop: Set[Node[State, Action]] = {
-    beam.setNodes(rootNode)
-    do {
-      val initialSize = beam.size 
+  override def continueSearch = (goals.size < goalSize) && (!beam.isEmpty) && (iterNum < maxIters)
+  
+  override def searchIter = {
+    val initialSize = beam.size 
         
-      logger.debug("Expanding frontier")
-      val newNodes = beam.nodes.par.flatMap(expand).toList
-      logger.debug(s"Expanded to ${newNodes.size} new nodes")
+    logger.debug("Expanding frontier")
+    val newNodes = beam.nodes.par.flatMap(expand).toList
+    logger.debug(s"Expanded to ${newNodes.size} new nodes")
       
-      logger.debug("Marking nodes as expanded")
-      beam.nodes.foreach(n => expanded.add(n.state))
+    logger.debug("Adding goal nodes")
+    newNodes.filter(isGoal).foreach(addGoalNode)
       
-      logger.debug("Adding goal nodes")
-      newNodes.filter(isGoal).foreach(addGoalNode)
+    logger.debug("Updating new frontier")
+    beam.setNodes(newNodes.filter(n => !isGoal(n) && !haveExpanded(n)))
       
-      logger.debug("Updating new frontier")
-      beam.setNodes(newNodes.filter(n => !isGoal(n) && !haveExpanded(n)))
-      
-      val numGoals = newNodes.count(isGoal(_))
-      logger.debug(s"Done with search iteration $iter")
-      logger.debug(s"Initial frontier size = $initialSize")
-      logger.debug(s"Final frontier size = ${beam.size}")
-      logger.debug(s"Expanded to ${newNodes.size} new nodes")
-      logger.debug(s"Found $numGoals new goal nodes")
-      
-      iter += 1
-      
-    } while (continueSearch)
-    goals.values.toSet
+    val numGoals = newNodes.count(isGoal(_))
+    logger.debug(s"Done with search iteration $iterNum")
+    logger.debug(s"Initial frontier size = $initialSize")
+    logger.debug(s"Final frontier size = ${beam.size}")
+    logger.debug(s"Expanded to ${newNodes.size} new nodes")
+    logger.debug(s"Found $numGoals new goal nodes")
+    
   }
   
-  override def search = searchLoop.toList.sortBy(_.pathCost).take(goalSize)
+  override def initialize = beam.setNodes(rootNode)
 
 }
 

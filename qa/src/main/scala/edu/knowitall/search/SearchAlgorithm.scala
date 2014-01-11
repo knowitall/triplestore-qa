@@ -30,6 +30,10 @@ abstract class SearchAlgorithm[State, Action] {
   
   def isGoal(n: Node[State, Action]) = problem.isGoal(n.state)
   
+  private var iter = 0
+  
+  protected def iterNum = iter
+  
   protected val goals = MutableMap.empty[State, Node[State, Action]]
   
   protected def addGoalNode(node: Node[State, Action]) = {
@@ -42,6 +46,8 @@ abstract class SearchAlgorithm[State, Action] {
   
   protected val expanded = MutableSet.empty[State]
   
+  protected def markExpanded(n: Node[State, Action]) = expanded.add(n.state)
+  
   protected def haveExpanded(n: Node[State, Action]) = expanded.contains(n.state)
   
   def expand(node: Node[State, Action]) = {
@@ -50,9 +56,23 @@ abstract class SearchAlgorithm[State, Action] {
       cost = node.pathCost + problem.cost(node.state, action, nextState)
       edge = Edge(action, node)
     } yield {
+      markExpanded(node)
       Node(nextState, Some(edge), cost)
     }
   }
   
-  def search: List[Node[State, Action]]
+  def searchIter: Unit
+  
+  def continueSearch: Boolean
+  
+  def initialize(): Unit
+  
+  def search = {
+    initialize()
+    do {
+      searchIter
+      iter += 1
+    } while (continueSearch)
+    goals.values.toList.distinct.sortBy(_.pathCost)
+  }
 }
