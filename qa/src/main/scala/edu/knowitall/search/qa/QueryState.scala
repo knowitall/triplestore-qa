@@ -6,5 +6,4 @@ case class QueryState(query: ConjunctiveQuery, reformulated: Boolean = false)
 extends QaState {
   override def stateType = "QueryState"
   override def toString = query.toString
-  override def order = 1.0
 }

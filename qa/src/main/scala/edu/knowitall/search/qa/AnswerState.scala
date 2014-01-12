@@ -5,5 +5,4 @@ import edu.knowitall.execution.ExecTuple
 case class AnswerState(answer: String) extends QaState {
   override def stateType = "AnswerState"
   override def toString = answer
-  override def order = Double.MaxValue
 }

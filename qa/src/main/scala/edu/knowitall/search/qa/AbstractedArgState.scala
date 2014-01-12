@@ -25,5 +25,4 @@ case class AbstractedArgState(
   }
   def arg = tokens.slice(argInterval.start, argInterval.end).mkString(" ")
   override def stateType = "AbstractedArgState"
-  override def order = 0.0
 }
