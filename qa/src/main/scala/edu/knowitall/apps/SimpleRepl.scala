@@ -107,7 +107,7 @@ object SimpleRepl extends App {
     while (true) {
 	  val line = reader.readLine("> ")
 	  try {
-	    val result = repl.eval(line)
+	    val result = if (line.trim != "") repl.eval(line) else ""
   	    println(result)
 	  } catch {
 	    case e: Throwable => {
