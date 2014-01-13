@@ -29,7 +29,7 @@ case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolea
   def paraphrases(s: String, argTypes: List[String] = List("anything"), limit: Int = maxHits): List[TemplatePair] = argTypes.flatMap(paraphraseOne(s, _, limit))
    
   def paraphraseOne(s: String, argType: String = "anything", limit: Int = maxHits) = {
-    val typePred = s"""typ:"$argType""""
+    val typePred = s"""typ_exact:"$argType""""
     val qStr = s"""${searchField}:"${s}" AND $typePred"""
     val query = new SolrQuery(SolrClient.fixQuery(qStr))
     query.setRows(maxHits)
