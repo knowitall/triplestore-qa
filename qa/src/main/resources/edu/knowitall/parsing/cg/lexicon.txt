@@ -33,7 +33,9 @@ conjIdentity @conj := identity
 isThere @be @there := identity
 ignoreTypesIdentity @ignoreTypes := identity
 there @there := identity
-quantIdentity @some := identity
+quantIdentity @quant := identity
+namePrefix <lemma='name'> := identity
+tellMePrefix <lemma='tell'|lemma='give'> <lemma='me'>? := identity
 
 howModWith @how := mod with
 howModFrom @how := mod from
