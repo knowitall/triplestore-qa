@@ -15,11 +15,13 @@ import edu.knowitall.util.MathUtils
 import edu.knowitall.search.qa.QaAction
 import edu.knowitall.triplestore.SolrClient
 import com.clearspring.analytics.stream.membership.BloomFilter
+import edu.knowitall.util.ResourceUtils
 
 case class ParaphraseTemplateClient(solrUrl: String,
     maxHits: Int, scale: Boolean = ParaphraseTemplateClient.scale, 
     timeout: Int = ParaphraseTemplateClient.defaultTimeout,
-    filter: BloomFilter = TemplateBloomFilter.defaultFilter) {
+    filter: BloomFilter = TemplateBloomFilter.defaultFilter,
+    stopTemplates: Set[String] = ParaphraseTemplateClient.stopTemplates) {
   
   def this() = this(ParaphraseTemplateClient.defaultUrl, ParaphraseTemplateClient.defaultMaxHits, ParaphraseTemplateClient.scale)
   
@@ -31,7 +33,7 @@ case class ParaphraseTemplateClient(solrUrl: String,
   val searchField = "template1_exact"
   
   def paraphrases(s: String, argTypes: List[String] = List("anything"), limit: Int = maxHits) = 
-    if (filter.isPresent(s)) {
+    if (filter.isPresent(s) && !stopTemplates.contains(s)) {
       queryParaphrases(s, argTypes, limit)
     } else {
       List.empty
@@ -49,7 +51,7 @@ case class ParaphraseTemplateClient(solrUrl: String,
     query.setParam("shards.tolerant", true)
     val resp = server.query(query)
     logger.debug(s"Found ${resp.getResults().getNumFound()} hits")
-    val pairs = resp.getResults().toList.flatMap(TemplatePair.fromDocument)
+    val pairs = resp.getResults().toList.flatMap(TemplatePair.fromDocument).filterNot(stopTemplates contains _.template2)
     pairs.map(pair => pair.copy(pmi = scalePmi(pair.pmi)))
   } 
     
@@ -66,6 +68,8 @@ case object ParaphraseTemplateClient {
   val defaultUrl = conf.getString("paraphrase.template.url")
   val defaultMaxHits = conf.getInt("paraphrase.template.maxHits")
   val defaultTimeout = conf.getInt("paraphrase.template.timeout")
+  val stopTemplatesPath = conf.getString("paraphrase.template.stopTemplatesPath")
+  lazy val stopTemplates = ResourceUtils.resourceSource(stopTemplatesPath).getLines.toSet
 }
 
 case class TemplatePair(template1: String, template2: String, typ: String, count1: Double, count2: Double, count12: Double, pmi: Double) extends QaAction
