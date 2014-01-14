@@ -33,6 +33,8 @@ adjPrepBinary @be? (<rel>:@adj @prep) := binary $x, $y : ($x, $rel, $y)
 possessiveUnary (<arg>:@np) @pos (<rel>:@np) := unary $x : ($x, $rel, $arg)
 beInstanceOf (<rel>:@be) := binary $x, $y : ($x, instance of, $y)
 
+finalNounHack @aux (<arg>:@np) (<rel>:<pos='NN'>) @punct := unary $x : ($arg, $rel, $x)
+
 whIdentity @wh := identity
 auxIdentity @aux := identity
 punctIdentity @punct := identity
