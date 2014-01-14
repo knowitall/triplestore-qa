@@ -1,0 +1,2 @@
+dropPrep (<body>:@any+) @prep @np (<p>:@punct) := $body $p
+inWhatDate (@inOn @whatwhich @dateWord) (<rest>:@any+) := When $rest
