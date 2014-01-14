@@ -1,7 +1,8 @@
 relSynRule pmi	1
 template pair pmi	1
 answer is linked to freebase	1
-evidence similarity with query	1
+evidence similarity with question	1
+query similarity with question	1
 query relation is light verb	-1
 steps	-1
 question prefix = 'what year' and isDate	1

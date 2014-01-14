@@ -51,7 +51,7 @@ object NlpUtils {
   def isDate(s: String): Boolean = {
     s.split(" ").map(_.toLowerCase()).exists(isDateWord)
   }
-  val qPrefixes = List("what year", "what month", "what day", "who", "when", "why", "what", "when", "where", "how", "be")
+  val qPrefixes = List("what year", "what month", "what day", "who", "when", "why", "what", "when", "where", "how many", "how", "be")
   def questionPrefix(s: String): String = {
     val x = s.toLowerCase()
     qPrefixes.find(prefix => x.startsWith(prefix)) match {
@@ -59,6 +59,9 @@ object NlpUtils {
       case _ => "UNK"
     }
   }
+  
+  val digitPat = "[0-9]".r 
+  def containsNumber(s: String) = digitPat.findFirstIn(s).isDefined
   
   val lightVerbs = Set("be", "is", "are", "was", "were", "have", "has", "had", "go", "take", "can", "do", "does", "did")
   def isLightVerb(s: String) = lightVerbs contains s.toLowerCase()

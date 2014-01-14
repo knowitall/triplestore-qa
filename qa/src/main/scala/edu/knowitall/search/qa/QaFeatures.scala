@@ -113,20 +113,17 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     case _ => SparseVector.zero
   }
   
-  val prefixAndDate = ExecutionFeature { (q: String, etuple: ExecTuple) =>
+  val prefixAndFeat = ExecutionFeature { (q: String, etuple: ExecTuple) =>
+    val a = etuple.answerString
     val prefix = NlpUtils.questionPrefix(q)
-    val isDate = NlpUtils.isDate(etuple.answerString)
-    if (isDate) {
-      Some(s"question prefix = '$prefix' and isDate")
-    } else {
-      None
-    }
-  }
-  
-  val prefixAndShape = ExecutionFeature { (q: String, etuple: ExecTuple) =>
-    val prefix = NlpUtils.questionPrefix(q)
-    val shape = NlpUtils.stringShape(etuple.answerString, 4)
-    s"question prefix = '$prefix' and answer shape = $shape"
+    val isDate = if (NlpUtils.isDate(a)) 1.0 else 0.0
+    val isNumber = if (NlpUtils.containsNumber(a)) 1.0 else 0.0
+    val shape = NlpUtils.stringShape(a, 4)
+    SparseVector(
+      s"question prefix = '$prefix' ^ isDate" -> isDate,
+      s"question prefix = '$prefix' ^ isNumber" -> isNumber,
+      s"question prefix = '$prefix' ^ answer shape = '$shape'" -> 1.0
+    )
   }
   
   val lightVerbRel = QueryFeature { (q: String, query: ConjunctiveQuery) =>
@@ -192,12 +189,11 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 templateFeatures(s) +
 		  				 paraphraseLm(s) +
 		  				 numConjuncts(s) +
-		  				 prefixAndDate(s) +
+		  				 prefixAndFeat(s) +
 		  				 lightVerbRel(s) +
 		  				 relSynFeatures(s) +
 		  				 numSteps(s) + 
 		  				 templateArgFeatures(s) +
-		  				 prefixAndShape(s) +
 		  				 joinSimilarity(s) +
 		  				 paralexScore(s) +
 		  				 parserFeatures(s) + 
