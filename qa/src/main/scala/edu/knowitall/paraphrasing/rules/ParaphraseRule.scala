@@ -7,8 +7,9 @@ import edu.knowitall.repr.sentence.Chunked
 import edu.knowitall.repr.sentence.Sentence
 import edu.knowitall.execution.TVariable
 import edu.knowitall.parsing.cg.LexiconPreprocessor
+import edu.knowitall.search.qa.QaAction
 
-case class ParaphraseRule(name: String, input: SentencePattern, output: String) {
+case class ParaphraseRule(name: String, input: SentencePattern, output: String) extends QaAction {
   private val sp = UnquotedTLiteral(output)
   def apply(s: Sentence with Chunked with Lemmatized) = if (input.matches(s)) {
     val groups = input.groups(s)
@@ -20,6 +21,7 @@ case class ParaphraseRule(name: String, input: SentencePattern, output: String) 
   } else {
     None
   }
+  override def toString = name
 }
 
 case object ParaphraseRule {

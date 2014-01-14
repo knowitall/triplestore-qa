@@ -9,9 +9,10 @@ import edu.knowitall.util.NlpTools
 import scala.io.Source
 
 case class ParaphraseRuleSet(rules: List[ParaphraseRule] = ParaphraseRuleSet.defaultRules) {
-  def apply(s: Sentence with Chunked with Lemmatized) = rules flatMap {
-    rule => rule(s)
-  } 
+  def apply(s: Sentence with Chunked with Lemmatized) = for {
+    r <- rules
+    p <- r(s)
+  } yield (r, p)
 }
 
 case object ParaphraseRuleSet {
@@ -25,13 +26,4 @@ case object ParaphraseRuleSet {
     val lines = Source.fromFile(p, "UTF-8").getLines.toIndexedSeq
     ParaphraseRuleSet(ParaphraseRule.fromStrings(lines).toList)
   }
-}
-
-object Foo extends App {
-  
-  val sent = "In what year did Obama become president?"
-  val s = NlpTools.process(sent)
-  val rs = ParaphraseRuleSet.fromPath(args(0))
-  rs(s) foreach println
-  
 }

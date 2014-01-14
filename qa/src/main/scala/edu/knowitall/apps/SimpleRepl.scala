@@ -20,7 +20,8 @@ class SimpleRepl {
     "parser" -> parserEval _,
     "query" -> queryEval _,
     "paraphrase" -> paraphraseEval _,
-    "relsyn" -> relSynEval _
+    "relsyn" -> relSynEval _,
+    "pararules" -> paraphraseRuleEval _
   )
   val parserRepl = new CgParserRepl
   val exec = model.transitionModel.executeTransition
@@ -28,6 +29,7 @@ class SimpleRepl {
   val templ = model.transitionModel.templateTransition
   val relSyn = model.transitionModel.relSynTransition
   val isaRelSyn = model.transitionModel.isaSynTransition
+  val paraRule = model.transitionModel.paraRuleTransition
   val cost = model.costModel
   
   private def qaEval(input: String) = {
@@ -63,6 +65,13 @@ class SimpleRepl {
     Tabulator.triplesToTable(tuples.toList)
   }
   
+  private def paraphraseRuleEval(input: String) = {
+    val qState = QuestionState(input)
+    val result = paraRule(qState) map {
+      case (action, state: QuestionState) => s"$action => ${state.question}"
+    }
+    result.mkString("\n")
+  }
   
   private def paraphraseEval(input: String) = {
     val qState = QuestionState(input)
