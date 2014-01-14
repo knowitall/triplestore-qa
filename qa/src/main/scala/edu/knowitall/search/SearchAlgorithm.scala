@@ -3,6 +3,8 @@ package edu.knowitall.search
 import org.slf4j.LoggerFactory
 import scala.collection.mutable.{Map => MutableMap}
 import scala.collection.mutable.{Set => MutableSet}
+import edu.knowitall.util.TimingUtils
+import com.typesafe.config.ConfigFactory
 
 case class Node[State, Action](
     state: State, 
@@ -67,12 +69,22 @@ abstract class SearchAlgorithm[State, Action] {
   
   def initialize(): Unit
   
-  def search = {
+  private def runSearch = {
     initialize()
     do {
       searchIter
       iter += 1
-    } while (continueSearch)
+    } while (continueSearch)    
+  }
+  
+  def search = {
+    val time = SearchAlgorithm.defaultMaxSearchTimeSec * 1000
+    TimingUtils.runWithTimeout(time) { runSearch }
     goals.values.toList.distinct.sortBy(_.pathCost)
   }
+}
+
+object SearchAlgorithm {
+  val conf = ConfigFactory.load()
+  val defaultMaxSearchTimeSec = conf.getLong("search.maxSearchTimeSec") 
 }
