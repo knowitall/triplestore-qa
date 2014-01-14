@@ -33,3 +33,5 @@ type <lemma='kind'|lemma='type'|lemma='sort'|lemma='example'|lemma='form'>
 of <lemma='of'>
 punct <pos=".">
 there <lemma='there'>
+dateWord <lemma='month'|lemma='day'|lemma='date'|lemma='year'>
+any <lemma=/.*/>
