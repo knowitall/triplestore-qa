@@ -9,7 +9,9 @@ class BeamSearch[State, Action](
     override val problem: SearchProblem[State, Action],
     beam: Beam[State, Action],
     goalSize: Int = BeamSearch.defaultGoalSize,
-    maxIters: Int = BeamSearch.defaultMaxIters) extends SearchAlgorithm[State, Action] {
+    maxIters: Int = BeamSearch.defaultMaxIters,
+    expandPerIter: Int = BeamSearch.defaultExpandPerIter) 
+    extends SearchAlgorithm[State, Action] {
   
   assert(goalSize >= 1)
   
@@ -21,14 +23,15 @@ class BeamSearch[State, Action](
     val initialSize = beam.size 
         
     logger.debug("Expanding frontier")
-    val newNodes = beam.nodes.par.flatMap(expand).toList
+    val (toExpand, toKeep) = beam.nodes.splitAt(expandPerIter)
+    val newNodes = toExpand.flatMap(expand).toList
     logger.debug(s"Expanded to ${newNodes.size} new nodes")
       
     logger.debug("Adding goal nodes")
     newNodes.filter(isGoal).foreach(addGoalNode)
       
     logger.debug("Updating new frontier")
-    beam.setNodes(newNodes.filter(n => !isGoal(n) && !haveExpanded(n)))
+    beam.setNodes(newNodes.filter(n => !isGoal(n) && !haveExpanded(n)) ++ toKeep)
       
     val numGoals = newNodes.count(isGoal(_))
     logger.debug(s"Done with search iteration $iterNum")
@@ -47,4 +50,5 @@ object BeamSearch {
   val conf = ConfigFactory.load()
   val defaultMaxIters = conf.getInt("search.maxIters")
   val defaultGoalSize = conf.getInt("search.goalSize")
+  val defaultExpandPerIter = conf.getInt("search.expandPerIter")
 }
