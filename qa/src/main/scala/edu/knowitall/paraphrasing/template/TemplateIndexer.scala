@@ -14,8 +14,12 @@ import com.typesafe.config.ConfigFactory
 import edu.knowitall.util.MathUtils
 import edu.knowitall.search.qa.QaAction
 import edu.knowitall.triplestore.SolrClient
+import com.clearspring.analytics.stream.membership.BloomFilter
 
-case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolean = ParaphraseTemplateClient.scale, timeout: Int = ParaphraseTemplateClient.defaultTimeout) {
+case class ParaphraseTemplateClient(solrUrl: String,
+    maxHits: Int, scale: Boolean = ParaphraseTemplateClient.scale, 
+    timeout: Int = ParaphraseTemplateClient.defaultTimeout,
+    filter: BloomFilter = TemplateBloomFilter.defaultFilter) {
   
   def this() = this(ParaphraseTemplateClient.defaultUrl, ParaphraseTemplateClient.defaultMaxHits, ParaphraseTemplateClient.scale)
   
@@ -26,7 +30,14 @@ case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolea
   server.setMaxRetries(1)
   val searchField = "template1_exact"
   
-  def paraphrases(s: String, argTypes: List[String] = List("anything"), limit: Int = maxHits): List[TemplatePair] = {
+  def paraphrases(s: String, argTypes: List[String] = List("anything"), limit: Int = maxHits) = 
+    if (filter.isPresent(s)) {
+      queryParaphrases(s, argTypes, limit)
+    } else {
+      List.empty
+    }
+    
+  def queryParaphrases(s: String, argTypes: List[String] = List("anything"), limit: Int = maxHits): List[TemplatePair] = {
     val typePred = { argTypes map { t =>
       val esc = SolrClient.escape(t)
       s"""typ_exact:"${t}""""
@@ -34,7 +45,7 @@ case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolea
     val qStr = s"""${searchField}:"${s}" AND ($typePred)"""
     val query = new SolrQuery(SolrClient.fixQuery(qStr))
     query.setRows(maxHits)
-    query.addSort(new SortClause("typPmi", SolrQuery.ORDER.desc))
+    query.addSort(new SortClause("pmi", SolrQuery.ORDER.desc))
     query.setParam("shards.tolerant", true)
     val resp = server.query(query)
     logger.debug(s"Found ${resp.getResults().getNumFound()} hits")
