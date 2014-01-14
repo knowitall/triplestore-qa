@@ -26,21 +26,21 @@ case class ParaphraseTemplateClient(solrUrl: String, maxHits: Int, scale: Boolea
   server.setMaxRetries(1)
   val searchField = "template1_exact"
   
-  def paraphrases(s: String, argTypes: List[String] = List("anything"), limit: Int = maxHits): List[TemplatePair] = argTypes.flatMap(paraphraseOne(s, _, limit))
-   
-  def paraphraseOne(s: String, argType: String = "anything", limit: Int = maxHits) = {
-    val typePred = s"""typ_exact:"$argType""""
-    val qStr = s"""${searchField}:"${s}" AND $typePred"""
+  def paraphrases(s: String, argTypes: List[String] = List("anything"), limit: Int = maxHits): List[TemplatePair] = {
+    val typePred = { argTypes map { t =>
+      val esc = SolrClient.escape(t)
+      s"""typ_exact:"${t}""""
+    } }.mkString(s" OR ")
+    val qStr = s"""${searchField}:"${s}" AND ($typePred)"""
     val query = new SolrQuery(SolrClient.fixQuery(qStr))
     query.setRows(maxHits)
     query.addSort(new SortClause("typPmi", SolrQuery.ORDER.desc))
     query.setParam("shards.tolerant", true)
-    logger.debug(s"Sending query: ${query.toString()}")
     val resp = server.query(query)
     logger.debug(s"Found ${resp.getResults().getNumFound()} hits")
     val pairs = resp.getResults().toList.flatMap(TemplatePair.fromDocument)
     pairs.map(pair => pair.copy(pmi = scalePmi(pair.pmi)))
-  }
+  } 
     
   private def scalePmi(x: Double): Double = 
     if (scale) MathUtils.clipScale(x, ParaphraseTemplateClient.minPmi, ParaphraseTemplateClient.maxPmi)
@@ -57,14 +57,14 @@ case object ParaphraseTemplateClient {
   val defaultTimeout = conf.getInt("paraphrase.template.timeout")
 }
 
-case class TemplatePair(template1: String, template2: String, typ: String, count1: Double, count2: Double, count12: Double, typCount12: Double, typPmi: Double, pmi: Double) extends QaAction
+case class TemplatePair(template1: String, template2: String, typ: String, count1: Double, count2: Double, count12: Double, pmi: Double) extends QaAction
 
 case object TemplatePair {
     
   def fromString(s: String): Option[TemplatePair] = {
     s.split("\t", 9) match {
-      case Array(t1, t2, typ, count1, count2, typCount12, count12, typPmi, pmi) =>
-         Some(TemplatePair(t1, t2, typ, count1.toDouble, count2.toDouble, typCount12.toDouble, count12.toDouble, typPmi.toDouble, pmi.toDouble))
+      case Array(t1, t2, typ, count1, count2, count12, pmi) =>
+         Some(TemplatePair(t1, t2, typ, count1.toDouble, count2.toDouble, count12.toDouble, pmi.toDouble))
       case _ => None
     }
   }
@@ -74,12 +74,10 @@ case object TemplatePair {
     val typobj: Any = doc.getFieldValue("typ")
     val count1obj: Any = doc.getFieldValue("count1")
     val count2obj: Any = doc.getFieldValue("count2")
-    val typCount12Obj: Any = doc.getFieldValue("typCount12")
     val count12Obj: Any = doc.getFieldValue("count12")
-    val typPmiObj: Any = doc.getFieldValue("typPmi")
     val pmiObj: Any = doc.getFieldValue("pmi")
-    (t1obj, t2obj, typobj, count1obj, count2obj, typCount12Obj, count12Obj, typPmiObj, pmiObj) match {
-      case (t1: String, t2: String, typ: String, count1: Float, count2: Float, typCount12: Float, count12: Float, typPmi: Float, pmi: Float) => Some(TemplatePair(t1, t2, typ, count1, count2, typCount12, count12, typPmi, pmi))
+    (t1obj, t2obj, typobj, count1obj, count2obj, count12Obj, pmiObj) match {
+      case (t1: String, t2: String, typ: String, count1: Float, count2: Float, count12: Float, pmi: Float) => Some(TemplatePair(t1, t2, typ, count1, count2, count12, pmi))
       case _ => None
     }
   }
@@ -96,9 +94,7 @@ class TemplateIndexer(server: SolrServer) {
     doc.addField("typ", pair.typ)
     doc.addField("count1", pair.count1)
     doc.addField("count2", pair.count2)
-    doc.addField("typCount12", pair.typCount12)
     doc.addField("count12", pair.count12)
-    doc.addField("typPmi", pair.typPmi)
     doc.addField("pmi", pair.pmi)
     doc.addField("id", (pair.template1 + pair.template2 + pair.typ).hashCode.toString)
     doc

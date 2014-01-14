@@ -88,11 +88,9 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   
   val templateFeatures = TemplatePairFeature { (q: String, pair: TemplatePair) =>
     SparseVector("template pair pmi" -> pair.pmi,
-    			 "template pair typPmi" -> pair.typPmi,
     			 "template pair count1" -> pair.count1,
     			 "template pair count2" -> pair.count2,
     			 "template pair count12" -> pair.count12,
-    			 "template pair typCount12" -> pair.typCount12,
     			 "template is typed" -> {if (pair.typ == "anything") 0.0 else 1.0}) 
   }
   
