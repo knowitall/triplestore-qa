@@ -8,7 +8,7 @@ det <pos='DT'|pos='PRP$'>
 the <lemma='the'>
 num <pos='CD'>
 conj <pos='CC'|lemma='and'|lemma='but'>
-wh <lemma='who'|lemma='what'|lemma='where'|lemma='when'|lemma='why'|lemma='how'>
+wh <lemma='who'|lemma='what'|lemma='where'|lemma='when'|lemma='why'> | (<lemma='how'> <lemma='many'|lemma='much'>)
 whowhat <lemma='what'|lemma='who'>
 whatwhich <lemma='what'|lemma='which'>
 what <lemma='what'>
@@ -36,3 +36,4 @@ there <lemma='there'>
 dateWord <lemma='month'|lemma='day'|lemma='date'|lemma='year'>
 any <lemma=/.*/>
 inOn <lemma='in'|lemma='on'>
+have <lemma='have'>

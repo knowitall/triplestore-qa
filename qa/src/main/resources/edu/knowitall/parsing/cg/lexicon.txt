@@ -12,6 +12,8 @@ fullPatternProperty @what @be @det (<rel>:@np) @of (<arg>:@np) := unary $x : ($a
 fullPatternDefn @whowhat @be (<arg>:@np) := unary $x : ($arg, instance of, $x)
 fullPatternRelType @whatwhich (<type>:@np) @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel $type, $x)
 fullPatternCop @whatwhich (<rel>:@np) @be (<arg>:@np) := unary $x : ($arg, $rel, $x)
+fullPatternHaveProp @wh (<rel>:@np) @aux (<arg>:@np) @have := unary $x : ($arg, $rel, $x)
+fullPatternVerbProp @wh (<rel>:@np) @aux (<arg>:@np) @vp := unary $x : ($arg, $rel, $x)
 
 npArg (<arg>:@np) := argument $arg
 npTitle @the @commonNoun (<arg>:@noun) := argument $arg
@@ -35,9 +37,9 @@ ignoreTypesIdentity @ignoreTypes := identity
 there @there := identity
 quantIdentity @quant := identity
 
-howModWith @how := mod with
-howModFrom @how := mod from
-whereModIn @where := mod in
-whenModIn @when := mod in
-whenModOn @when := mod on
-prepMod (<p>:@prep) := mod $p
+#howModWith @how := mod with
+#howModFrom @how := mod from
+#whereModIn @where := mod in
+#whenModIn @when := mod in
+#whenModOn @when := mod on
+#prepMod (<p>:@prep) := mod $p
