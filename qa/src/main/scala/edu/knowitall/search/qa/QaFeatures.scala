@@ -52,11 +52,11 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   val querySimilarity = ExecutionFeature { (q: String, etuple: ExecTuple) =>
     val query = etuple.query
     val tuple = etuple.tuple
-    val relSim = QueryTupleSimilarity.relSimilarity(query, tuple)
-    val argSim = QueryTupleSimilarity.argSimilarity(query, tuple)
+    //val relSim = QueryTupleSimilarity.relSimilarity(query, tuple)
+    //val argSim = QueryTupleSimilarity.argSimilarity(query, tuple)
     val quesSim = QueryTupleSimilarity.questionQuerySimilarity(query, q)
-    SparseVector("evidence similarity with query (rels only)" -> relSim,
-    			 "evidence similarity with query (args only)" -> argSim,
+    val quesEvSim = QueryTupleSimilarity.questionTupleSimilarity(q, tuple)
+    SparseVector("evidence similarity with question" ->quesEvSim,
     			 "query similarity with question" -> quesSim)
   }
   

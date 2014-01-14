@@ -52,6 +52,17 @@ object QueryTupleSimilarity {
     normalize(values.flatMap(tokenize))
   }
   
+  def tupleWordsFields(t: Tuple, fields: Set[Search.Field]) = {
+    val values = for {
+      (a, v) <- t.attrs collect {
+        case (a: String, v: String) => (a, v)
+      }
+      f <- fields
+      if a.endsWith("." + f.name)
+    } yield v
+    normalize(values.toList.distinct.flatMap(tokenize))
+  }
+  
   def queryFieldWords(q: ConjunctiveQuery, fields: Set[Search.Field]) = {
     val values = for {
       c <- q.conjuncts
@@ -78,6 +89,12 @@ object QueryTupleSimilarity {
     val queryws = queryWords(query)
     val quesws = normalize(tokenize(ques))
     jaccard(queryws, quesws)
+  }
+  
+  def questionTupleSimilarity(ques: String, t: Tuple) = {
+    val quesws = normalize(tokenize(ques))
+    val twords = tupleWordsFields(t, Set(Search.arg1, Search.rel, Search.arg2))
+    jaccard(quesws, twords)
   }
 
 
