@@ -60,7 +60,7 @@ object NlpUtils {
     }
   }
   
-  val lightVerbs = Set("be", "is", "are", "was", "were", "have", "has", "had", "go", "take")
+  val lightVerbs = Set("be", "is", "are", "was", "were", "have", "has", "had", "go", "take", "can")
   def isLightVerb(s: String) = lightVerbs contains s.toLowerCase()
   
   def serialize(sent: Seq[Lemmatized[ChunkedToken]]) = {

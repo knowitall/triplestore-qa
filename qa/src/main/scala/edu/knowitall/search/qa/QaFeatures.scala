@@ -13,6 +13,7 @@ import com.rockymadden.stringmetric.StringMetric
 import edu.knowitall.execution.Tuple
 import edu.knowitall.paralex.ParalexRecord
 import edu.knowitall.parsing.cg.ParsedQuestion
+import edu.knowitall.paraphrasing.rules.ParaphraseRule
 
 object QaFeatures extends Function[QaStep, SparseVector] {
   
@@ -157,6 +158,11 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     case _ => SparseVector.zero
   }
   
+  val paraRuleFeatures = (step: QaStep) => step.action match {
+    case r: ParaphraseRule => SparseVector(r.name -> 1.0)
+    case _ => SparseVector.zero
+  }
+  
   val parserFeatures = (step: QaStep) => step.action match {
     case parse: ParsedQuestion => {
       val deriv = parse.derivation
@@ -175,10 +181,10 @@ object QaFeatures extends Function[QaStep, SparseVector] {
       val posLexRules = deriv.terminals.map { t =>
         val i = t.catspan.span
         val tags = parse.postags(i)
-        s"parser lexical rule (postags) = ${t.rule}($tags)"
+        s"lex category (postags) = ${t.catspan.category.categoryString}($tags)"
       }
       val counts = (lexRules ++ combRules ++ posLexRules).groupBy(x => x).map {
-        case (name, names) => (name -> names.size.toDouble)
+        case (name, names) => (name -> 1.0)
       }
       SparseVector(counts) + lexRuleContexts + ("num lexical rules" -> lexRules.size / 5.0) + ("uses full parser pattern" -> 1.0)
     }
@@ -200,7 +206,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 prefixAndShape(s) +
 		  				 joinSimilarity(s) +
 		  				 paralexScore(s) +
-		  				 parserFeatures(s)
+		  				 parserFeatures(s) + 
+		  				 paraRuleFeatures(s)
   
 }
 
