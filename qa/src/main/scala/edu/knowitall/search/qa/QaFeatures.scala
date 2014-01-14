@@ -144,12 +144,6 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   }
   
   val relSynFeatures = (step: QaStep) => step.action match {
-    case rule: RelSynRule => {
-      val passivized = rule.rel2 == rule.rel1 + " by" && rule.inverted
-      val unpassivized = rule.rel1 == rule.rel2 + " by" && rule.inverted
-      val result = if (passivized | unpassivized) 1.0 else 0.0
-      SparseVector("relSynRule pmi" -> rule.pmi, "relSynRule passivized" -> result)
-    }
     case _ => SparseVector.zero
   }
   
@@ -186,7 +180,7 @@ object QaFeatures extends Function[QaStep, SparseVector] {
       val counts = (lexRules ++ combRules ++ posLexRules).groupBy(x => x).map {
         case (name, names) => (name -> 1.0)
       }
-      SparseVector(counts) + lexRuleContexts + ("num lexical rules" -> lexRules.size / 5.0) + ("uses full parser pattern" -> 1.0)
+      SparseVector(counts) + lexRuleContexts + ("num lexical rules" -> lexRules.size / 5.0) + ("uses full parser pattern" -> usesFull)
     }
     case _ => SparseVector.zero
   }

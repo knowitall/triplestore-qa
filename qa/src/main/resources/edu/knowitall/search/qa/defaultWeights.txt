@@ -1,7 +1,6 @@
 relSynRule pmi	1
 template pair pmi	1
 answer is linked to freebase	1
-paraphrase lm	1
 evidence similarity with query	1
 query relation is light verb	-1
 steps	-1
@@ -9,4 +8,4 @@ question prefix = 'what year' and isDate	1
 question prefix = 'when' and isDate	1
 question prefix = 'where' and isDate	-1
 num lexical rules	-1
-parser combinator rule = UnaryIdentity	-1
+uses full parser pattern	1
