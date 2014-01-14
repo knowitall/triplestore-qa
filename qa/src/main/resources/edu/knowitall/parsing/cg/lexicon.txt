@@ -23,6 +23,7 @@ reverbBinaryNoPrep (<rel>:@reverbNoPrep) := binary $x, $y : ($x, $rel, $y)
 nounPrepBinary (<rel>:@np @prep) := binary $x, $y : ($x, $rel, $y)
 adjPrepBinary @be? (<rel>:@adj @prep) := binary $x, $y : ($x, $rel, $y)
 possessiveUnary (<arg>:@np) @pos (<rel>:@np) := unary $x : ($x, $rel, $arg)
+beInstanceOf (<rel>:@be) := binary $x, $y : ($x, instance of, $y)
 
 whIdentity @wh := identity
 auxIdentity @aux := identity
@@ -32,6 +33,7 @@ conjIdentity @conj := identity
 isThere @be @there := identity
 ignoreTypesIdentity @ignoreTypes := identity
 there @there := identity
+quantIdentity @some := identity
 
 howModWith @how := mod with
 howModFrom @how := mod from
