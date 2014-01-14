@@ -1,6 +1,7 @@
 package edu.knowitall.util
 
 import java.io.InputStream
+import scala.io.Source
 
 object ResourceUtils {
   def resource(path: String): InputStream = {
@@ -11,4 +12,5 @@ object ResourceUtils {
       throw new IllegalStateException(s"could not load resource $path")
     }
   }
+  def resourceSource(path: String) = Source.fromInputStream(resource(path), "UTF-8")
 }
