@@ -38055,3 +38055,31 @@ LABEL	1	What kind of plant is kudzu?	ginger root
 LABEL	0	What is naproxen?	spina bifida
 LABEL	1	What is an earthquake?	soil liquefaction
 LABEL	0	What is its popular name?	Baking soda
+LABEL	0	Where was the Miss Universe 2000 contest held?	Las Vegas
+LABEL	0	Which high school did she go to?	Shirley Lyner
+LABEL	1	What are cigarettes made of?	4,000 chemicals
+LABEL	0	Who helped the candidates prepare?	statements
+LABEL	1	What are xerophytes?	Zonker cactus
+LABEL	0	What year was the Fulbright Program established?	study
+LABEL	0	How tall is Tom Cruise?	The Last Samurai
+LABEL	0	What continent is India on?	18 languages
+LABEL	0	What year was the U.S. Mint established?	1968
+LABEL	1	Who was the coach of the French team?	Jean-Claude Skrela
+LABEL	0	Name 6 comets.	Tomcat
+LABEL	0	On what date was the first debate?	Friday
+LABEL	0	How many states have a lottery?	Weather
+LABEL	0	How many miles long is the Iditarod?	Willows
+LABEL	0	What year did Ayn Rand die?	20 year
+LABEL	1	What kind of plant is kudzu?	Pueraria lobata
+LABEL	1	What is a group of frogs called?	an army of frogs
+LABEL	1	What gasses are in the troposphere?	Greenhouse gases
+LABEL	0	How fast is alcohol absorbed?	higher prices
+LABEL	0	Who helped the candidates prepare?	better
+LABEL	1	What are triglycerides?	Traditional metabolic biomarkers
+LABEL	1	Name 6 comets.	Lucifers Hammer
+LABEL	0	On what date was the first debate?	Monday
+LABEL	1	What is nanotechnology?	less-traditional industry
+LABEL	0	How many people were on board?	Overnight
+LABEL	0	How many states have a lottery?	Market
+LABEL	0	In what city was Frank Sinatra born?	Elvis Presley
+LABEL	1	What is naproxen?	anti-inflammatory meds
