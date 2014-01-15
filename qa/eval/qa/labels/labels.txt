@@ -38083,3 +38083,4 @@ LABEL	0	How many people were on board?	Overnight
 LABEL	0	How many states have a lottery?	Market
 LABEL	0	In what city was Frank Sinatra born?	Elvis Presley
 LABEL	1	What is naproxen?	anti-inflammatory meds
+LABEL	0	What are the names of the space shuttles?	American school students
