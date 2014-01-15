@@ -13,6 +13,7 @@ import edu.knowitall.repr.sentence.Lemmatized
 import edu.knowitall.repr.sentence.Chunked
 import edu.knowitall.repr.sentence.Sentence
 import edu.knowitall.collection.immutable.Interval
+import edu.knowitall.execution.TLiteral
 
 case class ParsedQuestion(question: Sentence with Chunked with Lemmatized,
     query: ConjunctiveQuery, derivation: Derivation) extends QaAction {
@@ -28,7 +29,8 @@ case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon,
 					combinators: IndexedSeq[Combinator] = CgParser.defaultCombinators,
 					chunker: Chunker = NlpTools.dummyChunker,
 					lemmatizer: Stemmer = NlpTools.stemmer,
-					maxConjuncts: Int = CgParser.defaultMaxConjuncts) {
+					maxConjuncts: Int = CgParser.defaultMaxConjuncts,
+					outputFilter: ParsedQuestion => Boolean = CgParser.defaultOutputFilter) {
  
   private def process(s: String) = NlpTools.process(s, chunker, lemmatizer)
  
@@ -48,7 +50,9 @@ case class CgParser(lexicon: IndexedSeq[LexicalRule] = CgParser.defaultLexicon,
         case u: Unary => Some(u.query)
         case _ => None
       }
-      if query.conjuncts.size <= maxConjuncts
+      output = ParsedQuestion(sent, query, derivation)
+      if output.query.conjuncts.size <= maxConjuncts
+      if outputFilter(output)
     } yield ParsedQuestion(sent, query, derivation)
   }
   
@@ -75,5 +79,13 @@ case object CgParser {
   }
   
   lazy val defaultMaxConjuncts = conf.getInt("parsing.cg.maxConjuncts")
+  
+  lazy val defaultOutputFilter = {
+    val relIn = ResourceUtils.resource("/edu/knowitall/parsing/cg/relFilters.txt")
+    val rels = ParserRelFilter.fromInputStream(relIn)
+    val argIn = ResourceUtils.resource("/edu/knowitall/parsing/cg/argFilters.txt")
+    val args = ParserArgFilter.fromInputStream(argIn)
+    (rels ++ args).reduce((a, b) => (x => a(x) && b(x)))
+  }
   
 }
