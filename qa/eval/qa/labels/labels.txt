@@ -38104,3 +38104,63 @@ LABEL	0	What continent is India on?	Sri Lanka
 LABEL	0	When did the battle of Iwo Jima take place?	place
 LABEL	0	Who took over the House of Chanel in 1983?	Yitzhak Rabin
 LABEL	1	What is a film starring Jude Law?	HOLIDAY
+LABEL	0	In what year was the FISA court established?	a time
+LABEL	0	Who is a German philosopher?	author
+LABEL	0	Which high school did she go to?	wonderful singer.
+LABEL	1	What are cigarettes made of?	tobacco
+LABEL	1	What company did Harley-Davidson buy out?	MVAE
+LABEL	0	When was penicillin first used?	syphilis
+LABEL	1	How fast is alcohol absorbed?	an hour
+LABEL	0	What books did Franz Kafka author?	William Wilson
+LABEL	0	Who were victims of the disaster?	Cuba
+LABEL	0	What island did the U.S. gain after the Spanish American war?	Missouri Key
+LABEL	1	What is strep throat?	throat ailment
+LABEL	0	What time of year does the peregrine falcon breed?	season
+LABEL	0	When was Prince Charles born?	London
+LABEL	0	When is Boxing Day?	Sunday
+LABEL	0	How old is Darrell Hammond?	Mia Hammond
+LABEL	1	Name people who have won the Iditarod.	Dallas Seavey
+LABEL	1	What are xerophytes?	traditional plant
+LABEL	0	Where do hyenas live?	side
+LABEL	0	In what state was the Sago mine?	horticulture
+LABEL	0	How long would it take to get from Earth to Mars?	Palestine
+LABEL	0	What U.S. Medal of Honor recipients are in Congress?	Soldier
+LABEL	1	What does the acronym FISA stand for?	Foreign Intelligence Surveillance Act
+LABEL	0	Where was George Foreman born?	London
+LABEL	0	What is the effect of acid rain?	Scientists
+LABEL	1	In what country is the Bushehr Nuclear Facility located?	Iran
+LABEL	0	In what city is the Lebanese Parliament located?	change
+LABEL	0	How tall is Tom Cruise?	Tom Cruise Cannot Be Stopped
+LABEL	0	When was the NFL established?	Youtube
+LABEL	0	Who was the coach of the French team?	GP racing
+LABEL	1	Where is the Mason/Dixon line?	Marydel
+LABEL	0	Where was the trial held?	order
+LABEL	1	What are triglycerides?	obesity-related variable
+LABEL	0	When did the battle of Iwo Jima take place?	the United States
+LABEL	0	What is the population of Mexico?	Indonesia
+LABEL	0	What kind of animal was Winnie the Pooh?	rabbits
+LABEL	0	When was George Foreman born?	London
+LABEL	0	Who was president in 1913?	the League
+LABEL	0	Who is the CEO of UPS?	Sustainable Development
+LABEL	0	On what date was the first debate?	ABC
+LABEL	1	What is nanotechnology?	preface innovative technology
+LABEL	0	What does NASA stand for?	Need
+LABEL	0	When did Rachel Carson die?	cancer
+LABEL	0	Where is Kings Canyon?	winter
+LABEL	0	Where is Tornado Alley?	the center
+LABEL	0	How many people were on board?	customers
+LABEL	0	What other products does Harley-Davidson produce?	products
+LABEL	0	When did he die?	Ireland
+LABEL	0	How big does a pig get?	market
+LABEL	1	What country did Catherine the Great rule?	Russia
+LABEL	0	Where did he die?	Ireland
+LABEL	0	What is the Jewish alphabet called?	digits
+LABEL	0	How many states have a lottery?	marketing
+LABEL	0	How many miles long is the Iditarod?	Bay Village
+LABEL	0	What year did Ayn Rand die?	lung cancer
+LABEL	0	What kind of plant is kudzu?	kudzu
+LABEL	1	What are the names of the space shuttles?	Enterprise
+LABEL	1	What is naproxen?	over-the-counter medicine
+LABEL	1	Who painted the ceiling of the Sistine Chapel?	?Michelangelo
+LABEL	0	What year did Hitler die?	Germany
+LABEL	0	What is its popular name?	Opel
