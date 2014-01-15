@@ -38089,3 +38089,7 @@ LABEL	0	Who helped the candidates prepare?	food
 LABEL	0	What was the result of the contempt charges?	Collection accounts
 LABEL	0	What continent is India on?	Russia
 LABEL	0	Who is the CEO of UPS?	the player
+LABEL	0	List Michael Weiss's competitors	Last year's
+LABEL	0	What is a nickname for Mississippi?	state basic
+LABEL	0	How big does a pig get?	luck
+LABEL	0	Where is the Shawnee National Forest?	Buchanan Ltd
