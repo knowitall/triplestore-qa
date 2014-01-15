@@ -38093,3 +38093,14 @@ LABEL	0	List Michael Weiss's competitors	Last year's
 LABEL	0	What is a nickname for Mississippi?	state basic
 LABEL	0	How big does a pig get?	luck
 LABEL	0	Where is the Shawnee National Forest?	Buchanan Ltd
+LABEL	0	What year did Hitler die?	unemployment
+LABEL	0	Who took over the House of Chanel in 1983?	housing
+LABEL	0	Where is Tornado Alley?	The Henry Ford IMAX Theatre
+LABEL	0	What is an earthquake?	real possibility
+LABEL	1	What are cigarettes made of?	various substances
+LABEL	0	What are the names of the space shuttles?	Obama
+LABEL	0	What are the names of the space shuttles?	NASA
+LABEL	0	What continent is India on?	Sri Lanka
+LABEL	0	When did the battle of Iwo Jima take place?	place
+LABEL	0	Who took over the House of Chanel in 1983?	Yitzhak Rabin
+LABEL	1	What is a film starring Jude Law?	HOLIDAY
