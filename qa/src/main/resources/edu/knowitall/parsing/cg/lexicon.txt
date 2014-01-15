@@ -18,7 +18,6 @@ fullPatternDefn @whowhat @be (<arg>:@np) := unary $x : ($arg, instance of, $x)
 fullPatternRelType @whatwhich (<type>:@np) @aux (<arg>:@np) (<rel>:@reverb) := unary $x : ($arg, $rel $type, $x)
 fullPatternCop @whatwhich (<rel>:@np) @be (<arg>:@np) := unary $x : ($arg, $rel, $x)
 fullPatternHaveProp @wh (<rel>:@np) @aux (<arg>:@np) @have := unary $x : ($arg, $rel, $x)
-fullPatternVerbProp @wh (<rel>:@np) @aux (<arg>:@np) @vp := unary $x : ($arg, $rel, $x)
 fullPatternPoss @wh @be (<arg>:@np) @pos (<rel>:@np) := unary $x : ($arg, $rel, $x)
 
 npArg (<arg>:@np) := argument $arg
