@@ -37953,3 +37953,105 @@ LABEL	true	when do the laker win the championship ?	1985 nba final
 LABEL	true	what movie do nicole kidman star in ?	dead calm
 LABEL	true	what movie queen latifah be in ?	jungle fever
 LABEL	false	what color be yak milk ?	bhutan
+LABEL	1	What country did Marco Polo come from?	China.
+LABEL	1	How many candidates ran for president?	Phillip
+LABEL	1	Who is a German philosopher?	Max Bense
+LABEL	1	What gasses are in the troposphere?	Carbon dioxide
+LABEL	0	How many home runs did Babe Ruth hit?	Yankee Stadium
+LABEL	0	Which high school did she go to?	the incredibly
+LABEL	0	When was the Tet offensive in Vietnam?	Bamford
+LABEL	1	Who took over the House of Chanel in 1983?	Karl Lagerfeld
+LABEL	1	What are cigarettes made of?	self-extinguishing paper
+LABEL	1	What company did Harley-Davidson buy out?	MV Agusta
+LABEL	0	When was penicillin first used?	a policeman
+LABEL	0	How fast is alcohol absorbed?	much quicker
+LABEL	0	What books did Franz Kafka author?	Rudy Rucker
+LABEL	1	What is the lowest point on earth?	Minus417
+LABEL	1	What year did Padre Pio die?	IR1968
+LABEL	0	Where is the Shawnee National Forest?	the early 1930
+LABEL	0	Who were victims of the disaster?	New Orleans
+LABEL	0	What year was his first book written?	Bar
+LABEL	1	What is strep throat?	disease and infection
+LABEL	0	Who helped the candidates prepare?	answer
+LABEL	1	When is Boxing Day?	December 26th
+LABEL	1	Name people who have won the Iditarod.	1990 Susan Butcher
+LABEL	1	What are xerophytes?	AROR
+LABEL	0	What year was the Fulbright Program established?	legislation
+LABEL	0	In what state was the Sago mine?	Enron
+LABEL	0	How long would it take to get from Earth to Mars?	secular scientists
+LABEL	0	What U.S. Medal of Honor recipients are in Congress?	Bud
+LABEL	0	Where was George Foreman born?	New York City
+LABEL	0	How tall is Tom Cruise?	top
+LABEL	0	What continent is India on?	Australia
+LABEL	0	What year was the U.S. Mint established?	San Francisco
+LABEL	1	Who was the coach of the French team?	Nicolas Bonnet
+LABEL	1	Where is the Mason/Dixon line?	the sand
+LABEL	0	What is a golden parachute?	good con-artist
+LABEL	0	Who was Mrs. McDougal's lawyer?	attorney
+LABEL	0	Where was the trial held?	Mother
+LABEL	0	What is a film starring Jude Law?	Cameron Diaz
+LABEL	1	What are triglycerides?	Shea butter
+LABEL	1	Name 6 comets.	76 year Halley's comet
+LABEL	0	Who was president in 1913?	premier
+LABEL	1	What was Meg Ryan's name at birth?	Margaret Mary Emily Anne Hyra
+LABEL	0	Who was the prosecutor?	documentary
+LABEL	0	On what date was the first debate?	May 5th
+LABEL	1	What is nanotechnology?	specialty new field
+LABEL	0	Where is Kings Canyon?	Las Vegas
+LABEL	0	Where did he live?	Liz Prietti
+LABEL	0	What is the Moulin Rouge?	thorough documentary
+LABEL	0	On what date was Thabo Mbeki elected president of South Africa?	South Africa
+LABEL	0	How many people were on board?	Curious
+LABEL	1	Who is Angela Davis?	inspiration
+LABEL	0	When did he die?	satirist
+LABEL	0	How big does a pig get?	beer
+LABEL	0	When was the first hair dryer made?	Japan
+LABEL	0	Where did he die?	England
+LABEL	0	How many states have a lottery?	services
+LABEL	0	Who invented the Rubik's Cube?	the who
+LABEL	0	What year did Ayn Rand die?	Caner
+LABEL	0	What does DEA stand for?	non-dsicrimination
+LABEL	0	What year did the Titanic start on its journey?	New York City
+LABEL	1	What kind of plant is kudzu?	Squaw vine
+LABEL	0	What year was Wal-Mart founded?	Part I
+LABEL	0	In what city was Frank Sinatra born?	Harrah
+LABEL	0	What are the names of the space shuttles?	a sloop
+LABEL	1	What is naproxen?	aspirin and drug
+LABEL	0	What Little League teams have won the World Series?	Red Sox
+LABEL	1	What monarch signed the Magna Carta?	King John
+LABEL	0	Who painted the ceiling of the Sistine Chapel?	the artist
+LABEL	0	What is an earthquake?	radical new approach
+LABEL	0	What year did Hitler die?	Action
+LABEL	0	What is its popular name?	Jim
+LABEL	0	What country did Marco Polo come from?	Asia
+LABEL	1	How many candidates ran for president?	Kerrey
+LABEL	0	Where was the Miss Universe 2000 contest held?	South Africa
+LABEL	1	What gasses are in the troposphere?	atmospheric ozone
+LABEL	0	In what year was the Church of Jesus Christ of Latter-day Saints founded?	Joseph Smith Jr.
+LABEL	0	What are cigarettes made of?	snakes and snails
+LABEL	0	What island did the U.S. gain after the Spanish American war?	agriculture
+LABEL	0	Who helped the candidates prepare?	mail
+LABEL	1	What are xerophytes?	common juniper
+LABEL	1	Where do hyenas live?	the tropical savanna
+LABEL	1	What is the effect of acid rain?	buildings and roadways
+LABEL	0	What continent is India on?	diversity and multitude
+LABEL	1	Who was the coach of the French team?	Jocelyn
+LABEL	0	What is a golden parachute?	Sgt. Miller
+LABEL	0	Where was the trial held?	the statute unconstitutional
+LABEL	0	What is a film starring Jude Law?	Vancouver
+LABEL	0	What kind of animal was Winnie the Pooh?	premium ticket
+LABEL	0	Who is the CEO of UPS?	Doyle
+LABEL	0	Who was the prosecutor?	Fionnuala
+LABEL	0	Where did the ukulele originate?	the nineteenth century
+LABEL	1	What is nanotechnology?	nanocomposites for battery
+LABEL	1	Where is Kings Canyon?	Northern California
+LABEL	1	What is the Moulin Rouge?	Nouvelle Eve
+LABEL	0	Who is Angela Davis?	Solange
+LABEL	0	Where did he die?	the influenza epidemic
+LABEL	0	How many states have a lottery?	Keno
+LABEL	0	Who invented the Rubik's Cube?	the same people
+LABEL	0	What year did Ayn Rand die?	New York City
+LABEL	1	What kind of plant is kudzu?	ginger root
+LABEL	0	What is naproxen?	spina bifida
+LABEL	1	What is an earthquake?	soil liquefaction
+LABEL	0	What is its popular name?	Baking soda
