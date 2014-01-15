@@ -38084,3 +38084,8 @@ LABEL	0	How many states have a lottery?	Market
 LABEL	0	In what city was Frank Sinatra born?	Elvis Presley
 LABEL	1	What is naproxen?	anti-inflammatory meds
 LABEL	0	What are the names of the space shuttles?	American school students
+LABEL	1	Who is a German philosopher?	Jakob Schegk
+LABEL	0	Who helped the candidates prepare?	food
+LABEL	0	What was the result of the contempt charges?	Collection accounts
+LABEL	0	What continent is India on?	Russia
+LABEL	0	Who is the CEO of UPS?	the player
