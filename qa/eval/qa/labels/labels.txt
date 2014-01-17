@@ -42020,3 +42020,792 @@ LABEL	true	when do the laker win the championship ?	1985 nba final
 LABEL	true	what movie do nicole kidman star in ?	dead calm
 LABEL	true	what movie queen latifah be in ?	jungle fever
 LABEL	false	what color be yak milk ?	bhutan
+LABEL	0	what song is monifah famous for?	Singer
+LABEL	0	what money system does australia use?	credit card
+LABEL	0	what county is plainfield il in?	St. Mary Immaculate Parish School
+LABEL	1	where is napoleon buried?	St Helena
+LABEL	0	what do people from spain speak?	Madrid
+LABEL	0	where was stephen g. breyer born?	1938.
+LABEL	0	where is bob marley grave?	war
+LABEL	1	what language does people in netherlands speak?	English language
+LABEL	0	what type of government is the us government?	Saudi Arabia
+LABEL	0	what did ronnie radke do?	Radke
+LABEL	1	what club does ronaldinho play for 2012?	Brazil
+LABEL	0	what is the name of money in brazil?	Rajaratnam
+LABEL	0	who played as barney?	Jimi Hendrix
+LABEL	0	what should you see in london?	Chloe
+LABEL	0	what inspired michelangelo?	Michelangelo
+LABEL	0	where are the florida marlins from?	Kevin Millar
+LABEL	1	what products are made in the usa?	Garment
+LABEL	1	what are the names of all the countries in africa?	Botswana
+LABEL	0	where is kate spade from?	New York
+LABEL	0	what office does paul ryan hold?	Obama
+LABEL	1	where was the assyrian civilization located?	Iraq
+LABEL	1	what movies has halle berry starred in?	Class Act
+LABEL	0	who owns audi 2011?	Audi
+LABEL	0	what is the dollar called in brazil?	Salsa
+LABEL	0	who is ruling north korea now?	1950
+LABEL	0	what state did woodrow wilson represent?	Staunton city
+LABEL	0	what prep school did romney attend?	Harvard
+LABEL	0	what type of government does australia currently have?	Afghanistan
+LABEL	0	what type of currency is used in the united kingdom?	Trust
+LABEL	1	what music did beethoven composed?	Cantata
+LABEL	1	when did the houston rockets win the championship?	1995
+LABEL	0	what sort of government does brazil have?	France
+LABEL	0	what was nicolaus copernicus discovery?	Polish priest and astronomer
+LABEL	1	who have the lakers signed?	Horace Grant
+LABEL	1	who was philip randolph?	major activist
+LABEL	0	who did kevin garnett play for before celtics?	the first time
+LABEL	0	where is mount st helens?	an outdoor group
+LABEL	0	where does hudson river start?	2006-07-07
+LABEL	0	where did president kennedy go to school?	Dallas
+LABEL	0	when does ellen air?	Blue
+LABEL	0	what type of currency does the us have?	Credit cards
+LABEL	0	what did einstein do?	Schwarzschild space
+LABEL	1	where is isthmus of panama located?	South America
+LABEL	0	what team chris paul play for?	Canada
+LABEL	1	what years have the steelers won the super bowl?	2005
+LABEL	1	what is there to do in palm springs?	Recreation
+LABEL	0	what form of government is the philippines?	Chinese
+LABEL	0	where does drew gordon play?	Tuesday
+LABEL	0	what currency does the dominican republic?	Medicine
+LABEL	0	where does the english football team train?	Keegan
+LABEL	1	what does the letters eu stand for?	the European Union
+LABEL	0	what is the philadelphia church of god?	Note
+LABEL	0	what books did frances hodgson burnett wrote?	Robin
+LABEL	0	what time is right now in texas?	job
+LABEL	0	what countries did czechoslovakia become?	1918
+LABEL	1	what films did patrick swayze star in?	Ghosted
+LABEL	1	what language do the speak in pakistan?	Sindhi
+LABEL	1	who are all the american idol winners and runner ups?	Underwood
+LABEL	0	what type of government does the bahamas have?	Walmart
+LABEL	0	what type of currency does brazil use?	Fuel
+LABEL	0	where is washington dc located what state?	Montgomery County
+LABEL	0	where did frank bruno live?	one eye
+LABEL	1	who did michael vick play for in 2008?	atlanta falcons
+LABEL	0	who is queen elizabeth 1 father?	Walter Raleigh
+LABEL	0	what does michael vick do?	Gortat
+LABEL	0	what kind of money is used in israel?	Currency
+LABEL	0	what languages are there in switzerland?	Safe Harbor
+LABEL	0	what region is manchester england?	Japan
+LABEL	1	what is the main language spoken in switzerland?	English
+LABEL	0	what team does drogba play for 2013?	Chelsea
+LABEL	1	what was james madison's job?	Lawyer
+LABEL	1	who does the uk trade with?	the security forces
+LABEL	0	where did american troops fight in ww1?	Iraq
+LABEL	1	what movies star adam sandler?	Click
+LABEL	0	who is leann rimes with now?	Blue
+LABEL	0	what country is beside france?	Russia
+LABEL	0	what language did ancient romans write in?	verse
+LABEL	0	who ran against bill clinton for president?	HILLARY
+LABEL	1	what is tibetan language?	minority language
+LABEL	0	what school did sir isaac newton go to?	Schooling
+LABEL	0	who is the falcons kicker?	Noka
+LABEL	0	what was richard wright known for?	cult classic
+LABEL	1	what is the official language in mexico?	Spanish
+LABEL	0	where did sir ernest shackleton live?	One of
+LABEL	0	where is the syracuse university?	Andrew Rautins
+LABEL	0	what kind of money does the ivory coast use?	a club
+LABEL	1	what language do they speak brazil?	English
+LABEL	0	what did heisenberg say about electrons?	von Weizs?cker
+LABEL	0	what is the national anthem of russia?	The audience
+LABEL	0	where did brian williams go to college?	the States
+LABEL	0	what is the time zone in france?	Nabas
+LABEL	0	what was manchester united first name?	Ronaldo
+LABEL	0	what form of government does afghanistan have?	Russia
+LABEL	1	where was the ancient region of mesopotamia?	Iraq
+LABEL	1	what style of music did jimi hendrix play?	the guitar
+LABEL	1	what language do denmark?	Greenlandic language
+LABEL	1	what is british columbia?	excellent destination
+LABEL	0	what happened at fukushima daiichi nuclear plant?	centers
+LABEL	1	what years the steelers won the super bowl?	2005
+LABEL	0	who was the founder of the colony of virginia?	the clearest views
+LABEL	0	who voice acts peter griffin?	the date
+LABEL	1	what does george soros own?	NPR
+LABEL	0	what movies has renee zellweger been in?	Talk To Me
+LABEL	0	who is president of pakistan 2012?	Pervez Musharraf
+LABEL	0	what county is rihanna from?	Karen
+LABEL	0	what influenced whitman's poetry?	Aberjhani
+LABEL	0	who did jason segel date?	2012-04-25
+LABEL	1	what years did yankees win championships?	FY2009
+LABEL	0	what did jack kevorkian go to prison for?	prison
+LABEL	1	what language group does polish belong to?	Slavic language
+LABEL	0	what jobs did ben franklin do?	Rawles
+LABEL	0	who killed vincent chin film?	Hoop Dreams
+LABEL	1	what office does hillary clinton hold?	Senate
+LABEL	0	where are the nuclear plants in uk?	the power utilities
+LABEL	1	what country was anton van leeuwenhoek from?	Netherlands
+LABEL	0	where did bashar al assad study?	ophthalmology
+LABEL	1	what country was bin laden from?	Yemen
+LABEL	1	what language do u speak in egypt?	English
+LABEL	1	what are fun things to do in denver colorado?	Car rentals
+LABEL	0	what was jesse james wife name?	porn star
+LABEL	0	where to live in duluth ga?	Jenkins
+LABEL	0	where did the name rome come from?	Greece
+LABEL	0	what education does jeff corwin have?	Norwell
+LABEL	0	who is the coach of the pittsburgh steelers 2005?	the time
+LABEL	1	what does russian people speak?	Russian
+LABEL	0	what is calabria italy?	Michele
+LABEL	0	when did herman cain run for president?	McCain
+LABEL	0	who did anne frank wrote her diary to?	The hiding place
+LABEL	0	what is african american literature?	literature link
+LABEL	0	what country did truman lead?	RentToOwn.org
+LABEL	0	where is the university of west alabama located?	University
+LABEL	0	what is the name of the sacred text of islam?	Europeans
+LABEL	0	where did jack johnson go to high school?	taylor
+LABEL	0	who does david beckham play for in 2012?	Manchester United
+LABEL	0	where english is spoken in the world?	different language
+LABEL	0	what money is used in mozambique?	Currency
+LABEL	1	what did the scientist thomson discover?	the Electron
+LABEL	0	what kind of government does italy have?	Communism
+LABEL	0	when is portland marathon?	Wednesday
+LABEL	1	what are two countries in south america?	Argentina
+LABEL	0	which states does the connecticut river flow through?	Odisha
+LABEL	1	what countries do germany border?	Austria
+LABEL	0	what teams did derek fisher play for in the nba?	Jackson
+LABEL	1	what does albania speak?	Vlach language
+LABEL	1	what countries does germany share borders with?	Austria
+LABEL	1	what are the main languages spoken in spain?	Catalan
+LABEL	0	what films has gerard butler starred in?	Wilson
+LABEL	1	what language do haitian speak?	English
+LABEL	1	what organism did mendel use?	pea plant
+LABEL	0	when did abraham lincoln free the slaves?	Juneteenth
+LABEL	0	who won 2012 presidential election in france?	Not one
+LABEL	0	what kind of money does the philippines use?	Facebook
+LABEL	0	what year did william jennings bryan run for president?	president
+LABEL	0	what countries does the mississippi river run through?	Hungary
+LABEL	0	what year was the new york blackout?	Easter
+LABEL	0	what all does google have?	Cost per action
+LABEL	0	what does amanda seyfried play in?	Cosette
+LABEL	0	who was emperor diocletian?	Marcus Aurelius Valerius Maximianus
+LABEL	1	what movies has taylor lautner been in 2011?	Abduction
+LABEL	0	who were anakin skywalker's parents?	Star Wars
+LABEL	1	where does the shannon river flow?	Limerick City
+LABEL	1	what movies did zoe saldana play in?	Avatar
+LABEL	0	who are the current senators from missouri?	course
+LABEL	0	what countries was the vietnam war between?	Canada
+LABEL	0	what inventions did da vinci made?	History
+LABEL	1	what sports do they have in china?	Figure skating
+LABEL	1	who does kris humphries play for in the nba?	the New Jersey Nets
+LABEL	0	who did the baltimore ravens draft in 2011?	Brock Lesnar
+LABEL	1	what is medicare a?	Hospice care
+LABEL	0	where to stay in rome neighborhood?	Picasso
+LABEL	0	where the seneca indians lived?	the region
+LABEL	0	what team did joe hart play for before man city?	Pearce
+LABEL	1	where north dakota located?	U.S.A.
+LABEL	0	what are historical places in new york?	Babylon
+LABEL	1	who was dr seuss?	Cat In The Hat
+LABEL	0	who does david beckham play for in 2013?	Manchester United
+LABEL	1	what did michelle obama do?	Healthy eating
+LABEL	0	what mark zuckerberg?	Dustin
+LABEL	0	who was arthur miller father?	man
+LABEL	0	what three countries does mexico border?	Unite kingdom
+LABEL	1	when was the last time the orioles had a winning season?	1997
+LABEL	0	who is the falcons quarterback 2012?	Vick
+LABEL	0	who is the governor of colorado 2009?	the defeated candidates
+LABEL	0	who are the colorado eagles?	Mc Coy
+LABEL	0	what form of government does germany use?	Italy
+LABEL	1	when is summer in australia sydney?	Christmas
+LABEL	0	where is amsterdam ohio?	Juanita
+LABEL	1	what movies has scarlett johansson in?	Nanny Diaries
+LABEL	0	what did neil say on the moon?	Sundays
+LABEL	1	how many major dialects are there in china?	Cantonese
+LABEL	1	what team does lamar odom play for 2011?	Los Angeles Lakers
+LABEL	1	who did jeremy lin sign with?	the Golden State Warriors
+LABEL	1	what did ron howard direct?	Willow
+LABEL	0	what form of government does czech republic have?	Lithuania
+LABEL	0	where did richard nixon go to high school?	Beijing
+LABEL	0	what is the political system in england?	Rome
+LABEL	1	what is the buddhist holy book?	Sutra
+LABEL	0	what religions are in russia?	Business
+LABEL	0	what teams drafted the morris twins?	Westminster
+LABEL	0	who's kobe bryant?	Overall Joe Johnson
+LABEL	0	what songs has madonna written?	melody ideas
+LABEL	0	who was sam houston answers?	Gray
+LABEL	1	which countries do germany border?	Luxembourg's
+LABEL	0	what time is the grand prix starting?	Beijing
+LABEL	1	what language did jewish people speak?	Yevanic language
+LABEL	0	what's the book hitler wrote in prison?	Saddam Hussein
+LABEL	0	who is the chicago bulls head coach?	team
+LABEL	0	who is the senator of the united states 2010?	Bob Kasten
+LABEL	0	who is liz lemon marrying on 30 rock?	NYC
+LABEL	0	who is the governor of kentucky 2012?	Isaac Shelby
+LABEL	1	what year did arizona diamondbacks win the world series?	CC2001
+LABEL	0	where are sunbeam appliances made?	iron
+LABEL	1	what schools did barack obama attend?	Indonesia
+LABEL	0	what money do they use in chile?	Currency
+LABEL	0	what currency do mexico use?	bead
+LABEL	0	who plays young lex luthor in smallville?	the guy
+LABEL	1	who did warren moon play for?	five professional teams
+LABEL	0	who did lamar odom sign with?	NBA
+LABEL	0	what year did yankees win their first world series?	C-2000
+LABEL	0	who is raquel welch's daughter?	artist
+LABEL	0	what is the political system in italy?	Public administration
+LABEL	0	what kind of government system does canada have?	Medicare
+LABEL	0	where is american express located?	New York
+LABEL	0	what did bruce jenner win gold for?	the Games
+LABEL	1	where did the navajo tribe live?	Ca?on de Chelly
+LABEL	0	where did the battle of the alamo start?	1836-02-23
+LABEL	1	what were erik erikson's theories?	personality theory
+LABEL	0	where is the 2012 ncaa basketball tournament?	March Madness
+LABEL	0	what was malcolm x trying to accomplish?	Partner
+LABEL	1	what countries are located in the netherlands?	Friesland
+LABEL	0	what is the main language spoken in italy?	Lucknow
+LABEL	0	what is the president of france's name?	Estelle
+LABEL	1	what do israeli people speak?	Hebrew
+LABEL	1	what are the 5 countries in the united kingdom?	England
+LABEL	0	what are the names of harry potter books in order?	Harry Potter
+LABEL	0	what represents ghana?	Ghana
+LABEL	0	what county is novato california in?	Sacramento
+LABEL	0	who was the apostle paul considered to be?	Hannah Arendt
+LABEL	0	when michael jordan got drafted?	Tebow
+LABEL	1	what kind of system of government does the united states have?	Democracy
+LABEL	1	where did madoff live?	North Carolina
+LABEL	0	where did bronx tale take place?	Martin
+LABEL	0	what school did tupac go to?	Broadway
+LABEL	0	what disease did abe lincoln have?	Clutch
+LABEL	0	what character does mila kunis play on family guy?	Jackie
+LABEL	1	when did george w bush take office?	2001
+LABEL	0	who was the 2nd prime minister of pakistan?	history
+LABEL	0	what did julia roberts won an oscar for?	Stepmom
+LABEL	0	what political party was lincoln?	American
+LABEL	1	where is the time zone in kentucky?	Central time zone
+LABEL	0	what country does mexico trade with?	Culture
+LABEL	1	what organization did martin luther king lead?	Black
+LABEL	0	when did freddy krueger die?	a while
+LABEL	1	where is augusta golf masters?	Waynesboro
+LABEL	0	what type of government germany have?	Regierungsbezirk
+LABEL	0	what is the currency in the dominican republic called?	Haiti
+LABEL	0	what language do egyptians use?	Pearl
+LABEL	0	what books did robert burns wrote?	Works
+LABEL	1	what was the name of william shakespeare's children?	Williams
+LABEL	1	what sports do they do in canada?	Curling
+LABEL	0	what kind of money do they use in aruba?	Currency
+LABEL	0	when did shaq come to the nba?	Miami
+LABEL	0	where did president eisenhower go to college?	Paris
+LABEL	0	where does the jordan river begin?	a military Nachal outpost
+LABEL	0	what inspired monet?	Ultra-Nature
+LABEL	0	where is shoreview mn?	contact information
+LABEL	0	when did the boston celtics win their first championship?	22 years
+LABEL	0	what was arthur conan doyle famous for?	racing driver
+LABEL	0	what type of music is scott joplin?	James Scott
+LABEL	1	when did sherlock holmes live?	221B Baker Street
+LABEL	1	what is north dakota state's mascot?	Thundar
+LABEL	0	what countries did andy warhol work?	Marilyn Monroe
+LABEL	0	where is the parliament in south africa?	the President
+LABEL	0	who did megan fox have a baby with?	RoyalPornTube.com
+LABEL	1	what timezone are the bahamas?	eastern
+LABEL	0	where does spencer pratt go to school?	host
+LABEL	0	where did dr seuss go to school?	War
+LABEL	0	what sea does the yangtze river flow into?	Shanghai
+LABEL	0	what war was george washington associated with?	Winchester
+LABEL	0	who played forrest gump as a kid?	Tom Hanks
+LABEL	0	where is tsonga born?	a working-class Greek father
+LABEL	1	what films did charlie chaplin direct?	Police
+LABEL	0	where's the hudson river?	Mohawk River
+LABEL	0	what's the egyptian currency?	tourism
+LABEL	0	when did shawn johnson won the gold medal?	date
+LABEL	1	what influenced vincent van gogh work?	Rembrandt
+LABEL	0	who was leonardo da vinci teacher?	Paccioli
+LABEL	0	where did the columbia river begin?	1867
+LABEL	0	what countries include western europe?	Video
+LABEL	0	what position does ray allen?	Michael Redd
+LABEL	0	where is arabic the official language?	Aramaic
+LABEL	0	where did hurricane irene?	enrollment figure
+LABEL	0	who is the present president of china?	Bush
+LABEL	1	what george washington carver famous for?	Chemist
+LABEL	1	where is university of auburn?	Butler County
+LABEL	0	what is vanderbilt university known for?	the School
+LABEL	1	what state is barack obama senator for?	Illinois
+LABEL	1	what wars have france been involved in?	Afghanistan
+LABEL	0	what are the two houses in congress?	Republican
+LABEL	0	what children's books did suzanne collins wrote?	young adults
+LABEL	0	where does joey king live?	Toronto
+LABEL	0	where in the bible does it talk about david?	Jesse
+LABEL	0	what is chris paul's son name?	importer
+LABEL	1	what countries does britain own?	England
+LABEL	0	who are betty white's husbands?	name
+LABEL	0	where in oklahoma are scorpions found?	western state
+LABEL	1	what does taiwan people speak?	Vietnamese Language
+LABEL	1	what does latin america consist of?	Venezuela
+LABEL	0	when were women allowed to go to the olympics?	the country
+LABEL	0	who tom cruise been married to?	joy
+LABEL	0	when did the christchurch quake happened?	1906
+LABEL	0	who is aidan davis?	good act
+LABEL	1	what date was abraham lincoln inaugurated?	1861
+LABEL	0	what university did donald trump graduate from?	Audition
+LABEL	0	what song is monifah famous for?	Singer
+LABEL	0	what money system does australia use?	credit card
+LABEL	0	what county is plainfield il in?	St. Mary Immaculate Parish School
+LABEL	1	where is napoleon buried?	St Helena
+LABEL	0	what do people from spain speak?	Madrid
+LABEL	0	where was stephen g. breyer born?	1938.
+LABEL	0	where is bob marley grave?	war
+LABEL	1	what language does people in netherlands speak?	English language
+LABEL	0	what type of government is the us government?	Saudi Arabia
+LABEL	0	what did ronnie radke do?	Radke
+LABEL	1	what club does ronaldinho play for 2012?	Brazil
+LABEL	0	what is the name of money in brazil?	Rajaratnam
+LABEL	0	who played as barney?	Jimi Hendrix
+LABEL	0	what should you see in london?	Chloe
+LABEL	0	what inspired michelangelo?	Michelangelo
+LABEL	0	where are the florida marlins from?	Kevin Millar
+LABEL	1	what products are made in the usa?	Garment
+LABEL	1	what are the names of all the countries in africa?	Botswana
+LABEL	0	where is kate spade from?	New York
+LABEL	0	what office does paul ryan hold?	Obama
+LABEL	1	where was the assyrian civilization located?	Iraq
+LABEL	1	what movies has halle berry starred in?	Class Act
+LABEL	0	who owns audi 2011?	Audi
+LABEL	0	what is the dollar called in brazil?	Salsa
+LABEL	0	who is ruling north korea now?	1950
+LABEL	0	what state did woodrow wilson represent?	Staunton city
+LABEL	0	what prep school did romney attend?	Harvard
+LABEL	0	what type of government does australia currently have?	Afghanistan
+LABEL	0	what type of currency is used in the united kingdom?	Trust
+LABEL	1	what music did beethoven composed?	Cantata
+LABEL	1	when did the houston rockets win the championship?	1995
+LABEL	0	what sort of government does brazil have?	France
+LABEL	0	what was nicolaus copernicus discovery?	Polish priest and astronomer
+LABEL	1	who have the lakers signed?	Horace Grant
+LABEL	1	who was philip randolph?	major activist
+LABEL	0	who did kevin garnett play for before celtics?	the first time
+LABEL	0	where is mount st helens?	an outdoor group
+LABEL	0	where does hudson river start?	2006-07-07
+LABEL	0	where did president kennedy go to school?	Dallas
+LABEL	0	when does ellen air?	Blue
+LABEL	0	what type of currency does the us have?	Credit cards
+LABEL	0	what did einstein do?	Schwarzschild space
+LABEL	1	where is isthmus of panama located?	South America
+LABEL	0	what team chris paul play for?	Canada
+LABEL	1	what years have the steelers won the super bowl?	2005
+LABEL	1	what is there to do in palm springs?	Recreation
+LABEL	0	what form of government is the philippines?	Chinese
+LABEL	0	where does drew gordon play?	Tuesday
+LABEL	0	what currency does the dominican republic?	Medicine
+LABEL	0	where does the english football team train?	Keegan
+LABEL	1	what does the letters eu stand for?	the European Union
+LABEL	0	what is the philadelphia church of god?	Note
+LABEL	0	what books did frances hodgson burnett wrote?	Robin
+LABEL	0	what time is right now in texas?	job
+LABEL	0	what countries did czechoslovakia become?	1918
+LABEL	1	what films did patrick swayze star in?	Ghosted
+LABEL	1	what language do the speak in pakistan?	Sindhi
+LABEL	1	who are all the american idol winners and runner ups?	Underwood
+LABEL	0	what type of government does the bahamas have?	Walmart
+LABEL	0	what type of currency does brazil use?	Fuel
+LABEL	0	where is washington dc located what state?	Montgomery County
+LABEL	0	where did frank bruno live?	one eye
+LABEL	1	who did michael vick play for in 2008?	atlanta falcons
+LABEL	0	who is queen elizabeth 1 father?	Walter Raleigh
+LABEL	0	what does michael vick do?	Gortat
+LABEL	0	what kind of money is used in israel?	Currency
+LABEL	0	what languages are there in switzerland?	Safe Harbor
+LABEL	0	what region is manchester england?	Japan
+LABEL	1	what is the main language spoken in switzerland?	English
+LABEL	0	what team does drogba play for 2013?	Chelsea
+LABEL	1	what was james madison's job?	Lawyer
+LABEL	1	who does the uk trade with?	the security forces
+LABEL	0	where did american troops fight in ww1?	Iraq
+LABEL	1	what movies star adam sandler?	Click
+LABEL	0	who is leann rimes with now?	Blue
+LABEL	0	what country is beside france?	Russia
+LABEL	0	what language did ancient romans write in?	verse
+LABEL	0	who ran against bill clinton for president?	HILLARY
+LABEL	1	what is tibetan language?	minority language
+LABEL	0	what school did sir isaac newton go to?	Schooling
+LABEL	0	who is the falcons kicker?	Noka
+LABEL	0	what was richard wright known for?	cult classic
+LABEL	1	what is the official language in mexico?	Spanish
+LABEL	0	where did sir ernest shackleton live?	One of
+LABEL	0	where is the syracuse university?	Andrew Rautins
+LABEL	0	what kind of money does the ivory coast use?	a club
+LABEL	1	what language do they speak brazil?	English
+LABEL	0	what did heisenberg say about electrons?	von Weizs?cker
+LABEL	0	what is the national anthem of russia?	The audience
+LABEL	0	where did brian williams go to college?	the States
+LABEL	0	what is the time zone in france?	Nabas
+LABEL	0	what was manchester united first name?	Ronaldo
+LABEL	0	what form of government does afghanistan have?	Russia
+LABEL	1	where was the ancient region of mesopotamia?	Iraq
+LABEL	1	what style of music did jimi hendrix play?	the guitar
+LABEL	1	what language do denmark?	Greenlandic language
+LABEL	1	what is british columbia?	excellent destination
+LABEL	0	what happened at fukushima daiichi nuclear plant?	centers
+LABEL	1	what years the steelers won the super bowl?	2005
+LABEL	0	who was the founder of the colony of virginia?	the clearest views
+LABEL	0	who voice acts peter griffin?	the date
+LABEL	1	what does george soros own?	NPR
+LABEL	0	what movies has renee zellweger been in?	Talk To Me
+LABEL	0	who is president of pakistan 2012?	Pervez Musharraf
+LABEL	0	what county is rihanna from?	Karen
+LABEL	0	what influenced whitman's poetry?	Aberjhani
+LABEL	0	who did jason segel date?	2012-04-25
+LABEL	1	what years did yankees win championships?	FY2009
+LABEL	0	what did jack kevorkian go to prison for?	prison
+LABEL	1	what language group does polish belong to?	Slavic language
+LABEL	0	what jobs did ben franklin do?	Rawles
+LABEL	0	who killed vincent chin film?	Hoop Dreams
+LABEL	1	what office does hillary clinton hold?	Senate
+LABEL	0	where are the nuclear plants in uk?	the power utilities
+LABEL	1	what country was anton van leeuwenhoek from?	Netherlands
+LABEL	0	where did bashar al assad study?	ophthalmology
+LABEL	1	what country was bin laden from?	Yemen
+LABEL	1	what language do u speak in egypt?	English
+LABEL	1	what are fun things to do in denver colorado?	Car rentals
+LABEL	0	what was jesse james wife name?	porn star
+LABEL	0	where to live in duluth ga?	Jenkins
+LABEL	0	where did the name rome come from?	Greece
+LABEL	0	what education does jeff corwin have?	Norwell
+LABEL	0	who is the coach of the pittsburgh steelers 2005?	the time
+LABEL	1	what does russian people speak?	Russian
+LABEL	0	what is calabria italy?	Michele
+LABEL	0	when did herman cain run for president?	McCain
+LABEL	0	who did anne frank wrote her diary to?	The hiding place
+LABEL	0	what is african american literature?	literature link
+LABEL	0	what country did truman lead?	RentToOwn.org
+LABEL	0	where is the university of west alabama located?	University
+LABEL	0	what is the name of the sacred text of islam?	Europeans
+LABEL	0	where did jack johnson go to high school?	taylor
+LABEL	0	who does david beckham play for in 2012?	Manchester United
+LABEL	0	where english is spoken in the world?	different language
+LABEL	0	what money is used in mozambique?	Currency
+LABEL	1	what did the scientist thomson discover?	the Electron
+LABEL	0	what kind of government does italy have?	Communism
+LABEL	0	when is portland marathon?	Wednesday
+LABEL	1	what are two countries in south america?	Argentina
+LABEL	0	which states does the connecticut river flow through?	Odisha
+LABEL	1	what countries do germany border?	Austria
+LABEL	0	what teams did derek fisher play for in the nba?	Jackson
+LABEL	1	what does albania speak?	Vlach language
+LABEL	1	what countries does germany share borders with?	Austria
+LABEL	1	what are the main languages spoken in spain?	Catalan
+LABEL	0	what films has gerard butler starred in?	Wilson
+LABEL	1	what language do haitian speak?	English
+LABEL	1	what organism did mendel use?	pea plant
+LABEL	0	when did abraham lincoln free the slaves?	Juneteenth
+LABEL	0	who won 2012 presidential election in france?	Not one
+LABEL	0	what kind of money does the philippines use?	Facebook
+LABEL	0	what year did william jennings bryan run for president?	president
+LABEL	0	what countries does the mississippi river run through?	Hungary
+LABEL	0	what year was the new york blackout?	Easter
+LABEL	0	what all does google have?	Cost per action
+LABEL	0	what does amanda seyfried play in?	Cosette
+LABEL	0	who was emperor diocletian?	Marcus Aurelius Valerius Maximianus
+LABEL	1	what movies has taylor lautner been in 2011?	Abduction
+LABEL	0	who were anakin skywalker's parents?	Star Wars
+LABEL	1	where does the shannon river flow?	Limerick City
+LABEL	1	what movies did zoe saldana play in?	Avatar
+LABEL	0	who are the current senators from missouri?	course
+LABEL	0	what countries was the vietnam war between?	Canada
+LABEL	0	what inventions did da vinci made?	History
+LABEL	1	what sports do they have in china?	Figure skating
+LABEL	1	who does kris humphries play for in the nba?	the New Jersey Nets
+LABEL	0	who did the baltimore ravens draft in 2011?	Brock Lesnar
+LABEL	1	what is medicare a?	Hospice care
+LABEL	0	where to stay in rome neighborhood?	Picasso
+LABEL	0	where the seneca indians lived?	the region
+LABEL	0	what team did joe hart play for before man city?	Pearce
+LABEL	1	where north dakota located?	U.S.A.
+LABEL	0	what are historical places in new york?	Babylon
+LABEL	1	who was dr seuss?	Cat In The Hat
+LABEL	0	who does david beckham play for in 2013?	Manchester United
+LABEL	1	what did michelle obama do?	Healthy eating
+LABEL	0	what mark zuckerberg?	Dustin
+LABEL	0	who was arthur miller father?	man
+LABEL	0	what three countries does mexico border?	Unite kingdom
+LABEL	1	when was the last time the orioles had a winning season?	1997
+LABEL	0	who is the falcons quarterback 2012?	Vick
+LABEL	0	who is the governor of colorado 2009?	the defeated candidates
+LABEL	0	who are the colorado eagles?	Mc Coy
+LABEL	0	what form of government does germany use?	Italy
+LABEL	1	when is summer in australia sydney?	Christmas
+LABEL	0	where is amsterdam ohio?	Juanita
+LABEL	1	what movies has scarlett johansson in?	Nanny Diaries
+LABEL	0	what did neil say on the moon?	Sundays
+LABEL	1	how many major dialects are there in china?	Cantonese
+LABEL	1	what team does lamar odom play for 2011?	Los Angeles Lakers
+LABEL	1	who did jeremy lin sign with?	the Golden State Warriors
+LABEL	1	what did ron howard direct?	Willow
+LABEL	0	what form of government does czech republic have?	Lithuania
+LABEL	0	where did richard nixon go to high school?	Beijing
+LABEL	0	what is the political system in england?	Rome
+LABEL	1	what is the buddhist holy book?	Sutra
+LABEL	0	what religions are in russia?	Business
+LABEL	0	what teams drafted the morris twins?	Westminster
+LABEL	0	who's kobe bryant?	Overall Joe Johnson
+LABEL	0	what songs has madonna written?	melody ideas
+LABEL	0	who was sam houston answers?	Gray
+LABEL	1	which countries do germany border?	Luxembourg's
+LABEL	0	what time is the grand prix starting?	Beijing
+LABEL	1	what language did jewish people speak?	Yevanic language
+LABEL	0	what's the book hitler wrote in prison?	Saddam Hussein
+LABEL	0	who is the chicago bulls head coach?	team
+LABEL	0	who is the senator of the united states 2010?	Bob Kasten
+LABEL	0	who is liz lemon marrying on 30 rock?	NYC
+LABEL	0	who is the governor of kentucky 2012?	Isaac Shelby
+LABEL	1	what year did arizona diamondbacks win the world series?	CC2001
+LABEL	0	where are sunbeam appliances made?	iron
+LABEL	1	what schools did barack obama attend?	Indonesia
+LABEL	0	what money do they use in chile?	Currency
+LABEL	0	what currency do mexico use?	bead
+LABEL	0	who plays young lex luthor in smallville?	the guy
+LABEL	1	who did warren moon play for?	five professional teams
+LABEL	0	who did lamar odom sign with?	NBA
+LABEL	0	what year did yankees win their first world series?	C-2000
+LABEL	0	who is raquel welch's daughter?	artist
+LABEL	0	what is the political system in italy?	Public administration
+LABEL	0	what kind of government system does canada have?	Medicare
+LABEL	0	where is american express located?	New York
+LABEL	0	what did bruce jenner win gold for?	the Games
+LABEL	1	where did the navajo tribe live?	Ca?on de Chelly
+LABEL	0	where did the battle of the alamo start?	1836-02-23
+LABEL	1	what were erik erikson's theories?	personality theory
+LABEL	0	where is the 2012 ncaa basketball tournament?	March Madness
+LABEL	0	what was malcolm x trying to accomplish?	Partner
+LABEL	1	what countries are located in the netherlands?	Friesland
+LABEL	0	what is the main language spoken in italy?	Lucknow
+LABEL	0	what is the president of france's name?	Estelle
+LABEL	1	what do israeli people speak?	Hebrew
+LABEL	1	what are the 5 countries in the united kingdom?	England
+LABEL	0	what are the names of harry potter books in order?	Harry Potter
+LABEL	0	what represents ghana?	Ghana
+LABEL	0	what county is novato california in?	Sacramento
+LABEL	0	who was the apostle paul considered to be?	Hannah Arendt
+LABEL	0	when michael jordan got drafted?	Tebow
+LABEL	1	what kind of system of government does the united states have?	Democracy
+LABEL	1	where did madoff live?	North Carolina
+LABEL	0	where did bronx tale take place?	Martin
+LABEL	0	what school did tupac go to?	Broadway
+LABEL	0	what disease did abe lincoln have?	Clutch
+LABEL	0	what character does mila kunis play on family guy?	Jackie
+LABEL	1	when did george w bush take office?	2001
+LABEL	0	who was the 2nd prime minister of pakistan?	history
+LABEL	0	what did julia roberts won an oscar for?	Stepmom
+LABEL	0	what political party was lincoln?	American
+LABEL	1	where is the time zone in kentucky?	Central time zone
+LABEL	0	what country does mexico trade with?	Culture
+LABEL	1	what organization did martin luther king lead?	Black
+LABEL	0	when did freddy krueger die?	a while
+LABEL	1	where is augusta golf masters?	Waynesboro
+LABEL	0	what type of government germany have?	Regierungsbezirk
+LABEL	0	what is the currency in the dominican republic called?	Haiti
+LABEL	0	what language do egyptians use?	Pearl
+LABEL	0	what books did robert burns wrote?	Works
+LABEL	1	what was the name of william shakespeare's children?	Williams
+LABEL	1	what sports do they do in canada?	Curling
+LABEL	0	what kind of money do they use in aruba?	Currency
+LABEL	0	when did shaq come to the nba?	Miami
+LABEL	0	where did president eisenhower go to college?	Paris
+LABEL	0	where does the jordan river begin?	a military Nachal outpost
+LABEL	0	what inspired monet?	Ultra-Nature
+LABEL	0	where is shoreview mn?	contact information
+LABEL	0	when did the boston celtics win their first championship?	22 years
+LABEL	0	what was arthur conan doyle famous for?	racing driver
+LABEL	0	what type of music is scott joplin?	James Scott
+LABEL	1	when did sherlock holmes live?	221B Baker Street
+LABEL	1	what is north dakota state's mascot?	Thundar
+LABEL	0	what countries did andy warhol work?	Marilyn Monroe
+LABEL	0	where is the parliament in south africa?	the President
+LABEL	0	who did megan fox have a baby with?	RoyalPornTube.com
+LABEL	1	what timezone are the bahamas?	eastern
+LABEL	0	where does spencer pratt go to school?	host
+LABEL	0	where did dr seuss go to school?	War
+LABEL	0	what sea does the yangtze river flow into?	Shanghai
+LABEL	0	what war was george washington associated with?	Winchester
+LABEL	0	who played forrest gump as a kid?	Tom Hanks
+LABEL	0	where is tsonga born?	a working-class Greek father
+LABEL	1	what films did charlie chaplin direct?	Police
+LABEL	0	where's the hudson river?	Mohawk River
+LABEL	0	what's the egyptian currency?	tourism
+LABEL	0	when did shawn johnson won the gold medal?	date
+LABEL	1	what influenced vincent van gogh work?	Rembrandt
+LABEL	0	who was leonardo da vinci teacher?	Paccioli
+LABEL	0	where did the columbia river begin?	1867
+LABEL	0	what countries include western europe?	Video
+LABEL	0	what position does ray allen?	Michael Redd
+LABEL	0	where is arabic the official language?	Aramaic
+LABEL	0	where did hurricane irene?	enrollment figure
+LABEL	0	who is the present president of china?	Bush
+LABEL	1	what george washington carver famous for?	Chemist
+LABEL	1	where is university of auburn?	Butler County
+LABEL	0	what is vanderbilt university known for?	the School
+LABEL	1	what state is barack obama senator for?	Illinois
+LABEL	1	what wars have france been involved in?	Afghanistan
+LABEL	0	what are the two houses in congress?	Republican
+LABEL	0	what children's books did suzanne collins wrote?	young adults
+LABEL	0	where does joey king live?	Toronto
+LABEL	0	where in the bible does it talk about david?	Jesse
+LABEL	0	what is chris paul's son name?	importer
+LABEL	1	what countries does britain own?	England
+LABEL	0	who are betty white's husbands?	name
+LABEL	0	where in oklahoma are scorpions found?	western state
+LABEL	1	what does taiwan people speak?	Vietnamese Language
+LABEL	1	what does latin america consist of?	Venezuela
+LABEL	0	when were women allowed to go to the olympics?	the country
+LABEL	0	who tom cruise been married to?	joy
+LABEL	0	when did the christchurch quake happened?	1906
+LABEL	0	who is aidan davis?	good act
+LABEL	1	what date was abraham lincoln inaugurated?	1861
+LABEL	0	what university did donald trump graduate from?	Audition
+LABEL	0	who is ben roethlisberger parents?	player
+LABEL	0	where is bob marley grave?	Black
+LABEL	1	what language does people in netherlands speak?	Chinese language
+LABEL	0	what type of government is the us government?	Department of Homeland Security
+LABEL	0	what is the name of money in brazil?	Currency
+LABEL	1	what products are made in the usa?	Earth Friendly Products
+LABEL	1	what are the names of all the countries in africa?	South Africa
+LABEL	0	where is kate spade from?	new york Creative Director
+LABEL	0	what type of currency is used in the united kingdom?	Balance
+LABEL	0	what music did beethoven composed?	he went deaf
+LABEL	0	what sort of government does brazil have?	European Union
+LABEL	1	what language does people in france speak?	Catalan language
+LABEL	1	when does ellen air?	October 24 , 2005
+LABEL	0	what is there to do in palm springs?	Dean
+LABEL	0	what form of government is the philippines?	Libya
+LABEL	0	what time is right now in texas?	the Republicans
+LABEL	1	what films did patrick swayze star in?	Point Break
+LABEL	0	what type of currency does brazil use?	Trading
+LABEL	0	what movies has billy burke been in?	actor
+LABEL	0	what does michael vick do?	Dorothy Richardson
+LABEL	1	what region is manchester england?	United Kingdom
+LABEL	0	what are some famous tourist attractions in germany?	Italy
+LABEL	0	what songs did duane allman sing?	Duane
+LABEL	0	what was james madison's job?	James Monroe
+LABEL	1	what movies star adam sandler?	Bedtime Stories
+LABEL	0	who is leann rimes with now?	Courtney Stodden
+LABEL	0	who is the falcons kicker?	Garret Hartley
+LABEL	0	what kind of money does the ivory coast use?	Club
+LABEL	0	what band did joe satriani play in?	October
+LABEL	0	what form of government does afghanistan have?	Jared Lee Loughner
+LABEL	1	what style of music did jimi hendrix play?	the piano
+LABEL	0	what movies has renee zellweger been in?	Talk to Her
+LABEL	0	what county is rihanna from?	Rihanna
+LABEL	0	what influenced whitman's poetry?	Pablo Neruda
+LABEL	0	what jobs did ben franklin do?	Old navy
+LABEL	1	what office does hillary clinton hold?	Democratic Senators
+LABEL	0	what is calabria italy?	Marina Grande
+LABEL	1	what is african american literature?	Narrative of Frederick Douglass
+LABEL	0	what happened to umaga wwe?	Benoit
+LABEL	1	when is portland marathon?	October 9th
+LABEL	1	what films has gerard butler starred in?	Machine Gun Preacher
+LABEL	0	what language do they speak in egyptian?	international language
+LABEL	1	who are the two current illinois senators?	Roland W. Burris
+LABEL	0	what inventions did da vinci made?	Italy
+LABEL	0	where north dakota located?	North Dakota
+LABEL	0	what are historical places in new york?	Development
+LABEL	0	who was dr seuss?	Jojo
+LABEL	0	what mark zuckerberg?	Julian Assange
+LABEL	0	who is the falcons quarterback 2012?	Akili Smith
+LABEL	0	what did neil say on the moon?	Sun
+LABEL	0	who did jeremy lin sign with?	Nike
+LABEL	0	what form of government does czech republic have?	Czech Republic
+LABEL	0	where did richard nixon go to high school?	San Francisco
+LABEL	1	what is the buddhist holy book?	Dhammapada
+LABEL	0	who's kobe bryant?	the house tonight
+LABEL	0	who is the chicago bulls head coach?	La Boca
+LABEL	0	what kind of government system does canada have?	Saudi Arabia
+LABEL	0	what is the main language spoken in italy?	Uttar Pradesh
+LABEL	1	what did isaac newton discovered as a mathematician?	The Chemical Wedding
+LABEL	0	what disease did abe lincoln have?	Abe Lincoln in Analysis
+LABEL	0	what country does mexico trade with?	Mexico:ROC*
+LABEL	0	what is the currency in the dominican republic called?	Santo Domingo
+LABEL	1	what language do egyptians use?	English
+LABEL	0	where is shoreview mn?	Braces
+LABEL	0	what was arthur conan doyle famous for?	novelist
+LABEL	0	where did dr seuss go to school?	English
+LABEL	1	what films did charlie chaplin direct?	Triple Trouble
+LABEL	0	where's the hudson river?	River Project
+LABEL	0	what influenced vincent van gogh work?	Pablo Picasso
+LABEL	1	where did hurricane irene?	the north country
+LABEL	0	what is vanderbilt university known for?	the gold
+LABEL	0	what children's books did suzanne collins wrote?	the Teens
+LABEL	0	where in the bible does it talk about david?	culpa
+LABEL	0	where in oklahoma are scorpions found?	Mexico
+LABEL	0	who is the owner of the philadelphia eagles?	the White House
+LABEL	1	what is modern egyptian language?	version of Arabic
+LABEL	1	what do people from spain speak?	Hispanic
+LABEL	0	what is the name of money in brazil?	acromegaly treatment
+LABEL	1	where are the florida marlins from?	Miami
+LABEL	0	what is the dollar called in brazil?	fiction
+LABEL	0	what state did woodrow wilson represent?	the League
+LABEL	0	where does drew gordon play?	Last year
+LABEL	0	what type of currency does brazil use?	Portuguese
+LABEL	0	what songs did duane allman sing?	rock star
+LABEL	1	what form of government does afghanistan have?	Democracy
+LABEL	1	what style of music did jimi hendrix play?	drums
+LABEL	0	what influenced whitman's poetry?	William Carlos Williams
+LABEL	0	what are fun things to do in denver colorado?	Denver
+LABEL	0	what is calabria italy?	Lamezia Terme Airport
+LABEL	0	who won 2012 presidential election in france?	no matter
+LABEL	0	who is country singer jewel married to?	guest
+LABEL	1	who was emperor diocletian?	infamous character
+LABEL	0	who was dr seuss?	favourite character
+LABEL	1	what mark zuckerberg?	The Social Network
+LABEL	1	what songs has madonna written?	American Life
+LABEL	0	who was sam houston answers?	the game
+LABEL	0	where is american express located?	Collector
+LABEL	0	where is the 2012 ncaa basketball tournament?	Lunardi
+LABEL	0	what county is novato california in?	Margaret
+LABEL	0	where did bronx tale take place?	September
+LABEL	0	what country does mexico trade with?	The chocolate
+LABEL	1	what films did charlie chaplin direct?	The Chaplin Revue
+LABEL	0	where did the columbia river begin?	Tuesday
+LABEL	0	what countries include western europe?	Eurasia
+LABEL	0	what is vanderbilt university known for?	house
+LABEL	0	what are the two houses in congress?	Legislation
+LABEL	1	when president lincoln was elected?	1861
+LABEL	1	what does taiwan people speak?	Tagalog language
+LABEL	0	what do people from spain speak?	SCI
+LABEL	0	what is the official language of the ukraine?	Current affairs
+LABEL	1	what type of currency is used in the united kingdom?	English
+LABEL	0	what type of currency does the us have?	health insurance
+LABEL	1	what is the philadelphia church of god?	St. Stephen's
+LABEL	0	what does michael vick do?	Quarterback Dwight Dasher
+LABEL	1	where did willy wonka take place?	Winchester Thurston
+LABEL	0	what country is beside france?	Quebec
+LABEL	1	what is tibetan language?	sound-spelling language
+LABEL	1	who is the falcons kicker?	Mick Luckhurst
+LABEL	1	what is british columbia?	wildlife-rich province
+LABEL	1	what office does hillary clinton hold?	Vice President
+LABEL	1	what is calabria italy?	ideal Big adventure destination, Providing Number of visitor
+LABEL	1	what did anasazi indians live in?	the 7th Century
+LABEL	0	what political experience did abraham lincoln have?	Clinton
+LABEL	0	where english is spoken in the world?	Christian
+LABEL	0	what are two countries in south america?	the Republic
+LABEL	0	what language do they speak in egyptian?	Joseph
+LABEL	1	what kind of guitar does lindsey buckingham play?	slide guitar
+LABEL	1	what sports do they have in china?	Basketball
+LABEL	1	what is medicare a?	approved standard
+LABEL	0	what did michelle obama do?	Musicrooms Justin Bieber
+LABEL	0	where is the world series 2012 being played?	Sri Lanka
+LABEL	0	what did neil say on the moon?	the Times
+LABEL	1	what did ron howard direct?	Cinderella Man
+LABEL	0	where are sunbeam appliances made?	part
+LABEL	0	what money do they use in chile?	Economics
+LABEL	0	what county is novato california in?	Mary Ellen
+LABEL	0	what political party was lincoln?	School of American Ballet
+LABEL	0	what country does mexico trade with?	one more model
+LABEL	0	what to do in perth scotland?	times
+LABEL	1	what sports do they do in canada?	Speed skating
+LABEL	0	what kind of money do they use in aruba?	Aruba
+LABEL	0	what are countries in south asia?	the Republic
+LABEL	1	who was cleopatra married too?	Hans
+LABEL	0	what is the boston celtics current roster?	the next Michael Jordan
+LABEL	1	who is aidan davis?	English street dancer
+LABEL	0	what song is monifah famous for?	Home
+LABEL	1	what products are made in the usa?	Rap music
+LABEL	0	what type of currency does the us have?	Common stock
+LABEL	0	who is married to garth brooks?	ticket booths
+LABEL	0	where does drew gordon play?	the paint
+LABEL	0	what countries did czechoslovakia become?	Communist country
+LABEL	1	what language do the speak in pakistan?	Urdu
+LABEL	0	where did brian williams go to college?	high school
+LABEL	0	what form of government does afghanistan have?	Iran
+LABEL	1	where was the ancient region of mesopotamia?	Akkad
+LABEL	0	what countries does the mississippi river run through?	Louisiana
+LABEL	1	what were some inventions of leonardo da vinci?	the diagrams
+LABEL	1	what language did jewish people speak?	Lishanid Noshan Language
+LABEL	1	what are popular sports in spain?	Golf
+LABEL	0	what year did tut became king?	a pharaoh
+LABEL	1	what language do egyptians use?	English..
