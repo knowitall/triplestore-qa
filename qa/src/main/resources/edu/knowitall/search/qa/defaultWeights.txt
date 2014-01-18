@@ -4,9 +4,9 @@ answer is linked to freebase	1
 evidence similarity with question	1
 query similarity with question	1
 query relation is light verb	-1
-steps	-1
 question prefix = 'what year' and isDate	1
 question prefix = 'when' and isDate	1
 question prefix = 'where' and isDate	-1
 num lexical rules	-1
 uses full parser pattern	1
+action type = DropStopAction	1
