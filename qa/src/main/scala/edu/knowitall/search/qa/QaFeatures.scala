@@ -48,8 +48,6 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     ("num conjuncts" -> etup.query.conjuncts.size)
   }
   
-  val numSteps = (step: QaStep) => SparseVector("steps" -> 0.25)
-  
   val querySimilarity = ExecutionFeature { (q: String, etuple: ExecTuple) =>
     val query = etuple.query
     val tuple = etuple.tuple
@@ -192,7 +190,6 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 prefixAndFeat(s) +
 		  				 lightVerbRel(s) +
 		  				 relSynFeatures(s) +
-		  				 numSteps(s) + 
 		  				 templateArgFeatures(s) +
 		  				 joinSimilarity(s) +
 		  				 paralexScore(s) +
