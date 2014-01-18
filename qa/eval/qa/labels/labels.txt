@@ -25662,7 +25662,7 @@ LABEL	true	what money do you use in aruba ?	aruban florin
 LABEL	false	where be the miss universe 2000 contest hold ?	la vega
 LABEL	true	what kind of product do nike sell ?	athletic shoe & apparel
 LABEL	true	what be the main language of nigerium ?	uk english language
-LABEL	false	who do david villa play for ?	aston villa
+LABEL	true	who do david villa play for ?	aston villa
 LABEL	true	what be the official language of argentina ?	yiddish language
 LABEL	false	who write john 3 16 in the bible ?	john calvert
 LABEL	false	what be brazil s national color ?	the imf
