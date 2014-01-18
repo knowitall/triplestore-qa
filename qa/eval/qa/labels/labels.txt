@@ -14203,7 +14203,7 @@ LABEL	false	who be the chief executive ?	banker committee
 LABEL	true	what be italian classify as ?	low risk
 LABEL	true	what team do derrick rise play for ?	chicago bull
 LABEL	true	where do american bulldog originate from ?	british isle
-LABEL	false	who be marry to garth brook ?	yearwood
+LABEL	true	who be marry to garth brook ?	yearwood
 LABEL	false	what be london uk time zone ?	jersey
 LABEL	false	what be the best place to go in germany ?	augsburg
 LABEL	true	what movie do logan lerman play in ?	the butterfly effect
