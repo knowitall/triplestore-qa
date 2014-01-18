@@ -35,7 +35,6 @@ class RelSynTransition(client: RelSynClient = RelSynTransition.defaultClient, sk
       newq = ListConjunctiveQuery(s.query.qVars, newconjs)
       newstate = s.copy(query = newq, reformulated = true)
     } yield {
-      logger.debug(s"new state => $newstate")
       (rule, newstate)
     }
   }
