@@ -15,7 +15,8 @@ case class Derivation(question: String,
 					  answer: String,
 					  steps: IndexedSeq[QaStep],
 					  features: SparseVector,
-					  score: Double) {
+					  score: Double,
+					  searchTime: Long = 0L) {
   
   assert(steps.size >= 2)
   def questionState: QuestionState = steps.head.fromState match {
@@ -41,7 +42,7 @@ case class Derivation(question: String,
   }
   override def toString = {
     val l = List(questionState) ++ steps.map(_.toState)
-    l.map(_.toString).mkString(" -> ")
+    l.map(_.toString).mkString(" -> ") + s" (${searchTime}ms)"
   }
   
 }

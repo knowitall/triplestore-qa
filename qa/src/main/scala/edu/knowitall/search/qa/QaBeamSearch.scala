@@ -7,11 +7,14 @@ import edu.knowitall.search.Beam
 import edu.knowitall.search.BeamSearch
 
 class QaBeamSearch(problem: QaSearchProblem) {
+  private var t0 = 0L
   def search = {
     val beam = QaBeamSearch.newBeam
     val beamSearch = new BeamSearch(problem, beam)
+    t0 = System.currentTimeMillis
     beamSearch.search
   }
+  def startTime = t0 
 }
 
 object QaBeamSearch {

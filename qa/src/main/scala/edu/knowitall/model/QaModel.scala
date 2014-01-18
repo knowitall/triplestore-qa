@@ -31,14 +31,15 @@ case class QaModel(transitionModel: QaTransitionModel = QaModel.defaultTransitio
       QaStep(q, fromState, action, toState)
     }
   
-  private def makeDerivation(q: String, n: Node[QaState, QaAction]) = 
+  private def makeDerivation(q: String, n: Node[QaState, QaAction], t0: Long) = 
     n.state match {
       case as: AnswerState => {
         val a = as.answer
         val steps = pathToSteps(q, n.path())
         val feats = steps.map(costModel.features).fold(SparseVector.zero)(_+_)
         val score = -1 * n.pathCost
-        Some(Derivation(q, a, steps.toIndexedSeq, feats, score))
+        val searchTime = n.creationTime - t0
+        Some(Derivation(q, a, steps.toIndexedSeq, feats, score, searchTime))
       }
       case _ => None
     }
@@ -61,7 +62,7 @@ case class QaModel(transitionModel: QaTransitionModel = QaModel.defaultTransitio
     val problem = createSearchProblem(question)
     val searcher = new QaBeamSearch(problem)
     val goals = searcher.search
-    goals.flatMap(makeDerivation(question, _))
+    goals.flatMap(makeDerivation(question, _, searcher.startTime))
   }
   
   override def update(q: String, output: Derivation, expected: Derivation) = {

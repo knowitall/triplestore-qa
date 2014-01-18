@@ -9,7 +9,11 @@ import com.typesafe.config.ConfigFactory
 case class Node[State, Action](
     state: State, 
     parent: Option[Edge[State, Action]],
-    pathCost: Double) extends Comparable[Node[State, Action]] {
+    pathCost: Double,
+    creationTime: Long) extends Comparable[Node[State, Action]] {
+  
+  def this(state: State, parent: Option[Edge[State, Action]], pathCost: Double) = 
+    this(state, parent, pathCost, System.currentTimeMillis) 
   
   def path(rest: List[(State, Action, State)] = Nil): List[(State, Action, State)] = parent match {
     case None => rest
@@ -28,7 +32,7 @@ abstract class SearchAlgorithm[State, Action] {
 
   def problem: SearchProblem[State, Action]
   
-  def rootNode: Node[State, Action] = Node(problem.initialState, None, 0.0)
+  def rootNode: Node[State, Action] = new Node(problem.initialState, None, 0.0)
   
   def isGoal(n: Node[State, Action]) = problem.isGoal(n.state)
   
@@ -59,7 +63,7 @@ abstract class SearchAlgorithm[State, Action] {
       edge = Edge(action, node)
     } yield {
       markExpanded(node)
-      Node(nextState, Some(edge), cost)
+      new Node(nextState, Some(edge), cost)
     }
   }
   
@@ -71,6 +75,10 @@ abstract class SearchAlgorithm[State, Action] {
   
   private var timedOut = false
   
+  private var t0 = System.currentTimeMillis
+  
+  def startTime = t0
+  
   private def runSearch = {
     initialize()
     do {
@@ -80,6 +88,7 @@ abstract class SearchAlgorithm[State, Action] {
   }
   
   def search = {
+    t0 = System.currentTimeMillis
     val time = SearchAlgorithm.defaultMaxSearchTimeSec * 1000
     TimingUtils.runWithTimeout(time) { runSearch }
     timedOut = true
