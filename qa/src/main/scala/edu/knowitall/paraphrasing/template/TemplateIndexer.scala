@@ -16,6 +16,8 @@ import edu.knowitall.search.qa.QaAction
 import edu.knowitall.triplestore.SolrClient
 import com.clearspring.analytics.stream.membership.BloomFilter
 import edu.knowitall.util.ResourceUtils
+import org.apache.solr.common.params.GroupParams
+import org.apache.solr.client.solrj.response.QueryResponse
 
 case class ParaphraseTemplateClient(solrUrl: String,
     maxHits: Int, scale: Boolean = ParaphraseTemplateClient.scale, 
@@ -33,13 +35,21 @@ case class ParaphraseTemplateClient(solrUrl: String,
   val searchField = "template1_exact"
   
   def paraphrases(s: String, argTypes: List[String] = List("anything"), limit: Int = maxHits) = 
-    if (filter.isPresent(s) && !stopTemplates.contains(s)) {
+    if (filter.isPresent(s)) {
       queryParaphrases(s, argTypes, limit)
     } else {
       List.empty
     }
-    
-  def queryParaphrases(s: String, argTypes: List[String] = List("anything"), limit: Int = maxHits): List[TemplatePair] = {
+  
+  private def responseToPairs(r: QueryResponse) = for {
+    value <- r.getGroupResponse.getValues
+    groupValue <- value.getValues
+    doc <- groupValue.getResult.toList
+    pair <- TemplatePair.fromDocument(doc)
+    if !(stopTemplates contains pair.template2)
+  } yield pair
+  
+  private def createQuery(s: String, argTypes: List[String], limit: Int = maxHits) = {
     val typePred = { argTypes map { t =>
       val esc = SolrClient.escape(t)
       s"""typ_exact:"${t}""""
@@ -48,10 +58,16 @@ case class ParaphraseTemplateClient(solrUrl: String,
     val query = new SolrQuery(SolrClient.fixQuery(qStr))
     query.setRows(maxHits)
     query.addSort(new SortClause("pmi", SolrQuery.ORDER.desc))
+    query.set(GroupParams.GROUP, true)
+    query.set(GroupParams.GROUP_FIELD, "template2_exact")
     query.setParam("shards.tolerant", true)
+    query
+  }
+    
+  def queryParaphrases(s: String, argTypes: List[String] = List("anything"), limit: Int = maxHits): List[TemplatePair] = {
+    val query = createQuery(s, argTypes, limit)
     val resp = server.query(query)
-    logger.debug(s"Found ${resp.getResults().getNumFound()} hits")
-    val pairs = resp.getResults().toList.flatMap(TemplatePair.fromDocument).filterNot(stopTemplates contains _.template2)
+    val pairs = responseToPairs(resp).toList
     pairs.map(pair => pair.copy(pmi = scalePmi(pair.pmi)))
   } 
     

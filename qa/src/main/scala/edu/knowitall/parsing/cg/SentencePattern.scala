@@ -23,6 +23,7 @@ case class SentencePattern(patternString: String) {
         i <- 0 until matchObj.groups.size
         group = matchObj.groups(i)
         tokens = s.lemmatizedTokens.slice(group.interval.start, group.interval.end).map(_.token)
+        if !tokens.isEmpty
         text = Tokenizer.originalText(tokens, tokens.head.offsets.start)
         name <- group.expr match {
           case namedGroup: NamedGroup[_] => Some(namedGroup.name)
