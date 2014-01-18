@@ -22,7 +22,7 @@ class SingleBeam[State, Action](beamSize: Int) extends Beam[State, Action] {
     setNodes(nodes)
   }
   private var beam = List.empty[Node[State, Action]]
-  override def nodes = beam.toIterable
+  override def nodes = beam
   override def splitAt(k: Int) = beam.splitAt(k)
   override def setNodes(nodes: Iterable[Node[State, Action]]) = {
     beam = Beam.distinctByState(nodes).toList.sortBy(_.pathCost).take(beamSize)
@@ -34,10 +34,9 @@ class TypedBeams[State, Action, T](f: Node[State, Action] => T, beamSize: Int) e
   private var beams = Map.empty[T, SingleBeam[State, Action]]
   override def nodes = beams.values.flatMap(_.nodes).toList.sortBy(_.pathCost)
   override def splitAt(k: Int) = {
-    val n = beams.size
-    val pairs = for (b <- beams.values) yield b.nodes.splitAt(k/n)
-    val (left, right) = pairs.unzip
-    (left.flatten, right.flatten)
+   val listOfNodes = beams.values.map(_.nodes).toList
+   val orderedNodes = transpose(listOfNodes).flatten
+   orderedNodes.splitAt(k)
   }
   override def setNodes(nodes: Iterable[Node[State, Action]]) = {
     val distinct = Beam.distinctByState(nodes)
@@ -45,4 +44,9 @@ class TypedBeams[State, Action, T](f: Node[State, Action] => T, beamSize: Int) e
     beams = for ((t, typed) <- grouped; beam = new SingleBeam(beamSize, typed)) yield (t -> beam)
   }
   override def size = beams.values.map(_.size).sum
+  
+  private def transpose[T](xss: List[List[T]]): List[List[T]] = xss.filter(!_.isEmpty) match {    
+    case Nil => Nil
+    case ys: List[List[T]] => ys.map{ _.head }::transpose(ys.map{ _.tail })
+  }
 }
