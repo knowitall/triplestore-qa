@@ -23,7 +23,10 @@ class BeamSearch[State, Action](
     val initialSize = beam.size 
         
     logger.debug("Expanding frontier")
-    val (toExpand, toKeep) = beam.nodes.splitAt(expandPerIter)
+    val (toExpand, toKeep) = beam.splitAt(expandPerIter)
+    
+    toExpand foreach { n => logger.debug(s"Chose to expand: ${n.pathCost} ${n.state}") }
+    
     val newNodes = toExpand.flatMap(expand).toList
     logger.debug(s"Expanded to ${newNodes.size} new nodes")
       

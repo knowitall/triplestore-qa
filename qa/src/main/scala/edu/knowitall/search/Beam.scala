@@ -2,6 +2,7 @@ package edu.knowitall.search
 
 trait Beam[State, Action] {
   def nodes: Iterable[Node[State, Action]]
+  def splitAt(k: Int): (Iterable[Node[State, Action]], Iterable[Node[State, Action]])
   def setNodes(nodes: Iterable[Node[State, Action]]): Unit
   def setNodes(nodes: Node[State, Action]*): Unit = setNodes(nodes)
   def size: Int
@@ -22,6 +23,7 @@ class SingleBeam[State, Action](beamSize: Int) extends Beam[State, Action] {
   }
   private var beam = List.empty[Node[State, Action]]
   override def nodes = beam.toIterable
+  override def splitAt(k: Int) = beam.splitAt(k)
   override def setNodes(nodes: Iterable[Node[State, Action]]) = {
     beam = Beam.distinctByState(nodes).toList.sortBy(_.pathCost).take(beamSize)
   }
@@ -30,7 +32,13 @@ class SingleBeam[State, Action](beamSize: Int) extends Beam[State, Action] {
 
 class TypedBeams[State, Action, T](f: Node[State, Action] => T, beamSize: Int) extends Beam[State, Action] {
   private var beams = Map.empty[T, SingleBeam[State, Action]]
-  override def nodes = beams.values.flatMap(_.nodes)
+  override def nodes = beams.values.flatMap(_.nodes).toList.sortBy(_.pathCost)
+  override def splitAt(k: Int) = {
+    val n = beams.size
+    val pairs = for (b <- beams.values) yield b.nodes.splitAt(k/n)
+    val (left, right) = pairs.unzip
+    (left.flatten, right.flatten)
+  }
   override def setNodes(nodes: Iterable[Node[State, Action]]) = {
     val distinct = Beam.distinctByState(nodes)
     val grouped = distinct.groupBy(f)
