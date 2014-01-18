@@ -85,13 +85,19 @@ object QaFeatures extends Function[QaStep, SparseVector] {
         "fbid join key violation" -> fbidViolation)
   }
   
-  val templateFeatures = TemplatePairFeature { (q: String, pair: TemplatePair) =>
-    SparseVector("template pair pmi" -> pair.pmi,
+  val templateFeatures = TemplatePairFeature { (q: String, pair: TemplatePair) => {
+    val prefix1 = NlpUtils.questionPrefix(pair.template1)
+    val prefix2 = NlpUtils.questionPrefix(pair.template2)
+    SparseVector(s"template prefix $prefix1 => $prefix2" -> 1.0,
+    			 "template pair pmi" -> pair.pmi,
     			 "template pair count1" -> pair.count1,
     			 "template pair count2" -> pair.count2,
     			 "template pair count12" -> pair.count12,
     			 "template is typed" -> {if (pair.typ == "anything") 0.0 else 1.0}) 
   }
+  }
+  
+  val numSteps = (step: QaStep) => SparseVector("steps" -> 0.25)
   
   def paraphraseLm(step: QaStep): SparseVector = {
     step.toState match {
@@ -194,7 +200,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 joinSimilarity(s) +
 		  				 paralexScore(s) +
 		  				 parserFeatures(s) + 
-		  				 paraRuleFeatures(s)
+		  				 paraRuleFeatures(s) +
+		  				 numSteps(s)
   
 }
 
