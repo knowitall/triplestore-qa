@@ -37,3 +37,4 @@ dateWord <lemma='month'|lemma='day'|lemma='date'|lemma='year'>
 any <lemma=/.*/>
 inOn <lemma='in'|lemma='on'>
 have <lemma='have'>
+vbg <pos='VBG'>
