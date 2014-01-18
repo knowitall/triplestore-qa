@@ -40129,7 +40129,7 @@ LABEL	false	what do henry kissinger do ?	walter russell mead
 LABEL	true	where be mayan country ?	yucatan
 LABEL	true	what year do houston rocket win their first championship ?	1994 nba final
 LABEL	true	what kind of language do switzerland speak ?	romansh language
-LABEL	false	who be the owner of kfc ?	brand
+LABEL	true	who be the owner of kfc ?	brand
 LABEL	false	what be new south wale slogan ?	pbc
 LABEL	false	where be selena gomez raise ?	attendance
 LABEL	true	who be gerald ford vp ?	nelson rockefeller
