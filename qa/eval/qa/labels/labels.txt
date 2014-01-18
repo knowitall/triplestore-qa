@@ -8161,7 +8161,7 @@ LABEL	true	what do julian fellowe write ?	screenplay
 LABEL	true	what book have elie wiesel write ?	the forget
 LABEL	true	what famous people be from kansas city ?	dianne wiest
 LABEL	true	who be niall ferguson s wife ?	ayaan hirsus alus
-LABEL	true	what type of government be the we government ?	homeland security
+LABEL	false	what type of government be the we government ?	homeland security
 LABEL	false	who be the current leader of france 2010 ?	alberto contador
 LABEL	false	what be all the name of harry potter ?	the book title
 LABEL	false	where do michelle pfeiffer live now ?	catwoman
@@ -32145,7 +32145,7 @@ LABEL	true	what position do stanley matthew play ?	outside forward
 LABEL	true	who play dorothy in the film wizard of oz ?	sumus shimamoto
 LABEL	true	when be abe lincoln president ?	abraham lincoln 1865 presidential inauguration
 LABEL	true	who be juan ponce de leon family ?	juan ponce de le ? n , ius conde de arco
-LABEL	false	who have britney spear marry ?	jason alexander
+LABEL	true	who have britney spear marry ?	jason alexander
 LABEL	false	how many calorie be there in a big mac ?	the speed or elevation
 LABEL	true	what bible do catholic follow ?	vulgate
 LABEL	false	what country do the arctic circle run through ?	alaska
