@@ -10,3 +10,6 @@ question prefix = 'where' and isDate	-1
 num lexical rules	-1
 uses full parser pattern	1
 action type = DropStopAction	1
+template prefix when => where	-1
+template prefix where => when	-1
+steps	-1
