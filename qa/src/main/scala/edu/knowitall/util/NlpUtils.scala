@@ -42,11 +42,9 @@ object NlpUtils {
   val months = Set("january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december")
   val days = Set("sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday")
   val year = """^\d\d\d\d$""".r
+  val datePat = """^\d\d\d\d.\d\d.\d\d$""".r
   def isDateWord(s: String): Boolean = {
-    months.contains(s) || days.contains(s) || { s match {
-      case year() => true
-      case _ => false
-    }}
+    months.contains(s) || days.contains(s) || datePat.findFirstIn(s).isDefined || year.findFirstIn(s).isDefined
   }
   def isDate(s: String): Boolean = {
     s.split(" ").map(_.toLowerCase()).exists(isDateWord)
