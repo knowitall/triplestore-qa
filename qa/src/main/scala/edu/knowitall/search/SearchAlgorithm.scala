@@ -69,17 +69,20 @@ abstract class SearchAlgorithm[State, Action] {
   
   def initialize(): Unit
   
+  private var timedOut = false
+  
   private def runSearch = {
     initialize()
     do {
       searchIter
       iter += 1
-    } while (continueSearch)    
+    } while (continueSearch && !timedOut)    
   }
   
   def search = {
     val time = SearchAlgorithm.defaultMaxSearchTimeSec * 1000
     TimingUtils.runWithTimeout(time) { runSearch }
+    timedOut = true
     goals.values.toList.distinct.sortBy(_.pathCost)
   }
 }
