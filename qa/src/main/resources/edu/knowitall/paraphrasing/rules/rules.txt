@@ -6,3 +6,4 @@ commonPrefix2 <lemma='give'> <lemma='me'>? @quant? (<rest>:@any+) := $rest
 commonPrefix3 <lemma='tell'> <lemma='me'>? @quant? (<rest>:@any+) := $rest
 commonPrefix4 <lemma='list'> <lemma='me'>? @quant? (<rest>:@any+) := $rest
 dropTypeOf (<left>:@any*) @type @of (<right>:@any*) := $left $right
+posToOf (<left>:@any*) (<arg>:@np) @pos (<rel>:@np) (<right>:@any*) := $left $rel of $arg $right
