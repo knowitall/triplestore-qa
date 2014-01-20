@@ -100,8 +100,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   val numSteps = (step: QaStep) => SparseVector("steps" -> 0.25)
   
   def paraphraseLm(step: QaStep): SparseVector = {
-    step.toState match {
-      case qs: QuestionState if qs.isParaphrased => ("paraphrase lm", lmClient.query(qs.question))
+    (step.action, step.toState) match {
+      case (a: TemplatePair, qs: QuestionState) if qs.isParaphrased => ("paraphrase lm", lmClient.query(qs.question))
       case _ => SparseVector.zero
     }
   }
