@@ -1,4 +1,5 @@
 relSynRule pmi	1
+paraphrase lm	1
 template pair pmi	1
 answer is linked to freebase	1
 evidence similarity with question	1
