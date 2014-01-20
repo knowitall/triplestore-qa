@@ -117,6 +117,15 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     case _ => SparseVector.zero
   }
   
+  private val defNoun = "^[Tt]he [a-z].*$".r
+  val isDefiniteNoun = ExecutionFeature { (q: String, etuple: ExecTuple) =>
+    val answer = etuple.answerString
+    if (defNoun.findFirstIn(answer).isDefined)
+      SparseVector("answer is def noun" -> 1.0)
+    else
+      SparseVector.zero
+  }
+  
   val prefixAndFeat = ExecutionFeature { (q: String, etuple: ExecTuple) =>
     val a = etuple.answerString
     val prefix = NlpUtils.questionPrefix(q)
@@ -201,7 +210,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 paralexScore(s) +
 		  				 parserFeatures(s) + 
 		  				 paraRuleFeatures(s) +
-		  				 numSteps(s)
+		  				 numSteps(s) +
+		  				 isDefiniteNoun(s)
   
 }
 
