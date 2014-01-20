@@ -14,3 +14,4 @@ action type = DropStopAction	1
 template prefix when => where	-1
 template prefix where => when	-1
 steps	-1
+dropPP	-2
