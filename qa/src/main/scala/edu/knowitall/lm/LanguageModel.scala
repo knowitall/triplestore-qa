@@ -75,7 +75,9 @@ case class KenLmServer(url: String, timeOut: Int,
     			option(HttpOptions.readTimeout(timeOut)).
     			params("q" -> joined).
     			asString.trim.split("\n")
-    lst.zip(lines).map { case (a, b) => (a, scaleValue(b.toDouble)) }
+    val results = lst.zip(lines).map { case (a, b) => (a, scaleValue(b.toDouble)) }
+    for ((a, b) <- results) cache.put(a, b)
+    results
   }
   override def query(s: Iterable[String]) = {
     val groups = s.grouped(KenLmServer.batchSize)

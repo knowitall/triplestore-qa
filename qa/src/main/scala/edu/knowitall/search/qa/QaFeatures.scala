@@ -101,7 +101,7 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   
   def paraphraseLm(step: QaStep): SparseVector = {
     step.toState match {
-      case qs: QuestionState if qs.isParaphrased => SparseVector.zero //("paraphrase lm", lmClient.query(qs.question))
+      case qs: QuestionState if qs.isParaphrased => ("paraphrase lm", lmClient.query(qs.question))
       case _ => SparseVector.zero
     }
   }
