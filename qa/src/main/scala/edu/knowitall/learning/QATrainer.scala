@@ -33,6 +33,7 @@ class QaTrainer(model: QaModel, oracle: CorrectnessModel[String, Derivation]) ex
     model.update(question, predicted, expected)
     numUpdates += 1
     avgWeights = avgWeights + (expected.features - predicted.features) * iter
+    logger.info(s"Updated weights:\n${avgWeights.toTable}")
   }
   
   def learnIter(question: String) = {
