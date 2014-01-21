@@ -22,6 +22,12 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   val defaultLm = conf.getDouble("paraphrase.defaultLm")
   val lmClient = new KenLmServer()
   
+  val tupleTemplates = TupleFeatureTemplate.defaultTemplates
+  val tupleFeatures = ExecutionFeature { (question: String, etuple: ExecTuple) =>
+    val tuple = etuple.tuple
+    tupleTemplates.map(t => t(tuple)).reduce(_ + _)
+  }
+  
   val answerIsLinked = ExecutionFeature { (question: String, etuple: ExecTuple) =>
     val tuple = etuple.tuple
     val qAttrs = etuple.query.qAttrs
@@ -211,7 +217,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 parserFeatures(s) + 
 		  				 paraRuleFeatures(s) +
 		  				 numSteps(s) +
-		  				 isDefiniteNoun(s)
+		  				 isDefiniteNoun(s) +
+		  				 tupleFeatures(s)
   
 }
 
