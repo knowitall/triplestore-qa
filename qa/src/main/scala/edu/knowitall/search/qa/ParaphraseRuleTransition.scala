@@ -12,7 +12,7 @@ case class ParaphraseRuleTransition(ruleSet: ParaphraseRuleSet = ParaphraseRuleS
   
   private def paraphrase(qs: QuestionState) = for {
     (rule, result) <- ruleSet.apply(qs.processed)
-    newState = QuestionState(result)
+    newState = QuestionState(result, qs.isParaphrased)
   } yield (rule, newState)
 
 }

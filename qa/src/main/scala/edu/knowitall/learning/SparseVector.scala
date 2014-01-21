@@ -6,6 +6,7 @@ import scala.language.implicitConversions
 import java.io.InputStream
 import java.io.File
 import java.io.FileInputStream
+import edu.knowitall.execution.Tabulator
 
 abstract class SparseVector {
   def activeComponents: Iterable[String]
@@ -20,6 +21,10 @@ abstract class SparseVector {
   def *(that: SparseVector): Double = this.dot(that)
   def /(x: Double): SparseVector = this.scalarMult(1/x)
   def activeComponents(that: SparseVector): Iterable[String] = (this.activeComponents ++ that.activeComponents).toList.distinct
+  def toTable = {
+    val pairs = for (c <- activeComponents.toList.sortBy(-this(_)); if Math.abs(this(c)) > 1e-9) yield Seq(c, this(c))
+    Tabulator.format(Seq("Feature", "Weight") +: pairs.toSeq)
+  }
 }
 
 object SparseVector {

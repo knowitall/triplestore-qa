@@ -27,7 +27,7 @@ class BeamSearch[State, Action](
     
     toExpand foreach { n => logger.debug(s"Chose to expand: ${n.pathCost} ${n.state}") }
     
-    val newNodes = toExpand.flatMap(expand).toList
+    val newNodes = toExpand.par.flatMap(expand).toList
     logger.debug(s"Expanded to ${newNodes.size} new nodes")
       
     logger.debug("Adding goal nodes")

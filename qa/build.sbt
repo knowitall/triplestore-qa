@@ -100,6 +100,8 @@ libraryDependencies += "edu.washington.cs.knowitall.taggers" % "taggers-core_2.1
 
 libraryDependencies += "com.github.nikita-volkov" % "sext" % "0.2.3"
 
+libraryDependencies += "edu.berkeley.nlp" % "berkeleylm" % "1.1.2"
+
 assemblySettings
 
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>

@@ -22,6 +22,12 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   val defaultLm = conf.getDouble("paraphrase.defaultLm")
   val lmClient = new KenLmServer()
   
+  val tupleTemplates = TupleFeatureTemplate.defaultTemplates
+  val tupleFeatures = ExecutionFeature { (question: String, etuple: ExecTuple) =>
+    val tuple = etuple.tuple
+    tupleTemplates.map(t => t(tuple)).reduce(_ + _)
+  }
+  
   val answerIsLinked = ExecutionFeature { (question: String, etuple: ExecTuple) =>
     val tuple = etuple.tuple
     val qAttrs = etuple.query.qAttrs
@@ -100,8 +106,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   val numSteps = (step: QaStep) => SparseVector("steps" -> 0.25)
   
   def paraphraseLm(step: QaStep): SparseVector = {
-    step.toState match {
-      case qs: QuestionState if qs.isParaphrased => SparseVector.zero //("paraphrase lm", lmClient.query(qs.question))
+    (step.action, step.toState) match {
+      case (a: TemplatePair, qs: QuestionState) if qs.isParaphrased => ("paraphrase lm", lmClient.query(qs.question))
       case _ => SparseVector.zero
     }
   }
@@ -115,6 +121,15 @@ object QaFeatures extends Function[QaStep, SparseVector] {
       Some(s"template arg pos tags = $tagPat")
     }
     case _ => SparseVector.zero
+  }
+  
+  private val defNoun = "^[Tt]he [a-z].*$".r
+  val isDefiniteNoun = ExecutionFeature { (q: String, etuple: ExecTuple) =>
+    val answer = etuple.answerString
+    if (defNoun.findFirstIn(answer).isDefined)
+      SparseVector("answer is def noun" -> 1.0)
+    else
+      SparseVector.zero
   }
   
   val prefixAndFeat = ExecutionFeature { (q: String, etuple: ExecTuple) =>
@@ -201,7 +216,9 @@ object QaFeatures extends Function[QaStep, SparseVector] {
 		  				 paralexScore(s) +
 		  				 parserFeatures(s) + 
 		  				 paraRuleFeatures(s) +
-		  				 numSteps(s)
+		  				 numSteps(s) +
+		  				 isDefiniteNoun(s) +
+		  				 tupleFeatures(s)
   
 }
 
