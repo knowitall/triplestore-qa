@@ -68,12 +68,8 @@ case class ParaphraseTemplateClient(solrUrl: String,
     val query = createQuery(s, argTypes, limit)
     val resp = server.query(query)
     val pairs = responseToPairs(resp).toList
-    pairs.map(pair => pair.copy(pmi = scalePmi(pair.pmi)))
+    pairs
   } 
-    
-  private def scalePmi(x: Double): Double = 
-    if (scale) MathUtils.clipScale(x, ParaphraseTemplateClient.minPmi, ParaphraseTemplateClient.maxPmi)
-    else x
 }
 
 case object ParaphraseTemplateClient {
