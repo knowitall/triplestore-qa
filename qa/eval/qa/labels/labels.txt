@@ -21159,7 +21159,7 @@ LABEL	false	where robert frost go to school ?	californium
 LABEL	false	what college do lil wayne graduate from ?	the list
 LABEL	false	when be he bear ?	a star
 LABEL	true	how many team be there in the ncaa football ?	oregon state university beaver
-LABEL	true	what office do hillary clinton hold ?	vice president
+LABEL	false	what office do hillary clinton hold ?	vice president
 LABEL	false	what be the current time in nigerium lago ?	build - in variable
 LABEL	false	who authorize this agreement ?	the exclusive jurisdiction
 LABEL	true	what language turkey people speak ?	english
