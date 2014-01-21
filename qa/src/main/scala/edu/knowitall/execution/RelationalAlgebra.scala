@@ -45,6 +45,13 @@ case class Tuple(attrs: Map[String, Any]) {
     case Some(i: Int) => Some(i)
     case _ => None
   }
+  
+  def getNumber(a: String): Option[Double] = attrs.get(a) match {
+    case Some(i: Int) => Some(i)
+    case Some(f: Float) => Some(f)
+    case Some(d: Double) => Some(d)
+    case _ => None
+  }
 
   /* Renames the attributes using the given function */
   def rename(f: String => String): Tuple = {
