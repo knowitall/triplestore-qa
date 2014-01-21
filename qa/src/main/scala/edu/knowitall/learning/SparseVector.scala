@@ -22,8 +22,8 @@ abstract class SparseVector {
   def /(x: Double): SparseVector = this.scalarMult(1/x)
   def activeComponents(that: SparseVector): Iterable[String] = (this.activeComponents ++ that.activeComponents).toList.distinct
   def toTable = {
-    val pairs = for (c <- activeComponents.toList.sortBy(-this(_)); if Math.abs(this(c)) < 1e-9) yield Seq(c, this(c))
-    Tabulator.format(pairs.toSeq)
+    val pairs = for (c <- activeComponents.toList.sortBy(-this(_)); if Math.abs(this(c)) > 1e-9) yield Seq(c, this(c))
+    Tabulator.format(Seq("Feature", "Weight") +: pairs.toSeq)
   }
 }
 
