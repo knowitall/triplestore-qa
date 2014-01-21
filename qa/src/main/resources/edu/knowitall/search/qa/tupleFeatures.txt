@@ -1,0 +1,5 @@
+conf_f	min	0	1	linear
+num_extrs_i	min	1	100	log
+freq_i	min	1	1000	log
+popularity_i	min	1	100	log
+conceptVagueness_f	max	0	1	linear
