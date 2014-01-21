@@ -29,7 +29,7 @@ class QaTrainer(model: QaModel, oracle: CorrectnessModel[String, Derivation]) ex
   override def candidatePredictions(question: String) = model.candidatePredictions(question)
   
   override def update(question: String, predicted: Derivation, expected: Derivation) = {
-    logger.info(s"Updating:\ncorrect = ${expected.explainScore(model.costModel.weights)}\npredicted = ${predicted.explainScore(model.costModel.weights)}")
+    logger.info(s"Updating:\ncorrect = ${expected}\n${expected.explainScore(model.costModel.weights)}\npredicted = ${predicted}\n${predicted.explainScore(model.costModel.weights)}")
     model.update(question, predicted, expected)
     numUpdates += 1
     avgWeights = avgWeights + (expected.features - predicted.features) * iter
