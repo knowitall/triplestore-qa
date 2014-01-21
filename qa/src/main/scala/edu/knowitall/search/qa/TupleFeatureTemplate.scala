@@ -15,12 +15,20 @@ case class TupleFeatureTemplate(
   private val smin = scale(min)
   private val smax = scale(max)
   private val suffix = s".$attr"
+  
+  private def computeValue(v: Double) = if (min <= v && v <= max) {
+    Some((scale(v) - smin) / (smax - smin))
+  } else {
+    None
+  }
+  
   def apply(tuple: Tuple): SparseVector = {
     val svalues = for {
       a <- tuple.attrs.keys
       if a.endsWith(suffix)
       v <- tuple.getNumber(a)
-    } yield (scale(v) - smin) / (smax - smin)
+      r <- computeValue(v)
+    } yield r
     if (svalues.isEmpty) {
       SparseVector.zero
     } else {
