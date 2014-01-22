@@ -6739,7 +6739,7 @@ LABEL	false	can blue heron fly ?	placid back eddy
 LABEL	false	what timezone be minnesota in ?	minute
 LABEL	false	who be the head of pbgc ?	northwest and delta
 LABEL	true	what be the book write by charle darwin ?	the autobiography of charle darwin
-LABEL	false	who be the president of indian national congress ?	black gandhus
+LABEL	true	who be the president of indian national congress ?	black gandhus
 LABEL	true	who be the governor of virginia 2011 ?	bob mcdonnell
 LABEL	true	what do people speak in uk ?	scottish gaelic language
 LABEL	false	what time be kansa in ?	coffeyville
@@ -45301,7 +45301,7 @@ LABEL	true	what do they speak in austrium ?	croatian language
 LABEL	false	where be harley davidson make ?	york
 LABEL	false	when be he elect pope ?	joan
 LABEL	true	what other language do switzerland speak ?	german language
-LABEL	false	who win the nobel peace prize in 2007 ?	climate change
+LABEL	true	who win the nobel peace prize in 2007 ?	climate change
 LABEL	false	what be the earliest land plant ?	acre
 LABEL	false	how long be the amazon river ?	brazil
 LABEL	false	what be the name of frederick douglass book ?	so there
@@ -46331,3 +46331,111 @@ LABEL	0	when did the christchurch quake happened?	September 23
 LABEL	0	what kind of voting system does japan have?	MP
 LABEL	0	what do barack obama do as a president?	Samuel L. Jackson
 LABEL	0	where does the st. joe river start?	2003
+LABEL	1	what song is monifah famous for?	Mo'Hogany
+LABEL	0	what is there to do around austin texas?	Drew Doughty
+LABEL	0	what language do they speak in spain wikipedia?	Spanish flag
+LABEL	0	where is the great pyramid of giza situated?	Volume
+LABEL	0	what kind of language do they speak in greece?	Coffee
+LABEL	0	who does nikki reed play in the movie twilight?	Kristen Stewart
+LABEL	1	what did ronnie radke do?	Melodic hardcore
+LABEL	1	what products are made in the usa?	Marketing
+LABEL	1	what movie queen latifah play in?	Joyful Noise
+LABEL	1	who owns audi 2011?	Volkswagen AG
+LABEL	0	who was carrie underwood in soul surfer?	top country musician
+LABEL	0	what language does the country italy speak?	Artemis
+LABEL	0	what battles did canada win in ww2?	a team
+LABEL	0	what type of currency does the us have?	Australian dollar
+LABEL	0	where is isthmus of panama located?	Russia
+LABEL	0	who did howie long married?	Chris Long
+LABEL	0	where to vacation in italy in august?	Children
+LABEL	1	what does bill gates own?	Fort Knox
+LABEL	0	what is d capital city of south africa?	artist
+LABEL	0	what movies has billy burke been in?	Anna Christie
+LABEL	1	what does michael vick do?	Philadelphia
+LABEL	0	what is the main language spoken in switzerland?	Kerala
+LABEL	0	where to go in downtown nashville tn?	Israel
+LABEL	0	what are some famous tourist attractions in germany?	New York
+LABEL	0	what was james madison's job?	Alexander Hamilton
+LABEL	1	who does the uk trade with?	Europe
+LABEL	1	where did american troops fight in ww1?	Europe
+LABEL	0	where did willy wonka take place?	New York City
+LABEL	0	who is leann rimes with now?	big name artist
+LABEL	0	who is the falcons kicker?	Johnathan Thurston
+LABEL	0	what kind of money does the ivory coast use?	West Africa
+LABEL	0	what kind of money in aruba?	Rupees
+LABEL	0	what did heisenberg say about electrons?	?No
+LABEL	1	what other books did jules verne wrote?	Seconde patrie
+LABEL	0	who did u.s. fight against in ww1?	Iran
+LABEL	0	what airport does southwest fly to in denver?	San Jose
+LABEL	0	who is married to garry trudeau?	abortion-law debate
+LABEL	0	where to live in duluth ga?	Canada
+LABEL	0	what movies did miley cyrus play in?	The Town
+LABEL	0	who is the coach of the pittsburgh steelers 2005?	Mike Tomlin
+LABEL	0	which airport to fly in rome?	MAN
+LABEL	0	what to do in panama city beach in february?	Florida
+LABEL	1	what happened to umaga wwe?	Eddie Fatu
+LABEL	0	what language they speak in the philippines?	Jack Aubrey
+LABEL	0	what other movies has liam hemsworth?	MTV News
+LABEL	0	what did the scientist thomson discover?	a large degree
+LABEL	1	what are two countries in south america?	Bolivia
+LABEL	0	what are the main languages spoken in spain?	Kerala
+LABEL	0	who was the president of the united states during ww2?	Ronald Reagan
+LABEL	1	what language do they speak in egyptian?	Egyptian language
+LABEL	0	who won 2012 presidential election in france?	Sarah Palin
+LABEL	0	what kind of money does the philippines use?	Nuclear power
+LABEL	0	what does amanda seyfried play in?	The Film
+LABEL	1	what is medicare a?	federal benefit program
+LABEL	0	where does jamie chung live?	Toronto
+LABEL	0	where to stay in rome neighborhood?	Pat Benatar
+LABEL	0	what are historical places in new york?	Chicago
+LABEL	1	what did michelle obama do?	Oprah
+LABEL	0	what mark zuckerberg?	Wall Street
+LABEL	0	who is the falcons quarterback 2012?	Archie Manning
+LABEL	0	who are the colorado eagles?	Red Cliff
+LABEL	0	who plays walter in fringe?	Musical theatre
+LABEL	1	what did ron howard direct?	Angels and Demons
+LABEL	1	what did charles babbage create in the 1800s?	Mathematical papers
+LABEL	0	what is the best neighborhood to live in dallas?	Park Slope
+LABEL	0	where to get married in north alabama?	south Alabama
+LABEL	1	who's kobe bryant?	big name player
+LABEL	0	where is oceania on a map?	Rotterdam
+LABEL	0	who is keyshia cole married too?	Chrystina Sayers
+LABEL	0	who is reba mcentire's son?	Jacqueline Smith
+LABEL	1	what year did yankees win their first world series?	1923
+LABEL	0	what is the political system in italy?	compelling state interest
+LABEL	0	what kind of government system does canada have?	European countries
+LABEL	0	what party did john tyler belong to?	John Caldwell
+LABEL	0	what was malcolm x trying to accomplish?	Dr. Kennedy
+LABEL	0	what countries are located in the netherlands?	East Providence
+LABEL	0	what is the main language spoken in italy?	Kerala
+LABEL	0	what are the 5 countries in the united kingdom?	Public domain
+LABEL	0	what kind of system of government does the united states have?	America
+LABEL	0	where did bronx tale take place?	Las Vegas
+LABEL	0	where is spain exactly located?	Countries
+LABEL	0	what language they speak in taiwan?	Jack Aubrey
+LABEL	0	what did julia roberts won an oscar for?	Lyle Lovett
+LABEL	0	what is the political system in south africa?	Timothy Peter Jenkin
+LABEL	0	what to do with kids in denver today?	Thankfulness
+LABEL	0	where is augusta golf masters?	blogs
+LABEL	0	what to do in perth scotland?	Geographic Names Concept Scheme
+LABEL	0	what sports do they do in canada?	Spain
+LABEL	0	what inspired monet?	Asteroid belt
+LABEL	1	where is singapore on a world map?	Malaysia
+LABEL	1	what was arthur conan doyle famous for?	Screenwriter
+LABEL	1	what did copernicus invented?	Dzie?a wszystkie
+LABEL	0	who did megan fox have a baby with?	the mind
+LABEL	1	where do tasmanian devils live?	the Northern Territory
+LABEL	1	where is tsonga born?	France
+LABEL	1	what films did charlie chaplin direct?	The Cure
+LABEL	1	what political party was hitler the leader of?	the Nazi Party
+LABEL	0	where is university of auburn?	Auburn University
+LABEL	0	what are the two houses in congress?	Kingdom of the Two Sicilies
+LABEL	1	where did harrison ford get his start?	America
+LABEL	0	what airport is closest to downtown toronto?	Hide Out On Queen
+LABEL	0	what is the government structure of germany?	tax credits
+LABEL	0	what countries does britain own?	tourism
+LABEL	1	what type of music did richard wagner play?	Eika Katappa
+LABEL	0	who are betty white's husbands?	SleepBetter
+LABEL	0	where in oklahoma are scorpions found?	United States
+LABEL	0	when were women allowed to go to the olympics?	teams
+LABEL	0	what kind of voting system does japan have?	Speech topic
