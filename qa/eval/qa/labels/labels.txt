@@ -49152,3 +49152,89 @@ LABEL	0	what movies did matt bomer play in?	American actor
 LABEL	0	who created the character of sherlock holmes?	TV series
 LABEL	1	what type of music did richard wagner play?	Contemporary classical music
 LABEL	1	what university did donald trump graduate from?	The Wharton School
+LABEL	0	who plays the voice of lois griffin?	Peter
+LABEL	0	what to do in roatan bay?	The school
+LABEL	0	what language do they speak in spain wikipedia?	An event
+LABEL	0	what is the name of the pittsburgh steelers stadium?	Hines Ward
+LABEL	0	where is bob marley grave?	Bangor
+LABEL	0	what wild animals live in colorado?	Medicare
+LABEL	0	what did jordyn wieber win gold for?	machine
+LABEL	0	what inspired michelangelo?	the High Renaissance
+LABEL	0	what are the names of all the countries in africa?	Iraq"
+LABEL	0	who owns audi 2011?	power
+LABEL	0	what money system does greece use?	Germany
+LABEL	0	what language does the country italy speak?	Authorities Concept Scheme
+LABEL	1	where is mount st helens?	Washington State
+LABEL	0	what team chris paul play for?	the West
+LABEL	0	who plays shao kahn?	the begining
+LABEL	0	what is the closest airport to naples florida?	Collier County
+LABEL	0	what party was winston churchill in politics?	letter
+LABEL	0	what is d capital city of south africa?	Greece
+LABEL	1	what type of government does the bahamas have?	House of Assembly of the Bahamas
+LABEL	0	what languages are there in switzerland?	addition
+LABEL	0	what songs did duane allman sing?	Otis
+LABEL	0	what country is beside france?	Manfred
+LABEL	0	who ran against bill clinton for president?	Pinback button
+LABEL	0	what college did tosh . o go to?	date
+LABEL	0	what kind of money in aruba?	a person
+LABEL	0	what was manchester united first name?	Manchester
+LABEL	0	what is phoebe halliwell's real name?	the tv show
+LABEL	0	who voice acts peter griffin?	man
+LABEL	0	who is president of pakistan 2012?	one million tons
+LABEL	0	what county is rihanna from?	Janet
+LABEL	0	where does dr. sanjay gupta practice?	medicine
+LABEL	0	what jobs did ben franklin do?	French hookers
+LABEL	0	who killed vincent chin film?	1990
+LABEL	0	what education does jeff corwin have?	United States of America
+LABEL	0	what shows did henry winkler produce?	GoodFellas
+LABEL	0	who is the current leader of china today?	the industry
+LABEL	1	which country did james cook sailed for?	Tahiti
+LABEL	0	what films has gerard butler starred in?	Glasgow
+LABEL	0	what time do atlantic city bars close?	a restaurant
+LABEL	0	who is sherri shepherd's new husband?	person
+LABEL	0	who is country singer jewel married to?	a woman
+LABEL	1	what all does google have?	the Nexus One
+LABEL	1	what movies does ryan gosling star in?	Crazy Stupid Love
+LABEL	0	who was queen elizabeth the first's mother?	Ernestine Bowes-Lyon
+LABEL	1	what movies did zoe saldana play in?	Crossroads
+LABEL	1	what countries was the vietnam war between?	the North
+LABEL	0	what mark zuckerberg?	Pavel Durov
+LABEL	0	who is the falcons quarterback 2012?	expert
+LABEL	1	when is summer in australia sydney?	December
+LABEL	0	when was the chinese flag designed?	quickly while
+LABEL	0	where is united arab located?	Mohammed
+LABEL	0	where did richard nixon go to high school?	New York
+LABEL	0	what is the political system in england?	Sparta
+LABEL	0	what teams drafted the morris twins?	the University
+LABEL	0	who was sam houston answers?	the Indians
+LABEL	0	what time is the grand prix starting?	10 minute
+LABEL	0	who is the senator of the united states 2010?	China
+LABEL	0	who is the governor of kentucky 2012?	Macey
+LABEL	0	who is keyshia cole married too?	woman
+LABEL	0	who is raquel welch's daughter?	Damon Welch
+LABEL	0	what is the political system in italy?	the CPC
+LABEL	0	where is american express located?	Congress
+LABEL	0	what party did john tyler belong to?	United States
+LABEL	1	where did bronx tale take place?	New York City
+LABEL	0	where are the seneca indians now?	Queen Alliquippa
+LABEL	0	where is spain exactly located?	The city
+LABEL	0	what political party was lincoln?	Lincoln cent mintage figures
+LABEL	0	when did freddy krueger die?	Hell
+LABEL	0	when did allen iverson get drafted?	the NBA
+LABEL	0	what was the name of william shakespeare's children?	Shakespeare Tower
+LABEL	0	what team does derrick rose play for?	Stephon Marbury
+LABEL	0	where did president eisenhower go to college?	1960
+LABEL	1	what do people from guam speak?	or to English
+LABEL	0	what is the legislature of missouri called?	Robert Moore
+LABEL	0	what time zone is maryville tn?	Blount County
+LABEL	0	what type of music is scott joplin?	Italianate architecture
+LABEL	0	what countries did andy warhol work?	Andy Warhol
+LABEL	0	what time zone is new england usa in?	New York
+LABEL	0	what books did beverly cleary right?	book
+LABEL	0	what happened to peter parker's uncle?	lucky man
+LABEL	1	who is roger bacon inventor of?	the scientific method
+LABEL	0	where is north port florida located?	west
+LABEL	0	what movies did matt bomer play in?	SoHos
+LABEL	0	who created the character of sherlock holmes?	sleuth
+LABEL	1	who are betty white's husbands?	Ludden
+LABEL	0	where does the st. joe river start?	business
