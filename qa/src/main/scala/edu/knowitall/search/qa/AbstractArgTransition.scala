@@ -21,6 +21,7 @@ class AbstractArgTransition(
     tagger: Postagger = NlpTools.tagger,
     isaClient: IsaClient = AbstractArgTransition.defaultIsaClient,
     maxArgLength: Int = AbstractArgTransition.defaultMaxArgLength, 
+    useTypes: Boolean = AbstractArgTransition.defaultUseTypes,
     multipleParaphrases: Boolean = AbstractArgTransition.multipleParaphrases)
     extends Transition[QaState, QaAction] {
   
@@ -61,7 +62,7 @@ class AbstractArgTransition(
       for {
         interval <- intervals(toks.size)
         arg = s.processed.strings.slice(interval.start, interval.end).mkString(" ")
-        types = isaClient.getTypes(arg)
+        types = if (useTypes) isaClient.getTypes(arg) else List("anything")
         newState = AbstractedArgState(s.question, types, s.processed, interval)
       } yield (action, newState)
     } else {
@@ -77,5 +78,6 @@ case object AbstractArgTransition {
   val conf = ConfigFactory.load()
   val defaultMaxArgLength = conf.getInt("paraphrase.template.maxArgLength")
   val multipleParaphrases = conf.getBoolean("paraphrase.template.multipleParaphrases")
+  val defaultUseTypes = conf.getBoolean("paraphrase.template.useTypes")
   lazy val defaultIsaClient = IsaClient()
 }
