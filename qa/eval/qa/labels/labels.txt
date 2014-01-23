@@ -48986,7 +48986,7 @@ LABEL	0	where did the name rome come from?	Egypt
 LABEL	0	who is the coach of the pittsburgh steelers 2005?	Woody Hayes
 LABEL	0	who is the current leader of china today?	Brian Mason
 LABEL	0	which airport to fly in rome?	Orlando
-LABEL	0	what is african american literature?	Anthony Whyte
+LABEL	1	what is african american literature?	Anthony Whyte
 LABEL	0	what political experience did abraham lincoln have?	Rawls lack of depth
 LABEL	0	where did jack johnson go to high school?	England
 LABEL	0	who was the leader of the soviet union in 1945?	Nikita Khrushchev
@@ -49071,3 +49071,84 @@ LABEL	0	who is aidan davis?	Tiffany From Eastenders
 LABEL	1	what kind of voting system does japan have?	Single transferable vote
 LABEL	0	where does the st. joe river start?	1992
 LABEL	0	who did alicia keys have a baby with?	Bonnie Raitt
+LABEL	0	what song is monifah famous for?	talented artist
+LABEL	0	what type of government is the us government?	National Institute of Standards and Technology
+LABEL	0	what type of government does australia currently have?	Canada
+LABEL	0	what type of currency is used in the united kingdom?	Credit cards
+LABEL	1	what language does people in france speak?	the Spanish
+LABEL	0	what form of government is the philippines?	Government officials
+LABEL	0	what does michael vick do?	RT ddline
+LABEL	0	what was richard wright known for?	Shaun
+LABEL	0	what style of music did jimi hendrix play?	The band
+LABEL	0	who is president of pakistan 2012?	the Dajjals
+LABEL	0	where is the university of west alabama located?	Birmingham
+LABEL	0	what kind of money does the philippines use?	coconut oil
+LABEL	0	who is the president of brazil now?	two middle classes
+LABEL	0	who did the baltimore ravens draft in 2011?	James
+LABEL	0	what form of government does czech republic have?	a member
+LABEL	0	what kind of government system does canada have?	Definition
+LABEL	0	what countries are located in the netherlands?	Africa?
+LABEL	0	what are the names of harry potter books in order?	Speculative fiction
+LABEL	0	what was the name of william shakespeare's children?	William Shakespeare
+LABEL	0	what country is located in the balkan peninsula?	industrial area
+LABEL	0	what type of music is scott joplin?	musician
+LABEL	0	where is north port florida located?	the hospital
+LABEL	0	when did kings last win stanley cup?	mind
+LABEL	0	what type of music did richard wagner play?	guitar
+LABEL	0	what kind of voting system does japan have?	1979
+LABEL	0	what do barack obama do as a president?	Barack Obama
+LABEL	0	what is the name of the pittsburgh steelers stadium?	West Ellicott
+LABEL	0	where is the great pyramid of giza situated?	the centre of Australia
+LABEL	1	what is the name of money in brazil?	Brazilian cruzeiro real
+LABEL	1	who is ruling north korea now?	Hwang
+LABEL	0	what type of government does australia currently have?	The Presence
+LABEL	0	what sort of government does brazil have?	Inflation
+LABEL	0	what language does the country italy speak?	Italian food
+LABEL	0	what type of currency does the us have?	Creative ideas
+LABEL	0	where is isthmus of panama located?	Baird's Tapir
+LABEL	0	what years have the steelers won the super bowl?	January 1
+LABEL	0	what university did tony romo go to?	Dallas
+LABEL	1	what movies gerard butler in?	Ugly Truth
+LABEL	1	what movies has billy burke been in?	Dead & Breakfast
+LABEL	0	what is the time zone in uk now?	justice
+LABEL	1	what are some famous tourist attractions in germany?	the palace
+LABEL	1	what songs did duane allman sing?	Me
+LABEL	0	what teams did jim harbaugh play for?	San Francisco 49ers
+LABEL	0	what kind of money does the ivory coast use?	Italy
+LABEL	0	who did elton john marry first?	a spring ensemble
+LABEL	0	who is the coach of the pittsburgh steelers 2005?	the United States
+LABEL	0	when did herman cain run for president?	Indiana
+LABEL	0	which country did james cook sailed for?	Nootka Sound
+LABEL	1	what kind of government does italy have?	Chigi Palace
+LABEL	1	who was betty white married too?	Ludden
+LABEL	0	where does avril lavigne live now?	South America
+LABEL	0	what kind of money does the philippines use?	PRODUCERS BANK
+LABEL	0	who was the governor of missouri in 1996?	Judge Scott
+LABEL	0	what movies does ryan gosling star in?	Ryan Gosling
+LABEL	0	what movies did zoe saldana play in?	American actress
+LABEL	1	what kind of language do china speak?	German Language
+LABEL	0	where north dakota located?	Grand Forks
+LABEL	1	who was reese witherspoon married too?	nice Ryan Phillippe
+LABEL	0	what form of government does germany use?	Kerry Longhurst
+LABEL	1	what did neil say on the moon?	?a man
+LABEL	0	where donald trump went to college?	Chicago
+LABEL	0	what is the political system in england?	turn-out
+LABEL	0	where to get married in north alabama?	Florence
+LABEL	0	where is oceania on a map?	London
+LABEL	1	what are the three major rivers in south america?	The Maroni or Marowijne
+LABEL	0	who is raquel welch's daughter?	Raquel Welch
+LABEL	1	what is the political system in italy?	Democracy
+LABEL	0	what kind of government system does canada have?	Cataloged instance
+LABEL	0	what type of music does ella fitzgerald sing?	Piano
+LABEL	1	where are the seneca indians now?	Seneca County
+LABEL	0	what is the currency in the dominican republic called?	discount price
+LABEL	0	what sports do they do in canada?	American shows
+LABEL	0	what political party was hitler the leader of?	Germany
+LABEL	1	who is the present president of china?	Jiang Zemin
+LABEL	0	what are the two houses in congress?	the Tea Party
+LABEL	0	what is a famous person from massachusetts?	Roberts
+LABEL	0	what is the government structure of germany?	Iran
+LABEL	0	what movies did matt bomer play in?	American actor
+LABEL	0	who created the character of sherlock holmes?	TV series
+LABEL	1	what type of music did richard wagner play?	Contemporary classical music
+LABEL	1	what university did donald trump graduate from?	The Wharton School
