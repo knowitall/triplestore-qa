@@ -64364,3 +64364,19 @@ LABEL	0	What was the scheduled date of the Miss Universe 2000 contest?	administr
 LABEL	1	What year did Hitler die?	1960s
 LABEL	0	What award was won by Sammy Sosa in 1998?	the Pharmacy Department
 LABEL	0	What is its popular name?	Simbang Gabi
+LABEL	0	In what year was the FISA court established?	Great Chalfield Manor
+LABEL	0	Which high school did she go to?	Chicago
+LABEL	0	How fast is alcohol absorbed?	such matters
+LABEL	0	How old is Darrell Hammond?	Darrell Hammond
+LABEL	0	Name people who have won the Iditarod.	Top
+LABEL	0	What continent is India on?	?one
+LABEL	0	Where was the trial held?	Los Angeles
+LABEL	0	When did the battle of Iwo Jima take place?	2009
+LABEL	0	What year was Sinatra's first performance?	concerts
+LABEL	1	What kind of animal was Winnie the Pooh?	a teddy bear
+LABEL	0	What was Meg Ryan's name at birth?	The CLIENT
+LABEL	0	What is the fear of lightning called?	Arabs
+LABEL	0	What is the meaning of thalassemia?	a little attention
+LABEL	0	How big does a pig get?	injectable anesthetic
+LABEL	0	What are the names of the three Great Pyramids?	a certain Buffard
+LABEL	0	What kind of plant is kudzu?	clothing
