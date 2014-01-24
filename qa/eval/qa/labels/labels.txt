@@ -64287,3 +64287,80 @@ LABEL	false	how fast be sound ?	louder
 LABEL	true	what movie do nicole kidman star in ?	dead calm
 LABEL	true	what movie queen latifah be in ?	jungle fever
 LABEL	false	what color be yak milk ?	bhutan
+LABEL	1	In what city is the Millennium Wheel located?	London
+LABEL	0	What was the date of the 1999 Chicago Marathon?	graphic and text
+LABEL	1	How many candidates ran for president?	Richardson
+LABEL	0	Who is a German philosopher?	member of a group called the Frankfurt school
+LABEL	0	What was the previous world record time?	Franklin Page
+LABEL	0	How many home runs did Babe Ruth hit?	new Yankee Stadium
+LABEL	0	Who was Blake accused of murdering?	guy
+LABEL	0	Name players on the French team.	Wolfe
+LABEL	0	What is the appropriate gift for a 10th anniversary?	response
+LABEL	0	When was penicillin first used?	bacterial infections
+LABEL	0	How fast is alcohol absorbed?	the train and smoking
+LABEL	1	What is the lowest point on earth?	Jericho
+LABEL	0	What is the name of the inventor of silly putty?	30 years
+LABEL	0	Where is the Shawnee National Forest?	Authorities Concept Scheme
+LABEL	0	What island did the U.S. gain after the Spanish American war?	Russia
+LABEL	1	What is strep throat?	drug and infection
+LABEL	1	What President became Chief Justice after his presidency?	President Taft
+LABEL	0	What time of year does the peregrine falcon breed?	Hong Kong
+LABEL	0	Who helped the candidates prepare?	the 2004 Presidential election
+LABEL	1	How many veterans have received the U.S. Medal of Honor twice?	Ritchie
+LABEL	1	Name people who have won the Iditarod.	202 Jeff King Jeff
+LABEL	0	What wrestlers have appeared in WWE events?	WWE
+LABEL	1	What are xerophytes?	NWFPs
+LABEL	1	What year was the Fulbright Program established?	1990
+LABEL	0	In what state was the Sago mine?	200 times
+LABEL	0	How long would it take to get from Earth to Mars?	35,750 kilometers
+LABEL	0	What airlines have Concordes in their fleets?	traffic
+LABEL	0	What U.S. Medal of Honor recipients are in Congress?	Honor
+LABEL	0	In what city is the Lebanese Parliament located?	Fares
+LABEL	0	How tall is Tom Cruise?	text/html Mission Impossible
+LABEL	0	How many volunteers have contributed to building houses for Habitat for Humanity?	students
+LABEL	1	Who was the coach of the French team?	Chef Zimmermann
+LABEL	0	List Michael Weiss's competitors	50
+LABEL	1	At what speed does the Earth revolve around the sun?	1670 km/hr
+LABEL	0	Who was Mrs. McDougal's lawyer?	Texas Commission
+LABEL	1	What is a film starring Jude Law?	Gatacca
+LABEL	0	Where was the 8th summit of the OIC held?	New Delhi
+LABEL	0	How old are the three Great Pyramids?	giza's most prominent site
+LABEL	0	How many opening season performances did he have at the Met?	Guard
+LABEL	0	What kind of animal was Winnie the Pooh?	ELEPHANT
+LABEL	0	What's the tallest building in New York City?	well-known building
+LABEL	0	When was the last major eruption of Mount St. Helens?	September 2003
+LABEL	0	Why did the Grand Cayman turn away a NCL ship?	a race
+LABEL	0	Who was the prosecutor?	semi-diplomatic office
+LABEL	0	How many methamphetamine labs were dismantled in Arizona in 1998?	Authorities
+LABEL	0	On what date was the first debate?	Thursday
+LABEL	0	Name the ships of the NCL	the samples
+LABEL	1	List the names of chewing gums.	Yucatan
+LABEL	1	Where is Kings Canyon?	California
+LABEL	0	Where did he live?	a hammock
+LABEL	0	What is the Moulin Rouge?	night of spectacle
+LABEL	0	On what date was Thabo Mbeki elected president of South Africa?	the ANC
+LABEL	0	Name elected government officials who are Mormon.	towns
+LABEL	0	Who is Angela Davis?	20th century figure
+LABEL	0	What is a nickname for Mississippi?	NFL
+LABEL	0	What did Alfred Noble invent?	Alfred Noble Joint Prize Award
+LABEL	0	When did he die?	1996
+LABEL	0	How big does a pig get?	a new owner
+LABEL	0	How does NCL rank in size with other cruise lines?	The crowd
+LABEL	0	What are the names of the Dixie Chicks?	a country-western group
+LABEL	0	What country did Catherine the Great rule?	Germany
+LABEL	1	What position did Warren Moon play in professional football?	Midfielder
+LABEL	0	How many states have a lottery?	2001
+LABEL	0	How many miles long is the Iditarod?	Anchorage
+LABEL	0	What is the scientific name for leech?	Latin word
+LABEL	0	What are the names of the three Great Pyramids?	giza's most prominent site
+LABEL	0	Which actress appeared in two films shown at the festival?	two films
+LABEL	0	List individuals associated with the Big Dig.	13
+LABEL	0	How long did he serve in this position?	guys
+LABEL	0	What year was Wal-Mart founded?	Part 1
+LABEL	0	In what city was Frank Sinatra born?	NJ
+LABEL	0	What Little League teams have won the World Series?	Rangers
+LABEL	0	What government organization goes by the acronym PBGC?	the General Fund
+LABEL	0	What was the scheduled date of the Miss Universe 2000 contest?	administrative arrangement for team meeting
+LABEL	1	What year did Hitler die?	1960s
+LABEL	0	What award was won by Sammy Sosa in 1998?	the Pharmacy Department
+LABEL	0	What is its popular name?	Simbang Gabi
