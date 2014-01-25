@@ -140,8 +140,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     val shape = NlpUtils.stringShape(a, 4)
     SparseVector(
       s"question prefix = '$prefix' ^ isDate" -> isDate,
-      s"question prefix = '$prefix' ^ isNumber" -> isNumber,
-      s"question prefix = '$prefix' ^ answer shape = '$shape'" -> 1.0
+      s"question prefix = '$prefix' ^ isNumber" -> isNumber
+      //s"question prefix = '$prefix' ^ answer shape = '$shape'" -> 1.0
     )
   }
   
