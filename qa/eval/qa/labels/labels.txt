@@ -64391,3 +64391,35 @@ LABEL	0	What is the fear of lightning called?	wide-ranging concept
 LABEL	0	What is the meaning of thalassemia?	multi-period effect
 LABEL	0	What year did the Titanic start on its journey?	Sunday
 LABEL	0	What kind of plant is kudzu?	state and federal agencies
+LABEL	1	What position did Satchel Paige play in professional baseball?	Pitcher
+LABEL	0	In what city is the Millennium Wheel located?	2000
+LABEL	0	What famous model was married to Billy Joel?	lady
+LABEL	1	How big is our galaxy in diameter?	100 000 light-years
+LABEL	0	What was the previous world record time?	68.4 metres
+LABEL	0	How many home runs did Babe Ruth hit?	1927
+LABEL	0	Who was Blake accused of murdering?	Hossein Haghi
+LABEL	0	In what city is Cunard Cruise Lines based?	English
+LABEL	0	What membrane controls the amount of light entering the eye?	smoothness
+LABEL	0	What was the strength of Pakistan earthquakes of October 2005?	demand-side factor
+LABEL	0	How fast is alcohol absorbed?	the EU market
+LABEL	0	What is the name of the inventor of silly putty?	a patent application
+LABEL	0	What time of year does the peregrine falcon breed?	activities
+LABEL	0	What was the biggest black opposition party at the time of Mbeki's election?	IFP
+LABEL	0	How old was the youngest president of the United States?	The President
+LABEL	0	What airlines have Concordes in their fleets?	Tokyo and Okinawa
+LABEL	0	Who was Sammy Sosa's competitor for the home run title in 1998?	athlete
+LABEL	0	In what country is the Bushehr Nuclear Facility located?	China
+LABEL	0	In what city is the Lebanese Parliament located?	1989
+LABEL	0	What are the names of Jacques Cousteau's two sons?	well-known term
+LABEL	0	What year was Sinatra's first performance?	June 26 , 2011
+LABEL	0	How high is the Tower of Pisa?	ItalyA
+LABEL	0	What was the men's winning time in the 1999 Chicago Marathon?	Gil
+LABEL	0	In what city is Padre Pio's tomb?	Italy
+LABEL	0	What is another astronomic term for the Northern Lights?	stand-alone complement
+LABEL	0	What did Alfred Noble invent?	Alfred H. Noble
+LABEL	0	How big does a pig get?	laws
+LABEL	0	How does NCL rank in size with other cruise lines?	Company
+LABEL	0	What river runs through Rowe, Italy?	Sydney
+LABEL	0	How long did he serve in this position?	the executive board
+LABEL	0	Who built the basilica that previously stood at the same site as St. Peter's Basilica?	churches
+LABEL	0	What American revolutionary general turned over West Point to the British?	game-night material
