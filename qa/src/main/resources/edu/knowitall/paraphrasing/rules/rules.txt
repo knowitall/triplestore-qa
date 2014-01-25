@@ -1,5 +1,3 @@
-dropPP (<body>:@any+) @prep @np (<p>:@punct) := $body $p
-dropFinalPrep (<body>:@any+) @prep (<p>:@punct) := $body $p
 inWhatDate @inOn @whatwhich @dateWord (<rest>:@any+) := When $rest
 whatDate @whatwhich @dateWord (<rest>:@any+) := When $rest
 commonPrefix1 <lemma='name'> @quant? (<rest>:@any+) := $rest
