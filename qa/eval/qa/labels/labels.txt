@@ -64423,3 +64423,41 @@ LABEL	0	What river runs through Rowe, Italy?	Sydney
 LABEL	0	How long did he serve in this position?	the executive board
 LABEL	0	Who built the basilica that previously stood at the same site as St. Peter's Basilica?	churches
 LABEL	0	What American revolutionary general turned over West Point to the British?	game-night material
+LABEL	1	Who is a German philosopher?	Nietzsche
+LABEL	0	What is Jon Bon Jovi's profession?	hoax
+LABEL	0	What was the previous world record time?	Mary Bauer
+LABEL	0	Who was Blake accused of murdering?	Kevin
+LABEL	0	Who helped the candidates prepare?	a poor and remote area
+LABEL	1	What are xerophytes?	intelligent plant lifeform
+LABEL	1	What year was the Fulbright Program established?	1946
+LABEL	0	In what state was the Sago mine?	Fox News
+LABEL	0	What does the acronym FISA stand for?	ordinary citizens
+LABEL	0	Where was George Foreman born?	demands
+LABEL	0	What is the effect of acid rain?	private
+LABEL	0	In what city is the Lebanese Parliament located?	Hizbullah
+LABEL	0	Where was the trial held?	Marshall
+LABEL	1	What are triglycerides?	biological coronary risk factor
+LABEL	0	What kind of animal was Winnie the Pooh?	the Children
+LABEL	0	Who is the CEO of UPS?	Emily
+LABEL	1	What does NASA stand for?	aeronautics
+LABEL	1	Where is Kings Canyon?	Australia?s Northern Territory
+LABEL	0	Where did he live?	half
+LABEL	1	Who is Angela Davis?	writer
+LABEL	1	What is the meaning of thalassemia?	Anemia
+LABEL	0	How many states have a lottery?	Allen
+LABEL	1	What is the scientific name for leech?	Tyrannobdella rex
+LABEL	0	What river runs through Rowe, Italy?	trips
+LABEL	0	What kind of plant is kudzu?	opportunity
+LABEL	1	What is naproxen?	non-steroidal anti-inflammatory Ventolin/100mcg x 3 killer
+LABEL	1	What is an earthquake?	sudden calamity
+LABEL	0	What was the previous world record time?	Alaska
+LABEL	0	Who was Blake accused of murdering?	he?s
+LABEL	1	In what city is the Lebanese Parliament located?	Ta'if
+LABEL	0	What is a film starring Jude Law?	Money
+LABEL	0	How many people were on board?	Jews
+LABEL	1	When was the first hair dryer made?	sale 1924
+LABEL	0	Where did he die?	the unenviable position
+LABEL	0	When was penicillin first used?	cases
+LABEL	0	Who was Blake accused of murdering?	actor Robert Blake
+LABEL	0	How old is Darrell Hammond?	The show
+LABEL	0	What continent is India on?	a country
