@@ -64484,3 +64484,19 @@ LABEL	0	How tall is Tom Cruise?	The 30-year-old actress
 LABEL	1	What is the meaning of thalassemia?	Anemia Anemia
 LABEL	0	What is the scientific name for leech?	Ernst & Young Entrepreneur
 LABEL	0	What is its popular name?	Apple
+LABEL	0	What is the meaning of thalassemia?	Beta-thalassemia
+LABEL	0	How big does a pig get?	body
+LABEL	0	In what state was the Sago mine?	59 years
+LABEL	0	What does the acronym FISA stand for?	Congress
+LABEL	0	What continent is India on?	tourists
+LABEL	0	What continent is India on?	tourists
+LABEL	0	What continent is India on?	tourists
+LABEL	0	What continent is India on?	tourists
+LABEL	1	Who is a German philosopher?	Rosenzweig
+LABEL	0	In what city is the Lebanese Parliament located?	Hizbollah
+LABEL	0	What continent is India on?	tourists
+LABEL	0	How many states have a lottery?	a variety
+LABEL	1	Who is a German philosopher?	Rosenzweig
+LABEL	0	In what city is the Lebanese Parliament located?	Hizbollah
+LABEL	0	What continent is India on?	tourists
+LABEL	0	How many states have a lottery?	a variety
