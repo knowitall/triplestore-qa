@@ -64391,3 +64391,112 @@ LABEL	0	What is the fear of lightning called?	wide-ranging concept
 LABEL	0	What is the meaning of thalassemia?	multi-period effect
 LABEL	0	What year did the Titanic start on its journey?	Sunday
 LABEL	0	What kind of plant is kudzu?	state and federal agencies
+LABEL	1	What position did Satchel Paige play in professional baseball?	Pitcher
+LABEL	0	In what city is the Millennium Wheel located?	2000
+LABEL	0	What famous model was married to Billy Joel?	lady
+LABEL	1	How big is our galaxy in diameter?	100 000 light-years
+LABEL	0	What was the previous world record time?	68.4 metres
+LABEL	0	How many home runs did Babe Ruth hit?	1927
+LABEL	0	Who was Blake accused of murdering?	Hossein Haghi
+LABEL	0	In what city is Cunard Cruise Lines based?	English
+LABEL	0	What membrane controls the amount of light entering the eye?	smoothness
+LABEL	0	What was the strength of Pakistan earthquakes of October 2005?	demand-side factor
+LABEL	0	How fast is alcohol absorbed?	the EU market
+LABEL	0	What is the name of the inventor of silly putty?	a patent application
+LABEL	0	What time of year does the peregrine falcon breed?	activities
+LABEL	0	What was the biggest black opposition party at the time of Mbeki's election?	IFP
+LABEL	0	How old was the youngest president of the United States?	The President
+LABEL	0	What airlines have Concordes in their fleets?	Tokyo and Okinawa
+LABEL	0	Who was Sammy Sosa's competitor for the home run title in 1998?	athlete
+LABEL	0	In what country is the Bushehr Nuclear Facility located?	China
+LABEL	0	In what city is the Lebanese Parliament located?	1989
+LABEL	0	What are the names of Jacques Cousteau's two sons?	well-known term
+LABEL	0	What year was Sinatra's first performance?	June 26 , 2011
+LABEL	0	How high is the Tower of Pisa?	ItalyA
+LABEL	0	What was the men's winning time in the 1999 Chicago Marathon?	Gil
+LABEL	0	In what city is Padre Pio's tomb?	Italy
+LABEL	0	What is another astronomic term for the Northern Lights?	stand-alone complement
+LABEL	0	What did Alfred Noble invent?	Alfred H. Noble
+LABEL	0	How big does a pig get?	laws
+LABEL	0	How does NCL rank in size with other cruise lines?	Company
+LABEL	0	What river runs through Rowe, Italy?	Sydney
+LABEL	0	How long did he serve in this position?	the executive board
+LABEL	0	Who built the basilica that previously stood at the same site as St. Peter's Basilica?	churches
+LABEL	0	What American revolutionary general turned over West Point to the British?	game-night material
+LABEL	1	Who is a German philosopher?	Nietzsche
+LABEL	0	What is Jon Bon Jovi's profession?	hoax
+LABEL	0	What was the previous world record time?	Mary Bauer
+LABEL	0	Who was Blake accused of murdering?	Kevin
+LABEL	0	Who helped the candidates prepare?	a poor and remote area
+LABEL	1	What are xerophytes?	intelligent plant lifeform
+LABEL	1	What year was the Fulbright Program established?	1946
+LABEL	0	In what state was the Sago mine?	Fox News
+LABEL	0	What does the acronym FISA stand for?	ordinary citizens
+LABEL	0	Where was George Foreman born?	demands
+LABEL	0	What is the effect of acid rain?	private
+LABEL	0	In what city is the Lebanese Parliament located?	Hizbullah
+LABEL	0	Where was the trial held?	Marshall
+LABEL	1	What are triglycerides?	biological coronary risk factor
+LABEL	0	What kind of animal was Winnie the Pooh?	the Children
+LABEL	0	Who is the CEO of UPS?	Emily
+LABEL	1	What does NASA stand for?	aeronautics
+LABEL	1	Where is Kings Canyon?	Australia?s Northern Territory
+LABEL	0	Where did he live?	half
+LABEL	1	Who is Angela Davis?	writer
+LABEL	1	What is the meaning of thalassemia?	Anemia
+LABEL	0	How many states have a lottery?	Allen
+LABEL	1	What is the scientific name for leech?	Tyrannobdella rex
+LABEL	0	What river runs through Rowe, Italy?	trips
+LABEL	0	What kind of plant is kudzu?	opportunity
+LABEL	1	What is naproxen?	non-steroidal anti-inflammatory Ventolin/100mcg x 3 killer
+LABEL	1	What is an earthquake?	sudden calamity
+LABEL	0	What was the previous world record time?	Alaska
+LABEL	0	Who was Blake accused of murdering?	he?s
+LABEL	1	In what city is the Lebanese Parliament located?	Ta'if
+LABEL	0	What is a film starring Jude Law?	Money
+LABEL	0	How many people were on board?	Jews
+LABEL	1	When was the first hair dryer made?	sale 1924
+LABEL	0	Where did he die?	the unenviable position
+LABEL	0	When was penicillin first used?	cases
+LABEL	0	Who was Blake accused of murdering?	actor Robert Blake
+LABEL	0	How old is Darrell Hammond?	The show
+LABEL	0	What continent is India on?	a country
+LABEL	0	How many candidates ran for president?	Son
+LABEL	0	What is Jon Bon Jovi's profession?	BETTYE
+LABEL	0	Who were victims of the disaster?	the GPNPBSM
+LABEL	1	What is strep throat?	inflamed throat
+LABEL	0	What was the species of Winnie the Pooh?	the Existentialists
+LABEL	0	Where do hyenas live?	groups
+LABEL	1	What are triglycerides?	blood analytes
+LABEL	1	What is nanotechnology?	superlative transhuman technology
+LABEL	0	Where is Kings Canyon?	preparation
+LABEL	1	What is naproxen?	non-steroidal anti-inflammatory medicine
+LABEL	0	What is an earthquake?	factor
+LABEL	0	What is Jon Bon Jovi's profession?	male
+LABEL	1	Who painted the ceiling of the Sistine Chapel?	Michelangelo
+LABEL	0	On what date was the first debate?	abortion
+LABEL	1	What is strep throat?	unrelated infection
+LABEL	1	What year did Hitler die?	1945
+LABEL	0	What is the name of the inventor of silly putty?	excellent fun
+LABEL	1	What is strep throat?	an acute illness
+LABEL	0	Where was George Foreman born?	two rounds
+LABEL	0	How tall is Tom Cruise?	The 30-year-old actress
+LABEL	1	What is the meaning of thalassemia?	Anemia Anemia
+LABEL	0	What is the scientific name for leech?	Ernst & Young Entrepreneur
+LABEL	0	What is its popular name?	Apple
+LABEL	0	What is the meaning of thalassemia?	Beta-thalassemia
+LABEL	0	How big does a pig get?	body
+LABEL	0	In what state was the Sago mine?	59 years
+LABEL	0	What does the acronym FISA stand for?	Congress
+LABEL	0	What continent is India on?	tourists
+LABEL	0	What continent is India on?	tourists
+LABEL	0	What continent is India on?	tourists
+LABEL	0	What continent is India on?	tourists
+LABEL	1	Who is a German philosopher?	Rosenzweig
+LABEL	0	In what city is the Lebanese Parliament located?	Hizbollah
+LABEL	0	What continent is India on?	tourists
+LABEL	0	How many states have a lottery?	a variety
+LABEL	1	Who is a German philosopher?	Rosenzweig
+LABEL	0	In what city is the Lebanese Parliament located?	Hizbollah
+LABEL	0	What continent is India on?	tourists
+LABEL	0	How many states have a lottery?	a variety

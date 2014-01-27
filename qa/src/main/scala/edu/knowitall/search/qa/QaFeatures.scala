@@ -140,8 +140,8 @@ object QaFeatures extends Function[QaStep, SparseVector] {
     val shape = NlpUtils.stringShape(a, 4)
     SparseVector(
       s"question prefix = '$prefix' ^ isDate" -> isDate,
-      s"question prefix = '$prefix' ^ isNumber" -> isNumber,
-      s"question prefix = '$prefix' ^ answer shape = '$shape'" -> 1.0
+      s"question prefix = '$prefix' ^ isNumber" -> isNumber
+      //s"question prefix = '$prefix' ^ answer shape = '$shape'" -> 1.0
     )
   }
   
@@ -188,11 +188,11 @@ object QaFeatures extends Function[QaStep, SparseVector] {
       }
       val combRules = deriv.combinators.map(c => s"parser combinator rule = $c")
       val usesFull = if (deriv.terminals.exists(t => t.rule.toString.startsWith("fullPattern"))) 1.0 else 0.0
-      val posLexRules = deriv.terminals.map { t =>
+      val posLexRules = List.empty /*deriv.terminals.map { t =>
         val i = t.catspan.span
         val tags = parse.postags(i)
         s"lex category (postags) = ${t.catspan.category.categoryString}($tags)"
-      }
+      }*/
       val counts = (lexRules ++ combRules ++ posLexRules).groupBy(x => x).map {
         case (name, names) => (name -> 1.0)
       }
