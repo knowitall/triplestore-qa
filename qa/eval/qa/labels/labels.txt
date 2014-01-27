@@ -64749,3 +64749,55 @@ LABEL	1	Who is Alberto Tomba?	charismatic sportsman
 LABEL	0	Where is it?	truth
 LABEL	0	What is the gestation period for humans?	gene tests
 LABEL	0	Where is it based?	Barbara J. Stapleton
+LABEL	0	What was the official name of the Big Dig?	Imperial Fortress
+LABEL	0	In what city was the operation performed?	Winnipeg
+LABEL	0	How did Julius Erving's son die?	Corey Erving
+LABEL	1	When was the U.S. capitol built?	1950
+LABEL	1	What was Bing Crosby's nickname?	Bing
+LABEL	0	What political party does Thabo Mbeki belong to?	2009-03
+LABEL	0	How long is human gestation?	approximate length of time
+LABEL	0	What color are UPS trucks?	Water
+LABEL	0	What is Dr. Ruth's last name?	Pierre A. Lehu
+LABEL	0	How many Wal-Mart outlets are there in India?	November 2005
+LABEL	0	What is the age of our solar system?	the supernova
+LABEL	0	When was CNN's first broadcast?	AC 360
+LABEL	0	Where was Rachel Carson home?	prize of honor
+LABEL	0	Where was Super Bowl XXXIV held?	the Ravens
+LABEL	0	When was King Louis XIV born?	an bolsas louis vuitton
+LABEL	0	What was Thailand's original name?	World
+LABEL	0	How tall is the tallest pyramid?	101.1
+LABEL	0	How many crew members were aboard?	the California Zephyr
+LABEL	1	In what state is Dulles located?	Washington
+LABEL	0	What is Dick Clark's date of birth?	J. D. Santen
+LABEL	0	When did the Mesozoic period end?	time of mountain building, erosion and deposition
+LABEL	0	What was Curveball's profession?	Iraq
+LABEL	0	What movies did Meg Ryan star in?	celebrity customer
+LABEL	0	Who invented the game bowling?	color
+LABEL	0	What was the name of Sherlock Holmes' brother?	the film
+LABEL	0	When did Hawaii become a state?	1979
+LABEL	0	What state is the Filenes store located in?	1881
+LABEL	1	Where is the U.S. Mint headquartered?	Denver
+LABEL	0	When was PBGC established?	2002
+LABEL	1	What year was the first Little League World Series played?	1947
+LABEL	0	What does the acronym NATO stand for?	the Pentagon
+LABEL	0	Who founded the House of Chanel?	Jacques Wertheimer
+LABEL	1	What day did Pearl Harbor occur?	December
+LABEL	1	Who is Aaron Copland?	contemporary of barber
+LABEL	0	What was it originally called?	GoDaddy Auctions
+LABEL	0	Aspartame is also known as what?	leukemia
+LABEL	0	On what date did the disaster occur?	1989
+LABEL	0	When did the Big Dig begin?	the post-WWII Interstate Highway boom
+LABEL	0	The Orange Bowl is in what city?	jest
+LABEL	0	How far does a laser pointer shine?	a drop
+LABEL	0	What year was the program first broadcast?	the growing interest
+LABEL	0	When is Jennifer Lopez's birthday?	1997
+LABEL	1	How old is Harriet Miers?	60
+LABEL	1	How did Eva Peron die?	cancer
+LABEL	0	How old was the dam?	11 %
+LABEL	0	How did Adolf Hitler die?	age 56
+LABEL	1	What movies did Meg Ryan star in?	LIFE
+LABEL	0	Who was the founder of Habitat for Humanity?	the Week
+LABEL	1	How did John Quincy Adams die?	age 80
+LABEL	0	What is the chemical formula for sulphur dioxide?	emissions
+LABEL	0	Who developed potlatch?	the animals
+LABEL	0	Where is it?	Wells based company
