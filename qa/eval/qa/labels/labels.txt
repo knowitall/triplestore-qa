@@ -64461,3 +64461,26 @@ LABEL	0	When was penicillin first used?	cases
 LABEL	0	Who was Blake accused of murdering?	actor Robert Blake
 LABEL	0	How old is Darrell Hammond?	The show
 LABEL	0	What continent is India on?	a country
+LABEL	0	How many candidates ran for president?	Son
+LABEL	0	What is Jon Bon Jovi's profession?	BETTYE
+LABEL	0	Who were victims of the disaster?	the GPNPBSM
+LABEL	1	What is strep throat?	inflamed throat
+LABEL	0	What was the species of Winnie the Pooh?	the Existentialists
+LABEL	0	Where do hyenas live?	groups
+LABEL	1	What are triglycerides?	blood analytes
+LABEL	1	What is nanotechnology?	superlative transhuman technology
+LABEL	0	Where is Kings Canyon?	preparation
+LABEL	1	What is naproxen?	non-steroidal anti-inflammatory medicine
+LABEL	0	What is an earthquake?	factor
+LABEL	0	What is Jon Bon Jovi's profession?	male
+LABEL	1	Who painted the ceiling of the Sistine Chapel?	Michelangelo
+LABEL	0	On what date was the first debate?	abortion
+LABEL	1	What is strep throat?	unrelated infection
+LABEL	1	What year did Hitler die?	1945
+LABEL	0	What is the name of the inventor of silly putty?	excellent fun
+LABEL	1	What is strep throat?	an acute illness
+LABEL	0	Where was George Foreman born?	two rounds
+LABEL	0	How tall is Tom Cruise?	The 30-year-old actress
+LABEL	1	What is the meaning of thalassemia?	Anemia Anemia
+LABEL	0	What is the scientific name for leech?	Ernst & Young Entrepreneur
+LABEL	0	What is its popular name?	Apple
