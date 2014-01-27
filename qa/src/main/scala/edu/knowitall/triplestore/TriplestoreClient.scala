@@ -139,6 +139,13 @@ case object SolrClient {
   val defaultMaxHits = conf.getInt("triplestore.maxHits")
   val defaultTimeout = conf.getInt("triplestore.timeout")
   val defaultSkipTimeouts = conf.getBoolean("triplestore.skipTimeouts")
+  val defaultSkipNamespaces = conf.getString("triplestore.skipNamespaces").r
+  val defaultNamespaces = conf.getStringList("triplestore.namespaces") filter { ns => ns match {
+      case defaultSkipNamespaces() => false
+      case _ => true
+    } 
+  }
+  private val nsDisjunction = Disjunction(defaultNamespaces.map(NamespaceEq(_)):_*)
     
   def escape(s: String): String = ClientUtils.escapeQueryChars(s)
   
@@ -161,8 +168,10 @@ case object SolrClient {
   /**
    * Takes a Search.Query object and maps it to a SolrQuery object.
    */
-  def buildQuery(q: TSQuery): SolrQuery =
-    new SolrQuery(fixQuery(q.toQueryString))
+  def buildQuery(q: TSQuery): SolrQuery = {
+    val newQuery = Conjunction(nsDisjunction, q)
+    new SolrQuery(fixQuery(newQuery.toQueryString))
+  }
   
   /**
    * Builds a SolrQuery object used to count the number of hits returned

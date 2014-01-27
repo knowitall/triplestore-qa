@@ -310,6 +310,7 @@ object Search {
   val Arg1Cont = (v: String) => FieldKeywords(arg1, v)
   val Arg2Cont = (v: String) => FieldKeywords(arg2, v)
   val RelCont = (v: String) => FieldKeywords(rel, v)
+  val NamespaceEq = (v: String) => FieldKeywords(namespace, v)
 
   /* Returns the conjunction of the given queries. */
   case class Conjunction(conjuncts: TSQuery*) extends TSQuery {
