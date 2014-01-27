@@ -64500,3 +64500,252 @@ LABEL	1	Who is a German philosopher?	Rosenzweig
 LABEL	0	In what city is the Lebanese Parliament located?	Hizbollah
 LABEL	0	What continent is India on?	tourists
 LABEL	0	How many states have a lottery?	a variety
+LABEL	1	What does SIDS stand for?	System
+LABEL	0	What was the official name of the Big Dig?	Boston
+LABEL	0	How many times has he married?	Ianiv
+LABEL	0	In what city was the operation performed?	June
+LABEL	1	Where is the capital of the Mormon Church?	Salt Lake City
+LABEL	1	What was Sinatra's first recording?	Reprise Records
+LABEL	1	When was Limbaugh born?	1951
+LABEL	0	Who is Warren Moon's agent?	1982-05-27
+LABEL	1	Who invented the hula hoop?	Robbins
+LABEL	1	What does laser stand for?	Light Amplification
+LABEL	1	Where is John Wayne airport?	Santa Ana
+LABEL	1	How many layers of skin do we have?	fat
+LABEL	1	When was the U.S. capitol built?	1932
+LABEL	0	What was Bing Crosby's nickname?	crooning
+LABEL	1	When was U.S Naval Academy founded?	1845
+LABEL	0	Where did they honeymoon?	Honolulu
+LABEL	1	What is the name of the airport in Amsterdam?	schiphol
+LABEL	1	Who invented basketball?	Canadians
+LABEL	1	What are pathogens?	control contaminant
+LABEL	0	How tall is St. Peter's Basilica?	regarded architect
+LABEL	1	What is Head Start?	3-star facility
+LABEL	1	Who is the governor of Alaska?	Sarah
+LABEL	0	What political party does Thabo Mbeki belong to?	influential political figure
+LABEL	0	What is Jerry's last name?	Jerry
+LABEL	0	What is Hong Kong's population?	pressing issue
+LABEL	1	Who is the Greek God of the Sea?	Poseidon
+LABEL	1	Who developed the Macintosh computer?	Jobs
+LABEL	0	In what city are the three Great Pyramids located?	such a way
+LABEL	1	Who invented television?	Scottish pioneers
+LABEL	1	What are enzymes?	2-component cleaning system important component
+LABEL	1	Who is the conductor of the Boston Pops?	Williams
+LABEL	1	In what year was Warren Moon born?	1982-05-27
+LABEL	1	When was the Red Cross founded?	1863
+LABEL	1	Who is the president of Stanford University?	Casper
+LABEL	0	How long is human gestation?	the Tzolkin
+LABEL	0	How many types of human blood are there?	certain markers
+LABEL	0	What color are UPS trucks?	Home Farm
+LABEL	1	Who was Carolyn Bessette Kennedy married to?	John F. Kennedy Jr.
+LABEL	1	What books has Walter Mosley written?	novel
+LABEL	1	What was the name of Ayn Rand's husband?	Paul
+LABEL	0	What is Africa's largest country?	society of different religious, ethnic and social group
+LABEL	0	How fast is an eye blink?	0-60 time
+LABEL	0	What is Dr. Ruth's last name?	August 7 , 2010
+LABEL	0	Who is the manager of the Boston Pops?	August
+LABEL	0	How old was Crosby when he died?	Teahen
+LABEL	0	How old was Joan of Arc when she died?	11:03
+LABEL	0	What is Curveball's real name?	The Weapons
+LABEL	0	Which college athletic teams are nicknamed the Cougars?	football
+LABEL	0	In what year was Padre Pio born?	Pietralcina
+LABEL	1	What is schizophrenia?	brain condition
+LABEL	1	What is the length of the Big Dig?	139.333
+LABEL	1	What president created social security?	Franklin D. Roosevelt
+LABEL	0	When is Jennifer Lopez's birthday?	Miami
+LABEL	1	When was Shakespeare born?	1554
+LABEL	1	What year did Patsy Cline die?	1963
+LABEL	1	What year did South Dakota become a state?	1889
+LABEL	1	What is neuropathy?	vitamin b12 deficiency symptom
+LABEL	0	What is the age of our solar system?	Sun
+LABEL	0	When was CNN's first broadcast?	2006-09-04
+LABEL	1	What movies did Judi Dench play in?	Notes on a Scandal
+LABEL	1	In what year was Susan Butcher born?	1954-12-26
+LABEL	0	Who are professional female boxers?	four-time Golden Gloves champ
+LABEL	1	What peace treaty ended WWI?	Versailles
+LABEL	1	What are geckos?	5 letter word
+LABEL	0	What was the percentage of turnout for the election?	3,935 voters
+LABEL	0	Whom did he marry?	respected member of FUDZone
+LABEL	0	Where was Rachel Carson home?	scores
+LABEL	0	Where is the Holland Tunnel?	movies
+LABEL	1	When was Queen Victoria born?	1819
+LABEL	1	What is Jay-Z's real name?	Shawn Carter
+LABEL	0	Why is a ladybug helpful?	The Ladybird
+LABEL	0	How many official languages does Switzerland have?	Switzerland
+LABEL	0	How tall is the Washington Monument?	the Mall
+LABEL	0	How old is Harriet Miers?	the Republican Party
+LABEL	0	When was King Louis XIV born?	France
+LABEL	0	Where is the Salton Sea?	serious trouble
+LABEL	0	What was the final score?	curved score
+LABEL	1	What year did Alaska become a state?	1958
+LABEL	0	What is the full name of conductor Seiji?	famous
+LABEL	1	What is the esophagus used for?	food storage
+LABEL	0	What is ETA in Spain?	winners
+LABEL	1	What is leukemia?	serious autoimmune disease
+LABEL	1	Who has employed Steffen?	Schwarz
+LABEL	1	What is titanium?	exotic new material
+LABEL	1	How many state jobs did Steffen hold?	researcher
+LABEL	0	What actor first portrayed James Bond?	Craig
+LABEL	0	What is an eclipse?	layered call
+LABEL	0	How many moons does Neptune have?	the top...
+LABEL	0	How many Oscars has she won?	Pinoco
+LABEL	1	What is relative humidity?	factor of well-being
+LABEL	1	What was the nickname for the French team?	Les Bleus
+LABEL	1	What is the oldest university in the US?	Rensselaer
+LABEL	1	How many sonnets did Shakespeare write?	Romeo and Juliet
+LABEL	0	How did Eva Peron die?	Madonna
+LABEL	1	What was Thailand's original name?	Siam
+LABEL	1	How big is a keg?	15.5
+LABEL	1	How tall is the tallest pyramid?	138 feet
+LABEL	1	Where is Santa Lucia?	Sweden
+LABEL	1	What hockey team did Wayne Gretzky play for?	Edmonton Oilers
+LABEL	0	How many crew members were aboard?	a few equipment cases
+LABEL	0	How many seats are in the Lebanese Parliament?	Lebanon
+LABEL	0	What is his primary career?	Transportation
+LABEL	1	What nationality is Sean Connery?	Scotland
+LABEL	1	What songs did Al Jolson Sing?	Sonny Boy
+LABEL	1	When did the Johnstown flood occur?	May 31 , 1889
+LABEL	0	How many members does it have?	Search Engine
+LABEL	0	How old was the dam?	8 Yellow Wagtails
+LABEL	1	What are antacids?	eligible over-the-counter drug
+LABEL	0	In what state is Dulles located?	event
+LABEL	1	Who was Abraham Lincoln?	sasquatch/president
+LABEL	0	How old was Sani Abacha when he died?	the 8th
+LABEL	1	When was Algeria colonized?	the 19th century
+LABEL	0	What is Dick Clark's date of birth?	believers
+LABEL	1	Who did the Prince Edward marry?	a German princess
+LABEL	1	When was the White House built?	1792
+LABEL	1	What was the name of Patsy Cline's producer?	Owen Bradley
+LABEL	1	Where is Mesa Verde National park?	Southwestern Colorado
+LABEL	1	What is the location of Lake Champlain?	Richelieu River
+LABEL	0	What was Curveball's profession?	easy pitch
+LABEL	0	On what date was the surgery performed?	the TV screen
+LABEL	1	What are semiconductors?	spectral region certain nonmetallic material
+LABEL	1	What is sodium chloride?	D2-3Pre-wetted salt A saturated solution
+LABEL	1	What continent is Bolivia on?	Latin America
+LABEL	0	What sport do the Cleaveland Cavaliers play?	The Orlando Magic
+LABEL	1	What are brake pads made of?	asbestos
+LABEL	1	Which British teams has Manchester United played?	Arsenal
+LABEL	0	How did Adolf Hitler die?	Michael Sheard
+LABEL	0	Where is the highest point on earth?	part
+LABEL	1	When was Hiroshima bombed?	1945
+LABEL	1	What is the life expectancy of a dollar bill?	18-22 months
+LABEL	0	Who was the founder of Habitat for Humanity?	insulation
+LABEL	1	Who won the 2004 World Series?	Boston
+LABEL	0	What are pomegranates?	blueberry
+LABEL	1	What year was the program first broadcast?	May 1 , 1939
+LABEL	0	What is the average weight of a Yellow Labrador?	back
+LABEL	1	What birthstone is turquoise?	Sagittarius Nov. 22nd
+LABEL	0	How many events are part of the LPGA tour?	Phil Mickelson
+LABEL	1	What was Sammy Sosa's team?	Cubs
+LABEL	0	Which film won three awards at the festival?	The Film
+LABEL	0	What organization investigated the disaster?	scientist
+LABEL	1	What is the birthstone of October?	Tourmaline
+LABEL	1	When is the summer solstice?	June 20th
+LABEL	1	Who is Paul Newman married to?	acclaimed actress Joanne Woodward
+LABEL	0	Where did the Hindenburg disaster occur?	May
+LABEL	1	When was the telegraph invented?	1837
+LABEL	1	What food companies have been acquired by Heinz?	Weight Watchers
+LABEL	1	When was the Hoover Dam constructed?	1931
+LABEL	1	Who was Picasso?	great trompe l'oeil artist
+LABEL	0	How did John Quincy Adams die?	Hopkins
+LABEL	0	Who invented the game bowling?	Series organizers
+LABEL	1	What do penguins eat?	small fish
+LABEL	1	How many non-permanent members are in the Security Council?	Austria
+LABEL	1	What is Ursa Major?	set of 220 star
+LABEL	1	What is peyote?	plant with powerful hallucinogenic property
+LABEL	0	Where was the Andersonville Prison?	Emigranten
+LABEL	0	When was the company founded?	1952
+LABEL	1	What is pastrami made of?	beef
+LABEL	1	Where are the National Archives?	Washington
+LABEL	1	What countries supplied aid?	America
+LABEL	0	What companies has BAT owned?	insect
+LABEL	0	Where does chocolate come from?	the Gallery Room
+LABEL	1	Who was the captain of the Titanic?	Rosenthal
+LABEL	1	What is the tallest statue in the world?	Giza
+LABEL	0	What is a stratocaster?	separate piece
+LABEL	0	Which terrorist organization claimed responsibility for the massacre?	Islamic Group
+LABEL	1	What is the richest country in the world?	Amercia
+LABEL	0	What store does Martha Stewart advertise for?	year
+LABEL	0	What is Britney Spears' middle name?	the West
+LABEL	1	Who is Anubis?	house band with name
+LABEL	1	When did Hawaii become a state?	1959
+LABEL	1	Why is the sun yellow?	God
+LABEL	0	In what month is it held?	March
+LABEL	0	What state is the Filenes store located in?	Filenes Baement
+LABEL	1	What is the population of Venezuela?	23916810
+LABEL	1	What is an Indian flute made of?	bamboo
+LABEL	1	Who is the airport named after?	Bauerfield
+LABEL	0	Where is the U.S. Mint headquartered?	the city
+LABEL	1	When was PBGC established?	1974
+LABEL	1	Where is the Kalahari desert?	Africa
+LABEL	1	What year was the phonograph invented?	1877
+LABEL	1	What team drafted Brett Favre?	the Falcons
+LABEL	0	Where does Curveball now live?	Training companies
+LABEL	0	What is the inner peel of an orange called?	a man
+LABEL	0	Where is Rider College located?	Jut
+LABEL	0	What is the heaviest naturally occurring element?	element
+LABEL	0	what is Speedy Claxton's real name?	players
+LABEL	0	What year was the first Little League World Series played?	2009
+LABEL	1	What is the capital of Italy?	Rome Rome
+LABEL	0	What did George Washington call his house?	Ryan
+LABEL	0	What does the acronym NATO stand for?	Macedonians
+LABEL	1	When was Julius Caesar born?	either July 12th
+LABEL	1	How many NFL teams are there?	The Colts
+LABEL	0	What do manatees eat?	10
+LABEL	0	What was Malcolm X's original surname?	Shaink
+LABEL	1	What is cribbage?	popular 2-person game
+LABEL	1	In what year was the Guinness Brewery founded?	1759
+LABEL	0	Who founded the House of Chanel?	Dellal
+LABEL	0	What is Weiss's home town?	a piece
+LABEL	1	Which king signed the Magna Carta?	King John
+LABEL	0	Who founded Wal-Mart?	Univ
+LABEL	0	What is Susan B. Anthony's birthday?	cause
+LABEL	0	What day did Pearl Harbor occur?	ILM
+LABEL	0	How large is it?	big order
+LABEL	1	Who is Aaron Copland?	now-famous composer
+LABEL	1	When was Microsoft established?	1980
+LABEL	1	Where was Shakespeare born?	Stratford-on-Avon
+LABEL	0	How many people visit Angkor Wat annually?	Vietnam
+LABEL	1	What did Rachel Carson die of?	cancer
+LABEL	1	What is amitriptyline?	CYP 1A2 inhibitor
+LABEL	0	Which airlines use Dulles?	traffic
+LABEL	0	What was it originally called?	IDLs
+LABEL	0	Who was the first king of England?	The Independent
+LABEL	1	Where is the Orinoco River?	swamps
+LABEL	1	Where is Merrill Lynch headquartered?	New York City
+LABEL	0	Which college did Carolyn Bessette Kennedy go to?	January 7 , 1966
+LABEL	1	Aspartame is also known as what?	NutraSweet
+LABEL	1	What countries have Rhodes Scholars come from?	Australia
+LABEL	0	On what date did the disaster occur?	the PUP
+LABEL	1	When was the first camera invented?	1888
+LABEL	1	Who was the first host of Jeopardy?	Art Fleming
+LABEL	0	How many Great Lakes are there?	America
+LABEL	1	Who is Terrence Malick?	director
+LABEL	1	When did the Big Dig begin?	1991
+LABEL	0	Which authority runs the airport?	coach
+LABEL	1	Where is NATO headquartered?	Brussels
+LABEL	0	How long does the Madness last?	SM4
+LABEL	0	What university did Thomas Jefferson found?	Great Falls
+LABEL	1	When did the Chernobyl nuclear accident occur?	Friday
+LABEL	1	Where is the LPGA headquartered?	Daytona Beach
+LABEL	0	What plays did Shakespeare write?	performance
+LABEL	1	The Orange Bowl is in what city?	Miami
+LABEL	0	What is the chemical formula for sulphur dioxide?	CARBON
+LABEL	0	Where is Venezuela?	turmoil
+LABEL	0	Who developed potlatch?	A sincere effort
+LABEL	1	Who was the first Triple Crown Winner?	SWA
+LABEL	0	How far does a laser pointer shine?	a 3D mouse
+LABEL	1	What does ACLU stand for?	Anti-Christian Lawyers
+LABEL	0	What is the highest dam in the U.S.?	power
+LABEL	1	Where is the world's largest meteorite?	Hoba meteorite
+LABEL	0	What is the largest variety of cactus?	tip
+LABEL	1	What are coral reefs?	gray-areas
+LABEL	1	What companies manufacture golf clubs?	Callaway Golf Company
+LABEL	1	What operas has Caruso sung?	La Boheme
+LABEL	1	What is the phobia for number 13?	? Triskaidekaphobia
+LABEL	0	Where is South Bend?	St
+LABEL	1	Who is Alberto Tomba?	charismatic sportsman
+LABEL	0	Where is it?	truth
+LABEL	0	What is the gestation period for humans?	gene tests
+LABEL	0	Where is it based?	Barbara J. Stapleton
