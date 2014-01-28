@@ -1,0 +1,236 @@
+template arg pos tags = NN RB	0.0
+parser lexical rule = quantIdentity	1.0023325558147285
+lex type = Unary ^ rightTag = VBP	-0.6144618460513163
+action type = RelSynRule	-0.16327890703098968
+evidence similarity with question	1.9196209144407042
+lex type = Identity ^ leftTag = RBS	0.1576141286237921
+action type = ParsedQuestion	0.0
+template prefix when => who	-0.7900699766744419
+lex type = Identity ^ rightTag = WP	0.0
+template arg pos tags = WP VBP NNS VB	-0.6144618460513163
+template arg pos tags = DT JJ NN NN	1.2085971342885704
+relSynRule pmi	0.9996667777407531
+template arg pos tags = VBN	0.0
+template arg pos tags = DT JJ NN VBP	-0.6384538487170943
+template arg pos tags = DT NN NNS	0.0
+parser lexical rule = punctIdentity	0.0
+answer is def noun	-2.493168943685438
+template arg pos tags = NNP NNP NNP	0.0
+question prefix = 'what year' ^ isNumber	0.7414195268243919
+template arg pos tags = NN JJ	-0.34921692769076973
+minimum join key similarity	0.6706630766137806
+template prefix what => when	0.0
+parser lexical rule = fullPatternCop	0.05564811729423526
+template prefix when => what	0.0
+lex type = Unary ^ leftTag = CC	0.19493502165944687
+lex type = Identity ^ leftTag = IN	0.3348883705431523
+dropNameOf	-0.5281572809063646
+lex type = Identity ^ leftTag = VBN	0.26557814061979335
+template pair pmi	4.939800395176276
+fbid join key violation	-1.1522825724758414
+template arg pos tags = NN NN VB	0.26691102965678104
+template arg pos tags = NN NNS LS	0.0
+template arg pos tags = DT JJ NN VB	0.8287237587470843
+parser lexical rule = fullPatternRelType	-2.0266577807397534
+answer is linked to freebase	1.0636454515161613
+posToOf	-1.1389536821059647
+template arg pos tags = VB NN	0.0
+template arg pos tags = DT NN NN NN	-0.39320226591136287
+template arg pos tags = NN VB NN	-0.736754415194935
+parser lexical rule = fullPatternWhenOn	-0.4511829390203266
+template arg pos tags = DT JJ JJ NN	0.0
+template prefix where => what	2.339553482172609
+template arg pos tags = JJ NNS	0.0
+lex type = Identity ^ leftTag = TO	0.7704098633788737
+parser lexical rule = auxIdentity	-1.6681106297900699
+template arg pos tags = VB VB	-0.0289903365544818
+template arg pos tags = VBP NN NN	-0.6237920693102299
+tuple conceptVagueness_f	0.8503837879306417
+template arg pos tags = DT VBP IN NN	0.0
+template prefix UNK => UNK	-0.6634455181606131
+lex type = Identity ^ leftTag = <s>	-0.457514161946018
+template arg pos tags = NN NNS	0.0
+template arg pos tags = JJ CD	-0.9353548817060979
+tuple num_extrs_i	-0.005904732662672288
+template arg pos tags = NN VBP DT NN	-0.23225591469510165
+template arg pos tags = NN JJ IN	0.0
+template arg pos tags = VB IN NN	0.08397200933022327
+dropPP	-1.9993335554815062
+lex type = Identity ^ rightTag = VBP	0.19493502165944687
+template arg pos tags = WDT JJ VB	-0.30589803398867044
+template arg pos tags = VB TO VB NN	0.0
+parser combinator rule = UnaryIdentity	0.0
+answer from namespace 'probase'	-0.6841052982339222
+template arg pos tags = NN NN NN	-0.5348217260913029
+template arg pos tags = NN IN JJ	0.0
+action type = ProjectAction$	0.0
+answer from namespace 'reverb'	-0.3498833722092636
+template arg pos tags = VB NN NN	-0.5391536154615129
+template arg pos tags = JJ NN	-1.8527157614128624
+action type = DropStopAction$	-0.9180273242252581
+lex type = Identity ^ leftTag = NN	0.7770743085638121
+parser combinator rule = UnaryIntersect	-0.6144618460513163
+lex type = Unary ^ leftTag = VB	-0.9523492169276908
+template arg pos tags = DT JJ	0.0
+lex type = Identity ^ rightTag = VB	0.0
+template arg pos tags = NNP	0.0
+template arg pos tags = DT NN IN NN	0.0
+template arg pos tags = VBN NN VB	0.5481506164611796
+template prefix what => who	-2.1646117960679776
+template prefix what => how many	1.9060313228923693
+paraphrase lm	2.3226874863934204
+num lexical rules	-1.7240253248917028
+parser lexical rule = fullPatternWhereIn	-1.6361212929023659
+dropTypeOf	1.813395534821726
+lex type = Identity ^ leftTag = RP	-0.9563478840386538
+template arg pos tags = DT NN	-0.6451182939020327
+template arg pos tags = NN VB JJ NNP	-0.6524491836054649
+template prefix where => what year	-0.7297567477507497
+template arg pos tags = NN VBP JJ NN	0.25658113962012663
+template arg pos tags = IN NN	-0.8923692102632454
+template arg pos tags = NN CD CD	0.0
+num conjuncts	-2.088303898700433
+action type = DropStopAction	0.9996667777407531
+template prefix UNK => be	0.0
+answer from namespace 'nell'	-0.23192269243585473
+template arg pos tags = NN NN NN NN	-1.404865044985005
+parser lexical rule = ignoreTypesIdentity	-0.8313895368210596
+template prefix who => who	1.8320559813395536
+template prefix what => how	0.8240586471176274
+answer from namespace 'freebase'	1.3305564811729425
+parser lexical rule = conjIdentity	-0.4288570476507831
+lex type = Identity ^ leftTag = RB	-0.06464511829390196
+lex type = Identity ^ rightTag = WRB	-0.4288570476507831
+whatDate	-0.7297567477507497
+template arg pos tags = NN IN JJ NN	0.8713762079306897
+parser lexical rule = fullPatternDobj	3.044985004998334
+tuple freq_i	0.570266636735247
+question prefix = 'when' and isDate	0.9996667777407531
+query relation is light verb	-0.8040653115628125
+question prefix = 'where' ^ isDate	-0.9506831056314562
+template prefix what => UNK	-0.6811062979006998
+template arg pos tags = WDT VB DT NN	-0.9870043318893702
+parser lexical rule = fullPatternSubj	0.8890369876707764
+template prefix what => why	-0.6524491836054649
+template prefix when => where	-0.9996667777407531
+template arg pos tags = JJ NN NN	-1.2692435854715094
+action type = ExecutionAction$	0.0
+template arg pos tags = DT JJ NN VBN	0.8340553148950349
+parser lexical rule = fullPatternPoss	-0.14061979340219932
+template prefix what => where	-1.2935688103965344
+lex type = Unary ^ leftTag = WRB	-0.6524491836054649
+template arg pos tags = NN NNS VBP	-0.23625458180606462
+template pair count1	-5.587892577081909
+parser lexical rule = fullPatternTypeSubj	-2.8733755414861712
+template arg pos tags = DT NN RB	0.0
+lex type = Identity ^ rightTag = </s>	0.0
+parser lexical rule = whIdentity	-0.12895701432855716
+question prefix = 'what' ^ isDate	-2.9540153282239254
+parser lexical rule = fullPatternWhereIs	-0.9903365544818394
+lex type = Identity ^ leftTag = WP	-0.9523492169276908
+lex type = Unary ^ leftTag = <s>	0.457514161946018
+question prefix = 'when' ^ isDate	1.1909363545484837
+template arg pos tags = VB NNP	0.0
+lex type = Identity ^ leftTag = VBP	-0.6237920693102299
+template arg pos tags = VB DT NN JJ	-0.546151282905698
+lex type = Identity ^ leftTag = NNS	-1.3205598133955347
+question prefix = 'where' and isDate	-0.9996667777407531
+template arg pos tags = JJ NNP	0.9716761079640119
+template prefix when => what year	0.06064645118293902
+lex type = Unary ^ rightTag = WRB	0.0
+template prefix what => what	1.861046317894035
+dropAdverb	-0.8733755414861712
+template arg pos tags = WDT JJ VB VBP	0.30589803398867044
+template arg pos tags = WP VB JJ NN	0.32355881372875706
+template prefix what => what year	0.8470509830056647
+template arg pos tags = WDT NN	0.5678107297567477
+template prefix who => what	-3.0629790069976677
+template prefix where => who	-0.4368543818727091
+lex type = Identity ^ leftTag = CD	-0.19793402199266907
+template prefix UNK => where	-0.5678107297567477
+action type = ParaphraseRule	-1.4568477174275243
+template pair count2	-3.607490239804564
+parser lexical rule = fullPatternDefn	-1.9680106631122958
+parser lexical rule = fullPatternHaveProp	0.2935688103965344
+template arg pos tags = NN NN VBN	-0.9940019993335555
+template arg pos tags = NN NN LS	0.0
+lex type = Identity ^ rightTag = NN	-0.6524491836054649
+template arg pos tags = NN NN	2.4311896034655116
+uses full parser pattern	0.9996667777407531
+template arg pos tags = NNS	0.0
+template arg pos tags = NN VB VB	-0.505831389536821
+parser lexical rule = fullPatternProperty	3.527157614128624
+question prefix = 'what' ^ isNumber	-2.2099300233255583
+template arg pos tags = JJ NN IN JJ	0.9353548817060979
+template arg pos tags = VBN NN	-2.7670776407864044
+template prefix UNK => when	0.9523492169276908
+lex type = Unary ^ leftTag = VBP	0.9523492169276908
+question prefix = 'who' ^ isDate	0.0
+template pair count12	2.6371924484503024
+template prefix who => what year	0.02299233588803732
+tuple popularity_i	0.8549247059504304
+template arg pos tags = WP VBP NN NN	0.0
+template prefix UNK => who	-0.05398200599800067
+template arg pos tags = VB	0.0289903365544818
+template arg pos tags = VB JJ NN	0.8070643118960347
+lex type = Identity ^ leftTag = VB	-0.8757080973008997
+template arg pos tags = NN IN DT NN	0.0
+template arg pos tags = WRB VBP NNP NNP	0.0
+template arg pos tags = RB	0.0
+template arg pos tags = NN IN NN	0.047317560813062265
+template arg pos tags = NNS JJS NN	-0.1406197934021992
+template arg pos tags = NN NN VBZ	-0.4891702765744752
+template arg pos tags = VB JJ NNP	-0.31922692435854716
+question prefix = 'what year' ^ isDate	0.7414195268243919
+template arg pos tags = DT NNP NN	-0.5204931689436854
+template arg pos tags = NN JJ VB	-0.5298233922025991
+question prefix = 'UNK' ^ isNumber	-0.30589803398867044
+template arg pos tags = DT JJ NN	-2.1032989003665445
+question prefix = 'UNK' ^ isDate	-0.30589803398867044
+template prefix UNK => what	-0.9450183272242586
+parser lexical rule = fullPatternCopRel	0.3675441519493501
+steps	-3.105881372875708
+template prefix when => what month	0.0
+action type = AbstractArgAction	-2.943352215928024
+answer from namespace 'openie4'	-1.8190603132289236
+question prefix = 'who' ^ isNumber	-0.9713428857047651
+template arg pos tags = JJ NN VB	-0.6001332889036988
+parser lexical rule = relMarkerIdentity	-0.9523492169276908
+parser lexical rule = fullPatternTypeDobj	1.3995334888370543
+template arg pos tags = NN VBP NN	-0.8207264245251583
+lex type = Unary ^ rightTag = </s>	0.6237920693102299
+template arg pos tags = JJ JJ	0.08430523158947012
+template prefix UNK => how	0.0
+query similarity with question	3.6014443422474103
+template arg pos tags = VB DT NN	0.8873708763745418
+question prefix = 'when' ^ isNumber	1.4561812729090302
+lex type = Identity ^ leftTag = JJ	0.0
+lex type = Unary ^ leftTag = CD	0.0
+lex type = Unary ^ leftTag = NNP	-0.6144618460513163
+template arg pos tags = JJ	1.7110963012329223
+lex type = Identity ^ leftTag = WRB	0.5234921692769077
+question prefix = 'what year' and isDate	0.9996667777407531
+template arg pos tags = NN VBP	0.0
+action type = TemplatePair	-2.943352215928024
+template prefix where => when	-0.9996667777407531
+template arg pos tags = JJ VB	-0.6574475174941685
+template arg pos tags = NN VB	0.5291569476841053
+question prefix = 'where' ^ isNumber	-3.2362545818060644
+template arg pos tags = NN VB IN	-1.04431856047984
+parser lexical rule = fullPatternWhenIn	-0.1056314561812729
+template arg pos tags = NN	9.5674775074975
+template arg pos tags = JJ NN NN NN	0.0
+template arg pos tags = NN NN CD	0.0
+template prefix who => how many	-2.1969343552149283
+template is typed	6.338553815394868
+tuple conf_f	-0.191609327712086
+template prefix who => how	-0.32355881372875706
+template arg pos tags = DT NN NN	-0.198267244251916
+lex type = Identity ^ leftTag = NNP	0.23625458180606462
+template arg pos tags = DT NN NN VB	0.042652449183605445
+template prefix when => UNK	0.3615461512829057
+template prefix where => where	1.4561812729090304
+lex type = Identity ^ leftTag = CC	-0.6237920693102299
+template arg pos tags = NN VBP NN VB	-0.9736754415194935
+lex type = Unary ^ rightTag = CC	-0.6237920693102299
+template prefix who => UNK	-0.8447184271909364
