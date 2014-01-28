@@ -184,56 +184,56 @@ Spain	What country did Panama gain its independence from?
 -	How many gas stations are there in the United States?
 -	On what university campus was the first debate held?
 Operation Husky|Battle of Saint-Mihiel|Vietnam War|Iraq War|Operation Market Garden	In what conflicts has the 82nd Airborne Division participated?
--	List the professional teams for which Warren Moon has been a player.
+Seattle Seahawks|Kansas City Chiefs|Minnesota Vikings	List the professional teams for which Warren Moon has been a player.
 -	How many pints of stout a day does Guinness sell in Ireland?
 -	How is "Original Equipment Manufacturer" abbreviated?
--	What is the title of Bing Crosby's all-time best-selling record?
+Merry Christmas	What is the title of Bing Crosby's all-time best-selling record?
 -	What do you call a baby sloth?
--	List brands of pianos.
--	What is the 3-character airport code for Dulles?
+Yamaha|Aeolian Company	List brands of pianos.
+IAD	What is the 3-character airport code for Dulles?
 -	When a game of baseball is forfeited, what is the score?
 -	How many non-white members of the jury were there?
--	Where was Sammy Sosa born?
+San Pedro de Macorís	Where was Sammy Sosa born?
 -	What is Ben's last name?
 -	How many missions did the Memphis Belle fly?
--	What is the largest snake in the world?
--	List players who scored touchdowns in Super Bowl XXXIV
--	What is the name of the volcano that destroyed the ancient city of Pompeii?
--	Who won the Miss Universe 200 crown?
+Titanoboa	What is the largest snake in the world?
+Torry Holt|Eddie George|Isaac Bruce	List players who scored touchdowns in Super Bowl XXXIV
+Mt. Vesuvius	What is the name of the volcano that destroyed the ancient city of Pompeii?
+Lara Dutta	Who won the Miss Universe 200 crown?
 -	How many dimes does the Mint produce each month?
--	Where was President Lincoln buried?
--	How did Patsy Cline die?
+Springfield	Where was President Lincoln buried?
+Air disaster	How did Patsy Cline die?
 -	How many passengers were aboard Flight 990?
 -	In what cities were International Rowing Federation Rowing World Cup events held?
--	What king was forced to agree to the Magna Carta?
--	What is Jane Goodall famous for?
+John, King of England	What king was forced to agree to the Magna Carta?
+Author|Activist	What is Jane Goodall famous for?
 -	How many home runs did Henry "Hank" Aaron hit in his major league career?
--	How far away is the moon?
--	Name the university of which Woodrow Wilson was president.
--	In what countries as Abu Nidal operated from?
+1.245755e-08	How far away is the moon?
+Princeton University	Name the university of which Woodrow Wilson was president.
+Israel|Iraq	In what countries as Abu Nidal operated from?
 -	What record label did he sing for in 2000?
--	Which disease does Heinz tout its ketchup as helping to prevent?
--	Where is Perth?
+Cancer	Which disease does Heinz tout its ketchup as helping to prevent?
+Australia	Where is Perth?
 -	Which type of submarine was bought recently by South Korea?
 -	In what year was she born?
 -	What is the term for arable land left unseeded for one season?
--	Which heir to H. J. Heinz Co. fortune was killed in an aviation accident?
--	Name U.S. entertainers that later became politicians.
--	List some of the stars in the 2004 World Series.
--	What country was the primary beneficiary of the Food-for-Oil Agreement?
--	What prize originating in Spain has Krugman won?
--	How many Tony Awards has Judi Dench won?
--	What continent is Scotland in?
--	What is the largest city in the world?
--	In what country is Luxor?
+H. John Heinz III	Which heir to H. J. Heinz Co. fortune was killed in an aviation accident?
+Ronald Reagan|Al Franken	Name U.S. entertainers that later became politicians.
+Albert Puljos	List some of the stars in the 2004 World Series.
+Iraq	What country was the primary beneficiary of the Food-for-Oil Agreement?
+Prince of Asturias Awards	What prize originating in Spain has Krugman won?
+1	How many Tony Awards has Judi Dench won?
+Europe	What continent is Scotland in?
+Shanghai	What is the largest city in the world?
+Egypt	In what country is Luxor?
 -	In what month did it erupt?
 -	As of the time of Hurricane Mitch, what previous hurricanes had higher death totals?
 -	How many legs does a beetle have?
 -	Which country exports the most tea?
--	What drugs did Rush Limbaugh take for back pain?
+Oxycodone	What drugs did Rush Limbaugh take for back pain?
 -	What is the abbreviation for Original Equipment Manufacturer?
 -	How old was he when he died?
--	Name the schools of Tufts University.
+Tufts University School of Engineering|Tufts University School of Medicine|Tufts University School of Arts and Sciences|Tufts University School of Dental Medicine	Name the schools of Tufts University.
 -	On what date did President Bush visit the USS Abraham Lincoln?
 -	Name people who have appeared on the U.S. Mint's coins.
 -	What is the capital city of New Zealand?
