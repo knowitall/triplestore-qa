@@ -64984,3 +64984,141 @@ LABEL	0	Where is South Bend?	bed
 LABEL	0	Where is it?	natural food stores
 LABEL	0	What is the gestation period for humans?	Lymphocytes
 LABEL	0	Where is it based?	Armonk
+LABEL	0	What was the official name of the Big Dig?	The Big Dig
+LABEL	0	Where is the capital of the Mormon Church?	Kansas City
+LABEL	0	What does laser stand for?	point defense
+LABEL	1	Where is John Wayne airport?	ORANGE COUNTY
+LABEL	1	Who is the governor of Alaska?	sarah palin
+LABEL	1	Who is the Greek God of the Sea?	Nereus
+LABEL	0	Who invented television?	Douglas L Ross
+LABEL	0	When was the Red Cross founded?	http://en.wikipedia.org/wiki/Crossing%20the%20Red%20Sea%20with%20The%20Adverts
+LABEL	1	Who is the president of Stanford University?	gentleman named Donald Kennedy
+LABEL	0	How many types of human blood are there?	biological cell
+LABEL	1	What books has Walter Mosley written?	Fortunate Sons
+LABEL	0	What is Curveball's real name?	reliable source
+LABEL	0	Which college athletic teams are nicknamed the Cougars?	lacrosse
+LABEL	0	What year did South Dakota become a state?	South Dakota Republican primary, 2012
+LABEL	0	Where is the Holland Tunnel?	Authorities Concept Scheme
+LABEL	0	What is Jay-Z's real name?	huge artist
+LABEL	0	Why is a ladybug helpful?	Coccinellidae
+LABEL	1	How many official languages does Switzerland have?	German Language
+LABEL	0	How tall is the Washington Monument?	San Jacinto Monument
+LABEL	0	Where is the Salton Sea?	Authorities Concept Scheme
+LABEL	0	What year did Alaska become a state?	1989 YA5
+LABEL	0	What is the esophagus used for?	devastating disease
+LABEL	0	What is ETA in Spain?	case
+LABEL	1	What is titanium?	lovely frame material
+LABEL	0	How many moons does Neptune have?	Chaos Chronicles
+LABEL	0	What was the nickname for the French team?	Kovalainen
+LABEL	0	What is the oldest university in the US?	Carmel Valley
+LABEL	0	What was Thailand's original name?	CIGNA Non-Life Insurance Brokerage (Thailand) (Thailand) (74.975% with balance owned by affiliates and non-affiliates)
+LABEL	0	How big is a keg?	KEGSET.RTM.
+LABEL	0	Where is Santa Lucia?	Authorities Concept Scheme
+LABEL	0	How many seats are in the Lebanese Parliament?	Michel Pharaon
+LABEL	1	What songs did Al Jolson Sing?	Anniversary Song
+LABEL	0	How many members does it have?	industrialized nation
+LABEL	0	How old was the dam?	the dam short film festival
+LABEL	1	In what state is Dulles located?	dc
+LABEL	0	What is Dick Clark's date of birth?	asshole
+LABEL	0	When was the White House built?	http://en.wikipedia.org/wiki/Backstairs%20at%20the%20White%20House
+LABEL	1	Where is Mesa Verde National park?	COLORADO
+LABEL	0	What was Curveball's profession?	fun, 3d game
+LABEL	0	Where is the highest point on earth?	Pembina Institute
+LABEL	0	When was Hiroshima bombed?	1999
+LABEL	0	What is the life expectancy of a dollar bill?	American Revolution Bicentennial two dollar bill postage-stamp cancellations
+LABEL	0	What is the birthstone of October?	31
+LABEL	0	When is the summer solstice?	1983
+LABEL	1	Who is Paul Newman married to?	joanne-woodward
+LABEL	0	When was the Hoover Dam constructed?	2009
+LABEL	0	How did John Quincy Adams die?	19th century president
+LABEL	0	Who invented the game bowling?	james
+LABEL	0	When was the company founded?	3DO
+LABEL	0	Where are the National Archives?	Authorities Concept Scheme
+LABEL	0	Where does chocolate come from?	otherflavors
+LABEL	0	Who was the captain of the Titanic?	RMS Carpathia
+LABEL	0	What is the richest country in the world?	location
+LABEL	0	What is Britney Spears' middle name?	Britney Spears
+LABEL	0	When did Hawaii become a state?	2005
+LABEL	0	Why is the sun yellow?	Geshy
+LABEL	0	In what month is it held?	2007
+LABEL	0	What is the population of Venezuela?	challenge
+LABEL	0	Who is the airport named after?	Constantine the Great
+LABEL	0	Where is the U.S. Mint headquartered?	wonderful strategy
+LABEL	0	Where is the Kalahari desert?	Authorities Concept Scheme
+LABEL	0	What year was the phonograph invented?	Thomas Edison Invents The Light Bulb! The Phonograph! (Part 1)
+LABEL	0	Where is Rider College located?	university and college
+LABEL	0	what is Speedy Claxton's real name?	Speedy Claxton
+LABEL	0	What is the capital of Italy?	John Cabot University
+LABEL	0	What does the acronym NATO stand for?	http://en.wikipedia.org/wiki/NATO%20Medal
+LABEL	1	How many NFL teams are there?	philadelphia-eagles
+LABEL	0	Who founded Wal-Mart?	lee scott
+LABEL	0	When was Microsoft established?	http://en.wikipedia.org/wiki/Microsoft%20XNA
+LABEL	0	Where was Shakespeare born?	Animals
+LABEL	0	What was it originally called?	Nigerian name
+LABEL	0	Who was the first king of England?	story of perfection
+LABEL	0	Where is the Orinoco River?	Authorities Concept Scheme
+LABEL	0	Where is Merrill Lynch headquartered?	Merrill Edge
+LABEL	0	Aspartame is also known as what?	well known neurotoxin
+LABEL	0	What is Valentine's Day?	extra occasion
+LABEL	0	How many Great Lakes are there?	Mastercuts, Great Lakes Mall
+LABEL	0	Where is NATO headquartered?	Poland
+LABEL	0	How long does the Madness last?	1975-07
+LABEL	0	Where is the LPGA headquartered?	Meg
+LABEL	1	What plays did Shakespeare write?	Macbeth
+LABEL	0	The Orange Bowl is in what city?	Sun Life Stadium
+LABEL	0	Where is Venezuela?	Countries
+LABEL	0	What does ACLU stand for?	Ralph J Temple, 1932-2011
+LABEL	0	What companies manufacture golf clubs?	Seth Raynor
+LABEL	0	What is the phobia for number 13?	widespread phobia
+LABEL	0	Where is South Bend?	Authorities Concept Scheme
+LABEL	1	What is the gestation period for humans?	week
+LABEL	0	Where is it based?	part of Operation Devil's Ground'' photo session
+LABEL	0	What are pathogens?	life
+LABEL	0	How tall is St. Peter's Basilica?	Madeline
+LABEL	0	What is Head Start?	the NA'AMAT centers
+LABEL	0	What political party does Thabo Mbeki belong to?	Giraldo
+LABEL	1	What is Hong Kong's population?	6,970,000
+LABEL	0	What are enzymes?	bacterial activity
+LABEL	0	What is Africa's largest country?	Africa
+LABEL	1	What is schizophrenia?	delusions
+LABEL	0	What president created social security?	The New Deal
+LABEL	1	What is neuropathy?	damaged nerves
+LABEL	0	Who are professional female boxers?	One participant
+LABEL	0	What are geckos?	nature
+LABEL	0	What was the final score?	86-54
+LABEL	0	What is ETA in Spain?	relationships
+LABEL	1	What is leukemia?	childhood Cancer
+LABEL	0	What is titanium?	portfolio
+LABEL	0	What actor first portrayed James Bond?	actors
+LABEL	0	What is an eclipse?	S.Meyer
+LABEL	0	What is relative humidity?	HMP35C
+LABEL	0	How many seats are in the Lebanese Parliament?	Mr. Frem
+LABEL	0	What songs did Al Jolson Sing?	The songs
+LABEL	0	What are antacids?	calcium
+LABEL	0	Who was Abraham Lincoln?	thrill
+LABEL	1	What are semiconductors?	materials
+LABEL	0	What is sodium chloride?	industry
+LABEL	0	What continent is Bolivia on?	Uturuncu
+LABEL	0	What are pomegranates?	Vitamin C
+LABEL	0	What organization investigated the disaster?	teams
+LABEL	1	Who was Picasso?	painter
+LABEL	1	What is Ursa Major?	the ?Big Dipper
+LABEL	0	What is peyote?	Christ
+LABEL	0	When was the company founded?	1990
+LABEL	1	What countries supplied aid?	The Soviet Union
+LABEL	0	What companies has BAT owned?	a group
+LABEL	1	What is a stratocaster?	electric guitar
+LABEL	1	Who is Anubis?	the black fox
+LABEL	1	How many NFL teams are there?	The Dolphins
+LABEL	0	What is cribbage?	HALSCRIB
+LABEL	0	Which king signed the Magna Carta?	a hand
+LABEL	0	What is Susan B. Anthony's birthday?	Last week
+LABEL	0	Who is Aaron Copland?	William Grant
+LABEL	1	What is amitriptyline?	Drug
+LABEL	0	Who is Terrence Malick?	time
+LABEL	0	Which authority runs the airport?	government
+LABEL	0	What is the highest dam in the U.S.?	Condit
+LABEL	0	What is the largest variety of cactus?	the garden
+LABEL	1	What are coral reefs?	food
+LABEL	0	What companies manufacture golf clubs?	the U.S.
+LABEL	0	Who is Alberto Tomba?	the Albertville Games
