@@ -598,143 +598,143 @@ Josh Gotbaum	Who is the head of PBGC?
 Miami Gardens	What city is the Orange Bowl in?
 -	Give the month and year that Sani Abacha had a successful coup in Nigeria.
 Eli Whitney	Who invented the cotton gin?
--	What was Bing Crosby's profession?
--	Where was the first J.C. Penney store opened?
--	What persons has Krugman criticized in his op-ed columns?
+Singer	What was Bing Crosby's profession?
+Kemmerer	Where was the first J.C. Penney store opened?
+Barack Obama	What persons has Krugman criticized in his op-ed columns?
 -	How much gravity exists on Mars?
--	The Kentucky Horse Park is close to which American city?
--	When was the 82nd Airborne Division formed?
+Lexington	The Kentucky Horse Park is close to which American city?
+1917-08-05	When was the 82nd Airborne Division formed?
 -	How high is the net on a regulation ping pong table?
--	What is the scientific name for the zinnia plant?
+Zinnia	What is the scientific name for the zinnia plant?
 -	Approximately how many acres of grapes are grown in Virginia?
 -	Why does the moon turn orange?
 -	During what years were these "Superman" movies made?
 -	Where did Kublai Khan live?
--	What Ridley Scott movie is set in 180 a.d.?
--	Where was John Adams born?
--	List other saints who have had the stigmata.
--	List the years that Susan Butcher won the Iditarod Race.
--	What is the name of the stadium in Manchester where Manchester United plays?
--	When did Weiss win his second U.S. Skating title?
+Gladiator	What Ridley Scott movie is set in 180 a.d.?
+Braintree	Where was John Adams born?
+Francis of Assisi	List other saints who have had the stigmata.
+1986|1987|1988	List the years that Susan Butcher won the Iditarod Race.
+Old Trafford	What is the name of the stadium in Manchester where Manchester United plays?
+1998	When did Weiss win his second U.S. Skating title?
 -	How many passengers have traveled with Cunard Cruise Lines?
--	In what movie did Meg Ryan own a party-planning business?
+Hanging Up	In what movie did Meg Ryan own a party-planning business?
 -	How old do you have to be to get married in South Carolina?
--	Who was the first coach of the Cleveland Browns?
+Paul Brown	Who was the first coach of the Cleveland Browns?
 -	What is the electrical output in Madrid, Spain?
--	On what date was Harriet Miers nominated for the Supreme Court post?
+2005-10-03	On what date was Harriet Miers nominated for the Supreme Court post?
 -	What is egg white called?
 -	How fast could it travel?
--	What state is Niagra Falls located in?
--	Name additional pyramids of Egypt.
+New York	What state is Niagra Falls located in?
+Pyramid of Menkaure	Name additional pyramids of Egypt.
 -	How many seats did Mbeki's party win in the election?
--	What color is yak milk?
+Pink	What color is yak milk?
 -	What Nobel laureate was expelled from the Philippines before the conference on East Timor?
--	For which movie did Bing Crosby win an Academy Award?
+Going My Way	For which movie did Bing Crosby win an Academy Award?
 -	What does CPR stand for?
 -	For what female singer was he the musical director and pianist in the 70's?
 -	How many people were killed in Hindenburg disaster?
--	What city is Southwestern University in?
+Georgetown	What city is Southwestern University in?
 -	On what street are the fields where the Little League World Series is played?
--	Where is the Kentucky Horse Park?
--	Where is Ocho Rios?
+Lexington	Where is the Kentucky Horse Park?
+Jamaica	Where is Ocho Rios?
 -	Who was the foreman for the jury?
--	Who owns CNN?
+Ted Turner	Who owns CNN?
 -	Name tournaments in which LPGA players have participated.
--	Who founded Taoism?
--	What are the birth dates for scorpios?
--	What is phosphorus?
--	How old was Thabo Mbeki when he was elected president?
+Lao Tzu	Who founded Taoism?
+October|November	What are the birth dates for scorpios?
+Chemical Element	What is phosphorus?
+60	How old was Thabo Mbeki when he was elected president?
 -	How many megawatts will the power project in Indonesia, built by a consortium headed by Mission Energy of US, produce?
 -	What reportedly caused the death of Sani Abacha?
--	What is feng shui?
--	Who was Meg Ryan married to?
--	When does the LPGA celebrate its 50th anniversary?
--	Who was President of Afghanistan in 1994?
+Religious Practice	What is feng shui?
+Dennis Quaid	Who was Meg Ryan married to?
+2009	When does the LPGA celebrate its 50th anniversary?
+Burhanuddin Rabbani	Who was President of Afghanistan in 1994?
 -	List doctors who have performed cateract surgery.
 -	Name persons involved in law suits with Merrill Lynch.
 -	What is the medical condition of hypertension?
 -	How many teams compete in the Madness?
--	Who is Michael Weiss's choreographer?
--	Who is Al Sharpton?
+Lisa Thornton Weiss	Who is Michael Weiss's choreographer?
+Politician	Who is Al Sharpton?
 -	What did Richard Feynman say upon hearing he would receive the Nobel Prize in Physics?
 -	How many students did Kip Kinkel kill?
--	Who did Foreman defeat for his first heavyweight championship?
+Joe Frazier	Who did Foreman defeat for his first heavyweight championship?
 -	Who are some world leaders that have met there [Camp David]?
--	What does President Bush want to do to the AMT?
--	What is the capital of Persia?
--	Where was Bill Gates born?
--	What year was the light bulb invented?
--	What country is assisting with the development of the Bushehr Nuclear Facility?
--	Where is Logan International located?
+Jimmy Carter	What does President Bush want to do to the AMT?
+Tehran	What is the capital of Persia?
+Seattle	Where was Bill Gates born?
+1879	What year was the light bulb invented?
+Germany	What country is assisting with the development of the Bushehr Nuclear Facility?
+Boston	Where is Logan International located?
 -	On what Comedy Central program was Hammond featured?
--	Who is the chairman of BAT?
--	What was the name of the first child of English parents born in America?
--	What animal has human-like fingerprints?
+Richard Burrows	Who is the chairman of BAT?
+Virginia Dare	What was the name of the first child of English parents born in America?
+Koala	What animal has human-like fingerprints?
 -	What is the claimed primary purpose of the Bushehr Nuclear Facility?
--	What are some other Basque separatist groups?
--	Where is the Kentucky Horse Park located?
+Euskadi ta Askatasuna	What are some other Basque separatist groups?
+Lexington	Where is the Kentucky Horse Park located?
 -	What English word has the most letters?
--	Where did Howard Hughes die?
--	Who was elected president of South Africa in 1994?
--	Name a tiger that is extinct?
--	How did John Dillinger die?
--	What is the nickname of Oklahoma?
+Houston	Where did Howard Hughes die?
+Nelson Mandela	Who was elected president of South Africa in 1994?
+Bali tiger	Name a tiger that is extinct?
+Gunshot	How did John Dillinger die?
+Sooner State	What is the nickname of Oklahoma?
 -	What is the name of the largest ship in Cunard Cruise Lines?
 -	What is the length of border between the Ukraine and Russia?
--	What province is Edmonton located in?
+Alberta	What province is Edmonton located in?
 -	What was the verdict in the trial?
--	What is the money they use in Zambia?
+Zambian kwacha	What is the money they use in Zambia?
 -	What is the percent of alcohol by volume in Guinness Stout?
 -	When was it first used?
--	What is thalassemia?
+Disease	What is thalassemia?
 -	How much stronger is the new vitreous carbon material invented by the Tokyo Institute of Technology compared with the material made from cellulose?
 -	Where is his tomb?
 -	Name 4 people from Massachusetts who were candidates for
 -	What is severance pay?
--	Where is Procter & Gamble based in the U.S.?
+Cincinnati	Where is Procter & Gamble based in the U.S.?
 -	Where does the vice president live when in office?
--	On what date did Harriet Miers withdraw her nomination?
--	In what state was the Johnstown flood?
+Number One Observatory Circle	On what date did Harriet Miers withdraw her nomination?
+Pennsylvania	In what state was the Johnstown flood?
 -	What does a theodolite measure?
 -	How many people perished in the Johnstown flood?
--	What jurisdictions have youth symphony orchestras?
--	Who is the only president to serve 2 non-consecutive terms?
--	What foods can cause allergic reactions in people?
--	What company manufactured the B-17 bomber?
--	What country produces the most emeralds?
+Seattle	What jurisdictions have youth symphony orchestras?
+Grover Cleveland	Who is the only president to serve 2 non-consecutive terms?
+Peanut	What foods can cause allergic reactions in people?
+Boeing	What company manufactured the B-17 bomber?
+Colombia	What country produces the most emeralds?
 -	What school did he get his bachelor's degree from?
--	List films shown at the 1999 Sundance Film Festival.
+Three Seasons	List films shown at the 1999 Sundance Film Festival.
 -	Why are electric cars less efficient in the north-east than in California?
 -	How many books did Jasper Fforde write in the Thursday Next series?
--	In what movie did Meg Ryan own a bookstore?
+You've Got Mail	In what movie did Meg Ryan own a bookstore?
 -	What was Tufts' endowment in 1992 when he became president?
 -	How many "Superman" movies did he make?
--	What is another name for the North Star?
--	What is Motley Crue's Nikki Sixx's real name?
+Polaris	What is another name for the North Star?
+Frank Carlton Serafino Feranna, Jr.	What is Motley Crue's Nikki Sixx's real name?
 -	How often does Old Faithful erupt at Yellowstone National Park?
--	What country had the highest death total from this Hurricane Mitch?
--	What baseball team was the first to make numbers part of their uniform?
--	Rachel Carson's book caused what pesticide to be banned?
+Honduras	What country had the highest death total from this Hurricane Mitch?
+Cleveland Indians	What baseball team was the first to make numbers part of their uniform?
+Silent Spring	Rachel Carson's book caused what pesticide to be banned?
 -	What was the ball game of ancient Mayans called?
 -	What color does litmus paper turn when it comes into contact
--	What cable network airs WWE?
--	What is the mascot for Notre Dame University?
+TNN	What cable network airs WWE?
+Notre Dame Leprechaun	What is the mascot for Notre Dame University?
 -	Who was the co-pilot of Flight 990?
--	Which film received the first best picture Academy Award?
+Wings	Which film received the first best picture Academy Award?
 -	What organization has helped to revitalize Legion membership?
 -	How many muscles are there in the human body?
 -	What does CPR stand for?
 -	What Boston bar was the inspiration for Cheers' bar?
--	Name supporting actors who performed in Cheers.
+Ted Danson|Woody Harrelson	Name supporting actors who performed in Cheers.
 -	Who was the first Imam of the Shiite sect of Islam?
--	What is the southwestern-most tip of England?
+St Agnes	What is the southwestern-most tip of England?
 -	How many have received the U.S. Medal of Honor since 1863?
--	What is the scientific name for Viagra?
+Sildenafil citrate	What is the scientific name for Viagra?
 -	What year did Reeve commence his theatrical career?
 -	What was the final death toll from Pakistan earthquakes of October 2005?
--	When did Einstein die?
--	When did the American Civil War end?
+1955-04-18	When did Einstein die?
+1865-04-09	When did the American Civil War end?
 -	How many people viewed the wedding on television?
--	What is acetic acid?
--	Which company is Jay-Z president of?
--	Who preceded Brown as head of FEMA?
+Metabolite	What is acetic acid?
+Def Jam Recordings	Which company is Jay-Z president of?
+R. David Paulison	Who preceded Brown as head of FEMA?
