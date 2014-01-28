@@ -57,77 +57,77 @@ Ottorino Respighi	Who wrote "The Pines of Rome"?
 120	How many years did it take to build St. Peter's Basilica?
 1084.62	What is the melting point of copper?
 -	When did the art of quilting begin?
--	Bing Crosby is an alumnus of which university?
+Gonzaga University	Bing Crosby is an alumnus of which university?
 -	What individuals were at the wedding?
 -	How many times can a person get a Fulbright award?
--	What are spider veins?
+Symptom	What are spider veins?
 -	In what countries can Fulbright scholars be found?
 -	What is his annual income?
 -	Tourists from which countries were among the dead in the massacre at Luxor in 1997?
 -	What format was VHS's main competition?
--	What is the melting point of gold?
+1064.18	What is the melting point of gold?
 -	What was the age of the recipient?
--	In what year was the AMT added to the Tax Code?
+1982	In what year was the AMT added to the Tax Code?
 -	What does Phi Beta Kappa mean?
 -	What is the life expectancy of the average woman in Nigeria?
--	How old was Shakespeare when he died?
--	Name some of his [Paul Newman] movies
+52	How old was Shakespeare when he died?
+Cool Hand Luke	Name some of his [Paul Newman] movies
 -	What is the proper name for a female walrus?
--	Where is the national hurricane center located?
--	What team was defeated in the 2004 World Series?
--	Where is Guam?
--	Name 15 religious cults.
--	What is the fourth highest mountain in the world?
--	Where is Basque country located?
--	Name 30 people who have composed an opera.
--	Where are the headquarters of Eli Lilly?
+Florida International University	Where is the national hurricane center located?
+St. Louis Cardinals	What team was defeated in the 2004 World Series?
+Pacific Ocean	Where is Guam?
+Esoteric Order of Dagon|Brotherhood of the Yellow Sign|Order of Aurelius	Name 15 religious cults.
+Lhotse	What is the fourth highest mountain in the world?
+Spain	Where is Basque country located?
+Andy DiGelsomina	Name 30 people who have composed an opera.
+Indianapolis	Where are the headquarters of Eli Lilly?
 -	What is the name of Roy Roger's dog?
 -	What does caliente translate to in English?
 -	How many states have a "lemon law" for new automobiles?
 -	How high is Pikes peak?
--	What city had a world fair in 1900?
--	Who is the chairman of WWE?
--	What is the feeder club for Manchester United?
--	What other names have been used for Yeti?
+Paris	What city had a world fair in 1900?
+Vince McMahon	Who is the chairman of WWE?
+Gap Connah's Quay F.C.|Desportivo Brasil	What is the feeder club for Manchester United?
+Bigfoot|Abominable Snowman|Mountain Bigfoot	What other names have been used for Yeti?
 -	Which film won the Dramatic Screen Play Award at the festival?
 -	Who was the judge in the trial?
 -	How many mines can still be found in the Falklands after the war ended?
--	Who was the first doctor to successfully transplant a liver?
+Thomas Starzl	Who was the first doctor to successfully transplant a liver?
 -	What public health group did BAT help fund?
--	Who wrote the book, "Song of Solomon"?
+Toni Morrison	Who wrote the book, "Song of Solomon"?
 -	In what cities or towns have illegal methamphetamine labs been found?
 -	What other U.S. states have had dam failures?
--	On what date was the USS Abraham Lincoln commissioned?
+1988-02-13	On what date was the USS Abraham Lincoln commissioned?
 -	From which university did he receive his doctorate?
 -	How many children did he have?
--	What year was Heinz Ketchup introduced?
+1876	What year was Heinz Ketchup introduced?
 -	What women have worn Chanel clothing to award ceremonies?
--	What is the scientific name for elephant?
+Elephantidae|Elephas maximus indicus|Elephas maximus sumatrensis	What is the scientific name for elephant?
 -	When was the pencil first invented?
 -	What senator applied for and received a Fulbright but turned it down?
--	What country does Greenland belong to?
--	When did Idaho become a state?
+Denmark	What country does Greenland belong to?
+1890-07-03	When did Idaho become a state?
 -	How many years transpired between world championships for the winning team?
--	What are titles of books written by Krugman?
--	On what date did the luxor massacre happen?
--	When was the Food-for-Oil Agreemen authorized?
--	What is the Illinois state flower?
+The Return of Depression Economics and the Crisis of 2008|Peddling Prosperity|Competitiveness|Macroeconomics	What are titles of books written by Krugman?
+1997-11-17	On what date did the luxor massacre happen?
+1995	When was the Food-for-Oil Agreemen authorized?
+Viola odorata	What is the Illinois state flower?
 -	Who is the only woman to receive it?
--	Where is the U.S. Naval Academy?
+Annapolis	Where is the U.S. Naval Academy?
 -	What does "E Pluribus Unum" mean?
--	Which political party is Lionel Jospin a member of?
+Socialist Party of France	Which political party is Lionel Jospin a member of?
 -	How many fights did he win?
--	Who is Judi Dench married to?
+Michael Williams	Who is Judi Dench married to?
 -	When was he born?
 -	What company owned the Sago Mine?
 -	Individual who witnessed the Hindenburg Disaster
--	What is the location of Rider College?
--	What does cc in engines mean?
--	What other Breweries make stout beers?
+Lawrenceville	What is the location of Rider College?
+cubic centimeter	What does cc in engines mean?
+Guinness	What other Breweries make stout beers?
 -	Who invented Trivial Pursuit?
--	Where was the American Legion founded?
+Indianapolis	Where was the American Legion founded?
 -	In what do marsupials keep their young?
--	What books did Jasper Fforde write?
+Shades of Grey 1: The Road to High Saffron|The Woman Who Died A Lot|The Last Dragonslayer|Lost in a Good Book|First Amoung Sequels	What books did Jasper Fforde write?
 -	Who contributed money to purchase the Gaza greenhouses and supporting equipment?
 -	How old is Joseph Steffen?
 -	What was William Shakespeare's occupation before he began to write plays?
