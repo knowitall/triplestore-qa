@@ -65138,7 +65138,7 @@ LABEL	1	How many NFL teams are there?	The Chargers
 LABEL	0	How many stores does Wal-Mart operate world-wide?	Spreadsheet Upload about Nobel Prize in LIterature nominees 1934-1936
 LABEL	0	What was Sinatra's first recording?	What Was
 LABEL	0	Who is Warren Moon's agent?	Harold Moon
-LABEL	0	How many layers of skin do we have?	Beyonc??'s L'Or??al ad: You can't do that in advertising!
+LABEL	0	How many layers of skin do we have?	Beyonce's L'Oreal ad: You can't do that in advertising!
 LABEL	0	What was Bing Crosby's nickname?	Bing Collins
 LABEL	0	When was U.S Naval Academy founded?	George Bancroft
 LABEL	0	Where did they honeymoon?	Pinellas County
@@ -65214,9 +65214,9 @@ LABEL	1	What was Sammy Sosa's team?	Chicago White Sox
 LABEL	0	How many times a day do observant Muslims pray?	Mortality rate
 LABEL	0	What city is Lake Washington by?	North Bend
 LABEL	0	What UN organization hosts internships under the Fulbright Program?	J. William Fulbright Prize for International Understanding
-LABEL	0	Which film won three awards at the festival?	Satellite Award for Best Film ??? Musical or Comedy
+LABEL	0	Which film won three awards at the festival?	Satellite Award for Best Film Musical or Comedy
 LABEL	0	Who is Paul Newman married to?	Welcome to Freebase
-LABEL	0	What country is Mahmud Ahmadinejad president of?	2010 Nigerien coup d'??tat
+LABEL	0	What country is Mahmud Ahmadinejad president of?	2010 Nigerian coup d'etat
 LABEL	0	Who was Meg Ryan's male lead in Hanging	Entertainment Weekly annotation index
 LABEL	0	What breed of horse was used to found the Lipizzaner?	Mustang horse
 LABEL	1	Where did the Hindenburg disaster occur?	Naval Air Engineering Station Lakehurst
@@ -65250,7 +65250,7 @@ LABEL	0	What is the inner peel of an orange called?	Blissful Master Index
 LABEL	0	Where is Rider College located?	Trinity College, Cambridge
 LABEL	0	What year was the first Little League World Series played?	Major League Baseball
 LABEL	0	The extinct Tasmanian tiger is known by what other name?	Tigris regalis
-LABEL	0	Which U.S.A. president appeared on Laugh-In?	2010 Nigerien coup d'??tat
+LABEL	0	Which U.S.A. president appeared on Laugh-In?	2010 Nigerian coup d'etat
 LABEL	1	What did George Washington call his house?	Mount Vernon
 LABEL	0	In what year was the final episode telecast?	Live: Episode 9
 LABEL	0	Name the Virginia wine festivals.	Rosa virginiana
@@ -65299,3 +65299,150 @@ LABEL	0	Where is South Bend?	Mendoza College of Business
 LABEL	0	Who was the third Imam of Shiite Muslims?	Ahmed Yassin
 LABEL	0	Whom did the Chicago Bulls beat in the 1993 championship?	1996 NBA Finals
 LABEL	0	For whom was the state of Pennsylvania named?	Secretary of the Commonwealth of Pennsylvania
+LABEL	0	What does SIDS stand for?	Surgeons
+LABEL	0	In what city was the operation performed?	hand
+LABEL	0	Who invented the hula hoop?	genes
+LABEL	1	What does laser stand for?	?Radiation ?
+LABEL	1	Where is John Wayne airport?	Orange
+LABEL	0	How many layers of skin do we have?	clothes
+LABEL	0	What was Bing Crosby's nickname?	Bing Crosby
+LABEL	0	Where did they honeymoon?	Authorities Concept Scheme
+LABEL	0	What is the name of the airport in Amsterdam?	the airport
+LABEL	0	Who invented basketball?	Radio Philippines Network
+LABEL	0	What are pathogens?	Cellular immunotherapy: Antigen recognition is just the beginning
+LABEL	0	How tall is St. Peter's Basilica?	Bernini
+LABEL	0	What is Head Start?	Liberia
+LABEL	0	What political party does Thabo Mbeki belong to?	Thabo Mvuyelwa Mbeki
+LABEL	0	What is Jerry's last name?	Jerry William Richardson
+LABEL	0	What is Hong Kong's population?	migrant workers
+LABEL	1	Who is the Greek God of the Sea?	Neptune
+LABEL	1	Who invented television?	the Americans
+LABEL	0	What are enzymes?	EC : The Enzyme Commission
+LABEL	1	Who is the conductor of the Boston Pops?	Casella
+LABEL	0	In what year was Warren Moon born?	Kirkland
+LABEL	1	When was the Red Cross founded?	1914
+LABEL	1	Who is the president of Stanford University?	Donald Kennedy
+LABEL	0	How long is human gestation?	topic
+LABEL	0	How many types of human blood are there?	EP
+LABEL	0	What color are UPS trucks?	Bay
+LABEL	0	What is Dr. Ruth's last name?	DR. CAROLINE McGILL
+LABEL	0	How old was Joan of Arc when she died?	Nightingale
+LABEL	0	In what year was Padre Pio born?	Padre Pio Was a Necrophile
+LABEL	1	What is schizophrenia?	Psychosis
+LABEL	1	When is Jennifer Lopez's birthday?	1969-07-24
+LABEL	0	When was Shakespeare born?	2002
+LABEL	0	What year did South Dakota become a state?	26715 South Dakota
+LABEL	1	What is neuropathy?	Guillain-Barr? syndrome
+LABEL	0	What is the age of our solar system?	Ophiuchus
+LABEL	0	What are geckos?	Louisiana
+LABEL	0	Whom did he marry?	diplomat
+LABEL	0	Where was Rachel Carson home?	educational landmark
+LABEL	0	When was Queen Victoria born?	1965
+LABEL	0	Why is a ladybug helpful?	Predators
+LABEL	0	How old is Harriet Miers?	White House Counsel
+LABEL	0	Where is the Salton Sea?	fact
+LABEL	0	What was the final score?	Scorer
+LABEL	1	What year did Alaska become a state?	1867
+LABEL	0	What is the full name of conductor Seiji?	Bolero (Boston Symphony Orchestra feat. conductor Seiji Ozawa)
+LABEL	0	What is the esophagus used for?	surgery
+LABEL	0	What is ETA in Spain?	terrorist
+LABEL	0	What is leukemia?	Depression
+LABEL	0	Who has employed Steffen?	passengers
+LABEL	0	What is titanium?	Boloria
+LABEL	0	What is an eclipse?	geometry
+LABEL	0	What is relative humidity?	EP
+LABEL	0	What is the oldest university in the US?	Rutgers
+LABEL	1	How many sonnets did Shakespeare write?	Sonnet 43
+LABEL	0	What was Thailand's original name?	Ministry of Interior of Thailand
+LABEL	0	How big is a keg?	Them Boners Be Poppin'
+LABEL	0	Where is Santa Lucia?	Santa Lucia
+LABEL	0	What is his primary career?	stormwater
+LABEL	1	What nationality is Sean Connery?	Scottish people
+LABEL	1	What songs did Al Jolson Sing?	?Mammy ?
+LABEL	0	How many members does it have?	davidinchi
+LABEL	0	How old was the dam?	Crocodiles
+LABEL	1	What are antacids?	lead
+LABEL	0	In what state is Dulles located?	turn
+LABEL	0	Who was Abraham Lincoln?	Assassination of Abraham Lincoln
+LABEL	0	How old was Sani Abacha when he died?	power
+LABEL	1	When was Algeria colonized?	1832 France
+LABEL	0	What is Dick Clark's date of birth?	Findlay
+LABEL	0	When was the White House built?	1861
+LABEL	0	What was Curveball's profession?	Curveball: Spies, Lies, and the Con Man Who Caused a War
+LABEL	0	On what date was the surgery performed?	infants
+LABEL	1	What are semiconductors?	Common stock
+LABEL	0	What is sodium chloride?	Hyponatremia
+LABEL	0	How did Adolf Hitler die?	GERMANY
+LABEL	0	Where is the highest point on earth?	happiness
+LABEL	1	When was Hiroshima bombed?	6 August
+LABEL	0	What is the life expectancy of a dollar bill?	dollar coins
+LABEL	1	Who was the founder of Habitat for Humanity?	Americus
+LABEL	0	Who won the 2004 World Series?	poker
+LABEL	0	What are pomegranates?	Ruby Dutchess
+LABEL	0	What is the average weight of a Yellow Labrador?	the water
+LABEL	1	What birthstone is turquoise?	Sagittarius
+LABEL	0	How many events are part of the LPGA tour?	LPGA
+LABEL	1	What was Sammy Sosa's team?	Chicago
+LABEL	0	What organization investigated the disaster?	Congress
+LABEL	1	When is the summer solstice?	June 21
+LABEL	1	When was the telegraph invented?	1832 Samuel Morse
+LABEL	0	What do penguins eat?	polar bears
+LABEL	1	How many non-permanent members are in the Security Council?	India
+LABEL	0	What is Ursa Major?	Why Can't You Be
+LABEL	1	What is peyote?	Lophophora
+LABEL	0	When was the company founded?	1975-12-10
+LABEL	1	Where are the National Archives?	Prague
+LABEL	1	What countries supplied aid?	Israel
+LABEL	1	What companies has BAT owned?	Brown & Williamson
+LABEL	1	Where does chocolate come from?	Thailand
+LABEL	1	Who was the captain of the Titanic?	Edward Smith
+LABEL	0	What is the tallest statue in the world?	area
+LABEL	1	What is a stratocaster?	The Jimi Hendrix Gibson
+LABEL	0	What is the richest country in the world?	country
+LABEL	0	Who is Anubis?	Nigeria
+LABEL	0	In what month is it held?	Hold It!
+LABEL	1	What is the population of Venezuela?	one million people
+LABEL	1	Where is the U.S. Mint headquartered?	Philadelphia
+LABEL	1	Where is the Kalahari desert?	southern Africa
+LABEL	0	Where does Curveball now live?	informational purposes
+LABEL	0	What is the inner peel of an orange called?	Blend
+LABEL	0	Where is Rider College located?	Bronc
+LABEL	1	What is the capital of Italy?	Venice
+LABEL	0	What does the acronym NATO stand for?	civilians
+LABEL	0	How many NFL teams are there?	training camp
+LABEL	0	What do manatees eat?	sharks
+LABEL	0	What was Malcolm X's original surname?	Wettin
+LABEL	0	What is cribbage?	A" is for Cribbage
+LABEL	0	Who founded Wal-Mart?	Wall Street
+LABEL	0	What day did Pearl Harbor occur?	? Hee Haw
+LABEL	0	How large is it?	event
+LABEL	0	Who is Aaron Copland?	Nadia Boulanger
+LABEL	0	When was Microsoft established?	2010
+LABEL	0	Where was Shakespeare born?	therapy
+LABEL	0	What is amitriptyline?	Depressive Disorder
+LABEL	0	What was it originally called?	DACI
+LABEL	1	Who was the first king of England?	Aquitaine
+LABEL	1	Where is the Orinoco River?	South America
+LABEL	0	On what date did the disaster occur?	urban forestry
+LABEL	0	What is Valentine's Day?	Prohibition
+LABEL	1	When was the first camera invented?	1975
+LABEL	0	Who is president of Nissan Corp.?	Japan
+LABEL	0	How many Great Lakes are there?	How the Earth Was Made - Season 1
+LABEL	0	Which authority runs the airport?	Massport
+LABEL	0	How long does the Madness last?	1988-04-25
+LABEL	0	What university did Thomas Jefferson found?	English
+LABEL	0	The Orange Bowl is in what city?	diameter
+LABEL	0	What is the chemical formula for sulphur dioxide?	A study of the effect of sulphur dioxide on plants
+LABEL	0	Where is Venezuela?	slavery
+LABEL	0	Who developed potlatch?	Donations
+LABEL	1	Who was the first Triple Crown Winner?	Sir Barton
+LABEL	0	How far does a laser pointer shine?	Wal-Mart
+LABEL	0	What is the highest dam in the U.S.?	private company
+LABEL	0	What are coral reefs?	Daughters of a Coral Dawn
+LABEL	0	What companies manufacture golf clubs?	step
+LABEL	1	What is the phobia for number 13?	triskaidekaphobia
+LABEL	1	Where is South Bend?	Indiana
+LABEL	0	Who is Alberto Tomba?	Italy
+LABEL	0	Where is it?	England
+LABEL	0	What is the gestation period for humans?	random variable
+LABEL	0	Where is it based?	Doctorate
