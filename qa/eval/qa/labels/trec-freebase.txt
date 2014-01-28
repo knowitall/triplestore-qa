@@ -438,48 +438,48 @@ Infiniti	What is the Nissan Corp. luxury car?
 -	What criterion did this person cite in nominating Miers?
 1616-04-23	When did Shakespeare die?
 -	What is the name of the artistic director of the festival?
--	What is pneumonia?
+Disease	What is pneumonia?
 -	What is the telephone number for the University of Kentucky?
--	What is the scientific name for tobacco?
--	Ray Charles is best known for playing what instrument?
+Nicotiana	What is the scientific name for tobacco?
+Piano	Ray Charles is best known for playing what instrument?
 -	How many people watch network television?
--	Where is the Bulls basketball team based?
--	What type of craft was the Hindenburg?
+Chicago	Where is the Bulls basketball team based?
+Zeppelin	What type of craft was the Hindenburg?
 -	How fast is sound?
--	What is an ulcer?
+Disease or medical condition	What is an ulcer?
 -	What 1857 U.S. Supreme Court decision denied that blacks were citizens?
--	What's the capacity of the Superdome?
--	When did Hurricane Mitch occur?
--	Where is UPS headquarters located?
--	What foreign countries has Mahmud Ahmadinejad visited since his election to the presidency?
--	How many Oscars has Judi Dench been nominated for?
--	What do grasshoppers eat?
+69703	What's the capacity of the Superdome?
+1998-10-22	When did Hurricane Mitch occur?
+Atlanta	Where is UPS headquarters located?
+United States of America	What foreign countries has Mahmud Ahmadinejad visited since his election to the presidency?
+7	How many Oscars has Judi Dench been nominated for?
+Grass	What do grasshoppers eat?
 -	How big is the sun?
--	What country celebrates Guy Fawkes Day?
+United Kingdom	What country celebrates Guy Fawkes Day?
 -	Name so-called theme cruises promoted by NCL.
--	How did Jimi Hendrix die?
--	When was the San Francisco fire?
+Drug overdose	How did Jimi Hendrix die?
+1906	When was the San Francisco fire?
 -	How long was the debate scheduled to be?
--	In what country is Angkor Wat?
+Cambodia	In what country is Angkor Wat?
 -	How did Hawaii become a state?
 -	What is the tilt angle of the Tower of Pisa?
 -	Which people has he impersonated?
--	How did Harry Chapin die?
+Traffic collision	How did Harry Chapin die?
 -	On what date did the trial end?
 -	When was he elected Pope?
--	What fruit's stone does Laetrile come from?
+Almond	What fruit's stone does Laetrile come from?
 -	Who were her family members?
--	On what date was Ayn Rand born?
--	What is the fastest roller coaster?
+1905-02-02	On what date was Ayn Rand born?
+Formula Rossa	What is the fastest roller coaster?
 -	What is a micron?
 -	How far would you run if you participate in a marathon?
--	How did Mahatma Gandhi die?
--	Where in the U.S. is the 82nd Airborne Division based?
--	What type of music is performed by the Dixie Chicks?
+Assassination by firearm	How did Mahatma Gandhi die?
+Fort Bragg	Where in the U.S. is the 82nd Airborne Division based?
+Country	What type of music is performed by the Dixie Chicks?
 -	What is the division's official song?
--	What is Australia's oldest city?
--	When was Alan Greenspan born?
--	Who is the Prime Minister of Canada?
+Sydney	What is Australia's oldest city?
+1926-03-06	When was Alan Greenspan born?
+Stephen Harper	Who is the Prime Minister of Canada?
 -	Who is the Speaker of the Lebanese Parliament?
 -	Who were Rocky Marciano's opponents?
 -	How heavy is it?
