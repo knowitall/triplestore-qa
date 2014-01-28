@@ -131,31 +131,31 @@ Shades of Grey 1: The Road to High Saffron|The Woman Who Died A Lot|The Last Dra
 -	Who contributed money to purchase the Gaza greenhouses and supporting equipment?
 -	How old is Joseph Steffen?
 -	What was William Shakespeare's occupation before he began to write plays?
--	The Tower of Pisa began to be built in what year?
+1173	The Tower of Pisa began to be built in what year?
 -	How many people were evacuated?
--	What year was Barry Manilow born?
+1943	What year was Barry Manilow born?
 -	How many calories are there in a Big Mac?
--	In what city does the Iditarod end?
--	Who is Andrea Bocceli?
+Nome	In what city does the Iditarod end?
+Musician	Who is Andrea Bocceli?
 -	What were the settlements that were evacuated?
--	The Dixie Chicks are from which state?
--	In what city are BAT's headquarters?
--	How long is the Amazon River?
+Texas	The Dixie Chicks are from which state?
+London	In what city are BAT's headquarters?
+445.906	How long is the Amazon River?
 -	How many methamphetamine labs were dismantled nationwide in the U.S. in 1998?
--	How many terms was Dwight D. Eisenhower president?
--	Who is the chief executive of WWE?
--	what instrument does the concertmaster of an orchestra usually play?
--	Which countries are members of the OIC?
+2	How many terms was Dwight D. Eisenhower president?
+Vince McMahon	Who is the chief executive of WWE?
+Violin	what instrument does the concertmaster of an orchestra usually play?
+Indonesia|Pakistan|Nigeria|Bangladesh|Egypt	Which countries are members of the OIC?
 -	How much did the first Barbie cost?
 -	List some contestants on Jeopardy.
--	What are Brazil's national colors?
--	Where does Susan Butcher live?
+Yellow|Green	What are Brazil's national colors?
+Seattle|Boston	Where does Susan Butcher live?
 -	Where is the Little League World Championship played?
 -	How much did a poster of the winning candidate of 2005 presidential election in Egypt cost?
--	When was Bon Jovi born?
--	What is the capital of Ethiopia?
--	What was the name of the first Russian astronaut to do a spacewalk?
--	What other countries do Kurds live in?
+1962-03-02	When was Bon Jovi born?
+Addis Ababa	What is the capital of Ethiopia?
+Alexey Leonov	What was the name of the first Russian astronaut to do a spacewalk?
+Turkey|Iran|Iraq|Syria|Azerbaijan	What other countries do Kurds live in?
 -	Where did Wicca first develop?
 -	What artists has John Prine done duets with?
 -	What company produces Jay-Z's records?
