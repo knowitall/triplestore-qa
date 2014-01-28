@@ -275,38 +275,38 @@ Politician	Who is Ari Fleischer?
 Sayreville	Where was Bon Jovi born?
 1937-05-06	When did the Hindenberg crash?
 -	What other name were the "Little Rascals" known as?
--	What caused the death of Pius XII?
--	What year did "Snow White" come out?
--	Who was the first female United States Representative?
--	Where is Milan?
+Myocardial infarction	What caused the death of Pius XII?
+1937	What year did "Snow White" come out?
+Jeannette Rankin	Who was the first female United States Representative?
+Italy	Where is Milan?
 -	What countries were affected by Pakistan earthquakes of October 2005 earthquake?
 -	How big is Limbaugh's listening audience?
 -	How many times has Limbaugh been married?
--	What are the titles of the books in Sue Grafton's alphabet series of mysteries?
+E Is for Evidence|O Is for Outlaw|F is for Fugitive|P Is For Peril|R is for Ricochet	What are the titles of the books in Sue Grafton's alphabet series of mysteries?
 -	How many home runs were hit by Sosa in 1998?
--	In what year did Ireland elect its first woman president?
--	In what countries does Nissan manufacture vehicles outside of Japan?
+1990	In what year did Ireland elect its first woman president?
+Mexico|Australia|New Zealand|Taiwan|South Africa	In what countries does Nissan manufacture vehicles outside of Japan?
 -	What is the wingspan of a condor?
--	What was the nickname given to the B-17 Bomber?
--	What soft drink is most heavily caffeinated?
+Flying Fortress (Bombers)	What was the nickname given to the B-17 Bomber?
+Jolt Cola	What soft drink is most heavily caffeinated?
 -	How many performances did he sing at the Met?
 -	In what year was the company founded?
--	What books did Rachel Carson write?
+Sea the Hb|Lure of the Sea|The Sea Around Us	What books did Rachel Carson write?
 -	Can you give me the name of a clock maker in London, England?
--	What is the medical condition shingles?
+Disease	What is the medical condition shingles?
 -	How many schools make up the university?
 -	In what Texas town did the FBI and ATF destroy a compound killing dozens, but found no methamphetamine lab?
 -	On what date did the court begin screening potential jurors?
--	Who played the teacher in Dead Poet's Society?
--	What is Merrill Lynch's prime business?
--	Mahmud Ahmadinejad holds a Ph.D. in what field?
--	What country is know as the "Land of the Rising Sun"?
+Robin Williams	Who played the teacher in Dead Poet's Society?
+Investment broker	What is Merrill Lynch's prime business?
+Engineer	Mahmud Ahmadinejad holds a Ph.D. in what field?
+Japan	What country is know as the "Land of the Rising Sun"?
 -	Why is it a problem?
 -	How many chairmen of this organization have there been since it was established in 1913?
--	What year did work on the Bushehr Nuclear Facility facility originally start?
+1975	What year did work on the Bushehr Nuclear Facility facility originally start?
 -	His shows appear on which network?
 -	Who authorized this agreement?
--	What city is 94.5 KDGE Radio located in?
+Dallas	What city is 94.5 KDGE Radio located in?
 -	How many soldiers or police officers were used to carry out the evacuation?
 -	What artist recorded the song "At Last" in the 40's or 50's?
 -	Who is Annie Oakley?
