@@ -65122,3 +65122,180 @@ LABEL	0	What is the largest variety of cactus?	the garden
 LABEL	1	What are coral reefs?	food
 LABEL	0	What companies manufacture golf clubs?	the U.S.
 LABEL	0	Who is Alberto Tomba?	the Albertville Games
+LABEL	0	In what year was Warren Moon born?	the street
+LABEL	0	What is the length of the Big Dig?	The Dig
+LABEL	0	What nationality is Sean Connery?	Jason and Tony
+LABEL	0	What was the name of Patsy Cline's producer?	Mary
+LABEL	0	What is the location of Lake Champlain?	place
+LABEL	0	What continent is Bolivia on?	Brazil
+LABEL	0	what is Speedy Claxton's real name?	name
+LABEL	0	What year was the first Little League World Series played?	http://en.wikipedia.org/wiki/Little%20League%20World%20Series
+LABEL	0	Which authority runs the airport?	BAA
+LABEL	1	What is the name of the airport in Amsterdam?	Schiphol Int
+LABEL	0	What movies did Judi Dench play in?	Hoover
+LABEL	0	What was Sammy Sosa's team?	positive tests
+LABEL	1	How many NFL teams are there?	The Chargers
+LABEL	0	How many stores does Wal-Mart operate world-wide?	Spreadsheet Upload about Nobel Prize in LIterature nominees 1934-1936
+LABEL	0	What was Sinatra's first recording?	What Was
+LABEL	0	Who is Warren Moon's agent?	Harold Moon
+LABEL	0	How many layers of skin do we have?	Beyonc??'s L'Or??al ad: You can't do that in advertising!
+LABEL	0	What was Bing Crosby's nickname?	Bing Collins
+LABEL	0	When was U.S Naval Academy founded?	George Bancroft
+LABEL	0	Where did they honeymoon?	Pinellas County
+LABEL	1	Who invented basketball?	James Naismith
+LABEL	0	What is Horatio's relationship to Hamlet?	Blissful Master Index
+LABEL	0	How tall is St. Peter's Basilica?	St. Peter's Basilica is often used by the pope
+LABEL	1	Who is the governor of Alaska?	Sean Parnell
+LABEL	1	What political party does Thabo Mbeki belong to?	South African Communist Party
+LABEL	0	What is Hong Kong's population?	Internet users as percentage of population, World Development Indicators, World Bank
+LABEL	1	What instrument did the jazz musician Art Tatum play?	Jazz piano
+LABEL	1	Who developed the Macintosh computer?	Steve Jobs
+LABEL	0	How old was Elvis Presley when he died?	Myocardial infarction
+LABEL	1	Who invented television?	Philo Farnsworth
+LABEL	1	Who is the conductor of the Boston Pops?	John Williams
+LABEL	0	In what year was Warren Moon born?	Pro Football Player
+LABEL	0	When was the Red Cross founded?	Henry Dunant
+LABEL	1	What books has Walter Mosley written?	La mariposa blanca
+LABEL	0	What is Africa's largest country?	South Africa
+LABEL	0	What was the world record time set in the 2006 competition?	Jerk Out (Sexy Dub)
+LABEL	0	When was the Organization of Islamic Conference organized?	Vongola Family
+LABEL	0	How old was Crosby when he died?	House of Commons of the United Kingdom
+LABEL	0	How old was Joan of Arc when she died?	RKO Pictures
+LABEL	0	What company published Jasper Fforde first book?	The Fourth Bear
+LABEL	1	Which college athletic teams are nicknamed the Cougars?	Brigham Young University
+LABEL	0	When was it introduced into the U.S.?	WSJ Film Index
+LABEL	0	How many grants does the Fulbright Program award each year?	J. William Fulbright Prize for International Understanding
+LABEL	0	When is Jennifer Lopez's birthday?	Entertainment Weekly annotation index
+LABEL	0	How many Wal-Mart outlets are there in India?	Cyclone Laila
+LABEL	0	What year did South Dakota become a state?	Wind Cave National Park
+LABEL	0	A normal human pregnancy lasts how many months?	Entertainment Weekly annotation index
+LABEL	1	What is neuropathy?	Neurological disorder
+LABEL	1	What movies did Judi Dench play in?	Into the Arms of Strangers: Stories of the Kindertransport
+LABEL	0	What is the oldest sports trophy?	Blissful Master Index
+LABEL	0	What was this person's relationship to the Prophet Mohammad?	Paul the Apostle
+LABEL	0	What are John C. Calhoun and Henry Clay known as?	John Calhoun
+LABEL	0	When did John F. Kennedy get elected as President?	Lyndon B. Johnson
+LABEL	1	Where is the Salton Sea?	Whitewater River
+LABEL	0	What year did Alaska become a state?	Kobuk Valley National Park
+LABEL	0	Who was the sole survivor of Sago Mine disaster?	Tiki Twirl
+LABEL	0	What is the full name of conductor Seiji?	Steven Landau
+LABEL	1	What is leukemia?	Chronic myelogenous leukemia
+LABEL	0	Who has employed Steffen?	Odd Iversen
+LABEL	0	What is titanium?	Titanium dioxide
+LABEL	0	What is the annual salary of the Boston Pops conductor?	John Williams
+LABEL	0	What actor first portrayed James Bond?	Dr. No
+LABEL	0	What was Thailand's original name?	Thai Bangkaew Dog
+LABEL	0	When did the Dow first reach 2000?	2000 AD Prog 1
+LABEL	0	How big is a keg?	Entertainment Weekly annotation index
+LABEL	0	Where is Santa Lucia?	Sierra Nevada
+LABEL	1	In what spacecraft did U.S. astronaut Alan Shepard make his historic	Mercury-Redstone 3
+LABEL	0	How long was Pope Pius XII's pontificate?	Myocardial infarction
+LABEL	0	What is his primary career?	What Is...
+LABEL	0	How many competitors did the winner of the Miss Universe 2000 contest have?	Sonija Kwok
+LABEL	1	What songs did Al Jolson Sing?	California, Here I Come
+LABEL	0	When did the Johnstown flood occur?	Winter, or The Flood
+LABEL	0	Who was the British Foreign Secretary at the time of of Hong Kong's return to Chinese sovereignty?	United States dollar
+LABEL	0	How old was the dam?	Dam Square in Amsterdam, with a View of the New Church
+LABEL	0	Who was Abraham Lincoln?	Lewis Powell
+LABEL	0	What is Dick Clark's date of birth?	Mount Vernon
+LABEL	0	List female astronauts or cosmonauts.	Subsequent Light
+LABEL	0	Who was Virginia's first and most famous wine maker?	Ted Kennedy
+LABEL	0	On what date was the surgery performed?	Horse-riding accident
+LABEL	1	What is sodium chloride?	Phenylephrine hydrochloride
+LABEL	1	What continent is Bolivia on?	South America
+LABEL	1	Which British teams has Manchester United played?	Manchester City F.C.
+LABEL	0	How did Adolf Hitler die?	Vegetarian food
+LABEL	1	What movies did Meg Ryan star in?	Prelude to a Kiss
+LABEL	0	Who was the founder of Habitat for Humanity?	Triangle Fraternity
+LABEL	0	Who won the 2004 World Series?	For episode LA Dodgers vs. Oakland Athletics
+LABEL	0	What are pomegranates?	Everything Is Alive
+LABEL	0	How many events are part of the LPGA tour?	1999 Tour de France
+LABEL	1	What was Sammy Sosa's team?	Chicago White Sox
+LABEL	0	How many times a day do observant Muslims pray?	Mortality rate
+LABEL	0	What city is Lake Washington by?	North Bend
+LABEL	0	What UN organization hosts internships under the Fulbright Program?	J. William Fulbright Prize for International Understanding
+LABEL	0	Which film won three awards at the festival?	Satellite Award for Best Film ??? Musical or Comedy
+LABEL	0	Who is Paul Newman married to?	Welcome to Freebase
+LABEL	0	What country is Mahmud Ahmadinejad president of?	2010 Nigerien coup d'??tat
+LABEL	0	Who was Meg Ryan's male lead in Hanging	Entertainment Weekly annotation index
+LABEL	0	What breed of horse was used to found the Lipizzaner?	Mustang horse
+LABEL	1	Where did the Hindenburg disaster occur?	Naval Air Engineering Station Lakehurst
+LABEL	0	What was Rachel Carson's vocation?	Breast cancer
+LABEL	0	What comedy team was John Cleese part of?	Sherlock Holmes
+LABEL	0	How old was Foreman when he first won the heavyweight championship?	WBA World Champion
+LABEL	0	Which actress co-starred in the most Superman movies with Reeve?	Identity Crisis #1
+LABEL	0	What is Ursa Major?	Michael Smerconish / Stay the Course
+LABEL	0	When was the company founded?	Walt Disney
+LABEL	0	What peninsula is Spain part of?	Antigua and Barbuda
+LABEL	1	Who was the founding member of the Pink Floyd band?	Roger Waters
+LABEL	0	Where are the National Archives?	United Kingdom
+LABEL	1	What countries supplied aid?	United States of America
+LABEL	0	On what date was the 2005 presidential election in Egypt held?	Charlie and the Chocolate Factory
+LABEL	0	What Jeopardy contestant is the biggest money-winner in television game show history?	Alex Trebek
+LABEL	0	What year was Desmond Mpilo Tutu awarded the Nobel Peace Prize?	Nobel Peace Prize
+LABEL	0	When was Hong Kong returned to Chinese sovereignty?	Never Enough
+LABEL	0	Who have coached Warren Moon in professional football?	Luciano Spalletti
+LABEL	0	What two European countries are connected by the St. Gotthard Tunnel	One Life One Soul (Best of Ballads)
+LABEL	0	What Latin American country is the leading exporter of sugar cane?	Powdered sugar
+LABEL	0	What countries participated in the Food-for-Oil agreement by providing food or medicine?	Sierra Leone
+LABEL	0	Employees of what companies are receiving benefits from this [PBGC] organization?	Trade union
+LABEL	0	When did Hawaii become a state?	Puukohola Heiau National Historic Site
+LABEL	0	What is the population of Venezuela?	Population Growth Rate, World Development Indicators and Global Development Finance, World Bank
+LABEL	1	List previous conductors of the Boston Pops.	John Williams
+LABEL	0	When was the Food-for-Oil Agreement signed?	Avobenzone and octocrylene and oxybenzone 0.005/0.035/0.015 oil
+LABEL	0	What was the original estimated cost of the Big Dig?	United States dollar
+LABEL	0	What year was the phonograph invented?	Thomas Edison
+LABEL	0	What team drafted Brett Favre?	Green Bay Packers
+LABEL	0	What is the inner peel of an orange called?	Blissful Master Index
+LABEL	0	Where is Rider College located?	Trinity College, Cambridge
+LABEL	0	What year was the first Little League World Series played?	Major League Baseball
+LABEL	0	The extinct Tasmanian tiger is known by what other name?	Tigris regalis
+LABEL	0	Which U.S.A. president appeared on Laugh-In?	2010 Nigerien coup d'??tat
+LABEL	1	What did George Washington call his house?	Mount Vernon
+LABEL	0	In what year was the final episode telecast?	Live: Episode 9
+LABEL	0	Name the Virginia wine festivals.	Rosa virginiana
+LABEL	0	What percent of the nation's cheese does Wisconsin produce?	Pleasant Ridge Reserve
+LABEL	0	What was author Jasper Fforde's first book?	The Fourth Bear
+LABEL	0	What was Malcolm X's original surname?	United States of America
+LABEL	0	In what year was the Guinness Brewery founded?	Gluten-free diet
+LABEL	0	How close is Mesa to Phoenix?	Gloss Mountains
+LABEL	1	Who founded the House of Chanel?	Coco Chanel
+LABEL	0	At what age did Rossini stop writing opera?	Tough Love from Author Enablers Helps Get the Writing Job Done
+LABEL	0	Who founded Wal-Mart?	Jack Little
+LABEL	0	What is Susan B. Anthony's birthday?	Trelawny Parish
+LABEL	0	What day did Pearl Harbor occur?	Coastal Breakwater Harbor
+LABEL	0	Which U.S. government employees (either military or civilian) have been accused of spying for foreign countries?	Ministry of Information
+LABEL	0	List the songs he recorded.	The Dance
+LABEL	1	Which African country's major export is coffee?	Sierra Leone
+LABEL	0	Where was Shakespeare born?	United States of America
+LABEL	0	Who is the keeper for Manchester United?	Archie Jay Lomas
+LABEL	0	What is amitriptyline?	Chlordiazepoxide and amitriptyline 5/12.5 film coated tablet
+LABEL	0	Name unusual flavors created by Ben & Jerry's.	The Seven of Hearts
+LABEL	1	Which airlines use Dulles?	Independence Air
+LABEL	0	Where was the first golf course in the United States?	South Carolina
+LABEL	0	Who was the first king of England?	Loulou de la Falaise
+LABEL	0	Where is the Orinoco River?	Meta River
+LABEL	0	What government officials have been influenced by Ayn Rand's philosophy?	Philip Lader
+LABEL	0	What was Rose Crumb's occupation?	Mike Swift
+LABEL	0	What is Valentine's Day?	Blissful Master Index
+LABEL	0	Who was the first host of Jeopardy?	Jeopardy! theme music
+LABEL	0	Where did Dr. King give his speech in Washington?	Pioneer Church
+LABEL	0	Who is Terrence Malick?	Michele Morette
+LABEL	1	What is foot and mouth disease?	Infectious disease
+LABEL	0	What U.S. government entity sponsors the Fulbright Program?	May Coup
+LABEL	0	What province in Canada is Niagara Falls located in?	Niagara County
+LABEL	1	What university did Thomas Jefferson found?	University of Virginia
+LABEL	0	What is Tufts' current endowment?	United States dollar
+LABEL	0	How many states were still united after the southern states seceded?	United States of America
+LABEL	0	Who testified in defense of Susan McDougal?	Jim McDougal
+LABEL	0	Where is Venezuela?	United States of America
+LABEL	0	Who developed potlatch?	Pat Shea
+LABEL	0	List 10 countries where motorcycles are produced.	Mind Fusion, Volume 3
+LABEL	1	In what mountain range does the Amazon River rise?	Nevado Mismi
+LABEL	0	What are some Bon Jovi hits?	Bobby Bandiera
+LABEL	0	What is the largest variety of cactus?	Blissful Master Index
+LABEL	1	What do most tourists visit in Reims?	Montagne de Reims Regional Natural Park
+LABEL	0	Where is South Bend?	Mendoza College of Business
+LABEL	0	Who was the third Imam of Shiite Muslims?	Ahmed Yassin
+LABEL	0	Whom did the Chicago Bulls beat in the 1993 championship?	1996 NBA Finals
+LABEL	0	For whom was the state of Pennsylvania named?	Secretary of the Commonwealth of Pennsylvania
