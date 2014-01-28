@@ -48,14 +48,14 @@ Harare	What is the capital of Zimbabwe?
 FISA	What abbreviation is the International Rowing Federation also known by?
 Yellow River	What river is called "China's Sorrow"?
 -	When did Marian Anderson sing at the Lincoln Memorial?
--	Who is Duke Ellington?
+Musician|Bandleader	Who is Duke Ellington?
 -	How old was Rose Crumb when she won the awards?
--	Where was the first McDonalds built?
+San Bernardino	Where was the first McDonalds built?
 -	Who has served longer in this position?
--	Who was the women's winner of the 1999 Chicago Marathon?
--	Who wrote "The Pines of Rome"?
--	How many years did it take to build St. Peter's Basilica?
--	What is the melting point of copper?
+Joyce Chepchumba	Who was the women's winner of the 1999 Chicago Marathon?
+Ottorino Respighi	Who wrote "The Pines of Rome"?
+120	How many years did it take to build St. Peter's Basilica?
+1084.62	What is the melting point of copper?
 -	When did the art of quilting begin?
 -	Bing Crosby is an alumnus of which university?
 -	What individuals were at the wedding?
