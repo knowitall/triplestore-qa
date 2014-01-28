@@ -480,24 +480,24 @@ Country	What type of music is performed by the Dixie Chicks?
 Sydney	What is Australia's oldest city?
 1926-03-06	When was Alan Greenspan born?
 Stephen Harper	Who is the Prime Minister of Canada?
--	Who is the Speaker of the Lebanese Parliament?
--	Who were Rocky Marciano's opponents?
+Nabih Berri	Who is the Speaker of the Lebanese Parliament?
+Harry Haft|Ted Lowry|Roland La Starza|Rex Layne|Joe Louis	Who were Rocky Marciano's opponents?
 -	How heavy is it?
--	Where is the 	Mall of the America?
--	What is the name of the leader of Ireland?
+Bloomington	Where is the Mall of the America?
+President of Ireland	What is the name of the leader of Ireland?
 -	At what age did he die?
--	What is witch hazel?
+Consumer product	What is witch hazel?
 -	What Shiite leaders were killed in Pakistan?
 -	What is done with worn or outdated flags?
--	Where is Georgetown University?
+Washington, D.C.	Where is Georgetown University?
 -	How many pyramids have been discovered in Egypt?
--	Where do lobsters like to live?
--	What was Aaron Copland's most famous piece of music?
+Maine	Where do lobsters like to live?
+Billy the Kid ( Ballet Suite) - The Open Prairie	What was Aaron Copland's most famous piece of music?
 -	How many Wal-Mart employees are there in the U.S.?
--	When is Gerald Ford's birthday?
--	What player on a basketball team usually plays the post or pivot position?
--	What school did Ayn Rand get her bachelor's degree from?
--	What is poliomyelitis?
+1913-07-14	When is Gerald Ford's birthday?
+Power forward	What player on a basketball team usually plays the post or pivot position?
+Saint Petersburg State University	What school did Ayn Rand get her bachelor's degree from?
+Disease	What is poliomyelitis?
 -	Where is Tufts University?
 -	What are invertebrates?
 -	What was Pope Pius XII's name before becoming Pope?
