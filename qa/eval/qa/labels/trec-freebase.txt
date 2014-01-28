@@ -157,33 +157,33 @@ Addis Ababa	What is the capital of Ethiopia?
 Alexey Leonov	What was the name of the first Russian astronaut to do a spacewalk?
 Turkey|Iran|Iraq|Syria|Azerbaijan	What other countries do Kurds live in?
 -	Where did Wicca first develop?
--	What artists has John Prine done duets with?
--	What company produces Jay-Z's records?
--	What is the capital of Mongolia?
--	What ocean did the Titanic sink in?
--	What is the largest city in the U.S.?
+Iris DeMent	What artists has John Prine done duets with?
+Roc-A-Fella Records	What company produces Jay-Z's records?
+Ulan Bator	What is the capital of Mongolia?
+Atlantic Ocean	What ocean did the Titanic sink in?
+New York City	What is the largest city in the U.S.?
 -	The U.S. Department of Treasury first issued paper currency
--	What actress played Betsy in "Betsy's Weeding"?
--	Who have commanded the 82nd Airborn Division?
+Molly Ringwald	What actress played Betsy in "Betsy's Weeding"?
+Curtis Scaparrotti|David M. Rodriguez|Dan K. McNeill|John R. Deane, Jr.|Charles D. W. Canham	Who have commanded the 82nd Airborn Division?
 -	What are other names it is known by?
 -	What music school did he attend?
--	Who said "I have not begun to fight!"?
--	Who directed the film "Fail Safe"?
+John Paul Jones	Who said "I have not begun to fight!"?
+Sidney Lumet	Who directed the film "Fail Safe"?
 -	CNN's first broadcast occurred on what date?
--	Who is director of the U.S. Mint?
--	Who sang "Tennessee Waltz"?
--	What are amphibians?
+Richard A. Peterson	Who is director of the U.S. Mint?
+Danny Davis and The Nashville Brass	Who sang "Tennessee Waltz"?
+Animal	What are amphibians?
 -	What do you call a newborn kangaroo?
 -	Who was the target of rumors spread by Steffen?
 -	When did Brown start working at FEMA?
--	What country did Panama gain its independence from?
+Spain	What country did Panama gain its independence from?
 -	What other countries formally congratulated China on the return?
--	On what date did Carolyn Bessette Kennedy die?
+1999-07-16	On what date did Carolyn Bessette Kennedy die?
 -	How many temples are in operation worldwide?
 -	What was the name of the recipient?
 -	How many gas stations are there in the United States?
 -	On what university campus was the first debate held?
--	In what conflicts has the 82nd Airborne Division participated?
+Operation Husky|Battle of Saint-Mihiel|Vietnam War|Iraq War|Operation Market Garden	In what conflicts has the 82nd Airborne Division participated?
 -	List the professional teams for which Warren Moon has been a player.
 -	How many pints of stout a day does Guinness sell in Ireland?
 -	How is "Original Equipment Manufacturer" abbreviated?
