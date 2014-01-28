@@ -373,70 +373,70 @@ Erectile dysfunction	Viagra is prescribed for what problem?
 1913-04-09	What year was Ebbets Field, home of Brooklyn Dodgers, built?
 -	Who is the president of the House of Chanel?
 -	How tall is Mount McKinley?
--	What do ladybugs eat?
--	How many ounces are in a gallon?
--	What Chinese Dynasty was during 1412-1431?
--	What is porphyria?
+Aphid	What do ladybugs eat?
+128	How many ounces are in a gallon?
+Ming Dynasty	What Chinese Dynasty was during 1412-1431?
+Disease	What is porphyria?
 -	What is the body temperature of a dog?
 -	When (month and year) was he first nominated to this position?
--	When was "Cold Mountain" written?
+1997	When was "Cold Mountain" written?
 -	What is another slang expression for the Madness?
 -	How many Wal-Mart outlets are there in China?
--	In what country is the origin of the Amazon River?
--	Who was the founder of the Guinness Brewery?
+Peru	In what country is the origin of the Amazon River?
+Arthur Guinness	Who was the founder of the Guinness Brewery?
 -	When did he die?
--	What is one national park in Indiana?
--	Who starred in "The Poseidon Adventure"?
--	List songs recorded by the Dixie Chicks.
--	What color is indigo?
+Indiana Dunes National Lakeshore	What is one national park in Indiana?
+Gene Hackman	Who starred in "The Poseidon Adventure"?
+Let Him Fly|There's Your Trouble|Irish Melody|The Flip Side|Just a Bit Like Me	List songs recorded by the Dixie Chicks.
+Blue|Violet	What color is indigo?
 -	What is Little League Baseball's URL on the Internet?
 -	What is the AMT exemption amount for a single taxpayer in 2006?
--	When did the Hindenburg disaster occur?
+1937-05-06	When did the Hindenburg disaster occur?
 -	Who were witnesses during the trial?
 -	In what countries has Habitat for Humanity provided assistance abroad?
--	In what city is Nissan headquartered?
+Nishi-ku, Yokohama	In what city is Nissan headquartered?
 -	What Pope started the building of the basilica?
 -	What Chanel creation is the top-selling fragrance in the world?
--	When did Prince Edward engage to marry?
--	Who is Michael Weiss's coach?
--	What countries produce avocados?
+1999-01-06	When did Prince Edward engage to marry?
+Don Laws	Who is Michael Weiss's coach?
+Mexico|Chile|Dominican Republic|Indonesia|United States of America	What countries produce avocados?
 -	Who were leading players for Manchester United in the 1990's?
 -	How tall is the green monster at Fenway?
--	Name an American made motorcycle.
+Harley-Davidson Motor Company	Name an American made motorcycle.
 -	How many members does the American Legion have?
--	On what date was Mahmud Ahmadinejad born?
--	What is a baby lion called?
--	List the names of cell phone manufacturers.
--	What is the name of William Penn's ship?
--	Where was the agreement establishing NATO signed?
--	Where is Amsterdam?
--	What year did Ayn Rand come to the United States?
+1956-10-28	On what date was Mahmud Ahmadinejad born?
+Cub	What is a baby lion called?
+Nokia|Toshiba|Dell|LG|Sendo	List the names of cell phone manufacturers.
+Welcome	What is the name of William Penn's ship?
+Washington, D.C.	Where was the agreement establishing NATO signed?
+Netherlands	Where is Amsterdam?
+1926	What year did Ayn Rand come to the United States?
 -	What date will this cease-fire begin?
 -	What position is Nissan among Japanese automakers?
--	What is the Ohio state bird?
+Cardinal	What is the Ohio state bird?
 -	What are chloroplasts?
 -	What is his second successful career?
 -	On which street is Merrill Lynch headquarters located?
--	Where is the USS Abraham Lincoln home ported?
+Norfolk	Where is the USS Abraham Lincoln home ported?
 -	In Poland, where do most people live?
--	Who was President of Costa Rica in 1994?
+José María Figueres	Who was President of Costa Rica in 1994?
 -	What cartoon character is based on a marsupial?
 -	What is the height of the largest pyramid?
 -	How much water fell on Johnstown?
 -	What country won the first four overall International Rowing Federation Rowing World Cup titles?
 -	When was UPS's first public stock offering?
--	What fruit is Melba sauce made from?
+Peach	What fruit is Melba sauce made from?
 -	What was the jury's ruling on the obstruction of justice charge?
 -	How much is the international space stations expected to cost?
--	What is Muscular Dystrophy?
--	When was the telephone invented?
+Disease	What is Muscular Dystrophy?
+1876-03-07	When was the telephone invented?
 -	What defense and prosecution attorneys participated in the trial of John William King?
--	When was Wendy's founded?
+1969	When was Wendy's founded?
 -	How many people died from the Luxor massacre?
--	What is the Nissan Corp. luxury car?
+Infiniti	What is the Nissan Corp. luxury car?
 -	Where was the 24th Islamic Conference of Foreign Ministers of the OIC held?
 -	What criterion did this person cite in nominating Miers?
--	When did Shakespeare die?
+1616-04-23	When did Shakespeare die?
 -	What is the name of the artistic director of the festival?
 -	What is pneumonia?
 -	What is the telephone number for the University of Kentucky?
