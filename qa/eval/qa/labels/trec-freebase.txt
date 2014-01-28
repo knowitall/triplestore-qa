@@ -308,69 +308,69 @@ Japan	What country is know as the "Land of the Rising Sun"?
 -	Who authorized this agreement?
 Dallas	What city is 94.5 KDGE Radio located in?
 -	How many soldiers or police officers were used to carry out the evacuation?
--	What artist recorded the song "At Last" in the 40's or 50's?
--	Who is Annie Oakley?
--	What is the Bluegrass state?
+Ray Eberle|Pat Friday	What artist recorded the song "At Last" in the 40's or 50's?
+Fictional Character	Who is Annie Oakley?
+Kentucky	What is the Bluegrass state?
 -	What was Nissan formerly known as?
 -	Who built The Millennium Wheel?
--	On what date did Jeopardy air for the first time?
--	When was the movie, Caligula, made?
--	How many years are in a term of the Lebanese Parliament?
--	What is the legal age to vote in Argentina?
--	What company manufactures Sinemet?
+1964-03-30	On what date did Jeopardy air for the first time?
+1979	When was the movie, Caligula, made?
+4	How many years are in a term of the Lebanese Parliament?
+16	What is the legal age to vote in Argentina?
+Merck & Co.	What company manufactures Sinemet?
 -	On what date did Pakistan earthquakes of October 2005 strike?
--	The B-17 bomber was used against which countries?
--	What is rheumatoid arthritis?
+Germany	The B-17 bomber was used against which countries?
+Disease	What is rheumatoid arthritis?
 -	What did Charles Babbage invent?
--	What other countries have signed contracts to work on the Bushehr Nuclear Facility?
--	How many people were founders of LPGA?
--	When was Michael Weiss born?
--	What is the most common cancer?
--	How many people visited Disneyland in 1999?
--	What team won Super Bowl XXXIV?
--	Where did the Mormon church begin?
--	What is the abbreviation for Texas?
--	What was the cause of Bob Marley's death?
+Germany	What other countries have signed contracts to work on the Bushehr Nuclear Facility?
+Patty Berg|Bettye Danoff|Helen Dettweiler|Marlene Bauer Hagge|Helen Hicks	How many people were founders of LPGA?
+1958-02-10	When was Michael Weiss born?
+Breast cancer|Lung cancer	What is the most common cancer?
+14,800,000	How many people visited Disneyland in 1999?
+St. Louis Rams	What team won Super Bowl XXXIV?
+Jackson County	Where did the Mormon church begin?
+TX	What is the abbreviation for Texas?
+Acral lentiginous melanoma	What was the cause of Bob Marley's death?
 -	What U.S. President first used it?
--	What corporation owns Cunard Cruise Lines?
--	What are the titles of songs written by John Prine?
--	Who is the manager of Manchester United?
--	Who is the captain of Manchester United?
--	What researchers have worked with prions?
--	How many people did Pope Pius XII canonize?
+Carnival Corporation & plc	What corporation owns Cunard Cruise Lines?
+Billy the Bum|Sam Stone|Unlonely|Take a Look at My Heart|Humidity Built the Snowman	What are the titles of songs written by John Prine?
+David Moyes	Who is the manager of Manchester United?
+Gary Neville	Who is the captain of Manchester United?
+Tikvah Alper	What researchers have worked with prions?
+Mary Euphrasia Pelletier|Gemma Galgani|Margaret of Hungary|John de Brito|Joseph Cafasso	How many people did Pope Pius XII canonize?
 -	What was the record number of home runs in 1998?
 -	How much was the Tower of Pisa straightened in the 1990's?
 -	How many Vietnamese were there in the Soviet Union?
--	What is the name for clouds that produce rain?
--	What is the capital of the United States?
--	On what island is Mt. Pinatubo?
+Nimbus	What is the name for clouds that produce rain?
+Washington, D.C.	What is the capital of the United States?
+Luzon	On what island is Mt. Pinatubo?
 -	Where was the festival held?
--	Who is Jay-Z planning to marry?
--	When was the Boston tea party?
+Beyoncé	Who is Jay-Z planning to marry?
+1773-12-16	When was the Boston tea party?
 -	How far is the moon from Earth in miles?
--	Name the Islamic counterpart to the Red Cross.
--	What U.S. Government agency registers trademarks?
+Red Crescent	Name the Islamic counterpart to the Red Cross.
+United States Patent and Trademark Office	What U.S. Government agency registers trademarks?
 -	How much calcium is in broccoli?
 -	When was she married?
 -	Name 4 U.S. cities that have a  "Shubert" theater.
--	What is fibromyalgia?
+Disease	What is fibromyalgia?
 -	Who was the former CEO who became a Virginia wine maker?
 -	What was the length of the  Wright brothers' first flight?
 -	What name is given to the coin honoring the Lewis and Clark expedition?
 -	How many people does BAT employ?
--	What was Dale Evans' horse's name?
+Buttermilk	What was Dale Evans' horse's name?
 -	What is the name of the satellite that the Soviet Union
 -	How high is the Millennium Wheel?
--	What animal do buffalo wings come from?
--	What is the collective term for geese?
+Chicken	What animal do buffalo wings come from?
+Gaggle	What is the collective term for geese?
 -	What is the expansion of "AMT"?
--	What is the democratic party symbol?
--	Where did Jay-Z grow up?
--	How many inhabitants live in the town of Ushuaia?
--	When was NATO established?
--	Viagra is prescribed for what problem?
+Donkey	What is the democratic party symbol?
+Brooklyn	Where did Jay-Z grow up?
+56,956	How many inhabitants live in the town of Ushuaia?
+1949-04-04	When was NATO established?
+Erectile dysfunction	Viagra is prescribed for what problem?
 -	How old is the Red Pyramid?
--	What year was Ebbets Field, home of Brooklyn Dodgers, built?
+1913-04-09	What year was Ebbets Field, home of Brooklyn Dodgers, built?
 -	Who is the president of the House of Chanel?
 -	How tall is Mount McKinley?
 -	What do ladybugs eat?
