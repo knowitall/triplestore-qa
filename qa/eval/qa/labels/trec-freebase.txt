@@ -255,25 +255,25 @@ China	What is the most populated country in the world?
 Willamette Meteorite	What is the largest meteorite found in the U.S.?
 -	What organization did Rose Crumb found?
 -	What grape varieties are Virginia wines made from?
--	Where was Padre Pio born?
+Pietrelcina	Where was Padre Pio born?
 -	What portion of Muslims are Shiite?
 -	What animal is responsible for the most human deaths worldwide?
--	Who is the founder of the Iditarod?
+Joe Redington	Who is the founder of the Iditarod?
 -	How long did it take to build the Tower of Pisa?
--	Who has served as Secretary-General of the U.N.?
+Kofi Annan|Boutros Boutros-Ghali|Javier Perez de Cuellar|Kurt Waldheim|U Thant	Who has served as Secretary-General of the U.N.?
 -	On what TV show does Hammond regularly appear?
 -	What grapes are used in making wine?
 -	Which Virginia vineyard produces the most wine?
 -	Which government department was FEMA under at the time of Hurricane Katrina?
--	What year did Padre Pio first receive the stigmata?
--	Who is Ari Fleischer?
+1918	What year did Padre Pio first receive the stigmata?
+Politician	Who is Ari Fleischer?
 -	How much money did the Clinton Administration budget in 2000 for shutting down methamphetamine labs?
--	What year was Christopher Reeve paralyzed?
+1995	What year was Christopher Reeve paralyzed?
 -	How many settlers were evacuated?
 -	What are the speed hummingbirds fly?
 -	How long had Mt. Pinatubo been dormant?
--	Where was Bon Jovi born?
--	When did the Hindenberg crash?
+Sayreville	Where was Bon Jovi born?
+1937-05-06	When did the Hindenberg crash?
 -	What other name were the "Little Rascals" known as?
 -	What caused the death of Pius XII?
 -	What year did "Snow White" come out?
