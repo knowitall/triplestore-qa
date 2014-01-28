@@ -235,24 +235,24 @@ Oxycodone	What drugs did Rush Limbaugh take for back pain?
 -	How old was he when he died?
 Tufts University School of Engineering|Tufts University School of Medicine|Tufts University School of Arts and Sciences|Tufts University School of Dental Medicine	Name the schools of Tufts University.
 -	On what date did President Bush visit the USS Abraham Lincoln?
--	Name people who have appeared on the U.S. Mint's coins.
--	What is the capital city of New Zealand?
+George Washington|Abraham Lincoln|Thomas Jefferson|Franklin Delano Roosevelt	Name people who have appeared on the U.S. Mint's coins.
+Wellington	What is the capital city of New Zealand?
 -	How heavy is the world's largest meteorite?
--	Who was the U.S. president in 1929?
--	How did Jackie Robinson die?
+Herbert Hoover|Calvin Coolidge	Who was the U.S. president in 1929?
+Myocardial infarction	How did Jackie Robinson die?
 -	What chemical company's labels were found on bottles in a methamphetamine lab?
 -	How much does it cost to register a car in New Hampshire?
--	What is the approved designation for Dulles?
--	What movie was based on Patsy Cline's life?
--	When did the Persian Gulf War occur?
--	List titles of movies, other than "Superman" movies, that Christopher Reeve acted in.
--	List the ships in Cunard Cruise Lines.
+IAD	What is the approved designation for Dulles?
+Sweet Dreams	What movie was based on Patsy Cline's life?
+1990-08-02	When did the Persian Gulf War occur?
+Gray Lady Down|Somewhere In Time|Deathtrap|The Aviator|Noises Off	List titles of movies, other than "Superman" movies, that Christopher Reeve acted in.
+Queen Mary 2|Queen Victoria|Queen Elizabeth	List the ships in Cunard Cruise Lines.
 -	How did George Wallace's father die?
--	What is the boiling point of water?
--	Who portrayed Jake in the television show, "Jake and the Fatman"?
+99.98	What is the boiling point of water?
+Joe Penny	Who portrayed Jake in the television show, "Jake and the Fatman"?
 -	Name his children.
--	What is the most populated country in the world?
--	What is the largest meteorite found in the U.S.?
+China	What is the most populated country in the world?
+Willamette Meteorite	What is the largest meteorite found in the U.S.?
 -	What organization did Rose Crumb found?
 -	What grape varieties are Virginia wines made from?
 -	Where was Padre Pio born?
