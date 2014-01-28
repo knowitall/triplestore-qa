@@ -498,106 +498,106 @@ Billy the Kid ( Ballet Suite) - The Open Prairie	What was Aaron Copland's most f
 Power forward	What player on a basketball team usually plays the post or pivot position?
 Saint Petersburg State University	What school did Ayn Rand get her bachelor's degree from?
 Disease	What is poliomyelitis?
--	Where is Tufts University?
--	What are invertebrates?
--	What was Pope Pius XII's name before becoming Pope?
--	How did Joseph Smith die?
--	What famous communist leader died in Mexico City?
--	What is Marilyn Monroe's real name?
+Medford	Where is Tufts University?
+Animal	What are invertebrates?
+Eugenio Maria Giuseppe Giovanni Pacelli	What was Pope Pius XII's name before becoming Pope?
+Myocardial infarction	How did Joseph Smith die?
+Leon Trotsky	What famous communist leader died in Mexico City?
+Norma Jeane Mortenson	What is Marilyn Monroe's real name?
 -	What awards has she [Rose Crumb] received?
--	Who was responsible for the killing of Duncan in "Macbeth"?
+Macbeth	Who was responsible for the killing of Duncan in "Macbeth"?
 -	What document did Button Gwinnett sign on the upper left hand side?
--	Where was Judi Dench born?
--	For which newspaper does Krugman write?
--	What was the first satellite to go into space?
--	What does the acronym ETA stand for?
--	In what foreign countries does the UPS operate?
--	How old was George Washington when he died?
+Heworth	Where was Judi Dench born?
+The New York Times	For which newspaper does Krugman write?
+Sputnik	What was the first satellite to go into space?
+Estimated Time of Arrival	What does the acronym ETA stand for?
+Canada	In what foreign countries does the UPS operate?
+67	How old was George Washington when he died?
 -	What Republican senators supported the nomination?
 -	What dress size was Marilyn Monroe?
 -	What movies was he in?
 -	How long did it take to build the temples?
--	Where is Tufts located?
+Medford	Where is Tufts located?
 -	They are best known for making what product?
--	How many plays did Shakespeare write?
+Hamlet|Romeo & Juliet|Macbeth|The Tempest|Othello	How many plays did Shakespeare write?
 -	Who authorized it?
--	When is Bastille Day?
--	In what year was Habitat for Humanity founded?
--	How many islands are there in Indonesia?
--	What country are Volvo automobiles made in?
--	Which country colonized Hong Kong?
--	Who won 2005 presidential election in Egypt?
--	Who was the first person to run the mile in less than four minutes?
+14 July|July 14|07-14	When is Bastille Day?
+1976	In what year was Habitat for Humanity founded?
+Java|Sumatra|Kalimantan|Sulawesi|Maluku	How many islands are there in Indonesia?
+Sweden	What country are Volvo automobiles made in?
+United Kingdom	Which country colonized Hong Kong?
+Hosni Mubarak	Who won 2005 presidential election in Egypt?
+Roger Bannister	Who was the first person to run the mile in less than four minutes?
 -	What is the salary of a U.S. Representative?
 -	Approximately how many people has ETA killed?
 -	How many people were killed?
 -	How long do hermit crabs live?
 -	Who was the Guinness Brewmaster in 2006?
--	Where did Hurricane Mitch occur?
+Central America	Where did Hurricane Mitch occur?
 -	When did Rose Crumb found it?
--	List the names of other millennium structures in England.
+Millenium Dome	List the names of other millennium structures in England.
 -	List key players in negotiating the G.F. Agreement.
 -	What is the 82nd Airborn Division's motto?
--	When did president Herbert Hoover die?
--	What is the name of the vaccine for chicken pox?
--	Where did Carolyn Bessette Kennedy grow up?
--	What is the most popular sport in Japan?
--	What is "WWE" short for?
--	Name one of the major gods of Hinduism?
+1964-10-20	When did president Herbert Hoover die?
+Varicella vaccine	What is the name of the vaccine for chicken pox?
+White Plains	Where did Carolyn Bessette Kennedy grow up?
+Baseball	What is the most popular sport in Japan?
+World Wrestling Entertainment	What is "WWE" short for?
+Vishnu|Shiva|Shakti	Name one of the major gods of Hinduism?
 -	How many miners died in the disaster?
--	What organization did Paul Konerko first play major league baseball with?
--	What is the name of the philosophy that Ayn Rand started?
+Los Angeles Dodgers	What organization did Paul Konerko first play major league baseball with?
+Objectivism	What is the name of the philosophy that Ayn Rand started?
 -	Name 20 countries other than the United States that have
--	Where on the body is a mortarboard worn?
--	What architects were involved in building St. Peter's?
--	What English city does the prime meridian pass through?
--	What's the name of the star of the cooking show, "Galloping Gourmet"?
--	What is autism?
+Head	Where on the body is a mortarboard worn?
+Donato Bramante	What architects were involved in building St. Peter's?
+Greenwich	What English city does the prime meridian pass through?
+Graham Kerr	What's the name of the star of the cooking show, "Galloping Gourmet"?
+Disease	What is autism?
 -	What does your spleen do?
--	What year did Oklahoma become a state?
--	What album became the greatest selling album of all time?
--	The Jewish alphabet is known as what?
--	Who is the voice of Miss Piggy?
--	Who is the United Nations Secretary-General for political affairs?
--	Who is the current host of Jeopardy?
+1907	What year did Oklahoma become a state?
+Thriller	What album became the greatest selling album of all time?
+Hebrew alphabet	The Jewish alphabet is known as what?
+Laurie O'Brien	Who is the voice of Miss Piggy?
+Jeffrey D. Feltman	Who is the United Nations Secretary-General for political affairs?
+Alex Trebek	Who is the current host of Jeopardy?
 -	Which Congress persons want to change the AMT?
 -	How did he die?
 -	On what date did ETA announce a cease-fire in 1998?
--	Which is the largest pyramid ever built?
+Great Pyramid of Cholula	Which is the largest pyramid ever built?
 -	Which attorney was the last prosecutor?
--	Where did Warren Moon play in college?
--	What soft drink would provide me with the biggest intake of caffeine?
+University of Washington	Where did Warren Moon play in college?
+Jolt Cola	What soft drink would provide me with the biggest intake of caffeine?
 -	What was Prince Edward's occupation?
 -	In which U.S. states have there been fatalities caused by snow avalanches?
--	In which year was New Zealand excluded from the ANZUS alliance?
--	What is the name of the NCL's own private island?
--	In what town was Mahmud Ahmadinejad born?
--	What brands of cigarettes does BAT manufacture?
+Colorado	In which year was New Zealand excluded from the ANZUS alliance?
+Great Stirrup Cay	What is the name of the NCL's own private island?
+Aradan	In what town was Mahmud Ahmadinejad born?
+Lucky Strike|Pall Mall	What brands of cigarettes does BAT manufacture?
 -	When was King convicted?
--	When was barbed wire invented?
--	What galaxy is closest to the milky way?
--	Who wrote the hymn "Amazing Grace"?
--	What is the date of Bastille Day?
--	Italy is the largest producer of what?
--	Where is WWE headquartered?
--	What president is on a quarter?
--	What books has Limbaugh written?
--	Who is Andrew Carnegie?
+1867	When was barbed wire invented?
+Andromeda Galaxy	What galaxy is closest to the milky way?
+John Newton	Who wrote the hymn "Amazing Grace"?
+14 July|July 14|07-14	What is the date of Bastille Day?
+Wine	Italy is the largest producer of what?
+Stamford	Where is WWE headquartered?
+George Washington	What president is on a quarter?
+See, I Told You So|Rush!	What books has Limbaugh written?
+Person	Who is Andrew Carnegie?
 -	What songs did she record?
--	Who manufactures Viagra?
+Pfizer	Who manufactures Viagra?
 -	What are the people who make fireworks called?
--	What city is Purdue University in?
--	When was the American Legion founded?
--	When was the U.S. Medal of Honor first awarded?
+West Lafayette	What city is Purdue University in?
+1919	When was the American Legion founded?
+1963-03-25	When was the U.S. Medal of Honor first awarded?
 -	What is ozone depletion?
--	How many Earth days does it take for Mars to orbit the sun?
--	What duo lost their Grammy for best new artist when it was discovered that they lip-synched their songs?
--	What other volcanoes are in the Philippines?
--	Who is the head of PBGC?
+365	How many Earth days does it take for Mars to orbit the sun?
+Milli Vanilli	What duo lost their Grammy for best new artist when it was discovered that they lip-synched their songs?
+Mayon Volcano	What other volcanoes are in the Philippines?
+Josh Gotbaum	Who is the head of PBGC?
 -	Who is the chief executive?
--	What city is the Orange Bowl in?
+Miami Gardens	What city is the Orange Bowl in?
 -	Give the month and year that Sani Abacha had a successful coup in Nigeria.
--	Who invented the cotton gin?
+Eli Whitney	Who invented the cotton gin?
 -	What was Bing Crosby's profession?
 -	Where was the first J.C. Penney store opened?
 -	What persons has Krugman criticized in his op-ed columns?
