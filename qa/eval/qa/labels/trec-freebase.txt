@@ -326,7 +326,7 @@ Frank Carlton Serafino Feranna, Jr.	What is Motley Crue's Nikki Sixx's real name
 -	How many people were killed in Hindenburg disaster?
 Indianapolis	Where are the headquarters of Eli Lilly?
 Shanghai	What is the largest city in the world?
-John Paul Jones	Who said "I have not begun to fight!"?
+John Paul Jones	Who said "I have not begun to fight"?
 Koala	What animal has human-like fingerprints?
 -	Who has served longer in this position?
 Titanoboa	What is the largest snake in the world?
@@ -601,7 +601,7 @@ Denmark	What country does Greenland belong to?
 Italy	Where is Milan?
 1919	When was the American Legion founded?
 -	List key players in negotiating the G.F. Agreement.
-See, I Told You So|Rush!	What books has Limbaugh written?
+See, I Told You So	What books has Limbaugh written?
 -	How many schools make up the university?
 1998-10-22	When did Hurricane Mitch occur?
 Australia	Where is Perth?
