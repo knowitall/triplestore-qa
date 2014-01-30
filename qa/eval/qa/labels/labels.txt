@@ -66434,3 +66434,22 @@ LABEL	0	when did sherlock holmes live?	thinking
 LABEL	0	what does latin america consist of?	Public domain
 LABEL	0	who is aidan davis?	school
 LABEL	0	what kind of voting system does japan have?	Approval
+LABEL	0	where did pavlova originate?	Fruit
+LABEL	1	who played as barney?	Stallone
+LABEL	0	what movies has halle berry starred in?	Nahla Ariela Aubry
+LABEL	0	what type of currency does the us have?	Tremissis
+LABEL	0	what kind of money is used in israel?	Fatah
+LABEL	1	what was james madison's job?	slaves
+LABEL	0	where did brian williams go to college?	Reagan
+LABEL	0	what was manchester united first name?	TV
+LABEL	0	what does amanda seyfried play in?	negotiations
+LABEL	0	who was emperor diocletian?	case
+LABEL	0	what is medicare a?	data
+LABEL	0	what are historical places in new york?	Billboards
+LABEL	0	who are the colorado eagles?	great place
+LABEL	0	what are the three major rivers in south america?	South Carolina
+LABEL	1	what teams did shaq play 4?	Phoenix
+LABEL	0	what organization did martin luther king lead?	neighborhood
+LABEL	0	what language do egyptians use?	leading independent school
+LABEL	0	who played forrest gump as a kid?	New York
+LABEL	0	where is tsonga born?	Group B
