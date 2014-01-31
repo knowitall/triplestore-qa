@@ -66791,3 +66791,484 @@ LABEL	0	Whom did the Chicago Bulls beat in the 1993 championship?	2009 Super 14 
 LABEL	0	What were the most points Michael Jordan scored in a game?	Sportsman of the Year
 LABEL	0	Which U.S. state is the leading corn producer?	Leviathan gr
 LABEL	0	For whom was the state of Pennsylvania named?	USS Pennsylvania (SSBN-735)
+LABEL	0	how many mary mary sisters?	CHCS
+LABEL	1	what 5 countries border switzerland?	France
+LABEL	0	what age did william penn get married?	an accelerated format
+LABEL	0	what all does google now do?	a new ?Follow ? badge
+LABEL	0	what are all the movies taylor swift has been in?	The Lucky One
+LABEL	0	what are all the names of the harry potter books?	Cataloged instance
+LABEL	0	what are all the songs justin bieber wrote?	fake paternity claim
+LABEL	1	what are john terry's children called?	Hannah Terry
+LABEL	1	what are serena williams achievements?	Justine Henin
+LABEL	1	what are the 7 sacraments of the catholic church?	the Rite
+LABEL	1	what are the beliefs of the roman catholic?	Pauline theology
+LABEL	0	what are the catholic holy days?	CLICK HERE
+LABEL	1	what are the colonies of great britain?	British New Guinea
+LABEL	0	what are the four nations of the united kingdom?	Apprenticeship programmes
+LABEL	0	what are the major languages spoken in the united kingdom?	HTML
+LABEL	1	what are the major trading partners of germany?	the United States
+LABEL	0	what are the names of harry potter movies in order?	England
+LABEL	1	what are the names of michael jackson's kids?	Paris Hilton
+LABEL	0	what are the official languages of the eu?	the European Union
+LABEL	0	what are the songs that justin bieber wrote?	fake paternity claim
+LABEL	1	what are the sports in spain?	GOLF
+LABEL	0	what are the supreme court cases?	American life
+LABEL	1	what are the three official languages of belgium?	Flemish and French
+LABEL	0	what are the two official languages of paraguay?	Spanish fly
+LABEL	1	what awards did marilyn monroe won?	eternal beauty
+LABEL	0	what bible do catholics follow?	Jesus Christ
+LABEL	1	what books did agatha christie wrote?	Sleeping murder
+LABEL	1	what books did ernest hemingway write?	Complete poems
+LABEL	0	what can do in new york?	Time
+LABEL	1	what characters does matt stone do?	Butters Stotch
+LABEL	0	what city is mt lassen in?	Sierra wildflowers: Mt. Lassen to Kern Canyon
+LABEL	0	what college did albert einstein go to?	Einstein family
+LABEL	0	what college did brett favre?	Sports film
+LABEL	0	what college did joakim noah?	Basketball player
+LABEL	0	what college did john nash go to?	Stone Mountain
+LABEL	0	what college did john stockton go to?	New York City
+LABEL	0	what college did jrr tolkien go to?	an informal literary group
+LABEL	0	what college did magic johnson play for?	Los Angeles Dodgers
+LABEL	0	what college did martin luther king jr go to?	East Bay Regional Park District
+LABEL	0	what college did sir isaac newton go to?	the Royal Society
+LABEL	0	what colleges did harper lee attend?	Los Angeles
+LABEL	1	what colleges did mitt romney attend?	Ivy league
+LABEL	0	what company does nike own?	Sustainable design
+LABEL	0	what continent does canada belong to?	Great Britain
+LABEL	0	what countries are involved in the nafta?	each Party
+LABEL	0	what countries are members of the security council?	European state
+LABEL	1	what countries are part of the uk?	England
+LABEL	1	what countries do the united nations help?	Indonesia.
+LABEL	1	what countries does canada have trade agreements with?	the Unite States
+LABEL	1	what countries does nafta include?	Latin America
+LABEL	0	what countries does the panama canal go through?	Prize possession
+LABEL	1	what countries included in oceania?	Hawai?i
+LABEL	0	what countries included in the uk?	New Orleans
+LABEL	0	what country does alaska belong to?	Seattle Recruiting Battalion
+LABEL	0	what country is dyson made?	New Zealand
+LABEL	1	what country is nike based in?	Indonesia.
+LABEL	0	what county is brentwood tennessee in?	Brentwood Station
+LABEL	0	what county is greeley colorado in?	Greeley Junction
+LABEL	0	what county is san diego in?	Rancho Santa Fe
+LABEL	0	what currency do they use in switzerland?	Credit cards
+LABEL	0	what currency does france accept?	Credit cards
+LABEL	0	what currency does the czech republic use now?	the Order
+LABEL	0	what currency is accepted in new zealand?	Credit cards
+LABEL	1	what degrees did barack obama get?	political science
+LABEL	1	what degrees does romney have?	Harvard Business School
+LABEL	1	what did albert speer design?	Technik und Macht
+LABEL	0	what did andy irons die from?	November
+LABEL	1	what did canada get gold medals in?	the Hockey tournie
+LABEL	1	what did charles babbage discover?	Analytical Engine
+LABEL	0	what did coretta scott king died from?	Mexican cancer clinic
+LABEL	0	what did dr jack kevorkian do?	Cataloged instance
+LABEL	1	what did elvis presley died from?	an overdose
+LABEL	1	what did hayes do?	Carbon neutrality
+LABEL	1	what did isaac newton explain?	a corollary
+LABEL	0	what did james polk do before he was president?	Manifest ambition
+LABEL	1	what did jesse owens won?	Olympic Games
+LABEL	0	what did joe biden study in college?	Syracuse University
+LABEL	1	what did lincoln steffens wrote?	John Reed
+LABEL	0	what did michael crabtree do?	Michael Thomas Crabtree
+LABEL	1	what did miles davis died of?	congestive heart failure
+LABEL	1	what did randy savage died of?	a car accident
+LABEL	0	what did romo do?	Mexican heroes
+LABEL	1	what did shannon hoon die from?	an overdose
+LABEL	0	what did the ancient mayans predict?	Polypodium leucotomos
+LABEL	0	what did thomas edison do for the world?	Thomas Paine
+LABEL	0	what did thomas hobbes do?	Thomas Hobbs
+LABEL	0	what disease did abraham lincoln had?	Abraham Lincoln
+LABEL	0	what do people in australia speak?	North America
+LABEL	1	what do people in czech republic speak?	Serbian language
+LABEL	0	what do people in jamaica speak?	DB Support
+LABEL	0	what do people speak in canada?	individuals
+LABEL	0	what do people speak in uk?	Spain
+LABEL	0	what do the symbols on the nevada flag mean?	a very few years
+LABEL	1	what do they speak in scotland?	Old English
+LABEL	1	what document did thomas jefferson wrote?	the Gospel
+LABEL	0	what does barbara bush do for work?	Cataloged instance
+LABEL	0	what does bentley mean?	Traffic collision
+LABEL	1	what does british colony mean?	Hong Kong
+LABEL	1	what does jamaican people speak?	Creole language
+LABEL	0	what does julian lennon do?	Compilation album
+LABEL	0	what does lauren conrad major in?	an actual intern
+LABEL	1	what does matt damon play in?	Bourne perfectly
+LABEL	1	what does monsanto own?	Terminator technology
+LABEL	0	what does ringo sing?	a dialogue
+LABEL	1	what does the missouri river bisect?	Jefferson city
+LABEL	0	what does wh smith stand for?	1959
+LABEL	0	what famous people are from barbados?	QUESTION
+LABEL	0	what films has daniel craig been in?	post-production
+LABEL	0	what form of government does australia use?	George Fletcher Moore
+LABEL	1	what form of government does the united states have?	Federal government of the United States
+LABEL	1	what form of government does the united states use?	State governments
+LABEL	0	what form of government is the uk?	President Robert Mugabe
+LABEL	0	what galileo galilei was famous for?	Philip Glass
+LABEL	1	what government does iraq use?	Proportional representation
+LABEL	0	what happened at benghazi?	It?s very
+LABEL	0	what happened to pope john paul ii?	Stuart Wurtzel
+LABEL	1	what has angelina jolie accomplished?	the UN
+LABEL	0	what has ashley greene been in?	fashion time-out
+LABEL	0	what has charlie hunnam been in?	English actor
+LABEL	0	what high school did lil wayne graduate from?	MTV
+LABEL	1	what high school did maya angelou go to?	St . Louis , Missouri ,
+LABEL	0	what highschool did r. kelly attend?	African American
+LABEL	0	what inspired michelangelo buonarroti?	Cataloged instance
+LABEL	0	what inspired steinbeck?	cannery row
+LABEL	0	what is arkansas state capitol?	Joyce Carol Oates
+LABEL	0	what is armenian currency?	American citizen
+LABEL	0	what is colorado technical university?	a high school diploma
+LABEL	0	what is kentucky state slogan?	Kentucky State Penitentiary, Eddyville
+LABEL	0	what is london uk time zone?	prominent member of the Subsea Oil and Gas Directory
+LABEL	1	what is michael kors best known for?	Karl Anderson, Jr.
+LABEL	0	what is my timezone in louisiana?	Mountain time
+LABEL	0	what is new france?	Renouveau fran?ais
+LABEL	1	what is new york city airport?	la_guardia_airport
+LABEL	1	what is newcastle metro?	american-style mall
+LABEL	0	what is newt gingrich's wife's name?	Jackie Gingrich Cushman
+LABEL	0	what is real name of santa claus?	Mikul?s szabads?gon
+LABEL	1	what is sir isaac newton theory?	color
+LABEL	0	what is the currency in egypt 2012?	event
+LABEL	1	what is the currency in turkey called?	the Lira
+LABEL	1	what is the currency of the czech republic?	The Czech koruna
+LABEL	1	what is the dominant language spoken in jamaica?	English
+LABEL	1	what is the government of france for 2010?	Unitary state
+LABEL	0	what is the holy book of the buddhist religion?	The Buddhist Experience
+LABEL	0	what is the language of russia s spoken?	U.S. Secretary
+LABEL	1	what is the main language spoken in mexico?	Otomi language
+LABEL	0	what is the main language used in china?	Sauraseni Prakrit
+LABEL	0	what is the milwaukee brewers stadium called?	stream
+LABEL	0	what is the most common language spoken in argentina?	Croatian language
+LABEL	1	what is the name of airport in new york?	Stewart International Airport
+LABEL	1	what is the name of the capital of belgium?	Brussels proper
+LABEL	1	what is the national language of iran?	Persian Farsi
+LABEL	0	what is the official language of brazil now?	Lithuanian language
+LABEL	0	what is the political system of south africa?	Palestinian citizens
+LABEL	1	what is the state flower of new mexico?	The yucca
+LABEL	0	what is the university of georgia known for?	Teaching
+LABEL	0	what is there to see in sydney australia?	Digital media
+LABEL	0	what is utah's state capitol?	OKLAHOMA FACTS Oklahoma City
+LABEL	0	what is warren g harding most known for?	Warren Harding
+LABEL	1	what is william taft famous for?	Baseball player
+LABEL	0	what killed john bonham?	Good Times Bad Times
+LABEL	0	what kind of disease does montel williams have?	well-known celebrity
+LABEL	0	what kind of equipment did isaac newton use?	an expanded theory
+LABEL	1	what kind of government does brazil has?	Brazilian Intelligence Agency
+LABEL	1	what kind of government does peru?	Unitary state
+LABEL	1	what kind of government does the united states have currently?	Federal government of the United States
+LABEL	0	what kind of government is sweden?	Swedish Tax Agency
+LABEL	0	what kind of government system did ancient egypt have?	African civilization
+LABEL	0	what kind of guitar john mayer?	great buy
+LABEL	1	what kind of language do they speak in iran?	Chinese language
+LABEL	0	what kind of language does egypt speak?	Silent film
+LABEL	0	what kind of monarchy does japan have?	Saudi Arabia
+LABEL	1	what kind of music did jimi hendrix play?	Roggue Doggz
+LABEL	1	what kind of products does nike sell?	shoe's
+LABEL	1	what language brazil speak?	Lithuanian language
+LABEL	1	what language did the sioux indians speak?	fluent Lakotah
+LABEL	1	what language do australia people speak?	Chinese language
+LABEL	0	what language do bosnian muslims speak?	Srebrenica
+LABEL	1	what language do maltese speak?	Afroasiatic languages
+LABEL	0	what language do most australians speak?	The Germans
+LABEL	1	what language do most italians speak?	Sardinian language
+LABEL	0	what language do people from greece speak?	international LWC
+LABEL	0	what language do people from thailand speak?	Massage
+LABEL	0	what language do people from the uk speak?	Cognitive Behavioral Therapy
+LABEL	1	what language do people speak in the netherlands?	Chinese language
+LABEL	0	what language do the cheyenne speak?	Silent film
+LABEL	1	what language do the maasai speak?	Nilotic languages
+LABEL	0	what language do ukrainian people speak?	the Canadian prairies
+LABEL	0	what language does australia use?	Reg research
+LABEL	1	what language does australians speak?	Serbian language
+LABEL	0	what language does colombia?	BP
+LABEL	0	what language does east timor speak?	English
+LABEL	0	what language does egyptian people speak?	Pinnacle House
+LABEL	1	what language does iceland speak?	Dutch Language
+LABEL	0	what language group does germany belong to?	France
+LABEL	1	what language is mainly spoken in egypt?	Egyptian Radio Arabic
+LABEL	1	what language is most commonly spoken in belgium?	Telugu language
+LABEL	1	what language is spoken in argentina?	Italian language
+LABEL	1	what language is spoken in greek?	Bactrian language
+LABEL	0	what language is spoken in haiti today?	Canadian
+LABEL	1	what language is spoken in switzerland?	The Germans
+LABEL	0	what languages do they speak in costa rica?	OWL Services
+LABEL	0	what made richard hammond famous?	Read More ? Jun 16
+LABEL	0	what money does cuba use?	the Internet
+LABEL	1	what movies did christopher plummer play in?	The Amateur
+LABEL	0	what movies did david carradine play in?	Endless highway
+LABEL	0	what movies did joan crawford play in?	Archival Collection
+LABEL	0	what movies did morgan freeman star in?	a slave
+LABEL	0	what movies did nick cannon star in?	Devon Miles
+LABEL	0	what movies did ron howard director?	a recent historical event
+LABEL	0	what movies does logan lerman play in?	George Hamilton
+LABEL	0	what movies does nick cannon play in?	Lil' Jon
+LABEL	0	what movies gerard butler has been in?	IMDb
+LABEL	0	what movies has carmen electra been in?	Amanda Holden
+LABEL	0	what movies has john williams score?	sync
+LABEL	0	what movies has liam hemsworth played in?	Katniss?s boyfriend
+LABEL	0	what movies has miley cyrus been in?	Capitol style
+LABEL	0	what movies has spike lee made?	a year
+LABEL	1	what movies is omar epps in?	You, Me & The Circus
+LABEL	1	what movies queen latifah is in?	Joyful Noise
+LABEL	0	what ocean is around hawaii?	dwarf sperm whale
+LABEL	1	what other books did charles dickens write?	Martin Chuzzlewit
+LABEL	0	what other movies has ryan gosling been in?	Movie
+LABEL	0	what places are in the west midlands?	Affordable housing
+LABEL	0	what political party was hitler in?	Germany other
+LABEL	0	what political system did spain have?	business
+LABEL	0	what produce does florida export?	Latin America
+LABEL	1	what products does the united states export?	foodstuff s
+LABEL	0	what rainforest is in south america?	Brazil
+LABEL	1	what record label is kelly clarkson signed with?	Starstruck Entertainment
+LABEL	0	what region is turkey considered?	Northern cyprus
+LABEL	0	what sarah dessen books are movies?	teen love story
+LABEL	0	what school did ben roethlisberger go to?	the Cleveland Browns
+LABEL	0	what school did michael jordan attend?	four-day, Las Vegas-based camp
+LABEL	0	what school did miley cyrus?	Clark County School District
+LABEL	0	what school did wilfred owen go to?	state school
+LABEL	0	what sport is popular in italy?	Keene Engineering
+LABEL	1	what sports do people play in poland?	Figure skating
+LABEL	0	what sri lanka capital?	An assessment of contraband trade and capital between India and Sri Lanka
+LABEL	0	what standard time is texas?	TRas
+LABEL	1	what state is washington d.c. located?	the District
+LABEL	1	what style of music does michael jackson perform?	Stevie wonder
+LABEL	0	what team did aguero play for?	11 goals
+LABEL	0	what team did drogba play for?	a prayer
+LABEL	1	what team did jeremy lin go to?	Harvard University
+LABEL	1	what team does colin kaepernick play for?	the 49ers
+LABEL	0	what team does heskey play for?	Forward
+LABEL	0	what team does jordan own?	pretty big deal
+LABEL	0	what team does josh hamilton play for?	Center fielder
+LABEL	1	what team is cristiano ronaldo play for?	Man United
+LABEL	0	what team is kris humphries play for?	Kim Kardashian
+LABEL	1	what team is raul ibanez on?	Seattle Mariners and San Diego Padres
+LABEL	1	what the time zone in japan?	New Guinea
+LABEL	1	what things did martin luther king do?	Peace activist
+LABEL	0	what time in hilo hawaii?	School's
+LABEL	0	what time zone is anaheim california?	Disneyland
+LABEL	0	what timezone is utah in?	Park City
+LABEL	0	what to do downtown sacramento?	Nearby attractions
+LABEL	0	what to visit in denver?	Mircea Vasaram
+LABEL	1	what type of books did agatha christie wrote?	Sleeping murder
+LABEL	0	what type of currency do they use in thailand?	Credit cards
+LABEL	0	what type of democracy is the united states?	Saudi Arabia
+LABEL	0	what type of drugs did whitney houston?	Terrible news
+LABEL	0	what type of government did mexico have?	Pemex
+LABEL	1	what type of government did soviet union have?	Soviet democracy
+LABEL	0	what type of government does iraq have now?	ICMP
+LABEL	0	what type of government does italy have 2011?	TAG
+LABEL	0	what type of government does the us follow?	the Canadian model
+LABEL	0	what type of government does usa follow?	Israel
+LABEL	0	what type of government japan have?	Organization founder
+LABEL	0	what type of government system does italy have?	Cataloged instance
+LABEL	0	what type of government was utilized in ancient egypt?	ASIAS
+LABEL	0	what type of money do they use in costa rica?	cell phone
+LABEL	1	what type of music did antonio vivaldi play?	Allegro Non Troppo
+LABEL	1	what type of music did claude debussy play?	Allegro Non Troppo
+LABEL	1	what type of music did mozart composed?	Haydn quartets
+LABEL	0	what type of music did vivaldi compose?	knock-knock jokes
+LABEL	1	what type of political system is brazil?	Liberal democracy
+LABEL	0	what type of religions are in the united states?	American democracy
+LABEL	0	what type of sports do japanese play?	a sticker
+LABEL	0	what types of art did andy warhol do?	John Cale
+LABEL	1	what was augustus caesar famous for?	an accurate numbering
+LABEL	0	what was dr seuss education?	La Jolla
+LABEL	0	what was dr seuss real name?	Dr. Seuss Memorial
+LABEL	0	what was dr seuss's real name?	Dr. Seuss Memorial
+LABEL	0	what was franklin d roosevelt's job before president?	Foreign relations
+LABEL	1	what was franklin pierce famous for?	PResident
+LABEL	0	what was gregor mendel contribution?	Johann Mendel
+LABEL	0	what was herbert hoover best known for?	Herbert Clark Hoover
+LABEL	0	what was hitler the leader of?	Hamburger University
+LABEL	0	what was james garfield most known for?	John Quincy Adams Ward
+LABEL	1	what was john tyler?	United States of America
+LABEL	0	what was lil wayne's first hit song?	?Single
+LABEL	0	what was lucille ball?	Southern cooking
+LABEL	1	what was napoleon bonaparte accomplishments?	math
+LABEL	0	what was pink floyd's first album?	The Division Bell
+LABEL	1	what was scottie pippen known for?	the Houston Rockets
+LABEL	0	what was shakespeare's wife called?	compelling, insightful book
+LABEL	1	what was the ancient egyptians spoken language?	demotic which
+LABEL	1	what was the book written by charles darwin?	Origin of the Species
+LABEL	1	what was the first book charles dickens wrote?	Christmas book
+LABEL	0	what was the first language spoken in spain?	Scottish Gaelic
+LABEL	0	what was the japanese war called?	a wave
+LABEL	0	what was the name of henry viii first wife?	Scotland
+LABEL	0	what was tycho brahe theory?	Impact crater
+LABEL	0	what was van halen first album?	Mini Best
+LABEL	0	what year did the seahawks win the superbowl?	Sunday
+LABEL	0	what year was george w bush elected?	Wednesday
+LABEL	0	when did annie open?	1982
+LABEL	0	when did bill clinton go to college?	140
+LABEL	0	when did conflict start in ireland?	the Church
+LABEL	0	when did gordon brown resigns?	Locks
+LABEL	0	when did mark mcgwire retired?	1999
+LABEL	0	when is nrl grand final day?	annual event
+LABEL	0	when is saint george day celebrated?	1987
+LABEL	1	when is st joseph birthday?	1914
+LABEL	0	when was abraham lincoln declared president?	slavery
+LABEL	0	where are the nato headquarters located?	Pristina
+LABEL	1	where are the texas rangers playing?	the World Series
+LABEL	0	where did aaron rodgers go to high school?	Milwaukee
+LABEL	1	where did alexander graham bell die?	Canada
+LABEL	0	where did anne frank go to school?	hiding
+LABEL	1	where did antoine lavoisier die?	the French Revolution
+LABEL	0	where did benjamin franklin went to school?	electricity
+LABEL	1	where did bristol palin go to school?	Wasilla
+LABEL	0	where did clay matthews go to school?	a beat
+LABEL	0	where did derek fisher go to college?	Friday
+LABEL	0	where did eleanor roosevelt die?	a nap
+LABEL	0	where did george michael go to school?	idea
+LABEL	1	where did hank marvin come from?	England
+LABEL	1	where did harper lee attend high school?	Monroeville
+LABEL	0	where did harry s truman go to school?	Mexico City
+LABEL	0	where did hugo chavez go to school?	Havana
+LABEL	0	where did john franklin live?	Texas
+LABEL	0	where did jrr tolkien go to school?	Middle-earth
+LABEL	1	where did kansas city royals come from?	the East Metro District
+LABEL	0	where did kim kardashian come from?	Australia
+LABEL	0	where did madonna grew up?	Israel
+LABEL	0	where did mario lopez go to school?	a dad
+LABEL	0	where did mary bell live?	Santa Rosa Mall
+LABEL	1	where did michelle obama graduated from?	Princeton
+LABEL	0	where did mitt romney's parents come from?	Lenore Romney
+LABEL	0	where did morgan freeman graduate?	Memphis
+LABEL	1	where did paula deen go to school?	Albany
+LABEL	0	where did robin williams get married?	sandwiches
+LABEL	1	where did scott fitzgerald go to college?	Princeton
+LABEL	1	where did tennessee williams go to college?	Missouri
+LABEL	0	where did the crimean war take place?	The Crimean War
+LABEL	1	where did the greek alphabet come from?	Greece
+LABEL	1	where did the mississippi river end?	Mississippi
+LABEL	0	where did theodor schwann study?	http://en.wikipedia.org/wiki/Theodor%20Schwann
+LABEL	0	where did they get the name stanley cup?	Ice Hockey
+LABEL	1	where did thomas hobbes live?	London
+LABEL	0	where did vince scully go to college?	School
+LABEL	0	where do john lennon die?	England
+LABEL	1	where do the appalachian mountains run through?	northeast Alabama
+LABEL	1	where do the appalachian mountains run?	Wetumpka
+LABEL	0	where do the chicago white sox play home games?	Mlb
+LABEL	0	where does bronx begin?	Italy
+LABEL	1	where does delaware river start?	Delaware County
+LABEL	0	where does greek language come from?	Canada
+LABEL	0	where does lil wayne go to school?	jail
+LABEL	0	where does michelle pfeiffer live now?	the Big Apple
+LABEL	0	where does name pennsylvania come from?	Holland
+LABEL	0	where does the columbia river start?	Bingen
+LABEL	0	where does the parana river flow?	interest
+LABEL	1	where does the shannon river start and end?	Ireland
+LABEL	0	where honduras in the world?	Mexico
+LABEL	0	where is arabic most spoken?	Spain
+LABEL	1	where is belgium germany?	Geraardsbergen
+LABEL	1	where is bob marley buried?	Jamaica
+LABEL	1	where is dwight howard now?	Orlando
+LABEL	1	where is giza pyramids located?	Egypt
+LABEL	0	where is jay leno from?	Europe
+LABEL	0	where is kansas city?	Fountains
+LABEL	0	where is mali located?	Egypt
+LABEL	0	where is mt st helens located?	Stanford
+LABEL	0	where is president kennedy buried?	Berlin
+LABEL	1	where is south portland?	Portland
+LABEL	1	where is the city wales?	Cardiff
+LABEL	1	where is the empire of ghana?	Africa
+LABEL	0	where is the latin language from?	Scotland
+LABEL	1	where is the ufc headquarters?	Nevada
+LABEL	1	where is tunis on a map?	Arkansas
+LABEL	1	where is tupac from originally?	United States of America
+LABEL	0	where is walton indiana?	Lorna
+LABEL	0	where obama went to school?	Brazil
+LABEL	1	where the missouri river ends?	Northeastern Wyoming
+LABEL	0	where was benjamin franklin educated?	Chicago
+LABEL	0	where was farrah fawcett buried?	neighborhood fixture
+LABEL	1	where was rihanna born and raised?	Barbados
+LABEL	0	where was rihanna raised?	Hawaii
+LABEL	0	where was teddy roosevelt's house?	Kansas
+LABEL	0	where was the boston tea party 1773?	Topical Terms Concept Scheme
+LABEL	0	where was the first gulf war fought?	Vietnam
+LABEL	0	where were the seneca indians located?	Devil
+LABEL	0	where will tebow go in 2013?	Congress
+LABEL	0	which continents were part of the roman empire?	a part
+LABEL	1	which countries speak german officially?	South Africa
+LABEL	1	which countries speak germanic languages?	England
+LABEL	0	which country did nike originate from?	Canada's
+LABEL	0	which country invented nike?	Bill Bowerman
+LABEL	1	which country was michael jackson born?	United Kingdom
+LABEL	1	which country won the crimean war?	Great Britain
+LABEL	0	who are the colorado representatives?	Marin Alsop
+LABEL	1	who created arthur?	Charles Dickens
+LABEL	0	who designed national flag of italy?	Frederick Brownell
+LABEL	1	who did annie oakley married?	frank butler
+LABEL	0	who did ben stiller date?	show business
+LABEL	1	who did benjamin franklin get married to?	Barshaba Kelly
+LABEL	0	who did carlos boozer play for?	Carlos Boozer
+LABEL	1	who did kimberly williams marry?	William Huckleberry Paisley
+LABEL	0	who did kurt warner play 4?	tackle football
+LABEL	0	who did lbj marry?	black people
+LABEL	0	who did morgan freeman marry?	Denzel Washington
+LABEL	1	who did richard nixon run against?	Hubert Humphrey
+LABEL	0	who did roger federer married?	Lynette Federer
+LABEL	1	who did scarlett johansson date?	Sean Penn
+LABEL	0	who did shaq first play for?	Penny Hardaway
+LABEL	1	who did tom landry play for?	the Giants
+LABEL	1	who did veronica lake mary?	De Toth
+LABEL	1	who did william shakespeare marry?	older woman
+LABEL	1	who does david beckham play for?	Manchester United
+LABEL	1	who does jeremy lin play for?	the Mavericks
+LABEL	0	who does jordan palmer play for?	Fitzpatrick or Rowe
+LABEL	0	who does myles kennedy sing for?	every track
+LABEL	0	who does owen schmitt play for?	Running back
+LABEL	0	who does peter griffin voice?	Ronald Mcdonald
+LABEL	0	who fought in the battle of vicksburg?	Blair County
+LABEL	0	who founded the kkk?	poll taxes
+LABEL	0	who inspired obama?	Nancy Pelosi
+LABEL	0	who is governor of ohio 2011?	Charles Foster
+LABEL	0	who is in charge of libya now?	North Africa
+LABEL	1	who is in paul ryan's family?	James Stenbeck
+LABEL	1	who is jake gyllenhaal married to?	reese witherspoon
+LABEL	1	who is james madison and what did he do?	Religious Freedom
+LABEL	0	who is john cena married to?	A kid
+LABEL	0	who is louisiana state senator?	Kathleen Blanco
+LABEL	1	who is on the board of facebook?	Andreessen
+LABEL	1	who is president of israel?	Chaim Weizmann
+LABEL	1	who is ruling libya?	Muammar Gaddafi
+LABEL	1	who is sir james dyson?	successful entrepreneur
+LABEL	0	who is the coach for the new york knicks?	United States
+LABEL	0	who is the current governor of arizona 2010?	a disappointment
+LABEL	0	who is the current ohio state senator?	Clinical Law Marianna
+LABEL	0	who is the governor of arizona 2009?	FIFE SYMINGTON III
+LABEL	0	who is the governor of pennsylvania state now?	Jim
+LABEL	0	who is the leader of north korea today?	Kim Il-sung
+LABEL	0	who is the miami dolphins quarterback?	Tony Sparano
+LABEL	0	who is the mother of prince michael jackson?	great artist
+LABEL	0	who is the newly elected governor of california?	George Deukmejian
+LABEL	0	who is the prime minister of spain 2011?	bonus money
+LABEL	1	who is the texas state senator?	Brian Birdwell
+LABEL	0	who is vancouver canucks coach?	Trevor Linden
+LABEL	0	who made the laws in canada?	personal information
+LABEL	1	who or what influenced albert einstein?	Thomas Young
+LABEL	0	who owns google 2012?	Navigon iOS apps
+LABEL	1	who played jeannie?	Molly Shannon
+LABEL	1	who played kirk?	Zachary Quinto
+LABEL	0	who played on the jeffersons?	Horace Gregory
+LABEL	0	who plays anakin skywalker in star wars 1?	Matt
+LABEL	0	who plays billy elliot?	Billy Elliot
+LABEL	1	who plays harley quinn?	Maria Rydberg
+LABEL	1	who plays john connor?	Thomas Dekker
+LABEL	0	who plays kenneth?	bass synthesizer
+LABEL	0	who plays simon birch?	David Chapman
+LABEL	0	who ruled after king henry viii died?	Leicester Abbey
+LABEL	0	who rules denmark right now?	thoughtful, thorough piece
+LABEL	0	who was anakin skywalker?	Star Wars
+LABEL	0	who was demi lovato dating?	Vladimir Gutierrez
+LABEL	0	who was in the israeli palestinian conflict?	any shows
+LABEL	0	who was john f kennedy's family?	Ultimate Sacrifice
+LABEL	1	who was married to jane wyman?	Ronald Reagan
+LABEL	0	who was president after franklin d. roosevelt?	John Nance Garner
+LABEL	0	who was richard nixon married to?	David Frost
+LABEL	0	who was the artist of mickey mouse?	Mickey Mouse
+LABEL	0	who was the first governor of colonial south carolina?	Alexander Moore
+LABEL	0	who was the italian leader in ww1?	fashion leader
+LABEL	0	who was the leader of the us during wwii?	South America
+LABEL	1	who was wesley snipes?	Superhero Actor
+LABEL	0	who were jesus siblings?	Central Corporation
+LABEL	0	who were wright brothers?	Morris Claiborne
