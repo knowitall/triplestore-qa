@@ -1,16 +1,22 @@
 package edu.knowitall.eval
 
 
-class LabelGenerator(oracle: Oracle, output: SystemOutput) {
+class LabelGenerator(oracle: Oracle, outputs: List[SystemOutput]) {
+  
+  def inputs = outputs.flatMap(_.inputs).distinct
+  
+  def topOutputs(input: String) = outputs.flatMap(_.topOutputFor(input)).distinct
+  
+  def inputOutputs = outputs.flatMap(_.inputOutputs).distinct
   
   def generateTopLabelFile = {
-    for (i <- output.inputs; o <- output.topOutputFor(i); if !oracle.hasLabel(i, o)) {
+    for (i <- inputs; o <- topOutputs(i); if !oracle.hasLabel(i, o)) {
       printLabel(i, o)
     } 
   }
   
   def generateLabelFile = {
-    for ((i, o) <- output.inputOutputs; if !oracle.hasLabel(i, o)) {
+    for ((i, o) <- inputOutputs; if !oracle.hasLabel(i, o)) {
       printLabel(i, o)
     }
   }
@@ -24,10 +30,10 @@ class LabelGenerator(oracle: Oracle, output: SystemOutput) {
 object LabelGenerator extends App {
   val mode = args(0)
   val labelsPath = args(1)
-  val outputPath = args(2)
+  val outputPaths = args.slice(2, args.size).toList
   val oracle = new FileOracle(labelsPath)
-  val output = SystemOutput.fromPath(outputPath)
-  val labeler = new LabelGenerator(oracle, output)
+  val outputs = outputPaths map SystemOutput.fromPath
+  val labeler = new LabelGenerator(oracle, outputs)
   mode match {
     case "top" => labeler.generateTopLabelFile
     case "all" => labeler.generateLabelFile
