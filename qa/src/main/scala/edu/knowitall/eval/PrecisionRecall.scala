@@ -42,18 +42,21 @@ object PrecisionRecall extends App {
   val mode = args(0)
   val inputsPath = args(1)
   val labelsPath = args(2)
-  val outputPath = args(3)
+  val outputPaths = args.slice(3, args.size).toList
   
   val conf = ConfigFactory.load()
   val inputs = Source.fromFile(inputsPath, "UTF8").getLines.toList
   val oracle = new FileOracle(labelsPath)
-  val output = SystemOutput.fromPath(outputPath)
-  val writer = new PrintWriter(new File(outputPath, conf.getString("eval.pr.file") + s"-$mode.txt"))
-  mode match {
-    case "top" => computeTopPr(writer, inputs, oracle, output)
-    case "all" => computePr(writer, inputs, oracle, output)
+  
+  for (outputPath <- outputPaths) {
+    val output = SystemOutput.fromPath(outputPath)
+    val writer = new PrintWriter(new File(outputPath, conf.getString("eval.pr.file") + s"-$mode.txt"))
+    mode match {
+      case "top" => computeTopPr(writer, inputs, oracle, output)
+      case "all" => computePr(writer, inputs, oracle, output)
+    }
+    writer.close()
   }
-  writer.close()
   
 
 }
