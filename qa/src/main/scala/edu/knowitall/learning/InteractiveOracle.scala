@@ -20,17 +20,21 @@ class InteractiveOracle extends CorrectnessModel[String, Derivation] {
     }
   
   private def derivString(deriv: Derivation) = { 
-    val queries = deriv.steps.map(_.fromState) collect { case qs: QueryState =>
-      qs.toString
-    }
-    queries.toList match {
-      case q :: Nil => q
-      case _ => "no query"
-    }
+    deriv.toString
   }
     
   private def derivsToTable(derivs: Seq[Derivation]) = {
-    val paired = derivs.zipWithIndex map { case (a, b) => List(b, a.answer, derivString(a)) }
+    val paired = derivs.zipWithIndex flatMap { case (a, b) =>
+      val sd = derivString(a).split("->").toList.reverse
+      val triples = sd.map((b, a.answer, _)).zipWithIndex map { case ((c, d, e), f) =>
+        if (f == 0) {
+          List(c, d, e)
+        } else {
+          List("", "", e)
+        }
+      }
+      triples :+ List("", "", "")
+    }
     toTable(List("#", "answer", "evidence") +: paired)
   }
   

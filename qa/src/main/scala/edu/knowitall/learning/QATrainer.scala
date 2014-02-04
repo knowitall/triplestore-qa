@@ -38,6 +38,7 @@ class QaTrainer(model: QaModel, oracle: CorrectnessModel[String, Derivation]) ex
   
   def learnIter(question: String) = {
     try {
+      logger.info(s"Question $iter = $question")
       perceptron.learnIter(question)
       iter += 1
       numExamples += 1
