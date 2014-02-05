@@ -46,6 +46,12 @@ case object WikiAnswersDoc {
     }
   }
   
+  val catPat = """<span typeof="v:Breadcrumb"><a title="([^"]*)" property="v:title" rel="v:url" href="[^"]*">[^<]*</a></span>""".r
+  def getCategories(doc: WikiAnswersDoc): List[String] = {
+    val strs = catPat.findAllMatchIn(doc.content).map(_.group(1)).toList
+    strs filterNot(x => x == "Answers.com" || x == "Wiki Answers" || x == "Categories")
+  }
+  
   val alternatePat = "10px;'>([^&<>]+)\\s+&nbsp;|&nbsp;\\s+<A HREF".r
   def getAlternates(doc: WikiAnswersDoc): Iterable[QuestionPair] = {
     val qs = alternatePat.findAllIn(doc.content).flatMap { 
