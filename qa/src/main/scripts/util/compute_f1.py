@@ -8,8 +8,9 @@ def get_f1s(d):
         if r > 1e-8 and p > 1e-8:
             yield f1(p,r)
 if __name__ == '__main__':
-    d = sys.argv[1]
-    f1 = list(f1 for f1 in get_f1s(d))[-1]
-    output = open(d+'/f1-top.txt', 'w')
-    print >>output, f1
-    output.close()
+    ds = sys.argv[1:]
+    for d in ds:
+        f1 = list(f1 for f1 in get_f1s(d))[-1]
+        output = open(d+'/f1-top.txt', 'w')
+        print >>output, f1
+        output.close()
