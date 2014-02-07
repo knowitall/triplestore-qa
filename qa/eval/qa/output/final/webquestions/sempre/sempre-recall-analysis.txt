@@ -1,0 +1,187 @@
+0	what are some major events in venezuela?	Venezuelan War of Independence
+0	what are the important holidays of islam?	Eid al-Adha
+0	what are the landlocked countries in latin america?	El Salvador
+0	what are the names of michael jackson's 3 children?	Prince Michael Jackson II
+0	what are the sights to see in madrid?	Museo del Prado
+0	what awards did marilyn monroe won?	Playboy Playmate
+0	what band was george clinton in?	The Parliaments
+0	what battles did stonewall jackson fight in?	Battle of Cedar Mountain
+0	what countries do the united nations help?	United States of America
+0	what countries does greece share borders with?	Republic of Macedonia
+0	what countries have territories in oceania?	Marshall Islands
+0	what countries included in oceania?	Marshall Islands
+0	what country is nicki minaj from?	United States of America
+0	what did dmitri mendeleev discover in 1869?	Periodic Table
+0	what did thomas edison do for the world?	Incandescent light bulb
+0	what disease does robin roberts have?	Breast cancer
+0	what drugs lindsay lohan abuse?	Alcoholic beverage
+0	what guitar does corey taylor play?	Bass guitar
+0	what high school did maya angelou go to?	George Washington High School
+0	what is ella fitzgerald parents name?	William Fitzgerald
+0	what is the name of the san francisco newspaper?	San Francisco Daily
+0	what kind of cancer did carl wilson have?	Lung cancer
+0	what kind of leukemia did jill clayburgh have?	B-cell chronic lymphocytic leukemia
+0	what kind of music did jimi hendrix play?	Rock music
+0	what league are the indianapolis colts in?	AFC South
+0	what songs do zac brown band sing?	Knee Deep
+0	what songs does smokey robinson sing?	My Guy
+0	what style of music does john mayer play?	Rock music
+0	what style of music does michael jackson perform?	Rock music
+0	what team did jackie robinson?	UCLA Bruins football
+0	what to see in toronto top 10?	Toronto Eaton Centre
+0	what to visit in denver?	Westin Westminster
+0	what was jesse owens education?	East Technical High School
+0	what was nikola tesla inventions?	Induction motor
+0	what year was lebron james rookie season?	2003?04 NBA season
+0	where did anne frank go to school?	Montessori Lyceum Amsterdam
+0	where did benjamin franklin work?	James Franklin Printing Shop
+0	where did mitt romney's parents come from?	Bloomfield Hills
+0	where does airtran airways fly?	Hartsfield Jackson Atlanta International Airport
+0	where is denmark south carolina?	United States of America
+0	where is mission san buenaventura located?	Ventura County
+0	where is the university of maryland medical school?	United States of America
+0	where to visit in paris with children?	Disneyland Park
+0	where was david berkowitz arrested?	New York City
+0	where was rihanna born and raised?	Saint Michael Parish
+0	which state did anne hutchinson found?	Rhode Island
+0	who are the senators of hawaii 2012?	Brian Schatz
+0	who did cam newton sign with?	Florida Gators football
+0	who does lee clark manager?	Birmingham City F.C.
+0	who does myles kennedy sing for?	Myles Kennedy and The Conspirators
+0	who influenced samuel taylor coleridge?	Ralph Waldo Emerson
+0	who is eli whitney and what did he invent?	Cotton gin
+0	who is judy garland father?	Francis Avent Gumm
+0	who is my state senator arizona?	Barry Goldwater
+0	who is robin roberts father?	Lawrence E. Roberts
+0	who is the king of cambodia now?	Hun Sen
+0	who was president after franklin d. roosevelt?	Harry S. Truman
+0	who was the father of king george vi?	George V
+0	who was the first dictator of the soviet union?	Joseph Stalin
+0	who was the leader of soviet union during wwii?	Joseph Stalin
+0	who was the prime minister of pakistan in 1999?	Nawaz Sharif
+0	who won the governor election in texas?	Elisha M. Pease
+0	who won utah attorney general?	John Swallow
+actin	what else has jennifer lawrence played in?	The Burning Plain
+actin	what films has scarlett johansson been in?	Home Alone 3
+actin	what has ian somerhalder acted in?	National Lampoon's TV: The Movie
+actin	what has kristen stewart acted in?	The Thirteenth Year
+actin	what has shannen doherty played in?	Friends 'Til the End
+actin	what movies did christopher plummer play in?	The Last Station
+actin	what movies did morgan freeman star in?	Driving Miss Daisy
+actin	what movies does matt dallas play in?	In Between Days
+actin	what movies has carmen electra been in?	Starsky & Hutch
+actin	what movies queen latifah is in?	Ice Age: The Meltdown
+actin	what other movies has ryan gosling been in?	Half Nelson
+actin	what tv series did mark harmon star in?	Reasonable Doubts
+airportnear	what is the name of airport in new york?	New York Skyports Inc. Seaplane Base
+airportnear	which airport to fly into rome?	Leonardo da Vinci?Fiumicino Airport
+college	what college did albert einstein go to?	ETH Zurich
+college	what college did jrr tolkien go to?	University of Oxford
+college	what college did martin luther king jr go to?	Crozer Theological Seminary
+college	what college did sir isaac newton go to?	Trinity College, Cambridge
+college	what colleges did harper lee attend?	University of Oxford
+college	what colleges did mitt romney attend?	Harvard University
+college	what school did douglas macarthur go to?	United States Military Academy
+college	what university did romney graduated from?	Brigham Young University
+college	where did clay matthews go to school?	University of Southern California
+college	where did derek fisher go to college?	University of Arkansas
+college	where did drew brees go to college wikianswers?	Stanford Graduate School of Business
+college	where did kevin love go to college?	Lake Oswego High School
+college	where did romney graduated college?	Brigham Young University
+college	where did william morris go to college?	University of Oxford
+college	which university did michael bay graduated from?	Art Center College of Design
+govtype	under what political system does the united states government operate?	Federal republic
+govtype	what form of government does australia use?	Parliamentary system
+govtype	what form of government does north korea have?	Family dictatorship
+govtype	what is the government system of malaysia?	Parliamentary system
+govtype	what kind government does egypt have?	Unitary state
+govtype	what kind of government did the united states have after the revolution?	Federal republic
+govtype	what kind of government is egypt?	Unitary state
+govtype	what kind of government is sweden?	Unitary state
+govtype	what sort of government does nigeria have?	Federal republic
+govtype	what system of government is practiced in nigeria?	Federal republic
+govtype	what type of economy exists in china?	Communist state
+govtype	what type of government did mexico have?	Federal republic
+govtype	what type of government did soviet union have?	Communist state
+govtype	what type of government does australia have?	Parliamentary system
+govtype	what type of government does germany have now?	Parliamentary republic
+govtype	what type of government does iraq have now?	Parliamentary system
+govtype	what type of government does italy have 2011?	Parliamentary republic
+govtype	what type of government does russia have 2010?	Semi-presidential system
+govtype	what type of government system does italy have?	Parliamentary republic
+govtype	what type of government was formed when italy unified?	Parliamentary republic
+langofcountry	what countries have english as their official language?	United Kingdom
+langofcountry	what countries have german as the official language?	South Africa
+langofcountry	what is the dominant language spoken in jamaica?	Jamaican Creole English Language
+langofcountry	what is the language of russia s spoken?	Russian Language
+langofcountry	what is the main language spoken in mexico?	Spanish Language
+langofcountry	what kind of language do they speak in iran?	Persian Language
+langofcountry	what kind of language does colombia speak?	Spanish Language
+langofcountry	what kind of language does france speak?	French Language
+langofcountry	what language brazil speak?	Portuguese Language
+langofcountry	what language do british speak?	English Language
+langofcountry	what language do colombian people speak?	Spanish Language
+langofcountry	what language do most people speak in afghanistan?	Farsi, Eastern Language
+langofcountry	what language do people from thailand speak?	Thai Language
+langofcountry	what language do people speak in the netherlands?	Dutch Language
+langofcountry	what language do the russian speak?	Russian Language
+langofcountry	what language do they speak in sweden yahoo?	Swedish Language
+langofcountry	what language does australia use?	English Language
+langofcountry	what language does colombia?	Spanish Language
+langofcountry	what language group does germany belong to?	German Language
+langofcountry	what language is spoken in argentina?	Spanish Language
+langofcountry	what language is spoken in greek?	Greek Language
+langofcountry	what languages are there in japan?	English Language
+langofcountry	what russian language called?	Russian Language
+langofcountry	what was the ancient egyptians spoken language?	Coptic Language
+langofcountry	where are people who speak arabic from?	Saudi Arabia
+langofcountry	where do they speak german?	Nazi Germany
+langofcountry	where english is spoken?	United Kingdom
+langofcountry	where is arabic most spoken?	South Africa
+langofcountry	which countries speak german officially?	Nazi Germany
+marry	who did kim richards marry?	John Jackson
+marry	who did reese witherspoon get married to?	Ryan Phillippe
+marry	who is nick lachey married to?	Jessica Simpson
+marry	who is shakira married to?	Gerard Piqu?
+playforteam	what club does cristiano ronaldo play for in 2010?	Portugal national football team
+playforteam	what national team does cristiano ronaldo play for?	Portugal national football team
+playforteam	what team did messi play for in 2010?	FC Barcelona C
+playforteam	what team does colin kaepernick play for?	San Francisco 49ers
+playforteam	what team does cristiano ronaldo play for 2011?	Portugal national football team
+playforteam	what team does heskey play for?	Wigan Athletic F.C.
+playforteam	what team is cristiano ronaldo play for?	Portugal national football team
+playforteam	what team will michael vick play for in 2011?	Philadelphia Eagles
+playforteam	who did cristiano ronaldo play for in 2010?	Portugal national football team
+playforteam	who does jeremy lin play for?	Houston Rockets
+playforteam	who does jordan palmer play for?	Arizona Rattlers
+playforteam	who does nolan ryan play for?	New York Mets
+playforteam	who does peyton manning play football for?	Indianapolis Colts
+playforteam	who does ronaldinho play for now 2011?	Brazil national football team
+playforteam	who is lamar odom playing for this year?	Los Angeles Clippers
+playrole	who has played lex luthor?	Clancy Brown
+playrole	who is princess leia in star wars?	Carrie Fisher
+playrole	who played on the jeffersons?	Paul Benedict
+playrole	who plays captain kirk in star trek?	Jimmy Bennett
+playrole	who plays the voice of brian on family guy?	Seth MacFarlane
+timezone	what time is it in texas houston right now?	Central Time Zone
+timezone	what time zone is in the bahamas?	Eastern Time Zone
+timezone	what time zone is pennsylvania in right now?	Eastern Time Zone
+timezone	what timezone is sweden?	Central European Time
+timezone	what timezone is tucson arizona in right now?	Mountain Time Zone
+timezone	what timezone is utah in?	Mountain Time Zone
+winchamp	when did celtics win the championship?	1984 NBA Finals
+winchamp	when did juventus win the champions league?	1996 UEFA Champions League Final
+winchamp	when is the last time the denver broncos won the superbowl?	Super Bowl XXXIII
+winchamp	when is the last time the giants won the world series?	2010 World Series
+winchamp	when is the last time the ravens won a superbowl?	Super Bowl XLVII
+winchamp	when was the last time the dallas cowboys won the superbowl?	Super Bowl XXVII
+winchamp	when's the last time the steelers won the superbowl?	Super Bowl XIII
+write	what book did tupac write?	The rose that grew from concrete
+write	what books are written by suzanne collins?	The Hunger Games
+write	what books did ernest hemingway write?	A Moveable Feast
+write	what did john irving wrote?	Simon Birch
+write	what did laura ingalls wilder wrote?	Little Town on the Prairie
+write	what document did thomas jefferson wrote?	The Works of Thomas Jefferson
+write	what other books did louis sachar write?	Sideways Arithmetic From Wayside School
+write	what was the book written by charles darwin?	The Correspondence of Charles Darwin, Volume 1: 1821-1836
+write	which dawkins book to read first?	River out of Eden
