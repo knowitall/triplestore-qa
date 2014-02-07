@@ -1,0 +1,45 @@
+#!/home/afader/local/bin/python
+#import pylab
+import matplotlib
+import numpy as np
+matplotlib.use('Agg')
+
+import matplotlib.pyplot as plt
+from sys import argv
+import getopt
+
+if __name__ == '__main__':
+
+    optlist,args = getopt.getopt(argv[1:], 'o:t:y:l:')
+    opts = dict(optlist)
+    
+    title = opts.get('-t', '')
+    outfile = opts.get('-o', None)
+    ylim = opts.get('-y', None)
+    ylabel = opts.get('-l', '')
+
+    points = map(lambda x: float(open(x).read()), args[0::2])
+    names = args[1::2]
+
+    N = len(points)
+    ind = np.arange(N) / float(N)
+    width = 0.1
+    spacing = (1 - .1 * N) / (N + 1)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    rects = ax.bar(ind + spacing, points, width)
+    ax.set_xticks(ind+spacing+width/2)
+    ax.set_xticklabels(names)
+
+    plt.xlim(0,1+spacing)
+    if ylim is not None:
+        plt.ylim(0, float(ylim))
+
+    plt.title(title)
+    plt.ylabel(ylabel)
+    if outfile:
+        plt.draw()
+        plt.savefig(outfile)
+    else:
+        plt.show()
