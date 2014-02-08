@@ -9,6 +9,8 @@ title = 'Change in F1 when components are removed (relative to full system)'
 good = 'blue'
 bad = 'red'
 maxval = 70
+width_in = 7
+height_in = 1.75
 
 data_dir = 'eval/qa/output/final'
 cols = ['webquestions', 'trec', 'wikianswers']
@@ -62,19 +64,17 @@ for row in rows:
     vals = [data[row][col] for col in cols]
     print '%s\t%s' % (row, '\t'.join(str(x) for x in vals))
 
-fig = plt.figure(figsize=(7, 2.5))
+fig = plt.figure(figsize=(width_in, height_in))
 
 rows.reverse()
 for (i, col) in enumerate(cols):
     ax = fig.add_subplot(1, 3, i+1)
     cname = col_names[col]
-    #ax.text(.5, 1, cname, horizontalalignment='center', transform=ax.transAxes)
     ax.set_title(cname, fontsize=9, y=1.0)
-    #ax.set_xlabel('Relative Change in F1')
     pos = arange(len(rows))
     val = [data[row][col] for row in rows]
     colors = [good if data[row][col] < 0 else bad for row in rows]
-    ax.barh(pos, val, align='center', height=0.5, color=colors, lw=0)
+    ax.barh(pos, val, align='center', height=0.8, color=colors, lw=0)
     ax.set_yticks(pos)
     ax.spines['top'].set_visible(False)
     ax.spines['left'].set_visible(False)
@@ -87,12 +87,13 @@ for (i, col) in enumerate(cols):
         ax.set_yticklabels([row_names[r] for r in rows])
     else:
         ax.set_yticklabels(['' for r in rows])
-    ax.axvline(0, ymin=0, ymax=.9, color='k', lw=0.5)
+    ax.axvline(0, ymin=0, ymax=.95, color='k', lw=0.5)
     ax.set_xlim((-maxval, maxval))
     ax.xaxis.set_ticks([-maxval, 0, maxval])
     ax.xaxis.set_ticklabels(['-%s\\%%' % maxval, '0\\%%', '+%s\\%%' % maxval])
 
 title_text = '{\\bf ' + title + '}'
-fig.text(0.55, 0.0, title_text, horizontalalignment='center')
+fig.text(0.55, 0.05, title_text, horizontalalignment='center')
 fig.tight_layout()
+fig.subplots_adjust(bottom=0.2)
 plt.savefig(output_file)
