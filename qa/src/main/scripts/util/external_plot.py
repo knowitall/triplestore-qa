@@ -4,7 +4,7 @@ import matplotlib
 from numpy import arange
 import matplotlib.pyplot as plt
 
-output_file = 'external.png'
+output_file = 'external.pdf'
 title = 'Comparision to external systems'
 maxval = 70
 width_in = 7
@@ -27,12 +27,12 @@ label_position = {
     'system-full': {
         'webquestions': (.28, .39),
         'trec': (.24, .45),
-        'wikianswers': (0.04, .35),
+        'wikianswers': (0.052, .20),
     },
     'paralex': {
         'webquestions': (0.16, .25),
         'trec': (0.09, .25),
-        'wikianswers': (.024, .10),
+        'wikianswers': (.027, .13),
     },
     'sempre': {
         'webquestions': (0.35, .57),
@@ -53,7 +53,7 @@ system_linestyles = {
 dataset_recalls = {
     'webquestions': [0, 10, 20, 30, 40],
     'trec': [0, 10, 20, 30],
-    'wikianswers': [0, 1, 2, 3, 4, 5]
+    'wikianswers': [0, 2, 4, 6]
 }
 
 
@@ -71,7 +71,7 @@ def read_data(dataset, system):
         r, p = [float(x) for x in line.strip().split()]
         rs.append(r)
         ps.append(p)
-    return rs, ps
+    return rs[10:], ps[10:]
 
 data = defaultdict(dict)
 for system in systems:
