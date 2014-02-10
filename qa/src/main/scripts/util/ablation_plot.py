@@ -6,16 +6,28 @@ import matplotlib.pyplot as plt
 
 output_file = 'ablation.pdf'
 title = 'F1 when components are removed (relative to full system)'
-good = 'blue'
-bad = '#FE4D4D'
+good = '#6CA0DC'
+bad = 'red'
 maxval = 70
 width_in = 7
-height_in = 2
+height_in = 2.5
 
 data_dir = 'eval/qa/output/final'
 cols = ['webquestions', 'trec', 'wikianswers']
-rows = ['noopenie', 'nofreebase', 'noprobase', 'nonell', 'noparaphrases',
-    'noqueryrewrites', 'maxconj1', 'defaultweights']
+rows = [
+    'title1',
+    'noopenie', 
+    'nofreebase', 
+    'noprobase', 
+    'nonell', 
+    '',
+    'title2',
+    'defaultweights',
+    'noparaphrases',
+    'maxconj1', 
+    'noqueryrewrites', 
+    '',
+]
 row_names = {
     'noopenie': 'Open IE',
     'nofreebase': 'Freebase',
@@ -23,8 +35,11 @@ row_names = {
     'nonell': 'NELL',
     'noparaphrases': 'Paraphrases',
     'noqueryrewrites': 'Query Rewrites',
-    'defaultweights': 'Weight Learning',
-    'maxconj1': 'Join Queries',
+    'defaultweights': r'Weight Learning',
+    'maxconj1': 'Parser Patterns with Joins',
+    '': '',
+    'title1': r'\underline{\bf Ablated Knowledge Base}',
+    'title2': r'\underline{\bf Ablated Model Component}'
 }
 col_names = {
     'webquestions': 'WebQuestions',
@@ -74,11 +89,11 @@ for (i, col) in enumerate(cols):
     cname = col_names[col]
     ax.set_title(cname, fontsize=9, y=1.0)
     pos = arange(len(rows))
-    pos = [ x + (1.0 if k > 3 else 0) for (k,x) in enumerate(pos) ]
+#    pos = [ x + (1.0 if k > 3 else 0) for (k,x) in enumerate(pos) ]
     print pos
     val = [data[row][col] for row in rows]
     colors = [good if data[row][col] < 0 else bad for row in rows]
-    ax.barh(pos, val, align='center', height=0.5, color=colors, lw=0)
+    ax.barh(pos, val, align='center', height=.75, color=colors, lw=0)
     ax.set_yticks(pos)
     ax.spines['top'].set_visible(False)
     ax.spines['left'].set_visible(False)
@@ -92,7 +107,7 @@ for (i, col) in enumerate(cols):
         ax.set_yticklabels([row_names[r] for r in rows])
     else:
         ax.set_yticklabels(['' for r in rows])
-    ax.axvline(0, ymin=0, ymax=.95, color='k', lw=0.5)
+    ax.axvline(0, ymin=0, ymax=.90, color='k', lw=0.5)
     maxval = max(abs(v) for v in val)
     ax.set_xlim((-maxval, maxval))
     ax.set_xlabel('F1')
