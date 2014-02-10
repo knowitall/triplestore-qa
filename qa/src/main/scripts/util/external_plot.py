@@ -4,7 +4,7 @@ import matplotlib
 from numpy import arange
 import matplotlib.pyplot as plt
 
-output_file = 'external.pdf'
+output_file = 'external.png'
 title = 'Comparision to external systems'
 maxval = 70
 width_in = 7
@@ -26,24 +26,29 @@ dataset_names = {
 label_position = {
     'system-full': {
         'webquestions': (.28, .39),
-        'trec': (.21, .45),
+        'trec': (.24, .45),
         'wikianswers': (0.04, .35),
     },
     'paralex': {
         'webquestions': (0.16, .25),
         'trec': (0.09, .25),
-        'wikianswers': (1, .5),
+        'wikianswers': (.024, .10),
     },
     'sempre': {
-        'webquestions': (0.28, .8),
+        'webquestions': (0.35, .57),
         'trec': (0.07, .15),
-        'wikianswers': (0.015, .1),
+        'wikianswers': (0.011, .05),
     }
 }
 system_colors = {
     'system-full': 'blue',
-    'sempre': 'green',
-    'paralex': 'red',
+    'sempre': 'red',
+    'paralex': 'green',
+}
+system_linestyles = {
+    'system-full': '-',
+    'sempre': '-',
+    'paralex': '-'
 }
 dataset_recalls = {
     'webquestions': [0, 10, 20, 30, 40],
@@ -95,20 +100,14 @@ for (i, dataset) in enumerate(datasets):
     for system in systems:
         r, p = data[dataset][system]
         all_rs.extend(r)
-        line = ax.plot(r, p, lw=1)
+        line = ax.plot(r, p, lw=1, color=system_colors[system], linestyle=system_linestyles[system])
         lines.extend(line)
         lx, ly = label_position[system][dataset]
-        ax.text(lx, ly, system_names[system], fontsize=8)
+        ax.text(lx, ly, system_names[system],  fontsize=8, color=system_colors[system])
 
     ax.set_ylim(0, 1)
 
-#    round_to = 5
-#   num_ticks = 3
-#   max_r_rounded = int(round_to * round(100 * max(all_rs) / round_to) )
-#   incr = max_r_rounded / num_ticks
-#   rvals = [float(incr*i)/100.0 for i in range(0, num_ticks + 1)]
     ax.xaxis.set_ticks([ x/100.0 for x in dataset_recalls[dataset]])
-#   rlabels = ['%s\\%%' % int(v*100) for v in rvals]
     ax.xaxis.set_ticklabels([('%s\\%%' % x) for x in dataset_recalls[dataset]])
 
 
@@ -116,7 +115,4 @@ for (i, dataset) in enumerate(datasets):
 names = [system_names[n] for n in systems]
 title_text = '{\\bf ' + title + '}'
 fig.tight_layout()
-#lg = fig.legend(lines[0:len(names)], names, ncol=1, labelspacing=0., fontsize=8, loc=(0.001, 0.005))
-#lg.get_frame().set_lw(0.5)
-#lg.draw_frame(False)
 plt.savefig(output_file)

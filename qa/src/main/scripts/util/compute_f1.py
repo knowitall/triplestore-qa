@@ -7,10 +7,11 @@ def get_f1s(d):
         p = float(p)
         if r > 1e-8 and p > 1e-8:
             yield f1(p,r)
+
 if __name__ == '__main__':
     ds = sys.argv[1:]
     for d in ds:
-        f1 = list(f1 for f1 in get_f1s(d))[-1]
+        f = list(f for f in get_f1s(d))[-1]
         output = open(d+'/f1-top.txt', 'w')
-        print >>output, f1
+        print >>output, f
         output.close()

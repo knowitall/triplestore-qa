@@ -4,8 +4,8 @@ import matplotlib
 from numpy import arange
 import matplotlib.pyplot as plt
 
-output_file = 'foo.png'
-title = 'Change in F1 when components are removed (relative to full system)'
+output_file = 'ablation.png'
+title = 'F1 when components are removed (relative to full system)'
 good = 'blue'
 bad = 'red'
 maxval = 70
@@ -50,7 +50,8 @@ def read_data(row, col, default=0.0):
 baseline_values = dict((col, read_data(baseline_row, col)) for col in cols)
 def relative_change(value, col):
     x = baseline_values[col]
-    return 100 * (value - x) / x
+    #return 100 * (value - x) / x
+    return value - x
 
 data = defaultdict(lambda: defaultdict(float))
 for row in rows:
@@ -88,9 +89,11 @@ for (i, col) in enumerate(cols):
     else:
         ax.set_yticklabels(['' for r in rows])
     ax.axvline(0, ymin=0, ymax=.95, color='k', lw=0.5)
+    maxval = max(abs(v) for v in val)
     ax.set_xlim((-maxval, maxval))
     ax.xaxis.set_ticks([-maxval, 0, maxval])
-    ax.xaxis.set_ticklabels(['-%s\\%%' % maxval, '0\\%%', '+%s\\%%' % maxval])
+    bval = '%0.2f' % baseline_values[col]
+    ax.xaxis.set_ticklabels(['%0.2f' % (baseline_values[col]-maxval), bval, '%0.2f' % (maxval + baseline_values[col])])
 
 title_text = '{\\bf ' + title + '}'
 fig.text(0.55, 0.05, title_text, horizontalalignment='center')
