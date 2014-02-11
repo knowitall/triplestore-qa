@@ -12,9 +12,9 @@ height_in = 2
 
 data_dir = 'eval/qa/output/final'
 datasets = ['webquestions', 'trec', 'wikianswers']
-systems = ['system-full', 'sempre', 'paralex']
+systems = ['system-full-uniontrain', 'sempre', 'paralex']
 system_names = {
-    'system-full': r'\textsc{System}',
+    'system-full-uniontrain': r'\textsc{System}',
     'sempre': r'\textsc{Sempre}',
     'paralex': r'\textsc{Paralex}',
 }
@@ -24,10 +24,10 @@ dataset_names = {
     'wikianswers': 'WikiAnswers'
 }
 label_position = {
-    'system-full': {
+    'system-full-uniontrain': {
         'webquestions': (.28, .39),
-        'trec': (.24, .45),
-        'wikianswers': (0.052, .20),
+        'trec': (.25, .49),
+        'wikianswers': (0.059, .20),
     },
     'paralex': {
         'webquestions': (0.16, .25),
@@ -37,28 +37,28 @@ label_position = {
     'sempre': {
         'webquestions': (0.35, .57),
         'trec': (0.07, .15),
-        'wikianswers': (0.011, .05),
+        'wikianswers': (0.013, .05),
     }
 }
 system_colors = {
-    'system-full': 'blue',
+    'system-full-uniontrain': 'blue',
     'sempre': 'red',
     'paralex': 'green',
 }
 system_linestyles = {
-    'system-full': '-',
+    'system-full-uniontrain': '-',
     'sempre': '-',
     'paralex': '-'
 }
 system_markers = {
-    'system-full': ' ',
+    'system-full-uniontrain': ' ',
     'sempre': ' ',
     'paralex': ' '
 }
 dataset_recalls = {
-    'webquestions': [0, 20, 40],
+    'webquestions': [0, 25, 50],
     'trec': [0, 15, 30],
-    'wikianswers': [0, 3, 6]
+    'wikianswers': [0, 4, 8]
 }
 
 
