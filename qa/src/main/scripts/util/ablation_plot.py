@@ -2,6 +2,8 @@ import sys
 from collections import defaultdict
 import matplotlib
 from numpy import arange
+from numpy import std
+from numpy import mean
 import matplotlib.pyplot as plt
 
 output_file = 'ablation.pdf'
@@ -55,31 +57,33 @@ matplotlib.rc('font', **font)
 matplotlib.rc('text', usetex=True)
 #matplotlib.rc(params)
 
-def read_data(row, col, default=0.0):
-    path = '%s/%s/system-%s/f1-top.txt' % (data_dir, col, row)
+def read_data(row, col, default=(0.0, 0.0)):
+    #path = '%s/%s/system-%s/f1-top.txt' % (data_dir, col, row)
+    path = '%s/%s/system-%s/bootstrap-f1.txt' % (data_dir, col, row)
     try:
-        return float(open(path).read())
+        data = [float(x) for x in open(path)]
+        f1 = mean(data)
+        err = std(data)
+        return (f1, err)
     except:
         print >>sys.stderr, 'could not get path: %s' % path
         return default
 
-baseline_values = dict((col, read_data(baseline_row, col)) for col in cols)
+baseline_values = dict((col, read_data(baseline_row, col)[0]) for col in cols)
 def relative_change(value, col):
     x = baseline_values[col]
     #return 100 * (value - x) / x
     return value - x
 
-data = defaultdict(lambda: defaultdict(float))
+rel_f1 = defaultdict(lambda: defaultdict(float))
+stds = defaultdict(lambda: defaultdict(float))
 for row in rows:
     for col in cols:
-        raw = read_data(row, col, default=baseline_values[col])
+        (raw, err) = read_data(row, col, default=(baseline_values[col], 0.0))
         rel = relative_change(raw, col)
-        data[row][col] = rel
-
-print '\t'.join(['system'] + cols)
-for row in rows:
-    vals = [data[row][col] for col in cols]
-    print '%s\t%s' % (row, '\t'.join(str(x) for x in vals))
+        rel_f1[row][col] = rel
+        stds[row][col] = err
+        print row,col,rel,err
 
 fig = plt.figure(figsize=(width_in, height_in))
 
@@ -89,11 +93,11 @@ for (i, col) in enumerate(cols):
     cname = col_names[col]
     ax.set_title(cname, fontsize=9, y=1.0)
     pos = arange(len(rows))
-#    pos = [ x + (1.0 if k > 3 else 0) for (k,x) in enumerate(pos) ]
-    print pos
-    val = [data[row][col] for row in rows]
-    colors = [good if data[row][col] < 0 else bad for row in rows]
-    ax.barh(pos, val, align='center', height=.75, color=colors, lw=0)
+    val = [rel_f1[row][col] for row in rows]
+    errs = [stds[row][col] for row in rows]
+    colors = [good if rel_f1[row][col] < 0 else bad for row in rows]
+    ax.barh(pos, val, align='center', height=.75, color=colors, lw=0) 
+    ax.errorbar(val, pos, xerr=errs, elinewidth=0.5, color='black', fmt=' ', capsize=0)
     ax.set_yticks(pos)
     ax.spines['top'].set_visible(False)
     ax.spines['left'].set_visible(False)
@@ -109,7 +113,8 @@ for (i, col) in enumerate(cols):
         ax.set_yticklabels(['' for r in rows])
     ax.axvline(0, ymin=0, ymax=.90, color='k', lw=0.5)
     maxval = max(abs(v) for v in val)
-    ax.set_xlim((-maxval, maxval))
+    maxvalerr = max(abs(v)+e for (v,e) in zip(val,errs))
+    ax.set_xlim((-maxvalerr * 1.1, maxvalerr * 1.1))
     ax.set_xlabel('F1')
     ax.xaxis.set_ticks([-maxval, 0, maxval])
     bval = '%0.2f' % baseline_values[col]
