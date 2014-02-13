@@ -160,6 +160,7 @@ object QaFeatures extends Function[QaStep, SparseVector] {
   }
   
   val relSynFeatures = (step: QaStep) => step.action match {
+    case r: RelSynRule => SparseVector("relSyn pmi" ->r.pmi)
     case _ => SparseVector.zero
   }
   
