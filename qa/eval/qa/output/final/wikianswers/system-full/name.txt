@@ -1,1 +1,1 @@
-eval/qa/questions/wikianswers.test.extended.txt
+eval/qa/questions/wikianswers.test.txt
