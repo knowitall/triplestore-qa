@@ -9,6 +9,9 @@ maxval = 70
 width_in = 7
 height_in = 2
 
+system_color = '#778899'                                                        
+external_color = '#A9A9A9'
+
 data_dir = 'eval/qa/output/final'
 datasets = ['webquestions', 'trec', 'wikianswers']
 systems = ['system-full-uniontrain', 'sempre']
@@ -40,9 +43,9 @@ label_position = {
     }
 }
 system_colors = {
-    'system-full-uniontrain': 'blue',
-    'sempre': 'red',
-    'paralex': 'green',
+    'system-full-uniontrain': system_color,
+    'sempre': external_color,
+    'paralex': external_color
 }
 system_linestyles = {
     'system-full-uniontrain': '-',
@@ -115,7 +118,7 @@ for (i, dataset) in enumerate(datasets):
     for system in systems:
         r, p = data[dataset][system]
         all_rs.extend(r)
-        line = ax.plot(r, p, lw=1, color=system_colors[system], linestyle=system_linestyles[system], marker=system_markers[system], markersize=3.5, markeredgecolor='none', markevery=3)
+        line = ax.plot(r, p, lw=2, color=system_colors[system], linestyle=system_linestyles[system], marker=system_markers[system], markersize=3.5, markeredgecolor='none', markevery=3)
         lines.extend(line)
         lx, ly = label_position[system][dataset]
         ax.text(lx, ly, system_names[system],  fontsize=8, color=system_colors[system])
