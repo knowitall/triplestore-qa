@@ -5,10 +5,9 @@ from numpy import arange
 import matplotlib.pyplot as plt
 
 output_file = 'external-paralex.pdf'
-title = 'Comparision to external systems'
 maxval = 70
-width_in = 7
-height_in = 2
+width_in = 3.33 
+height_in = 1.25
 
 system_color = '#778899'                                                          
 external_color = '#A9A9A9'
@@ -17,7 +16,7 @@ data_dir = 'eval/qa/output/final'
 datasets = ['webquestions', 'trec', 'wikianswers']
 systems = ['system-full-uniontrain', 'paralex']
 system_names = {
-    'system-full-uniontrain': r'\textsc{System}',
+    'system-full-uniontrain': r'\textsc{oqa}',
     'sempre': r'\textsc{Sempre}',
     'paralex': r'\textsc{Paralex}',
 }
@@ -28,14 +27,14 @@ dataset_names = {
 }
 label_position = {
     'system-full-uniontrain': {
-        'webquestions': (.28, .39),
-        'trec': (.25, .49),
-        'wikianswers': (0.059, .20),
+        'webquestions': (.28, .35),
+        'trec': (.25, .44),
+        'wikianswers': (0.061, .20),
     },
     'paralex': {
-        'webquestions': (0.16, .25),
-        'trec': (0.09, .25),
-        'wikianswers': (.027, .13),
+        'webquestions': (0.16, .20),
+        'trec': (0.10, .25),
+        'wikianswers': (.028, .11),
     },
     'sempre': {
         'webquestions': (0.35, .57),
@@ -59,7 +58,7 @@ system_markers = {
     'paralex': ' '
 }
 dataset_recalls = {
-    'webquestions': [0, 25, 50],
+    'webquestions': [0, 20, 40],
     'trec': [0, 15, 30],
     'wikianswers': [0, 4, 8]
 }
@@ -68,7 +67,7 @@ dataset_recalls = {
 
 font = {'family' : 'serif',
         'serif'  : 'Computer Modern Roman',
-        'size' : 9}
+        'size' : 6}
 matplotlib.rc('font', **font)
 matplotlib.rc('text', usetex=True)
 
@@ -103,7 +102,7 @@ fig = plt.figure(figsize=(width_in, height_in))
 lines = []
 for (i, dataset) in enumerate(datasets):
     ax = fig.add_subplot(1, 3, i+1)
-    ax.set_title(dataset_names[dataset], fontsize=9, y=1.0)
+    ax.set_title(dataset_names[dataset], fontsize=6, y=1.0)
     ax.xaxis.set_ticks_position('bottom')
     ax.yaxis.set_ticks_position('left')
     ax.spines['top'].set_color('none')
@@ -111,10 +110,14 @@ for (i, dataset) in enumerate(datasets):
     ax.spines['right'].set_color('none')
     ax.spines['bottom'].set_linewidth(0.5)
     if i == 0:
-        ax.set_ylabel('Precision')
+        ax.set_ylabel('Precision', labelpad=-2)
+        ax.yaxis.set_ticks([0, 0.50, 1.0])
+        ax.yaxis.set_ticklabels(['0\\%%', '50\\%%', '100\\%%'])
+    else:
+        ax.yaxis.set_ticks([0, .50, 1.0])
+        ax.yaxis.set_ticklabels(['','',''])
+
     ax.set_xlabel('Recall')
-    ax.yaxis.set_ticks([0, 0.50, 1.0])
-    ax.yaxis.set_ticklabels(['0\\%%', '50\\%%', '100\\%%'])
     all_rs =  []
     for system in systems:
         r, p = data[dataset][system]
@@ -122,7 +125,7 @@ for (i, dataset) in enumerate(datasets):
         line = ax.plot(r, p, lw=2, color=system_colors[system], linestyle=system_linestyles[system], marker=system_markers[system], markersize=3.5, markeredgecolor='none', markevery=3)
         lines.extend(line)
         lx, ly = label_position[system][dataset]
-        ax.text(lx, ly, system_names[system],  fontsize=8, color=system_colors[system])
+        ax.text(lx, ly, system_names[system],  fontsize=6, color='black')
 
     ax.set_ylim(0, 1)
 
@@ -132,6 +135,5 @@ for (i, dataset) in enumerate(datasets):
 
 
 names = [system_names[n] for n in systems]
-title_text = '{\\bf ' + title + '}'
 fig.tight_layout()
 plt.savefig(output_file)

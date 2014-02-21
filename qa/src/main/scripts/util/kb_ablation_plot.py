@@ -93,7 +93,7 @@ for (i, col) in enumerate(cols):
     ax.spines['bottom'].set_color('gray')
     ax.xaxis.set_ticks_position('bottom')
     ax.xaxis.set_tick_params(width=0.5, color='gray')
-    ax.yaxis.set_tick_params(width=0)
+    ax.yaxis.set_tick_params(width=0, color='white', length=0)
     if i == 0:
         ax.set_yticklabels([row_names[r] for r in rows])
     else:
