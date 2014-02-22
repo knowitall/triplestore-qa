@@ -1,0 +1,937 @@
+question prefix = 'where' ^ answer shape = 'Aaa Aaaaa'	0.6312281286452257
+question prefix = 'who' ^ answer shape = 'Aaaaa aaa Aaaaa'	0.25595734044325935
+question prefix = 'UNK' ^ answer shape = 'aaa Aaaaa Aaaaa'	1.065155807365439
+lex category (postags) = Unary(WDT NN VB JJ NNP)	0.3262789535077486
+question prefix = 'where' and answer shape = aaaa	-0.619654412987708
+lex type = Identity ^ rightTag = RB	0.3206132311281451
+question prefix = 'where' and answer shape = Aaaa	-0.08945387014559397
+question prefix = 'what' and isDate	-2.4886242828166956
+question prefix = 'UNK' and answer shape = Aaa Aaaaa	0.4407466726965201
+lex category (postags) = Unary(WDT VB JJ NN NN)	2.1123146142309617
+lex category (postags) = Unary(WDT NN VBP IN NN NN)	0.8536910514914181
+question prefix = 'who' and answer shape = aaaa aaaa	0.11041962096096754
+question prefix = 'what' and answer shape = Aaaaa aa Aaa	-0.4859395133429921
+question prefix = 'how' and answer shape = aaa Aaaaa	0.2567139710949076
+lex category (postags) = Binary(VB DT NN)	0.0
+question prefix = 'what' and answer shape = Aaaaa aa Aaaa: Aaaaa aaa Aaaaa aa aaa Aaaaa aa Aaaa	-0.8926750791612394
+lex category (postags) = Unary(JJ NN)	-4.196300616563906
+parser lexical rule = fullPatternWhenBeIn	-0.5710714880853192
+template arg pos tags = FW	0.0
+lex category (postags) = Unary(WRB VB DT NN)	0.035327445425762376
+parser lexical rule = quantIdentity	3.009998333611065
+lex category (postags) = Arg(JJ)	0.5887352107982002
+parser lexical rule = finalNounHack	0.052824529245125706
+lex category (postags) = Unary(WP VBP JJ NN VB)	0.0
+question prefix = 'what' and answer shape = a aaa-aaa aaaa	-0.9653563486545347
+lex category (postags) = Arg(DT NN NN NN)	0.008665222462922784
+lex type = Unary ^ rightTag = VBP	-1.0599900016663888
+question prefix = 'how' ^ answer shape = 'aaaa aaa aaaa'	-0.21213131144809194
+question prefix = 'who' and answer shape = aaa Aaaaa Aaaaa	0.4938599080954666
+question prefix = 'UNK' and answer shape = aaaa-1	0.8614594057250166
+action type = RelSynRule	-0.7339792113726611
+question prefix = 'when' and answer shape = 11 Aaaa	0.6252452798718076
+lex category (postags) = Unary(WDT NN VBP NN NN VB)	-0.7453757707048825
+question prefix = 'what' and answer shape = Aaaaa Aaaa	0.06848811933022035
+parser lexical rule = type	-2.7010498250291617
+question prefix = 'who' ^ answer shape = 'aaaa-aaaa'	-0.2816197300449924
+question prefix = 'who' and answer shape = Aaa Aaaaa	-0.09970379276644328
+lex category (postags) = Unary(WRB VBP DT NN NN VB)	-1.4567572071321446
+template arg pos tags = NN NN NN VB	-1.1643969473900841
+question prefix = 'what' ^ answer shape = 'Aaaaa aaaa aaaa'	0.3949341776370604
+evidence similarity with question	3.4551852644941246
+question prefix = 'who' ^ answer shape = 'Aa. Aaaaa'	0.4384269288451924
+action type = ParsedQuestion	0.0
+lex category (postags) = Unary(WP VB VB NN NN)	0.0
+question prefix = 'who' ^ answer shape = 'Aaaa Aaaaa Aaa Aaaaa'	-0.9481753041159806
+template arg pos tags = VBP JJ NN	0.0
+question prefix = 'where' ^ answer shape = 'aaa Aaaaa Aaaaa'	-1.5035827362106315
+parser lexical rule = npArg	0.90901516413931
+template arg pos tags = DT NN IN FW	0.0
+question prefix = 'who' and answer shape = Aaaaa Aaa Aaaa	0.5162233756318649
+template arg pos tags = DT JJ NN NN	0.5684047998834614
+lex category (postags) = Unary(WP VB DT NN IN NN NN)	0.0
+relSynRule pmi	0.47650324928969995
+lex category (postags) = Unary(WRB VBP DT NN)	0.5785702382936178
+lex category (postags) = Arg(PRP$ NN)	-0.9563406098983502
+lex type = Unary ^ rightTag = NN	-1.9120146642226294
+template arg pos tags = VBN	0.2609565072487918
+question prefix = 'what' and answer shape = aaa aaaa aa Aaaaa	-0.5963591343039597
+question prefix = 'what' ^ answer shape = 'aaa'	-1.744375937343776
+question prefix = 'what' and answer shape = Aaaaa A	-0.7887781362317215
+question prefix = 'what' and answer shape = aaaa aaa aaaa aaaa	0.4197809218811466
+lex category (postags) = Unary(WP VBP NN NN)	-1.2019663389435093
+template arg pos tags = WDT VB NN NNS	-0.37041728559732606
+lex category (postags) = Unary(WDT VBP JJ NN)	-0.17297117147142138
+template arg pos tags = NN NN VB TO	0.619654412987708
+parser lexical rule = punctIdentity	-0.052824529245125706
+lex category (postags) = Unary(VBP NN JJ NN .)	0.0
+question prefix = 'what year' ^ isNumber	1.9830028328611897
+template arg pos tags = NN JJ	-0.38658370602701847
+question prefix = 'who' ^ answer shape = 'Aaaa Aaaaa'	0.5475754040993168
+lex category (postags) = Unary(VBN NN)	0.0
+minimum join key similarity	1.4822720876439806
+question prefix = 'where' ^ answer shape = 'Aaaaa Aaa'	-1.230461589735044
+lex category (postags) = Unary(WP VBP JJ NN)	0.0
+parser lexical rule = fullPatternCop	0.17230461589735047
+lex category (postags) = Unary(WDT VB JJ NN NNS NN)	0.984169305115814
+lex category (postags) = Unary(WDT VB DT NN IN DT JJ NN)	-0.7217130478253624
+lex type = Unary ^ leftTag = CC	0.0
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaa'	0.7257123812697883
+question prefix = 'when' and answer shape = aaaa aaaa	-0.6275748077401825
+question prefix = 'what' and answer shape = aaaa aaaa aaaa	0.01211354491554918
+lex category (postags) = Binary(DT JJ NN IN)	-1.2117980336610565
+lex category (postags) = Unary(WP VB NN IN NN)	0.0
+question prefix = 'what' and answer shape = aaa AAA	0.3997469822131229
+template arg pos tags = NN VBP NNS	-0.9162533288831375
+question prefix = 'what' and answer shape = Aaaaa aaa	-0.1691237232440136
+lex category (postags) = Arg(DT NNS)	-0.05515747375437419
+lex type = Identity ^ leftTag = IN	-0.7728711881353107
+question prefix = 'what' ^ answer shape = 'aaa Aaaa Aaaaa aaaa'	-0.575737377103816
+question prefix = 'what' ^ answer shape = 'aaaa aaaa aaaa'	-0.9480086652224626
+question prefix = 'what' and answer shape = aaa aaaa	-0.6378247303610318
+template pair pmi	-1.8141822324910044
+lex category (postags) = Unary(WDT VB DT NN IN JJ NN)	-1.4860856523912682
+lex category (postags) = Unary(WDT NN VBP NNS VB IN)	0.0
+lex category (postags) = Unary(VBP DT NN NN NN .)	0.0
+question prefix = 'where' ^ answer shape = 'aaa aaaa aaaa aaaa'	-0.10531578070321601
+lex type = Binary ^ rightTag = NN	-3.9935010831528075
+lex category (postags) = Unary(WP VB NN NNS NN)	0.08881853024495912
+fbid join key violation	-0.855868538840917
+question prefix = 'what' and answer shape = ? Aaaaa	-0.5530299159521874
+question prefix = 'what' and answer shape = Aaaaa aa Aa	-0.9187657912870378
+question prefix = 'where' and answer shape = AA&A Aaaa	0.5227460536633147
+lex category (postags) = Arg(JJ NNP)	0.8400266622229628
+question prefix = 'what' and answer shape = Aaa Aaaa Aaaaa Aaaa	0.8735729506405658
+question prefix = 'what' and answer shape = a aaaa aaaa	0.0666244970355205
+template arg pos tags = NN NN VB	-1.0968667194872277
+template arg pos tags = NN NNS LS	0.0
+template arg pos tags = CD NN	-0.14505013448956777
+lex category (postags) = Unary(VB VBN NN NN .)	0.11598066988835187
+question prefix = 'what' ^ answer shape = 'aaa Aaaaa'	0.6733877687052158
+template arg pos tags = NN JJ NN	0.0
+question prefix = 'where' and answer shape = Aaaaa Aaa	0.12253316587651675
+template arg pos tags = NN NN VBP	0.0
+question prefix = 'UNK' ^ answer shape = 'AA Aaaaa'	-1.7407098816863855
+template arg pos tags = NN CC NN	-0.35563256114522135
+lex category (postags) = Unary(WDT VBP JJ NN NN)	0.17297117147142138
+lex category (postags) = Unary(WRB VB NN NN)	0.16813864355940678
+lex category (postags) = Binary(VB RB)	-0.11731378103649381
+question prefix = 'what' and answer shape = Aaa Aaaaa	0.25671397109490757
+template arg pos tags = RB VBN	0.0
+parser lexical rule = fullPatternRelType	0.0
+lex category (postags) = Identity(WDT)	-1.4667555407432094
+question prefix = 'what' ^ answer shape = 'Aaa'	-1.027495417430428
+lex category (postags) = Unary(VB DT NN NN NN)	-0.008665222462922784
+answer is linked to freebase	1.1360231708429613
+lex category (postags) = Unary(WRB VB DT JJ NN VB)	-0.08115314114314276
+question prefix = 'what' and answer shape = Aaa aaaa	-0.6904720601863032
+lex type = Arg ^ rightTag = TO	2.8085319113481084
+question prefix = 'where' ^ answer shape = 'a aaaa aaaa'	-0.9901683052824529
+question prefix = 'what' and answer shape = aa aaaa	0.05218142425159646
+lex type = Binary ^ leftTag = NNS	0.266788868521913
+question prefix = 'when' ^ answer shape = '1aa Aaaaa'	0.39560073321113143
+template arg pos tags = VB NN	0.0
+template arg pos tags = DT NN NN NN	0.5781888169306357
+template arg pos tags = NN VB NN	-0.9758373604399266
+lex type = Arg ^ leftTag = JJ	-0.5574070988168638
+lex category (postags) = Binary(NNS)	0.6258956840526577
+question prefix = 'what' ^ answer shape = 'aaa aaaa'	-1.7368771871354773
+lex category (postags) = Binary(VB VBP)	-0.48625229128478586
+template arg pos tags = IN JJ NN	0.0
+lex type = Arg ^ rightTag = WDT	-0.32694550908181963
+lex category (postags) = Unary(VBP DT JJ NN NN .)	0.7768705215797367
+template arg pos tags = CD JJ CD	-0.6457451251135061
+question prefix = 'UNK' and answer shape = Aaaaa Aaaaa	0.8577321611356169
+question prefix = 'where' ^ answer shape = 'a Aaaaa'	-0.8810198300283286
+question prefix = 'where' and answer shape = Aaaaa Aaaaa	0.4822122687535923
+question prefix = 'who' and answer shape = Aa. Aaaaa Aaaa	0.14023757767616557
+lex category (postags) = Unary(WDT NN VB JJ NN)	0.0
+lex category (postags) = Unary(WDT NN VBP DT JJ NN VBP)	0.4372604565905682
+lex category (postags) = Unary(WP VBP CD JJ)	0.0
+question prefix = 'who' ^ answer shape = 'AAAA Aaaaa aaaa Aaaa Aaaaa'	-0.7815364105982336
+question prefix = 'what' and answer shape = Aaa Aaaaa 1	0.5045757362899909
+question prefix = 'where' and answer shape = Aaa Aaaaa Aaaaa	0.44400801171224485
+question prefix = 'when' and answer shape = Aaaaa Aaaa AA	-0.033545201304597726
+lex type = Identity ^ leftTag = TO	1.3764372604565906
+lex category (postags) = Unary(WDT VB DT JJ NN VBP IN)	-0.6525579070154974
+question prefix = 'who' ^ answer shape = 'aaaa AAA'	2.2684552574570906
+parser lexical rule = auxIdentity	1.4342609565072488
+question prefix = 'when' and answer shape = Aaaaa Aaaa AAA	0.033545201304597726
+question prefix = 'what' ^ answer shape = 'Aaaaa AA'	-0.6813864355940676
+lex category (postags) = Unary(WP VB VB NN)	0.0
+question prefix = 'what year' ^ answer shape = 'Aaaa'	-0.5374104315947341
+question prefix = 'what' and answer shape = aaaa-aaaa	-0.2874637389574556
+lex category (postags) = Binary(VBP DT NN NN IN)	0.0
+lex category (postags) = Unary(WDT NN NN VBP NN VB IN)	0.0
+template arg pos tags = VBP NN NN	0.5058773285503935
+lex category (postags) = Arg(DT NN IN NNP)	0.93417763706049
+question prefix = 'when' and answer shape = aaaa 1111 A.A.	0.6895402490389533
+question prefix = 'where' and answer shape = a Aaaaa Aaaaa aaaa	-0.929015713907887
+lex type = Binary ^ leftTag = RB	0.7108815197467089
+question prefix = 'what' ^ answer shape = 'a aaaa-aaaa aaaa'	1.312947842026329
+question prefix = 'what' ^ answer shape = 'Aaa aaaa'	1.3794367605399098
+lex type = Unary ^ leftTag = TO	1.432094650891518
+lex category (postags) = Unary(VB DT JJ NN)	0.33811031494750865
+lex category (postags) = Arg(DT NN IN NN NN)	-0.7950341609731711
+lex type = Identity ^ leftTag = <s>	-0.22396267288785204
+template arg pos tags = JJ JJ NN	1.1635977730953757
+lex category (postags) = Binary(VB DT NN NN)	0.0
+lex category (postags) = Binary(VBP RP)	0.0
+template arg pos tags = NN NNS	0.0
+question prefix = 'what' and answer shape = aaa aaa	-1.1260937715723989
+question prefix = 'what' and answer shape = Aaa aaaa aaaa aaaa	0.8209256208152943
+question prefix = 'what' and answer shape = aaaa Aaa	-0.9606972929177849
+lex category (postags) = Unary(WDT NN VB DT NN)	-0.15397433761039825
+question prefix = 'where' and answer shape = aaa aaaa Aaaaa Aaaaa	0.9802653270121335
+template arg pos tags = JJ CD	-0.9094476798135384
+lex type = Arg ^ leftTag = <s>	-0.9125145809031828
+question prefix = 'when' ^ answer shape = 'Aaaa 1'	-0.7283786035660723
+question prefix = 'who' ^ answer shape = 'Aaaa'	0.5300783202799535
+template arg pos tags = VB IN NN NN	0.0
+question prefix = 'where' ^ answer shape = 'Aaaaa'	0.7388768538576902
+lex category (postags) = Unary(WRB VBP NN NNS)	-0.1706382269621729
+parser combinator rule = LeftApply	0.5750708215297451
+question prefix = 'what' and answer shape = AAaaaa	-0.16679419537563872
+question prefix = 'who' ^ answer shape = 'aaaa aaa'	-0.418263622729545
+template arg pos tags = NN VBP DT NN	0.0
+question prefix = 'who' ^ answer shape = 'AaAaaaa'	-0.7465422429595068
+lex category (postags) = Unary(VBN JJ NN)	0.0
+question prefix = 'what' ^ answer shape = 'Aaa aaa'	0.8981836360606565
+question prefix = 'who' ^ answer shape = 'Aaaa Aaaa'	0.22662889518413598
+question prefix = 'what' and answer shape = Aaa Aaa Aaa	-0.9033909073557639
+lex category (postags) = Unary(VBP NN NN NN .)	1.4830861523079486
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaaa Aaaa'	-0.7402099650058324
+question prefix = 'how' ^ answer shape = 'Aaaaa aa Aaaa'	-0.378770204965839
+lex category (postags) = Binary(VBN RP)	0.0
+question prefix = 'where' and answer shape = 111-aaaa Aaaaa A111-111 aaaa	-0.4822122687535923
+template arg pos tags = JJ IN JJ NN	0.3908087390840266
+lex type = Arg ^ leftTag = VBG	0.0
+lex category (postags) = Unary(WDT VB JJ JJ NNS NN)	0.6273954340943175
+template arg pos tags = VB IN NN	-0.904515914014331
+lex category (postags) = Binary(VBP IN)	0.3456090651558074
+question prefix = 'UNK' and answer shape = aaa Aaaaa Aaaaa	-0.8577321611356169
+question prefix = 'what' ^ answer shape = 'Aaaaa aa aaa Aaaaa'a Aaaaa aa Aaaaa'	0.7422096317280453
+lex type = Unary ^ rightTag = DT	0.15397433761039825
+template arg pos tags = DT CD JJ NN	-0.359228845471409
+question prefix = 'who' and answer shape = AAAA AAAA	0.11228324325566744
+question prefix = 'what' and answer shape = AA, Aaaaa	0.6699722149446046
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaa Aaaaa'	0.9680053324445925
+question prefix = 'what' and answer shape = Aaaaa Aaaaa	0.9001295683400391
+lex type = Identity ^ rightTag = VBP	-1.8808531911348108
+question prefix = 'what' ^ answer shape = 'aaa-aaaa aaaa aaaa'	-0.4194300949841693
+question prefix = 'where' ^ answer shape = 'Aaa Aaaaa Aaaaa'	-1.3237793701049825
+parser combinator rule = UnaryIdentity	0.4045992334610897
+lex type = Unary ^ leftTag = RP	-0.6282286285619063
+question prefix = 'what' ^ answer shape = 'Aaaaa A.A.'	-0.6653891018163639
+question prefix = 'how many' ^ isNumber	0.0
+lex type = Arg ^ rightTag = PRP$	0.9563406098983502
+template arg pos tags = VBP JJ NNS	-0.8139370372101699
+question prefix = 'what' and answer shape = aaaa(	0.501314397274266
+question prefix = 'UNK' and answer shape = aaa aa aaa	-0.7002560772334776
+template arg pos tags = PRP IN NN	0.0
+lex category (postags) = Identity(JJS)	0.0
+question prefix = 'what' and answer shape = Aaa	-0.8120734149154699
+lex category (postags) = Unary(DT NN NN)	-0.0076653891018162446
+lex category (postags) = Binary(VBP VB IN)	-0.904515914014331
+question prefix = 'when' and answer shape = aaa Aaa Aaaaa	-0.6895402490389533
+lex type = Arg ^ leftTag = WDT	-3.519746708881853
+question prefix = 'what' and answer shape = Aaaaa aa aaa Aaa	0.1267263160395914
+lex type = Arg ^ rightTag = JJ	-1.4500916513914346
+answer from namespace 'probase'	1.0911514747542075
+template arg pos tags = NN NN NN	-1.0317925088108126
+template arg pos tags = NN IN JJ	0.0
+action type = ProjectAction$	0.0
+lex type = Arg ^ leftTag = CD	-1.0638226962172972
+question prefix = 'what' and answer shape = Aaaaa	-0.5357914097262138
+answer from namespace 'reverb'	0.6920536408943556
+lex type = Unary ^ rightTag = PRP$	-0.9563406098983502
+template arg pos tags = VB NN NN	0.04053378490972225
+template arg pos tags = NN VBP IN NN	-0.7613731044825862
+lex category (postags) = Unary(NN IN NN)	0.0746542242959507
+lex category (postags) = Identity(RB)	0.8281953007832028
+lex category (postags) = Arg(CD JJ)	0.0
+template arg pos tags = RB JJ	0.0
+question prefix = 'UNK' ^ answer shape = 'aaa-aaa'	-0.47758706882186297
+question prefix = 'where' and answer shape = Aaa Aaaa	0.4188491107337966
+question prefix = 'who' ^ answer shape = 'Aaa AaAaaa'	-1.9118480253291117
+question prefix = 'who' and answer shape = Aaaaa Aaaa Aaaaa & Aaaaa	0.24832767076875825
+lex category (postags) = Unary(WDT VB DT JJ NN IN DT JJ NN)	0.0
+template arg pos tags = JJ NN	-1.482379110576527
+lex type = Identity ^ leftTag = NN	1.6770538243626063
+question prefix = 'what' ^ answer shape = 'aaa aaa aaaa'	-2.818863522746209
+lex category (postags) = Unary(WDT NN VB NN IN NN)	-0.2819530078320278
+parser combinator rule = UnaryIntersect	-1.930844859190135
+lex type = Unary ^ rightTag = TO	-1.432094650891518
+lex type = Unary ^ leftTag = VB	-0.6780536577237127
+question prefix = 'what' and answer shape = Aaaaa aaa Aaaaa	0.10203332063481808
+lex category (postags) = Unary(WDT VB JJ JJ NN)	-2.7637060489918346
+question prefix = 'who' ^ answer shape = 'aaa aaaa Aaa Aaaaa Aaaaa'	0.9945009165139144
+lex type = Binary ^ leftTag = WDT	-2.748208631894684
+question prefix = 'what' and answer shape = Aaaaa Aaaaa Aaaaa Aaaaa aaa Aaa	0.1323171829236911
+lex category (postags) = Arg(NNP NNP)	0.0
+lex type = Identity ^ rightTag = WDT	-0.48625229128478586
+template arg pos tags = DT JJ	-1.6514808261625384
+lex type = Identity ^ rightTag = VB	2.620396600566572
+template arg pos tags = NNP	-0.4566709959722433
+question prefix = 'what' and answer shape = Aaaaa A Aaaa	-0.4044060379498726
+question prefix = 'what' and answer shape = 11aa aaaa	0.7766645913161725
+lex category (postags) = Unary(WDT NN VBP NN VBP IN)	0.0
+lex type = Binary ^ leftTag = JJ	0.1419763372771205
+question prefix = 'how' and answer shape = aaaa	-0.2567139710949076
+lex category (postags) = Identity(PDT)	0.0
+lex category (postags) = Unary(WDT NN VB NN NN)	0.0
+template arg pos tags = JJ NN VB TO	0.0
+lex category (postags) = Unary(DT JJ NN)	0.1526412264622562
+lex category (postags) = Unary(WP VB JJ NN IN JJ CD)	-0.4677553741043159
+template arg pos tags = DT NN IN NN	0.0
+question prefix = 'what' ^ answer shape = 'Aaa Aaaa'	-0.9780036660556574
+question prefix = 'what' and answer shape = aaaaAAA aaaa	0.7556988405007987
+question prefix = 'where' ^ answer shape = 'aaa aaaa Aaaaa Aaaaa'	3.298616897183803
+question prefix = 'what' and answer shape = aaa aaaa-aaa aaa	-0.07174945834594515
+template arg pos tags = VB DT JJ NN	1.0449573405614276
+question prefix = 'what' ^ answer shape = 'Aaaaa..'	0.8871854690884851
+lex type = Unary ^ leftTag = JJ	0.8663556073987668
+question prefix = 'who' ^ answer shape = '11 aaaa'	-0.9748375270788202
+template arg pos tags = VBN NN VB	0.0
+question prefix = 'what' and answer shape = 1111	-1.6730669150668118
+lex category (postags) = Arg(JJ JJ NN)	3.298283619396767
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaaa Aaaaa'	1.2749541743042825
+paraphrase lm	0.9558358762558986
+question prefix = 'what' ^ answer shape = 'Aaaaa aaaa'	0.862356273954341
+num lexical rules	0.16600566572237976
+question prefix = 'what' and answer shape = Aa. Aaaaa Aaaaa	0.8120734149154699
+parser lexical rule = fullPatternWhereIn	0.011831361439760041
+question prefix = 'where' and answer shape = aaaa Aaaaa	0.08293119211414436
+question prefix = 'what' and answer shape = Aaaaa 1	-0.11740820456609209
+lex type = Binary ^ rightTag = NNS	-0.05515747375437419
+question prefix = 'what' ^ answer shape = 'aaaa-aaaa aa AAA'	0.8215297450424929
+question prefix = 'who' and answer shape = Aa. Aaaaa	-0.14023757767616557
+lex category (postags) = Binary(NN IN)	-0.2394600899850025
+question prefix = 'who' and answer shape = aaaa-aaaa	-0.06709040260919545
+lex type = Unary ^ leftTag = IN	-3.8915180803199467
+question prefix = 'what' and answer shape = Aaaaa?a aa-aaaa	0.28839555010480544
+template arg pos tags = NN NN IN NN	0.6880890677439001
+lex category (postags) = Unary(WDT NN VB VB IN NN)	0.0
+lex category (postags) = Unary(DT NN)	-1.7658723546075654
+lex type = Binary ^ leftTag = WP	-0.513247792034661
+lex type = Binary ^ rightTag = IN	0.24162639560073318
+question prefix = 'when' ^ answer shape = '1aa aaa 1aa Aaaa'	-0.8988501916347276
+lex category (postags) = Unary(VB NN NN NN .)	0.5004165972337942
+parser lexical rule = fullPatternWhenBeOn	-0.1781369771704716
+template arg pos tags = IN NN NN	0.0
+lex type = Identity ^ leftTag = RP	0.0
+template arg pos tags = DT NN	-0.12533120734656802
+lex type = Unary ^ rightTag = CD	2.100649891684719
+question prefix = 'who' ^ answer shape = 'Aaa aaaa'	-0.9783369438426929
+question prefix = 'who' ^ answer shape = 'Aa. Aaaa'	1.3062822862856192
+lex category (postags) = Unary(WP VBP NN NNS VBP)	0.0
+lex type = Arg ^ rightTag = RP	-0.6282286285619063
+lex category (postags) = Unary(WDT VB DT CD)	-1.5409098483586068
+question prefix = 'how many' ^ answer shape = 'Aaaaa Aaaaa Aaaaa'	0.8355274120979836
+question prefix = 'who' ^ answer shape = 'Aaaaa'	-0.9191801366438925
+template arg pos tags = DT	0.02888614556784802
+template arg pos tags = IN NN	-1.1594189670863084
+question prefix = 'what' and answer shape = Aaa Aaaaa Aaaaa	0.23341869241115917
+lex type = Arg ^ leftTag = IN	2.826028995167472
+question prefix = 'what' ^ answer shape = '1111'	0.39710048325279124
+question prefix = 'who' and answer shape = AAA	-0.6681085926499049
+lex type = Identity ^ rightTag = JJ	-0.928178636893851
+lex type = Binary ^ leftTag = NN	-0.06682219630061648
+lex category (postags) = Unary(WRB VBP NN)	-0.3159473421096484
+lex category (postags) = Unary(WP VBP CD NN NN)	0.43559406765539077
+question prefix = 'UNK' ^ answer shape = 'Aaaaa'	-0.6798866855524077
+template arg pos tags = NN CD CD	0.0
+question prefix = 'how' ^ answer shape = 'Aaaaa Aaaaa aaa aaa Aaaaa aa Aaaa'	0.6363939343442757
+lex category (postags) = Arg(DT NN)	1.2552907848691885
+question prefix = 'what year' and answer shape = aaa 1111 aaaa	0.9523109925916355
+question prefix = 'who' and answer shape = Aaaa	-0.7179604890331263
+question prefix = 'how' ^ isDate	0.0
+question prefix = 'when' ^ answer shape = 'Aaaa'	1.675887352107982
+question prefix = 'what' ^ answer shape = 'a aaa aaaa'	1.357607065489085
+lex category (postags) = Identity(CC)	-0.008665222462922784
+question prefix = 'when' ^ answer shape = 'AAAA Aaaaa aa Aaa Aaaaa'	-0.39560073321113143
+lex type = Binary ^ leftTag = DT	1.3334444259290117
+question prefix = 'how' ^ isNumber	0.0
+num conjuncts	-6.442057374550349
+template arg pos tags = DT VBP NN	-0.573737710381603
+question prefix = 'where' ^ answer shape = '1111'	-1.232461256457257
+template arg pos tags = VB JJ NNS VBP	0.0
+question prefix = 'where' ^ answer shape = 'Aaaaa aaaa'	-0.22512914514247617
+template arg pos tags = CD	0.0
+lex category (postags) = Unary(WP VBP NN JJ VB)	0.0
+lex category (postags) = Unary(PRP$ NN)	0.0
+question prefix = 'what' ^ answer shape = 'Aa Aaaaa'	-0.995334110981503
+question prefix = 'what' and answer shape = Aaa AA Aaaa	-0.9047886240767887
+lex type = Arg ^ rightTag = DT	0.0
+answer from namespace 'nell'	1.1229936079420082
+lex category (postags) = Arg(DT NNP NN)	0.0
+template arg pos tags = NN NN NN NN	0.6337452157037314
+lex category (postags) = Identity(WP)	-0.7782036327278787
+question prefix = 'where' ^ answer shape = 'aaa Aaaaa aaaa'	-0.747708715214131
+parser lexical rule = ignoreTypesIdentity	2.608565239126812
+question prefix = 'who' ^ answer shape = 'aaa Aaaaa'	-0.08065322446258949
+question prefix = 'where' ^ answer shape = 'aaa Aaaaa Aaa'	1.1168138643559407
+question prefix = 'who' and answer shape = Aaa Aaaaa & Aaaaa	0.13371489964471595
+lex category (postags) = Unary(WP VB JJ NN)	0.03216130644892518
+question prefix = 'who' and answer shape = aaa aaaa	-0.6149953572509583
+question prefix = 'what' and answer shape = aaaa_aaaa	0.5800524392253357
+lex type = Identity ^ leftTag = DT	-1.387935344109315
+lex category (postags) = Unary(WP VB DT NN IN NN)	0.7563739376770537
+question prefix = 'where' and answer shape = aaa Aaaa	-0.00652267803144961
+question prefix = 'how many' ^ answer shape = 'Aaaaa'	-0.8355274120979836
+question prefix = 'what' and answer shape = aaaa aaa aaaa	0.5069052641583657
+question prefix = 'who' ^ answer shape = 'Aaaa.aaa'	-0.07382102982836192
+lex category (postags) = Binary(VBP DT NN IN)	2.52291284785869
+question prefix = 'what' and answer shape = Aaaaa aaa aaa Aaaaa Aaaaa	0.23248688126380923
+answer from namespace 'freebase'	3.581695708116473
+lex category (postags) = Unary(WDT NN NN VBP NN VB)	1.467755374104316
+question prefix = 'when' and answer shape = Aaaaa	-0.7170286778857764
+question prefix = 'what' ^ answer shape = '? Aaaa'	0.6715547408765206
+parser lexical rule = conjIdentity	-0.008665222462922784
+question prefix = 'what' ^ answer shape = 'aa aaaa-aaaa aaa aaaa'	-0.9918346942176304
+evidence similarity with query	0.22209433759755048
+question prefix = 'what' ^ answer shape = 'Aaa Aaaa Aaaa Aaaaa Aaaaa'	-0.2137977003832694
+question prefix = 'who' and answer shape = Aaaa Aaaaa	0.008386300326149293
+question prefix = 'what' and answer shape = Aaa Aaa Aaaaa	0.009784017047174336
+lex type = Identity ^ leftTag = RB	0.0
+question prefix = 'what' and answer shape = Aaa-aaa aaaa	-0.8814933453930403
+lex type = Binary ^ leftTag = PDT	0.0
+lex category (postags) = Binary(VB TO)	0.0
+lex category (postags) = Unary(WDT VB NN NN)	-0.8926845525745709
+lex type = Unary ^ rightTag = IN	0.9265122479586734
+lex category (postags) = Binary(VBP TO)	0.0
+lex category (postags) = Unary(WDT VB DT JJ NN VB)	-2.4600899850024995
+question prefix = 'where' ^ answer shape = 'aaa aaaa aaa'	-1.064489251791368
+question prefix = 'who' and answer shape = Aaaaa AA	0.6834834765811788
+question prefix = 'what' and answer shape = AA-Aaaaa	0.2734865717472065
+question prefix = 'what' ^ answer shape = 'aaaa aaa aa'	-0.057990334944175936
+question prefix = 'UNK' ^ answer shape = 'Aaaa Aaaa'	-0.617230461589735
+template arg pos tags = NN IN JJ NN	0.5718092078638333
+question prefix = 'UNK' and answer shape = Aaaaa	-0.7706078188583978
+question prefix = 'who' and answer shape = Aaa Aaaaa aaaa	-0.08199938096679446
+lex category (postags) = Unary(WDT JJ NN VB JJ NN)	0.0
+parser lexical rule = fullPatternDobj	-0.6235627395434094
+lex category (postags) = Arg(JJR)	0.0
+lex category (postags) = Binary(VBP VB)	-0.15097483752707874
+template arg pos tags = DT NN NN JJ	0.0
+question prefix = 'UNK' ^ answer shape = 'aaaa'	-0.5992334610898185
+question prefix = 'who' ^ answer shape = 'Aaaa Aaaa aa aaa Aaaaa Aaaaa'	-0.9663389435094151
+lex category (postags) = Unary(VBP NN NN .)	-2.4212631228128645
+question prefix = 'what' ^ answer shape = 'Aa. Aaaa'	-0.16863856023995993
+lex category (postags) = Unary(RB NNP)	0.0
+lex type = Identity ^ rightTag = CD	0.33661056490584906
+lex category (postags) = Identity(DT)	1.7078820196633893
+question prefix = 'when' and isDate	1.6885081174244063
+lex category (postags) = Arg(JJ NNS)	0.0
+query relation is light verb	-0.9497135020169163
+question prefix = 'where' ^ answer shape = 'Aaaaa Aaaaa Aaaaa aaaa'	1.4830861523079486
+lex type = Arg ^ rightTag = NN	0.3794367605399098
+question prefix = 'what' ^ answer shape = 'Aaaaa aa Aaaaa Aaaaa'	1.442092984502583
+question prefix = 'where' ^ isDate	-1.232461256457257
+question prefix = 'where' and answer shape = Aaaaa Aaaa	-0.9802653270121335
+question prefix = 'what' and answer shape = aaa A.A.	-0.5525640103785125
+lex type = Binary ^ leftTag = CD	0.7722046325612397
+template arg pos tags = TO VB	0.0
+question prefix = 'who' ^ answer shape = 'aaa-aaaa-aaaa'	2.4285952341276453
+lex category (postags) = Unary(WP VB NN NN)	1.7972004665889019
+question prefix = 'what' ^ answer shape = 'Aaaaa aaa aaaa'	0.17297117147142138
+question prefix = 'what' and answer shape = Aaa Aaaa aa Aaa	-0.34011106878272696
+lex category (postags) = Arg(NN IN NN)	0.9528411931344776
+lex type = Binary ^ rightTag = VB	0.3594400933177804
+question prefix = 'what' ^ answer shape = 'A Aaaa Aaaaa Aaaa Aaa'	1.7753707715380769
+evidence similarity with query (rels only)	1.0478963279933224
+lex type = Binary ^ rightTag = CC	-0.734544242626229
+lex type = Arg ^ rightTag = </s>	-0.366272287952008
+lex category (postags) = Unary(WRB VB DT JJ NN)	0.39560073321113143
+question prefix = 'who' ^ answer shape = '?Aaaaa aaaa'	-0.24845859023496075
+template arg pos tags = WDT VB DT NN	-1.3204465922346276
+question prefix = 'what' and answer shape = Aaaaa aaaa	0.40114469893414784
+question prefix = 'UNK' and answer shape = Aaa Aaaaa Aaaaa	0.7002560772334776
+parser lexical rule = fullPatternSubj	0.6475587402099652
+lex type = Binary ^ rightTag = NNP	1.160639893351108
+question prefix = 'who' ^ answer shape = 'Aaa Aaaaa'	-1.8935177470421596
+lex category (postags) = Unary(VBP DT NN NN .)	0.5875687385435759
+lex type = Unary ^ leftTag = WDT	2.040826528911848
+question prefix = 'where' ^ answer shape = 'a aaaa?a aaaa'	-0.5199133477753706
+lex category (postags) = Unary(WDT VB JJ NN)	-0.7835360773204467
+template arg pos tags = JJ NN NN	-0.3051681507571044
+question prefix = 'who' ^ answer shape = 'a aaa'	0.43559406765539077
+action type = ExecutionAction$	0.0
+question prefix = 'what year' ^ answer shape = '1111'	1.5564072654557575
+question prefix = 'who' ^ answer shape = 'Aaaaa Aaaaa Aaaaa Aaaaa'	2.1909681719713383
+lex category (postags) = Identity(NN)	1.2191301449758374
+lex category (postags) = Arg(DT JJ NN)	-0.5279120146642224
+lex category (postags) = Unary(WDT NN VB IN NN)	0.0
+parser lexical rule = npTitle	-1.3644392601233126
+lex category (postags) = Arg(NN NN NN)	0.14314280953174485
+question prefix = 'who' and answer shape = aaa AAA'a	-0.07268126949329505
+question prefix = 'what' and answer shape = ?Aaaaa	1.7052143996503846
+question prefix = 'what' ^ answer shape = 'AAA AAAA'	-0.982169638393601
+lex category (postags) = Arg(DT NN NN IN NN)	0.0
+parser combinator rule = RightApply	-1.3779370104982505
+lex category (postags) = Arg(DT NN IN NN)	0.0
+question prefix = 'when' and answer shape = 1aa aaa 1aa Aaaa	-0.6252452798718076
+lex category (postags) = Binary(VB JJ NN)	-1.4937510414930846
+lex category (postags) = Binary(VB NN IN)	-0.5575737377103815
+lex category (postags) = Unary(WDT NN VBG DT JJ NN)	0.0
+parser lexical rule = there	0.8281953007832028
+parser lexical rule = fullPatternPoss	1.0729878353607731
+question prefix = 'who' ^ answer shape = 'aaa Aaa'	0.9988335277453757
+question prefix = 'what' ^ answer shape = 'aaa A Aaaaa aaaa'	0.4099316780536577
+question prefix = 'who' and answer shape = aaa Aaaa	0.5553594438205625
+question prefix = 'what' ^ answer shape = 'aaaa aaaa aaa'	1.1674720879853357
+lex type = Arg ^ leftTag = VBP	1.5544075987335444
+question prefix = 'what' ^ answer shape = 'aaaa aaaa'	0.2847858690218299
+question prefix = 'who' ^ answer shape = 'Aaaaa Aaa'	0.7638726878853525
+question prefix = 'UNK' ^ answer shape = 'Aaaaa Aaaaa'	1.0399933344442593
+lex type = Unary ^ leftTag = WRB	1.7752041326445591
+template arg pos tags = VB DT NN NN	-0.02888614556784802
+question prefix = 'what' ^ answer shape = 'aaaa aa aaaa'	-0.6222296283952674
+question prefix = 'where' and answer shape = AAaaaa	-0.08293119211414436
+template arg pos tags = NN NNS VBP	0.06709040260919545
+question prefix = 'who' and answer shape = aaaa AAA	0.9392656365287363
+question prefix = 'who' and answer shape = Aaaaa Aaa-aa Aaa	0.9541746148863354
+lex type = Binary ^ leftTag = WRB	-0.5627395434094316
+question prefix = 'what' ^ answer shape = 'a Aaaaa'	-0.22712881186468914
+template pair count1	-1.7095085549128093
+lex type = Identity ^ rightTag = NNS	0.7487085485752374
+parser lexical rule = fullPatternTypeSubj	0.2179636727212133
+lex category (postags) = Unary(WDT NN VBP NN NN VBP DT NN NN IN)	0.0
+lex type = Binary ^ leftTag = NNP	0.0
+parser lexical rule = adjPrepBinary	1.3764372604565906
+lex category (postags) = Binary(VB NN NN)	0.0
+template arg pos tags = VB JJ JJ	-0.43826028995167465
+question prefix = 'what' and answer shape = aaa aaa-aaaa-aaaa	0.6629836313394801
+lex category (postags) = Unary(WDT VB IN NN)	2.4687552074654224
+question prefix = 'who' and answer shape = Aaaa aaaa	0.09970379276644328
+lex category (postags) = Unary(NN IN JJ NN)	0.0
+lex type = Identity ^ rightTag = </s>	-0.052824529245125706
+parser lexical rule = whIdentity	-1.1683052824529245
+lex category (postags) = Unary(JJ JJ NN)	1.2637893684385935
+lex category (postags) = Unary(VB DT CD)	1.5409098483586068
+question prefix = 'who' ^ answer shape = 'aaaa Aaaaa Aaaaa'	-0.642892851191468
+lex type = Unary ^ rightTag = NNS	0.6937177137143808
+lex category (postags) = Arg(RB NNP)	0.3206132311281451
+question prefix = 'what' and answer shape = Aaa Aaaaa aa Aaaaa	0.9019931906347389
+question prefix = 'who' ^ answer shape = 'Aaaaa Aaaa'	0.2947842026328944
+lex category (postags) = Binary(VB DT JJ NN IN)	-0.9430094984169304
+question prefix = 'what' ^ isDate	-2.9205132477920346
+template arg pos tags = VBP NN	0.3517587081246012
+lex type = Binary ^ rightTag = CD	1.225962339610065
+parser lexical rule = fullPatternWhereIs	1.9055157473754374
+question prefix = 'what' ^ answer shape = 'aaaa aaaa aa aaa aaaa'	-0.9410098316947175
+template arg pos tags = CD NN NN	-0.43559406765539077
+lex category (postags) = Unary(WDT NN VBP JJ NN VB IN)	-0.982169638393601
+question prefix = 'what' and answer shape = AAAA	0.5059734530110157
+question prefix = 'what' ^ answer shape = '11 aaaa aaaa aa aaa Aaa Aaaa Aaaaa'	1.4844192634560907
+question prefix = 'where' and answer shape = aaa aaaa	-0.21571428061151038
+lex type = Binary ^ leftTag = VB	-1.9596733877687051
+question prefix = 'who' and answer shape = 1aa aaaa	-0.3191453179673534
+question prefix = 'when' ^ answer shape = 'aaa aaaa aaaa aa Aaaa'	-0.5617397100483252
+question prefix = 'what' and answer shape = Aaaa	-0.842357277204343
+question prefix = 'where' ^ answer shape = 'Aaaaa Aaaaa'	1.0028328611898016
+lex type = Identity ^ leftTag = WP	-0.17613731044825864
+lex type = Unary ^ leftTag = <s>	0.2697883686052325
+question prefix = 'when' ^ isDate	3.3342776203966005
+lex category (postags) = Unary(WDT VBP JJ NN VB)	2.4890851524745874
+question prefix = 'what' ^ answer shape = 'Aaaaa aa Aa Aaaaa'	1.1604732544575902
+template arg pos tags = VB NNP	0.0
+lex type = Identity ^ leftTag = VBP	0.9625062489585066
+question prefix = 'where' ^ answer shape = 'a Aaaaa aaaa'	-0.7165472421263123
+lex type = Binary ^ leftTag = JJR	0.0
+question prefix = 'where' ^ answer shape = 'aaa aaaa'	-1.639560073321113
+question prefix = 'who' and answer shape = Aaaaa Aaaaa Aaaaa	-0.2678957048631069
+lex type = Identity ^ leftTag = NNS	-0.3821029828361939
+lex category (postags) = Arg(DT NN NN)	0.4522579570071654
+question prefix = 'where' ^ answer shape = 'aaa Aaaaa Aaaa'	0.6930511581403099
+lex category (postags) = Binary(VB)	0.9980003332777871
+question prefix = 'where' and isDate	-0.9752066841280297
+evidence similarity with query (args only)	1.7903079425871642
+question prefix = 'what' and answer shape = Aaa Aaaaa Aaaaa Aaaa	0.5208824313686147
+template arg pos tags = JJ NNP	-0.47750664108824664
+question prefix = 'what' ^ answer shape = 'Aaaa Aaaa'	-0.05449091818030316
+question prefix = 'what' and answer shape = Aaaa Aaaaa	0.04659055736749684
+question prefix = 'when' and answer shape = aaa Aaaaa	0.6275748077401825
+lex category (postags) = Binary(VBP NN)	-0.66272287952008
+lex category (postags) = Unary(VB NN NNS NN .)	-0.08881853024495912
+question prefix = 'UNK' ^ answer shape = 'aaaa aa aaa AA'	-0.7513747708715214
+lex category (postags) = Unary(WDT NN VBP NN VB)	0.0
+lex category (postags) = Unary(WDT VB JJ NNS VB)	0.0
+question prefix = 'what' ^ answer shape = 'aaaa Aaaaa'	0.8178636893851023
+question prefix = 'where' ^ answer shape = 'a Aaaaa Aaaaa aaaa'	0.9746708881853025
+lex category (postags) = Binary(VB JJ NN IN)	0.0
+lex category (postags) = Arg(JJ JJ)	-1.3764372604565906
+lex type = Unary ^ rightTag = WRB	0.0
+template arg pos tags = VB NN VB	0.0
+question prefix = 'what' and answer shape = aaa aaaa aaaa	-0.9667540653755595
+question prefix = 'who' ^ answer shape = 'aaaa aaaa'	0.34494250958173633
+lex type = Arg ^ rightTag = CD	0.19813364439260125
+lex type = Arg ^ leftTag = WRB	1.9780036660556573
+lex category (postags) = Unary(WP VBP CD DT)	-0.9223462756207299
+question prefix = 'who' and answer shape = Aaaaa A.A.	0.5232119592369896
+lex type = Arg ^ leftTag = VB	-1.6285619063489416
+lex category (postags) = Binary(VB PRP$ NN)	0.9563406098983502
+question prefix = 'who' ^ answer shape = 'Aaaa-Aaaaa Aaaaa'	-0.6523912681219797
+lex type = Binary ^ rightTag = JJ	1.8666888851858023
+lex category (postags) = Unary(WDT NN VBP JJ NNS VB)	0.0
+question prefix = 'what' ^ answer shape = 'aa aaaa'	-0.39126812197967
+template arg pos tags = VB NN JJ IN	0.469514898141163
+template arg pos tags = WDT JJ VB VBP	0.0
+lex category (postags) = Unary(WP VB VBN NN)	0.9458423596067322
+lex type = Arg ^ leftTag = JJS	0.0
+question prefix = 'what' ^ answer shape = 'Aaaaa 1'	-0.3262789535077486
+question prefix = 'where' and answer shape = AA-Aaaaa	0.6764948929760541
+question prefix = 'what' and answer shape = a aaaa Aaaaa aaaa	0.4859395133429921
+lex category (postags) = Unary(VB JJ JJ NNS NN .)	-0.6273954340943175
+question prefix = 'who' and answer shape = Aaaaa	-1.1792070069713452
+question prefix = 'what' ^ answer shape = 'aaa Aaaa'	-1.5210798200299949
+lex type = Binary ^ rightTag = VBP	-2.0154974170971505
+template arg pos tags = NN NN JJ	-0.8850855313895114
+template arg pos tags = DT NN VB	-0.033079295730922775
+question prefix = 'where' ^ answer shape = 'aa Aaaaa aaaa aa aaaa'	1.428761873021163
+lex type = Identity ^ leftTag = CD	0.3322779536743876
+lex category (postags) = Unary(WP VBP RB NNP)	-0.3206132311281451
+question prefix = 'what' and answer shape = aaaa aaaa	0.17844183471751288
+lex category (postags) = Binary(VBN IN)	1.1608065322446257
+action type = ParaphraseRule	-4.358606898850192
+question prefix = 'what' ^ answer shape = 'aaaa -aa'	1.6077320446592234
+question prefix = 'who' ^ answer shape = '111 aaaa'	1.556073987668722
+question prefix = 'what year' ^ answer shape = 'AA1111'	0.42659556740543225
+dropFinalPrep	-4.358606898850192
+template arg pos tags = JJ NN VBN	0.6205862241350579
+question prefix = 'who' ^ answer shape = 'aaaa aaaa aaaa'	-0.4134310948175306
+question prefix = 'what' and answer shape = Aaaa aaa Aaaa	0.16958962881768852
+question prefix = 'what year' ^ answer shape = 'Aaaaa'	-0.5749041826362271
+question prefix = 'what' ^ answer shape = 'aaaa-aaa'	-0.6037327112147974
+lex category (postags) = Unary(WP DT NN VB IN JJ NNP)	-0.8400266622229628
+question prefix = 'who' and answer shape = Aaaaa Aaaaa	0.7556988405007986
+question prefix = 'what' ^ answer shape = 'Aaa 11aa Aaaaa Aaaaa Aaaaa Aaaaa'	0.860356607232128
+question prefix = 'UNK' ^ answer shape = 'Aaaa Aaa Aaaaa'	1.4724212631228129
+lex type = Arg ^ leftTag = TO	-1.432094650891518
+question prefix = 'what' and answer shape = aaaa aaaa aa aa	-0.5996204733196844
+template pair count2	-2.4208131875719276
+lex category (postags) = Unary(WDT NN VBP NN NN VB TO)	0.0
+lex category (postags) = Binary(JJ IN)	0.0
+lex type = Unary ^ leftTag = NN	0.4594234294284285
+lex category (postags) = Binary(VB IN)	1.370771538076987
+parser lexical rule = reverbBinary	1.036160639893351
+question prefix = 'what' ^ answer shape = 'a aaaa aaaa'	-0.23996000666555584
+question prefix = 'what' and answer shape = Aaa aaaa aaa	0.027488428846823135
+lex category (postags) = Unary(WDT VB TO NN NN)	0.0
+lex category (postags) = Unary(WDT JJ NN VBP NN VB)	-1.4527578736877187
+lex category (postags) = Unary(WDT NN NN VB JJ NN)	0.0
+question prefix = 'where' ^ answer shape = 'aaa AA.'	2.4712547908681883
+question prefix = 'what' and answer shape = Aaaaa Aaaa Aaaa	0.5092347920267405
+question prefix = 'where' ^ answer shape = 'aaa Aaaa Aaa'	0.6505582402932844
+lex category (postags) = Binary(DT NN IN)	0.05265789035160807
+lex category (postags) = Unary(WDT VB DT JJ NN IN NN)	0.2901183136143976
+parser lexical rule = fullPatternDefn	-1.098816863856024
+question prefix = 'where' and answer shape = 1111	-0.5446436156260381
+parser lexical rule = fullPatternHaveProp	0.4372604565905682
+lex type = Unary ^ rightTag = JJ	1.109315114147642
+lex category (postags) = Binary(VB NN)	-0.11464755874020997
+question prefix = 'what' and answer shape = Aaa aaaa aaaa aaaa aaaa	0.842357277204343
+question prefix = 'what' ^ answer shape = 'aaaa'	-1.3127812031328112
+question prefix = 'what' and answer shape = aaa Aaaaa aaaa	0.2590434989632825
+lex category (postags) = Unary(JJ NNP)	-0.3262789535077486
+question prefix = 'where' ^ answer shape = 'Aaaaa Aaaa Aaaa'	-0.9500083319446759
+question prefix = 'where' and answer shape = Aaa Aaaaa	0.09830607604541833
+parser lexical rule = adjArg	-0.7877020496583902
+question prefix = 'where' and answer shape = Aaaa Aaaaa	0.5991545677460094
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaaa'	0.6985502416263956
+lex category (postags) = Identity(VB)	-2.7050491584735874
+lex category (postags) = Arg(NN JJ JJ)	0.0
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaa'	0.4662556240626561
+template arg pos tags = DT IN NN NN	-0.5778030150741461
+parser lexical rule = beInstanceOf	-1.3881019830028327
+template arg pos tags = NN NN LS	0.0
+question prefix = 'what' and answer shape = aaaa	-0.5721320444728613
+lex type = Arg ^ rightTag = VB	-0.3766038993501082
+template arg pos tags = VBP NN NN NN	0.0
+question prefix = 'what' ^ answer shape = 'Aa'	1.2156307282119645
+question prefix = 'what' and answer shape = AAAA AAAA	0.6997901716598026
+lex type = Identity ^ rightTag = NN	3.104982502916181
+template arg pos tags = NN NN	-0.8034602161532006
+lex type = Arg ^ rightTag = VBP	-0.05515747375437419
+uses full parser pattern	1.3074487585402434
+question prefix = 'what' ^ answer shape = 'Aa. Aaaaa Aaaaa'	-0.5454090984835861
+question prefix = 'what' and answer shape = Aaa aaa aaaa	0.3606109140244256
+lex category (postags) = Unary(NN)	0.45625729045159114
+question prefix = 'what' ^ answer shape = 'a aaaa'	-0.43076153974337605
+question prefix = 'what' and answer shape = aaa Aaaa ?	0.6401542582294065
+question prefix = 'when' ^ answer shape = 'Aaaaa 11 , 1111'	1.262956173971005
+question prefix = 'what' and answer shape = Aaaa aaaa	0.9602313873441098
+question prefix = 'what' and answer shape = Aaaaa Aaa	-0.9989015499591324
+template arg pos tags = NNS	0.0
+lex type = Arg ^ leftTag = RP	0.6282286285619063
+parser lexical rule = possessiveUnary	-0.6715547408765206
+lex category (postags) = Unary(WRB VB JJ NN VB)	0.0929845025829028
+question prefix = 'who' and answer shape = a aaaa aaaa aaaa	-0.9057204352241387
+lex category (postags) = Arg(DT CD DT NN JJ NN)	0.0
+question prefix = 'when' and answer shape = Aaa aaaa aaa	0.707710566412277
+question prefix = 'what' and answer shape = Aaa Aaaa	-0.15794198947581428
+parser lexical rule = fullPatternProperty	2.34910848191968
+lex category (postags) = Identity(WRB JJ)	0.0
+lex category (postags) = Unary(VB VBN NNS NN .)	-0.2609565072487918
+question prefix = 'what' ^ answer shape = 'Aaa Aaaaa aa Aaaaa'	1.7567072154640893
+question prefix = 'who' ^ answer shape = 'aaa aaaa aaaa'	0.38026995500749877
+question prefix = 'where' ^ answer shape = 'aaa aaaa 11 aaaa'	-0.9561739710048325
+question prefix = 'what' and answer shape = AAA	0.5642116497203867
+question prefix = 'what' ^ answer shape = 'aaa aaa aa AA1'a A Aaaa aaa '11a'' aaaa'	-0.9921679720046659
+question prefix = 'who' ^ answer shape = 'aaa aaaa'	-1.484252624562573
+lex category (postags) = Binary(VB RB VB IN)	-0.7108815197467089
+template arg pos tags = NN VBP JJ	0.0
+question prefix = 'what' ^ isNumber	-0.4667555407432095
+lex category (postags) = Binary(VB DT NN IN)	-0.2779536743876021
+template arg pos tags = JJ NN IN JJ	0.9094476798135384
+lex type = Identity ^ rightTag = NNP	-0.3262789535077486
+template arg pos tags = VBN NN	0.0
+lex type = Unary ^ leftTag = VBP	-3.8308615230794865
+question prefix = 'what' ^ answer shape = 'aaa aaaa aaaa aaaa'	-1.8646892184635893
+question prefix = 'who' ^ isDate	-0.1611398100316614
+lex category (postags) = Unary(NN NN)	-0.18046992167972006
+question prefix = 'where' and answer shape = aaa Aaaa Aaa	-0.5684047998834614
+lex type = Arg ^ leftTag = NNS	0.9528411931344776
+template pair count12	-0.18898767836912145
+question prefix = 'who' ^ answer shape = 'Aaaaa Aaaaa'	1.1614730878186967
+question prefix = 'where' and answer shape = Aaa aaaa Aaaaa aaaa	-0.6084726792195088
+question prefix = 'what' and answer shape = aaaa a	-0.531598259563139
+lex type = Identity ^ rightTag = VBN	-1.090818196967172
+lex category (postags) = Unary(WDT VB DT NN IN NN)	4.61239793367772
+question prefix = 'where' ^ answer shape = 'aaaa.'	-1.2831194800866523
+question prefix = 'what' ^ answer shape = 'AAAA'	-0.4045992334610897
+lex category (postags) = Unary(NN NN NN)	-1.3052824529245124
+lex category (postags) = Unary(WRB VB JJ NN)	0.16580569905015832
+template arg pos tags = VB	0.44400801171224485
+question prefix = 'what' and answer shape = AaaAaaaa	-0.5777229113569609
+template arg pos tags = VB JJ NN	0.0
+question prefix = 'what' ^ answer shape = 'aaa 1111 AAAA Aaa'	-1.7073821029828362
+lex type = Identity ^ leftTag = VB	-0.15597400433261122
+template arg pos tags = VBD NNS	0.0
+template arg pos tags = NN IN DT NN	2.2968269229918334
+question prefix = 'what' and answer shape = Aaaaa ?	-0.10203332063481813
+template arg pos tags = RB	2.7802032994500916
+lex type = Binary ^ rightTag = </s>	-0.0226628895184136
+question prefix = 'what' and answer shape = Aaa Aaaa Aaaa	-0.48687132449034204
+lex category (postags) = Binary(VB VB)	-0.662056323946009
+parser lexical rule = npOfArg	1.0919846692217963
+template arg pos tags = NN IN NN	0.0
+lex type = Identity ^ leftTag = WDT	2.274120979836694
+template arg pos tags = DT FW FW NN	0.0
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaaa aa Aaaaa'	0.141643059490085
+lex type = Unary ^ leftTag = WP	-0.08881853024495912
+question prefix = 'what year' ^ isDate	1.0189968338610231
+template arg pos tags = DT NNP NN	0.0
+question prefix = 'what' ^ answer shape = 'Aaa Aaaaa'	-0.20546575570738201
+parser lexical rule = reverbBinaryNoPrep	-1.3147808698550243
+question prefix = 'who' ^ answer shape = 'a aaaa aaaa'	-0.944675887352108
+question prefix = 'when' ^ answer shape = 'aaaa'	-0.9731711381436428
+question prefix = 'what' and answer shape = ?Aaaa Aaaaa	0.39369020975534835
+question prefix = 'what' and answer shape = Aaaaa AA	-0.6187226018403581
+question prefix = 'UNK' ^ isNumber	0.0
+lex category (postags) = Arg(VBN NN)	-0.9458423596067322
+lex type = Unary ^ rightTag = VBN	1.1608065322446257
+question prefix = 'what' and answer shape = a.a	-0.4202468274548215
+question prefix = 'when' ^ answer shape = 'Aaaaa aaaa'	-0.8950174970838194
+lex category (postags) = Binary(VB RP)	0.0
+lex category (postags) = Binary(JJ TO)	1.3764372604565906
+template arg pos tags = VBP NN NN VB	-0.9481178424285608
+lex category (postags) = Unary(VB NN NNS NN NN .)	0.6715547408765206
+lex category (postags) = Binary(VBP JJ NN IN)	0.0
+lex category (postags) = Unary(VB JJ NN NN .)	0.37210464922512915
+lex type = Binary ^ leftTag = <s>	0.8666888851858023
+lex category (postags) = Unary(VB NN NN .)	-1.0563239460089986
+lex type = Identity ^ rightTag = PDT	0.0
+template arg pos tags = RB VB	0.0
+template arg pos tags = DT JJ NN	-0.955149458495708
+lex type = Identity ^ rightTag = IN	2.208798533577737
+question prefix = 'UNK' ^ isDate	0.0
+question prefix = 'what' ^ answer shape = 'Aaaa'	0.44692551241459755
+question prefix = 'what' ^ answer shape = '11.11 aaaa aaaa'	-0.9895017497083819
+lex type = Identity ^ rightTag = JJS	0.0
+lex category (postags) = Arg(NN NN)	-2.661889685052491
+lex type = Unary ^ rightTag = RP	0.6282286285619063
+question prefix = 'what' and answer shape = aaa Aaaa aaaa aaa	0.9280839027605371
+lex category (postags) = Unary(NN NNS NN)	-0.6715547408765206
+question prefix = 'what' and answer shape = aaa aaaa aaa	-0.7249490726382509
+template arg pos tags = DT CD NN	0.08471247523908637
+question prefix = 'what' ^ answer shape = 'Aaaaa ?'	-0.4954174304282619
+question prefix = 'where' ^ answer shape = 'Aa'	1.9516747208798533
+steps	-4.659687900010118
+question prefix = 'who' ^ answer shape = 'Aaa 11-aaaa-aaa'	-0.8783536077320446
+question prefix = 'when' ^ answer shape = '1111'	1.9921679720046659
+lex category (postags) = Unary(WDT VB DT NN IN NN NN)	-1.279286785535744
+action type = AbstractArgAction	-4.775147008137902
+lex category (postags) = Arg(NNS)	-1.1226462256290617
+question prefix = 'what' ^ answer shape = 'aaa aaa'	-1.3501083152807865
+lex category (postags) = Unary(WRB VB DT NN NNS VB)	0.5710714880853192
+lex type = Arg ^ rightTag = IN	-1.4950841526412266
+lex category (postags) = Unary(WP VBP NNP)	0.0
+answer from namespace 'openie4'	-0.4295444513780685
+question prefix = 'what' ^ answer shape = 'aaa.'	-0.9706715547408765
+lex category (postags) = Binary(DT NN NN IN)	0.0
+lex type = Binary ^ leftTag = VBP	0.811531411431428
+lex category (postags) = Binary(VB RB IN)	0.0
+question prefix = 'where' ^ answer shape = 'a aaaa'	-1.828528578570238
+question prefix = 'UNK' and answer shape = Aaaaa /	-0.8614594057250166
+lex category (postags) = Unary(WRB VB NN)	1.7315447425429096
+lex category (postags) = Arg(NNP)	0.32694550908181963
+question prefix = 'when' and answer shape = a aaaa aaa aaa	-0.707710566412277
+template arg pos tags = VB NNP VB	0.0
+question prefix = 'who' ^ isNumber	-1.338610231628062
+lex category (postags) = Unary(WRB VBP NN NN)	-1.432094650891518
+template arg pos tags = JJ NN VB	0.4842526245625729
+question prefix = 'where' ^ answer shape = 'aaaa aaaa'	-0.41426428928511905
+lex category (postags) = Arg(NN NNS)	0.1706382269621729
+question prefix = 'what' ^ answer shape = 'Aa. Aaaaa'	0.2609565072487918
+parser lexical rule = relMarkerIdentity	-0.29778370271621396
+parser lexical rule = fullPatternTypeDobj	-2.1498083652724547
+question prefix = 'who' and isDate	-0.8978000404716642
+question prefix = 'who' ^ answer shape = 'aaa Aaaaa aaaa'	1.1643059490084986
+parser lexical rule = nounPrepBinary	-0.9308448591901349
+question prefix = 'what' and answer shape = Aaa Aaaaa Aaaa	0.5003825861269161
+question prefix = 'what' ^ answer shape = 'aaaa-aaaa aaaa'	0.38043659390101653
+lex category (postags) = Unary(WP VB JJ NN NN VB)	0.0
+question prefix = 'what' and answer shape = Aaaaa & Aa	0.11321505440301734
+lex category (postags) = Unary(WP VBP NN NN VB)	0.0
+question prefix = 'where' ^ answer shape = 'Aaa Aaaaa Aaaaa Aaa'	2.7942009665055823
+lex type = Unary ^ rightTag = </s>	-1.0096650558240294
+question prefix = 'where' ^ answer shape = 'AAAA AA AAAA AAA-AAAA AAAA AAAA Aaaaa'	-0.008665222462922784
+question prefix = 'what' and answer shape = Aaaaa - Aaaaa	-0.4570533677751441
+lex category (postags) = Unary(WDT NN VBP DT JJ NN VBP JJ NN IN)	-0.4372604565905682
+template arg pos tags = JJ JJ	0.0
+template arg pos tags = VBP NNS	0.0
+lex category (postags) = Arg(CD)	-0.364939176803866
+question prefix = 'where' ^ answer shape = 'aaaa'	-1.9760039993334444
+query similarity with question	0.2010449511788377
+lex type = Arg ^ leftTag = NN	-1.1573071154807533
+question prefix = 'what' ^ answer shape = 'aaaa.'	-1.1651391434760874
+template arg pos tags = VB DT NN	-0.9570112179132642
+question prefix = 'what' ^ answer shape = 'aaa aaaa aa aaaa'	-0.5142476253957673
+lex type = Identity ^ rightTag = VBG	0.0
+question prefix = 'when' ^ isNumber	1.149641726378937
+question prefix = 'UNK' ^ answer shape = 'Aaaaa aaa Aaaaa'	1.28845192467922
+question prefix = 'what year' and answer shape = aaaa	-0.9523109925916355
+lex category (postags) = Arg(JJ NN)	-1.7710381603066154
+question prefix = 'who' ^ answer shape = 'aaa Aaa Aaaa Aaaa'	1.7850358273621063
+template arg pos tags = NN NN VBP NN	0.0
+lex type = Identity ^ leftTag = JJ	-0.45325779036827196
+lex type = Unary ^ leftTag = CD	0.6282286285619063
+question prefix = 'who' ^ answer shape = 'aaa Aaaaa Aaaaa'	-0.6853857690384936
+question prefix = 'who' ^ answer shape = 'aaa'	-0.633061156473921
+question prefix = 'how' ^ answer shape = 'Aaaaa'	-0.045492417930344864
+question prefix = 'when' ^ answer shape = 'Aaaaa 1 , 1111'	-0.8738543576070654
+lex type = Unary ^ rightTag = JJR	0.9308448591901348
+template arg pos tags = JJ	0.10990432939648304
+question prefix = 'what' and answer shape = aaa aaaa aaaa aaaa	-0.2888614556784804
+question prefix = 'what' ^ answer shape = 'aaa AAA aaaa'	-0.8926845525745709
+question prefix = 'what' and answer shape = aaa Aaaaa	0.07268126949329505
+lex category (postags) = Identity(WRB)	1.2099650058323612
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaaa aaaa aaaa'	-0.2422929511748041
+question prefix = 'where' and answer shape = Aaa Aaaa Aaaa	0.00652267803144961
+question prefix = 'where' ^ answer shape = 'aaa aaaa aaaa'	0.01016497250458257
+template arg pos tags = IN DT JJ NN	0.0
+question prefix = 'what' ^ answer shape = 'AAA-1'	-0.4275954007665389
+lex type = Identity ^ leftTag = WRB	-1.9805032494584238
+question prefix = 'what year' and isDate	1.9512788609770886
+question prefix = 'when' and answer shape = 1111	0.7170286778857764
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaa Aaaaa'	-0.3192801199800033
+lex category (postags) = Arg(JJ NN NN)	-0.7468755207465423
+question prefix = 'what' ^ answer shape = 'AAA'	0.2816197300449924
+question prefix = 'what' and answer shape = Aa aaa Aaaa aa Aaaaa aaa Aaaaa	0.34011106878272696
+lex category (postags) = Unary(WP VBP NN VB IN)	0.0
+question prefix = 'how many' ^ isDate	0.0
+question prefix = 'what' and answer shape = AA Aaaaa A	0.7216877336225261
+question prefix = 'UNK' and answer shape = AA, Aaaaa	0.32986114616187767
+lex type = Unary ^ leftTag = DT	0.8400266622229628
+action type = TemplatePair	-4.775147008137902
+template arg pos tags = RB RB	0.4627219166361418
+lex category (postags) = Unary(WP VBP NN)	0.8331944675887352
+question prefix = 'what' and answer shape = aaa aaaa aaaa aaa aaaa aaaa	0.7249490726382509
+question prefix = 'where' ^ answer shape = 'aaa Aaaaa'	-0.007498750208298617
+action type = RegexQuestionPattern	0.0
+lex category (postags) = Identity(JJ)	-0.1994667555407431
+question prefix = 'what' and answer shape = Aaaaa, aaa Aaaaa aaa Aaaaa	0.2902591723995054
+question prefix = 'what' ^ answer shape = 'A1'	1.3204465922346276
+template arg pos tags = WP VBP NNS	-0.6485299401558362
+lex category (postags) = Arg(JJ NN NN NN)	0.0
+template arg pos tags = JJ VB	-0.662056323946009
+lex category (postags) = Unary(VB DT NN)	0.34694217630394936
+lex category (postags) = Unary(WDT VB DT JJ NN)	-0.662056323946009
+question prefix = 'who' ^ answer shape = 'aaaa'	-1.5854024329278453
+lex category (postags) = Identity(CD)	1.5015830694884187
+template arg pos tags = NN VB	-0.44400801171224485
+template arg pos tags = DT CD NN NN	0.0
+question prefix = 'who' and answer shape = Aaaaa Aaaaa AAA	0.08199938096679446
+question prefix = 'who' and answer shape = Aaaaa Aaaa	1.3767509702095317
+question prefix = 'what year' ^ answer shape = 'Aaaaa Aaaaa'	-0.8706882186302283
+lex category (postags) = Binary(VBP DT NN)	0.0
+question prefix = 'what' and answer shape = aaa Aaaaa Aaaaa aaaa	0.5665411775887617
+lex type = Unary ^ rightTag = NNP	0.0
+question prefix = 'what' and answer shape = 11	-0.0638290635934707
+question prefix = 'where' ^ answer shape = 'AAAA'	-0.9563406098983502
+question prefix = 'where' ^ isNumber	-2.1886352274620897
+question prefix = 'where' and answer shape = Aaaaa	0.6932674936283529
+lex category (postags) = Unary(WP VB DT JJ NN IN NN)	0.0
+question prefix = 'who' and answer shape = aaa aa aaa aaaa	-0.9094476798135384
+relSynRule passivized	0.0
+template arg pos tags = NN NN VB IN	1.8696790671576484
+lex category (postags) = Arg(NN JJ)	0.984835860689885
+question prefix = 'what' ^ answer shape = 'Aaaaa'	0.4277620396600567
+lex type = Arg ^ rightTag = JJR	-0.9308448591901348
+lex type = Unary ^ rightTag = VB	0.5719046825529075
+question prefix = 'what' and answer shape = Aaaaa!	-0.3517587081246012
+lex category (postags) = Binary(VBG)	0.0
+lex type = Identity ^ rightTag = DT	3.9465089151808033
+lex category (postags) = Identity(NNS)	1.3894350941509748
+parser lexical rule = fullPatternWhenIn	-0.8856857190468255
+lex category (postags) = Unary(VB DT JJ NN NN .)	0.0
+template arg pos tags = NN	2.3992627826891284
+question prefix = 'what' ^ answer shape = 'Aaaa Aaaaa'	0.6372271288118647
+lex type = Unary ^ rightTag = RB	0.21213131144809194
+question prefix = 'who' and answer shape = 11 aaaa	-0.929481619481562
+template is typed	1.2254624229295117
+lex category (postags) = Binary(VB NN TO)	0.0
+question prefix = 'what' ^ answer shape = 'AaaaAaaa'	0.8380269955007499
+question prefix = 'where' ^ answer shape = 'AAaaaa'	0.364939176803866
+lex category (postags) = Arg(NN)	-1.4640893184469257
+lex category (postags) = Binary(JJ NN IN)	0.4677553741043159
+lex category (postags) = Arg(DT NN NN JJ)	0.0
+lex category (postags) = Unary(WDT VB NN)	0.029161806365605836
+lex category (postags) = Unary(WDT VB DT NN IN NNP)	0.0
+template arg pos tags = DT NN NN	0.10054879383889018
+question prefix = 'what' and answer shape = aaa Aaaa	-0.6350292969189819
+lex type = Identity ^ leftTag = NNP	1.2611231461423096
+template arg pos tags = NN NN JJ JJ	0.8850855313895114
+lex category (postags) = Binary(VBP)	-2.469588401933011
+question prefix = 'what' ^ answer shape = 'Aaa Aaaaa Aaaa'	0.37593734377603727
+lex category (postags) = Binary(VB VB IN)	0.0
+lex category (postags) = Unary(WDT NN VBP NN JJ VB)	0.0
+lex category (postags) = Unary(JJ NN NN)	1.7183802699550077
+question prefix = 'who' ^ answer shape = 'Aaaaa aa Aaaaa'	0.845859023496084
+question prefix = 'what' and answer shape = aAaaaa	0.6187226018403581
+question prefix = 'what' ^ answer shape = 'aaaa 11-11%'	-0.08615230794867512
+lex category (postags) = Identity(VBP)	2.3811031494750874
+question prefix = 'who' ^ answer shape = 'Aaaa aaaa 11,111'	-0.4677553741043159
+question prefix = 'what' ^ answer shape = '?aaaa?'	-0.7640393267788702
+question prefix = 'what' and answer shape = Aaa Aaa	0.12905584390796623
+lex category (postags) = Unary(VBP JJ NN NN .)	0.0
+question prefix = 'what' and answer shape = a aaaa	-0.14023757767616551
+lex type = Identity ^ leftTag = CC	-0.008665222462922784
+action type = ExecutionAction	0.0
+question prefix = 'who' ^ answer shape = 'a Aaaaa Aaaaa aaaa'	-0.7340443259456757
+lex type = Arg ^ rightTag = RB	-0.21213131144809194
+lex type = Arg ^ rightTag = WRB	0.008665222462922784
+question prefix = 'who' and answer shape = AAAA	-0.24832767076875825
+question prefix = 'what' and answer shape = Aaaa Aaaaa Aaaaa	0.11740820456609204
+question prefix = 'who' ^ answer shape = 'Aaaaa 11'	-0.573737710381603
+question prefix = 'who' and answer shape = aaaa	-0.5110984143214403
+question prefix = 'where' ^ answer shape = 'Aaaaa aaaa aaaa'	0.9500083319446759
+question prefix = 'what' and answer shape = Aaa aaaa aaaa	-0.36200863074545053
+lex category (postags) = Identity(.)	-0.052824529245125706
+question prefix = 'what' ^ answer shape = 'Aaa Aaaaa Aaaaa'	1.3499416763872687
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaa Aaaa'	0.4275954007665389
+lex category (postags) = Unary(WDT NN VB VBP NN)	0.48625229128478586
+question prefix = 'what' ^ answer shape = 'Aaaaa aa Aaaa'	1.1861356440593234
+question prefix = 'what' ^ answer shape = 'AA Aaaaa'	-0.4092651224795867
+lex category (postags) = Binary(NN TO)	0.0
