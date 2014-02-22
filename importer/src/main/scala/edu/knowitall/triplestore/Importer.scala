@@ -1,6 +1,7 @@
 package edu.knowitall.triplestore
 import scala.collection.mutable.HashMap
 import org.apache.solr.client.solrj.impl.ConcurrentUpdateSolrServer
+import org.apache.solr.client.solrj.impl.HttpSolrServer
 import org.apache.solr.common.SolrInputDocument
 import org.slf4j.LoggerFactory
 import edu.knowitall.openie.models.{ ExtractionArgument, ExtractionGroup, ReVerbExtraction, ReVerbExtractionGroup, Instance }
@@ -45,7 +46,8 @@ object Importer {
     val url = config.solrUrl
     val namespace = config.namespace
     val idPrefix = if (config.idPrefix.nonEmpty) config.idPrefix else namespace
-    val solr = new ConcurrentUpdateSolrServer(url, 1000, 4)
+    //val solr = new ConcurrentUpdateSolrServer(url, 1000, 4)
+    val solr = new HttpSolrServer(url)
     
     val id = new AtomicLong(0)
     def getNextId() =  idPrefix + id.getAndIncrement()
@@ -69,11 +71,11 @@ object Importer {
         System.err.print(".")
       }
     }
-    solr.blockUntilFinished()
+    //solr.blockUntilFinished()
     solr.commit()
     var runTime = (System.currentTimeMillis() - start) / 1000
     System.err.println()
     System.err.println("Added " + id.get + " docs in " + runTime + "secs")
-    solr.shutdownNow()
+    //solr.shutdownNow()
   }
 }

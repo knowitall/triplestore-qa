@@ -1,0 +1,330 @@
+question prefix = 'who' ^ answer shape = 'AAAA:AAAA'	-1.0
+lex category (postags) = Identity(DT IN)	1.0
+lex category (postags) = Unary(WDT NN VB JJ NNP)	0.0
+lex category (postags) = Unary(WRB VBP DT NNP NN VB)	0.0
+parser lexical rule = quantIdentity	3.0
+lex category (postags) = Arg(JJ)	-1.0
+parser lexical rule = finalNounHack	-1.0
+action type = RelSynRule	-1.0
+question prefix = 'what' ^ answer shape = 'Aaaa aaaa'	0.0
+lex category (postags) = Unary(WRB VBP DT NN NN VB)	-1.0
+evidence similarity with question	2.6678274340039048
+action type = ParsedQuestion	0.0
+lex type = Identity ^ rightTag = WP	0.0
+parser lexical rule = npArg	2.0
+lex category (postags) = Unary(WP VB DT NN IN NN NN)	1.0
+relSynRule pmi	1.0
+lex category (postags) = Unary(WRB VBP DT NN)	1.0
+question prefix = 'what' ^ answer shape = 'aaa-aaaa'	-1.0
+question prefix = 'what' ^ answer shape = 'aaa'	1.0
+lex category (postags) = Unary(WP VBP NN NN)	0.0
+parser lexical rule = punctIdentity	1.0
+answer is def noun	-1.0
+lex category (postags) = Unary(VBP NN JJ NN .)	-1.0
+template arg pos tags = NN JJ	1.0
+minimum join key similarity	-1.4801587301587302
+lex category (postags) = Unary(WDT VB DT NN IN DT JJ NN)	0.0
+lex type = Identity ^ leftTag = IN	0.0
+lex type = Identity ^ leftTag = VBN	0.0
+template pair pmi	0.8104592561721802
+lex category (postags) = Unary(VBP DT NN NN NN .)	1.0
+lex type = Binary ^ rightTag = NN	0.0
+fbid join key violation	0.0
+question prefix = 'what' ^ answer shape = '1111-11-11'	-1.0
+template arg pos tags = NN NN VB	0.0
+lex category (postags) = Unary(WRB VBP DT NN VB)	-1.0
+parser lexical rule = ofProp	-1.0
+lex category (postags) = Unary(WRB VB NN NN)	-1.0
+parser lexical rule = fullPatternRelType	1.0
+lex category (postags) = Identity(WDT)	2.0
+answer is linked to freebase	-1.0
+lex category (postags) = Unary(NN VBP NN VB)	1.0
+lex type = Binary ^ leftTag = NNS	1.0
+question prefix = 'what' ^ answer shape = 'aaa aaaa'	-1.0
+lex category (postags) = Binary(VBN)	0.0
+template prefix where => what	0.0
+lex type = Identity ^ leftTag = TO	1.0
+question prefix = 'who' ^ answer shape = 'aaaa AAA'	1.0
+parser lexical rule = auxIdentity	-1.0
+question prefix = 'where' ^ answer shape = 'aaa aaaa 1111a'	-1.0
+lex category (postags) = Unary(VB JJ NNS NN .)	0.0
+tuple conceptVagueness_f	0.7576113567612037
+lex category (postags) = Unary(WP DT NN VBP NN VB)	1.0
+lex type = Identity ^ leftTag = <s>	3.0
+template arg pos tags = NN NNS	0.0
+lex category (postags) = Unary(WRB VBP NN JJ VB)	1.0
+template arg pos tags = DT NN IN	-1.0
+question prefix = 'who' ^ answer shape = 'Aaaa'	-1.0
+question prefix = 'where' ^ answer shape = 'Aaaaa'	1.0
+parser combinator rule = LeftApply	-1.0
+tuple num_extrs_i	0.708862545748868
+question prefix = 'who' ^ answer shape = 'Aaaa Aaaa'	0.0
+lex category (postags) = Unary(VBP NN NN NN .)	1.0
+lex category (postags) = Unary(NN VBP NN NN VB)	0.0
+dropPP	-4.0
+lex type = Identity ^ rightTag = VBP	0.0
+parser combinator rule = UnaryIdentity	1.0
+lex category (postags) = Identity(JJS)	0.0
+question prefix = 'what' ^ answer shape = 'Aaa?aaaa'	1.0
+lex type = Arg ^ leftTag = WDT	-1.0
+lex type = Arg ^ rightTag = JJ	-1.0
+answer from namespace 'probase'	0.0
+action type = ProjectAction$	0.0
+answer from namespace 'reverb'	1.0
+lex category (postags) = Unary(NN IN NN)	1.0
+lex category (postags) = Unary(WP VB JJ NN NN VB IN)	0.0
+template arg pos tags = JJ NN	1.0
+action type = DropStopAction$	0.0
+lex type = Identity ^ leftTag = NN	-1.0
+question prefix = 'what' ^ answer shape = 'aaa aaa aaaa'	-1.0
+parser combinator rule = UnaryIntersect	-2.0
+lex type = Unary ^ leftTag = VB	-1.0
+lex type = Binary ^ leftTag = WDT	1.0
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaaa Aaaaa Aaaaa'	1.0
+template arg pos tags = DT JJ	0.0
+lex type = Identity ^ rightTag = VB	-1.0
+template arg pos tags = NNP	-1.0
+question prefix = 'who' ^ answer shape = 'aaa aaaa Aaaa'	1.0
+lex type = Binary ^ leftTag = JJ	-2.0
+question prefix = 'what' ^ answer shape = 'Aaa Aaaa'	0.0
+lex type = Unary ^ leftTag = JJ	0.0
+template prefix what => who	-1.0
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaaa Aaaaa'	0.0
+paraphrase lm	-1.3071100000000002
+question prefix = 'what' ^ answer shape = 'Aaaaa aaaa'	0.0
+num lexical rules	3.3306690738754696E-16
+parser lexical rule = fullPatternWhereIn	-1.0
+lex category (postags) = Binary(NN IN)	-1.0
+lex type = Unary ^ leftTag = IN	1.0
+dropTypeOf	0.0
+lex type = Binary ^ leftTag = WP	2.0
+lex category (postags) = Unary(VB NN NN NN .)	0.0
+template arg pos tags = DT NN	0.0
+lex type = Binary ^ rightTag = RB	-1.0
+lex category (postags) = Unary(WP VBP NN NNS VBP)	0.0
+question prefix = 'who' ^ answer shape = 'Aaaaa'	1.0
+template arg pos tags = DT	0.0
+lex category (postags) = Unary(VB NN NNS JJ NN .)	1.0
+lex category (postags) = Unary(NN VBP JJ NN VB)	0.0
+lex type = Arg ^ leftTag = IN	1.0
+lex type = Identity ^ rightTag = JJ	-1.0
+lex type = Binary ^ leftTag = NN	-1.0
+lex category (postags) = Unary(WRB VBP NN)	-2.0
+question prefix = 'UNK' ^ answer shape = 'Aaaaa'	-1.0
+lex category (postags) = Unary(WP VBP NN NN VBP VB)	1.0
+lex category (postags) = Arg(DT NN)	1.0
+lex category (postags) = Unary(VBP NN NN NN NN .)	1.0
+question prefix = 'what' ^ answer shape = 'a aaa aaaa'	1.0
+num conjuncts	-2.0
+action type = DropStopAction	1.0
+answer from namespace 'nell'	1.0
+lex category (postags) = Identity(WP)	0.0
+question prefix = 'who' ^ answer shape = 'aaa Aaaaa'	-1.0
+template prefix who => who	1.0
+lex category (postags) = Unary(WP VB DT NN IN NN)	0.0
+answer from namespace 'freebase'	0.0
+lex type = Identity ^ leftTag = RB	-1.0
+lex category (postags) = Unary(WDT VB DT JJ NN VB)	0.0
+parser lexical rule = fullPatternDobj	0.0
+tuple freq_i	-0.07027618873162236
+question prefix = 'when' and isDate	1.0
+query relation is light verb	0.0
+lex type = Arg ^ rightTag = NN	1.0
+question prefix = 'what' ^ answer shape = 'Aaaaa aa Aaaaa Aaaaa'	1.0
+question prefix = 'where' ^ isDate	-1.0
+template prefix what => UNK	-1.0
+lex category (postags) = Unary(WDT NN VBP JJ NN VBP VB)	0.0
+lex type = Binary ^ rightTag = VB	1.0
+lex category (postags) = Unary(WDT NN VB VBP VBN NN)	1.0
+template prefix who => where	0.0
+lex type = Arg ^ rightTag = </s>	3.0
+parser lexical rule = fullPatternSubj	1.0
+question prefix = 'what' ^ answer shape = 'Aaaaa ? aaaa'	1.0
+question prefix = 'who' ^ answer shape = 'Aaa Aaaaa'	-1.0
+lex type = Unary ^ leftTag = WDT	0.0
+template arg pos tags = NN VBP VBN NN	-1.0
+template prefix when => where	-1.0
+action type = ExecutionAction$	0.0
+lex category (postags) = Arg(DT JJ NN)	-1.0
+lex category (postags) = Unary(WDT NN VB IN NN)	-1.0
+parser lexical rule = npTitle	-1.0
+lex category (postags) = Arg(NN NN NN)	0.0
+lex category (postags) = Unary(WP VBP NN VB NN TO)	0.0
+parser combinator rule = RightApply	2.0
+lex category (postags) = Binary(VB NN IN)	1.0
+lex type = Arg ^ leftTag = VBP	1.0
+question prefix = 'what' ^ answer shape = 'aaaa aaaa'	-1.0
+template prefix what => where	-1.0
+lex type = Unary ^ leftTag = WRB	1.0
+template pair count1	-3.2034362256526947
+lex type = Identity ^ rightTag = NNS	1.0
+parser lexical rule = fullPatternTypeSubj	0.0
+parser lexical rule = adjPrepBinary	-1.0
+lex category (postags) = Unary(WP VBP DT JJ NN NN)	0.0
+lex type = Identity ^ rightTag = </s>	1.0
+parser lexical rule = whIdentity	1.0
+question prefix = 'who' ^ answer shape = 'Aaaaa Aaaa'	2.0
+lex category (postags) = Binary(VB DT JJ NN IN)	1.0
+question prefix = 'what' ^ isDate	-1.0
+lex type = Binary ^ rightTag = CD	2.0
+parser lexical rule = fullPatternWhereIs	-2.0
+question prefix = 'where' ^ answer shape = '11 aaaa'	-1.0
+question prefix = 'what' ^ answer shape = 'Aaa Aaaa Aa Aaaa Aa Aaa'	1.0
+question prefix = 'where' ^ answer shape = 'Aaaaa Aaaaa'	0.0
+lex type = Identity ^ leftTag = WP	-2.0
+lex type = Unary ^ leftTag = <s>	-2.0
+question prefix = 'what' ^ answer shape = 'Aaaaa aa Aa Aaaaa'	1.0
+lex type = Identity ^ leftTag = VBP	0.0
+question prefix = 'where' ^ answer shape = 'aaa aaaa'	0.0
+lex category (postags) = Arg(DT NN NN)	-1.0
+template arg pos tags = NN IN JJ CD	-1.0
+lex category (postags) = Binary(VB)	0.0
+question prefix = 'where' and isDate	-1.0
+lex category (postags) = Binary(VBP NN)	0.0
+question prefix = 'what' ^ answer shape = 'aaaa Aaaaa'	-1.0
+lex category (postags) = Binary(VB JJ NN IN)	0.0
+parser lexical rule = haveProp	1.0
+lex category (postags) = Arg(JJ JJ)	0.0
+question prefix = 'who' ^ answer shape = 'aaaa aaaa'	-2.0
+template prefix what => what	3.0
+lex type = Arg ^ leftTag = WRB	0.0
+lex type = Arg ^ leftTag = VB	0.0
+lex type = Binary ^ rightTag = JJ	0.0
+dropAdverb	1.0
+lex type = Arg ^ leftTag = JJS	0.0
+template arg pos tags = WP VB JJ NN	0.0
+template prefix who => what	-2.0
+lex type = Identity ^ leftTag = CD	2.0
+lex category (postags) = Binary(VBN IN)	1.0
+action type = ParaphraseRule	-3.0
+dropFinalPrep	-2.0
+lex category (postags) = Binary(VB VBN)	0.0
+question prefix = 'what' ^ answer shape = 'Aaa aaaa aaaa aaaa'	1.0
+lex category (postags) = Unary(NN IN JJ CD)	-1.0
+template pair count2	-1.6373837888240814
+lex category (postags) = Binary(JJ IN)	-1.0
+lex type = Unary ^ leftTag = NN	-1.0
+parser lexical rule = reverbBinary	6.0
+question prefix = 'where' ^ answer shape = 'aaa Aaaa Aaa'	1.0
+lex category (postags) = Binary(DT NN IN)	-1.0
+lex category (postags) = Unary(WDT VB DT JJ NN IN NN)	0.0
+parser lexical rule = fullPatternDefn	-1.0
+lex category (postags) = Binary(VB NN)	0.0
+lex category (postags) = Binary(VBP JJ NN NN)	-1.0
+question prefix = 'what' ^ answer shape = 'aaaa'	0.0
+parser lexical rule = adjArg	-1.0
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaaa'	0.0
+lex category (postags) = Identity(VB)	0.0
+parser lexical rule = beInstanceOf	-1.0
+lex type = Arg ^ rightTag = VB	-1.0
+template arg pos tags = VBP NN NN NN	0.0
+lex type = Identity ^ rightTag = NN	2.0
+question prefix = 'who' ^ answer shape = 'Aaa Aaaaa Aaaaa'	-1.0
+template arg pos tags = NN NN	0.0
+uses full parser pattern	-1.0
+question prefix = 'what' ^ answer shape = 'a aaaa'	-1.0
+lex category (postags) = Unary(WDT NN VBP NN NN VB IN)	0.0
+parser lexical rule = possessiveUnary	0.0
+parser lexical rule = fullPatternProperty	0.0
+question prefix = 'what' ^ answer shape = 'aaaa-aaaa'	1.0
+question prefix = 'who' ^ answer shape = 'aaa aaaa'	0.0
+question prefix = 'what' ^ isNumber	-1.0
+lex category (postags) = Binary(VB DT NN IN)	0.0
+lex category (postags) = Unary(VB NN NN NN NN .)	-1.0
+template prefix UNK => when	0.0
+lex type = Unary ^ leftTag = VBP	-1.0
+question prefix = 'who' ^ isDate	-1.0
+template pair count12	0.1663970798254013
+question prefix = 'who' ^ answer shape = 'Aaaaa Aaaaa'	1.0
+template arg pos tags = VBP VBN NN	1.0
+lex category (postags) = Unary(WDT VB DT NN IN NN)	-1.0
+tuple popularity_i	-0.17918558512875477
+template arg pos tags = WP VBP NN NN	0.0
+lex category (postags) = Unary(DT NN IN NN NN)	-1.0
+lex category (postags) = Unary(VBP VBN NN NN .)	-1.0
+lex type = Identity ^ leftTag = VB	1.0
+question prefix = 'what' ^ answer shape = 'aa aaaa aaaa'	-1.0
+template arg pos tags = RB	0.0
+lex type = Binary ^ rightTag = </s>	-1.0
+lex category (postags) = Binary(VB VB)	-1.0
+template arg pos tags = NN IN NN	1.0
+lex type = Identity ^ leftTag = WDT	2.0
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaa Aaaaa Aaaaa Aaaaa'	-1.0
+lex type = Unary ^ leftTag = WP	0.0
+question prefix = 'what' ^ answer shape = 'Aaa Aaaaa'	0.0
+parser lexical rule = reverbBinaryNoPrep	-1.0
+template arg pos tags = NN JJ VB	0.0
+question prefix = 'UNK' ^ isNumber	0.0
+lex type = Unary ^ rightTag = VBN	0.0
+lex type = Arg ^ rightTag = VBN	0.0
+lex category (postags) = Unary(VB JJ NN NN .)	-1.0
+lex type = Binary ^ leftTag = <s>	-1.0
+lex category (postags) = Unary(VB NN NN .)	-1.0
+template arg pos tags = DT JJ NN	-1.0
+lex type = Identity ^ rightTag = IN	1.0
+question prefix = 'UNK' ^ isDate	0.0
+lex type = Arg ^ rightTag = NNS	0.0
+lex type = Identity ^ rightTag = JJS	0.0
+lex category (postags) = Arg(NN NN)	1.0
+parser lexical rule = fullPatternCopRel	0.0
+steps	-3.5
+action type = AbstractArgAction	-3.0
+lex category (postags) = Arg(NNS)	0.0
+lex type = Arg ^ rightTag = IN	-1.0
+lex category (postags) = Unary(WP VBP NNP)	1.0
+answer from namespace 'openie4'	-1.0
+question prefix = 'who' ^ isNumber	-1.0
+template arg pos tags = JJ NN VB	0.0
+lex category (postags) = Arg(NN NNS)	1.0
+parser lexical rule = relMarkerIdentity	2.0
+parser lexical rule = fullPatternTypeDobj	0.0
+parser lexical rule = nounPrepBinary	-2.0
+lex category (postags) = Unary(WP VBP NN NN VB)	-1.0
+lex type = Unary ^ rightTag = </s>	-1.0
+query similarity with question	4.01468253968254
+lex type = Arg ^ leftTag = NN	0.0
+question prefix = 'UNK' ^ answer shape = 'Aaaaa aaa Aaaaa'	1.0
+lex category (postags) = Arg(JJ NN)	0.0
+question prefix = 'who' ^ answer shape = 'aaa Aaa Aaaa Aaaa'	1.0
+lex type = Identity ^ leftTag = JJ	1.0
+template prefix who => when	-1.0
+lex category (postags) = Arg(NN RB)	-1.0
+lex category (postags) = Identity(WRB)	1.0
+question prefix = 'where' ^ answer shape = 'aaa aaaa aaaa'	0.0
+question prefix = 'what' ^ answer shape = 'Aaaaa aaa aaaa aa Aaaaa'	-1.0
+lex type = Identity ^ leftTag = WRB	0.0
+question prefix = 'what year' and isDate	1.0
+template prefix who => be	-1.0
+action type = TemplatePair	-3.0
+template prefix where => when	-1.0
+lex category (postags) = Unary(VB DT NNS NN .)	0.0
+lex category (postags) = Unary(NN NN VBZ NN)	0.0
+lex category (postags) = Identity(JJ)	0.0
+question prefix = 'who' ^ answer shape = 'aaaa'	-1.0
+lex category (postags) = Identity(CD)	2.0
+template arg pos tags = NN VB	1.0
+question prefix = 'where' ^ isNumber	-2.0
+lex category (postags) = Arg(NN JJ)	0.0
+question prefix = 'what' ^ answer shape = 'Aaaaa'	0.0
+lex type = Unary ^ rightTag = VB	-2.0
+lex category (postags) = Binary(VB DT NN NN IN)	1.0
+lex type = Identity ^ rightTag = DT	2.0
+question prefix = 'who' ^ answer shape = 'Aaaa AaaAaaaa'	1.0
+template arg pos tags = NN	-1.0
+question prefix = 'what' ^ answer shape = 'Aaaa Aaaaa'	0.0
+template is typed	1.0
+lex category (postags) = Binary(VB NN TO)	1.0
+lex category (postags) = Arg(NN)	1.0
+tuple conf_f	0.8616867661476135
+lex category (postags) = Unary(WP VB DT NN)	-1.0
+template arg pos tags = DT NN NN	-1.0
+lex type = Identity ^ leftTag = NNP	1.0
+lex category (postags) = Binary(VBP)	1.0
+question prefix = 'who' ^ answer shape = 'Aaaaa Aaa-aa Aaa'	1.0
+question prefix = 'what' ^ answer shape = 'Aaa Aaaaa Aaaa'	-1.0
+lex category (postags) = Identity(VBP)	-1.0
+template prefix where => where	0.0
+template arg pos tags = JJ NN IN	-1.0
+question prefix = 'who' ^ answer shape = 'Aaaaa 11'	-1.0
+lex category (postags) = Identity(.)	1.0
+question prefix = 'what' ^ answer shape = 'Aaaaa Aaaa Aaaa'	1.0

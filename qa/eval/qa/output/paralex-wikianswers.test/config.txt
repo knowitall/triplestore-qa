@@ -21,4 +21,4 @@ tuplefeatures	{"resourcePath":"/edu/knowitall/search/qa/tupleFeatures.txt"}
 awt	{"toolkit":"sun.awt.X11.XToolkit"}
 user	{"home":"/home/afader","timezone":"","dir":"/projects/WebWare3/usr/afader/Projects/triplestore-qa/qa","name":"afader","language":"en","country":"US"}
 learning	{"labelsPath":"eval/qa/labels/labels.txt","oracleMode":"interactive","numIters":10,"outputsPath":"eval/qa/models"}
-search	{"expandPerIter":16,"transitions":{"project":true,"ruleParaphrase":true,"execute":true,"templateParaphrase":"false","relSyn":"false","paralex":false,"dropStops":"false","isaRelSyn":true,"parse":"false"},"beamSize":10000,"beamType":"typed","transition":{"ruleParaphrase":"false","paralex":"true","isaRelSyn":"false"},"maxSearchTimeSec":"20","maxIters":100,"goalSize":1000}
+search	{"expandPerIter":16,"transitions":{"project":true,"ruleParaphrase":true,"execute":true,"templateParaphrase":"false","paralex":"true","relSyn":"false","isaRelSyn":"false","dropStops":"true","parse":"false"},"beamSize":10000,"beamType":"typed","transition":{"ruleParaphrase":"false"},"maxSearchTimeSec":"20","maxIters":100,"goalSize":1000}

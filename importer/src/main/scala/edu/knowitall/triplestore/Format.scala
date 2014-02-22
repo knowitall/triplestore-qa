@@ -76,7 +76,7 @@ case class ProbaseFormat(namespace: String, idFactory: () => String) extends Tup
     val split = splitRegex.split(line)
     if (split.length >= attrNames.length) {
       val list = ("rel", relationName) :: attrNames.zip(split)
-      Some(list)
+      Some(list filter { case (a,b) => b != "NULL" })
     } else {
       System.err.println(s"Warning, unparseable probase entry $line")
       None
