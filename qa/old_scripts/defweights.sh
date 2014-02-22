@@ -1,0 +1,3 @@
+JAVA_OPTS=-Xmx16g ./target/start -Dscoring.weights=src/main/resources/edu/knowitall/search/qa/defaultWeights.txt -Dparsing.cg.lexicalRuleKeep='^fullPattern|^.*Identity$' -Dparaphrase.template.maxHits=100 -Dsearch.maxSearchTimeSec=20 edu.knowitall.eval.qa.QASystemRunner eval/qa/questions/webquestions.test.txt eval/qa/output/defaultWeights-webquestions.test
+
+JAVA_OPTS=-Xmx16g ./target/start -Dscoring.weights=src/main/resources/edu/knowitall/search/qa/defaultWeights.txt -Dparsing.cg.lexicalRuleKeep='^fullPattern|^.*Identity$' -Dparaphrase.template.maxHits=100 -Dsearch.maxSearchTimeSec=20 edu.knowitall.eval.qa.QASystemRunner eval/qa/questions/trec.test.txt eval/qa/output/defaultWeights-trec.test
