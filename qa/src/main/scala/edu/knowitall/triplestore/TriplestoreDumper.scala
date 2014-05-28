@@ -21,7 +21,8 @@ object TriplestoreDumper extends App {
     val index = FSDirectory.open(new File(input))
     val reader = DirectoryReader.open(index)
     for {
-      i <- 0 until reader.numDocs;
+      i <- 0 until reader.numDocs
+      _ = System.err.println(i)
       doc = reader.document(i)
       fields = doc.getFields()
       pairs = fields.map(fieldToPair).map(x => x._1 + "\t" + x._2).mkString("\t")
