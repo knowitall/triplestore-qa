@@ -24,8 +24,9 @@ object TriplestoreDumper extends App {
     for (i <- 1 until reader.numDocs) {
       val doc = reader.document(i)
       val fields = doc.getFields()
-      val pairs = fields.map(fieldToPair).map(x => x._1 + "\t" + x._2).mkString("\t")
-      println(pairs)
+      val pairs = fields.map(fieldToPair)
+      val line = pairs.map{ case (k, v) => k + "\t" + v }.mkString("\t")
+      println(line)
     }
   }
 
