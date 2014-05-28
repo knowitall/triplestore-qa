@@ -17,7 +17,6 @@ object TriplestoreDumper extends App {
       throw new IllegalArgumentException("Usage: class input-dir")
     }
     val input = args(0)
-    val output = args(1)	
     val index = FSDirectory.open(new File(input))
     val reader = DirectoryReader.open(index)
     
