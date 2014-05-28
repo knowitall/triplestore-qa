@@ -13,8 +13,8 @@ object TriplestoreDumper extends App {
    
   
   override def main(args: Array[String]) {
-    if (args.size != 2) {
-      throw new IllegalArgumentException("Usage: class input-dir output-file")
+    if (args.size != 1) {
+      throw new IllegalArgumentException("Usage: class input-dir")
     }
     val input = args(0)
     val output = args(1)	
