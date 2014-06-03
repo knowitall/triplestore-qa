@@ -17,9 +17,10 @@ for line in sys.stdin:
         pods = res.pods
         if len(pods) >= 2 and pods[1].title == 'Result' and pods[1].text:
             lines = pods[1].text.split('\n')
-            if len(lines) > 1: lines = [line.strip() for line in lines[1:] if line.strip()]
+            if len(lines) > 1: lines = [line.strip() for line in lines if line.strip()]
             for (k, answer) in enumerate(lines):
-                row = [question, answer, -1 * k, pods[0].text]
+                if answer == '(data not available)': break
+                row = [question, answer, -1 * k, pods[0].text.replace('\n', ' ')]
                 print '\t'.join(unicode(x) for x in row)
                 print >>sys.stderr, 'Answer: %s' % answer
         else:
