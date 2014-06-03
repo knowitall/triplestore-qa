@@ -3,7 +3,6 @@ how many languages do they speak in switzerland?	German  (64%)  |  Schwyzerdüts
 what airport is near arlington tx?	(straight-line distances between city center and airport)	0	Arlington, Texas | nearby airports
 what all did ben franklin invent?	franklin stove  (1741)  |  lightning rod  (1749)  |  glass harmonica  (1761)  |  bifocals  (1764)  |  electrostatic motor	0	Benjamin Franklin | notable inventions
 what are egyptian money called?	£1  (Egyptian pound)	0	Egypt | currency name
-what are john terry's children called?	(data not available)	0	Johnny Terry | children
 what are serena williams achievements?	Has won 27 Grand Slam titles in singles, doubles, and mixed doubles, and held four simultaneously in 2002--03	0	Serena Williams | notable facts
 what are serena williams achievements?	Younger sister of tennis player Venus Williams	-1	Serena Williams | notable facts
 what are serena williams achievements?	Has won more prize money than any other female athlete	-2	Serena Williams | notable facts
@@ -18,7 +17,6 @@ what awards did marilyn monroe won?	(None)	0	Academy Awards | Marilyn Monroe  (a
 what awards gary paulsen won?	(None)	0	Academy Awards | Gary Paulsen  (writer, etc.) wins
 what book did benjamin franklin published?	The Autobiography of Benjamin Franklin	0	notable books | with | author | Benjamin Franklin
 what book did charles darwin wrote in 1859?	The Origin of Species	0	notable books | with  | author | Charles Darwin and  | first publication date |  in 1859
-what book did tupac write?	(data not available)	0	notable books | with | author | Tupac Shakur
 what books are written by suzanne collins?	Catching Fire	0	notable books | with | author | Suzanne Collins
 what books are written by suzanne collins?	Mockingjay	-1	notable books | with | author | Suzanne Collins
 what books did agatha christie wrote?	Death on the Nile	0	notable books | with | author | Agatha Christie
@@ -34,7 +32,6 @@ what books did ernest hemingway write?	Across the River and Into the Trees	-3	no
 what books did ernest hemingway write?	...	-4	notable books | with | author | Ernest Hemingway
 what books did ernest hemingway write?	(total: 8)	-5	notable books | with | author | Ernest Hemingway
 what books did louis sachar wrote?	Holes	0	notable books | with | author | Louis Sachar
-what character did billy d williams play in star wars?	(data not available)	0	Star Wars | with | cast member | Billy Dee Williams | cast and roles
 what city is acadia university in?	Wolfville, Nova Scotia, Canada  (population: 3772)	0	Acadia University | location
 what countries are involved in the nafta?	Canada  |  Mexico  |  United States	0	North American Free Trade Agreement is signed | countries involved
 what countries are members of the security council?	Australia	0	countries | in UN Security Council
@@ -64,7 +61,6 @@ what county is utica ny in?	Oneida County, New York	0	Utica, New York | county
 what county is west st paul in?	Dakota County, Minnesota	0	West Saint Paul, Minnesota | county
 what currency is used in panama?	currency code | PAB	0	Panama | currency
 what currency is used in panama?	local currency conversion | B/.1  (Panama balboa) = $1  (US dollar)	-1	Panama | currency
-what did alice paul accomplish?	(data not available)	0	Alice Paul | notable facts
 what did bobby darin die of?	Thursday, December 20, 1973	0	Bobby Darin | date of death
 what did joan crawford died of?	Tuesday, May 10, 1977	0	Joan Crawford | date of death
 what did michael crabtree do?	football player	0	Michael Crabtree | occupation
@@ -98,7 +94,6 @@ what has angelina jolie accomplished?	First appeared onscreen as a child with he
 what has angelina jolie accomplished?	Lives with actor Brad Pitt and their six children in a relationship that has attracted international publicity	-2	Angelina Jolie | notable facts
 what inventions were made by ben franklin?	franklin stove  (1741)  |  lightning rod  (1749)  |  glass harmonica  (1761)  |  bifocals  (1764)  |  electrostatic motor	0	Benjamin Franklin | notable inventions
 what is arkansas state capitol?	Little Rock, Arkansas, United States	0	Arkansas | capital
-what is carlos pena jr nationality?	(data not available)	0	Carlos Pena, Jr. | nationality
 what is ella fitzgerald parents name?	Temperance Fitzgerald  |  William Fitzgerald	0	Ella Fitzgerald | parents
 what is houston timezone?	Central Time	0	Houston, Texas | time zone
 what is jacksonville fl timezone?	Eastern Time	0	Jacksonville, Florida | time zone
@@ -123,7 +118,6 @@ what is the name of airport in new york?	LaGuardia Airport | LaGuardia Airport	0
 what is the name of the capital of belgium?	Brussels, Belgium	0	Belgium | capital city
 what is the name of the san francisco newspaper?	San Francisco	0	San Francisco  (periodical) | title
 what is the national language of iran?	Persian	0	Iran | official languages
-what is the new movie john carter about?	(data not available)	0	most recent movies | by  | release date |  with  | cast member | John Carter
 what is the nigeria time?	9:35:21 pm WAT  |  Thursday, May 29, 2014	0	current time in Nigeria
 what is the official language of brazil now?	Portuguese	0	Brazil | official languages | current time
 what is the primary language of china?	Mandarin  (66%)  |  Wu Chinese  (5.9%)  |  Cantonese  (4%)  |  Jinyu Chinese  (3.4%)  |  Xiang Chinese  (2.8%)  |  Hakka Chinese  (2%)  |  Min Nan Chinese  (2%)  |  Gan Chinese  (1.6%)  |  Min Bei Chinese  (0.79%)  |  Northern Zhuang  (0.77%)  |  ...   (total: 226)	0	China | languages
@@ -233,19 +227,8 @@ what offices did theodore roosevelt hold?	Theodore Roosevelt, Jr. | President (2
 what offices did theodore roosevelt hold?	Theodore Roosevelt, Jr. | Vice President | United States | Republican | March 4, 1901 | September 14, 1901	-2	Theodore Roosevelt | leadership position
 what offices did theodore roosevelt hold?	Theodore Roosevelt, Jr. | Governor (New York) | United States | Republican | January 1, 1899 | January 1, 1901	-3	Theodore Roosevelt | leadership position
 what places in japan were bombed?	Fat Man | Nagasaki, Japan	0	nuclear explosions | in Japan | location
-what role did george lucas play in star wars?	(data not available)	0	Star Wars | with | cast member | George Lucas | cast and roles
-what songs did franz liszt compose?	(data not available)	0	music works | with | composer | Franz Liszt  (composer)
 what sri lanka capital?	Colombo, Sri Lanka	0	Sri Lanka | capital city
 what state is washington d.c. located?	District of Columbia | location	0	Washington, District of Columbia | administrative region | location
-what team does colin kaepernick play for?	(data not available)	0	Colin Kaepernick | team | 2013-14
-what team does jeremy lin play for 2013?	(data not available)	0	Jeremy Lin | team | 2013-14
-what team does josh hamilton play for?	(data not available)	0	Joshua Holt Hamilton | team | 2014
-what team is hank baskett on 2010?	(data not available)	0	Hank Baskett | team | 2010-11
-what team is kris humphries play for?	(data not available)	0	Kris Humphries | current team
-what team is raul ibanez on?	(data not available)	0	Raul Ibanez | team | 2014
-what team is reggie bush on 2011?	(data not available)	0	Reggie Bush | team | 2011-12
-what team was chris paul on?	(data not available)	0	Chris Paul | team | 2013-14
-what teams has manny ramirez played for?	(data not available)	0	Manny Ramirez | total plays | 2013-14 regular season
 what the language spoken in indonesia?	Javanese  (32%)  |  Sunda  (12%)  |  Indonesian  (9.8%)  |  Madura  (5.9%)  |  Malay  (4.3%)  |  Minangkabau  (2.8%)  |  Banjar  (2.2%)  |  Bugis  (1.5%)  |  Malay Balinese  (1.4%)  |  Aceh  (1.3%)  |  ...   (total: 708)	0	Indonesia | languages
 what the time zone in england?	UTC	0	United Kingdom | time zones
 what the time zone in japan?	UTC+9	0	Japan | time zones
@@ -296,30 +279,24 @@ what was napoleon bonaparte accomplishments?	Exiled to the island of Elba, but e
 what was napoleon bonaparte accomplishments?	Defeated by combined British and Prussian armies at the Battle of Waterloo and confined by the British to the island of Saint Helena for the remainder of his life	-2	Napoleon Bonaparte | notable facts
 what was napoleon bonaparte accomplishments?	Reformed the French legal system with the influential Napoleonic Code	-3	Napoleon Bonaparte | notable facts
 what was nikola tesla inventions?	alternating current  (1866)  |  induction motor  (~~ 1885)  |  radio  (1895)  |  radio control  (1898)  |  remote control  (1898)  |  ...   (total: 9)	0	Nikola Tesla | notable inventions
-what was pink floyd's first album?	(data not available)	0	music albums | with | music work | The What (music work) and | music work | Was (music work) and | artist | Pink Floyd (music act) and | music work | First (music work)
-what was scottie pippen known for?	(data not available)	0	Scottie Pippen | notable facts
 what was sir isaac newton's inventions?	reflecting telescope  (1668)  |  Newtonian telescope	0	Isaac Newton | notable inventions
 what was the name of benjamin franklin wife?	Deborah Read  (1730-1774)  (common-law marriage)	0	Benjamin Franklin | wives
 what was the name of jfk's brothers?	Joseph P. Kennedy  |  Robert F. Kennedy  |  Ted Kennedy	0	John F. Kennedy | brothers
 what was the title of the book charles darwin wrote?	The Origin of Species | The Origin of Species	0	notable books | with | author | Charles Darwin | title
 what was the title of the book charles darwin wrote?	The Descent of Man, and Selection in Relation to Sex | The Descent of Man, and Selection in Relation to Sex	-1	notable books | with | author | Charles Darwin | title
-what was van halen first album?	(data not available)	0	music albums | with | music work | The What (music work) and | music work | Was (music work) and | artist | Van Halen (music act) and | music work | First (music work)
 what year does hitler die?	1945	0	Adolf Hitler | year of death
 what year was first world series?	Oct 1, 1903  to  Oct 13, 1903	0	World Series | 1903 | date
 what year was george w bush elected?	November 7, 2000	0	George W. Bush wins over Al Gore in disputed presidential election | start date
 what year was hitler was born?	1889	0	Adolf Hitler | year of birth
 what's my timezone in oklahoma?	4:25:10 pm CDT  |  Thursday, May 29, 2014	0	convert current time at current geoIP location to Oklahoma  (US state)
 when did annie open?	May 21, 1982	0	Annie  (movie) | release date
-when did mark mcgwire retired?	(data not available)	0	Mark McGwire | strikeouts | 2014 regular season
 when did the san francisco earthquake occur?	April 18, 1906	0	San Francisco Earthquake | date
 when does jewish new year start?	12:00 am PDT  |  Thursday, September 25, 2014	0	start of | Rosh Hashanah | 2014
 when is st joseph birthday?	~~ 20 AD	0	St. Joseph | date of birth
 when was lucy lawless born?	Friday, March 29, 1968	0	Lucy Lawless | date of birth
-when was president john adams elected?	(data not available)	0	US election contests | with | candidate | John Adams  (politician)
 where are the sahara desert located?	Algeria  |  Chad  |  Egypt  |  Libya  |  Mali  |  Niger  |  Mauritania  |  Morocco  |  Sudan  |  Tunisia   (total:  10)	0	Sahara | countries
 where are the timezones in the usa?	UTC-10  |  UTC-9  |  UTC-8  |  UTC-7  |  UTC-6  |  UTC-5	0	United States | time zones
 where did alex chilton die?	New Orleans, Louisiana, United States	0	Alex Chilton | place of death
-where did alexander graham bell die?	(data not available)	0	Alexander Graham Bell | place of death
 where did antoine lavoisier die?	Paris, Ile-de-France, France	0	Antoine-Laurent de Lavoisier | place of death
 where did charles darwin die?	London, Greater London, United Kingdom	0	Charles Darwin | place of death
 where did eleanor roosevelt die?	New York City, New York, United States	0	Eleanor Roosevelt | place of death
@@ -395,10 +372,7 @@ who are the virginia senators 2013?	Mark Robert Warner  (Democrat, start date: 2
 who did annie oakley married?	Frank E. Butler  (1876-1926)	0	Annie Oakley | spouses
 who did ben franklin marry?	Deborah Read  (1730-1774)  (common-law marriage)	0	Benjamin Franklin | spouses
 who did benjamin franklin get married to?	Deborah Read  (1730-1774)  (common-law marriage)	0	Benjamin Franklin | spouses
-who did brett gardner play for in 2008?	(data not available)	0	Brett Gardner | current team
-who did carlos boozer play for?	(data not available)	0	Carlos Boozer | current team
 who did carrie ann inaba get engaged to?	Jesse Sloan	0	Carrie Ann Inaba | spouses
-who did cristiano ronaldo play for in 2010?	(data not available)	0	Cristiano Ronaldo | current team
 who did denise van outen married?	Lee Mead  (2009-2013)	0	Denise van Outen | spouses
 who did granville t. woods married?	Loretta Woods	0	Granville T. Woods | spouses
 who did kim richards marry?	G. Monty Brinson  (1985-1988)  |  Gregg Davis  (-1991)  |  John Jackson  (domestic partnership)  |  John J. Collett  (-1991)  (domestic partnership)	0	Kim Richards | spouses
@@ -406,34 +380,19 @@ who did kimberly williams marry?	Brad Paisley  (2003-)	0	Kimberly Williams | spo
 who did lbj marry?	Lady Bird Johnson  (1934-1973)	0	Lyndon B. Johnson | spouses
 who did michael j fox marry?	Tracy Pollan  (1988-)	0	Michael J. Fox | spouses
 who did morgan freeman marry?	Jeanette Adair Bradshaw  (1967-1979)  |  Myrna Colley-Lee  (1984-2010)	0	Morgan Freeman | spouses
-who did paul revere marry?	(data not available)	0	Paul Revere | spouses
 who did reese witherspoon get married to?	Ryan Phillippe  (1999-2007)  |  Jim Toth  (2011-)	0	Reese Witherspoon | spouses
 who did roger federer married?	Mirka Federer  (2009-)	0	Roger Federer | spouses
 who did sandra bullock marry?	Jesse James  (2005-2010)	0	Sandra Bullock | spouses
 who did sir francis drake marry?	Mary Newman  (1569-1581)  |  Elizabeth Sydenham  (1585-1596)	0	Sir Francis Drake | spouses
-who did terrell owens play for in 2010?	(data not available)	0	Terrell Owens | current team
-who did tom landry play for?	(data not available)	0	Tom Landry | current team
 who did vladimir lenin marry?	Nadezhda Krupskaya  (1898-1924)	0	Lenin | spouses
 who did william shakespeare marry?	Anne Hathaway  (1582-1616)	0	William Shakespeare | spouses
-who does albert pujols play for 2012?	(data not available)	0	Albert Pujols | current team
-who does brian dawkins play for 2011?	(data not available)	0	Brian Dawkins | current team
 who does japan import from?	China  |  United States  |  Saudi Arabia  |  United Arab Emirates  |  Australia  |  South Korea  |  Indonesia   (total:  7)	0	Japan | import partners
-who does jeremy lin play for?	(data not available)	0	Jeremy Lin | current team
-who does jeremy shockey play for in 2012?	(data not available)	0	Jeremy Shockey | current team
-who does jordan palmer play for?	(data not available)	0	Jordan Palmer | current team
-who does kellan lutz play in prom night?	(data not available)	0	Prom Night | with | cast member | Kellan Lutz
-who does michael oher play for in 2010?	(data not available)	0	Michael Oher | current team
-who does owen schmitt play for?	(data not available)	0	Owen Schmitt | current team
-who does ronaldinho play for now 2011?	(data not available)	0	Ronaldinho | current team
-who does the voice for chucky in child's play?	(data not available)	0	Child's Play | in Child's Play movies | cast and roles
 who is amy grant's first husband?	Gary Chapman  (1982-1999)  |  Vince Gill  (2000-)	0	Amy Grant | husbands
 who is angelina jolies brother?	James Haven	0	Angelina Jolie | brothers
 who is anne hathaway parents?	Kate McCauley Hathaway  |  Gerald Hathaway	0	Anne Hathaway | parents
 who is dirk nowitzki wife?	Jessica Olsson  (2012-)	0	Dirk Nowitzki | wives
 who is emma stone father?	Jeff Stone	0	Emma Stone | father
 who is governor of ohio 2011?	John Richard Kasich	0	Ohio | Governor | May 29, 2011
-who is in paul ryan's family?	(data not available)	0	Paul Ryan | familial relationships
-who is jamie little engaged to?	(data not available)	0	Jamie Little | spouses
 who is john cena married to?	Elizabeth Huberdeau  (2009-2012)	0	John Cena | spouses
 who is judy garland father?	Francis Avent Gumm	0	Judy Garland | father
 who is kevin jonas married to?	Danielle Deleasa  (2009-)	0	Kevin Jonas | spouses
@@ -451,7 +410,6 @@ who is niall ferguson's wife?	Susan Douglas  (1987-2011)  |  Ayaan Hirsi Ali  (2
 who is nick lachey married to?	Jessica Simpson  (2002-2006)  |  Vanessa Minnillo  (2011-)	0	Nick Lachey | spouses
 who is president of israel?	Shimon Perski	0	Israel | President
 who is richard pryor son?	Richard Pryor Jr.  |  Franklin Pryor  |  Steven Pryor	0	Richard Pryor | sons
-who is robin roberts father?	(data not available)	0	Robin Roberts | father
 who is shakira married to?	Antonio de la Rúa  (2000-2010)  (domestic partnership)  |  Gerard Piqué  (2010-)  (domestic partnership)	0	Shakira | spouses
 who is tatyana ali parents?	Sheriff Ali  |  Sonia Ali	0	Tatyana Ali | parents
 who is the current governor of arizona 2010?	Jan Brewer	0	Arizona | Governor | May 29, 2010
@@ -464,8 +422,6 @@ who is the governor of virginia 2011?	(none in office)	0	Virginia | Governor | M
 who is the king of cambodia now?	Thommo Reachea III	0	Cambodia | King | May 29, 2014
 who is the leader of libya 2011?	(none in office)	0	Libya | Leader | May 29, 2011
 who is the leader of north korea today?	(none in office)	0	North Korea | Leader | May 29, 2014
-who is the newly elected governor of california?	(data not available)	0	California | Governor (elect)
-who is the next governor of indiana?	(data not available)	0	Indiana | Governor (elect)
 who is the president of costa rica in 2012?	Laura Chinchilla	0	Costa Rica | President | May 29, 2012
 who is the president of peru now?	Ollanta Moisés Humala Tasso	0	Peru | President | May 29, 2014
 who is the prime minister of spain 2011?	Diego Martínez Barrio	0	Spain | Prime Minister | May 29, 2011
@@ -502,7 +458,6 @@ who played on the jeffersons?	Isabel Sanford | Louise "Weezie" Jefferson	-1	The 
 who played on the jeffersons?	Marla Gibbs | Florence Johnston	-2	The Jeffersons | cast
 who played on the jeffersons?	Roxie Roker | Helen Willis	-3	The Jeffersons | cast
 who played on the jeffersons?	Franklin Cover | Tom Willis	-4	The Jeffersons | cast
-who plays bilbo baggins in the hobbit?	(data not available)	0	Bilbo Baggins  (fictional character) | play appearances
 who plays billy elliot?	Jamie Bell | Billy Elliot	0	Billy Elliot  (movie) | cast and roles
 who plays billy elliot?	Jamie Draven | Tony Elliot	-1	Billy Elliot  (movie) | cast and roles
 who plays billy elliot?	Julie Walters | Mrs. Wilkinson	-2	Billy Elliot  (movie) | cast and roles
@@ -544,8 +499,6 @@ who plays billy elliot?	Ken Richardson | Police Officer	-37	Billy Elliot  (movie
 who plays billy elliot?	Leonard Silver | Dancer	-38	Billy Elliot  (movie) | cast and roles
 who plays billy elliot?	Lee Smikle | Dancer In 'Swan Lake' #3	-39	Billy Elliot  (movie) | cast and roles
 who plays billy elliot?	Damian Winter-Higgins | Dancer In 'Swan Lake' #4	-40	Billy Elliot  (movie) | cast and roles
-who plays caesar flickerman in the hunger games?	(data not available)	0	Caesar Flickerman  (fictional character) | play appearances
-who plays donna noble?	(data not available)	0	Donna Noble  (fictional character) | play appearances
 who plays edward scissorhands?	Johnny Depp | Edward Scissorhands	0	Edward Scissorhands  (movie) | cast and roles
 who plays edward scissorhands?	Winona Ryder | Kim	-1	Edward Scissorhands  (movie) | cast and roles
 who plays edward scissorhands?	Dianne Wiest | Peg	-2	Edward Scissorhands  (movie) | cast and roles
@@ -562,9 +515,6 @@ who plays edward scissorhands?	Susan Blommaert | Tinka	-12	Edward Scissorhands  
 who plays edward scissorhands?	Linda Perri | Cissy	-13	Edward Scissorhands  (movie) | cast and roles
 who plays edward scissorhands?	Biff Yeager | George	-14	Edward Scissorhands  (movie) | cast and roles
 who plays edward scissorhands?	John Davidson | Host-TV	-15	Edward Scissorhands  (movie) | cast and roles
-who plays eowyn in lord of the rings?	(data not available)	0	Éowyn  (fictional character) | play appearances
-who plays john connor?	(data not available)	0	John Connor  (fictional character) | play appearances
-who plays marshall eriksen?	(data not available)	0	Marshall Eriksen  (fictional character) | play appearances
 who plays simon birch?	Ian Michael Smith | Simon Birch	0	Simon Birch  (movie) | cast and roles
 who plays simon birch?	Joseph Mazzello | Joe Wenteworth	-1	Simon Birch  (movie) | cast and roles
 who plays simon birch?	Ashley Judd | Rebecca Wenteworth	-2	Simon Birch  (movie) | cast and roles
@@ -627,24 +577,19 @@ who plays simon birch?	Ramiro González | Junior Lamb #21	-58	Simon Birch  (movi
 who plays simon birch?	Mitchell Orr | Junior Lamb #22	-59	Simon Birch  (movie) | cast and roles
 who plays simon birch?	Trevor Habberstad | Junior Lamb #23	-60	Simon Birch  (movie) | cast and roles
 who plays simon birch?	Aaron Bouffard | Retreat Kid	-61	Simon Birch  (movie) | cast and roles
-who plays voldemort?	(data not available)	0	Lord Voldemort  (fictional character) | play appearances
 who was canadian prime minister in 1993?	Martin Brian Mulroney	0	Canada | Prime Minister | May 29, 1993
 who was judi dench married to?	Michael Williams  (1971-2001)	0	Judi Dench | spouses
 who was king henry viii son?	Henry Tudor  |  Henry FitzRoy, 1st Duke of Richmond and Somerset  |  Henry, Duke of Cornwall  |  King Edward VI  |  Henry, Duke of Cornwall	0	King Henry VIII | sons
 who was married to jane wyman?	Ernest Eugene Wyman  (1933-1935)  |  Myron Futterman  (1937-1938)  |  Ronald Reagan  (1940-1948)  |  Fred Karger  (1952-1955)  |  Fred Karger  (1961-1965)	0	Jane Wyman | spouses
 who was president in 1988 in the united states?	Ronald Wilson Reagan	0	United States | President | May 29, 1988
 who was queen elizabeth ii mom?	Elizabeth Bowes-Lyon	0	Queen Elizabeth II | mother
-who was queen isabella's mother?	(data not available)	0	Queen Isabella | mother
 who was queen victoria's husband?	Prince Albert of Saxe-Coburg and Gotha  (1840-1861)	0	Queen Victoria | husbands
 who was richard nixon married to?	Pat Nixon  (1940-1993)	0	Richard M. Nixon | spouses
 who was the leader of the first communist party of china?	Warren Gamaliel Harding	0	United States | Leader | Anniversary of the Founding of the Communist Party of China  (China) | first year celebrated
 who was the prime minister of pakistan in 1999?	Nawaz Sharif	0	Pakistan | Prime Minister | May 29, 1999
 who was william mckinley married to?	Ida McKinley  (1871-1901)	0	William McKinley | spouses
 who were alexander graham bell's siblings?	Melville James Bell  |  Edward Charles Bell	0	Alexander Graham Bell | siblings
-who were jesus siblings?	(data not available)	0	Jesus Christ | siblings
 who were king henry vii children?	Elizabeth Tudor  |  Katherine Tudor  |  Arthur, Prince of Wales  |  Edward Tudor  |  King Henry VIII  |  Margaret Tudor  |  Edmund Tudor, Duke of Somerset  |  Edward Tudor  |  Mary Tudor, Queen of France	0	King Henry VII | children
 who were wright brothers?	Orville Wright  |  Wilbur Wright	0	first airplane flight | people involved
-who will plaxico burress play for in 2011?	(data not available)	0	Plaxico Burress | total plays | 2011-12 regular season
-who won the governor election in texas?	(data not available)	0	US election contests | with | position | Governor  (leadership position) and | region | Texas  (US state) | winner
 who wrote st trinians?	Ronald Searle  |  Nick Moorcroft  |  Piers Ashworth  |  Jamie Minoprio  |  Jonathan M. Stern	0	St. Trinian's  (movie) | writer
 who wrote the gospel according to john?	various	0	The Holy Bible (KJV), New Testament, John | author

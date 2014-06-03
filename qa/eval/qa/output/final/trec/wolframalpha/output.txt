@@ -5,7 +5,6 @@ What does laser stand for?	noun | an acronym for light amplification by stimulat
 Where is John Wayne airport?	Santa Ana, California, United States	0	John Wayne Airport | city
 When was the U.S. capitol built?	1863	0	United States Capitol | completion date
 What was Bing Crosby's nickname?	Harry Lillis Crosby	0	Bing Crosby | other names
-When was U.S Naval Academy founded?	(data not available)	0	United States Naval Academy | year founded
 How tall is St. Peter's Basilica?	453 feet  (city rank: 1st  |  national rank: 2nd  |  world rank: 547th)	0	Saint Peter's Basilica | height
 Who is the governor of Alaska?	Sean Parnell	0	Alaska | Governor
 What is Hong Kong's population?	6.94 million people  (country rank: 1st)  (2004 estimate)	0	Hong Kong | city population
@@ -56,9 +55,7 @@ Who founded the Church of Jesus Christ of Latter-day Saints?	Jesus Christ  |  Jo
 How did Eva Peron die?	Saturday, July 26, 1952	0	Evita Peron | date of death
 When did the Dow first reach 2000?	$103600 yr  (year US dollars)  (Thursday, May 29, 2014)	0	Dow Chemical | opening price (2000 years (age))
 How tall is the tallest pyramid?	456 feet  (city rank: 1st  |  national rank: 2nd  |  world rank: 542nd)	0	Great Pyramid of Giza | height
-What nationality is Sean Connery?	(data not available)	0	Sean Connery | nationality
 When did the Johnstown flood occur?	May 31, 1889	0	Johnstown Flood | date
-How old was the dam?	(data not available)	0	oldest dam
 In what state is Dulles located?	District of Columbia	0	Washington Dulles International Airport | city | administrative region
 How old was Sani Abacha when he died?	54 years 8 months 19 days	0	age | of Sani Abacha  (politician) | on Sani Abacha | date of death  
 What is Dick Clark's date of birth?	Saturday, November 30, 1929	0	Dick Clark | date of birth
@@ -79,7 +76,6 @@ What was Rachel Carson's vocation?	scientist	0	Rachel Carson | occupation
 When was the Hoover Dam constructed?	1936	0	Hoover Dam | completion date
 How did John Quincy Adams die?	Wednesday, February 23, 1848	0	John Quincy Adams | date of death
 How tall is the Eiffel Tower in France?	1063 feet  (city rank: 1st  |  national rank: 1st  |  world rank: 49th)	0	Eiffel Tower | height
-What is the tallest statue in the world?	(data not available)	0	tallest statue | in world
 What is the enrollment of U.S. Naval Academy?	4568 people	0	United States Naval Academy | all students
 What is the richest country in the world?	($163026 per year per person)	0	richest country | by GDP | nominal per capita in world
 What is Britney Spears' middle name?	Britney Jean Spears	0	Britney Spears | full name
@@ -87,25 +83,20 @@ When did Hawaii become a state?	Friday, August 21, 1959	0	Hawaii | joined Union
 What is the population of Venezuela?	30.3 million people  (world rank: 42nd)  (2013 estimate)	0	Venezuela | population
 Where is the Kalahari desert?	Angola  |  Botswana  |  Namibia  |  South Africa	0	Kalahari Desert | countries
 What year was the phonograph invented?	1877	0	phonograph | date of invention
-what is Speedy Claxton's real name?	(data not available)	0	Speedy Claxton | full name
 What is the capital of Italy?	Rome, Lazio, Italy	0	Italy | capital city
 When was Julius Caesar born?	Saturday, July 13, 100 BC	0	Julius Caesar | date of birth
 Which king signed the Magna Carta?	(June 15, 1215 is before Martin Luther King was born)	0	age | of Martin Luther King  (activist) | on Magna Carta is signed | start date  
-Who founded Wal-Mart?	(data not available)	0	walmart.com | Corporate information
 What is Susan B. Anthony's birthday?	Tuesday, February 15, 1820	0	Susan B. Anthony | date of birth
 What day did Pearl Harbor occur?	December 7, 1941	0	attack on Pearl Harbor | date
 Where was Shakespeare born?	Stratford-upon-Avon, Warwickshire, United Kingdom	0	William Shakespeare | place of birth
 What did Rachel Carson die of?	Tuesday, April 14, 1964	0	Rachel Carson | date of death
 Who was the first king of England?	William of Orange	0	United Kingdom | King | 1st
 Where is the Orinoco River?	Venezuela  |  Colombia	0	Orinoco | countries
-Where is Merrill Lynch headquartered?	(data not available)	0	Bank of America | headquarters coordinates
 What is Valentine's Day?	Friday, February 14, 2014	0	Valentine's Day | 2014
-Who is president of Nissan Corp.?	(data not available)	0	Nissan Motor | president
 How many Great Lakes are there?	30566 people  (0.15% of total for Australia)	0	Great Lakes, New South Wales, Australia | population
 How many Great Lakes are there?	30566 people  (0.15% of total for Australia)	0	Great Lakes, New South Wales, Australia | population
 What plays did Shakespeare write?	Titus Andronicus  |  Henry VI, Part II  |  Henry VI, Part III  |  Richard II  |  Richard III  |  Love's Labour's Lost  |  Henry IV, Part I  |  Romeo and Juliet  |  The Merchant of Venice  |  A Midsummer Night's Dream  |  Henry IV, Part II  |  Much Ado About Nothing  |  The Merry Wives of Windsor  |  Hamlet  |  King Lear  |  Pericles, Prince of Tyre  |  Troilus and Cressida  |  Sonnets  |  Othello  |  The Taming of the Shrew  |  ...   (total: 40)	0	notable books | with | author | William Shakespeare
 What is the chemical formula for sulphur dioxide?	SO_2	0	sulfur dioxide | formula
-Who was the first Triple Crown Winner?	(data not available)	0	Sir Barton wins the first Triple Crown | people involved
 What is the highest dam in the U.S.?	(771 feet)	0	highest dam | by highest point in United States
 What is the largest variety of cactus?	(insufficient data available)	0	cactus family | USDA variety | maximum recorded height
 What was the final score of Super Bowl XXXIV?	St. Louis Rams  (23)  |  Tennessee Titans  (16)	0	Super Bowl | 2000 | score
