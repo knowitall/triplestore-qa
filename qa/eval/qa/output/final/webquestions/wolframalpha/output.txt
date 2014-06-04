@@ -1,11 +1,11 @@
-how many languages do they speak in spain?	Spanish  (88%)  |  Catalan-Valencian-Balear  (15%)  |  Galician  (7.2%)  |  Basque  (1.3%)  |  Extremaduran  (0.45%)  |  Spanish sign language  (0.23%)  |  Asturian  (0.23%)  |  Caló  (0.09%)  |  Catalonian sign language  (0.041%)  |  Aragonese  (0.025%)  |  ...   (total: 12)	0	Spain | languages
-how many languages do they speak in switzerland?	German  (64%)  |  Schwyzerdütsch  (62%)  |  French  (20%)  |  Italian  (6.3%)  |  Lombard  (4%)  |  English  (1%)  |  Romansch  (0.53%)  |  Romani Sinte  (0.28%)  |  Walser  (0.13%)  |  Franco-Provençal  (0.094%)  |  ...   (total: 13)	0	Switzerland | languages
+how many languages do they speak in spain?	Spanish  (88%)	0	Spain | languages
+how many languages do they speak in switzerland?	German  (64%)	0	Switzerland | languages
 what airport is near arlington tx?	Dallas-Fort Worth International Airport | 14 miles north-northeast	0	Arlington, Texas | nearby airports
 what airport is near arlington tx?	(straight-line distances between city center and airport)	-1	Arlington, Texas | nearby airports
 what airport is nearest to rome?	Leonardo da Vinci International Airport | 14 miles west-southwest	0	Rome, Lazio, Italy | nearby airports
 what airport is nearest to rome?	(straight-line distances between city center and airport)	-1	Rome, Lazio, Italy | nearby airports
 what all did ben franklin invent?	franklin stove  (1741)  |  lightning rod  (1749)  |  glass harmonica  (1761)  |  bifocals  (1764)  |  electrostatic motor	0	Benjamin Franklin | notable inventions
-what are egyptian money called?	£1  (Egyptian pound)	0	Egypt | currency name
+what are egyptian money called?	Egyptian pound	0	Egypt | currency name
 what are serena williams achievements?	American tennis player ranked World No. 1 in singles five times by the Women's Tennis Association, known for aggressive style of play and powerful serve	0	Serena Williams | notable facts
 what are serena williams achievements?	Has won 27 Grand Slam titles in singles, doubles, and mixed doubles, and held four simultaneously in 2002--03	-1	Serena Williams | notable facts
 what are serena williams achievements?	Younger sister of tennis player Venus Williams	-2	Serena Williams | notable facts
@@ -82,7 +82,7 @@ what do people in jamaica speak?	Jamaican Creole English  (98%)	0	Jamaica | lang
 what do people speak in canada?	English  (61%)  |  French  (24%)  |  Mandarin  (2.6%)  |  Italian  (2%)  |  German  (1.9%)  |  Polish  (0.74%)  |  Spanish  (0.69%)  |  Dutch  (0.48%)  |  Plautdietsch  (0.24%)  |  Quebec sign language  (0.15%)  |  ...   (total: 82)	0	Canada | languages
 what do people speak in germany?	German  (95%)  |  Turkish  (2.4%)  |  Swabian  (0.99%)  |  Croatian  (0.79%)  |  Italian  (0.66%)  |  Greek  (0.38%)  |  English  (0.33%)  |  Polish  (0.29%)  |  Dutch  (0.12%)  |  Plautdietsch  (0.11%)  |  ...   (total: 23)	0	Germany | languages
 what do people speak in uk?	English  (96%)  |  Welsh  (0.84%)  |  Scots  (0.16%)  |  Irish Gaelic  (0.16%)  |  Angloromani  (0.15%)  |  Scottish Gaelic  (0.097%)  |  British sign language  (0.066%)  |  French  (0.023%)  |  Japanese  (0.02%)  |  Cornish  |  ...   (total: 12)	0	United Kingdom | languages
-what do they speak in norway?	Bokmål Norwegian  (100%)  |  Nynorsk Norwegian  (100%)  |  North Saami  (0.32%)  |  Romani Tavringer  (0.13%)  |  Finnish Kven  (0.11%)  |  Norwegian sign language  (0.085%)  |  Romani Vlax  (0.011%)  |  Lule Saami  (0.011%)  |  South Saami   (total: 9)	0	Norway | languages
+what do they speak in norway?	Bokmal Norwegian  (100%)	0	Norway | languages
 what does bentley mean?	From a surname which was derived from a place name meaning "clearing covered with bent grass" in Old English	0	Bentley  (male given name) | etymology
 what does british colony mean?	Anguilla  |  Bermuda  |  British Virgin Islands  |  Cayman Islands  |  Falkland Islands  |  Gibraltar  |  Guernsey  |  Isle of Man  |  Jersey  |  Montserrat  |  Pitcairn Islands  |  Saint Helena, Ascension and Tristan da Cunha  |  Turks and Caicos Islands   (total:  13)	0	United Kingdom | dependencies
 what does jamaican people speak?	Jamaican Creole English  (98%)	0	Jamaica | languages
@@ -114,14 +114,14 @@ what is my timezone in louisiana?	8:48:42 pm CDT  |  Tuesday, June 3, 2014	0	con
 what is my timezone in pennsylvania?	9:48:46 pm EDT  |  Tuesday, June 3, 2014	0	convert current time at current geoIP location to Pennsylvania  (US state)
 what is newt gingrich's wife's name?	Jackie Battley  (1962-1981)  |  Marianne Ginther  (1981-2000)  |  Callista Gingrich  (2000-)	0	Newt Gingrich | wives
 what is real name of santa claus?	Kris Kringle  |  Jolly Old Saint Nick  |  Father Christmas	0	Santa Claus  (fictional character) | alternate names
-what is the average temperature in phoenix az in december?	52 °F  (degrees Fahrenheit)	0	mean temperature | Phoenix, Arizona   | December 2013
+what is the average temperature in phoenix az in december?	52 (degrees Fahrenheit)	0	mean temperature | Phoenix, Arizona   | December 2013
 what is the average temperature in phoenix az in december?	(December 2013)	-1	mean temperature | Phoenix, Arizona   | December 2013
 what is the current time in kauai hawaii?	3:52:07 pm HST  |  Tuesday, June 3, 2014	0	current time at Kauai  (island)
-what is the holy book of the buddhist religion?	Tibetan Buddhist Canon  |  Pāli Canon  |  Chinese Buddhist Canon	0	Buddhism | major texts
-what is the main language spoken in mexico?	Spanish  (92%)  |  Maya Yucatán  (0.64%)  |  Eastern Huasteca Nahuatl  (0.37%)  |  Western Huasteca Nahuatl  (0.36%)  |  Central Mazahua  (0.32%)  |  Central Huasteca Nahuatl  (0.18%)  |  Guerrero Nahuatl  (0.14%)  |  Southeastern Puebla Nahuatl  (0.12%)  |  Chamula Tzotzil  (0.12%)  |  Highland Puebla Nahuatl  (0.11%)  |  ...   (total: 290)	0	Mexico | languages
+what is the holy book of the buddhist religion?	Tibetan Buddhist Canon	0	Buddhism | major texts
+what is the main language spoken in mexico?	Spanish  (92%)	0	Mexico | languages
 what is the main language used in china?	Mandarin  (66%)  |  Wu Chinese  (5.9%)  |  Cantonese  (4%)  |  Jinyu Chinese  (3.4%)  |  Xiang Chinese  (2.8%)  |  Hakka Chinese  (2%)  |  Min Nan Chinese  (2%)  |  Gan Chinese  (1.6%)  |  Min Bei Chinese  (0.79%)  |  Northern Zhuang  (0.77%)  |  ...   (total: 226)	0	China | languages
-what is the most common language in norway?	Bokmål Norwegian  (100%)  |  Nynorsk Norwegian  (100%)  |  North Saami  (0.32%)  |  Romani Tavringer  (0.13%)  |  Finnish Kven  (0.11%)  |  Norwegian sign language  (0.085%)  |  Romani Vlax  (0.011%)  |  Lule Saami  (0.011%)  |  South Saami   (total: 9)	0	Norway | languages
-what is the most common language spoken in argentina?	Spanish  (96%)  |  German  (1%)  |  Mapudungun  (0.25%)  |  Santiago del Estero Quichua  (0.15%)  |  Welsh  (0.063%)  |  Wichí Lhamtés Vejoz  (0.063%)  |  Toba  (0.05%)  |  Eastern Guaraní Bolivian  (0.038%)  |  Wichí Lhamtés Güisnay  (0.038%)  |  Mocoví  (0.011%)  |  ...   (total: 20)	0	Argentina | languages
+what is the most common language in norway?	Bokmal Norwegian  (100%)	0	Norway | languages
+what is the most common language spoken in argentina?	Spanish  (96%)	0	Argentina | languages
 what is the name of airport in new york?	John F. Kennedy International Airport | John F. Kennedy International Airport	0	airports | in New York City, New York | name
 what is the name of airport in new york?	LaGuardia Airport | LaGuardia Airport	-1	airports | in New York City, New York | name
 what is the name of the capital of belgium?	Brussels, Belgium	0	Belgium | capital city
@@ -149,11 +149,11 @@ what is william taft known for?	Pursued economic development of nations in Latin
 what is william taft known for?	After presidential term, founded League to Enforce Peace	-5	William Howard Taft | notable facts
 what jamaican money called?	J$1  (Jamaican dollar)	0	Jamaica | currency name
 what killed john bonham?	Thursday, September 25, 1980	0	John Bonham | date of death
-what language brazil speak?	Portuguese  (99%)  |  Japanese  (0.21%)  |  Amapa Creole  (0.013%)  |  Ticuna  (0.013%)  |  Kepkiriwát  (0%)  |  Nukuini  (0%)  |  Oti  (0%)  |  Tingui-Boto  (0%)  |  Truká  (0%)  |  Tupi  (0%)  |  ...   (total: 173)	0	Brazil | languages
+what language brazil speak?	Portuguese  (99%)	0	Brazil | languages
 what language do australia people speak?	English  (88%)  |  Italian  (1.5%)  |  Greek  (1.2%)  |  Cantonese  (1.2%)  |  Arabic  (1.2%)  |  Mandarin  (1.1%)  |  Spanish  (0.6%)  |  Dutch  (0.19%)  |  Torres Strait Creole  (0.11%)  |  Australian sign language  (0.067%)  |  ...   (total: 151)	0	Australia | languages
-what language do brazilians use?	Portuguese  (99%)  |  Japanese  (0.21%)  |  Amapa Creole  (0.013%)  |  Ticuna  (0.013%)  |  Kepkiriwát  (0%)  |  Nukuini  (0%)  |  Oti  (0%)  |  Tingui-Boto  (0%)  |  Truká  (0%)  |  Tupi  (0%)  |  ...   (total: 173)	0	Brazil | languages
+what language do brazilians use?	Portuguese  (99%)	0	Brazil | languages
 what language do british speak?	English  (96%)  |  Welsh  (0.84%)  |  Scots  (0.16%)  |  Irish Gaelic  (0.16%)  |  Angloromani  (0.15%)  |  Scottish Gaelic  (0.097%)  |  British sign language  (0.066%)  |  French  (0.023%)  |  Japanese  (0.02%)  |  Cornish  |  ...   (total: 12)	0	United Kingdom | languages
-what language do colombian people speak?	Spanish  (98%)  |  Wayuu  (0.29%)  |  Romani Vlax  (0.17%)  |  Páez  (0.15%)  |  Colombian sign language  (0.11%)  |  Awa-Cuaiquer  (0.043%)  |  Guahibo  (0.041%)  |  Guambiano  (0.034%)  |  Emberá-Catío  (0.032%)  |  Arhuaco  (0.031%)  |  ...   (total: 77)	0	Colombia | languages
+what language do colombian people speak?	Spanish  (98%)	0	Colombia | languages
 what language do maltese speak?	Maltese  (74%)  |  English  (6%)   (total: 2)	0	Malta | languages
 what language do navajo people speak?	Navajo | 1047 people	0	Navajo, New Mexico | language spoken at home
 what language do navajo people speak?	only English | 686 people	-1	Navajo, New Mexico | language spoken at home
@@ -161,12 +161,12 @@ what language do navajo people speak?	Tagalog | 88 people	-2	Navajo, New Mexico 
 what language do navajo people speak?	other Native North American languages | 10 people	-3	Navajo, New Mexico | language spoken at home
 what language do navajo people speak?	Spanish or Spanish Creole | 7 people	-4	Navajo, New Mexico | language spoken at home
 what language do navajo people speak?	(2008-2012 American Community Survey 5-year estimates)	-5	Navajo, New Mexico | language spoken at home
-what language do people speak in brazil?	Portuguese  (99%)  |  Japanese  (0.21%)  |  Amapa Creole  (0.013%)  |  Ticuna  (0.013%)  |  Kepkiriwát  (0%)  |  Nukuini  (0%)  |  Oti  (0%)  |  Tingui-Boto  (0%)  |  Truká  (0%)  |  Tupi  (0%)  |  ...   (total: 173)	0	Brazil | languages
+what language do people speak in brazil?	Portuguese  (99%)	0	Brazil | languages
 what language do people speak in the bahamas?	Bahamas Creole English  (68%)  |  English  (15%)   (total: 2)	0	Bahamas | languages
 what language do people speak in the netherlands?	Dutch  (96%)  |  Limburgisch  (5.5%)  |  Western Frisian  (4.3%)  |  Gronings  (3.6%)  |  Zeeuws  (1.3%)  |  Vlaams  (0.74%)  |  Dutch sign language  (0.12%)  |  Romani Sinte   (total: 8)	0	Netherlands | languages
 what language do russians speak?	Russian  (81%)  |  Bashkir  (1.3%)  |  Chuvash  (1.3%)  |  Chechen  (0.66%)  |  Avar  (0.39%)  |  Udmurt  (0.39%)  |  Mari Eastern  (0.37%)  |  Tatar  (0.33%)  |  Kabardian  (0.31%)  |  Erzya  (0.31%)  |  ...   (total: 92)	0	Russia | languages
 what language do serbs speak?	Serbian  (100%)  |  Albanian Gheg  (22%)  |  Hungarian  (6.1%)  |  Romanian  (2.7%)  |  Romani Balkan  (1.6%)  |  Romani Sinte  (0.42%)  |  Yugoslavian sign language  (0.4%)   (total: 7)	0	Serbia | languages
-what language do speak in argentina?	Spanish  (96%)  |  German  (1%)  |  Mapudungun  (0.25%)  |  Santiago del Estero Quichua  (0.15%)  |  Welsh  (0.063%)  |  Wichí Lhamtés Vejoz  (0.063%)  |  Toba  (0.05%)  |  Eastern Guaraní Bolivian  (0.038%)  |  Wichí Lhamtés Güisnay  (0.038%)  |  Mocoví  (0.011%)  |  ...   (total: 20)	0	Argentina | languages
+what language do speak in argentina?	Spanish  (96%)	0	Argentina | languages
 what language do the cheyenne speak?	only English | 50879 people	0	Cheyenne, Wyoming | language spoken at home
 what language do the cheyenne speak?	Spanish or Spanish Creole | 2727 people	-1	Cheyenne, Wyoming | language spoken at home
 what language do the cheyenne speak?	German | 300 people	-2	Cheyenne, Wyoming | language spoken at home
@@ -185,16 +185,16 @@ what language does east timor speak?	Mambae  (6.9%)  |  Makasae  (6.1%)  |  Tuku
 what language does egyptian people speak?	Arabic  (85%)  |  Egyptian Arabic  (59%)  |  Saidi Arabic  (25%)  |  Eastern Egyptian Bedawi Arabic  (1%)  |  Libyan Arabic  (0.4%)  |  Domari  (0.31%)  |  Nobiin  (0.26%)  |  Kenuzi-Dongola  (0.13%)  |  Greek  (0.056%)  |  Siwi   (total: 10)	0	Egypt | languages
 what language does iceland speak?	Icelandic  (96%)	0	Iceland | languages
 what language does people in iceland speak?	Icelandic  (96%)	0	Iceland | languages
-what language does peru speak?	Spanish  (79%)  |  Cusco Quechua  (5.4%)  |  Ayacucho Quechua  (3.2%)  |  Puno Quechua  (1.8%)  |  Central Aymara  (1.6%)  |  Huaylas Ancash Quechua  (1.2%)  |  Huaylla Wanca Quechua  (0.9%)  |  Northern Conchucos Ancash Quechua  (0.9%)  |  Southern Conchucos Ancash Quechua  (0.9%)  |  Eastern Apurímac Quechua  (0.72%)  |  ...   (total: 87)	0	Peru | languages
-what language is spoken in argentina?	Spanish  (96%)  |  German  (1%)  |  Mapudungun  (0.25%)  |  Santiago del Estero Quichua  (0.15%)  |  Welsh  (0.063%)  |  Wichí Lhamtés Vejoz  (0.063%)  |  Toba  (0.05%)  |  Eastern Guaraní Bolivian  (0.038%)  |  Wichí Lhamtés Güisnay  (0.038%)  |  Mocoví  (0.011%)  |  ...   (total: 20)	0	Argentina | languages
+what language does peru speak?	Spanish  (79%)	0	Peru | languages
+what language is spoken in argentina?	Spanish  (96%)	0	Argentina | languages
 what language is spoken in greek?	Greek  (88%)  |  Pontic  (1.8%)  |  Romanian Macedo  (1.8%)  |  Macedonian  (1.6%)  |  Albanian Arvanitika  (1.3%)  |  Turkish  (1.2%)  |  Greek sign language  (0.38%)  |  Romani Balkan  (0.36%)  |  Bulgarian  (0.27%)  |  Albanian Tosk  (0.09%)  |  ...   (total: 15)	0	Greece | languages
-what language is spoken in switzerland?	German  (64%)  |  Schwyzerdütsch  (62%)  |  French  (20%)  |  Italian  (6.3%)  |  Lombard  (4%)  |  English  (1%)  |  Romansch  (0.53%)  |  Romani Sinte  (0.28%)  |  Walser  (0.13%)  |  Franco-Provençal  (0.094%)  |  ...   (total: 13)	0	Switzerland | languages
-what language speak in brazil?	Portuguese  (99%)  |  Japanese  (0.21%)  |  Amapa Creole  (0.013%)  |  Ticuna  (0.013%)  |  Kepkiriwát  (0%)  |  Nukuini  (0%)  |  Oti  (0%)  |  Tingui-Boto  (0%)  |  Truká  (0%)  |  Tupi  (0%)  |  ...   (total: 173)	0	Brazil | languages
+what language is spoken in switzerland?	German  (64%)	0	Switzerland | languages
+what language speak in brazil?	Portuguese  (99%)	0	Brazil | languages
 what language tunisia?	Arabic  (87%)  |  Tunisian Arabic  (87%)  |  Nafusi  (0.25%)  |  French  (0.11%)  |  Lingua Franca  (0%)  |  Judeo-Tunisian Arabic   (total: 6)	0	Tunisia | languages
 what language turkey people speak?	Turkish  (80%)  |  Northern Kurdish  (8.7%)  |  Dimli  (1.3%)  |  Kabardian  (0.73%)  |  South Azerbaijani  (0.71%)  |  Arabic  (0.53%)  |  North Mesopotamian Arabic  (0.53%)  |  Balkan Gagauz Turkish  (0.44%)  |  Bulgarian  (0.4%)  |  Adyghe  (0.37%)  |  ...   (total: 31)	0	Turkey | languages
 what languages are there in japan?	Japanese  (98%)  |  Central Okinawan  (0.77%)  |  Korean  (0.52%)  |  Japanese sign language  (0.25%)  |  Miyako  (0.053%)  |  Yaeyama  (0.037%)  |  Kikai  (0.01%)  |  Ainu  |  Amami-Oshima Northern  |  Amami-Oshima Southern  |  ...   (total: 15)	0	Japan | languages
-what languages do people speak in spain?	Spanish  (88%)  |  Catalan-Valencian-Balear  (15%)  |  Galician  (7.2%)  |  Basque  (1.3%)  |  Extremaduran  (0.45%)  |  Spanish sign language  (0.23%)  |  Asturian  (0.23%)  |  Caló  (0.09%)  |  Catalonian sign language  (0.041%)  |  Aragonese  (0.025%)  |  ...   (total: 12)	0	Spain | languages
-what languages do they speak in costa rica?	Spanish  (94%)  |  Jamaican Creole English  (1.2%)  |  Bribri  (0.25%)  |  Cabécar  (0.2%)  |  Jaíka Maléku  (0.017%)  |  Plautdietsch  |  Teribe   (total: 7)	0	Costa Rica | languages
+what languages do people speak in spain?	Spanish  (88%)	0	Spain | languages
+what languages do they speak in costa rica?	Spanish  (94%)	0	Costa Rica | languages
 what movies did christopher plummer play in?	Stage Struck  |  Wind Across the Everglades  |  The Fall of the Roman Empire  |  The Sound of Music  |  Inside Daisy Clover  |  The Night of the Generals  |  Battle of Britain  |  Waterloo  |  The Pyx  |  The Return of the Pink Panther  |  The Man Who Would Be King  |  Aces High  |  International Velvet  |  Murder by Decree  |  Starcrash  |  The Silent Partner  |  Hanover Street  |  Somewhere in Time  |  The Amateur  |  The Scarlet and the Black  |  ...   (total: 64)	0	movies | with | cast member | Christopher Plummer
 what movies did david carradine play in?	Taggart  |  Boxcar Bertha  |  Mean Streets  |  Death Race 2000  |  Cannonball!  |  Bound for Glory  |  The Serpent's Egg  |  Gray Lady Down  |  The Long Riders  |  Lone Wolf McQuade  |  Kung Fu: The Movie  |  Crime Zone  |  Bird on a Wire  |  Sonny Boy  |  Sundown: The Vampire in Retreat  |  Children of the Corn V: Fields of Terror  |  An American Tail: The Treasure of Manhattan Island  |  Balto: Wolf Quest  |  Kill Bill: Vol. 1  |  Kill Bill: Vol. 2  |  ...   (total: 30)	0	movies | with | cast member | David Carradine
 what movies did joan crawford play in?	The Merry Widow  |  The Unknown  |  Our Dancing Daughters  |  The Hollywood Revue of 1929  |  Untamed  |  Grand Hotel  |  Rain  |  Today We Live  |  Dancing Lady  |  Sadie McKee  |  The Gorgeous Hussy  |  Love on the Run  |  Mannequin  |  The Women  |  When Ladies Meet  |  Mildred Pierce  |  Humoresque  |  Possessed  |  It's a Great Feeling  |  The Damned Don't Cry  |  ...   (total: 34)	0	movies | with | cast member | Joan Crawford
@@ -441,7 +441,7 @@ who is niall ferguson's wife?	Susan Douglas  (1987-2011)  |  Ayaan Hirsi Ali  (2
 who is nick lachey married to?	Jessica Simpson  (2002-2006)  |  Vanessa Minnillo  (2011-)	0	Nick Lachey | spouses
 who is president of israel?	Shimon Perski	0	Israel | President
 who is richard pryor son?	Richard Pryor Jr.  |  Franklin Pryor  |  Steven Pryor	0	Richard Pryor | sons
-who is shakira married to?	Antonio de la Rúa  (2000-2010)  (domestic partnership)  |  Gerard Piqué  (2010-)  (domestic partnership)	0	Shakira | spouses
+who is shakira married to?	Antonio de la Rua (2000-2010)  (domestic partnership)  |  Gerard Pique (2010-)  (domestic partnership)	0	Shakira | spouses
 who is tatyana ali parents?	Sheriff Ali  |  Sonia Ali	0	Tatyana Ali | parents
 who is the current governor of arizona 2010?	Jan Brewer	0	Arizona | Governor | June 3, 2010
 who is the current ohio state senator?	Robert Jones Portman  (Republican, start date: January 3, 2011)	0	Ohio | US senators
@@ -452,8 +452,8 @@ who is the governor of pennsylvania state now?	Thomas W. Corbett, Jr.	0	Pennsylv
 who is the king of cambodia now?	Norodom Sihamoni	0	Cambodia | King | June 3, 2014
 who is the king of cambodia now?	Thommo Reachea III	-1	Cambodia | King | June 3, 2014
 who is the president of costa rica in 2012?	Laura Chinchilla	0	Costa Rica | President | June 3, 2012
-who is the president of peru now?	Ollanta Moisés Humala Tasso	0	Peru | President | June 3, 2014
-who is the prime minister of spain 2011?	José Luis Rodríguez Zapatero	0	Spain | Prime Minister | June 3, 2011
+who is the president of peru now?	Tasso	0	Peru | President | June 3, 2014
+who is the prime minister of spain 2011?	Zapatero	0	Spain | Prime Minister | June 3, 2011
 who is the prime minister of spain 2011?	Diego Martínez Barrio	-1	Spain | Prime Minister | June 3, 2011
 who is the prime minister of spain 2011?	Isidro Alaix  (acting)	-2	Spain | Prime Minister | June 3, 2011
 who is the texas state senator?	Ted Cruz  (Republican, start date: January 3, 2013)	0	Texas | US senators

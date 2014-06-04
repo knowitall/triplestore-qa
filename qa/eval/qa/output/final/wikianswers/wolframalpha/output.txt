@@ -34,11 +34,10 @@ Is msn a social networking site?	Social  (periodical) | website | (data not avai
 Is msn a social networking site?	Networking  (periodical) | website | www.networkingmagazineusa.com	-2	msn.com  (domain)  |  Social  (periodical) | website  |  Networking  (periodical) | website
 The wonderful Wizard of Oz was written by?	Katherine Jose  |  Irene Lewis  |  L. Frank Baum	0	The Wonderful Wizard of Oz  (movie) | writer
 What is the simplest form of 8 over 18?	4/9	0	simplify | 8/18
-What are Colorado's longitude and latitude?	39° 0.5"N, 105° 32' 49"W	0	Colorado | center coordinates
+What are Colorado's longitude and latitude?	39 0.5"N, 105 32' 49"W	0	Colorado | center coordinates
 What is mass of ammonia?	17.0305 u  (unified atomic mass units)	0	ammonia | mass
 What is the largest county in Kentucky?	Pike County	0	largest county | by total area in Kentucky  (US state)
 What is the largest county in Kentucky?	(788.7 mi^2  (square miles))	-1	largest county | by total area in Kentucky  (US state)
-Does it snow in Quebec Canada?	(53 minutes ago)	-1	precipitation | Quebec City, Canada
 How much does an Asian elephant weigh?	(2.2 to 5.5) sh tn  (short tons)	0	asian elephant | weight
 What is the 5th largest city in England?	Bradford	0	5th largest city | by city population in England, United Kingdom  (home nation)
 What is the 5th largest city in England?	(522452 people)	-1	5th largest city | by city population in England, United Kingdom  (home nation)
