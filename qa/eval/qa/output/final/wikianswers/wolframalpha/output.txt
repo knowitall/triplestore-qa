@@ -1,6 +1,5 @@
 When is Spider-Man 4 releasing?	July 3, 2012	0	The Amazing Spider-Man  (movie) | release date
 Where was Chris Brown born?	Winfield, Illinois, United States	0	Chris Brown | place of birth
-What is orange blossom jewelry?	(information not available)	0	accessories stores | Blossom, Texas  |  Orange, California
 What is the greatest common factor of 21 and 12?	3	0	gcd(21, 12)
 What date was Mother's Day in 1983?	Sunday, May 8, 1983	0	Mother's Day | 1983
 How do you write 3.15 million?	3 million 150 thousand	0	number name | 3150000
@@ -28,10 +27,8 @@ How far from Riva del Garda to Venice?	79.11 miles	0	distance | from | Riva del 
 How do you pop zits?	3.519 million per year	0	acne or pimples | number of US patients
 What day of the week was January 5 1967?	Thursday	0	January 5, 1967 | day of the week
 What 7 letter word has A as third letter?	7 letter words	0	convert 7 letters word to letters
-Who was King of Portugal in 1484?	(none in office)	0	Portugal | King | June 3, 1484
 How do manager's job is changing?	-36270 people  (-0.6%)  (2009)	0	management occupations | yearly change | United States
 Convert kilometers to miles?	0.6214 miles	0	convert 1 km  (kilometer) to miles
-What is an synonym for stampede?	(none)	0	stampede  (English word) | synonym
 Is msn a social networking site?	msn.com | msn.com	0	msn.com  (domain)  |  Social  (periodical) | website  |  Networking  (periodical) | website
 Is msn a social networking site?	Social  (periodical) | website | (data not available)	-1	msn.com  (domain)  |  Social  (periodical) | website  |  Networking  (periodical) | website
 Is msn a social networking site?	Networking  (periodical) | website | www.networkingmagazineusa.com	-2	msn.com  (domain)  |  Social  (periodical) | website  |  Networking  (periodical) | website
@@ -41,7 +38,6 @@ What are Colorado's longitude and latitude?	39° 0.5"N, 105° 32' 49"W	0	Colorad
 What is mass of ammonia?	17.0305 u  (unified atomic mass units)	0	ammonia | mass
 What is the largest county in Kentucky?	Pike County	0	largest county | by total area in Kentucky  (US state)
 What is the largest county in Kentucky?	(788.7 mi^2  (square miles))	-1	largest county | by total area in Kentucky  (US state)
-Does it snow in Quebec Canada?	(unknown)	0	precipitation | Quebec City, Canada
 Does it snow in Quebec Canada?	(53 minutes ago)	-1	precipitation | Quebec City, Canada
 How much does an Asian elephant weigh?	(2.2 to 5.5) sh tn  (short tons)	0	asian elephant | weight
 What is the 5th largest city in England?	Bradford	0	5th largest city | by city population in England, United Kingdom  (home nation)
