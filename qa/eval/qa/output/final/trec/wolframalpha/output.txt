@@ -13,25 +13,27 @@ Who invented television?	Charles Francis Jenkins  |  Philo Farnsworth	0	televisi
 In what year was Warren Moon born?	1956	0	Warren Moon | year of birth
 When was the Red Cross founded?	August 22, 1864	0	International Committee of the Red Cross is founded | date
 How long is human gestation?	9 months	0	human | duration of pregnancy
-What actress starred in "The Lion in Winter"?	Peter O'Toole | Henry II Of England	0	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Katharine Hepburn | Eleanor Of Aquitaine	-1	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Anthony Hopkins | Richard I Of England	-2	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Timothy Dalton | Philip II Of France	-3	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Nigel Terry |	-4	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	John Castle | Geoffrey II, Duke Of Brittany	-5	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Nigel Stock | William Marshal, 1st Earl Of Pembroke	-6	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	O. Z. Whitehead |	-7	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Kenneth Griffith |	-8	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Jane Merrow |	-9	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Kenneth Ives |	-10	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Karol Hagar |	-11	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Fran Stafford |	-12	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Ella More |	-13	The Lion in Winter  (movie) | cast and roles
-What actress starred in "The Lion in Winter"?	Henry Woolf |	-14	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	actor | character(s)	0	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Peter O'Toole | Henry II Of England	-1	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Katharine Hepburn | Eleanor Of Aquitaine	-2	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Anthony Hopkins | Richard I Of England	-3	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Timothy Dalton | Philip II Of France	-4	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Nigel Terry |	-5	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	John Castle | Geoffrey II, Duke Of Brittany	-6	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Nigel Stock | William Marshal, 1st Earl Of Pembroke	-7	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	O. Z. Whitehead |	-8	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Kenneth Griffith |	-9	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Jane Merrow |	-10	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Kenneth Ives |	-11	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Karol Hagar |	-12	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Fran Stafford |	-13	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Ella More |	-14	The Lion in Winter  (movie) | cast and roles
+What actress starred in "The Lion in Winter"?	Henry Woolf |	-15	The Lion in Winter  (movie) | cast and roles
 Who was Carolyn Bessette Kennedy married to?	John F. Kennedy, Jr.  (1996-1999)	0	Carolyn Bessette-Kennedy | spouses
 What books has Walter Mosley written?	Always Outnumbered, Always Outgunned	0	notable books | with | author | Walter Mosley
 What was the name of Ayn Rand's husband?	Frank O'Connor  (1929-1979)	0	Ayn Rand | husbands
-What is Africa's largest country?	(919595 mi^2  (square miles))	0	largest country | by total area in Africa
+What is Africa's largest country?	Algeria	0	largest country | by total area in Africa
+What is Africa's largest country?	(919595 mi^2  (square miles))	-1	largest country | by total area in Africa
 What is Dr. Ruth's last name?	Karola Ruth Siegel	0	Ruth Westheimer | full name
 How old was Joan of Arc when she died?	19 years 4 months 15 days	0	age | of Joan of Arc  (religious) | on Joan of Arc | date of death  
 In what year was Padre Pio born?	1887	0	Pio of Pietrelcina | year of birth
@@ -46,16 +48,17 @@ When was Queen Victoria born?	Monday, May 24, 1819	0	Queen Victoria | date of bi
 What is Jay-Z's real name?	Shawn Corey Carter	0	Jay-Z | full name
 Where was Super Bowl XXXIV held?	Atlanta, Georgia, United States	0	Super Bowl | 2000 | location
 How tall is the Washington Monument?	554 feet  (city rank: 1st  |  national rank: 114th  |  world rank: 358th)	0	Washington Monument | height
-How old is Harriet Miers?	68 years 9 months 19 days	0	age | of Harriet Miers  (government) |  today  
+How old is Harriet Miers?	68 years 9 months 24 days	0	age | of Harriet Miers  (government) |  today  
 When was King Louis XIV born?	Sunday, September 5, 1638	0	Louis XIV | date of birth
 "The Muppets" was created by whom?	Jason Segel  |  Nicholas Stoller  |  Jim Henson	0	The Muppets  (movie) | writer
 What year did Alaska become a state?	Saturday, January 3, 1959	0	Alaska | joined Union
 How many moons does Neptune have?	14  (known)	0	Neptune | number of moons
 Who founded the Church of Jesus Christ of Latter-day Saints?	Jesus Christ  |  Joseph Smith	0	Church of Jesus Christ of Latter-day Saints | founder
 How did Eva Peron die?	Saturday, July 26, 1952	0	Evita Peron | date of death
-When did the Dow first reach 2000?	$103600 yr  (year US dollars)  (Thursday, May 29, 2014)	0	Dow Chemical | opening price (2000 years (age))
+When did the Dow first reach 2000?	$104700 yr  (year US dollars)  (Tuesday, June 3, 2014)	0	Dow Chemical | opening price (2000 years (age))
 How tall is the tallest pyramid?	456 feet  (city rank: 1st  |  national rank: 2nd  |  world rank: 542nd)	0	Great Pyramid of Giza | height
 When did the Johnstown flood occur?	May 31, 1889	0	Johnstown Flood | date
+What Pope finished building St. Peter's?	Urban VIII	0	Roman Catholic Church | Pope | Saint Peter's Basilica | completion date
 In what state is Dulles located?	District of Columbia	0	Washington Dulles International Airport | city | administrative region
 How old was Sani Abacha when he died?	54 years 8 months 19 days	0	age | of Sani Abacha  (politician) | on Sani Abacha | date of death  
 What is Dick Clark's date of birth?	Saturday, November 30, 1929	0	Dick Clark | date of birth
@@ -67,17 +70,20 @@ What movie won the Academy Award for best picture in 1989?	Rain Man (produced by
 How did Adolf Hitler die?	Monday, April 30, 1945	0	Adolf Hitler | date of death
 What movies did Meg Ryan star in?	Rich and Famous  |  Amityville 3-D  |  Top Gun  |  Armed and Dangerous  |  Innerspace  |  Promised Land  |  D.O.A.  |  The Presidio  |  When Harry Met Sally...  |  Joe Versus the Volcano  |  The Doors  |  Prelude to a Kiss  |  Sleepless in Seattle  |  Flesh and Bone  |  When a Man Loves a Woman  |  I.Q.  |  French Kiss  |  Restoration  |  Courage Under Fire  |  Addicted to Love  |  ...   (total: 33)	0	movies | with | cast member | Meg Ryan
 Where is the highest point on earth?	29035 feet (Mount Everest)	0	world | highest point
-Who won the 2004 World Series?	Boston Red Sox	0	World Series | 2004 | winner
-What is the birthstone of October?	traditional birthstones | opal  |  aquamarine	0	October | birthstones
+What is the average weight of a Yellow Labrador?	(55 to 70) lb  (pounds)	0	Labrador Retriever | female weight
+What is the birthstone of October?	modern birthstones | opal  |  pink tourmaline	0	October | birthstones
+What is the birthstone of October?	traditional birthstones | opal  |  aquamarine	-1	October | birthstones
 Who is Paul Newman married to?	Jackie Witte  (1949-1958)  |  Joanne Woodward  (1958-2008)	0	Paul Newman | spouses
-Where did the Hindenburg disaster occur?	countries involved | United States  |  Nazi Germany	0	Hindenburg disaster | location
+Where did the Hindenburg disaster occur?	city involved | Lakehurst, New Jersey, United States	0	Hindenburg disaster | location
+Where did the Hindenburg disaster occur?	countries involved | United States  |  Nazi Germany	-1	Hindenburg disaster | location
 Name the children of Sani Abacha	Mohammed Abacha  |  Abba Abacha	0	Sani Abacha | children
 What was Rachel Carson's vocation?	scientist	0	Rachel Carson | occupation
 When was the Hoover Dam constructed?	1936	0	Hoover Dam | completion date
 How did John Quincy Adams die?	Wednesday, February 23, 1848	0	John Quincy Adams | date of death
 How tall is the Eiffel Tower in France?	1063 feet  (city rank: 1st  |  national rank: 1st  |  world rank: 49th)	0	Eiffel Tower | height
 What is the enrollment of U.S. Naval Academy?	4568 people	0	United States Naval Academy | all students
-What is the richest country in the world?	($163026 per year per person)	0	richest country | by GDP | nominal per capita in world
+What is the richest country in the world?	Monaco	0	richest country | by GDP | nominal per capita in world
+What is the richest country in the world?	($163026 per year per person)	-1	richest country | by GDP | nominal per capita in world
 What is Britney Spears' middle name?	Britney Jean Spears	0	Britney Spears | full name
 When did Hawaii become a state?	Friday, August 21, 1959	0	Hawaii | joined Union
 What is the population of Venezuela?	30.3 million people  (world rank: 42nd)  (2013 estimate)	0	Venezuela | population
@@ -95,9 +101,9 @@ Where is the Orinoco River?	Venezuela  |  Colombia	0	Orinoco | countries
 What is Valentine's Day?	Friday, February 14, 2014	0	Valentine's Day | 2014
 How many Great Lakes are there?	30566 people  (0.15% of total for Australia)	0	Great Lakes, New South Wales, Australia | population
 How many Great Lakes are there?	30566 people  (0.15% of total for Australia)	0	Great Lakes, New South Wales, Australia | population
-What plays did Shakespeare write?	Titus Andronicus  |  Henry VI, Part II  |  Henry VI, Part III  |  Richard II  |  Richard III  |  Love's Labour's Lost  |  Henry IV, Part I  |  Romeo and Juliet  |  The Merchant of Venice  |  A Midsummer Night's Dream  |  Henry IV, Part II  |  Much Ado About Nothing  |  The Merry Wives of Windsor  |  Hamlet  |  King Lear  |  Pericles, Prince of Tyre  |  Troilus and Cressida  |  Sonnets  |  Othello  |  The Taming of the Shrew  |  ...   (total: 40)	0	notable books | with | author | William Shakespeare
-What is the chemical formula for sulphur dioxide?	SO_2	0	sulfur dioxide | formula
-What is the highest dam in the U.S.?	(771 feet)	0	highest dam | by highest point in United States
+What plays did Shakespeare write?	Henry VI, Part II  |  Titus Andronicus  |  Henry VI, Part III  |  Richard III  |  Richard II  |  Love's Labour's Lost  |  Henry IV, Part I  |  Romeo and Juliet  |  The Merchant of Venice  |  A Midsummer Night's Dream  |  Henry IV, Part II  |  Much Ado About Nothing  |  The Merry Wives of Windsor  |  Hamlet  |  King Lear  |  Sonnets  |  Pericles, Prince of Tyre  |  Troilus and Cressida  |  Othello  |  Henry VI, Part I  |  ...   (total: 40)	0	notable books | with | author | William Shakespeare
+What is the highest dam in the U.S.?	Oroville Dam	0	highest dam | by highest point in United States
+What is the highest dam in the U.S.?	(771 feet)	-1	highest dam | by highest point in United States
 What is the largest variety of cactus?	(insufficient data available)	0	cactus family | USDA variety | maximum recorded height
 What was the final score of Super Bowl XXXIV?	St. Louis Rams  (23)  |  Tennessee Titans  (16)	0	Super Bowl | 2000 | score
 What is the gestation period for humans?	9 months	0	human | duration of pregnancy

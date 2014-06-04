@@ -1,11 +1,15 @@
 how many languages do they speak in spain?	Spanish  (88%)  |  Catalan-Valencian-Balear  (15%)  |  Galician  (7.2%)  |  Basque  (1.3%)  |  Extremaduran  (0.45%)  |  Spanish sign language  (0.23%)  |  Asturian  (0.23%)  |  Caló  (0.09%)  |  Catalonian sign language  (0.041%)  |  Aragonese  (0.025%)  |  ...   (total: 12)	0	Spain | languages
 how many languages do they speak in switzerland?	German  (64%)  |  Schwyzerdütsch  (62%)  |  French  (20%)  |  Italian  (6.3%)  |  Lombard  (4%)  |  English  (1%)  |  Romansch  (0.53%)  |  Romani Sinte  (0.28%)  |  Walser  (0.13%)  |  Franco-Provençal  (0.094%)  |  ...   (total: 13)	0	Switzerland | languages
-what airport is near arlington tx?	(straight-line distances between city center and airport)	0	Arlington, Texas | nearby airports
+what airport is near arlington tx?	Dallas-Fort Worth International Airport | 14 miles north-northeast	0	Arlington, Texas | nearby airports
+what airport is near arlington tx?	(straight-line distances between city center and airport)	-1	Arlington, Texas | nearby airports
+what airport is nearest to rome?	Leonardo da Vinci International Airport | 14 miles west-southwest	0	Rome, Lazio, Italy | nearby airports
+what airport is nearest to rome?	(straight-line distances between city center and airport)	-1	Rome, Lazio, Italy | nearby airports
 what all did ben franklin invent?	franklin stove  (1741)  |  lightning rod  (1749)  |  glass harmonica  (1761)  |  bifocals  (1764)  |  electrostatic motor	0	Benjamin Franklin | notable inventions
 what are egyptian money called?	£1  (Egyptian pound)	0	Egypt | currency name
-what are serena williams achievements?	Has won 27 Grand Slam titles in singles, doubles, and mixed doubles, and held four simultaneously in 2002--03	0	Serena Williams | notable facts
-what are serena williams achievements?	Younger sister of tennis player Venus Williams	-1	Serena Williams | notable facts
-what are serena williams achievements?	Has won more prize money than any other female athlete	-2	Serena Williams | notable facts
+what are serena williams achievements?	American tennis player ranked World No. 1 in singles five times by the Women's Tennis Association, known for aggressive style of play and powerful serve	0	Serena Williams | notable facts
+what are serena williams achievements?	Has won 27 Grand Slam titles in singles, doubles, and mixed doubles, and held four simultaneously in 2002--03	-1	Serena Williams | notable facts
+what are serena williams achievements?	Younger sister of tennis player Venus Williams	-2	Serena Williams | notable facts
+what are serena williams achievements?	Has won more prize money than any other female athlete	-3	Serena Williams | notable facts
 what are the colonies of great britain?	Anguilla  |  Bermuda  |  British Virgin Islands  |  Cayman Islands  |  Falkland Islands  |  Gibraltar  |  Guernsey  |  Isle of Man  |  Jersey  |  Montserrat  |  Pitcairn Islands  |  Saint Helena, Ascension and Tristan da Cunha  |  Turks and Caicos Islands   (total:  13)	0	United Kingdom | dependencies
 what are the major languages spoken in greece?	Greek  (88%)  |  Pontic  (1.8%)  |  Romanian Macedo  (1.8%)  |  Macedonian  (1.6%)  |  Albanian Arvanitika  (1.3%)  |  Turkish  (1.2%)  |  Greek sign language  (0.38%)  |  Romani Balkan  (0.36%)  |  Bulgarian  (0.27%)  |  Albanian Tosk  (0.09%)  |  ...   (total: 15)	0	Greece | languages
 what are the major languages spoken in the united kingdom?	English  (96%)  |  Welsh  (0.84%)  |  Scots  (0.16%)  |  Irish Gaelic  (0.16%)  |  Angloromani  (0.15%)  |  Scottish Gaelic  (0.097%)  |  British sign language  (0.066%)  |  French  (0.023%)  |  Japanese  (0.02%)  |  Cornish  |  ...   (total: 12)	0	United Kingdom | languages
@@ -15,33 +19,39 @@ what are the official languages of argentina?	Spanish	0	Argentina | official lan
 what are the official languages of the eu?	Croatian  |  Dutch  |  English  |  Estonian  |  Finnish  |  French  |  Frisian  |    |  German  |  Greek  |  Italian  |  Latvian  |  Lithuanian  |  Maltese  |  Miranda do Douro  |  Portuguese  |  Romanian  |  Slovak  |  Spanish  |  Swedish   (total:  20)	0	European Union | official languages
 what awards did marilyn monroe won?	(None)	0	Academy Awards | Marilyn Monroe  (actor) wins
 what awards gary paulsen won?	(None)	0	Academy Awards | Gary Paulsen  (writer, etc.) wins
-what book did benjamin franklin published?	The Autobiography of Benjamin Franklin	0	notable books | with | author | Benjamin Franklin
+what book did benjamin franklin published?	Poor Richard's Almanack	0	notable books | with | author | Benjamin Franklin
+what book did benjamin franklin published?	The Autobiography of Benjamin Franklin	-1	notable books | with | author | Benjamin Franklin
 what book did charles darwin wrote in 1859?	The Origin of Species	0	notable books | with  | author | Charles Darwin and  | first publication date |  in 1859
-what books are written by suzanne collins?	Catching Fire	0	notable books | with | author | Suzanne Collins
-what books are written by suzanne collins?	Mockingjay	-1	notable books | with | author | Suzanne Collins
-what books did agatha christie wrote?	Death on the Nile	0	notable books | with | author | Agatha Christie
-what books did agatha christie wrote?	Appointment with Death	-1	notable books | with | author | Agatha Christie
-what books did agatha christie wrote?	And Then There Were None	-2	notable books | with | author | Agatha Christie
-what books did agatha christie wrote?	Sad Cypress	-3	notable books | with | author | Agatha Christie
-what books did agatha christie wrote?	...	-4	notable books | with | author | Agatha Christie
-what books did agatha christie wrote?	(total: 8)	-5	notable books | with | author | Agatha Christie
-what books did ernest hemingway write?	The Sun Also Rises	0	notable books | with | author | Ernest Hemingway
-what books did ernest hemingway write?	A Farewell to Arms	-1	notable books | with | author | Ernest Hemingway
-what books did ernest hemingway write?	For Whom the Bell Tolls	-2	notable books | with | author | Ernest Hemingway
-what books did ernest hemingway write?	Across the River and Into the Trees	-3	notable books | with | author | Ernest Hemingway
-what books did ernest hemingway write?	...	-4	notable books | with | author | Ernest Hemingway
-what books did ernest hemingway write?	(total: 8)	-5	notable books | with | author | Ernest Hemingway
+what books are written by suzanne collins?	The Hunger Games	0	notable books | with | author | Suzanne Collins
+what books are written by suzanne collins?	Catching Fire	-1	notable books | with | author | Suzanne Collins
+what books are written by suzanne collins?	Mockingjay	-2	notable books | with | author | Suzanne Collins
+what books did agatha christie wrote?	Murder on the Orient Express	0	notable books | with | author | Agatha Christie
+what books did agatha christie wrote?	Death on the Nile	-1	notable books | with | author | Agatha Christie
+what books did agatha christie wrote?	Appointment with Death	-2	notable books | with | author | Agatha Christie
+what books did agatha christie wrote?	And Then There Were None	-3	notable books | with | author | Agatha Christie
+what books did agatha christie wrote?	Sad Cypress	-4	notable books | with | author | Agatha Christie
+what books did agatha christie wrote?	...	-5	notable books | with | author | Agatha Christie
+what books did agatha christie wrote?	(total: 8)	-6	notable books | with | author | Agatha Christie
+what books did ernest hemingway write?	In Our Time	0	notable books | with | author | Ernest Hemingway
+what books did ernest hemingway write?	The Sun Also Rises	-1	notable books | with | author | Ernest Hemingway
+what books did ernest hemingway write?	A Farewell to Arms	-2	notable books | with | author | Ernest Hemingway
+what books did ernest hemingway write?	For Whom the Bell Tolls	-3	notable books | with | author | Ernest Hemingway
+what books did ernest hemingway write?	Across the River and Into the Trees	-4	notable books | with | author | Ernest Hemingway
+what books did ernest hemingway write?	...	-5	notable books | with | author | Ernest Hemingway
+what books did ernest hemingway write?	(total: 8)	-6	notable books | with | author | Ernest Hemingway
 what books did louis sachar wrote?	Holes	0	notable books | with | author | Louis Sachar
 what city is acadia university in?	Wolfville, Nova Scotia, Canada  (population: 3772)	0	Acadia University | location
 what countries are involved in the nafta?	Canada  |  Mexico  |  United States	0	North American Free Trade Agreement is signed | countries involved
-what countries are members of the security council?	Australia	0	countries | in UN Security Council
-what countries are members of the security council?	Azerbaijan	-1	countries | in UN Security Council
-what countries are members of the security council?	China	-2	countries | in UN Security Council
-what countries are members of the security council?	France	-3	countries | in UN Security Council
-what countries are members of the security council?	...	-4	countries | in UN Security Council
-what countries are members of the security council?	(total: 15)	-5	countries | in UN Security Council
+what countries are members of the security council?	Argentina	0	countries | in UN Security Council
+what countries are members of the security council?	Australia	-1	countries | in UN Security Council
+what countries are members of the security council?	Azerbaijan	-2	countries | in UN Security Council
+what countries are members of the security council?	China	-3	countries | in UN Security Council
+what countries are members of the security council?	France	-4	countries | in UN Security Council
+what countries are members of the security council?	...	-5	countries | in UN Security Council
+what countries are members of the security council?	(total: 15)	-6	countries | in UN Security Council
 what countries have english as their official language?	Canada  |  New Zealand  |  Nigeria  |  Ireland  |  Tanzania  |  Uganda  |  Liberia  |  Zimbabwe  |  Hong Kong  |  Namibia  |  Zambia  |  Jersey  |  Belize  |  Bermuda  |  Bahamas  |  Kenya  |  Malta  |  Dominica  |  Swaziland  |  Micronesia  |  ...   (total:  36)	0	English | official speaking countries
-what countries share borders with spain?	Andorra  |  France  |  Gibraltar  |  Morocco  |  Portugal	0	Spain | bordering countries/regions
+what countries have german as the official language?	Germany  |  Austria  |  Switzerland  |  Liechtenstein  |  Belgium	0	German | official speaking countries
+what country borders slovakia?	Austria  |  Czech Republic  |  Hungary  |  Poland  |  Ukraine	0	Slovakia | bordering countries/regions
 what country is nicki minaj from?	United States	0	Nicki Minaj (music act) | country
 what country was king tut's tomb found?	Egypt	0	KV62 | country
 what county is brentwood tennessee in?	Williamson County, Tennessee	0	Brentwood, Tennessee | county
@@ -59,8 +69,9 @@ what county is st. louis park in?	Hennepin County, Minnesota	0	Saint Louis Park,
 what county is texarkana arkansas in?	Miller County, Arkansas	0	Texarkana, Arkansas | county
 what county is utica ny in?	Oneida County, New York	0	Utica, New York | county
 what county is west st paul in?	Dakota County, Minnesota	0	West Saint Paul, Minnesota | county
-what currency is used in panama?	currency code | PAB	0	Panama | currency
-what currency is used in panama?	local currency conversion | B/.1  (Panama balboa) = $1  (US dollar)	-1	Panama | currency
+what currency is used in panama?	currency name | B/.1  (Panama balboa)	0	Panama | currency
+what currency is used in panama?	currency code | PAB	-1	Panama | currency
+what currency is used in panama?	local currency conversion | B/.1  (Panama balboa) = $1  (US dollar)	-2	Panama | currency
 what did bobby darin die of?	Thursday, December 20, 1973	0	Bobby Darin | date of death
 what did joan crawford died of?	Tuesday, May 10, 1977	0	Joan Crawford | date of death
 what did michael crabtree do?	football player	0	Michael Crabtree | occupation
@@ -68,30 +79,29 @@ what did miles davis died of?	Saturday, September 28, 1991	0	Miles Davis | date 
 what did randy savage died of?	Friday, May 20, 2011	0	Randy Savage | date of death
 what did thomas hobbes do?	philosopher	0	Thomas Hobbes | occupation
 what do people in australia speak?	English  (88%)  |  Italian  (1.5%)  |  Greek  (1.2%)  |  Cantonese  (1.2%)  |  Arabic  (1.2%)  |  Mandarin  (1.1%)  |  Spanish  (0.6%)  |  Dutch  (0.19%)  |  Torres Strait Creole  (0.11%)  |  Australian sign language  (0.067%)  |  ...   (total: 151)	0	Australia | languages
+what do people in czech republic speak?	Czech  (98%)  |  Romani Carpathian  (2.2%)  |  German  (0.38%)  |  Polish  (0.21%)  |  Bavarian  (0.091%)  |  Romani Sinte  (0.05%)  |  Albanian Gheg   (total: 7)	0	Czech Republic | languages
 what do people in jamaica speak?	Jamaican Creole English  (98%)	0	Jamaica | languages
 what do people speak in canada?	English  (61%)  |  French  (24%)  |  Mandarin  (2.6%)  |  Italian  (2%)  |  German  (1.9%)  |  Polish  (0.74%)  |  Spanish  (0.69%)  |  Dutch  (0.48%)  |  Plautdietsch  (0.24%)  |  Quebec sign language  (0.15%)  |  ...   (total: 82)	0	Canada | languages
 what do people speak in germany?	German  (95%)  |  Turkish  (2.4%)  |  Swabian  (0.99%)  |  Croatian  (0.79%)  |  Italian  (0.66%)  |  Greek  (0.38%)  |  English  (0.33%)  |  Polish  (0.29%)  |  Dutch  (0.12%)  |  Plautdietsch  (0.11%)  |  ...   (total: 23)	0	Germany | languages
 what do people speak in uk?	English  (96%)  |  Welsh  (0.84%)  |  Scots  (0.16%)  |  Irish Gaelic  (0.16%)  |  Angloromani  (0.15%)  |  Scottish Gaelic  (0.097%)  |  British sign language  (0.066%)  |  French  (0.023%)  |  Japanese  (0.02%)  |  Cornish  |  ...   (total: 12)	0	United Kingdom | languages
 what do they speak in norway?	Bokmål Norwegian  (100%)  |  Nynorsk Norwegian  (100%)  |  North Saami  (0.32%)  |  Romani Tavringer  (0.13%)  |  Finnish Kven  (0.11%)  |  Norwegian sign language  (0.085%)  |  Romani Vlax  (0.011%)  |  Lule Saami  (0.011%)  |  South Saami   (total: 9)	0	Norway | languages
-what do they speak in scotland?	French | 39 people	0	Scotland, Connecticut | language spoken at home
-what do they speak in scotland?	German | 16 people	-1	Scotland, Connecticut | language spoken at home
-what do they speak in scotland?	Spanish or Spanish Creole | 10 people	-2	Scotland, Connecticut | language spoken at home
-what do they speak in scotland?	Yiddish | 0 people	-3	Scotland, Connecticut | language spoken at home
-what do they speak in scotland?	(2008-2012 American Community Survey 5-year estimates)	-4	Scotland, Connecticut | language spoken at home
 what does bentley mean?	From a surname which was derived from a place name meaning "clearing covered with bent grass" in Old English	0	Bentley  (male given name) | etymology
 what does british colony mean?	Anguilla  |  Bermuda  |  British Virgin Islands  |  Cayman Islands  |  Falkland Islands  |  Gibraltar  |  Guernsey  |  Isle of Man  |  Jersey  |  Montserrat  |  Pitcairn Islands  |  Saint Helena, Ascension and Tristan da Cunha  |  Turks and Caicos Islands   (total:  13)	0	United Kingdom | dependencies
 what does jamaican people speak?	Jamaican Creole English  (98%)	0	Jamaica | languages
 what does julian lennon do?	musician	0	Julian Lennon | occupation
-what galileo galilei was famous for?	Improved telescope technology and discovered the four largest moons of Jupiter	0	Galileo Galilei | notable facts
-what galileo galilei was famous for?	Conducted experimented on and derived formulas for the speed and acceleration of objects in motion	-1	Galileo Galilei | notable facts
-what galileo galilei was famous for?	Controversial in the Catholic Church for stating that the sun, not the earth, was the center of the universe	-2	Galileo Galilei | notable facts
-what galileo galilei was famous for?	One of the first scientists to observe and describe sunspots	-3	Galileo Galilei | notable facts
-what happened to pope john paul ii?	Supported controversial Second Vatican Council	0	Pope John Paul II | notable facts
-what happened to pope john paul ii?	Considered to be one of most influential world leaders of the 20th century, credited with helping to end communism in Europe	-1	Pope John Paul II | notable facts
-what happened to pope john paul ii?	First non-Italian Pope since Adrian VI (1522-1523) and first Slavic Pope	-2	Pope John Paul II | notable facts
-what has angelina jolie accomplished?	A Goodwill Ambassador for the United Nations High Commissioner for Refugees	0	Angelina Jolie | notable facts
-what has angelina jolie accomplished?	First appeared onscreen as a child with her father, actor Jon Voight, in the 1982 film Lookin' to Get Out	-1	Angelina Jolie | notable facts
-what has angelina jolie accomplished?	Lives with actor Brad Pitt and their six children in a relationship that has attracted international publicity	-2	Angelina Jolie | notable facts
+what galileo galilei was famous for?	Italian astronomer and important figure in the Renaissance scientific revolution	0	Galileo Galilei | notable facts
+what galileo galilei was famous for?	Improved telescope technology and discovered the four largest moons of Jupiter	-1	Galileo Galilei | notable facts
+what galileo galilei was famous for?	Conducted experimented on and derived formulas for the speed and acceleration of objects in motion	-2	Galileo Galilei | notable facts
+what galileo galilei was famous for?	Controversial in the Catholic Church for stating that the sun, not the earth, was the center of the universe	-3	Galileo Galilei | notable facts
+what galileo galilei was famous for?	One of the first scientists to observe and describe sunspots	-4	Galileo Galilei | notable facts
+what happened to pope john paul ii?	Improved Catholic Church's relationship with Islam, Judaism, the Eastern Orthodox Church, and the Anglican Church	0	Pope John Paul II | notable facts
+what happened to pope john paul ii?	Supported controversial Second Vatican Council	-1	Pope John Paul II | notable facts
+what happened to pope john paul ii?	Considered to be one of most influential world leaders of the 20th century, credited with helping to end communism in Europe	-2	Pope John Paul II | notable facts
+what happened to pope john paul ii?	First non-Italian Pope since Adrian VI (1522-1523) and first Slavic Pope	-3	Pope John Paul II | notable facts
+what has angelina jolie accomplished?	An award-winning actress known for starring in both action and drama films such as Lara Croft: Tomb Raider and Changeling	0	Angelina Jolie | notable facts
+what has angelina jolie accomplished?	A Goodwill Ambassador for the United Nations High Commissioner for Refugees	-1	Angelina Jolie | notable facts
+what has angelina jolie accomplished?	First appeared onscreen as a child with her father, actor Jon Voight, in the 1982 film Lookin' to Get Out	-2	Angelina Jolie | notable facts
+what has angelina jolie accomplished?	Lives with actor Brad Pitt and their six children in a relationship that has attracted international publicity	-3	Angelina Jolie | notable facts
 what inventions were made by ben franklin?	franklin stove  (1741)  |  lightning rod  (1749)  |  glass harmonica  (1761)  |  bifocals  (1764)  |  electrostatic motor	0	Benjamin Franklin | notable inventions
 what is arkansas state capitol?	Little Rock, Arkansas, United States	0	Arkansas | capital
 what is ella fitzgerald parents name?	Temperance Fitzgerald  |  William Fitzgerald	0	Ella Fitzgerald | parents
@@ -102,23 +112,25 @@ what is jamie spears baby name?	Maddie Briann Aldridge	0	Jamie Lynn Spears | chi
 what is kentucky state slogan?	Unbridled spirit  |  It's that friendly  |  Where education pays	0	Kentucky | state slogan
 what is london uk time zone?	Greenwich Mean Time/British Time	0	London, Greater London, United Kingdom | time zone
 what is los angeles california time zone?	Pacific Time	0	Los Angeles, California | time zone
-what is my timezone in louisiana?	3:30:02 pm CDT  |  Thursday, May 29, 2014	0	convert current time at current geoIP location to Louisiana  (US state)
-what is my timezone in pennsylvania?	4:30:05 pm EDT  |  Thursday, May 29, 2014	0	convert current time at current geoIP location to Pennsylvania  (US state)
+what is my timezone in louisiana?	8:48:42 pm CDT  |  Tuesday, June 3, 2014	0	convert current time at current geoIP location to Louisiana  (US state)
+what is my timezone in pennsylvania?	9:48:46 pm EDT  |  Tuesday, June 3, 2014	0	convert current time at current geoIP location to Pennsylvania  (US state)
 what is newt gingrich's wife's name?	Jackie Battley  (1962-1981)  |  Marianne Ginther  (1981-2000)  |  Callista Gingrich  (2000-)	0	Newt Gingrich | wives
 what is real name of santa claus?	Kris Kringle  |  Jolly Old Saint Nick  |  Father Christmas	0	Santa Claus  (fictional character) | alternate names
-what is the average temperature in phoenix az in december?	(December 2013)	0	mean temperature | Phoenix, Arizona | December 2013
+what is the average temperature in phoenix az in december?	52 °F  (degrees Fahrenheit)	0	mean temperature | Phoenix, Arizona   | December 2013
+what is the average temperature in phoenix az in december?	(December 2013)	-1	mean temperature | Phoenix, Arizona   | December 2013
 what is the currency of sweden in 2010?	(no exchange data available)	0	1 kr  (Swedish krona) to  | 2010
-what is the current time in kauai hawaii?	10:32:39 am HST  |  Thursday, May 29, 2014	0	current time at Kauai  (island)
+what is the current time in kauai hawaii?	3:52:07 pm HST  |  Tuesday, June 3, 2014	0	current time at Kauai  (island)
 what is the holy book of the buddhist religion?	Tibetan Buddhist Canon  |  Pāli Canon  |  Chinese Buddhist Canon	0	Buddhism | major texts
 what is the main language spoken in mexico?	Spanish  (92%)  |  Maya Yucatán  (0.64%)  |  Eastern Huasteca Nahuatl  (0.37%)  |  Western Huasteca Nahuatl  (0.36%)  |  Central Mazahua  (0.32%)  |  Central Huasteca Nahuatl  (0.18%)  |  Guerrero Nahuatl  (0.14%)  |  Southeastern Puebla Nahuatl  (0.12%)  |  Chamula Tzotzil  (0.12%)  |  Highland Puebla Nahuatl  (0.11%)  |  ...   (total: 290)	0	Mexico | languages
 what is the main language used in china?	Mandarin  (66%)  |  Wu Chinese  (5.9%)  |  Cantonese  (4%)  |  Jinyu Chinese  (3.4%)  |  Xiang Chinese  (2.8%)  |  Hakka Chinese  (2%)  |  Min Nan Chinese  (2%)  |  Gan Chinese  (1.6%)  |  Min Bei Chinese  (0.79%)  |  Northern Zhuang  (0.77%)  |  ...   (total: 226)	0	China | languages
 what is the most common language in norway?	Bokmål Norwegian  (100%)  |  Nynorsk Norwegian  (100%)  |  North Saami  (0.32%)  |  Romani Tavringer  (0.13%)  |  Finnish Kven  (0.11%)  |  Norwegian sign language  (0.085%)  |  Romani Vlax  (0.011%)  |  Lule Saami  (0.011%)  |  South Saami   (total: 9)	0	Norway | languages
 what is the most common language spoken in argentina?	Spanish  (96%)  |  German  (1%)  |  Mapudungun  (0.25%)  |  Santiago del Estero Quichua  (0.15%)  |  Welsh  (0.063%)  |  Wichí Lhamtés Vejoz  (0.063%)  |  Toba  (0.05%)  |  Eastern Guaraní Bolivian  (0.038%)  |  Wichí Lhamtés Güisnay  (0.038%)  |  Mocoví  (0.011%)  |  ...   (total: 20)	0	Argentina | languages
-what is the name of airport in new york?	LaGuardia Airport | LaGuardia Airport	0	airports | in New York City, New York | name
+what is the name of airport in new york?	John F. Kennedy International Airport | John F. Kennedy International Airport	0	airports | in New York City, New York | name
+what is the name of airport in new york?	LaGuardia Airport | LaGuardia Airport	-1	airports | in New York City, New York | name
 what is the name of the capital of belgium?	Brussels, Belgium	0	Belgium | capital city
 what is the name of the san francisco newspaper?	San Francisco	0	San Francisco  (periodical) | title
 what is the national language of iran?	Persian	0	Iran | official languages
-what is the nigeria time?	9:35:21 pm WAT  |  Thursday, May 29, 2014	0	current time in Nigeria
+what is the nigeria time?	2:54:55 am WAT  |  Wednesday, June 4, 2014	0	current time in Nigeria
 what is the official language of brazil now?	Portuguese	0	Brazil | official languages | current time
 what is the primary language of china?	Mandarin  (66%)  |  Wu Chinese  (5.9%)  |  Cantonese  (4%)  |  Jinyu Chinese  (3.4%)  |  Xiang Chinese  (2.8%)  |  Hakka Chinese  (2%)  |  Min Nan Chinese  (2%)  |  Gan Chinese  (1.6%)  |  Min Bei Chinese  (0.79%)  |  Northern Zhuang  (0.77%)  |  ...   (total: 226)	0	China | languages
 what is the sacred text of daoism?	Tao Te Ching  |  Zhuangzi  |  Liezi	0	Taoism | major texts
@@ -126,16 +138,18 @@ what is the state flower of new mexico?	yucca flower  (Yucca)	0	New Mexico | sta
 what is the state motto of ohio?	With God, all things are possible	0	Ohio | state mottoes
 what is the state of montana known for?	Montana, Bulgaria	0	Montana, Bulgaria | administrative region
 what is utah's state capitol?	Salt Lake City, Utah, United States	0	Utah | capital
-what is william taft famous for?	The only person to have served as both president and chief justice of the United States	0	William Howard Taft | notable facts
-what is william taft famous for?	Alienated his own constituencies and was defeated in election for his second term as president	-1	William Howard Taft | notable facts
-what is william taft famous for?	As chief justice, the only former president to administer the oath of office to another president and to serve with associate justices he previously appointed to the court	-2	William Howard Taft | notable facts
-what is william taft famous for?	Pursued economic development of nations in Latin America and Asia through "Dollar Diplomacy"	-3	William Howard Taft | notable facts
-what is william taft famous for?	After presidential term, founded League to Enforce Peace	-4	William Howard Taft | notable facts
-what is william taft known for?	The only person to have served as both president and chief justice of the United States	0	William Howard Taft | notable facts
-what is william taft known for?	Alienated his own constituencies and was defeated in election for his second term as president	-1	William Howard Taft | notable facts
-what is william taft known for?	As chief justice, the only former president to administer the oath of office to another president and to serve with associate justices he previously appointed to the court	-2	William Howard Taft | notable facts
-what is william taft known for?	Pursued economic development of nations in Latin America and Asia through "Dollar Diplomacy"	-3	William Howard Taft | notable facts
-what is william taft known for?	After presidential term, founded League to Enforce Peace	-4	William Howard Taft | notable facts
+what is william taft famous for?	US president who stressed trust-busting, civil service reform, improving the postal service, and passing the Sixteenth Amendment	0	William Howard Taft | notable facts
+what is william taft famous for?	The only person to have served as both president and chief justice of the United States	-1	William Howard Taft | notable facts
+what is william taft famous for?	Alienated his own constituencies and was defeated in election for his second term as president	-2	William Howard Taft | notable facts
+what is william taft famous for?	As chief justice, the only former president to administer the oath of office to another president and to serve with associate justices he previously appointed to the court	-3	William Howard Taft | notable facts
+what is william taft famous for?	Pursued economic development of nations in Latin America and Asia through "Dollar Diplomacy"	-4	William Howard Taft | notable facts
+what is william taft famous for?	After presidential term, founded League to Enforce Peace	-5	William Howard Taft | notable facts
+what is william taft known for?	US president who stressed trust-busting, civil service reform, improving the postal service, and passing the Sixteenth Amendment	0	William Howard Taft | notable facts
+what is william taft known for?	The only person to have served as both president and chief justice of the United States	-1	William Howard Taft | notable facts
+what is william taft known for?	Alienated his own constituencies and was defeated in election for his second term as president	-2	William Howard Taft | notable facts
+what is william taft known for?	As chief justice, the only former president to administer the oath of office to another president and to serve with associate justices he previously appointed to the court	-3	William Howard Taft | notable facts
+what is william taft known for?	Pursued economic development of nations in Latin America and Asia through "Dollar Diplomacy"	-4	William Howard Taft | notable facts
+what is william taft known for?	After presidential term, founded League to Enforce Peace	-5	William Howard Taft | notable facts
 what jamaican money called?	J$1  (Jamaican dollar)	0	Jamaica | currency name
 what killed john bonham?	Thursday, September 25, 1980	0	John Bonham | date of death
 what language brazil speak?	Portuguese  (99%)  |  Japanese  (0.21%)  |  Amapa Creole  (0.013%)  |  Ticuna  (0.013%)  |  Kepkiriwát  (0%)  |  Nukuini  (0%)  |  Oti  (0%)  |  Tingui-Boto  (0%)  |  Truká  (0%)  |  Tupi  (0%)  |  ...   (total: 173)	0	Brazil | languages
@@ -144,26 +158,29 @@ what language do brazilians use?	Portuguese  (99%)  |  Japanese  (0.21%)  |  Ama
 what language do british speak?	English  (96%)  |  Welsh  (0.84%)  |  Scots  (0.16%)  |  Irish Gaelic  (0.16%)  |  Angloromani  (0.15%)  |  Scottish Gaelic  (0.097%)  |  British sign language  (0.066%)  |  French  (0.023%)  |  Japanese  (0.02%)  |  Cornish  |  ...   (total: 12)	0	United Kingdom | languages
 what language do colombian people speak?	Spanish  (98%)  |  Wayuu  (0.29%)  |  Romani Vlax  (0.17%)  |  Páez  (0.15%)  |  Colombian sign language  (0.11%)  |  Awa-Cuaiquer  (0.043%)  |  Guahibo  (0.041%)  |  Guambiano  (0.034%)  |  Emberá-Catío  (0.032%)  |  Arhuaco  (0.031%)  |  ...   (total: 77)	0	Colombia | languages
 what language do maltese speak?	Maltese  (74%)  |  English  (6%)   (total: 2)	0	Malta | languages
-what language do navajo people speak?	only English | 686 people	0	Navajo, New Mexico | language spoken at home
-what language do navajo people speak?	Tagalog | 88 people	-1	Navajo, New Mexico | language spoken at home
-what language do navajo people speak?	other Native North American languages | 10 people	-2	Navajo, New Mexico | language spoken at home
-what language do navajo people speak?	Spanish or Spanish Creole | 7 people	-3	Navajo, New Mexico | language spoken at home
-what language do navajo people speak?	(2008-2012 American Community Survey 5-year estimates)	-4	Navajo, New Mexico | language spoken at home
+what language do navajo people speak?	Navajo | 1047 people	0	Navajo, New Mexico | language spoken at home
+what language do navajo people speak?	only English | 686 people	-1	Navajo, New Mexico | language spoken at home
+what language do navajo people speak?	Tagalog | 88 people	-2	Navajo, New Mexico | language spoken at home
+what language do navajo people speak?	other Native North American languages | 10 people	-3	Navajo, New Mexico | language spoken at home
+what language do navajo people speak?	Spanish or Spanish Creole | 7 people	-4	Navajo, New Mexico | language spoken at home
+what language do navajo people speak?	(2008-2012 American Community Survey 5-year estimates)	-5	Navajo, New Mexico | language spoken at home
 what language do people speak in brazil?	Portuguese  (99%)  |  Japanese  (0.21%)  |  Amapa Creole  (0.013%)  |  Ticuna  (0.013%)  |  Kepkiriwát  (0%)  |  Nukuini  (0%)  |  Oti  (0%)  |  Tingui-Boto  (0%)  |  Truká  (0%)  |  Tupi  (0%)  |  ...   (total: 173)	0	Brazil | languages
 what language do people speak in the bahamas?	Bahamas Creole English  (68%)  |  English  (15%)   (total: 2)	0	Bahamas | languages
 what language do people speak in the netherlands?	Dutch  (96%)  |  Limburgisch  (5.5%)  |  Western Frisian  (4.3%)  |  Gronings  (3.6%)  |  Zeeuws  (1.3%)  |  Vlaams  (0.74%)  |  Dutch sign language  (0.12%)  |  Romani Sinte   (total: 8)	0	Netherlands | languages
 what language do russians speak?	Russian  (81%)  |  Bashkir  (1.3%)  |  Chuvash  (1.3%)  |  Chechen  (0.66%)  |  Avar  (0.39%)  |  Udmurt  (0.39%)  |  Mari Eastern  (0.37%)  |  Tatar  (0.33%)  |  Kabardian  (0.31%)  |  Erzya  (0.31%)  |  ...   (total: 92)	0	Russia | languages
 what language do serbs speak?	Serbian  (100%)  |  Albanian Gheg  (22%)  |  Hungarian  (6.1%)  |  Romanian  (2.7%)  |  Romani Balkan  (1.6%)  |  Romani Sinte  (0.42%)  |  Yugoslavian sign language  (0.4%)   (total: 7)	0	Serbia | languages
 what language do speak in argentina?	Spanish  (96%)  |  German  (1%)  |  Mapudungun  (0.25%)  |  Santiago del Estero Quichua  (0.15%)  |  Welsh  (0.063%)  |  Wichí Lhamtés Vejoz  (0.063%)  |  Toba  (0.05%)  |  Eastern Guaraní Bolivian  (0.038%)  |  Wichí Lhamtés Güisnay  (0.038%)  |  Mocoví  (0.011%)  |  ...   (total: 20)	0	Argentina | languages
-what language do the cheyenne speak?	Spanish or Spanish Creole | 2727 people	0	Cheyenne, Wyoming | language spoken at home
-what language do the cheyenne speak?	German | 300 people	-1	Cheyenne, Wyoming | language spoken at home
-what language do the cheyenne speak?	Tagalog | 225 people	-2	Cheyenne, Wyoming | language spoken at home
-what language do the cheyenne speak?	other Indo European languages | 155 people	-3	Cheyenne, Wyoming | language spoken at home
-what language do the cheyenne speak?	(2008-2012 American Community Survey 5-year estimates)	-4	Cheyenne, Wyoming | language spoken at home
+what language do the cheyenne speak?	only English | 50879 people	0	Cheyenne, Wyoming | language spoken at home
+what language do the cheyenne speak?	Spanish or Spanish Creole | 2727 people	-1	Cheyenne, Wyoming | language spoken at home
+what language do the cheyenne speak?	German | 300 people	-2	Cheyenne, Wyoming | language spoken at home
+what language do the cheyenne speak?	Tagalog | 225 people	-3	Cheyenne, Wyoming | language spoken at home
+what language do the cheyenne speak?	other Indo European languages | 155 people	-4	Cheyenne, Wyoming | language spoken at home
+what language do the cheyenne speak?	(2008-2012 American Community Survey 5-year estimates)	-5	Cheyenne, Wyoming | language spoken at home
 what language do the russian speak?	Russian  (81%)  |  Bashkir  (1.3%)  |  Chuvash  (1.3%)  |  Chechen  (0.66%)  |  Avar  (0.39%)  |  Udmurt  (0.39%)  |  Mari Eastern  (0.37%)  |  Tatar  (0.33%)  |  Kabardian  (0.31%)  |  Erzya  (0.31%)  |  ...   (total: 92)	0	Russia | languages
 what language do they speak in malta?	Maltese  (74%)  |  English  (6%)   (total: 2)	0	Malta | languages
 what language do they use in pakistan?	Western Panjabi  (37%)  |  Sindhi  (11%)  |  Seraiki  (8.4%)  |  Urdu  (6.5%)  |  Northern Pashto  (5.8%)  |  Central Pashto  (4.8%)  |  Southern Balochi  (1.7%)  |  Brahui  (1.2%)  |  Hindko Northern  (1.1%)  |  Eastern Balochi  (1.1%)  |  ...   (total: 62)	0	Pakistan | languages
 what language do ukrainian people speak?	Ukrainian  (67%)  |  Rusyn  (1.2%)  |  Romanian  (0.54%)  |  Hungarian  (0.38%)  |  Urum  (0.21%)  |  Jakati  (0.063%)  |  Greek  (0.016%)   (total: 7)	0	Ukraine | languages
+what language does algerian people speak?	Arabic  (61%)  |  Algerian Arabic  (60%)  |  Kabyle  (18%)  |  Tachawit  (4.1%)  |  French  (0.33%)  |  Algerian Saharan Arabic  (0.3%)  |  Tumzabt  (0.21%)  |  Taznatit  (0.12%)  |  Tamahaq Tahaggart  (0.074%)  |  Tidikelt Tamazight  (0.027%)  |  ...   (total: 13)	0	Algeria | languages
 what language does australia use?	English  (88%)  |  Italian  (1.5%)  |  Greek  (1.2%)  |  Cantonese  (1.2%)  |  Arabic  (1.2%)  |  Mandarin  (1.1%)  |  Spanish  (0.6%)  |  Dutch  (0.19%)  |  Torres Strait Creole  (0.11%)  |  Australian sign language  (0.067%)  |  ...   (total: 151)	0	Australia | languages
 what language does australians speak?	English  (88%)  |  Italian  (1.5%)  |  Greek  (1.2%)  |  Cantonese  (1.2%)  |  Arabic  (1.2%)  |  Mandarin  (1.1%)  |  Spanish  (0.6%)  |  Dutch  (0.19%)  |  Torres Strait Creole  (0.11%)  |  Australian sign language  (0.067%)  |  ...   (total: 151)	0	Australia | languages
 what language does cuba speak?	Spanish  (99%)	0	Cuba | languages
@@ -173,6 +190,7 @@ what language does iceland speak?	Icelandic  (96%)	0	Iceland | languages
 what language does people in iceland speak?	Icelandic  (96%)	0	Iceland | languages
 what language does peru speak?	Spanish  (79%)  |  Cusco Quechua  (5.4%)  |  Ayacucho Quechua  (3.2%)  |  Puno Quechua  (1.8%)  |  Central Aymara  (1.6%)  |  Huaylas Ancash Quechua  (1.2%)  |  Huaylla Wanca Quechua  (0.9%)  |  Northern Conchucos Ancash Quechua  (0.9%)  |  Southern Conchucos Ancash Quechua  (0.9%)  |  Eastern Apurímac Quechua  (0.72%)  |  ...   (total: 87)	0	Peru | languages
 what language is spoken in argentina?	Spanish  (96%)  |  German  (1%)  |  Mapudungun  (0.25%)  |  Santiago del Estero Quichua  (0.15%)  |  Welsh  (0.063%)  |  Wichí Lhamtés Vejoz  (0.063%)  |  Toba  (0.05%)  |  Eastern Guaraní Bolivian  (0.038%)  |  Wichí Lhamtés Güisnay  (0.038%)  |  Mocoví  (0.011%)  |  ...   (total: 20)	0	Argentina | languages
+what language is spoken in greek?	Greek  (88%)  |  Pontic  (1.8%)  |  Romanian Macedo  (1.8%)  |  Macedonian  (1.6%)  |  Albanian Arvanitika  (1.3%)  |  Turkish  (1.2%)  |  Greek sign language  (0.38%)  |  Romani Balkan  (0.36%)  |  Bulgarian  (0.27%)  |  Albanian Tosk  (0.09%)  |  ...   (total: 15)	0	Greece | languages
 what language is spoken in switzerland?	German  (64%)  |  Schwyzerdütsch  (62%)  |  French  (20%)  |  Italian  (6.3%)  |  Lombard  (4%)  |  English  (1%)  |  Romansch  (0.53%)  |  Romani Sinte  (0.28%)  |  Walser  (0.13%)  |  Franco-Provençal  (0.094%)  |  ...   (total: 13)	0	Switzerland | languages
 what language speak in brazil?	Portuguese  (99%)  |  Japanese  (0.21%)  |  Amapa Creole  (0.013%)  |  Ticuna  (0.013%)  |  Kepkiriwát  (0%)  |  Nukuini  (0%)  |  Oti  (0%)  |  Tingui-Boto  (0%)  |  Truká  (0%)  |  Tupi  (0%)  |  ...   (total: 173)	0	Brazil | languages
 what language tunisia?	Arabic  (87%)  |  Tunisian Arabic  (87%)  |  Nafusi  (0.25%)  |  French  (0.11%)  |  Lingua Franca  (0%)  |  Judeo-Tunisian Arabic   (total: 6)	0	Tunisia | languages
@@ -184,60 +202,60 @@ what movies did christopher plummer play in?	Stage Struck  |  Wind Across the Ev
 what movies did david carradine play in?	Taggart  |  Boxcar Bertha  |  Mean Streets  |  Death Race 2000  |  Cannonball!  |  Bound for Glory  |  The Serpent's Egg  |  Gray Lady Down  |  The Long Riders  |  Lone Wolf McQuade  |  Kung Fu: The Movie  |  Crime Zone  |  Bird on a Wire  |  Sonny Boy  |  Sundown: The Vampire in Retreat  |  Children of the Corn V: Fields of Terror  |  An American Tail: The Treasure of Manhattan Island  |  Balto: Wolf Quest  |  Kill Bill: Vol. 1  |  Kill Bill: Vol. 2  |  ...   (total: 30)	0	movies | with | cast member | David Carradine
 what movies did joan crawford play in?	The Merry Widow  |  The Unknown  |  Our Dancing Daughters  |  The Hollywood Revue of 1929  |  Untamed  |  Grand Hotel  |  Rain  |  Today We Live  |  Dancing Lady  |  Sadie McKee  |  The Gorgeous Hussy  |  Love on the Run  |  Mannequin  |  The Women  |  When Ladies Meet  |  Mildred Pierce  |  Humoresque  |  Possessed  |  It's a Great Feeling  |  The Damned Don't Cry  |  ...   (total: 34)	0	movies | with | cast member | Joan Crawford
 what movies did morgan freeman star in?	The Pawnbroker  |  Brubaker  |  Harry & Son  |  Teachers  |  Marie  |  That Was Then... This Is Now  |  Street Smart  |  Fight for Life  |  Clean and Sober  |  Lean on Me  |  Johnny Handsome  |  Driving Miss Daisy  |  Glory  |  The Bonfire of the Vanities  |  Robin Hood: Prince of Thieves  |  The Power of One  |  Unforgiven  |  The Shawshank Redemption  |  Outbreak  |  Se7en  |  ...   (total: 66)	0	movies | with | cast member | Morgan Freeman
-what movies did nick cannon star in?	Men in Black II	0	movies | with | cast member | Nick Cannon
-what movies did nick cannon star in?	Drumline	-1	movies | with | cast member | Nick Cannon
-what movies did nick cannon star in?	Love Don't Cost a Thing	-2	movies | with | cast member | Nick Cannon
-what movies did nick cannon star in?	Garfield	-3	movies | with | cast member | Nick Cannon
-what movies did nick cannon star in?	...	-4	movies | with | cast member | Nick Cannon
-what movies did nick cannon star in?	(total: 14)	-5	movies | with | cast member | Nick Cannon
-what movies did tupac star in?	Juice	0	movies | with | cast member | Tupac Shakur
-what movies did tupac star in?	Poetic Justice	-1	movies | with | cast member | Tupac Shakur
-what movies did tupac star in?	Above the Rim	-2	movies | with | cast member | Tupac Shakur
-what movies did tupac star in?	Gridlock'd	-3	movies | with | cast member | Tupac Shakur
-what movies did tupac star in?	...	-4	movies | with | cast member | Tupac Shakur
-what movies did tupac star in?	(total: 10)	-5	movies | with | cast member | Tupac Shakur
-what movies does logan lerman play in?	What Women Want	0	movies | with | cast member | Logan Lerman
-what movies does logan lerman play in?	Riding in Cars with Boys	-1	movies | with | cast member | Logan Lerman
-what movies does logan lerman play in?	A Painted House	-2	movies | with | cast member | Logan Lerman
-what movies does logan lerman play in?	The Butterfly Effect	-3	movies | with | cast member | Logan Lerman
-what movies does logan lerman play in?	...	-4	movies | with | cast member | Logan Lerman
-what movies does logan lerman play in?	(total: 17)	-5	movies | with | cast member | Logan Lerman
-what movies does matt dallas play in?	As Good as Dead	0	movies | with | cast member | Matt Dallas
-what movies does matt dallas play in?	Wannabe	-1	movies | with | cast member | Matt Dallas
-what movies does nick cannon play in?	Men in Black II	0	movies | with | cast member | Nick Cannon
-what movies does nick cannon play in?	Drumline	-1	movies | with | cast member | Nick Cannon
-what movies does nick cannon play in?	Love Don't Cost a Thing	-2	movies | with | cast member | Nick Cannon
-what movies does nick cannon play in?	Garfield	-3	movies | with | cast member | Nick Cannon
-what movies does nick cannon play in?	...	-4	movies | with | cast member | Nick Cannon
-what movies does nick cannon play in?	(total: 14)	-5	movies | with | cast member | Nick Cannon
-what movies has liam hemsworth played in?	Triangle	0	movies | with | cast member | Liam Hemsworth
-what movies has liam hemsworth played in?	The Last Song	-1	movies | with | cast member | Liam Hemsworth
-what movies has liam hemsworth played in?	The Hunger Games	-2	movies | with | cast member | Liam Hemsworth
-what movies has liam hemsworth played in?	The Expendables 2	-3	movies | with | cast member | Liam Hemsworth
-what movies has liam hemsworth played in?	...	-4	movies | with | cast member | Liam Hemsworth
-what movies has liam hemsworth played in?	(total: 8)	-5	movies | with | cast member | Liam Hemsworth
-what movies has spike lee made?	School Daze	0	movies | with | cast member | Spike Lee
-what movies has spike lee made?	Do the Right Thing	-1	movies | with | cast member | Spike Lee
-what movies has spike lee made?	Mo' Better Blues	-2	movies | with | cast member | Spike Lee
-what movies has spike lee made?	Jungle Fever	-3	movies | with | cast member | Spike Lee
-what movies has spike lee made?	...	-4	movies | with | cast member | Spike Lee
-what movies has spike lee made?	(total: 13)	-5	movies | with | cast member | Spike Lee
-what offices did theodore roosevelt hold?	Theodore Roosevelt, Jr. | President of the American Historical Association (Independent agencies) | United States | Republican | 1911 | 1912	0	Theodore Roosevelt | leadership position
-what offices did theodore roosevelt hold?	Theodore Roosevelt, Jr. | President (26th) | United States | Republican | September 14, 1901 | March 4, 1909	-1	Theodore Roosevelt | leadership position
-what offices did theodore roosevelt hold?	Theodore Roosevelt, Jr. | Vice President | United States | Republican | March 4, 1901 | September 14, 1901	-2	Theodore Roosevelt | leadership position
-what offices did theodore roosevelt hold?	Theodore Roosevelt, Jr. | Governor (New York) | United States | Republican | January 1, 1899 | January 1, 1901	-3	Theodore Roosevelt | leadership position
-what places in japan were bombed?	Fat Man | Nagasaki, Japan	0	nuclear explosions | in Japan | location
+what movies did nick cannon star in?	Whatever It Takes	0	movies | with | cast member | Nick Cannon
+what movies did nick cannon star in?	Men in Black II	-1	movies | with | cast member | Nick Cannon
+what movies did nick cannon star in?	Drumline	-2	movies | with | cast member | Nick Cannon
+what movies did nick cannon star in?	Love Don't Cost a Thing	-3	movies | with | cast member | Nick Cannon
+what movies did nick cannon star in?	Garfield	-4	movies | with | cast member | Nick Cannon
+what movies did nick cannon star in?	...	-5	movies | with | cast member | Nick Cannon
+what movies did nick cannon star in?	(total: 14)	-6	movies | with | cast member | Nick Cannon
+what movies did tupac star in?	Nothing But Trouble	0	movies | with | cast member | Tupac Shakur
+what movies did tupac star in?	Juice	-1	movies | with | cast member | Tupac Shakur
+what movies did tupac star in?	Poetic Justice	-2	movies | with | cast member | Tupac Shakur
+what movies did tupac star in?	Above the Rim	-3	movies | with | cast member | Tupac Shakur
+what movies did tupac star in?	Gridlock'd	-4	movies | with | cast member | Tupac Shakur
+what movies did tupac star in?	...	-5	movies | with | cast member | Tupac Shakur
+what movies did tupac star in?	(total: 10)	-6	movies | with | cast member | Tupac Shakur
+what movies does logan lerman play in?	The Patriot	0	movies | with | cast member | Logan Lerman
+what movies does logan lerman play in?	What Women Want	-1	movies | with | cast member | Logan Lerman
+what movies does logan lerman play in?	Riding in Cars with Boys	-2	movies | with | cast member | Logan Lerman
+what movies does logan lerman play in?	A Painted House	-3	movies | with | cast member | Logan Lerman
+what movies does logan lerman play in?	The Butterfly Effect	-4	movies | with | cast member | Logan Lerman
+what movies does logan lerman play in?	...	-5	movies | with | cast member | Logan Lerman
+what movies does logan lerman play in?	(total: 17)	-6	movies | with | cast member | Logan Lerman
+what movies does matt dallas play in?	The Indian	0	movies | with | cast member | Matt Dallas
+what movies does matt dallas play in?	As Good as Dead	-1	movies | with | cast member | Matt Dallas
+what movies does matt dallas play in?	Wannabe	-2	movies | with | cast member | Matt Dallas
+what movies does nick cannon play in?	Whatever It Takes	0	movies | with | cast member | Nick Cannon
+what movies does nick cannon play in?	Men in Black II	-1	movies | with | cast member | Nick Cannon
+what movies does nick cannon play in?	Drumline	-2	movies | with | cast member | Nick Cannon
+what movies does nick cannon play in?	Love Don't Cost a Thing	-3	movies | with | cast member | Nick Cannon
+what movies does nick cannon play in?	Garfield	-4	movies | with | cast member | Nick Cannon
+what movies does nick cannon play in?	...	-5	movies | with | cast member | Nick Cannon
+what movies does nick cannon play in?	(total: 14)	-6	movies | with | cast member | Nick Cannon
+what movies has spike lee made?	She's Gotta Have It  |  School Daze  |  Do the Right Thing  |  Mo' Better Blues  |  Jungle Fever  |  Malcolm X  |  Crooklyn  |  Clockers  |  Girl 6  |  Get on the Bus  |  4 Little Girls  |  He Got Game  |  Summer of Sam  |  The Original Kings of Comedy  |  Bamboozled  |  25th Hour  |  She Hate Me  |  All the Invisible Children  |  Inside Man  |  When the Levees Broke: A Requiem in Four Acts  |  Miracle at St. Anna  |  Red Hook Summer  |  Oldboy  |  Joe's Bed-Stuy Barbershop: We Cut Heads   (total: 24)	0	movies | with | director | Spike Lee
+what offices did theodore roosevelt hold?	full name | official position | country | political affiliation | start date | end date	0	Theodore Roosevelt | leadership position
+what offices did theodore roosevelt hold?	Theodore Roosevelt, Jr. | President of the American Historical Association (Independent agencies) | United States | Republican | 1911 | 1912	-1	Theodore Roosevelt | leadership position
+what offices did theodore roosevelt hold?	Theodore Roosevelt, Jr. | President (26th) | United States | Republican | September 14, 1901 | March 4, 1909	-2	Theodore Roosevelt | leadership position
+what offices did theodore roosevelt hold?	Theodore Roosevelt, Jr. | Vice President | United States | Republican | March 4, 1901 | September 14, 1901	-3	Theodore Roosevelt | leadership position
+what offices did theodore roosevelt hold?	Theodore Roosevelt, Jr. | Governor (New York) | United States | Republican | January 1, 1899 | January 1, 1901	-4	Theodore Roosevelt | leadership position
+what places in japan were bombed?	Little Boy | Hiroshima, Japan	0	nuclear explosions | in Japan | location
+what places in japan were bombed?	Fat Man | Nagasaki, Japan	-1	nuclear explosions | in Japan | location
+what songs does smokey robinson sing?	| album | artist | release date	0	music works | with | performers | Smokey Robinson (music act)
+what songs does smokey robinson sing?	Just to See Her | One Heartbeat | Smokey Robinson | Tuesday, February 24, 1987	-1	music works | with | performers | Smokey Robinson (music act)
+what songs does smokey robinson sing?	(total: 1)	-2	music works | with | performers | Smokey Robinson (music act)
 what sri lanka capital?	Colombo, Sri Lanka	0	Sri Lanka | capital city
 what state is washington d.c. located?	District of Columbia | location	0	Washington, District of Columbia | administrative region | location
 what the language spoken in indonesia?	Javanese  (32%)  |  Sunda  (12%)  |  Indonesian  (9.8%)  |  Madura  (5.9%)  |  Malay  (4.3%)  |  Minangkabau  (2.8%)  |  Banjar  (2.2%)  |  Bugis  (1.5%)  |  Malay Balinese  (1.4%)  |  Aceh  (1.3%)  |  ...   (total: 708)	0	Indonesia | languages
 what the time zone in england?	UTC	0	United Kingdom | time zones
 what the time zone in japan?	UTC+9	0	Japan | time zones
-what things did martin luther king do?	Delivered the famous "I Have a Dream" speech in front of the Lincoln Monument during the 1963 March on Washington	0	Martin Luther King | notable facts
-what things did martin luther king do?	Youngest recipient of the Nobel Peace Prize, for his struggle against racial discrimination through civil disobedience	-1	Martin Luther King | notable facts
-what things did martin luther king do?	Posthumously awarded the Presidential Medal of Freedom and honored with a federal holiday following his assassination	-2	Martin Luther King | notable facts
-what things did martin luther king do?	Organized and led a boycott of the segregated bus system in Montgomery, Alabama	-3	Martin Luther King | notable facts
-what time in hilo hawaii?	11:04:26 am HST  |  Thursday, May 29, 2014	0	current time in Hilo, Hawaii
-what time is it in texas houston right now?	4:04:32 pm CDT  |  Thursday, May 29, 2014	0	convert current time in Houston, Texas to Texas  (US state)
+what things did martin luther king do?	Iconic African-American civil rights activist and Baptist minister known for using nonviolent means to protest injustice	0	Martin Luther King | notable facts
+what things did martin luther king do?	Delivered the famous "I Have a Dream" speech in front of the Lincoln Monument during the 1963 March on Washington	-1	Martin Luther King | notable facts
+what things did martin luther king do?	Youngest recipient of the Nobel Peace Prize, for his struggle against racial discrimination through civil disobedience	-2	Martin Luther King | notable facts
+what things did martin luther king do?	Posthumously awarded the Presidential Medal of Freedom and honored with a federal holiday following his assassination	-3	Martin Luther King | notable facts
+what things did martin luther king do?	Organized and led a boycott of the segregated bus system in Montgomery, Alabama	-4	Martin Luther King | notable facts
+what time in hilo hawaii?	4:22:33 pm HST  |  Tuesday, June 3, 2014	0	current time in Hilo, Hawaii
+what time is it in texas houston right now?	9:22:37 pm CDT  |  Tuesday, June 3, 2014	0	convert current time in Houston, Texas to Texas  (US state)
 what time zone is anaheim california?	Pacific Time	0	Anaheim, California | time zone
 what time zone is greensburg indiana?	Eastern Time	0	Greensburg, Indiana | time zone
 what time zone is in the bahamas?	UTC-5	0	Bahamas | time zones
@@ -245,50 +263,61 @@ what timezone is elizabethtown kentucky?	Eastern Time	0	Elizabethtown, Kentucky 
 what timezone is nashville tn?	Central Time	0	Nashville, Tennessee | time zone
 what timezone is sweden?	UTC+1	0	Sweden | time zones
 what timezone is utah in?	Mountain Time	0	Utah | time zone
-what was augustus caesar famous for?	His rule was a model for most subsequent imperial governments	0	Caesar Augustus | notable facts
-what was augustus caesar famous for?	Reign initiated an era of relative peace known as the Pax Romana and saw the rebuilding of much of Rome	-1	Caesar Augustus | notable facts
-what was augustus caesar famous for?	Enlarged the Roman Empire dramatically by annexing Egypt, Dalmatia, Pannonia, Raetia, and parts of Africa, and completing the conquest of Hispania	-2	Caesar Augustus | notable facts
-what was augustus caesar famous for?	Reformed Roman taxes, developed networks of roads and an official courier system, established a standing army, and created official police and fire-fighting services	-3	Caesar Augustus | notable facts
-what was augustus caesar famous for?	Gained power through financial success, conquests, patronage relationships, military loyalty, Senate-granted honors, and respect of the people	-4	Caesar Augustus | notable facts
-what was augustus caesar famous for?	Before becoming sole leader, joined forces with and ruled alongside Mark Antony and Marcus Aemilius Lepidus in a military dictatorship known as the "Second Triumvirate"	-5	Caesar Augustus | notable facts
-what was augustus caesar famous for?	Retained autocratic power after the Second Triumvirate's collapse, but restored an outward façade of the Roman Republic, with governmental power vested in the Roman Senate	-6	Caesar Augustus | notable facts
-what was augustus caesar famous for?	Born Gaius Octavius Thurinus, became Gaius Julius Caesar after adoption by great-uncle Julius Caesar, then given honorific Augustus ("the revered one"), making him Gaius Julius Caesar Augustus	-7	Caesar Augustus | notable facts
+what was augustus caesar famous for?	Considered the first emperor of the Roman Empire	0	Caesar Augustus | notable facts
+what was augustus caesar famous for?	His rule was a model for most subsequent imperial governments	-1	Caesar Augustus | notable facts
+what was augustus caesar famous for?	Reign initiated an era of relative peace known as the Pax Romana and saw the rebuilding of much of Rome	-2	Caesar Augustus | notable facts
+what was augustus caesar famous for?	Enlarged the Roman Empire dramatically by annexing Egypt, Dalmatia, Pannonia, Raetia, and parts of Africa, and completing the conquest of Hispania	-3	Caesar Augustus | notable facts
+what was augustus caesar famous for?	Reformed Roman taxes, developed networks of roads and an official courier system, established a standing army, and created official police and fire-fighting services	-4	Caesar Augustus | notable facts
+what was augustus caesar famous for?	Gained power through financial success, conquests, patronage relationships, military loyalty, Senate-granted honors, and respect of the people	-5	Caesar Augustus | notable facts
+what was augustus caesar famous for?	Before becoming sole leader, joined forces with and ruled alongside Mark Antony and Marcus Aemilius Lepidus in a military dictatorship known as the "Second Triumvirate"	-6	Caesar Augustus | notable facts
+what was augustus caesar famous for?	Retained autocratic power after the Second Triumvirate's collapse, but restored an outward façade of the Roman Republic, with governmental power vested in the Roman Senate	-7	Caesar Augustus | notable facts
+what was augustus caesar famous for?	Born Gaius Octavius Thurinus, became Gaius Julius Caesar after adoption by great-uncle Julius Caesar, then given honorific Augustus ("the revered one"), making him Gaius Julius Caesar Augustus	-8	Caesar Augustus | notable facts
 what was bonnie prince charlie full name?	Prince Charles Edward Stuart	0	Charles Edward Stuart | full name
 what was dr seuss real name?	Theodor Seuss Geisel	0	Dr. Seuss | full name
 what was dr seuss's real name?	Theodor Seuss Geisel	0	Dr. Seuss | full name
-what was francis bacon contributions?	Detailed his philosophy of a utopian community in the novel New Atlantis	0	Sir Francis Bacon | notable facts
-what was francis bacon contributions?	Served as Attorney General and Lord Chancellor of England during his political career	-1	Sir Francis Bacon | notable facts
-what was francis bacon contributions?	Died of pneumonia probably contracted during his experimentations on the freezing of meat for preservation	-2	Sir Francis Bacon | notable facts
-what was franklin pierce famous for?	Failed policies permanently discredited "Manifest Destiny" and "popular sovereignty" as political doctrines	0	Franklin Pierce | notable facts
-what was franklin pierce famous for?	Won by a landslide in the Electoral College 254 to 42, and by a 6% margin in the popular vote, with running mate William King	-1	Franklin Pierce | notable facts
-what was franklin pierce famous for?	Supported the Confederacy in the Civil War after leaving office	-2	Franklin Pierce | notable facts
-what was franklin pierce famous for?	Served in the House of Representatives and Senate, and fought in the Mexican-American War, achieving the rank of brigadier general	-3	Franklin Pierce | notable facts
-what was gregor mendel contribution?	Showed that there were distinct patterns of inheritance in the traits of pea plants	0	Gregor Mendel | notable facts
-what was gregor mendel contribution?	His work was rediscovered at the turn of the 20th century	-1	Gregor Mendel | notable facts
-what was gregor mendel contribution?	Completed his most famous work while living as an Augustinian friar	-2	Gregor Mendel | notable facts
-what was john deere famous for?	Company became one of the world's biggest construction and agricultural equipment manufacturers	0	John Deere | notable facts
-what was john deere famous for?	Inventor of the first steel plow to become commercially successful, first building it in 1837	-1	John Deere | notable facts
-what was john quincy adams famous for?	Presidency considered unproductive, as he lacked political aptitude and a network of supporters	0	John Quincy Adams | notable facts
-what was john quincy adams famous for?	As a diplomat, shaped America's foreign policy with his conservative belief in its republican values	-1	John Quincy Adams | notable facts
-what was john quincy adams famous for?	As secretary of state, aided in the construction of the Monroe Doctrine	-2	John Quincy Adams | notable facts
-what was john quincy adams famous for?	Only president ever to be elected a US representative after leaving office	-3	John Quincy Adams | notable facts
-what was john quincy adams famous for?	Became a leading opponent of Southern slaveholders and predicted the Union's dissection over slavery	-4	John Quincy Adams | notable facts
-what was john quincy adams famous for?	First president of the United States since his father, President John Adams, to serve only one term	-5	John Quincy Adams | notable facts
-what was napoleon bonaparte accomplishments?	Led France into the Napoleonic Wars, conquering much of Europe until the failed invasion of Russia in 1812	0	Napoleon Bonaparte | notable facts
-what was napoleon bonaparte accomplishments?	Exiled to the island of Elba, but escaped less than a year later and returned to power	-1	Napoleon Bonaparte | notable facts
-what was napoleon bonaparte accomplishments?	Defeated by combined British and Prussian armies at the Battle of Waterloo and confined by the British to the island of Saint Helena for the remainder of his life	-2	Napoleon Bonaparte | notable facts
-what was napoleon bonaparte accomplishments?	Reformed the French legal system with the influential Napoleonic Code	-3	Napoleon Bonaparte | notable facts
+what was francis bacon contributions?	Philosopher, writer, and statesman known as the father of empiricism for pioneering the modern scientific method	0	Sir Francis Bacon | notable facts
+what was francis bacon contributions?	Detailed his philosophy of a utopian community in the novel New Atlantis	-1	Sir Francis Bacon | notable facts
+what was francis bacon contributions?	Served as Attorney General and Lord Chancellor of England during his political career	-2	Sir Francis Bacon | notable facts
+what was francis bacon contributions?	Died of pneumonia probably contracted during his experimentations on the freezing of meat for preservation	-3	Sir Francis Bacon | notable facts
+what was franklin pierce famous for?	American president whose decisions divided the nation and earned criticism	0	Franklin Pierce | notable facts
+what was franklin pierce famous for?	Failed policies permanently discredited "Manifest Destiny" and "popular sovereignty" as political doctrines	-1	Franklin Pierce | notable facts
+what was franklin pierce famous for?	Won by a landslide in the Electoral College 254 to 42, and by a 6% margin in the popular vote, with running mate William King	-2	Franklin Pierce | notable facts
+what was franklin pierce famous for?	Supported the Confederacy in the Civil War after leaving office	-3	Franklin Pierce | notable facts
+what was franklin pierce famous for?	Served in the House of Representatives and Senate, and fought in the Mexican-American War, achieving the rank of brigadier general	-4	Franklin Pierce | notable facts
+what was gregor mendel contribution?	Scientist whose work proving the laws of Mendelian inheritance led to his later recognition as the father of genetics	0	Gregor Mendel | notable facts
+what was gregor mendel contribution?	Showed that there were distinct patterns of inheritance in the traits of pea plants	-1	Gregor Mendel | notable facts
+what was gregor mendel contribution?	His work was rediscovered at the turn of the 20th century	-2	Gregor Mendel | notable facts
+what was gregor mendel contribution?	Completed his most famous work while living as an Augustinian friar	-3	Gregor Mendel | notable facts
+what was john deere famous for?	Blacksmith and manufacturer who founded what became Deere & Company	0	John Deere | notable facts
+what was john deere famous for?	Company became one of the world's biggest construction and agricultural equipment manufacturers	-1	John Deere | notable facts
+what was john deere famous for?	Inventor of the first steel plow to become commercially successful, first building it in 1837	-2	John Deere | notable facts
+what was john quincy adams famous for?	Early US president regarded as one of the greatest American diplomats, participating in international negotiations and shaping national policy	0	John Quincy Adams | notable facts
+what was john quincy adams famous for?	Presidency considered unproductive, as he lacked political aptitude and a network of supporters	-1	John Quincy Adams | notable facts
+what was john quincy adams famous for?	As a diplomat, shaped America's foreign policy with his conservative belief in its republican values	-2	John Quincy Adams | notable facts
+what was john quincy adams famous for?	As secretary of state, aided in the construction of the Monroe Doctrine	-3	John Quincy Adams | notable facts
+what was john quincy adams famous for?	Only president ever to be elected a US representative after leaving office	-4	John Quincy Adams | notable facts
+what was john quincy adams famous for?	Became a leading opponent of Southern slaveholders and predicted the Union's dissection over slavery	-5	John Quincy Adams | notable facts
+what was john quincy adams famous for?	First president of the United States since his father, President John Adams, to serve only one term	-6	John Quincy Adams | notable facts
+what was napoleon bonaparte accomplishments?	Ruled as Emperor of the French from 1804 to 1815 after rising to power through a coup in 1799	0	Napoleon Bonaparte | notable facts
+what was napoleon bonaparte accomplishments?	Led France into the Napoleonic Wars, conquering much of Europe until the failed invasion of Russia in 1812	-1	Napoleon Bonaparte | notable facts
+what was napoleon bonaparte accomplishments?	Exiled to the island of Elba, but escaped less than a year later and returned to power	-2	Napoleon Bonaparte | notable facts
+what was napoleon bonaparte accomplishments?	Defeated by combined British and Prussian armies at the Battle of Waterloo and confined by the British to the island of Saint Helena for the remainder of his life	-3	Napoleon Bonaparte | notable facts
+what was napoleon bonaparte accomplishments?	Reformed the French legal system with the influential Napoleonic Code	-4	Napoleon Bonaparte | notable facts
 what was nikola tesla inventions?	alternating current  (1866)  |  induction motor  (~~ 1885)  |  radio  (1895)  |  radio control  (1898)  |  remote control  (1898)  |  ...   (total: 9)	0	Nikola Tesla | notable inventions
 what was sir isaac newton's inventions?	reflecting telescope  (1668)  |  Newtonian telescope	0	Isaac Newton | notable inventions
+what was the book written by charles darwin?	The Voyage of the Beagle	0	notable books | with | author | Charles Darwin
+what was the book written by charles darwin?	The Origin of Species	-1	notable books | with | author | Charles Darwin
+what was the book written by charles darwin?	The Descent of Man, and Selection in Relation to Sex	-2	notable books | with | author | Charles Darwin
 what was the name of benjamin franklin wife?	Deborah Read  (1730-1774)  (common-law marriage)	0	Benjamin Franklin | wives
 what was the name of jfk's brothers?	Joseph P. Kennedy  |  Robert F. Kennedy  |  Ted Kennedy	0	John F. Kennedy | brothers
-what was the title of the book charles darwin wrote?	The Origin of Species | The Origin of Species	0	notable books | with | author | Charles Darwin | title
-what was the title of the book charles darwin wrote?	The Descent of Man, and Selection in Relation to Sex | The Descent of Man, and Selection in Relation to Sex	-1	notable books | with | author | Charles Darwin | title
+what was the title of the book charles darwin wrote?	The Voyage of the Beagle | The Voyage of the Beagle	0	notable books | with | author | Charles Darwin | title
+what was the title of the book charles darwin wrote?	The Origin of Species | The Origin of Species	-1	notable books | with | author | Charles Darwin | title
+what was the title of the book charles darwin wrote?	The Descent of Man, and Selection in Relation to Sex | The Descent of Man, and Selection in Relation to Sex	-2	notable books | with | author | Charles Darwin | title
 what year does hitler die?	1945	0	Adolf Hitler | year of death
 what year was first world series?	Oct 1, 1903  to  Oct 13, 1903	0	World Series | 1903 | date
 what year was george w bush elected?	November 7, 2000	0	George W. Bush wins over Al Gore in disputed presidential election | start date
 what year was hitler was born?	1889	0	Adolf Hitler | year of birth
-what's my timezone in oklahoma?	4:25:10 pm CDT  |  Thursday, May 29, 2014	0	convert current time at current geoIP location to Oklahoma  (US state)
+what's my timezone in oklahoma?	9:39:57 pm CDT  |  Tuesday, June 3, 2014	0	convert current time at current geoIP location to Oklahoma  (US state)
 when did annie open?	May 21, 1982	0	Annie  (movie) | release date
 when did the san francisco earthquake occur?	April 18, 1906	0	San Francisco Earthquake | date
 when does jewish new year start?	12:00 am PDT  |  Thursday, September 25, 2014	0	start of | Rosh Hashanah | 2014
@@ -312,63 +341,69 @@ where is arabic most spoken?	Egypt	0	Arabic | place with most speakers
 where is chris paul from?	United States	0	Chris Paul | place of birth
 where is jay leno from?	New Rochelle, New York, United States	0	Jay Leno | place of birth
 where is olympic national park wa?	Washington	0	Olympic National Park | state
-where is the chernobyl nuclear power plant?	Chernobyl-2 | Kyyivska, Ukraine	0	Chernobyl (nuclear power station) | location
-where is the chernobyl nuclear power plant?	Chernobyl-3 | Kyyivska, Ukraine	-1	Chernobyl (nuclear power station) | location
-where is the chernobyl nuclear power plant?	Chernobyl-4 | Kyyivska, Ukraine	-2	Chernobyl (nuclear power station) | location
+where is the chernobyl nuclear power plant?	Chernobyl-1 | Kyyivska, Ukraine	0	Chernobyl (nuclear power station) | location
+where is the chernobyl nuclear power plant?	Chernobyl-2 | Kyyivska, Ukraine	-1	Chernobyl (nuclear power station) | location
+where is the chernobyl nuclear power plant?	Chernobyl-3 | Kyyivska, Ukraine	-2	Chernobyl (nuclear power station) | location
+where is the chernobyl nuclear power plant?	Chernobyl-4 | Kyyivska, Ukraine	-3	Chernobyl (nuclear power station) | location
 where is the seat of the african union?	Algiers, Algeria  |  Luanda, Angola  |  Addis Ababa, Ethiopia  |  Nairobi, Kenya  |  Tripoli, Libya  |  Windhoek, Khomas, Namibia  |  Mogadishu, Banaadir, Somalia  |  Kampala, Central Region, Uganda  |  Monrovia, Montserrado, Liberia  |  Niamey, Niger  |  Porto Novo, Oueme, Benin  |  Gaborone, Botswana  |  Ouagadougou, Kadiogo, Burkina Faso  |  Bujumbura, Bujumbura Mairie, Burundi  |  Yaounde, Centre, Cameroon  |  Praia, Cape Verde  |  Bangui, Central African Republic  |  NDjamena, Chari-Baguirmi, Chad  |  Moroni, Ngazidja, Comoros  |  Djibouti  |  ...   (total:  53)	0	African Union | capital cities
 where was john jay born?	New York City, New York, United States	0	John Jay | place of birth
 where was rihanna raised?	Bridgetown, Saint Michael, Barbados	0	Rihanna | place of birth
 where was teddy roosevelt's house?	New York	0	Theodore Roosevelt Birthplace National Historic Site | state
 where was the vietnam war location?	countries involved | Australia  |  China  |  Democratic Kampuchea  |  Khmer Republic  |  Kingdom of Laos  |  New Zealand  |  North Korea  |  Democratic Republic of Vietnam  |  Philippines  |  South Korea  |  ...	0	Vietnam War | location
 which countries share a border with russia?	Azerbaijan  |  Belarus  |  China  |  Estonia  |  Finland  |  Georgia  |  Kazakhstan  |  Latvia  |  Lithuania  |  Mongolia  |  North Korea  |  Norway  |  Poland  |  Ukraine   (total:  14)	0	Russia | bordering countries/regions
-which countries speak arabic language?	Saudi Arabia | 23.61 million people	0	Arabic | native speakers
-which countries speak arabic language?	Algeria | 20.5 million people	-1	Arabic | native speakers
-which countries speak arabic language?	Morocco | 18.81 million people	-2	Arabic | native speakers
-which countries speak arabic language?	Iraq | 17.84 million people	-3	Arabic | native speakers
-which countries speak arabic language?	Sudan | 15.02 million people	-4	Arabic | native speakers
-which countries speak arabic language?	Yemen | 14.66 million people	-5	Arabic | native speakers
-which countries speak arabic language?	Syria | 10.97 million people	-6	Arabic | native speakers
-which countries speak arabic language?	Tunisia | 9.001 million people	-7	Arabic | native speakers
-which countries speak arabic language?	Jordan | 4.25 million people	-8	Arabic | native speakers
-which countries speak arabic language?	Libya | 4.2 million people	-9	Arabic | native speakers
-which countries speak arabic language?	Lebanon | 3.9 million people	-10	Arabic | native speakers
-which countries speak arabic language?	West Bank | 1.61 million people	-11	Arabic | native speakers
-which countries speak arabic language?	Iran | 1.4 million people	-12	Arabic | native speakers
-which countries speak arabic language?	Israel | 1.385 million people	-13	Arabic | native speakers
-which countries speak arabic language?	Oman | 1.231 million people	-14	Arabic | native speakers
-which countries speak arabic language?	Chad | 758500 people	-15	Arabic | native speakers
-which countries speak arabic language?	United Arab Emirates | 749000 people	-16	Arabic | native speakers
-which countries speak arabic language?	United States | 712100 people	-17	Arabic | native speakers
-which countries speak arabic language?	Kuwait | 500000 people	-18	Arabic | native speakers
-which countries speak arabic language?	Turkey | 400000 people	-19	Arabic | native speakers
-which countries speak arabic language?	Bahrain | 400000 people	-20	Arabic | native speakers
-which countries speak arabic language?	Australia | 243600 people	-21	Arabic | native speakers
-which countries speak arabic language?	Tanzania | 195000 people	-22	Arabic | native speakers
-which countries speak arabic language?	Qatar | 103600 people	-23	Arabic | native speakers
-which countries speak arabic language?	Nigeria | 100000 people	-24	Arabic | native speakers
-which countries speak arabic language?	Cameroon | 63600 people	-25	Arabic | native speakers
-which countries speak arabic language?	Djibouti | 52000 people	-26	Arabic | native speakers
-which countries speak arabic language?	Niger | 20000 people	-27	Arabic | native speakers
-which countries speak arabic language?	Kenya | 15000 people	-28	Arabic | native speakers
-which countries speak arabic language?	Afghanistan | 5000 people	-29	Arabic | native speakers
-which countries speak arabic language?	Cyprus | 1300 people	-30	Arabic | native speakers
-which countries speak arabic language?	Tajikistan | 1000 people	-31	Arabic | native speakers
-which countries speak arabic language?	Uzbekistan | 700 people	-32	Arabic | native speakers
+which countries speak arabic language?	Egypt | 64.39 million people	0	Arabic | native speakers
+which countries speak arabic language?	Saudi Arabia | 23.61 million people	-1	Arabic | native speakers
+which countries speak arabic language?	Algeria | 20.5 million people	-2	Arabic | native speakers
+which countries speak arabic language?	Morocco | 18.81 million people	-3	Arabic | native speakers
+which countries speak arabic language?	Iraq | 17.84 million people	-4	Arabic | native speakers
+which countries speak arabic language?	Sudan | 15.02 million people	-5	Arabic | native speakers
+which countries speak arabic language?	Yemen | 14.66 million people	-6	Arabic | native speakers
+which countries speak arabic language?	Syria | 10.97 million people	-7	Arabic | native speakers
+which countries speak arabic language?	Tunisia | 9.001 million people	-8	Arabic | native speakers
+which countries speak arabic language?	Jordan | 4.25 million people	-9	Arabic | native speakers
+which countries speak arabic language?	Libya | 4.2 million people	-10	Arabic | native speakers
+which countries speak arabic language?	Lebanon | 3.9 million people	-11	Arabic | native speakers
+which countries speak arabic language?	West Bank | 1.61 million people	-12	Arabic | native speakers
+which countries speak arabic language?	Iran | 1.4 million people	-13	Arabic | native speakers
+which countries speak arabic language?	Israel | 1.385 million people	-14	Arabic | native speakers
+which countries speak arabic language?	Oman | 1.231 million people	-15	Arabic | native speakers
+which countries speak arabic language?	Chad | 758500 people	-16	Arabic | native speakers
+which countries speak arabic language?	United Arab Emirates | 749000 people	-17	Arabic | native speakers
+which countries speak arabic language?	United States | 712100 people	-18	Arabic | native speakers
+which countries speak arabic language?	Kuwait | 500000 people	-19	Arabic | native speakers
+which countries speak arabic language?	Turkey | 400000 people	-20	Arabic | native speakers
+which countries speak arabic language?	Bahrain | 400000 people	-21	Arabic | native speakers
+which countries speak arabic language?	Australia | 243600 people	-22	Arabic | native speakers
+which countries speak arabic language?	Tanzania | 195000 people	-23	Arabic | native speakers
+which countries speak arabic language?	Qatar | 103600 people	-24	Arabic | native speakers
+which countries speak arabic language?	Nigeria | 100000 people	-25	Arabic | native speakers
+which countries speak arabic language?	Cameroon | 63600 people	-26	Arabic | native speakers
+which countries speak arabic language?	Djibouti | 52000 people	-27	Arabic | native speakers
+which countries speak arabic language?	Niger | 20000 people	-28	Arabic | native speakers
+which countries speak arabic language?	Kenya | 15000 people	-29	Arabic | native speakers
+which countries speak arabic language?	Afghanistan | 5000 people	-30	Arabic | native speakers
+which countries speak arabic language?	Cyprus | 1300 people	-31	Arabic | native speakers
+which countries speak arabic language?	Tajikistan | 1000 people	-32	Arabic | native speakers
+which countries speak arabic language?	Uzbekistan | 700 people	-33	Arabic | native speakers
 which countries speak german officially?	Germany  |  Austria  |  Switzerland  |  Liechtenstein  |  Belgium	0	German | official speaking countries
 which country was michael jackson born?	Gary, Indiana, United States	0	Michael Jackson | place of birth
 which is the main train station in rome?	(information not available)	0	train stations | Main, Madaba, Jordan  |  Rome, Lazio, Italy
 who are serena williams parents?	Richard Williams  |  Oracene Price	0	Serena Williams | parents
-who are the colorado representatives?	Scott R. Tipton  (district 3, Republican, start date: January 3, 2011)	0	Colorado | US representatives
-who are the colorado representatives?	Mike Coffman  (district 6, Republican, start date: 2009)	-1	Colorado | US representatives
-who are the colorado representatives?	Jared Polis Schutz  (district 2, Democrat, start date: 2009)	-2	Colorado | US representatives
-who are the colorado representatives?	Ed Perlmutter  (district 7, Democrat, start date: 2007)	-3	Colorado | US representatives
-who are the colorado representatives?	Doug Lamborn  (district 5, Republican, start date: 2007)	-4	Colorado | US representatives
-who are the colorado representatives?	Diana DeGette  (district 1, Democrat, start date: 1997)   (total:  7)	-5	Colorado | US representatives
-who are the senators of hawaii 2012?	Daniel Ken Inouye  (Democrat, start date: 1963)	0	Hawaii | US senator | May 29, 2012
-who are the senators of new jersey now?	Frank Raleigh Lautenberg  (Democrat, start date: 2003)	0	New Jersey | US senator | May 29, 2014
-who are the senators of virginia 2013?	Mark Robert Warner  (Democrat, start date: 2009)	0	Virginia | US senator | May 29, 2013
-who are the u s senators of pennsylvania?	Patrick Joseph Toomey  (Republican, start date: January 3, 2011)	0	Pennsylvania | US senators
-who are the virginia senators 2013?	Mark Robert Warner  (Democrat, start date: 2009)	0	Virginia | US senator | May 29, 2013
+who are the colorado representatives?	Cory Gardner  (district 4, Republican, start date: January 3, 2011)	0	Colorado | US representatives
+who are the colorado representatives?	Scott R. Tipton  (district 3, Republican, start date: January 3, 2011)	-1	Colorado | US representatives
+who are the colorado representatives?	Mike Coffman  (district 6, Republican, start date: 2009)	-2	Colorado | US representatives
+who are the colorado representatives?	Jared Polis Schutz  (district 2, Democrat, start date: 2009)	-3	Colorado | US representatives
+who are the colorado representatives?	Ed Perlmutter  (district 7, Democrat, start date: 2007)	-4	Colorado | US representatives
+who are the colorado representatives?	Doug Lamborn  (district 5, Republican, start date: 2007)	-5	Colorado | US representatives
+who are the colorado representatives?	Diana DeGette  (district 1, Democrat, start date: 1997)   (total:  7)	-6	Colorado | US representatives
+who are the senators of hawaii 2012?	Daniel Akaka  (Democrat, start date: 1991)	0	Hawaii | US senator | June 3, 2012
+who are the senators of hawaii 2012?	Daniel Ken Inouye  (Democrat, start date: 1963)	-1	Hawaii | US senator | June 3, 2012
+who are the senators of new jersey now?	Bob Menendez  (Democrat, start date: 2006)	0	New Jersey | US senator | June 3, 2014
+who are the senators of new jersey now?	Frank Raleigh Lautenberg  (Democrat, start date: 2003)	-1	New Jersey | US senator | June 3, 2014
+who are the senators of virginia 2013?	Mark Robert Warner  (Democrat, start date: 2009)	0	Virginia | US senator | June 3, 2013
+who are the u s senators of pennsylvania?	Robert Patrick Casey, Jr.  (Democrat, start date: 2007)	0	Pennsylvania | US senators
+who are the u s senators of pennsylvania?	Patrick Joseph Toomey  (Republican, start date: January 3, 2011)	-1	Pennsylvania | US senators
+who are the virginia senators 2013?	Mark Robert Warner  (Democrat, start date: 2009)	0	Virginia | US senator | June 3, 2013
 who did annie oakley married?	Frank E. Butler  (1876-1926)	0	Annie Oakley | spouses
 who did ben franklin marry?	Deborah Read  (1730-1774)  (common-law marriage)	0	Benjamin Franklin | spouses
 who did benjamin franklin get married to?	Deborah Read  (1730-1774)  (common-law marriage)	0	Benjamin Franklin | spouses
@@ -392,17 +427,19 @@ who is angelina jolies brother?	James Haven	0	Angelina Jolie | brothers
 who is anne hathaway parents?	Kate McCauley Hathaway  |  Gerald Hathaway	0	Anne Hathaway | parents
 who is dirk nowitzki wife?	Jessica Olsson  (2012-)	0	Dirk Nowitzki | wives
 who is emma stone father?	Jeff Stone	0	Emma Stone | father
-who is governor of ohio 2011?	John Richard Kasich	0	Ohio | Governor | May 29, 2011
+who is governor of ohio 2011?	John Richard Kasich	0	Ohio | Governor | June 3, 2011
 who is john cena married to?	Elizabeth Huberdeau  (2009-2012)	0	John Cena | spouses
 who is judy garland father?	Francis Avent Gumm	0	Judy Garland | father
 who is kevin jonas married to?	Danielle Deleasa  (2009-)	0	Kevin Jonas | spouses
 who is keyshia cole dad?	Leon Cole  |  Francine Lons	0	Keyshia Cole | father
 who is khloe kardashian's husband?	Lamar Odom  (2009-)	0	Khloé Kardashian | husbands
-who is louisiana state senator?	Mary Loretta Landrieu  (Democrat, start date: 1997)	0	Louisiana | US senators
-who is martin luther king jr facts?	Delivered the famous "I Have a Dream" speech in front of the Lincoln Monument during the 1963 March on Washington	0	Martin Luther King | notable facts
-who is martin luther king jr facts?	Youngest recipient of the Nobel Peace Prize, for his struggle against racial discrimination through civil disobedience	-1	Martin Luther King | notable facts
-who is martin luther king jr facts?	Posthumously awarded the Presidential Medal of Freedom and honored with a federal holiday following his assassination	-2	Martin Luther King | notable facts
-who is martin luther king jr facts?	Organized and led a boycott of the segregated bus system in Montgomery, Alabama	-3	Martin Luther King | notable facts
+who is louisiana state senator?	David Bruce Vitter  (Republican, start date: 2005)	0	Louisiana | US senators
+who is louisiana state senator?	Mary Loretta Landrieu  (Democrat, start date: 1997)	-1	Louisiana | US senators
+who is martin luther king jr facts?	Iconic African-American civil rights activist and Baptist minister known for using nonviolent means to protest injustice	0	Martin Luther King | notable facts
+who is martin luther king jr facts?	Delivered the famous "I Have a Dream" speech in front of the Lincoln Monument during the 1963 March on Washington	-1	Martin Luther King | notable facts
+who is martin luther king jr facts?	Youngest recipient of the Nobel Peace Prize, for his struggle against racial discrimination through civil disobedience	-2	Martin Luther King | notable facts
+who is martin luther king jr facts?	Posthumously awarded the Presidential Medal of Freedom and honored with a federal holiday following his assassination	-3	Martin Luther King | notable facts
+who is martin luther king jr facts?	Organized and led a boycott of the segregated bus system in Montgomery, Alabama	-4	Martin Luther King | notable facts
 who is michael j fox parents?	William Fox  |  Phyllis Piper	0	Michael J. Fox | parents
 who is michael j fox wife?	Tracy Pollan  (1988-)	0	Michael J. Fox | wives
 who is michael j fox's wife?	Tracy Pollan  (1988-)	0	Michael J. Fox | wives
@@ -412,181 +449,194 @@ who is president of israel?	Shimon Perski	0	Israel | President
 who is richard pryor son?	Richard Pryor Jr.  |  Franklin Pryor  |  Steven Pryor	0	Richard Pryor | sons
 who is shakira married to?	Antonio de la Rúa  (2000-2010)  (domestic partnership)  |  Gerard Piqué  (2010-)  (domestic partnership)	0	Shakira | spouses
 who is tatyana ali parents?	Sheriff Ali  |  Sonia Ali	0	Tatyana Ali | parents
-who is the current governor of arizona 2010?	Jan Brewer	0	Arizona | Governor | May 29, 2010
-who is the current leader of france 2010?	(none in office)	0	France | Leader | May 29, 2010
-who is the current ohio state senator?	Sherrod Brown  (Democrat, start date: 2007)	0	Ohio | US senators
-who is the governor of arizona 2009?	Jan Brewer	0	Arizona | Governor | May 29, 2009
-who is the governor of indiana 2009?	Mitchell Elias Daniels, Jr.	0	Indiana | Governor | May 29, 2009
-who is the governor of pennsylvania state now?	Thomas W. Corbett, Jr.	0	Pennsylvania | Governor | May 29, 2014
-who is the governor of virginia 2011?	(none in office)	0	Virginia | Governor | May 29, 2011
-who is the king of cambodia now?	Thommo Reachea III	0	Cambodia | King | May 29, 2014
-who is the leader of libya 2011?	(none in office)	0	Libya | Leader | May 29, 2011
-who is the leader of north korea today?	(none in office)	0	North Korea | Leader | May 29, 2014
-who is the president of costa rica in 2012?	Laura Chinchilla	0	Costa Rica | President | May 29, 2012
-who is the president of peru now?	Ollanta Moisés Humala Tasso	0	Peru | President | May 29, 2014
-who is the prime minister of spain 2011?	Diego Martínez Barrio	0	Spain | Prime Minister | May 29, 2011
-who is the prime minister of spain 2011?	Isidro Alaix  (acting)	-1	Spain | Prime Minister | May 29, 2011
-who is the texas state senator?	John Cornyn  (Republican, start date: 2003)	0	Texas | US senators
+who is the current governor of arizona 2010?	Jan Brewer	0	Arizona | Governor | June 3, 2010
+who is the current leader of france 2010?	(none in office)	0	France | Leader | June 3, 2010
+who is the current ohio state senator?	Robert Jones Portman  (Republican, start date: January 3, 2011)	0	Ohio | US senators
+who is the current ohio state senator?	Sherrod Brown  (Democrat, start date: 2007)	-1	Ohio | US senators
+who is the governor of arizona 2009?	Jan Brewer	0	Arizona | Governor | June 3, 2009
+who is the governor of indiana 2009?	Mitchell Elias Daniels, Jr.	0	Indiana | Governor | June 3, 2009
+who is the governor of pennsylvania state now?	Thomas W. Corbett, Jr.	0	Pennsylvania | Governor | June 3, 2014
+who is the governor of virginia 2011?	(none in office)	0	Virginia | Governor | June 3, 2011
+who is the king of cambodia now?	Norodom Sihamoni	0	Cambodia | King | June 3, 2014
+who is the king of cambodia now?	Thommo Reachea III	-1	Cambodia | King | June 3, 2014
+who is the leader of libya 2011?	(none in office)	0	Libya | Leader | June 3, 2011
+who is the leader of north korea today?	(none in office)	0	North Korea | Leader | June 3, 2014
+who is the president of costa rica in 2012?	Laura Chinchilla	0	Costa Rica | President | June 3, 2012
+who is the president of peru now?	Ollanta Moisés Humala Tasso	0	Peru | President | June 3, 2014
+who is the prime minister of spain 2011?	José Luis Rodríguez Zapatero	0	Spain | Prime Minister | June 3, 2011
+who is the prime minister of spain 2011?	Diego Martínez Barrio	-1	Spain | Prime Minister | June 3, 2011
+who is the prime minister of spain 2011?	Isidro Alaix  (acting)	-2	Spain | Prime Minister | June 3, 2011
+who is the texas state senator?	Ted Cruz  (Republican, start date: January 3, 2013)	0	Texas | US senators
+who is the texas state senator?	John Cornyn  (Republican, start date: 2003)	-1	Texas | US senators
 who is willow smith mom name?	Jada Pinkett Smith	0	Willow Smith | mother
 who owns the portland press herald?	Blethen Maine Newspapers	0	Portland Press Herald  (periodical) | publisher
-who played bilbo in lord of the rings?	Nov 27, 1977 | The Hobbit | Orson Bean	0	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in lord of the rings?	May 11, 1980 | The Return of the King | Orson Bean	-1	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in lord of the rings?	Nov 15, 1978 | The Lord of the Rings | Norman Bird	-2	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in lord of the rings?	Dec 19, 2001 | The Lord of the Rings: The Fellowship of the Ring | Ian Holm	-3	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in lord of the rings?	Dec 17, 2003 | The Lord of the Rings: The Return of the King | Ian Holm	-4	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in lord of the rings?	2012 | The Hobbit: Part 1 | Martin Freeman	-5	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in lord of the rings?	2013 | The Hobbit: Part 2 | Martin Freeman	-6	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in the fellowship of the ring?	Nov 27, 1977 | The Hobbit | Orson Bean	0	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in the fellowship of the ring?	May 11, 1980 | The Return of the King | Orson Bean	-1	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in the fellowship of the ring?	Nov 15, 1978 | The Lord of the Rings | Norman Bird	-2	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in the fellowship of the ring?	Dec 19, 2001 | The Lord of the Rings: The Fellowship of the Ring | Ian Holm	-3	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in the fellowship of the ring?	Dec 17, 2003 | The Lord of the Rings: The Return of the King | Ian Holm	-4	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in the fellowship of the ring?	2012 | The Hobbit: Part 1 | Martin Freeman	-5	Bilbo Baggins  (fictional character) | movie appearances
-who played bilbo in the fellowship of the ring?	2013 | The Hobbit: Part 2 | Martin Freeman	-6	Bilbo Baggins  (fictional character) | movie appearances
-who played jacob black in twilight?	Nov 21, 2008 | Twilight |	0	Jacob Black  (fictional character) | movie appearances
-who played jacob black in twilight?	Nov 20, 2009 | New Moon |	-1	Jacob Black  (fictional character) | movie appearances
-who played jacob black in twilight?	Jun 30, 2010 | Eclipse |	-2	Jacob Black  (fictional character) | movie appearances
-who played jacob black in twilight?	Nov 18, 2011 | Breaking Dawn, Part 1 |	-3	Jacob Black  (fictional character) | movie appearances
-who played kirk?	Dec 7, 1979 | Star Trek: The Motion Picture | William Shatner	0	James Kirk  (fictional character) | movie appearances
-who played kirk?	Jun 4, 1982 | Star Trek II: The Wrath of Khan | William Shatner	-1	James Kirk  (fictional character) | movie appearances
-who played kirk?	Jun 1, 1984 | Star Trek III: The Search for Spock | William Shatner	-2	James Kirk  (fictional character) | movie appearances
-who played kirk?	Nov 26, 1986 | Star Trek IV: The Voyage Home | William Shatner	-3	James Kirk  (fictional character) | movie appearances
-who played kirk?	Jun 9, 1989 | Star Trek V: The Final Frontier | William Shatner	-4	James Kirk  (fictional character) | movie appearances
-who played kirk?	Dec 6, 1991 | Star Trek VI: The Undiscovered Country | William Shatner	-5	James Kirk  (fictional character) | movie appearances
-who played on the jeffersons?	Sherman Hemsley | George Jefferson	0	The Jeffersons | cast
-who played on the jeffersons?	Isabel Sanford | Louise "Weezie" Jefferson	-1	The Jeffersons | cast
-who played on the jeffersons?	Marla Gibbs | Florence Johnston	-2	The Jeffersons | cast
-who played on the jeffersons?	Roxie Roker | Helen Willis	-3	The Jeffersons | cast
-who played on the jeffersons?	Franklin Cover | Tom Willis	-4	The Jeffersons | cast
-who plays billy elliot?	Jamie Bell | Billy Elliot	0	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Jamie Draven | Tony Elliot	-1	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Julie Walters | Mrs. Wilkinson	-2	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Gary Lewis | Jackie Elliot	-3	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Joe Renton | Gary Poulson	-4	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Billy Fane | Mr. Braithwaite	-5	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Mike Elliott | George Watson	-6	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Stuart Wells | Michael Caffrey	-7	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Nicola Blackwell | Debbie Wilkinson	-8	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Colin MacLachlan | Mr. Tom Wilkinson	-9	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Jean Heywood | Grandma	-10	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Carol McGuigan | Librarian	-11	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Janine Birkett | Billy's Mum	-12	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Charlie Hardwick | Sheila Briggs	-13	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Trevor Fox | PC Jeff Peverly	-14	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Denny Ferguson | Miner	-15	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Dennis Lingard | NCB Official	-16	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Matthew James Thomas | Simon	-17	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Stephen Mangan | Dr. Crane	-18	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Paul Ridley | Tutor In Medical	-19	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Patrick Malahide | Principal	-20	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Barbara Leigh-Hunt | Vice-Principal	-21	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Imogen Claire | Tutor 1	-22	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Diana Kent | Tutor 2	-23	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Neil North | Tutor 3	-24	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Lee Williams | Tutor 4	-25	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Petra Siniawski | Teacher	-26	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Merelina Kendall | Secretary	-27	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Zoe Bell | Sandra	-28	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Tracey Wilkinson | Geography Teacher	-29	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Merryn Owen | Michael Caffrey	-30	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Adam Cooper | Billy Elliot	-31	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Dylan Barnes | PC White	-32	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Martin L. Evans | Young Teenager	-33	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Adam Galbraith | Dancer In 'Swan Lake' #1	-34	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Darren Jacobs | Dancer In 'Swan Lake' #2	-35	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Sharon Percy | Jenny Poulson	-36	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Ken Richardson | Police Officer	-37	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Leonard Silver | Dancer	-38	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Lee Smikle | Dancer In 'Swan Lake' #3	-39	Billy Elliot  (movie) | cast and roles
-who plays billy elliot?	Damian Winter-Higgins | Dancer In 'Swan Lake' #4	-40	Billy Elliot  (movie) | cast and roles
-who plays edward scissorhands?	Johnny Depp | Edward Scissorhands	0	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Winona Ryder | Kim	-1	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Dianne Wiest | Peg	-2	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Alan Arkin | Bill	-3	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Anthony Michael Hall | Jim	-4	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Vincent Price | The Inventor	-5	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Robert Oliveri | Kevin	-6	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Conchata Ferrell | Helen	-7	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Kathy Baker | Joyce	-8	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Dick Anthony Williams | Officer Allen	-9	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Caroline Aaron | Marge	-10	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	O-Lan Jones | Esmeralda	-11	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Susan Blommaert | Tinka	-12	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Linda Perri | Cissy	-13	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	Biff Yeager | George	-14	Edward Scissorhands  (movie) | cast and roles
-who plays edward scissorhands?	John Davidson | Host-TV	-15	Edward Scissorhands  (movie) | cast and roles
-who plays simon birch?	Ian Michael Smith | Simon Birch	0	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Joseph Mazzello | Joe Wenteworth	-1	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Ashley Judd | Rebecca Wenteworth	-2	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Oliver Platt | Ben Goodrich	-3	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Jim Carrey | Joe Wenteworth	-4	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Jan Hooks | Miss Leavey	-5	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Dana Ivey | Grandmother Wenteworth	-6	Simon Birch  (movie) | cast and roles
-who plays simon birch?	David Strathairn | Rev. Russell	-7	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Sumela Kay | Ann	-8	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Cecilley Carroll | Marjorie	-9	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Beatrice Winde | Hilde Grove	-10	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Sam Morton | Stuart	-11	Simon Birch  (movie) | cast and roles
-who plays simon birch?	John Mazzello | Simon Wenteworth	-12	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Holly Dennison | Mrs. Birch	-13	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Peter MacNeill | Mr. Birch	-14	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Addison Bell | Dr. Wells	-15	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Roger McKeen | Coach Higgins	-16	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Sean McCann | Chief Al Cork	-17	Simon Birch  (movie) | cast and roles
-who plays simon birch?	John Robinson | Mr. Baker	-18	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Guy Sanvido | Janitor	-19	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Gil Filar | Eddie	-20	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Marcello Meleca | Howard Ellis	-21	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Tim Hall | Pitcher	-22	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Tom Redman | First Baseman	-23	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Mark Skrela | Third Baseman	-24	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Kevin White | Shortstop	-25	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Terry V. Hart | Umpire #1	-26	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Alan Markfield | Umpire #2	-27	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Christopher Marren | Rival Baseball Coach	-28	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Tommy Dorrian | Teammate #1	-29	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Justin Marangoni | Teammate #2	-30	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Tyler Cairns | Sheep	-31	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Gino Giacomini | Wise Man	-32	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Barbara Stewart | Delivery Room Nurse	-33	Simon Birch  (movie) | cast and roles
-who plays simon birch?	David Rigby | Bus Driver	-34	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Sam Aaron | Old Man #1	-35	Simon Birch  (movie) | cast and roles
-who plays simon birch?	David Chapman | Old Man #2	-36	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Wendy Fleming | Mrs. Russell	-37	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Paul De Fibo | Junior Lamb #1	-38	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Dalton Rondell | Junior Lamb #2	-39	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Cameron Croughwell | Junior Lamb #3	-40	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Logan Holladay | Junior Lamb #4	-41	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Scotty Leavenworth | Junior Lamb #5	-42	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Devon Alan | Junior Lamb #6	-43	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Joshua Titen | Junior Lamb #7	-44	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Tony Orr | Junior Lamb #8	-45	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Joshua Croughwell | Junior Lamb #9	-46	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Jeffrey Schoeny | Junior Lamb #10	-47	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Derek Montgomery | Junior Lamb #11	-48	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Sean Sullivan | Junior Lamb #12	-49	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Devon Cole Borisoff | Junior Lamb #13	-50	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Taylor Emerson | Junior Lamb #14	-51	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Brian McLaughlin | Junior Lamb #15	-52	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Nicholas Andrew | Junior Lamb #16	-53	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Sean Flynn | Junior Lamb #17	-54	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Patrick McTavish | Junior Lamb #18	-55	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Blake Hubbell | Junior Lamb #19	-56	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Cody Gill | Junior Lamb #20	-57	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Ramiro González | Junior Lamb #21	-58	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Mitchell Orr | Junior Lamb #22	-59	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Trevor Habberstad | Junior Lamb #23	-60	Simon Birch  (movie) | cast and roles
-who plays simon birch?	Aaron Bouffard | Retreat Kid	-61	Simon Birch  (movie) | cast and roles
-who was canadian prime minister in 1993?	Martin Brian Mulroney	0	Canada | Prime Minister | May 29, 1993
+who played bilbo in lord of the rings?	release date | title | played by	0	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in lord of the rings?	Nov 27, 1977 | The Hobbit | Orson Bean	-1	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in lord of the rings?	May 11, 1980 | The Return of the King | Orson Bean	-2	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in lord of the rings?	Nov 15, 1978 | The Lord of the Rings | Norman Bird	-3	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in lord of the rings?	Dec 19, 2001 | The Lord of the Rings: The Fellowship of the Ring | Ian Holm	-4	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in lord of the rings?	Dec 17, 2003 | The Lord of the Rings: The Return of the King | Ian Holm	-5	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in lord of the rings?	2012 | The Hobbit: Part 1 | Martin Freeman	-6	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in lord of the rings?	2013 | The Hobbit: Part 2 | Martin Freeman	-7	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in the fellowship of the ring?	release date | title | played by	0	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in the fellowship of the ring?	Nov 27, 1977 | The Hobbit | Orson Bean	-1	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in the fellowship of the ring?	May 11, 1980 | The Return of the King | Orson Bean	-2	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in the fellowship of the ring?	Nov 15, 1978 | The Lord of the Rings | Norman Bird	-3	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in the fellowship of the ring?	Dec 19, 2001 | The Lord of the Rings: The Fellowship of the Ring | Ian Holm	-4	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in the fellowship of the ring?	Dec 17, 2003 | The Lord of the Rings: The Return of the King | Ian Holm	-5	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in the fellowship of the ring?	2012 | The Hobbit: Part 1 | Martin Freeman	-6	Bilbo Baggins  (fictional character) | movie appearances
+who played bilbo in the fellowship of the ring?	2013 | The Hobbit: Part 2 | Martin Freeman	-7	Bilbo Baggins  (fictional character) | movie appearances
+who played jacob black in twilight?	release date | title | played by	0	Jacob Black  (fictional character) | movie appearances
+who played jacob black in twilight?	Nov 21, 2008 | Twilight |	-1	Jacob Black  (fictional character) | movie appearances
+who played jacob black in twilight?	Nov 20, 2009 | New Moon |	-2	Jacob Black  (fictional character) | movie appearances
+who played jacob black in twilight?	Jun 30, 2010 | Eclipse |	-3	Jacob Black  (fictional character) | movie appearances
+who played jacob black in twilight?	Nov 18, 2011 | Breaking Dawn, Part 1 |	-4	Jacob Black  (fictional character) | movie appearances
+who played kirk?	release date | title | played by	0	James Kirk  (fictional character) | movie appearances
+who played kirk?	Dec 7, 1979 | Star Trek: The Motion Picture | William Shatner	-1	James Kirk  (fictional character) | movie appearances
+who played kirk?	Jun 4, 1982 | Star Trek II: The Wrath of Khan | William Shatner	-2	James Kirk  (fictional character) | movie appearances
+who played kirk?	Jun 1, 1984 | Star Trek III: The Search for Spock | William Shatner	-3	James Kirk  (fictional character) | movie appearances
+who played kirk?	Nov 26, 1986 | Star Trek IV: The Voyage Home | William Shatner	-4	James Kirk  (fictional character) | movie appearances
+who played kirk?	Jun 9, 1989 | Star Trek V: The Final Frontier | William Shatner	-5	James Kirk  (fictional character) | movie appearances
+who played kirk?	Dec 6, 1991 | Star Trek VI: The Undiscovered Country | William Shatner	-6	James Kirk  (fictional character) | movie appearances
+who played on the jeffersons?	actor | character(s)	0	The Jeffersons | cast
+who played on the jeffersons?	Sherman Hemsley | George Jefferson	-1	The Jeffersons | cast
+who played on the jeffersons?	Isabel Sanford | Louise "Weezie" Jefferson	-2	The Jeffersons | cast
+who played on the jeffersons?	Marla Gibbs | Florence Johnston	-3	The Jeffersons | cast
+who played on the jeffersons?	Roxie Roker | Helen Willis	-4	The Jeffersons | cast
+who played on the jeffersons?	Franklin Cover | Tom Willis	-5	The Jeffersons | cast
+who plays billy elliot?	actor | character(s)	0	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Jamie Bell | Billy Elliot	-1	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Jamie Draven | Tony Elliot	-2	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Julie Walters | Mrs. Wilkinson	-3	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Gary Lewis | Jackie Elliot	-4	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Joe Renton | Gary Poulson	-5	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Billy Fane | Mr. Braithwaite	-6	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Mike Elliott | George Watson	-7	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Stuart Wells | Michael Caffrey	-8	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Nicola Blackwell | Debbie Wilkinson	-9	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Colin MacLachlan | Mr. Tom Wilkinson	-10	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Jean Heywood | Grandma	-11	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Carol McGuigan | Librarian	-12	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Janine Birkett | Billy's Mum	-13	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Charlie Hardwick | Sheila Briggs	-14	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Trevor Fox | PC Jeff Peverly	-15	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Denny Ferguson | Miner	-16	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Dennis Lingard | NCB Official	-17	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Matthew James Thomas | Simon	-18	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Stephen Mangan | Dr. Crane	-19	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Paul Ridley | Tutor In Medical	-20	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Patrick Malahide | Principal	-21	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Barbara Leigh-Hunt | Vice-Principal	-22	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Imogen Claire | Tutor 1	-23	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Diana Kent | Tutor 2	-24	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Neil North | Tutor 3	-25	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Lee Williams | Tutor 4	-26	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Petra Siniawski | Teacher	-27	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Merelina Kendall | Secretary	-28	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Zoe Bell | Sandra	-29	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Tracey Wilkinson | Geography Teacher	-30	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Merryn Owen | Michael Caffrey	-31	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Adam Cooper | Billy Elliot	-32	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Dylan Barnes | PC White	-33	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Martin L. Evans | Young Teenager	-34	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Adam Galbraith | Dancer In 'Swan Lake' #1	-35	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Darren Jacobs | Dancer In 'Swan Lake' #2	-36	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Sharon Percy | Jenny Poulson	-37	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Ken Richardson | Police Officer	-38	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Leonard Silver | Dancer	-39	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Lee Smikle | Dancer In 'Swan Lake' #3	-40	Billy Elliot  (movie) | cast and roles
+who plays billy elliot?	Damian Winter-Higgins | Dancer In 'Swan Lake' #4	-41	Billy Elliot  (movie) | cast and roles
+who plays edward scissorhands?	actor | character(s)	0	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Johnny Depp | Edward Scissorhands	-1	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Winona Ryder | Kim	-2	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Dianne Wiest | Peg	-3	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Alan Arkin | Bill	-4	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Anthony Michael Hall | Jim	-5	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Vincent Price | The Inventor	-6	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Robert Oliveri | Kevin	-7	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Conchata Ferrell | Helen	-8	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Kathy Baker | Joyce	-9	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Dick Anthony Williams | Officer Allen	-10	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Caroline Aaron | Marge	-11	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	O-Lan Jones | Esmeralda	-12	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Susan Blommaert | Tinka	-13	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Linda Perri | Cissy	-14	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	Biff Yeager | George	-15	Edward Scissorhands  (movie) | cast and roles
+who plays edward scissorhands?	John Davidson | Host-TV	-16	Edward Scissorhands  (movie) | cast and roles
+who plays simon birch?	actor | character(s)	0	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Ian Michael Smith | Simon Birch	-1	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Joseph Mazzello | Joe Wenteworth	-2	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Ashley Judd | Rebecca Wenteworth	-3	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Oliver Platt | Ben Goodrich	-4	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Jim Carrey | Joe Wenteworth	-5	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Jan Hooks | Miss Leavey	-6	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Dana Ivey | Grandmother Wenteworth	-7	Simon Birch  (movie) | cast and roles
+who plays simon birch?	David Strathairn | Rev. Russell	-8	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Sumela Kay | Ann	-9	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Cecilley Carroll | Marjorie	-10	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Beatrice Winde | Hilde Grove	-11	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Sam Morton | Stuart	-12	Simon Birch  (movie) | cast and roles
+who plays simon birch?	John Mazzello | Simon Wenteworth	-13	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Holly Dennison | Mrs. Birch	-14	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Peter MacNeill | Mr. Birch	-15	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Addison Bell | Dr. Wells	-16	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Roger McKeen | Coach Higgins	-17	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Sean McCann | Chief Al Cork	-18	Simon Birch  (movie) | cast and roles
+who plays simon birch?	John Robinson | Mr. Baker	-19	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Guy Sanvido | Janitor	-20	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Gil Filar | Eddie	-21	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Marcello Meleca | Howard Ellis	-22	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Tim Hall | Pitcher	-23	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Tom Redman | First Baseman	-24	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Mark Skrela | Third Baseman	-25	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Kevin White | Shortstop	-26	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Terry V. Hart | Umpire #1	-27	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Alan Markfield | Umpire #2	-28	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Christopher Marren | Rival Baseball Coach	-29	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Tommy Dorrian | Teammate #1	-30	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Justin Marangoni | Teammate #2	-31	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Tyler Cairns | Sheep	-32	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Gino Giacomini | Wise Man	-33	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Barbara Stewart | Delivery Room Nurse	-34	Simon Birch  (movie) | cast and roles
+who plays simon birch?	David Rigby | Bus Driver	-35	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Sam Aaron | Old Man #1	-36	Simon Birch  (movie) | cast and roles
+who plays simon birch?	David Chapman | Old Man #2	-37	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Wendy Fleming | Mrs. Russell	-38	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Paul De Fibo | Junior Lamb #1	-39	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Dalton Rondell | Junior Lamb #2	-40	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Cameron Croughwell | Junior Lamb #3	-41	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Logan Holladay | Junior Lamb #4	-42	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Scotty Leavenworth | Junior Lamb #5	-43	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Devon Alan | Junior Lamb #6	-44	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Joshua Titen | Junior Lamb #7	-45	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Tony Orr | Junior Lamb #8	-46	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Joshua Croughwell | Junior Lamb #9	-47	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Jeffrey Schoeny | Junior Lamb #10	-48	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Derek Montgomery | Junior Lamb #11	-49	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Sean Sullivan | Junior Lamb #12	-50	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Devon Cole Borisoff | Junior Lamb #13	-51	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Taylor Emerson | Junior Lamb #14	-52	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Brian McLaughlin | Junior Lamb #15	-53	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Nicholas Andrew | Junior Lamb #16	-54	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Sean Flynn | Junior Lamb #17	-55	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Patrick McTavish | Junior Lamb #18	-56	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Blake Hubbell | Junior Lamb #19	-57	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Cody Gill | Junior Lamb #20	-58	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Ramiro González | Junior Lamb #21	-59	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Mitchell Orr | Junior Lamb #22	-60	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Trevor Habberstad | Junior Lamb #23	-61	Simon Birch  (movie) | cast and roles
+who plays simon birch?	Aaron Bouffard | Retreat Kid	-62	Simon Birch  (movie) | cast and roles
+who was canadian prime minister in 1993?	Martin Brian Mulroney	0	Canada | Prime Minister | June 3, 1993
 who was judi dench married to?	Michael Williams  (1971-2001)	0	Judi Dench | spouses
 who was king henry viii son?	Henry Tudor  |  Henry FitzRoy, 1st Duke of Richmond and Somerset  |  Henry, Duke of Cornwall  |  King Edward VI  |  Henry, Duke of Cornwall	0	King Henry VIII | sons
 who was married to jane wyman?	Ernest Eugene Wyman  (1933-1935)  |  Myron Futterman  (1937-1938)  |  Ronald Reagan  (1940-1948)  |  Fred Karger  (1952-1955)  |  Fred Karger  (1961-1965)	0	Jane Wyman | spouses
-who was president in 1988 in the united states?	Ronald Wilson Reagan	0	United States | President | May 29, 1988
+who was president in 1988 in the united states?	Ronald Wilson Reagan	0	United States | President | June 3, 1988
 who was queen elizabeth ii mom?	Elizabeth Bowes-Lyon	0	Queen Elizabeth II | mother
 who was queen victoria's husband?	Prince Albert of Saxe-Coburg and Gotha  (1840-1861)	0	Queen Victoria | husbands
 who was richard nixon married to?	Pat Nixon  (1940-1993)	0	Richard M. Nixon | spouses
+who was the first president of the afl?	$61.47  (US dollars)  |  (data not available)	0	Aflac | opening price  |  Aflac | president
 who was the leader of the first communist party of china?	Warren Gamaliel Harding	0	United States | Leader | Anniversary of the Founding of the Communist Party of China  (China) | first year celebrated
-who was the prime minister of pakistan in 1999?	Nawaz Sharif	0	Pakistan | Prime Minister | May 29, 1999
+who was the prime minister of pakistan in 1999?	Nawaz Sharif	0	Pakistan | Prime Minister | June 3, 1999
 who was william mckinley married to?	Ida McKinley  (1871-1901)	0	William McKinley | spouses
 who were alexander graham bell's siblings?	Melville James Bell  |  Edward Charles Bell	0	Alexander Graham Bell | siblings
 who were king henry vii children?	Elizabeth Tudor  |  Katherine Tudor  |  Arthur, Prince of Wales  |  Edward Tudor  |  King Henry VIII  |  Margaret Tudor  |  Edmund Tudor, Duke of Somerset  |  Edward Tudor  |  Mary Tudor, Queen of France	0	King Henry VII | children
