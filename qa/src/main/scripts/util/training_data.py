@@ -26,14 +26,14 @@ dataset_names = {
 }
 label_position = {
     'system-full-uniontrain': {
-        'webquestions': (.28, .65),
-        'trec': (.25, .64),
-        'wikianswers': (0.041, .50),
+        'webquestions': (.15, .85),
+        'trec': (.15, .84),
+        'wikianswers': (0.025, .65),
     },
     'system-full': {
-        'webquestions': (0.16, .20),
-        'trec': (0.10, .35),
-        'wikianswers': (.028, .11),
+        'webquestions': (0.08, .30),
+        'trec': (0.05, .35),
+        'wikianswers': (.008, .11),
     },
 }
 system_colors = {
@@ -119,9 +119,9 @@ for (i, dataset) in enumerate(datasets):
         lines.extend(line)
         lx, ly = label_position[system][dataset]
         if system == 'system-full':
-            this_name = dataset_names[dataset]
+            this_name = 'Domain Questions' 
         else:
-            this_name = 'All'
+            this_name = 'All Questions'
         ax.text(lx, ly, this_name,  fontsize=6, color='black')
 
     ax.set_ylim(0, 1)
