@@ -46,8 +46,8 @@ object Importer {
     val url = config.solrUrl
     val namespace = config.namespace
     val idPrefix = if (config.idPrefix.nonEmpty) config.idPrefix else namespace
-    //val solr = new ConcurrentUpdateSolrServer(url, 1000, 4)
-    val solr = new HttpSolrServer(url)
+    val solr = new ConcurrentUpdateSolrServer(url, 1000, 8)
+    //val solr = new HttpSolrServer(url)
     
     val id = new AtomicLong(0)
     def getNextId() =  idPrefix + id.getAndIncrement()
@@ -71,11 +71,11 @@ object Importer {
         System.err.print(".")
       }
     }
-    //solr.blockUntilFinished()
+    solr.blockUntilFinished()
     solr.commit()
     var runTime = (System.currentTimeMillis() - start) / 1000
     System.err.println()
     System.err.println("Added " + id.get + " docs in " + runTime + "secs")
-    //solr.shutdownNow()
+    solr.shutdownNow()
   }
 }

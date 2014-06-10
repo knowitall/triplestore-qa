@@ -71,6 +71,7 @@ object TriplestoreImporter {
     solr.commit()
     val elapsed = (System.currentTimeMillis() - start) / 1000
     System.err.println(s"Added $numAdded docs in $elapsed seconds")
+    solr.shutdownNow()
   }
 
 

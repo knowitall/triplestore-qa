@@ -30,7 +30,7 @@ fork in run := true
 
 javaOptions in run += "-Xmx8G"
 
-libraryDependencies += "org.apache.solr" % "solr-solrj" % "4.3.0"
+libraryDependencies += "org.apache.solr" % "solr-solrj" % "4.3.1"
 
 libraryDependencies += "org.apache.solr" % "solr" % "4.3.1"
 

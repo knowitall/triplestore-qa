@@ -100,6 +100,7 @@ case class PlainTextFormat(namespace: String, idFactory: () => String) extends T
     val kvPairs = {
       line.split("\t").grouped(2).map {
         case Array(a, b) => (a, b)
+        case x: Array[_] => throw new IllegalStateException(x.mkString(", "))
       }.toList
     }
     Some(kvPairs)
